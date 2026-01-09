@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useContext } from "react";
-import { View, Text, TextInput, FlatList, TouchableOpacity, Platform, StyleSheet } from "react-native";
+import { View, Text, TextInput, FlatList, TouchableOpacity, Platform, StyleSheet, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { SchoolCard } from "@/components/school-card";
 import { IconSymbol } from "@/components/ui/icon-symbol";
@@ -13,6 +13,34 @@ import { filterSchools, sortSearchResults } from "@/lib/filter-logic";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+
+// 快捷功能入口
+const QUICK_ACTIONS = [
+  {
+    id: "compare",
+    title: "學校大PK",
+    subtitle: "對比不同學校",
+    icon: "⚔️",
+    route: "/compare-guide",
+    color: "#7C3AED",
+  },
+  {
+    id: "map",
+    title: "學校在哪裡",
+    subtitle: "按地區查看",
+    icon: "📍",
+    route: "/school-map",
+    color: "#10B981",
+  },
+  {
+    id: "deadline",
+    title: "申請截止日",
+    subtitle: "重要時間線",
+    icon: "⏰",
+    route: "/deadlines",
+    color: "#F59E0B",
+  },
+];
 
 export default function SearchScreen() {
   const router = useRouter();
@@ -62,6 +90,13 @@ export default function SearchScreen() {
     setShowFilterSheet(true);
   };
 
+  const handleQuickAction = (route: string) => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    router.push(route as any);
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -76,6 +111,28 @@ export default function SearchScreen() {
           <Text style={styles.headerTitle}>搜尋學校</Text>
           <Text style={styles.headerSubtitle}>探索香港優質學校</Text>
         </View>
+
+        {/* 快捷功能入口 */}
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.quickActionsContainer}
+        >
+          {QUICK_ACTIONS.map((action) => (
+            <TouchableOpacity
+              key={action.id}
+              style={styles.quickActionCard}
+              onPress={() => handleQuickAction(action.route)}
+              activeOpacity={0.7}
+            >
+              <View style={[styles.quickActionIconContainer, { backgroundColor: `${action.color}20` }]}>
+                <Text style={styles.quickActionIcon}>{action.icon}</Text>
+              </View>
+              <Text style={styles.quickActionTitle}>{action.title}</Text>
+              <Text style={styles.quickActionSubtitle}>{action.subtitle}</Text>
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
 
         {/* 搜尋框 */}
         <View style={styles.searchContainer}>
@@ -170,9 +227,49 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
     marginTop: 4,
   },
+  quickActionsContainer: {
+    paddingHorizontal: 20,
+    paddingVertical: 12,
+    gap: 12,
+  },
+  quickActionCard: {
+    width: 100,
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderRadius: 16,
+    padding: 12,
+    alignItems: "center",
+    marginRight: 12,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
+  },
+  quickActionIconContainer: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  quickActionIcon: {
+    fontSize: 20,
+  },
+  quickActionTitle: {
+    fontSize: 13,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Bold",
+    textAlign: "center",
+    marginBottom: 2,
+  },
+  quickActionSubtitle: {
+    fontSize: 10,
+    color: "rgba(255,255,255,0.5)",
+    fontFamily: "NotoSerifSC-Regular",
+    textAlign: "center",
+  },
   searchContainer: {
     paddingHorizontal: 24,
-    paddingVertical: 16,
+    paddingVertical: 12,
   },
   searchBox: {
     flexDirection: "row",

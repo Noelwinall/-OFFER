@@ -1,9 +1,44 @@
-import { View, Text, TouchableOpacity, Platform, ScrollView, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, Platform, ScrollView, StyleSheet, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image } from "expo-image";
 import * as Haptics from "expo-haptics";
+
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
+const CARD_WIDTH = (SCREEN_WIDTH - 56 - 14) / 2; // 兩側 padding 28 + gap 14
+
+// 功能卡片數據
+const FEATURE_CARDS = [
+  {
+    id: "articles",
+    title: "家長攻略",
+    icon: "📚",
+    route: "/articles",
+    image: require("@/assets/images/feature-articles.png"),
+  },
+  {
+    id: "compare",
+    title: "學校大PK",
+    icon: "⚔️",
+    route: "/school-compare",
+    image: require("@/assets/images/feature-guide.png"),
+  },
+  {
+    id: "map",
+    title: "學校在哪裡",
+    icon: "📍",
+    route: "/school-map",
+    image: require("@/assets/images/feature-articles.png"),
+  },
+  {
+    id: "deadline",
+    title: "申請截止別錯過！",
+    icon: "⏰",
+    route: "/deadlines",
+    image: require("@/assets/images/feature-guide.png"),
+  },
+];
 
 /**
  * 首頁 - 問答引導模式入口
@@ -33,6 +68,13 @@ export default function HomeScreen() {
     router.push("/(tabs)/explore");
   };
 
+  const handleFeaturePress = (route: string) => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    router.push(route as any);
+  };
+
   return (
     <View style={styles.container}>
       {/* 深藍漸變背景 - 優化版本，更接近設計稿 */}
@@ -55,8 +97,8 @@ export default function HomeScreen() {
         >
           {/* 頂部 Logo */}
           <View style={styles.logoContainer}>
-            <Text style={styles.logoHK}>HK</Text>
-            <Text style={styles.logoText}> Edu App</Text>
+            <Text style={styles.logoHK}>有</Text>
+            <Text style={styles.logoText}>OFFER</Text>
           </View>
 
           {/* Hero Section */}
@@ -101,43 +143,43 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
 
-          {/* 推薦功能卡片 - 帶真實配圖 */}
+          {/* 功能卡片區域 - 可左右滑動 */}
           <View style={styles.featuresSection}>
-            <View style={styles.featureRow}>
-              <TouchableOpacity
-                onPress={handleBrowseAll}
-                style={styles.featureCard}
-                activeOpacity={0.7}
-              >
-                <Image
-                  source={require("@/assets/images/feature-articles.png")}
-                  style={styles.featureImage}
-                  contentFit="cover"
-                />
-                <View style={styles.featureOverlay}>
-                  <View style={styles.featureLabelContainer}>
-                    <Text style={styles.featureLabelIcon}>📚</Text>
-                    <Text style={styles.featureText}>最新文章</Text>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={styles.featureScrollContent}
+              snapToInterval={CARD_WIDTH + 14}
+              decelerationRate="fast"
+            >
+              {FEATURE_CARDS.map((card, index) => (
+                <TouchableOpacity
+                  key={card.id}
+                  onPress={() => handleFeaturePress(card.route)}
+                  style={[
+                    styles.featureCard,
+                    index === FEATURE_CARDS.length - 1 && styles.lastFeatureCard,
+                  ]}
+                  activeOpacity={0.7}
+                >
+                  <Image
+                    source={card.image}
+                    style={styles.featureImage}
+                    contentFit="cover"
+                  />
+                  <View style={styles.featureOverlay}>
+                    <View style={styles.featureLabelContainer}>
+                      <Text style={styles.featureLabelIcon}>{card.icon}</Text>
+                      <Text style={styles.featureText}>{card.title}</Text>
+                    </View>
                   </View>
-                </View>
-              </TouchableOpacity>
-              <TouchableOpacity
-                onPress={handleBrowseAll}
-                style={styles.featureCard}
-                activeOpacity={0.7}
-              >
-                <Image
-                  source={require("@/assets/images/feature-guide.png")}
-                  style={styles.featureImage}
-                  contentFit="cover"
-                />
-                <View style={styles.featureOverlay}>
-                  <View style={styles.featureLabelContainer}>
-                    <Text style={styles.featureLabelIcon}>👨‍👩‍👧</Text>
-                    <Text style={styles.featureText}>家長指南</Text>
-                  </View>
-                </View>
-              </TouchableOpacity>
+                </TouchableOpacity>
+              ))}
+            </ScrollView>
+            
+            {/* 滑動指示器 */}
+            <View style={styles.scrollIndicator}>
+              <Text style={styles.scrollIndicatorText}>← 左右滑動查看更多 →</Text>
             </View>
           </View>
 
@@ -183,7 +225,6 @@ const styles = StyleSheet.create({
   },
   scrollContent: {
     flexGrow: 1,
-    paddingHorizontal: 28,
     paddingBottom: 100,
   },
   logoContainer: {
@@ -192,6 +233,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 20,
     marginBottom: 48,
+    paddingHorizontal: 28,
   },
   logoHK: {
     fontSize: 20,
@@ -210,6 +252,7 @@ const styles = StyleSheet.create({
   heroSection: {
     alignItems: "center",
     marginBottom: 48,
+    paddingHorizontal: 28,
   },
   heroTitle: {
     fontSize: 38,
@@ -232,6 +275,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     gap: 14,
     marginBottom: 48,
+    paddingHorizontal: 28,
   },
   primaryButton: {
     backgroundColor: "#00D9FF",
@@ -302,19 +346,22 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
   },
   featuresSection: {
-    marginBottom: 48,
+    marginBottom: 32,
   },
-  featureRow: {
-    flexDirection: "row",
+  featureScrollContent: {
+    paddingHorizontal: 28,
     gap: 14,
   },
   featureCard: {
-    flex: 1,
+    width: CARD_WIDTH,
     height: 140,
     borderRadius: 20,
     overflow: "hidden",
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.1)",
+  },
+  lastFeatureCard: {
+    marginRight: 0,
   },
   featureImage: {
     width: "100%",
@@ -341,9 +388,19 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     fontFamily: "NotoSerifSC-Regular",
   },
+  scrollIndicator: {
+    alignItems: "center",
+    marginTop: 12,
+  },
+  scrollIndicatorText: {
+    fontSize: 12,
+    color: "rgba(255, 255, 255, 0.35)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
   disclaimerContainer: {
     marginTop: "auto",
     paddingTop: 24,
+    paddingHorizontal: 28,
   },
   disclaimerText: {
     fontSize: 12,
