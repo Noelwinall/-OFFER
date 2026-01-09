@@ -23,6 +23,7 @@ const MAPPING = {
   "line.3.horizontal.decrease": "filter-list",
   "star.fill": "star",
   "xmark": "close",
+  "person.fill": "person",
 } as IconMapping;
 
 /**

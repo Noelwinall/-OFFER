@@ -1,11 +1,18 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { IconSymbol } from "@/components/ui/icon-symbol";
 
-export default function ExploreScreen() {
+export default function ProfileScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+
+  const menuItems = [
+    { icon: "heart.fill", title: "我的收藏", subtitle: "查看已收藏的學校", onPress: () => router.push("/(tabs)/favorites") },
+    { icon: "star.fill", title: "對比記錄", subtitle: "查看學校對比歷史", onPress: () => router.push("/compare") },
+    { icon: "magnifyingglass", title: "瀏覽記錄", subtitle: "最近瀏覽的學校", onPress: () => {} },
+  ];
 
   return (
     <View style={{ flex: 1 }}>
@@ -15,73 +22,215 @@ export default function ExploreScreen() {
         style={StyleSheet.absoluteFill}
       />
       
-      <View style={[styles.container, { paddingTop: insets.top }]}>
-        <View style={styles.content}>
-          <Text style={styles.emoji}>🎯</Text>
-          <Text style={styles.title}>探索功能即將推出</Text>
-          <Text style={styles.subtitle}>
-            滑卡探索模式正在開發中{"\n"}敬請期待
-          </Text>
-          <TouchableOpacity
-            onPress={() => router.back()}
-            style={styles.button}
-            activeOpacity={0.8}
-          >
-            <Text style={styles.buttonText}>返回首頁</Text>
+      <ScrollView 
+        style={{ flex: 1 }}
+        contentContainerStyle={[styles.container, { paddingTop: insets.top + 20 }]}
+      >
+        {/* 頁面標題 */}
+        <Text style={styles.pageTitle}>我的</Text>
+
+        {/* 用戶頭像區域 */}
+        <View style={styles.profileSection}>
+          <View style={styles.avatarContainer}>
+            <View style={styles.avatar}>
+              <IconSymbol name="person.fill" size={48} color="#00D9FF" />
+            </View>
+          </View>
+          <Text style={styles.guestText}>訪客用戶</Text>
+          <Text style={styles.guestSubtext}>登入後可同步收藏與瀏覽記錄</Text>
+          
+          <TouchableOpacity style={styles.loginButton} activeOpacity={0.8}>
+            <Text style={styles.loginButtonText}>登入 / 註冊</Text>
           </TouchableOpacity>
         </View>
-      </View>
+
+        {/* 功能菜單 */}
+        <View style={styles.menuSection}>
+          {menuItems.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              style={styles.menuItem}
+              activeOpacity={0.7}
+              onPress={item.onPress}
+            >
+              <View style={styles.menuIconContainer}>
+                <IconSymbol name={item.icon as any} size={22} color="#00D9FF" />
+              </View>
+              <View style={styles.menuTextContainer}>
+                <Text style={styles.menuTitle}>{item.title}</Text>
+                <Text style={styles.menuSubtitle}>{item.subtitle}</Text>
+              </View>
+              <IconSymbol name="chevron.right" size={20} color="rgba(255,255,255,0.3)" />
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        {/* 設置區域 */}
+        <View style={styles.settingsSection}>
+          <Text style={styles.sectionTitle}>設置</Text>
+          <View style={styles.settingsCard}>
+            <TouchableOpacity style={styles.settingItem} activeOpacity={0.7}>
+              <Text style={styles.settingText}>關於我們</Text>
+              <IconSymbol name="chevron.right" size={18} color="rgba(255,255,255,0.3)" />
+            </TouchableOpacity>
+            <View style={styles.settingDivider} />
+            <TouchableOpacity style={styles.settingItem} activeOpacity={0.7}>
+              <Text style={styles.settingText}>使用條款</Text>
+              <IconSymbol name="chevron.right" size={18} color="rgba(255,255,255,0.3)" />
+            </TouchableOpacity>
+            <View style={styles.settingDivider} />
+            <TouchableOpacity style={styles.settingItem} activeOpacity={0.7}>
+              <Text style={styles.settingText}>隱私政策</Text>
+              <IconSymbol name="chevron.right" size={18} color="rgba(255,255,255,0.3)" />
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* 版本信息 */}
+        <Text style={styles.versionText}>HK Edu App v1.0.0</Text>
+      </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     paddingHorizontal: 24,
+    paddingBottom: 120,
   },
-  content: {
-    alignItems: "center",
-    gap: 16,
-  },
-  emoji: {
-    fontSize: 64,
-    marginBottom: 8,
-  },
-  title: {
-    fontSize: 28,
+  pageTitle: {
+    fontSize: 32,
     fontWeight: "700",
     color: "#FFFFFF",
-    textAlign: "center",
+    marginBottom: 32,
     fontFamily: "NotoSerifSC-Bold",
     letterSpacing: 1,
   },
-  subtitle: {
-    fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 24,
+  profileSection: {
+    alignItems: "center",
+    marginBottom: 40,
   },
-  button: {
+  avatarContainer: {
+    marginBottom: 16,
+  },
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: "rgba(0, 217, 255, 0.1)",
+    borderWidth: 2,
+    borderColor: "rgba(0, 217, 255, 0.3)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  guestText: {
+    fontSize: 20,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    marginBottom: 4,
+    fontFamily: "NotoSerifSC-Bold",
+  },
+  guestSubtext: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.5)",
+    marginBottom: 20,
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  loginButton: {
     backgroundColor: "#00D9FF",
-    paddingHorizontal: 32,
-    paddingVertical: 16,
-    borderRadius: 16,
-    marginTop: 16,
+    paddingHorizontal: 40,
+    paddingVertical: 14,
+    borderRadius: 25,
     shadowColor: "#00D9FF",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 12,
     elevation: 8,
   },
-  buttonText: {
+  loginButtonText: {
     color: "#0F1629",
     fontSize: 16,
     fontWeight: "600",
+    fontFamily: "NotoSerifSC-Bold",
+    letterSpacing: 1,
+  },
+  menuSection: {
+    gap: 12,
+    marginBottom: 40,
+  },
+  menuItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderRadius: 16,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
+  },
+  menuIconContainer: {
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: "rgba(0, 217, 255, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 14,
+  },
+  menuTextContainer: {
+    flex: 1,
+  },
+  menuTitle: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    marginBottom: 2,
+    fontFamily: "NotoSerifSC-Bold",
+  },
+  menuSubtitle: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.5)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  settingsSection: {
+    marginBottom: 32,
+  },
+  sectionTitle: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "rgba(255,255,255,0.5)",
+    marginBottom: 12,
+    marginLeft: 4,
     fontFamily: "NotoSerifSC-Regular",
     letterSpacing: 1,
+  },
+  settingsCard: {
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
+    overflow: "hidden",
+  },
+  settingItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: 16,
+    paddingHorizontal: 18,
+  },
+  settingText: {
+    fontSize: 15,
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  settingDivider: {
+    height: 1,
+    backgroundColor: "rgba(255,255,255,0.06)",
+    marginHorizontal: 18,
+  },
+  versionText: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.3)",
+    textAlign: "center",
+    fontFamily: "NotoSerifSC-Regular",
   },
 });

@@ -62,40 +62,42 @@ export default function HomeScreen() {
           {/* Hero Section */}
           <View style={styles.heroSection}>
             <Text style={styles.heroTitle}>
-              找到最適合該{"\n"}子的學校
+              孩子香港上學{"\n"}不發愁
             </Text>
             <Text style={styles.heroSubtitle}>
-              5 個問題，精準推薦香港優質學校
+              一站式香港申校APP
             </Text>
           </View>
 
           {/* 按鈕區域 */}
           <View style={styles.buttonContainer}>
-            {/* 主按鈕 - 開始選校 */}
+            {/* 主按鈕 - 我問你答選學校 */}
             <TouchableOpacity
               onPress={handleStartQuiz}
               style={styles.primaryButton}
               activeOpacity={0.85}
             >
-              <Text style={styles.primaryButtonText}>開始選校</Text>
+              <Text style={styles.primaryButtonText}>我問你答選學校</Text>
+              <Text style={styles.primaryButtonSubtext}>5個問題，篩選出你心儀的學校</Text>
             </TouchableOpacity>
 
-            {/* 次要按鈕 - 瀏覽所有學校 */}
+            {/* 次要按鈕 - 我是靠譜父母 */}
             <TouchableOpacity
               onPress={handleBrowseAll}
               style={styles.secondaryButton}
               activeOpacity={0.75}
             >
-              <Text style={styles.secondaryButtonText}>瀏覽所有學校</Text>
+              <Text style={styles.secondaryButtonText}>我是靠譜父母</Text>
+              <Text style={styles.secondaryButtonSubtext}>通過條件檢索學校</Text>
             </TouchableOpacity>
 
-            {/* 第三按鈕 - 探索學校 */}
+            {/* 第三按鈕 - 碰碰運氣劃一劃 */}
             <TouchableOpacity
               onPress={handleExplore}
               style={styles.tertiaryButton}
               activeOpacity={0.7}
             >
-              <Text style={styles.tertiaryButtonText}>探索學校</Text>
+              <Text style={styles.tertiaryButtonText}>碰碰運氣劃一劃</Text>
             </TouchableOpacity>
           </View>
 
@@ -210,11 +212,11 @@ const styles = StyleSheet.create({
     marginBottom: 48,
   },
   heroTitle: {
-    fontSize: 40,
+    fontSize: 38,
     fontWeight: "700",
     color: "#FFFFFF",
     textAlign: "center",
-    lineHeight: 52,
+    lineHeight: 50,
     marginBottom: 16,
     letterSpacing: 2,
     fontFamily: "NotoSerifSC-Bold",
@@ -233,7 +235,8 @@ const styles = StyleSheet.create({
   },
   primaryButton: {
     backgroundColor: "#00D9FF",
-    paddingVertical: 18,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
     borderRadius: 30,
     shadowColor: "#00D9FF",
     shadowOffset: { width: 0, height: 6 },
@@ -247,11 +250,21 @@ const styles = StyleSheet.create({
     color: "#0F1629",
     textAlign: "center",
     letterSpacing: 2,
+    fontFamily: "NotoSerifSC-Bold",
+  },
+  primaryButtonSubtext: {
+    fontSize: 12,
+    fontWeight: "400",
+    color: "rgba(15, 22, 41, 0.6)",
+    textAlign: "center",
+    marginTop: 4,
+    letterSpacing: 0.5,
     fontFamily: "NotoSerifSC-Regular",
   },
   secondaryButton: {
     backgroundColor: "transparent",
-    paddingVertical: 16,
+    paddingVertical: 14,
+    paddingHorizontal: 20,
     borderRadius: 30,
     borderWidth: 1.5,
     borderColor: "#00D9FF",
@@ -262,6 +275,15 @@ const styles = StyleSheet.create({
     color: "#00D9FF",
     textAlign: "center",
     letterSpacing: 1,
+    fontFamily: "NotoSerifSC-Bold",
+  },
+  secondaryButtonSubtext: {
+    fontSize: 11,
+    fontWeight: "400",
+    color: "rgba(0, 217, 255, 0.6)",
+    textAlign: "center",
+    marginTop: 3,
+    letterSpacing: 0.5,
     fontFamily: "NotoSerifSC-Regular",
   },
   tertiaryButton: {
