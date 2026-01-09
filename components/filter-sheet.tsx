@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -6,13 +6,12 @@ import {
   ScrollView,
   Platform,
   Modal,
+  StyleSheet,
+  Pressable,
 } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
-import { RangeSlider } from "@/components/ui/range-slider";
-import { CheckboxGroup } from "@/components/ui/checkbox-group";
-import { RadioGroup } from "@/components/ui/radio-group";
 import { useFilter } from "@/lib/filter-context";
-import { useColors } from "@/hooks/use-colors";
 import * as Haptics from "expo-haptics";
 
 interface FilterSheetProps {
@@ -20,71 +19,102 @@ interface FilterSheetProps {
   onClose: () => void;
 }
 
-const TUITION_MIN = 0;
-const TUITION_MAX = 500000;
+const TUITION_PRESETS = [
+  { label: "免費", min: 0, max: 0 },
+  { label: "$5萬以下", min: 0, max: 50000 },
+  { label: "$5-10萬", min: 50000, max: 100000 },
+  { label: "$10-15萬", min: 100000, max: 150000 },
+  { label: "$15-20萬", min: 150000, max: 200000 },
+  { label: "$20萬以上", min: 200000, max: 500000 },
+];
 
 const CURRICULUM_OPTIONS = [
   { label: "IB 課程", value: "IB" as const },
   { label: "DSE 課程", value: "DSE" as const },
-  { label: "IGCSE 課程", value: "IGCSE" as const },
-  { label: "A-Level 課程", value: "A-Level" as const },
+  { label: "IGCSE", value: "IGCSE" as const },
+  { label: "A-Level", value: "A-Level" as const },
+  { label: "AP 課程", value: "AP" as const },
+  { label: "美式課程", value: "美式課程" as const },
+  { label: "英式課程", value: "英式課程" as const },
 ];
 
 const LANGUAGE_OPTIONS = [
   { label: "全英文", value: "全英文" as const },
-  { label: "以中文為主", value: "以中文為主" as const },
   { label: "中英雙語", value: "中英雙語" as const },
+  { label: "以中文為主", value: "以中文為主" as const },
 ];
 
 const CATEGORY_OPTIONS = [
   { label: "國際學校", value: "國際" as const },
-  { label: "資助學校", value: "資助" as const },
   { label: "直資學校", value: "直資" as const },
   { label: "私立學校", value: "私立" as const },
+  { label: "資助學校", value: "資助" as const },
   { label: "公立學校", value: "公立" as const },
 ];
 
 const DISTRICT_OPTIONS = [
-  { label: "港島", value: "港島" as const },
-  { label: "九龍", value: "九龍" as const },
-  { label: "新界", value: "新界" as const },
+  { label: "港島區", value: "港島" as const },
+  { label: "九龍區", value: "九龍" as const },
+  { label: "新界區", value: "新界" as const },
 ];
 
 export function FilterSheet({ visible, onClose }: FilterSheetProps) {
-  const colors = useColors();
   const { state, dispatch } = useFilter();
-  const [localMinTuition, setLocalMinTuition] = useState(
-    state.tuitionRange?.min ?? TUITION_MIN
-  );
-  const [localMaxTuition, setLocalMaxTuition] = useState(
-    state.tuitionRange?.max ?? TUITION_MAX
+  const [localTuition, setLocalTuition] = useState<{ min: number; max: number } | null>(
+    state.tuitionRange
   );
 
-  const handleApplyFilters = () => {
+  // 同步外部狀態
+  useEffect(() => {
+    if (visible) {
+      setLocalTuition(state.tuitionRange);
+    }
+  }, [visible, state.tuitionRange]);
+
+  const triggerHaptic = () => {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
-    dispatch({
-      type: "SET_TUITION_RANGE",
-      payload: { min: localMinTuition, max: localMaxTuition },
-    });
+  };
+
+  const handleApplyFilters = () => {
+    triggerHaptic();
+    if (localTuition) {
+      dispatch({ type: "SET_TUITION_RANGE", payload: localTuition });
+    } else {
+      dispatch({ type: "CLEAR_TUITION_RANGE" });
+    }
     onClose();
   };
 
   const handleResetFilters = () => {
-    if (Platform.OS !== "web") {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    }
+    triggerHaptic();
     dispatch({ type: "RESET_FILTERS" });
-    setLocalMinTuition(TUITION_MIN);
-    setLocalMaxTuition(TUITION_MAX);
+    setLocalTuition(null);
   };
 
-  const handleClose = () => {
-    if (Platform.OS !== "web") {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+  const handleTuitionSelect = (min: number, max: number) => {
+    triggerHaptic();
+    if (localTuition?.min === min && localTuition?.max === max) {
+      setLocalTuition(null);
+    } else {
+      setLocalTuition({ min, max });
     }
-    onClose();
+  };
+
+  const isTuitionSelected = (min: number, max: number) => {
+    return localTuition?.min === min && localTuition?.max === max;
+  };
+
+  // 計算活躍篩選數量
+  const getActiveCount = () => {
+    let count = 0;
+    if (localTuition) count++;
+    if (state.curriculum.length > 0) count++;
+    if (state.language) count++;
+    if (state.category.length > 0) count++;
+    if (state.district.length > 0) count++;
+    return count;
   };
 
   return (
@@ -94,115 +124,292 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
       animationType="slide"
       onRequestClose={onClose}
     >
-      <View className="flex-1 bg-black/50">
-        <View
-          className="flex-1 mt-auto bg-background rounded-t-3xl"
-          style={{ maxHeight: "85%" }}
-        >
-          {/* 標題欄 */}
-          <View className="flex-row items-center justify-between px-6 py-4 border-b border-border">
-            <Text className="text-xl font-bold text-foreground">進階篩選</Text>
-            <TouchableOpacity onPress={handleClose} hitSlop={8}>
-              <IconSymbol name="xmark" size={24} color={colors.foreground} />
-            </TouchableOpacity>
-          </View>
-
-          {/* 篩選選項 */}
-          <ScrollView
-            className="flex-1 px-6 py-4"
-            showsVerticalScrollIndicator={false}
+      <View style={styles.overlay}>
+        <Pressable style={styles.backdrop} onPress={onClose} />
+        <View style={styles.sheetContainer}>
+          <LinearGradient
+            colors={["#1A2744", "#0F1629", "#0A0F1C"]}
+            style={styles.sheet}
           >
-            {/* 學費範圍 */}
-            <View className="mb-6">
-              <Text className="text-base font-semibold text-foreground mb-3">
-                💰 學費範圍
-              </Text>
-              <RangeSlider
-                min={TUITION_MIN}
-                max={TUITION_MAX}
-                step={10000}
-                minValue={localMinTuition}
-                maxValue={localMaxTuition}
-                onMinChange={setLocalMinTuition}
-                onMaxChange={setLocalMaxTuition}
-                formatLabel={(v) => {
-                  if (v === TUITION_MAX) return "不限";
-                  return `${(v / 10000).toFixed(0)}萬`;
-                }}
-              />
+            {/* 頂部把手 */}
+            <View style={styles.handleContainer}>
+              <View style={styles.handle} />
             </View>
 
-            {/* 課程體系 */}
-            <View className="mb-6 pb-4 border-b border-border">
-              <CheckboxGroup
-                title="🎓 課程體系"
-                options={CURRICULUM_OPTIONS}
-                selected={state.curriculum}
-                onToggle={(value) =>
-                  dispatch({ type: "TOGGLE_CURRICULUM", payload: value as any })
-                }
-              />
+            {/* 標題欄 */}
+            <View style={styles.header}>
+              <Text style={styles.title}>篩選學校</Text>
+              <TouchableOpacity onPress={handleResetFilters}>
+                <Text style={styles.resetText}>重置</Text>
+              </TouchableOpacity>
             </View>
 
-            {/* 教學語言 */}
-            <View className="mb-6 pb-4 border-b border-border">
-              <RadioGroup
-                title="🌐 教學語言"
-                options={LANGUAGE_OPTIONS}
-                selected={state.language}
-                onSelect={(value) =>
-                  dispatch({ type: "SET_LANGUAGE", payload: value as any })
-                }
-              />
-            </View>
-
-            {/* 學校類型 */}
-            <View className="mb-6 pb-4 border-b border-border">
-              <CheckboxGroup
-                title="🏫 學校類型"
-                options={CATEGORY_OPTIONS}
-                selected={state.category}
-                onToggle={(value) =>
-                  dispatch({ type: "TOGGLE_CATEGORY", payload: value as any })
-                }
-              />
-            </View>
-
-            {/* 地區 */}
-            <View className="mb-6">
-              <CheckboxGroup
-                title="📍 地區"
-                options={DISTRICT_OPTIONS}
-                selected={state.district}
-                onToggle={(value) =>
-                  dispatch({ type: "TOGGLE_DISTRICT", payload: value as any })
-                }
-              />
-            </View>
-          </ScrollView>
-
-          {/* 底部按鈕 */}
-          <View className="px-6 py-4 border-t border-border gap-3">
-            <TouchableOpacity
-              onPress={handleResetFilters}
-              className="bg-surface py-3 rounded-xl border border-border active:opacity-70"
+            <ScrollView
+              style={styles.content}
+              showsVerticalScrollIndicator={false}
+              contentContainerStyle={styles.contentContainer}
             >
-              <Text className="text-foreground text-base font-medium text-center">
-                重置篩選
-              </Text>
-            </TouchableOpacity>
+              {/* 學費範圍 */}
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>💰 學費範圍（每年）</Text>
+                <View style={styles.chipContainer}>
+                  {TUITION_PRESETS.map((preset) => (
+                    <TouchableOpacity
+                      key={preset.label}
+                      style={[
+                        styles.chip,
+                        isTuitionSelected(preset.min, preset.max) && styles.chipSelected,
+                      ]}
+                      onPress={() => handleTuitionSelect(preset.min, preset.max)}
+                    >
+                      <Text
+                        style={[
+                          styles.chipText,
+                          isTuitionSelected(preset.min, preset.max) && styles.chipTextSelected,
+                        ]}
+                      >
+                        {preset.label}
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+                </View>
+              </View>
 
-            <TouchableOpacity
-              onPress={handleApplyFilters}
-              className="bg-primary py-3 rounded-xl active:opacity-80"
-            >
-              <Text className="text-white text-base font-semibold text-center">
-                套用篩選
-              </Text>
-            </TouchableOpacity>
-          </View>
+              {/* 學校類型 */}
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>🏫 學校類型</Text>
+                <View style={styles.chipContainer}>
+                  {CATEGORY_OPTIONS.map((option) => {
+                    const isSelected = state.category.includes(option.value);
+                    return (
+                      <TouchableOpacity
+                        key={option.value}
+                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        onPress={() => {
+                          triggerHaptic();
+                          dispatch({ type: "TOGGLE_CATEGORY", payload: option.value });
+                        }}
+                      >
+                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                          {option.label}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+
+              {/* 地區 */}
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>📍 地區</Text>
+                <View style={styles.chipContainer}>
+                  {DISTRICT_OPTIONS.map((option) => {
+                    const isSelected = state.district.includes(option.value);
+                    return (
+                      <TouchableOpacity
+                        key={option.value}
+                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        onPress={() => {
+                          triggerHaptic();
+                          dispatch({ type: "TOGGLE_DISTRICT", payload: option.value });
+                        }}
+                      >
+                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                          {option.label}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+
+              {/* 課程體系 */}
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>🎓 課程體系</Text>
+                <View style={styles.chipContainer}>
+                  {CURRICULUM_OPTIONS.map((option) => {
+                    const isSelected = state.curriculum.includes(option.value);
+                    return (
+                      <TouchableOpacity
+                        key={option.value}
+                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        onPress={() => {
+                          triggerHaptic();
+                          dispatch({ type: "TOGGLE_CURRICULUM", payload: option.value });
+                        }}
+                      >
+                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                          {option.label}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+
+              {/* 教學語言 */}
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>🌐 教學語言</Text>
+                <View style={styles.chipContainer}>
+                  {LANGUAGE_OPTIONS.map((option) => {
+                    const isSelected = state.language === option.value;
+                    return (
+                      <TouchableOpacity
+                        key={option.value}
+                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        onPress={() => {
+                          triggerHaptic();
+                          dispatch({ type: "SET_LANGUAGE", payload: option.value });
+                        }}
+                      >
+                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                          {option.label}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+
+              {/* 底部間距 */}
+              <View style={{ height: 120 }} />
+            </ScrollView>
+
+            {/* 底部按鈕 */}
+            <View style={styles.footer}>
+              <TouchableOpacity style={styles.applyButton} onPress={handleApplyFilters}>
+                <Text style={styles.applyButtonText}>
+                  套用篩選{getActiveCount() > 0 ? ` (${getActiveCount()})` : ""}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </LinearGradient>
         </View>
       </View>
     </Modal>
   );
 }
+
+const styles = StyleSheet.create({
+  overlay: {
+    flex: 1,
+    justifyContent: "flex-end",
+  },
+  backdrop: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+  },
+  sheetContainer: {
+    maxHeight: "85%",
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    overflow: "hidden",
+  },
+  sheet: {
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    minHeight: 500,
+  },
+  handleContainer: {
+    alignItems: "center",
+    paddingTop: 12,
+    paddingBottom: 8,
+  },
+  handle: {
+    width: 40,
+    height: 4,
+    backgroundColor: "rgba(255, 255, 255, 0.3)",
+    borderRadius: 2,
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 24,
+    paddingBottom: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(255, 255, 255, 0.1)",
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Bold",
+  },
+  resetText: {
+    fontSize: 14,
+    color: "#00D9FF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  content: {
+    flex: 1,
+  },
+  contentContainer: {
+    paddingHorizontal: 24,
+    paddingTop: 20,
+  },
+  section: {
+    marginBottom: 28,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    marginBottom: 14,
+    fontFamily: "NotoSerifSC-Bold",
+  },
+  chipContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 10,
+  },
+  chip: {
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 20,
+    backgroundColor: "rgba(255, 255, 255, 0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.15)",
+  },
+  chipSelected: {
+    backgroundColor: "rgba(0, 217, 255, 0.2)",
+    borderColor: "#00D9FF",
+  },
+  chipText: {
+    fontSize: 14,
+    color: "rgba(255, 255, 255, 0.7)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  chipTextSelected: {
+    color: "#00D9FF",
+    fontWeight: "600",
+  },
+  footer: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: 24,
+    paddingBottom: 40,
+    backgroundColor: "rgba(15, 22, 41, 0.98)",
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255, 255, 255, 0.1)",
+  },
+  applyButton: {
+    backgroundColor: "#00D9FF",
+    paddingVertical: 16,
+    borderRadius: 14,
+    alignItems: "center",
+    shadowColor: "#00D9FF",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 4,
+  },
+  applyButtonText: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: "#0F1629",
+    fontFamily: "NotoSerifSC-Bold",
+  },
+});
