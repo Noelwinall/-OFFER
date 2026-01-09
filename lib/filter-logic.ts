@@ -52,11 +52,13 @@ export function filterSchools(
 ): School[] {
   return schools
     .filter((school) => {
-      // 文字搜尋
+      // 文字搜尋（支援中英文名稱和關鍵字）
       if (searchQuery.trim()) {
         const query = searchQuery.toLowerCase();
         const matchesSearch =
           school.name.toLowerCase().includes(query) ||
+          school.nameEn.toLowerCase().includes(query) ||
+          school.searchKeywords.some(kw => kw.toLowerCase().includes(query)) ||
           school.district.toLowerCase().includes(query) ||
           school.category.toLowerCase().includes(query);
         if (!matchesSearch) return false;
@@ -79,13 +81,25 @@ export function calculateSearchRelevance(
   let score = 0;
 
   // 名稱完全匹配（高分）
-  if (school.name.toLowerCase() === searchQuery.toLowerCase()) {
+  if (school.name.toLowerCase() === searchQuery.toLowerCase() ||
+      school.nameEn.toLowerCase() === searchQuery.toLowerCase()) {
     score += 100;
   }
 
+  // 關鍵字完全匹配（高分）
+  if (school.searchKeywords.some(kw => kw.toLowerCase() === searchQuery.toLowerCase())) {
+    score += 90;
+  }
+
   // 名稱包含搜尋詞（中分）
-  if (school.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+  if (school.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      school.nameEn.toLowerCase().includes(searchQuery.toLowerCase())) {
     score += 50;
+  }
+
+  // 關鍵字包含搜尋詞（中分）
+  if (school.searchKeywords.some(kw => kw.toLowerCase().includes(searchQuery.toLowerCase()))) {
+    score += 40;
   }
 
   // 地區匹配（加分）

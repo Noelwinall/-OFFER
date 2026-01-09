@@ -12,6 +12,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-001",
     name: "漢基國際學校",
+    nameEn: "Chinese International School",
+    searchKeywords: ["CIS", "Chinese International", "漢基"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -33,6 +35,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-002",
     name: "耀中國際學校",
+    nameEn: "Yew Chung International School",
+    searchKeywords: ["YCIS", "Yew Chung", "耀中"],
     category: "國際",
     district: "九龍",
     level: "中學",
@@ -54,6 +58,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-003",
     name: "香港國際學校",
+    nameEn: "Hong Kong International School",
+    searchKeywords: ["HKIS", "Hong Kong International"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -75,6 +81,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-004",
     name: "香港學堂",
+    nameEn: "Hong Kong Academy",
+    searchKeywords: ["HKA", "HK Academy"],
     category: "國際",
     district: "新界",
     level: "中學",
@@ -96,6 +104,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-005",
     name: "香港斯坦福美國學校",
+    nameEn: "Stamford American School Hong Kong",
+    searchKeywords: ["SAIS", "Stamford American"],
     category: "國際",
     district: "九龍",
     level: "中學",
@@ -117,6 +127,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-006",
     name: "思貝禮國際學校",
+    nameEn: "Shrewsbury International School",
+    searchKeywords: ["Shrewsbury"],
     category: "國際",
     district: "新界",
     level: "小學",
@@ -138,6 +150,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-007",
     name: "香港加拿大國際學校",
+    nameEn: "Canadian International School of Hong Kong",
+    searchKeywords: ["CDNIS", "Canadian International"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -159,6 +173,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-008",
     name: "啟歷學校",
+    nameEn: "Kellett School",
+    searchKeywords: ["Kellett"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -180,6 +196,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-009",
     name: "德瑞國際學校",
+    nameEn: "German Swiss International School",
+    searchKeywords: ["GSIS", "German Swiss"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -201,6 +219,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-010",
     name: "哈羅香港國際學校",
+    nameEn: "Harrow International School Hong Kong",
+    searchKeywords: ["Harrow", "哈羅"],
     category: "國際",
     district: "新界",
     level: "中學",
@@ -222,6 +242,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-011",
     name: "香港墨爾文國際學校",
+    nameEn: "Malvern College Hong Kong",
+    searchKeywords: ["Malvern", "墨爾文"],
     category: "國際",
     district: "新界",
     level: "中學",
@@ -243,6 +265,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-012",
     name: "香港諾德安達國際學校",
+    nameEn: "Nord Anglia International School Hong Kong",
+    searchKeywords: ["NAIS", "Nord Anglia"],
     category: "國際",
     district: "九龍",
     level: "中學",
@@ -264,6 +288,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-013",
     name: "香港美國學校",
+    nameEn: "American School Hong Kong",
+    searchKeywords: ["ASHK", "American School"],
     category: "國際",
     district: "新界",
     level: "中學",
@@ -285,6 +311,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-014",
     name: "南島中學",
+    nameEn: "South Island School",
+    searchKeywords: ["SIS", "South Island", "英基"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -306,6 +334,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-015",
     name: "西島中學",
+    nameEn: "West Island School",
+    searchKeywords: ["WIS", "West Island", "英基"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -327,6 +357,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-016",
     name: "港島中學",
+    nameEn: "Island School",
+    searchKeywords: ["Island School", "英基"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -348,6 +380,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-017",
     name: "英皇佐治五世學校",
+    nameEn: "King George V School",
+    searchKeywords: ["KGV", "King George", "英基"],
     category: "國際",
     district: "九龍",
     level: "中學",
@@ -369,6 +403,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-018",
     name: "沙田學院",
+    nameEn: "Sha Tin College",
+    searchKeywords: ["STC", "Sha Tin College", "英基"],
     category: "國際",
     district: "新界",
     level: "中學",
@@ -390,6 +426,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-019",
     name: "香港澳洲國際學校",
+    nameEn: "Australian International School Hong Kong",
+    searchKeywords: ["AISHK", "Australian International"],
     category: "國際",
     district: "九龍",
     level: "中學",
@@ -411,6 +449,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-020",
     name: "新加坡國際學校",
+    nameEn: "Singapore International School",
+    searchKeywords: ["SISHK", "Singapore International"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -432,6 +472,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-021",
     name: "法國國際學校",
+    nameEn: "French International School",
+    searchKeywords: ["FIS", "French International"],
     category: "國際",
     district: "港島",
     level: "中學",
@@ -453,6 +495,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-022",
     name: "宣道國際學校",
+    nameEn: "Christian Alliance International School",
+    searchKeywords: ["CAIS", "Christian Alliance"],
     category: "國際",
     district: "九龍",
     level: "中學",
@@ -474,6 +518,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-023",
     name: "基督教國際學校",
+    nameEn: "International Christian School",
+    searchKeywords: ["ICS", "Christian School"],
     category: "國際",
     district: "新界",
     level: "中學",
@@ -495,6 +541,8 @@ export const SCHOOLS: School[] = [
   {
     id: "int-024",
     name: "李寶椿聯合世界書院",
+    nameEn: "Li Po Chun United World College",
+    searchKeywords: ["LPCUWC", "UWC", "李寶椿"],
     category: "國際",
     district: "新界",
     level: "中學",
@@ -517,6 +565,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-001",
     name: "聖保羅男女中學附屬小學",
+    nameEn: "聖保羅男女中學附屬小學",
+    searchKeywords: [],
     category: "直資",
     district: "港島",
     level: "小學",
@@ -538,6 +588,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-002",
     name: "聖保羅男女中學",
+    nameEn: "St. Paul's Co-educational College",
+    searchKeywords: ["SPCC", "St Paul's", "聖保羅"],
     category: "直資",
     district: "港島",
     level: "中學",
@@ -559,6 +611,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-003",
     name: "拔萃男書院附屬小學",
+    nameEn: "拔萃男書院附屬小學",
+    searchKeywords: [],
     category: "直資",
     district: "九龍",
     level: "小學",
@@ -580,6 +634,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-004",
     name: "拔萃男書院",
+    nameEn: "Diocesan Boys' School",
+    searchKeywords: ["DBS", "Diocesan Boys", "男拔"],
     category: "直資",
     district: "九龍",
     level: "中學",
@@ -601,6 +657,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-005",
     name: "聖瑪加利男女英文中小學",
+    nameEn: "聖瑪加利男女英文中小學",
+    searchKeywords: [],
     category: "直資",
     district: "九龍",
     level: "中學",
@@ -622,6 +680,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-006",
     name: "香港浸會大學附屬學校王錦輝中小學",
+    nameEn: "HKBU Affiliated School Wong Kam Fai Secondary and Primary School",
+    searchKeywords: ["HKBUAS", "王錦輝", "浸大附屬"],
     category: "直資",
     district: "新界",
     level: "中學",
@@ -643,6 +703,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-007",
     name: "福建中學附屬學校",
+    nameEn: "福建中學附屬學校",
+    searchKeywords: [],
     category: "直資",
     district: "九龍",
     level: "小學",
@@ -664,6 +726,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-008",
     name: "港大同學會小學",
+    nameEn: "港大同學會小學",
+    searchKeywords: [],
     category: "直資",
     district: "港島",
     level: "小學",
@@ -685,6 +749,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-009",
     name: "優才(楊殷有娣)書院",
+    nameEn: "優才(楊殷有娣)書院",
+    searchKeywords: [],
     category: "直資",
     district: "新界",
     level: "中學",
@@ -706,6 +772,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-010",
     name: "培僑書院",
+    nameEn: "Pui Kiu College",
+    searchKeywords: ["Pui Kiu", "培僑"],
     category: "直資",
     district: "新界",
     level: "中學",
@@ -727,6 +795,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-011",
     name: "香港華人基督教聯會真道書院",
+    nameEn: "香港華人基督教聯會真道書院",
+    searchKeywords: [],
     category: "直資",
     district: "新界",
     level: "中學",
@@ -748,6 +818,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-012",
     name: "播道書院",
+    nameEn: "播道書院",
+    searchKeywords: [],
     category: "直資",
     district: "新界",
     level: "中學",
@@ -769,6 +841,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-013",
     name: "保良局陳守仁小學",
+    nameEn: "保良局陳守仁小學",
+    searchKeywords: [],
     category: "直資",
     district: "九龍",
     level: "小學",
@@ -790,6 +864,8 @@ export const SCHOOLS: School[] = [
   {
     id: "dss-014",
     name: "英華小學",
+    nameEn: "英華小學",
+    searchKeywords: [],
     category: "直資",
     district: "九龍",
     level: "小學",
@@ -812,6 +888,8 @@ export const SCHOOLS: School[] = [
   {
     id: "pvt-001",
     name: "拔萃女小學",
+    nameEn: "拔萃女小學",
+    searchKeywords: [],
     category: "私立",
     district: "九龍",
     level: "小學",
@@ -833,6 +911,8 @@ export const SCHOOLS: School[] = [
   {
     id: "pvt-002",
     name: "九龍塘學校（小學部）",
+    nameEn: "九龍塘學校（小學部）",
+    searchKeywords: [],
     category: "私立",
     district: "九龍",
     level: "小學",
@@ -854,6 +934,8 @@ export const SCHOOLS: School[] = [
   {
     id: "pvt-003",
     name: "香港培正小學",
+    nameEn: "香港培正小學",
+    searchKeywords: [],
     category: "私立",
     district: "九龍",
     level: "小學",
@@ -875,6 +957,8 @@ export const SCHOOLS: School[] = [
   {
     id: "pvt-004",
     name: "聖保祿學校（小學部）",
+    nameEn: "聖保祿學校（小學部）",
+    searchKeywords: [],
     category: "私立",
     district: "港島",
     level: "小學",
@@ -896,6 +980,8 @@ export const SCHOOLS: School[] = [
   {
     id: "pvt-005",
     name: "民生書院小學",
+    nameEn: "民生書院小學",
+    searchKeywords: [],
     category: "私立",
     district: "九龍",
     level: "小學",
@@ -917,6 +1003,8 @@ export const SCHOOLS: School[] = [
   {
     id: "pvt-006",
     name: "弘立書院",
+    nameEn: "弘立書院",
+    searchKeywords: [],
     category: "私立",
     district: "港島",
     level: "中學",
@@ -938,6 +1026,8 @@ export const SCHOOLS: School[] = [
   {
     id: "pvt-007",
     name: "保良局蔡繼有學校",
+    nameEn: "Po Leung Kuk Choi Kai Yau School",
+    searchKeywords: ["CKY", "Choi Kai Yau", "蔡繼有"],
     category: "私立",
     district: "九龍",
     level: "中學",
@@ -960,6 +1050,8 @@ export const SCHOOLS: School[] = [
   {
     id: "aid-001",
     name: "喇沙書院",
+    nameEn: "La Salle College",
+    searchKeywords: ["La Salle", "喇沙"],
     category: "資助",
     district: "九龍",
     level: "中學",
@@ -981,6 +1073,8 @@ export const SCHOOLS: School[] = [
   {
     id: "aid-002",
     name: "英華女學校",
+    nameEn: "英華女學校",
+    searchKeywords: [],
     category: "資助",
     district: "九龍",
     level: "中學",
@@ -1002,6 +1096,8 @@ export const SCHOOLS: School[] = [
   {
     id: "aid-003",
     name: "皇仁書院",
+    nameEn: "Queen's College",
+    searchKeywords: ["QC", "Queen's College", "皇仁"],
     category: "公立",
     district: "港島",
     level: "中學",
@@ -1023,6 +1119,8 @@ export const SCHOOLS: School[] = [
   {
     id: "aid-004",
     name: "瑪利曼中學",
+    nameEn: "瑪利曼中學",
+    searchKeywords: [],
     category: "資助",
     district: "港島",
     level: "中學",
@@ -1044,6 +1142,8 @@ export const SCHOOLS: School[] = [
   {
     id: "aid-005",
     name: "香港培正中學",
+    nameEn: "Pui Ching Middle School",
+    searchKeywords: ["Pui Ching", "培正"],
     category: "資助",
     district: "九龍",
     level: "中學",

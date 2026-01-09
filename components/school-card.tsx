@@ -51,13 +51,23 @@ export function SchoolCard({
       ]}
     >
       {/* 學校名稱與收藏按鈕 */}
-      <View className="flex-row items-start justify-between mb-2">
-        <Text
-          className="text-lg font-bold text-foreground flex-1 mr-2"
-          numberOfLines={2}
-        >
-          {school.name}
-        </Text>
+      <View className="flex-row items-start justify-between mb-1">
+        <View className="flex-1 mr-2">
+          <Text
+            className="text-lg font-bold text-foreground"
+            numberOfLines={2}
+          >
+            {school.name}
+          </Text>
+          {school.nameEn && (
+            <Text
+              className="text-xs text-muted mt-0.5"
+              numberOfLines={1}
+            >
+              {school.nameEn}
+            </Text>
+          )}
+        </View>
         <Pressable
           onPress={handleFavoritePress}
           hitSlop={8}

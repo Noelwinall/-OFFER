@@ -11,6 +11,8 @@ export type Language = "全英文" | "中英雙語" | "以中文為主";
 export interface School {
   id: string;
   name: string;
+  nameEn: string; // 英文名稱
+  searchKeywords: string[]; // 搜索關鍵字（包含英文簡稱、別名等）
   category: SchoolCategory;
   district: District;
   level: Level;

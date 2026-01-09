@@ -5,7 +5,7 @@ import { SchoolCard } from "@/components/school-card";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
-import { getSortedRecommendations } from "@/lib/recommendation";
+import { getSortedRecommendations, calculateMatchScore, getMatchDescription } from "@/lib/recommendation";
 import { FavoritesStorage } from "@/lib/storage";
 import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
@@ -16,6 +16,8 @@ export default function RecommendationScreen() {
   const insets = useSafeAreaInsets();
   const params = useLocalSearchParams();
   const [recommendations, setRecommendations] = useState<School[]>([]);
+  const [currentFilters, setCurrentFilters] = useState<QuizFilters>({});
+  const [isRelaxedMatch, setIsRelaxedMatch] = useState(false);
   const [favorites, setFavorites] = useState<string[]>([]);
 
   useEffect(() => {
@@ -38,8 +40,15 @@ export default function RecommendationScreen() {
       };
     }
 
+    setCurrentFilters(filters);
     const results = getSortedRecommendations(SCHOOLS, filters);
     setRecommendations(results);
+    
+    // 檢查是否是放寬匹配（如果第一個結果的匹配度低於70%）
+    if (results.length > 0) {
+      const topScore = calculateMatchScore(results[0], filters);
+      setIsRelaxedMatch(topScore < 70);
+    }
   };
 
   const loadFavorites = async () => {
@@ -96,6 +105,11 @@ export default function RecommendationScreen() {
           <Text style={styles.statsTitle}>
             為您推薦 {recommendations.length} 所學校
           </Text>
+          {isRelaxedMatch && recommendations.length > 0 && (
+            <Text style={styles.statsSubtitle}>
+              已放寬篩選條件，顯示部分匹配的學校
+            </Text>
+          )}
           {recommendations.length === 0 && (
             <Text style={styles.statsSubtitle}>
               沒有找到符合條件的學校，請調整篩選條件
