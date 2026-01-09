@@ -6,7 +6,7 @@ import * as Haptics from "expo-haptics";
 
 /**
  * 首頁 - 問答引導模式入口
- * 穩重活力風格設計 - 深藍漸變背景
+ * 穩重活力風格設計 - 優化深藍漸變與高級感字體
  */
 export default function HomeScreen() {
   const router = useRouter();
@@ -34,16 +34,18 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
-      {/* 深藍漸變背景 */}
+      {/* 深藍漸變背景 - 優化版本，更接近設計稿 */}
       <LinearGradient
-        colors={["#0F1629", "#1A1F3A", "#0F1629"]}
+        colors={["#1a2744", "#243b5c", "#1e3048", "#162236"]}
+        locations={[0, 0.3, 0.7, 1]}
         style={StyleSheet.absoluteFillObject}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
+        start={{ x: 0.2, y: 0 }}
+        end={{ x: 0.8, y: 1 }}
       />
       
-      {/* 裝飾性波浪背景 */}
-      <View style={styles.waveDecoration} />
+      {/* 裝飾性曲線背景 - 模擬設計稿中的波浪效果 */}
+      <View style={styles.curveDecoration1} />
+      <View style={styles.curveDecoration2} />
       
       <SafeAreaView style={styles.safeArea}>
         <ScrollView
@@ -52,13 +54,14 @@ export default function HomeScreen() {
         >
           {/* 頂部 Logo */}
           <View style={styles.logoContainer}>
-            <Text style={styles.logoText}>HK Edu App</Text>
+            <Text style={styles.logoHK}>HK</Text>
+            <Text style={styles.logoText}> Edu App</Text>
           </View>
 
           {/* Hero Section */}
           <View style={styles.heroSection}>
             <Text style={styles.heroTitle}>
-              找到最適合該子的學校
+              找到最適合該{"\n"}子的學校
             </Text>
             <Text style={styles.heroSubtitle}>
               5 個問題，精準推薦香港優質學校
@@ -71,7 +74,7 @@ export default function HomeScreen() {
             <TouchableOpacity
               onPress={handleStartQuiz}
               style={styles.primaryButton}
-              activeOpacity={0.9}
+              activeOpacity={0.85}
             >
               <Text style={styles.primaryButtonText}>開始選校</Text>
             </TouchableOpacity>
@@ -80,7 +83,7 @@ export default function HomeScreen() {
             <TouchableOpacity
               onPress={handleBrowseAll}
               style={styles.secondaryButton}
-              activeOpacity={0.8}
+              activeOpacity={0.75}
             >
               <Text style={styles.secondaryButtonText}>瀏覽所有學校</Text>
             </TouchableOpacity>
@@ -103,7 +106,9 @@ export default function HomeScreen() {
                 style={styles.featureCard}
                 activeOpacity={0.7}
               >
-                <Text style={styles.featureIcon}>📚</Text>
+                <View style={styles.featureIconContainer}>
+                  <Text style={styles.featureIcon}>📚</Text>
+                </View>
                 <Text style={styles.featureText}>最新文章</Text>
               </TouchableOpacity>
               <TouchableOpacity
@@ -111,7 +116,9 @@ export default function HomeScreen() {
                 style={styles.featureCard}
                 activeOpacity={0.7}
               >
-                <Text style={styles.featureIcon}>👨‍👩‍👧</Text>
+                <View style={styles.featureIconContainer}>
+                  <Text style={styles.featureIcon}>👨‍👩‍👧</Text>
+                </View>
                 <Text style={styles.featureText}>家長指南</Text>
               </TouchableOpacity>
             </View>
@@ -132,134 +139,177 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0F1629",
+    backgroundColor: "#1a2744",
   },
-  waveDecoration: {
+  curveDecoration1: {
     position: "absolute",
-    top: "30%",
-    left: 0,
-    right: 0,
-    height: 200,
-    backgroundColor: "rgba(0, 217, 255, 0.03)",
-    borderRadius: 100,
-    transform: [{ scaleX: 1.5 }],
+    top: "25%",
+    left: -50,
+    right: -50,
+    height: 300,
+    backgroundColor: "rgba(36, 59, 92, 0.4)",
+    borderRadius: 200,
+    transform: [{ rotate: "-5deg" }, { scaleX: 1.3 }],
+  },
+  curveDecoration2: {
+    position: "absolute",
+    top: "35%",
+    left: -30,
+    right: -30,
+    height: 250,
+    backgroundColor: "rgba(30, 48, 72, 0.3)",
+    borderRadius: 180,
+    transform: [{ rotate: "3deg" }, { scaleX: 1.2 }],
   },
   safeArea: {
     flex: 1,
   },
   scrollContent: {
     flexGrow: 1,
-    paddingHorizontal: 24,
+    paddingHorizontal: 28,
     paddingBottom: 100,
   },
   logoContainer: {
+    flexDirection: "row",
     alignItems: "center",
-    marginTop: 16,
-    marginBottom: 32,
+    justifyContent: "center",
+    marginTop: 20,
+    marginBottom: 48,
+  },
+  logoHK: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#00D9FF",
+    letterSpacing: 2,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   logoText: {
-    fontSize: 18,
-    fontWeight: "600",
+    fontSize: 20,
+    fontWeight: "400",
     color: "#FFFFFF",
     letterSpacing: 1,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   heroSection: {
     alignItems: "center",
-    marginBottom: 40,
+    marginBottom: 48,
   },
   heroTitle: {
-    fontSize: 36,
-    fontWeight: "bold",
+    fontSize: 40,
+    fontWeight: "700",
     color: "#FFFFFF",
     textAlign: "center",
-    lineHeight: 48,
-    marginBottom: 12,
+    lineHeight: 52,
+    marginBottom: 16,
+    letterSpacing: 2,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   heroSubtitle: {
-    fontSize: 16,
-    color: "#9CA3AF",
+    fontSize: 15,
+    color: "rgba(255, 255, 255, 0.6)",
     textAlign: "center",
-    lineHeight: 24,
+    lineHeight: 22,
+    letterSpacing: 1,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   buttonContainer: {
-    gap: 12,
-    marginBottom: 40,
+    gap: 14,
+    marginBottom: 48,
   },
   primaryButton: {
     backgroundColor: "#00D9FF",
-    paddingVertical: 16,
-    borderRadius: 50,
+    paddingVertical: 18,
+    borderRadius: 30,
     shadowColor: "#00D9FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 5,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.35,
+    shadowRadius: 12,
+    elevation: 8,
   },
   primaryButtonText: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: "600",
     color: "#0F1629",
     textAlign: "center",
+    letterSpacing: 2,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   secondaryButton: {
     backgroundColor: "transparent",
-    paddingVertical: 14,
-    borderRadius: 50,
-    borderWidth: 2,
+    paddingVertical: 16,
+    borderRadius: 30,
+    borderWidth: 1.5,
     borderColor: "#00D9FF",
   },
   secondaryButtonText: {
     fontSize: 16,
-    fontWeight: "600",
+    fontWeight: "500",
     color: "#00D9FF",
     textAlign: "center",
+    letterSpacing: 1,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   tertiaryButton: {
-    backgroundColor: "rgba(255, 255, 255, 0.05)",
-    paddingVertical: 14,
-    borderRadius: 50,
+    backgroundColor: "rgba(255, 255, 255, 0.08)",
+    paddingVertical: 16,
+    borderRadius: 30,
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
+    borderColor: "rgba(255, 255, 255, 0.15)",
   },
   tertiaryButtonText: {
     fontSize: 16,
-    fontWeight: "600",
+    fontWeight: "500",
     color: "#FFFFFF",
     textAlign: "center",
+    letterSpacing: 1,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   featuresSection: {
-    marginBottom: 40,
+    marginBottom: 48,
   },
   featureRow: {
     flexDirection: "row",
-    gap: 12,
+    gap: 14,
   },
   featureCard: {
     flex: 1,
-    backgroundColor: "rgba(255, 255, 255, 0.05)",
-    borderRadius: 16,
-    padding: 20,
+    backgroundColor: "rgba(255, 255, 255, 0.06)",
+    borderRadius: 20,
+    paddingVertical: 24,
+    paddingHorizontal: 16,
     alignItems: "center",
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.08)",
   },
+  featureIconContainer: {
+    width: 48,
+    height: 48,
+    borderRadius: 12,
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 12,
+  },
   featureIcon: {
-    fontSize: 24,
-    marginBottom: 8,
+    fontSize: 22,
   },
   featureText: {
     fontSize: 14,
-    fontWeight: "600",
+    fontWeight: "500",
     color: "#FFFFFF",
+    letterSpacing: 0.5,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
   disclaimerContainer: {
     marginTop: "auto",
-    paddingTop: 20,
+    paddingTop: 24,
   },
   disclaimerText: {
     fontSize: 12,
-    color: "#6B7280",
+    color: "rgba(255, 255, 255, 0.35)",
     textAlign: "center",
     lineHeight: 18,
+    letterSpacing: 0.5,
+    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
   },
 });
