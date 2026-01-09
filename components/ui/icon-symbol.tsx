@@ -24,6 +24,9 @@ const MAPPING = {
   "star.fill": "star",
   "xmark": "close",
   "person.fill": "person",
+  "arrow.up.arrow.down": "swap-vert",
+  "checkmark": "check",
+  "slider.horizontal.3": "tune",
 } as IconMapping;
 
 /**

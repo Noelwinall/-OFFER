@@ -5,6 +5,7 @@ import { SchoolCard } from "@/components/school-card";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { FilterSheet } from "@/components/filter-sheet";
 import { ActiveFilterTags } from "@/components/active-filter-tags";
+import { SortSelector } from "@/components/sort-selector";
 import { useRouter } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { FavoritesStorage } from "@/lib/storage";
@@ -164,11 +165,12 @@ export default function SearchScreen() {
         {/* 活躍篩選標籤 */}
         <ActiveFilterTags />
 
-        {/* 結果統計 */}
+        {/* 結果統計與排序 */}
         <View style={styles.resultStats}>
           <Text style={styles.resultText}>
             找到 {filteredSchools.length} 所學校
           </Text>
+          <SortSelector />
         </View>
 
         {/* 篩選面板 */}
@@ -294,6 +296,9 @@ const styles = StyleSheet.create({
     borderLeftColor: "rgba(255,255,255,0.2)",
   },
   resultStats: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingHorizontal: 24,
     paddingVertical: 8,
   },

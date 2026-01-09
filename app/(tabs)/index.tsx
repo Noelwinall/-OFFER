@@ -65,7 +65,7 @@ export default function HomeScreen() {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
-    router.push("/(tabs)/explore");
+    router.push("/swipe-explore");
   };
 
   const handleFeaturePress = (route: string) => {

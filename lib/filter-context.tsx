@@ -2,12 +2,16 @@ import React, { createContext, useReducer, ReactNode } from "react";
 
 import type { Curriculum, Language, SchoolCategory, District } from "@/types/school";
 
+// 排序選項類型
+export type SortOption = "relevance" | "tuition_low" | "tuition_high" | "name_asc" | "name_desc";
+
 export interface FilterState {
   tuitionRange: { min: number; max: number } | null;
   curriculum: Curriculum[];
   language: Language | null;
   category: SchoolCategory[];
   district: District[];
+  sortBy: SortOption;
 }
 
 export type FilterAction =
@@ -18,6 +22,7 @@ export type FilterAction =
   | { type: "CLEAR_LANGUAGE" }
   | { type: "TOGGLE_CATEGORY"; payload: SchoolCategory }
   | { type: "TOGGLE_DISTRICT"; payload: District }
+  | { type: "SET_SORT"; payload: SortOption }
   | { type: "RESET_FILTERS" };
 
 const initialState: FilterState = {
@@ -26,6 +31,7 @@ const initialState: FilterState = {
   language: null,
   category: [],
   district: [],
+  sortBy: "relevance",
 };
 
 function filterReducer(state: FilterState, action: FilterAction): FilterState {
@@ -65,6 +71,9 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         : [...state.district, action.payload as District];
       return { ...state, district: updated };
     }
+
+    case "SET_SORT":
+      return { ...state, sortBy: action.payload };
 
     case "RESET_FILTERS":
       return initialState;
@@ -147,3 +156,14 @@ export function getFilterLabels(state: FilterState): string[] {
 
   return labels;
 }
+
+/**
+ * 排序選項配置
+ */
+export const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: "relevance", label: "相關度" },
+  { value: "tuition_low", label: "學費由低到高" },
+  { value: "tuition_high", label: "學費由高到低" },
+  { value: "name_asc", label: "名稱 A-Z" },
+  { value: "name_desc", label: "名稱 Z-A" },
+];

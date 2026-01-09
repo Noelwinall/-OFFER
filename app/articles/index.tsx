@@ -4,6 +4,10 @@ import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Image } from "expo-image";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { useState } from "react";
+
+// 文章分類
+const CATEGORIES = ["全部", "選校攻略", "面試技巧", "申請準備"];
 
 // 文章數據
 const ARTICLES = [
@@ -14,6 +18,7 @@ const ARTICLES = [
     category: "選校攻略",
     readTime: "8 分鐘",
     image: require("@/assets/images/feature-articles.png"),
+    isNew: false,
   },
   {
     id: "2",
@@ -22,6 +27,7 @@ const ARTICLES = [
     category: "面試技巧",
     readTime: "6 分鐘",
     image: require("@/assets/images/feature-guide.png"),
+    isNew: false,
   },
   {
     id: "3",
@@ -30,6 +36,7 @@ const ARTICLES = [
     category: "選校攻略",
     readTime: "10 分鐘",
     image: require("@/assets/images/feature-articles.png"),
+    isNew: false,
   },
   {
     id: "4",
@@ -38,6 +45,7 @@ const ARTICLES = [
     category: "選校攻略",
     readTime: "7 分鐘",
     image: require("@/assets/images/feature-guide.png"),
+    isNew: true,
   },
   {
     id: "5",
@@ -46,6 +54,7 @@ const ARTICLES = [
     category: "選校攻略",
     readTime: "9 分鐘",
     image: require("@/assets/images/feature-articles.png"),
+    isNew: true,
   },
   {
     id: "6",
@@ -54,6 +63,7 @@ const ARTICLES = [
     category: "面試技巧",
     readTime: "12 分鐘",
     image: require("@/assets/images/feature-guide.png"),
+    isNew: true,
   },
   {
     id: "7",
@@ -62,6 +72,7 @@ const ARTICLES = [
     category: "申請準備",
     readTime: "8 分鐘",
     image: require("@/assets/images/feature-articles.png"),
+    isNew: true,
   },
   {
     id: "8",
@@ -70,12 +81,39 @@ const ARTICLES = [
     category: "選校攻略",
     readTime: "5 分鐘",
     image: require("@/assets/images/feature-guide.png"),
+    isNew: true,
   },
 ];
 
 export default function ArticlesScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const [selectedCategory, setSelectedCategory] = useState("全部");
+
+  const filteredArticles = selectedCategory === "全部"
+    ? ARTICLES
+    : ARTICLES.filter((article) => article.category === selectedCategory);
+
+  const renderCategoryTab = (category: string) => (
+    <TouchableOpacity
+      key={category}
+      style={[
+        styles.categoryTab,
+        selectedCategory === category && styles.categoryTabActive,
+      ]}
+      onPress={() => setSelectedCategory(category)}
+      activeOpacity={0.7}
+    >
+      <Text
+        style={[
+          styles.categoryTabText,
+          selectedCategory === category && styles.categoryTabTextActive,
+        ]}
+      >
+        {category}
+      </Text>
+    </TouchableOpacity>
+  );
 
   const renderArticle = ({ item, index }: { item: typeof ARTICLES[0]; index: number }) => (
     <TouchableOpacity
@@ -83,7 +121,14 @@ export default function ArticlesScreen() {
       activeOpacity={0.7}
       onPress={() => router.push(`/articles/${item.id}` as any)}
     >
-      <Image source={item.image} style={styles.articleImage} contentFit="cover" />
+      <View style={styles.imageContainer}>
+        <Image source={item.image} style={styles.articleImage} contentFit="cover" />
+        {item.isNew && (
+          <View style={styles.newBadge}>
+            <Text style={styles.newBadgeText}>NEW</Text>
+          </View>
+        )}
+      </View>
       <View style={styles.articleContent}>
         <View style={styles.categoryBadge}>
           <Text style={styles.categoryText}>{item.category}</Text>
@@ -115,8 +160,20 @@ export default function ArticlesScreen() {
         <View style={styles.placeholder} />
       </View>
 
+      {/* 分類標籤 */}
+      <View style={styles.categoryContainer}>
+        {CATEGORIES.map(renderCategoryTab)}
+      </View>
+
+      {/* 文章統計 */}
+      <View style={styles.statsContainer}>
+        <Text style={styles.statsText}>
+          共 {filteredArticles.length} 篇文章
+        </Text>
+      </View>
+
       <FlatList
-        data={ARTICLES}
+        data={filteredArticles}
         renderItem={renderArticle}
         keyExtractor={(item) => item.id}
         contentContainerStyle={[styles.listContent, { paddingBottom: insets.bottom + 24 }]}
@@ -152,6 +209,42 @@ const styles = StyleSheet.create({
   placeholder: {
     width: 40,
   },
+  categoryContainer: {
+    flexDirection: "row",
+    paddingHorizontal: 16,
+    paddingBottom: 12,
+    gap: 8,
+  },
+  categoryTab: {
+    paddingHorizontal: 16,
+    paddingVertical: 8,
+    borderRadius: 20,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.1)",
+  },
+  categoryTabActive: {
+    backgroundColor: "rgba(0, 217, 255, 0.15)",
+    borderColor: "#00D9FF",
+  },
+  categoryTabText: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.6)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  categoryTabTextActive: {
+    color: "#00D9FF",
+    fontWeight: "600",
+  },
+  statsContainer: {
+    paddingHorizontal: 20,
+    paddingBottom: 8,
+  },
+  statsText: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
   listContent: {
     paddingHorizontal: 20,
     gap: 16,
@@ -166,9 +259,27 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.08)",
   },
+  imageContainer: {
+    position: "relative",
+  },
   articleImage: {
     width: "100%",
     height: 160,
+  },
+  newBadge: {
+    position: "absolute",
+    top: 12,
+    right: 12,
+    backgroundColor: "#00D9FF",
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 10,
+  },
+  newBadgeText: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: "#0F1629",
+    letterSpacing: 0.5,
   },
   articleContent: {
     padding: 16,

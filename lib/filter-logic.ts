@@ -1,5 +1,5 @@
 import type { School } from "@/types/school";
-import type { FilterState } from "@/lib/filter-context";
+import type { FilterState, SortOption } from "@/lib/filter-context";
 
 /**
  * 檢查學校是否符合進階篩選條件
@@ -115,16 +115,61 @@ export function calculateSearchRelevance(
 }
 
 /**
- * 對搜尋結果進行排序
+ * 根據排序選項對學校列表進行排序
+ */
+export function sortSchools(
+  schools: School[],
+  sortBy: SortOption,
+  searchQuery: string,
+  filters: FilterState
+): School[] {
+  const sorted = [...schools];
+
+  switch (sortBy) {
+    case "relevance":
+      // 按相關度排序（預設）
+      return sorted.sort((a, b) => {
+        const scoreA = calculateSearchRelevance(a, searchQuery, filters);
+        const scoreB = calculateSearchRelevance(b, searchQuery, filters);
+        return scoreB - scoreA;
+      });
+
+    case "tuition_low":
+      // 學費由低到高
+      return sorted.sort((a, b) => {
+        const avgA = (a.tuitionMin + a.tuitionMax) / 2;
+        const avgB = (b.tuitionMin + b.tuitionMax) / 2;
+        return avgA - avgB;
+      });
+
+    case "tuition_high":
+      // 學費由高到低
+      return sorted.sort((a, b) => {
+        const avgA = (a.tuitionMin + a.tuitionMax) / 2;
+        const avgB = (b.tuitionMin + b.tuitionMax) / 2;
+        return avgB - avgA;
+      });
+
+    case "name_asc":
+      // 名稱 A-Z（按拼音/筆畫）
+      return sorted.sort((a, b) => a.name.localeCompare(b.name, "zh-Hant"));
+
+    case "name_desc":
+      // 名稱 Z-A
+      return sorted.sort((a, b) => b.name.localeCompare(a.name, "zh-Hant"));
+
+    default:
+      return sorted;
+  }
+}
+
+/**
+ * 對搜尋結果進行排序（兼容舊版 API）
  */
 export function sortSearchResults(
   schools: School[],
   searchQuery: string,
   filters: FilterState
 ): School[] {
-  return [...schools].sort((a, b) => {
-    const scoreA = calculateSearchRelevance(a, searchQuery, filters);
-    const scoreB = calculateSearchRelevance(b, searchQuery, filters);
-    return scoreB - scoreA;
-  });
+  return sortSchools(schools, filters.sortBy, searchQuery, filters);
 }
