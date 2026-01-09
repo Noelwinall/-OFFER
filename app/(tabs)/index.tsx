@@ -1,48 +1,71 @@
-import { ScrollView, Text, View, TouchableOpacity } from "react-native";
-
+import { View, Text, TouchableOpacity, Platform } from "react-native";
 import { ScreenContainer } from "@/components/screen-container";
+import { useRouter } from "expo-router";
+import * as Haptics from "expo-haptics";
 
 /**
- * Home Screen - NativeWind Example
- *
- * This template uses NativeWind (Tailwind CSS for React Native).
- * You can use familiar Tailwind classes directly in className props.
- *
- * Key patterns:
- * - Use `className` instead of `style` for most styling
- * - Theme colors: use tokens directly (bg-background, text-foreground, bg-primary, etc.); no dark: prefix needed
- * - Responsive: standard Tailwind breakpoints work on web
- * - Custom colors defined in tailwind.config.js
+ * 首頁 - 問答引導模式入口
  */
 export default function HomeScreen() {
+  const router = useRouter();
+
+  const handleStartQuiz = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    router.push("/quiz");
+  };
+
   return (
-    <ScreenContainer className="p-6">
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View className="flex-1 gap-8">
-          {/* Hero Section */}
-          <View className="items-center gap-2">
-            <Text className="text-4xl font-bold text-foreground">Welcome</Text>
-            <Text className="text-base text-muted text-center">
-              Edit app/(tabs)/index.tsx to get started
-            </Text>
-          </View>
-
-          {/* Example Card */}
-          <View className="w-full max-w-sm self-center bg-surface rounded-2xl p-6 shadow-sm border border-border">
-            <Text className="text-lg font-semibold text-foreground mb-2">NativeWind Ready</Text>
-            <Text className="text-sm text-muted leading-relaxed">
-              Use Tailwind CSS classes directly in your React Native components.
-            </Text>
-          </View>
-
-          {/* Example Button */}
-          <View className="items-center">
-            <TouchableOpacity className="bg-primary px-6 py-3 rounded-full active:opacity-80">
-              <Text className="text-background font-semibold">Get Started</Text>
-            </TouchableOpacity>
-          </View>
+    <ScreenContainer className="justify-center items-center px-6">
+      <View className="w-full max-w-md gap-8">
+        {/* Hero Section */}
+        <View className="items-center gap-3">
+          <Text className="text-4xl font-bold text-foreground text-center">
+            找到最適合孩子的學校
+          </Text>
+          <Text className="text-base text-muted text-center leading-relaxed">
+            5 個問題，精準推薦香港優質學校
+          </Text>
         </View>
-      </ScrollView>
+
+        {/* 主按鈕 - 開始選校 */}
+        <TouchableOpacity
+          onPress={handleStartQuiz}
+          className="bg-primary py-4 rounded-2xl active:opacity-80"
+          style={{ transform: [{ scale: 1 }] }}
+        >
+          <Text className="text-white text-lg font-semibold text-center">
+            開始選校
+          </Text>
+        </TouchableOpacity>
+
+        {/* 次要入口 */}
+        <View className="gap-3">
+          <TouchableOpacity
+            onPress={() => router.push("/(tabs)/search")}
+            className="bg-surface py-3 rounded-xl border border-border active:opacity-70"
+          >
+            <Text className="text-foreground text-base font-medium text-center">
+              瀏覽所有學校
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={() => router.push("/(tabs)/explore")}
+            className="bg-surface py-3 rounded-xl border border-border active:opacity-70"
+          >
+            <Text className="text-foreground text-base font-medium text-center">
+              探索學校
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* 免責聲明 */}
+        <Text className="text-xs text-muted text-center mt-8">
+          資訊基於公開資料整理，僅供參考，以學校官方為準
+        </Text>
+      </View>
     </ScreenContainer>
   );
 }
