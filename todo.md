@@ -56,5 +56,16 @@
 - [x] 更新 app.config.ts 品牌資訊
 - [x] 複製 Logo 到所有必要位置
 - [x] 修復 TypeScript 路由錯誤
-- [ ] 建立最終 Checkpoint
-- [ ] 交付完整應用程式
+- [x] 建立單元測試並驗證核心功能
+- [x] 建立最終 Checkpoint (v5222e5c1)
+- [x] 交付完整應用程式
+
+## Phase 10: 進階篩選功能設計與實現
+- [ ] 設計篩選面板 UI（Bottom Sheet 樣式）
+- [ ] 實現學費範圍滑桿（RangeSlider）
+- [ ] 實現多選課程體系（Checkbox Group）
+- [ ] 實現教學語言單選（Radio Group）
+- [ ] 實現篩選面板狀態管理（Context/useState）
+- [ ] 整合篩選到搜尋頁面
+- [ ] 實現「重置篩選」與「套用篩選」按鈕
+- [ ] 測試篩選邏輯與 UI 互動

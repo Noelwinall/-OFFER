@@ -1,11 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useContext } from "react";
 import { View, Text, TextInput, FlatList, TouchableOpacity, Platform } from "react-native";
 import { ScreenContainer } from "@/components/screen-container";
 import { SchoolCard } from "@/components/school-card";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { FilterSheet } from "@/components/filter-sheet";
+import { ActiveFilterTags } from "@/components/active-filter-tags";
 import { useRouter } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { FavoritesStorage } from "@/lib/storage";
+import { FilterContext } from "@/lib/filter-context";
+import { filterSchools, sortSearchResults } from "@/lib/filter-logic";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useColors } from "@/hooks/use-colors";
@@ -13,37 +17,30 @@ import { useColors } from "@/hooks/use-colors";
 export default function SearchScreen() {
   const router = useRouter();
   const colors = useColors();
+  const filterContext = useContext(FilterContext);
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredSchools, setFilteredSchools] = useState<School[]>(SCHOOLS);
+  const [showFilterSheet, setShowFilterSheet] = useState(false);
   const [favorites, setFavorites] = useState<string[]>([]);
+
+  if (!filterContext) {
+    throw new Error("SearchScreen must be used within FilterProvider");
+  }
+
+  const { state: filters } = filterContext;
 
   useEffect(() => {
     loadFavorites();
   }, []);
 
-  useEffect(() => {
-    filterSchools();
-  }, [searchQuery]);
+  // 使用 useMemo 優化篩選邏輯
+  const filteredSchools = useMemo(() => {
+    const results = filterSchools(SCHOOLS, searchQuery, filters);
+    return sortSearchResults(results, searchQuery, filters);
+  }, [searchQuery, filters]);
 
   const loadFavorites = async () => {
     const favs = await FavoritesStorage.getAll();
     setFavorites(favs);
-  };
-
-  const filterSchools = () => {
-    if (!searchQuery.trim()) {
-      setFilteredSchools(SCHOOLS);
-      return;
-    }
-
-    const query = searchQuery.toLowerCase();
-    const filtered = SCHOOLS.filter(
-      (school) =>
-        school.name.toLowerCase().includes(query) ||
-        school.district.toLowerCase().includes(query) ||
-        school.category.toLowerCase().includes(query)
-    );
-    setFilteredSchools(filtered);
   };
 
   const handleFavoriteToggle = async (schoolId: string) => {
@@ -58,15 +55,22 @@ export default function SearchScreen() {
     router.push(`/school/${schoolId}`);
   };
 
+  const handleOpenFilterSheet = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    setShowFilterSheet(true);
+  };
+
   return (
     <ScreenContainer edges={["top", "left", "right"]}>
       <View className="flex-1">
         {/* 搜尋框 */}
         <View className="px-6 py-4 border-b border-border">
-          <View className="flex-row items-center bg-surface rounded-xl px-4 py-3 border border-border">
+          <View className="flex-row items-center bg-surface rounded-xl px-4 py-3 border border-border gap-2">
             <IconSymbol name="magnifyingglass" size={20} color={colors.muted} />
             <TextInput
-              className="flex-1 ml-2 text-foreground"
+              className="flex-1 text-foreground"
               placeholder="搜尋學校名稱、地區或類型"
               placeholderTextColor={colors.muted}
               value={searchQuery}
@@ -74,12 +78,23 @@ export default function SearchScreen() {
               returnKeyType="search"
             />
             {searchQuery.length > 0 && (
-              <TouchableOpacity onPress={() => setSearchQuery("")}>
+              <TouchableOpacity onPress={() => setSearchQuery("")}
+              >
                 <IconSymbol name="xmark" size={18} color={colors.muted} />
               </TouchableOpacity>
             )}
+            <TouchableOpacity
+              onPress={handleOpenFilterSheet}
+              className="pl-2 border-l border-border"
+              hitSlop={8}
+            >
+              <IconSymbol name="slider.horizontal.3" size={20} color={colors.primary} />
+            </TouchableOpacity>
           </View>
         </View>
+
+        {/* 活躍篩選標籤 */}
+        <ActiveFilterTags />
 
         {/* 結果統計 */}
         <View className="px-6 py-3">
@@ -87,6 +102,9 @@ export default function SearchScreen() {
             找到 {filteredSchools.length} 所學校
           </Text>
         </View>
+
+        {/* 篩選面板 */}
+        <FilterSheet visible={showFilterSheet} onClose={() => setShowFilterSheet(false)} />
 
         {/* 學校列表 */}
         <FlatList

@@ -57,11 +57,11 @@ describe("HK Edu App - Core Features", () => {
     });
 
     it("should filter schools by category", () => {
-      const filters: QuizFilters = { category: "國際學校" };
+      const filters: QuizFilters = { category: "國際" };
       const results = getSortedRecommendations(SCHOOLS, filters);
       
       results.forEach((school) => {
-        expect(school.category).toBe("國際學校");
+        expect(school.category).toBe("國際");
       });
     });
 
@@ -78,14 +78,14 @@ describe("HK Edu App - Core Features", () => {
       const filters: QuizFilters = {
         level: "小學",
         district: "九龍",
-        category: "直資學校",
+        category: "直資",
       };
       const results = getSortedRecommendations(SCHOOLS, filters);
       
       results.forEach((school) => {
         expect(school.level).toBe("小學");
         expect(school.district).toBe("九龍");
-        expect(school.category).toBe("直資學校");
+        expect(school.category).toBe("直資");
       });
     });
 
