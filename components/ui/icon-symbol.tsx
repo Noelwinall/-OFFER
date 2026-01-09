@@ -27,6 +27,19 @@ const MAPPING = {
   "arrow.up.arrow.down": "swap-vert",
   "checkmark": "check",
   "slider.horizontal.3": "tune",
+  "plus.circle.fill": "add-circle",
+  "checkmark.circle.fill": "check-circle",
+  "folder.fill": "folder",
+  "bookmark.fill": "bookmark",
+  "bell.fill": "notifications",
+  "bell.badge.fill": "notifications-active",
+  "message.fill": "chat",
+  "hand.thumbsup.fill": "thumb-up",
+  "hand.thumbsup": "thumb-up",
+  "pencil": "edit",
+  "trash.fill": "delete",
+  "clock.fill": "schedule",
+  "calendar": "event",
 } as IconMapping;
 
 /**

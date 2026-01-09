@@ -1,9 +1,11 @@
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Platform } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import * as Haptics from "expo-haptics";
+import { NotificationsStorage } from "@/lib/storage";
 
 // 申請時間線數據（示範數據）
 const DEADLINES = [
@@ -140,6 +142,23 @@ export default function DeadlinesScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const [expandedMonth, setExpandedMonth] = useState<string | null>("2");
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  useEffect(() => {
+    loadUnreadCount();
+  }, []);
+
+  const loadUnreadCount = async () => {
+    const count = await NotificationsStorage.getUnreadCount();
+    setUnreadCount(count);
+  };
+
+  const handleNotificationPress = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    router.push("/notifications");
+  };
 
   const toggleMonth = (monthId: string) => {
     setExpandedMonth(expandedMonth === monthId ? null : monthId);
@@ -162,7 +181,18 @@ export default function DeadlinesScreen() {
           <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>申請截止別錯過！</Text>
-        <View style={styles.placeholder} />
+        <TouchableOpacity
+          onPress={handleNotificationPress}
+          style={styles.notificationButton}
+          activeOpacity={0.7}
+        >
+          <IconSymbol name={unreadCount > 0 ? "bell.badge.fill" : "bell.fill"} size={22} color="#FFFFFF" />
+          {unreadCount > 0 && (
+            <View style={styles.notificationBadge}>
+              <Text style={styles.notificationBadgeText}>{unreadCount > 9 ? "9+" : unreadCount}</Text>
+            </View>
+          )}
+        </TouchableOpacity>
       </View>
 
       <ScrollView
@@ -290,8 +320,31 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Bold",
     letterSpacing: 1,
   },
-  placeholder: {
+  notificationButton: {
     width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "rgba(255,255,255,0.1)",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "relative",
+  },
+  notificationBadge: {
+    position: "absolute",
+    top: 4,
+    right: 4,
+    backgroundColor: "#EF4444",
+    borderRadius: 8,
+    minWidth: 16,
+    height: 16,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 4,
+  },
+  notificationBadgeText: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: "#FFFFFF",
   },
   content: {
     flex: 1,

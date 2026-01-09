@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
-import { FavoritesStorage, CompareStorage } from "@/lib/storage";
+import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage";
 import { formatTuitionRange } from "@/types/school";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
@@ -18,11 +18,14 @@ export default function SchoolDetailScreen() {
   const [school, setSchool] = useState<School | null>(null);
   const [isFavorite, setIsFavorite] = useState(false);
   const [isInCompare, setIsInCompare] = useState(false);
+  const [reviewCount, setReviewCount] = useState(0);
+  const [averageRating, setAverageRating] = useState(0);
 
   useEffect(() => {
     loadSchool();
     loadFavoriteStatus();
     loadCompareStatus();
+    loadReviewStats();
   }, [params.id]);
 
   const loadSchool = () => {
@@ -38,6 +41,20 @@ export default function SchoolDetailScreen() {
   const loadCompareStatus = async () => {
     const status = await CompareStorage.isInCompare(params.id as string);
     setIsInCompare(status);
+  };
+
+  const loadReviewStats = async () => {
+    const reviews = await ReviewsStorage.getBySchool(params.id as string);
+    const avgRating = await ReviewsStorage.getAverageRating(params.id as string);
+    setReviewCount(reviews.length);
+    setAverageRating(avgRating);
+  };
+
+  const handleViewReviews = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    router.push(`/school/${params.id}/reviews`);
   };
 
   const handleBack = () => {
@@ -166,6 +183,32 @@ export default function SchoolDetailScreen() {
               </TouchableOpacity>
             </View>
           </View>
+
+          {/* 家長心得 */}
+          <TouchableOpacity
+            style={styles.reviewSection}
+            onPress={handleViewReviews}
+            activeOpacity={0.7}
+          >
+            <View style={styles.reviewHeader}>
+              <Text style={styles.sectionTitle}>家長心得</Text>
+              <View style={styles.reviewStats}>
+                {averageRating > 0 && (
+                  <View style={styles.ratingBadge}>
+                    <IconSymbol name="star.fill" size={14} color="#F59E0B" />
+                    <Text style={styles.ratingText}>{averageRating.toFixed(1)}</Text>
+                  </View>
+                )}
+                <Text style={styles.reviewCountText}>
+                  {reviewCount > 0 ? `${reviewCount} 則評論` : "暫無評論"}
+                </Text>
+                <IconSymbol name="chevron.right" size={16} color="rgba(255,255,255,0.4)" />
+              </View>
+            </View>
+            <Text style={styles.reviewHint}>
+              查看家長分享的申請經驗和學校評價
+            </Text>
+          </TouchableOpacity>
 
           {/* 學校亮點 */}
           <View style={styles.section}>
@@ -424,5 +467,46 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 16,
+  },
+  reviewSection: {
+    paddingHorizontal: 24,
+    paddingVertical: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "rgba(0,217,255,0.03)",
+  },
+  reviewHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  reviewStats: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
+  ratingBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    backgroundColor: "rgba(245,158,11,0.15)",
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+  },
+  ratingText: {
+    fontSize: 13,
+    fontWeight: "600",
+    color: "#F59E0B",
+  },
+  reviewCountText: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.5)",
+  },
+  reviewHint: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.5)",
+    fontFamily: "NotoSerifSC-Regular",
   },
 });
