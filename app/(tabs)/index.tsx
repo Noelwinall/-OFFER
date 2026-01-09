@@ -181,14 +181,14 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#00D9FF",
     letterSpacing: 2,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Bold",
   },
   logoText: {
     fontSize: 20,
     fontWeight: "400",
     color: "#FFFFFF",
     letterSpacing: 1,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Regular",
   },
   heroSection: {
     alignItems: "center",
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
     lineHeight: 52,
     marginBottom: 16,
     letterSpacing: 2,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Bold",
   },
   heroSubtitle: {
     fontSize: 15,
@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     lineHeight: 22,
     letterSpacing: 1,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Regular",
   },
   buttonContainer: {
     gap: 14,
@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     color: "#0F1629",
     textAlign: "center",
     letterSpacing: 2,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Regular",
   },
   secondaryButton: {
     backgroundColor: "transparent",
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     color: "#00D9FF",
     textAlign: "center",
     letterSpacing: 1,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Regular",
   },
   tertiaryButton: {
     backgroundColor: "rgba(255, 255, 255, 0.08)",
@@ -262,7 +262,7 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     textAlign: "center",
     letterSpacing: 1,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Regular",
   },
   featuresSection: {
     marginBottom: 48,
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     color: "#FFFFFF",
     letterSpacing: 0.5,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Regular",
   },
   disclaimerContainer: {
     marginTop: "auto",
@@ -310,6 +310,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     lineHeight: 18,
     letterSpacing: 0.5,
-    fontFamily: Platform.OS === "ios" ? "PingFang SC" : "sans-serif",
+    fontFamily: "NotoSerifSC-Regular",
   },
 });
