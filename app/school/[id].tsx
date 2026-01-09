@@ -108,6 +108,15 @@ export default function SchoolDetailScreen() {
     }
   };
 
+  const handleApplyNow = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
+    if (school?.applicationLink) {
+      Linking.openURL(school.applicationLink);
+    }
+  };
+
   if (!school) {
     return (
       <View style={{ flex: 1 }}>
@@ -261,6 +270,14 @@ export default function SchoolDetailScreen() {
             <Text style={styles.compareButtonText}>
               {isInCompare ? "從對比中移除" : "加入對比"}
             </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={handleApplyNow}
+            style={styles.applyButton}
+            activeOpacity={0.8}
+          >
+            <IconSymbol name="paperplane.fill" size={18} color="#FFFFFF" />
+            <Text style={styles.applyButtonText}>立即申請</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -447,8 +464,11 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(15, 22, 41, 0.95)",
     borderTopWidth: 1,
     borderTopColor: "rgba(255,255,255,0.1)",
+    flexDirection: "row",
+    gap: 12,
   },
   compareButton: {
+    flex: 1,
     backgroundColor: "rgba(255,255,255,0.1)",
     paddingVertical: 16,
     borderRadius: 16,
@@ -456,10 +476,32 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.2)",
   },
   compareButtonText: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "500",
     color: "#FFFFFF",
     textAlign: "center",
+    fontFamily: "NotoSerifSC-Regular",
+    letterSpacing: 1,
+  },
+  applyButton: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    backgroundColor: "#00D9FF",
+    paddingVertical: 16,
+    borderRadius: 16,
+    shadowColor: "#00D9FF",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 8,
+  },
+  applyButtonText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#0F1629",
     fontFamily: "NotoSerifSC-Regular",
     letterSpacing: 1,
   },
