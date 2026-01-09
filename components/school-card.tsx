@@ -107,14 +107,14 @@ export function SchoolCard({
 }
 
 /**
- * 根據學校類型返回對應顏色
+ * 根據學校類型返回對應顏色 - 穩重活力風格
  */
 function getCategoryColor(category: School["category"]): string {
   const colors: Record<School["category"], string> = {
-    國際: "#0a7ea4",
-    資助: "#22C55E",
-    直資: "#F59E0B",
-    私立: "#8B5CF6",
+    國際: "#00D9FF",
+    資助: "#6B5B95",
+    直資: "#E8756F",
+    私立: "#7C3AED",
     公立: "#3B82F6",
   };
   return colors[category];
@@ -122,18 +122,18 @@ function getCategoryColor(category: School["category"]): string {
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 12,
+    borderRadius: 16,
     padding: 16,
     marginHorizontal: 16,
     marginVertical: 8,
     borderWidth: 1,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 3,
   },
   cardPressed: {
-    opacity: 0.7,
+    opacity: 0.85,
   },
 });
