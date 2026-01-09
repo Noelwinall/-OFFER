@@ -5,7 +5,7 @@
 export type SchoolCategory = "國際" | "資助" | "直資" | "私立" | "公立";
 export type District = "港島" | "九龍" | "新界";
 export type Level = "幼稚園" | "小學" | "中學";
-export type Curriculum = "IB" | "DSE" | "IGCSE" | "A-Level" | "其他";
+export type Curriculum = "IB" | "DSE" | "IGCSE" | "A-Level" | "AP" | "美式課程" | "英式課程" | "德式課程" | "澳洲課程" | "新加坡課程" | "法式課程" | "加拿大課程" | "其他";
 export type Language = "全英文" | "中英雙語" | "以中文為主";
 
 export interface School {
