@@ -2,11 +2,12 @@ import { View, Text, TouchableOpacity, Platform, ScrollView, StyleSheet } from "
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
+import { Image } from "expo-image";
 import * as Haptics from "expo-haptics";
 
 /**
  * 首頁 - 問答引導模式入口
- * 穩重活力風格設計 - 優化深藍漸變與高級感字體
+ * 穩重活力風格設計 - 思源宋體 + 真實配圖
  */
 export default function HomeScreen() {
   const router = useRouter();
@@ -36,7 +37,7 @@ export default function HomeScreen() {
     <View style={styles.container}>
       {/* 深藍漸變背景 - 優化版本，更接近設計稿 */}
       <LinearGradient
-        colors={["#1a2744", "#243b5c", "#1e3048", "#162236"]}
+        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
         locations={[0, 0.3, 0.7, 1]}
         style={StyleSheet.absoluteFillObject}
         start={{ x: 0.2, y: 0 }}
@@ -98,7 +99,7 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
 
-          {/* 推薦功能卡片 */}
+          {/* 推薦功能卡片 - 帶真實配圖 */}
           <View style={styles.featuresSection}>
             <View style={styles.featureRow}>
               <TouchableOpacity
@@ -106,20 +107,34 @@ export default function HomeScreen() {
                 style={styles.featureCard}
                 activeOpacity={0.7}
               >
-                <View style={styles.featureIconContainer}>
-                  <Text style={styles.featureIcon}>📚</Text>
+                <Image
+                  source={require("@/assets/images/feature-articles.png")}
+                  style={styles.featureImage}
+                  contentFit="cover"
+                />
+                <View style={styles.featureOverlay}>
+                  <View style={styles.featureLabelContainer}>
+                    <Text style={styles.featureLabelIcon}>📚</Text>
+                    <Text style={styles.featureText}>最新文章</Text>
+                  </View>
                 </View>
-                <Text style={styles.featureText}>最新文章</Text>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={handleBrowseAll}
                 style={styles.featureCard}
                 activeOpacity={0.7}
               >
-                <View style={styles.featureIconContainer}>
-                  <Text style={styles.featureIcon}>👨‍👩‍👧</Text>
+                <Image
+                  source={require("@/assets/images/feature-guide.png")}
+                  style={styles.featureImage}
+                  contentFit="cover"
+                />
+                <View style={styles.featureOverlay}>
+                  <View style={styles.featureLabelContainer}>
+                    <Text style={styles.featureLabelIcon}>👨‍👩‍👧</Text>
+                    <Text style={styles.featureText}>家長指南</Text>
+                  </View>
                 </View>
-                <Text style={styles.featureText}>家長指南</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -139,7 +154,7 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#1a2744",
+    backgroundColor: "#0F1629",
   },
   curveDecoration1: {
     position: "absolute",
@@ -147,7 +162,7 @@ const styles = StyleSheet.create({
     left: -50,
     right: -50,
     height: 300,
-    backgroundColor: "rgba(36, 59, 92, 0.4)",
+    backgroundColor: "rgba(30, 58, 95, 0.35)",
     borderRadius: 200,
     transform: [{ rotate: "-5deg" }, { scaleX: 1.3 }],
   },
@@ -157,7 +172,7 @@ const styles = StyleSheet.create({
     left: -30,
     right: -30,
     height: 250,
-    backgroundColor: "rgba(30, 48, 72, 0.3)",
+    backgroundColor: "rgba(26, 39, 68, 0.4)",
     borderRadius: 180,
     transform: [{ rotate: "3deg" }, { scaleX: 1.2 }],
   },
@@ -273,25 +288,29 @@ const styles = StyleSheet.create({
   },
   featureCard: {
     flex: 1,
-    backgroundColor: "rgba(255, 255, 255, 0.06)",
+    height: 140,
     borderRadius: 20,
-    paddingVertical: 24,
-    paddingHorizontal: 16,
-    alignItems: "center",
+    overflow: "hidden",
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.08)",
+    borderColor: "rgba(255, 255, 255, 0.1)",
   },
-  featureIconContainer: {
-    width: 48,
-    height: 48,
-    borderRadius: 12,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    justifyContent: "center",
+  featureImage: {
+    width: "100%",
+    height: "100%",
+  },
+  featureOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(15, 22, 41, 0.5)",
+    justifyContent: "flex-end",
+    padding: 14,
+  },
+  featureLabelContainer: {
+    flexDirection: "row",
     alignItems: "center",
-    marginBottom: 12,
+    gap: 8,
   },
-  featureIcon: {
-    fontSize: 22,
+  featureLabelIcon: {
+    fontSize: 16,
   },
   featureText: {
     fontSize: 14,

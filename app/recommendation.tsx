@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
-import { View, Text, FlatList, TouchableOpacity, Platform } from "react-native";
-import { ScreenContainer } from "@/components/screen-container";
+import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { SchoolCard } from "@/components/school-card";
+import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { getSortedRecommendations } from "@/lib/recommendation";
 import { FavoritesStorage } from "@/lib/storage";
 import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function RecommendationScreen() {
   const router = useRouter();
+  const insets = useSafeAreaInsets();
   const params = useLocalSearchParams();
   const [recommendations, setRecommendations] = useState<School[]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
@@ -63,15 +66,38 @@ export default function RecommendationScreen() {
     router.back();
   };
 
+  const handleBack = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    router.back();
+  };
+
   return (
-    <ScreenContainer edges={["top", "left", "right"]}>
-      <View className="flex-1">
-        <View className="px-6 py-4 border-b border-border">
-          <Text className="text-2xl font-bold text-foreground">
+    <View style={{ flex: 1 }}>
+      <LinearGradient
+        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
+        locations={[0, 0.3, 0.7, 1]}
+        style={StyleSheet.absoluteFill}
+      />
+      
+      <View style={[styles.container, { paddingTop: insets.top }]}>
+        {/* 頂部導航 */}
+        <View style={styles.header}>
+          <TouchableOpacity onPress={handleBack} style={styles.backButton}>
+            <IconSymbol name="chevron.left" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>推薦結果</Text>
+          <View style={{ width: 40 }} />
+        </View>
+
+        {/* 結果統計 */}
+        <View style={styles.statsContainer}>
+          <Text style={styles.statsTitle}>
             為您推薦 {recommendations.length} 所學校
           </Text>
           {recommendations.length === 0 && (
-            <Text className="text-muted mt-2">
+            <Text style={styles.statsSubtitle}>
               沒有找到符合條件的學校，請調整篩選條件
             </Text>
           )}
@@ -88,31 +114,118 @@ export default function RecommendationScreen() {
               onFavoritePress={() => handleFavoriteToggle(item.id)}
             />
           )}
-          contentContainerStyle={{ paddingVertical: 8 }}
+          contentContainerStyle={{ paddingVertical: 8, paddingBottom: 180 }}
           ListEmptyComponent={
-            <View className="items-center justify-center py-20">
-              <Text className="text-muted text-center">暫無推薦學校</Text>
+            <View style={styles.emptyContainer}>
+              <Text style={styles.emptyText}>暫無推薦學校</Text>
             </View>
           }
         />
 
-        <View className="px-6 py-4 border-t border-border">
+        {/* 底部按鈕 */}
+        <View style={[styles.bottomContainer, { paddingBottom: insets.bottom + 16 }]}>
           <TouchableOpacity
             onPress={handleRestart}
-            className="bg-surface py-3 rounded-xl border border-border active:opacity-70"
+            style={styles.restartButton}
+            activeOpacity={0.8}
           >
-            <Text className="text-foreground text-base font-medium text-center">
-              重新篩選
-            </Text>
+            <Text style={styles.restartButtonText}>重新篩選</Text>
           </TouchableOpacity>
-        </View>
 
-        <View className="px-6 pb-4">
-          <Text className="text-xs text-muted text-center">
+          <Text style={styles.disclaimerText}>
             資訊基於公開資料整理，僅供參考，以學校官方為準
           </Text>
         </View>
       </View>
-    </ScreenContainer>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+  },
+  backButton: {
+    width: 40,
+    height: 40,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+    letterSpacing: 1,
+  },
+  statsContainer: {
+    paddingHorizontal: 24,
+    paddingVertical: 16,
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(255,255,255,0.1)",
+  },
+  statsTitle: {
+    fontSize: 24,
+    fontWeight: "700",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Bold",
+    letterSpacing: 0.5,
+  },
+  statsSubtitle: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.6)",
+    fontFamily: "NotoSerifSC-Regular",
+    marginTop: 8,
+  },
+  emptyContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 80,
+  },
+  emptyText: {
+    color: "rgba(255,255,255,0.5)",
+    textAlign: "center",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 16,
+  },
+  bottomContainer: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    paddingHorizontal: 24,
+    paddingTop: 16,
+    backgroundColor: "rgba(15, 22, 41, 0.95)",
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255,255,255,0.1)",
+  },
+  restartButton: {
+    backgroundColor: "rgba(255,255,255,0.1)",
+    paddingVertical: 16,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.2)",
+    marginBottom: 12,
+  },
+  restartButtonText: {
+    fontSize: 16,
+    fontWeight: "500",
+    color: "#FFFFFF",
+    textAlign: "center",
+    fontFamily: "NotoSerifSC-Regular",
+    letterSpacing: 1,
+  },
+  disclaimerText: {
+    fontSize: 11,
+    color: "rgba(255,255,255,0.35)",
+    textAlign: "center",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+});
