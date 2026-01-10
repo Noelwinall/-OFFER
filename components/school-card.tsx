@@ -95,9 +95,12 @@ export function SchoolCard({
       </View>
 
       {/* 地區與學費 */}
-      <View className="flex-row items-center mb-3">
+      <View className="mb-3">
         <Text className="text-sm text-muted">
-          {school.district} • {formatTuitionRange(school.tuitionMin, school.tuitionMax)}
+          {school.district} • {formatTuitionRange(school.tuitionMin, school.tuitionMax, school.category)}
+        </Text>
+        <Text className="text-xs text-muted mt-1" style={{ opacity: 0.6 }}>
+          主要費用估算：學費 + 必要 levy / 建校費；不含校車、午餐等雜費。
         </Text>
       </View>
 

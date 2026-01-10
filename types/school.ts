@@ -59,8 +59,13 @@ export const TUITION_RANGES = [
 /**
  * 格式化學費區間顯示
  */
-export function formatTuitionRange(min: number, max: number): string {
-  if (min === 0 && max === 0) return "免費";
+export function formatTuitionRange(min: number, max: number, category?: SchoolCategory): string {
+  if (min === 0 && max === 0) {
+    if (category === "公立" || category === "資助") {
+      return "免學費（政府資助）";
+    }
+    return "待確認";
+  }
   if (max === Infinity) return `$${min.toLocaleString()} 以上`;
   if (min === max) return `$${min.toLocaleString()}`;
   return `$${min.toLocaleString()} - $${max.toLocaleString()}`;

@@ -175,7 +175,10 @@ export default function SchoolDetailScreen() {
             <Text style={styles.sectionTitle}>基本資訊</Text>
             <View style={styles.infoGrid}>
               <InfoRow label="學段" value={school.level} />
-              <InfoRow label="學費" value={formatTuitionRange(school.tuitionMin, school.tuitionMax)} />
+              <InfoRow label="學費" value={formatTuitionRange(school.tuitionMin, school.tuitionMax, school.category)} />
+              <Text style={styles.tuitionCaption}>
+                主要費用估算：學費 + 必要 levy / 建校費；不含校車、午餐等雜費。
+              </Text>
               <InfoRow label="課程體系" value={school.curriculum.join(", ")} />
               <InfoRow label="教學語言" value={school.language} />
             </View>
@@ -394,6 +397,13 @@ const styles = StyleSheet.create({
   },
   infoGrid: {
     gap: 4,
+  },
+  tuitionCaption: {
+    fontSize: 11,
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
+    marginLeft: 80,
+    marginBottom: 4,
   },
   highlightsContainer: {
     gap: 8,
