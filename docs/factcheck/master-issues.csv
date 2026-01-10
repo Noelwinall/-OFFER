@@ -6,8 +6,8 @@ sch_00001,searchKeywords,PASS,"[""VIK"",""Victoria"",""觀塘區"",""九龍"",""
 sch_00001,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00001,district,PASS,九龍,,,,,
 sch_00001,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00001,tuitionMin,UNKNOWN,197798,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00001,tuitionMax,UNKNOWN,197798,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00001,tuitionMin,UNKNOWN,197798,,,,,"placeholder URL - real website needed for evidence"
+sch_00001,tuitionMax,UNKNOWN,197798,,,,,"placeholder URL - real website needed for evidence"
 sch_00001,curriculum,UNKNOWN,"[""IB 課程""]",,,,,needs official website confirmation
 sch_00001,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00001,highlights,UNKNOWN,"[""音樂特色"",""全人發展"",""藝術特色""]",,,,,subjective - needs review
@@ -18,7 +18,7 @@ sch_00001,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00001,applicationLink,UNKNOWN,https://www.school1.edu.hk/admission,,,,,needs accessibility verification
 sch_00001,latitude,PASS,22.355437,,,,,
 sch_00001,longitude,PASS,114.218446,,,,,
-sch_00001,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00001,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00002,id,PASS,sch_00002,,,,,
 sch_00002,name,UNKNOWN,香港國際幼稚園,,,,,needs EDB confirmation
 sch_00002,nameEn,UNKNOWN,Hong Kong International Kindergarten,,,,,needs official confirmation
@@ -26,8 +26,8 @@ sch_00002,searchKeywords,PASS,"[""HKIK"",""東區"",""港島"",""international""
 sch_00002,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00002,district,PASS,港島,,,,,
 sch_00002,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00002,tuitionMin,UNKNOWN,145208,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00002,tuitionMax,UNKNOWN,145208,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00002,tuitionMin,UNKNOWN,145208,,,,,"placeholder URL - real website needed for evidence"
+sch_00002,tuitionMax,UNKNOWN,145208,,,,,"placeholder URL - real website needed for evidence"
 sch_00002,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00002,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00002,highlights,UNKNOWN,"[""科技教育"",""音樂特色"",""STEM教育"",""雙語教學""]",,,,,subjective - needs review
@@ -38,7 +38,7 @@ sch_00002,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00002,applicationLink,UNKNOWN,https://www.school2.edu.hk/admission,,,,,needs accessibility verification
 sch_00002,latitude,PASS,22.29434,,,,,
 sch_00002,longitude,PASS,114.225034,,,,,
-sch_00002,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00002,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00003,id,PASS,sch_00003,,,,,
 sch_00003,name,UNKNOWN,澳洲國際深水埗區幼稚園,,,,,needs EDB confirmation
 sch_00003,nameEn,UNKNOWN,Australian International Kindergarten,,,,,needs official confirmation
@@ -46,8 +46,8 @@ sch_00003,searchKeywords,PASS,"[""AIS"",""深水埗區"",""九龍"",""internatio
 sch_00003,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00003,district,PASS,九龍,,,,,
 sch_00003,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00003,tuitionMin,UNKNOWN,107807,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00003,tuitionMax,UNKNOWN,107807,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00003,tuitionMin,UNKNOWN,107807,,,,,"placeholder URL - real website needed for evidence"
+sch_00003,tuitionMax,UNKNOWN,107807,,,,,"placeholder URL - real website needed for evidence"
 sch_00003,curriculum,UNKNOWN,"[""美國課程""]",,,,,needs official website confirmation
 sch_00003,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00003,highlights,UNKNOWN,"[""環保教育"",""全人發展"",""閱讀計劃"",""小班教學""]",,,,,subjective - needs review
@@ -58,7 +58,7 @@ sch_00003,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00003,applicationLink,UNKNOWN,https://www.school3.edu.hk/admission,,,,,needs accessibility verification
 sch_00003,latitude,PASS,22.341686,,,,,
 sch_00003,longitude,PASS,114.211424,,,,,
-sch_00003,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00003,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00004,id,PASS,sch_00004,,,,,
 sch_00004,name,UNKNOWN,加拿大國際深水埗區幼稚園,,,,,needs EDB confirmation
 sch_00004,nameEn,UNKNOWN,Canadian International Kindergarten,,,,,needs official confirmation
@@ -66,8 +66,8 @@ sch_00004,searchKeywords,PASS,"[""CDNIS"",""深水埗區"",""九龍"",""internat
 sch_00004,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00004,district,PASS,九龍,,,,,
 sch_00004,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00004,tuitionMin,UNKNOWN,194161,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00004,tuitionMax,UNKNOWN,194161,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00004,tuitionMin,UNKNOWN,194161,,,,,"placeholder URL - real website needed for evidence"
+sch_00004,tuitionMax,UNKNOWN,194161,,,,,"placeholder URL - real website needed for evidence"
 sch_00004,curriculum,UNKNOWN,"[""澳洲課程""]",,,,,needs official website confirmation
 sch_00004,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00004,highlights,UNKNOWN,"[""國際交流"",""科技教育""]",,,,,subjective - needs review
@@ -78,7 +78,7 @@ sch_00004,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00004,applicationLink,UNKNOWN,https://www.school4.edu.hk/admission,,,,,needs accessibility verification
 sch_00004,latitude,PASS,22.301574,,,,,
 sch_00004,longitude,PASS,114.187625,,,,,
-sch_00004,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00004,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00005,id,PASS,sch_00005,,,,,
 sch_00005,name,UNKNOWN,法國國際東區幼稚園,,,,,needs EDB confirmation
 sch_00005,nameEn,UNKNOWN,French International Kindergarten,,,,,needs official confirmation
@@ -86,8 +86,8 @@ sch_00005,searchKeywords,PASS,"[""FIS"",""東區"",""港島"",""international""]
 sch_00005,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00005,district,PASS,港島,,,,,
 sch_00005,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00005,tuitionMin,UNKNOWN,100718,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00005,tuitionMax,UNKNOWN,100718,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00005,tuitionMin,UNKNOWN,100718,,,,,"placeholder URL - real website needed for evidence"
+sch_00005,tuitionMax,UNKNOWN,100718,,,,,"placeholder URL - real website needed for evidence"
 sch_00005,curriculum,UNKNOWN,"[""加拿大課程""]",,,,,needs official website confirmation
 sch_00005,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00005,highlights,UNKNOWN,"[""小班教學"",""品德教育"",""環保教育""]",,,,,subjective - needs review
@@ -98,7 +98,7 @@ sch_00005,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00005,applicationLink,UNKNOWN,https://www.school5.edu.hk/admission,,,,,needs accessibility verification
 sch_00005,latitude,PASS,22.271887,,,,,
 sch_00005,longitude,PASS,114.209018,,,,,
-sch_00005,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00005,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00006,id,PASS,sch_00006,,,,,
 sch_00006,name,UNKNOWN,香港國際幼稚園,,,,,needs EDB confirmation
 sch_00006,nameEn,UNKNOWN,Hong Kong International Kindergarten,,,,,needs official confirmation
@@ -106,8 +106,8 @@ sch_00006,searchKeywords,PASS,"[""HKIK"",""觀塘區"",""九龍"",""internationa
 sch_00006,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00006,district,PASS,九龍,,,,,
 sch_00006,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00006,tuitionMin,UNKNOWN,181503,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00006,tuitionMax,UNKNOWN,181503,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00006,tuitionMin,UNKNOWN,181503,,,,,"placeholder URL - real website needed for evidence"
+sch_00006,tuitionMax,UNKNOWN,181503,,,,,"placeholder URL - real website needed for evidence"
 sch_00006,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00006,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00006,highlights,UNKNOWN,"[""小班教學"",""環保教育"",""全人發展""]",,,,,subjective - needs review
@@ -118,7 +118,7 @@ sch_00006,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00006,applicationLink,UNKNOWN,https://www.school6.edu.hk/admission,,,,,needs accessibility verification
 sch_00006,latitude,PASS,22.35144,,,,,
 sch_00006,longitude,PASS,114.182779,,,,,
-sch_00006,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00006,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00007,id,PASS,sch_00007,,,,,
 sch_00007,name,UNKNOWN,美國國際幼稚園,,,,,needs EDB confirmation
 sch_00007,nameEn,UNKNOWN,American International Kindergarten,,,,,needs official confirmation
@@ -126,8 +126,8 @@ sch_00007,searchKeywords,PASS,"[""AISL"",""灣仔區"",""港島"",""internationa
 sch_00007,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00007,district,PASS,港島,,,,,
 sch_00007,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00007,tuitionMin,UNKNOWN,171339,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00007,tuitionMax,UNKNOWN,171339,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00007,tuitionMin,UNKNOWN,171339,,,,,"placeholder URL - real website needed for evidence"
+sch_00007,tuitionMax,UNKNOWN,171339,,,,,"placeholder URL - real website needed for evidence"
 sch_00007,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00007,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00007,highlights,UNKNOWN,"[""體育特色"",""藝術特色"",""雙語教學""]",,,,,subjective - needs review
@@ -138,7 +138,7 @@ sch_00007,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00007,applicationLink,UNKNOWN,https://www.school7.edu.hk/admission,,,,,needs accessibility verification
 sch_00007,latitude,PASS,22.270501,,,,,
 sch_00007,longitude,PASS,114.228966,,,,,
-sch_00007,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00007,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00008,id,PASS,sch_00008,,,,,
 sch_00008,name,UNKNOWN,法國國際幼稚園,,,,,needs EDB confirmation
 sch_00008,nameEn,UNKNOWN,French International Kindergarten,,,,,needs official confirmation
@@ -146,8 +146,8 @@ sch_00008,searchKeywords,PASS,"[""FIS"",""中西區"",""港島"",""international
 sch_00008,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00008,district,PASS,港島,,,,,
 sch_00008,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00008,tuitionMin,UNKNOWN,174139,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00008,tuitionMax,UNKNOWN,174139,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00008,tuitionMin,UNKNOWN,174139,,,,,"placeholder URL - real website needed for evidence"
+sch_00008,tuitionMax,UNKNOWN,174139,,,,,"placeholder URL - real website needed for evidence"
 sch_00008,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00008,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00008,highlights,UNKNOWN,"[""音樂特色"",""國際交流"",""小班教學""]",,,,,subjective - needs review
@@ -158,7 +158,7 @@ sch_00008,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00008,applicationLink,UNKNOWN,https://www.school8.edu.hk/admission,,,,,needs accessibility verification
 sch_00008,latitude,PASS,22.279535,,,,,
 sch_00008,longitude,PASS,114.183787,,,,,
-sch_00008,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00008,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00009,id,PASS,sch_00009,,,,,
 sch_00009,name,UNKNOWN,德瑞國際幼稚園,,,,,needs EDB confirmation
 sch_00009,nameEn,UNKNOWN,German Swiss International Kindergarten,,,,,needs official confirmation
@@ -166,8 +166,8 @@ sch_00009,searchKeywords,PASS,"[""GSIS"",""觀塘區"",""九龍"",""internationa
 sch_00009,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00009,district,PASS,九龍,,,,,
 sch_00009,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00009,tuitionMin,UNKNOWN,109796,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00009,tuitionMax,UNKNOWN,109796,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00009,tuitionMin,UNKNOWN,109796,,,,,"placeholder URL - real website needed for evidence"
+sch_00009,tuitionMax,UNKNOWN,109796,,,,,"placeholder URL - real website needed for evidence"
 sch_00009,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00009,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00009,highlights,UNKNOWN,"[""STEM教育"",""品德教育"",""體育特色"",""音樂特色""]",,,,,subjective - needs review
@@ -178,7 +178,7 @@ sch_00009,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00009,applicationLink,UNKNOWN,https://www.school9.edu.hk/admission,,,,,needs accessibility verification
 sch_00009,latitude,PASS,22.308132,,,,,
 sch_00009,longitude,PASS,114.216119,,,,,
-sch_00009,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00009,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00010,id,PASS,sch_00010,,,,,
 sch_00010,name,UNKNOWN,耀中國際深水埗區幼稚園,,,,,needs EDB confirmation
 sch_00010,nameEn,UNKNOWN,Yew Chung International Kindergarten,,,,,needs official confirmation
@@ -186,8 +186,8 @@ sch_00010,searchKeywords,PASS,"[""YCIS"",""Yew Chung"",""深水埗區"",""九龍
 sch_00010,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00010,district,PASS,九龍,,,,,
 sch_00010,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00010,tuitionMin,UNKNOWN,193313,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00010,tuitionMax,UNKNOWN,193313,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00010,tuitionMin,UNKNOWN,193313,,,,,"placeholder URL - real website needed for evidence"
+sch_00010,tuitionMax,UNKNOWN,193313,,,,,"placeholder URL - real website needed for evidence"
 sch_00010,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00010,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00010,highlights,UNKNOWN,"[""音樂特色"",""環保教育""]",,,,,subjective - needs review
@@ -198,7 +198,7 @@ sch_00010,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00010,applicationLink,UNKNOWN,https://www.school10.edu.hk/admission,,,,,needs accessibility verification
 sch_00010,latitude,PASS,22.344265,,,,,
 sch_00010,longitude,PASS,114.22258,,,,,
-sch_00010,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00010,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00011,id,PASS,sch_00011,,,,,
 sch_00011,name,UNKNOWN,澳洲國際大埔區幼稚園,,,,,needs EDB confirmation
 sch_00011,nameEn,UNKNOWN,Australian International Kindergarten,,,,,needs official confirmation
@@ -206,8 +206,8 @@ sch_00011,searchKeywords,PASS,"[""AIS"",""大埔區"",""新界"",""international
 sch_00011,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00011,district,PASS,新界,,,,,
 sch_00011,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00011,tuitionMin,UNKNOWN,173623,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00011,tuitionMax,UNKNOWN,173623,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00011,tuitionMin,UNKNOWN,173623,,,,,"placeholder URL - real website needed for evidence"
+sch_00011,tuitionMax,UNKNOWN,173623,,,,,"placeholder URL - real website needed for evidence"
 sch_00011,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00011,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00011,highlights,UNKNOWN,"[""環保教育"",""國際交流"",""STEM教育""]",,,,,subjective - needs review
@@ -218,7 +218,7 @@ sch_00011,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00011,applicationLink,UNKNOWN,https://www.school11.edu.hk/admission,,,,,needs accessibility verification
 sch_00011,latitude,PASS,22.527392,,,,,
 sch_00011,longitude,PASS,113.918771,,,,,
-sch_00011,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00011,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00012,id,PASS,sch_00012,,,,,
 sch_00012,name,UNKNOWN,漢基國際幼稚園（第2校）,,,,,needs EDB confirmation
 sch_00012,nameEn,UNKNOWN,Chinese International Kindergarten (屯門區),,,,,needs official confirmation
@@ -226,8 +226,8 @@ sch_00012,searchKeywords,PASS,"[""CIS"",""屯門區"",""新界"",""international
 sch_00012,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00012,district,PASS,新界,,,,,
 sch_00012,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00012,tuitionMin,UNKNOWN,171525,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00012,tuitionMax,UNKNOWN,171525,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00012,tuitionMin,UNKNOWN,171525,,,,,"placeholder URL - real website needed for evidence"
+sch_00012,tuitionMax,UNKNOWN,171525,,,,,"placeholder URL - real website needed for evidence"
 sch_00012,curriculum,UNKNOWN,"[""加拿大課程""]",,,,,needs official website confirmation
 sch_00012,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00012,highlights,UNKNOWN,"[""國際交流"",""全人發展"",""音樂特色"",""體育特色""]",,,,,subjective - needs review
@@ -238,7 +238,7 @@ sch_00012,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00012,applicationLink,UNKNOWN,https://www.school12.edu.hk/admission,,,,,needs accessibility verification
 sch_00012,latitude,PASS,22.413276,,,,,
 sch_00012,longitude,PASS,113.985953,,,,,
-sch_00012,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00012,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00013,id,PASS,sch_00013,,,,,
 sch_00013,name,UNKNOWN,加拿大國際元朗區幼稚園（第3校）,,,,,needs EDB confirmation
 sch_00013,nameEn,UNKNOWN,Canadian International Kindergarten (元朗區),,,,,needs official confirmation
@@ -246,8 +246,8 @@ sch_00013,searchKeywords,PASS,"[""CDNIS"",""元朗區"",""新界"",""internation
 sch_00013,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00013,district,PASS,新界,,,,,
 sch_00013,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00013,tuitionMin,UNKNOWN,134101,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00013,tuitionMax,UNKNOWN,134101,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00013,tuitionMin,UNKNOWN,134101,,,,,"placeholder URL - real website needed for evidence"
+sch_00013,tuitionMax,UNKNOWN,134101,,,,,"placeholder URL - real website needed for evidence"
 sch_00013,curriculum,UNKNOWN,"[""IB 課程""]",,,,,needs official website confirmation
 sch_00013,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00013,highlights,UNKNOWN,"[""品德教育"",""全人發展"",""科技教育"",""國際交流"",""藝術特色""]",,,,,subjective - needs review
@@ -258,7 +258,7 @@ sch_00013,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00013,applicationLink,UNKNOWN,https://www.school13.edu.hk/admission,,,,,needs accessibility verification
 sch_00013,latitude,PASS,22.543225,,,,,
 sch_00013,longitude,PASS,114.175261,,,,,
-sch_00013,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00013,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00014,id,PASS,sch_00014,,,,,
 sch_00014,name,UNKNOWN,法國國際沙田區幼稚園（沙田區分校）,,,,,needs EDB confirmation
 sch_00014,nameEn,UNKNOWN,French International Kindergarten (沙田區),,,,,needs official confirmation
@@ -266,8 +266,8 @@ sch_00014,searchKeywords,PASS,"[""FIS"",""沙田區"",""新界"",""international
 sch_00014,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00014,district,PASS,新界,,,,,
 sch_00014,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00014,tuitionMin,UNKNOWN,145068,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00014,tuitionMax,UNKNOWN,145068,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00014,tuitionMin,UNKNOWN,145068,,,,,"placeholder URL - real website needed for evidence"
+sch_00014,tuitionMax,UNKNOWN,145068,,,,,"placeholder URL - real website needed for evidence"
 sch_00014,curriculum,UNKNOWN,"[""美國課程""]",,,,,needs official website confirmation
 sch_00014,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00014,highlights,UNKNOWN,"[""品德教育"",""全人發展"",""藝術特色""]",,,,,subjective - needs review
@@ -278,7 +278,7 @@ sch_00014,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00014,applicationLink,UNKNOWN,https://www.school14.edu.hk/admission,,,,,needs accessibility verification
 sch_00014,latitude,PASS,22.479899,,,,,
 sch_00014,longitude,PASS,114.214667,,,,,
-sch_00014,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00014,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00015,id,PASS,sch_00015,,,,,
 sch_00015,name,UNKNOWN,美國國際幼稚園（南區）,,,,,needs EDB confirmation
 sch_00015,nameEn,UNKNOWN,American International Kindergarten (九龍城區),,,,,needs official confirmation
@@ -286,8 +286,8 @@ sch_00015,searchKeywords,PASS,"[""AISL"",""九龍城區"",""九龍"",""internati
 sch_00015,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00015,district,PASS,九龍,,,,,
 sch_00015,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00015,tuitionMin,UNKNOWN,175221,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00015,tuitionMax,UNKNOWN,175221,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00015,tuitionMin,UNKNOWN,175221,,,,,"placeholder URL - real website needed for evidence"
+sch_00015,tuitionMax,UNKNOWN,175221,,,,,"placeholder URL - real website needed for evidence"
 sch_00015,curriculum,UNKNOWN,"[""加拿大課程""]",,,,,needs official website confirmation
 sch_00015,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00015,highlights,UNKNOWN,"[""STEM教育"",""雙語教學"",""國際交流"",""體育特色""]",,,,,subjective - needs review
@@ -298,7 +298,7 @@ sch_00015,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00015,applicationLink,UNKNOWN,https://www.school15.edu.hk/admission,,,,,needs accessibility verification
 sch_00015,latitude,PASS,22.326527,,,,,
 sch_00015,longitude,PASS,114.235035,,,,,
-sch_00015,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00015,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00016,id,PASS,sch_00016,,,,,
 sch_00016,name,UNKNOWN,維多利亞國際幼稚園（第1校）,,,,,needs EDB confirmation
 sch_00016,nameEn,UNKNOWN,Victoria International Kindergarten (北區),,,,,needs official confirmation
@@ -306,8 +306,8 @@ sch_00016,searchKeywords,PASS,"[""VIK"",""Victoria"",""北區"",""新界"",""int
 sch_00016,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00016,district,PASS,新界,,,,,
 sch_00016,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00016,tuitionMin,UNKNOWN,165130,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00016,tuitionMax,UNKNOWN,165130,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00016,tuitionMin,UNKNOWN,165130,,,,,"placeholder URL - real website needed for evidence"
+sch_00016,tuitionMax,UNKNOWN,165130,,,,,"placeholder URL - real website needed for evidence"
 sch_00016,curriculum,UNKNOWN,"[""澳洲課程""]",,,,,needs official website confirmation
 sch_00016,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00016,highlights,UNKNOWN,"[""環保教育"",""音樂特色"",""國際交流"",""閱讀計劃"",""小班教學""]",,,,,subjective - needs review
@@ -318,7 +318,7 @@ sch_00016,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00016,applicationLink,UNKNOWN,https://www.school16.edu.hk/admission,,,,,needs accessibility verification
 sch_00016,latitude,PASS,22.385922,,,,,
 sch_00016,longitude,PASS,114.151274,,,,,
-sch_00016,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00016,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00017,id,PASS,sch_00017,,,,,
 sch_00017,name,UNKNOWN,香港國際沙田區幼稚園（第2校）,,,,,needs EDB confirmation
 sch_00017,nameEn,UNKNOWN,Hong Kong International Kindergarten (沙田區),,,,,needs official confirmation
@@ -326,8 +326,8 @@ sch_00017,searchKeywords,PASS,"[""HKIK"",""沙田區"",""新界"",""internationa
 sch_00017,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00017,district,PASS,新界,,,,,
 sch_00017,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00017,tuitionMin,UNKNOWN,135810,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00017,tuitionMax,UNKNOWN,135810,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00017,tuitionMin,UNKNOWN,135810,,,,,"placeholder URL - real website needed for evidence"
+sch_00017,tuitionMax,UNKNOWN,135810,,,,,"placeholder URL - real website needed for evidence"
 sch_00017,curriculum,UNKNOWN,"[""美國課程""]",,,,,needs official website confirmation
 sch_00017,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00017,highlights,UNKNOWN,"[""藝術特色"",""體育特色""]",,,,,subjective - needs review
@@ -338,7 +338,7 @@ sch_00017,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00017,applicationLink,UNKNOWN,https://www.school17.edu.hk/admission,,,,,needs accessibility verification
 sch_00017,latitude,PASS,22.394912,,,,,
 sch_00017,longitude,PASS,114.15172,,,,,
-sch_00017,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00017,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00018,id,PASS,sch_00018,,,,,
 sch_00018,name,UNKNOWN,耀中國際幼稚園（觀塘區分校）,,,,,needs EDB confirmation
 sch_00018,nameEn,UNKNOWN,Yew Chung International Kindergarten (觀塘區),,,,,needs official confirmation
@@ -346,8 +346,8 @@ sch_00018,searchKeywords,PASS,"[""YCIS"",""Yew Chung"",""觀塘區"",""九龍"",
 sch_00018,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00018,district,PASS,九龍,,,,,
 sch_00018,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00018,tuitionMin,UNKNOWN,117467,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00018,tuitionMax,UNKNOWN,117467,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00018,tuitionMin,UNKNOWN,117467,,,,,"placeholder URL - real website needed for evidence"
+sch_00018,tuitionMax,UNKNOWN,117467,,,,,"placeholder URL - real website needed for evidence"
 sch_00018,curriculum,UNKNOWN,"[""澳洲課程""]",,,,,needs official website confirmation
 sch_00018,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00018,highlights,UNKNOWN,"[""體育特色"",""小班教學"",""國際交流""]",,,,,subjective - needs review
@@ -358,7 +358,7 @@ sch_00018,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00018,applicationLink,UNKNOWN,https://www.school18.edu.hk/admission,,,,,needs accessibility verification
 sch_00018,latitude,PASS,22.337957,,,,,
 sch_00018,longitude,PASS,114.178486,,,,,
-sch_00018,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00018,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00019,id,PASS,sch_00019,,,,,
 sch_00019,name,UNKNOWN,德瑞國際幼稚園（南區）,,,,,needs EDB confirmation
 sch_00019,nameEn,UNKNOWN,German Swiss International Kindergarten (南區),,,,,needs official confirmation
@@ -366,8 +366,8 @@ sch_00019,searchKeywords,PASS,"[""GSIS"",""南區"",""港島"",""international""
 sch_00019,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00019,district,PASS,港島,,,,,
 sch_00019,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00019,tuitionMin,UNKNOWN,158356,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00019,tuitionMax,UNKNOWN,158356,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00019,tuitionMin,UNKNOWN,158356,,,,,"placeholder URL - real website needed for evidence"
+sch_00019,tuitionMax,UNKNOWN,158356,,,,,"placeholder URL - real website needed for evidence"
 sch_00019,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00019,language,UNKNOWN,全英文,,,,,needs official website confirmation
 sch_00019,highlights,UNKNOWN,"[""小班教學"",""科技教育"",""體育特色""]",,,,,subjective - needs review
@@ -378,7 +378,7 @@ sch_00019,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00019,applicationLink,UNKNOWN,https://www.school19.edu.hk/admission,,,,,needs accessibility verification
 sch_00019,latitude,PASS,22.251515,,,,,
 sch_00019,longitude,PASS,114.204988,,,,,
-sch_00019,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00019,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00020,id,PASS,sch_00020,,,,,
 sch_00020,name,UNKNOWN,漢基國際幼稚園（東區分校）,,,,,needs EDB confirmation
 sch_00020,nameEn,UNKNOWN,Chinese International Kindergarten (東區),,,,,needs official confirmation
@@ -386,8 +386,8 @@ sch_00020,searchKeywords,PASS,"[""CIS"",""東區"",""港島"",""international""]
 sch_00020,category,UNKNOWN,國際,,,,,needs EDB confirmation
 sch_00020,district,PASS,港島,,,,,
 sch_00020,level,UNKNOWN,幼稚園,,,,,needs official confirmation
-sch_00020,tuitionMin,UNKNOWN,121540,,,,,needs evidence (sourceUrl/capturedAt/confidence)
-sch_00020,tuitionMax,UNKNOWN,121540,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00020,tuitionMin,UNKNOWN,121540,,,,,"placeholder URL - real website needed for evidence"
+sch_00020,tuitionMax,UNKNOWN,121540,,,,,"placeholder URL - real website needed for evidence"
 sch_00020,curriculum,UNKNOWN,"[""英國課程""]",,,,,needs official website confirmation
 sch_00020,language,UNKNOWN,中英雙語,,,,,needs official website confirmation
 sch_00020,highlights,UNKNOWN,"[""STEM教育"",""品德教育""]",,,,,subjective - needs review
@@ -398,7 +398,7 @@ sch_00020,applicationMaterials,UNKNOWN,[],,,,,needs official listing
 sch_00020,applicationLink,UNKNOWN,https://www.school20.edu.hk/admission,,,,,needs accessibility verification
 sch_00020,latitude,PASS,22.279491,,,,,
 sch_00020,longitude,PASS,114.197067,,,,,
-sch_00020,articulation,UNKNOWN,MISSING,,,,,needs evidence (sourceUrl/capturedAt/confidence)
+sch_00020,articulation,UNKNOWN,MISSING,,,,,"placeholder URL - real website needed for evidence"
 sch_00021,id,PASS,sch_00021,,,,,
 sch_00021,name,UNKNOWN,美國國際黃大仙區幼稚園（黃大仙區）,,,,,needs EDB confirmation
 sch_00021,nameEn,UNKNOWN,American International Kindergarten (黃大仙區),,,,,needs official confirmation
