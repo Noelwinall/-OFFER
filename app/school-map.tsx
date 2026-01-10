@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet, FlatList, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Dimensions } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -6,18 +6,32 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useState, useMemo } from "react";
 import { SCHOOLS } from "@/data/schools";
 import { School, District } from "@/types/school";
+import { SchoolMap, MapLegend } from "@/components/school-map";
+
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 // 地區數據
-const DISTRICTS: { id: District; label: string; icon: string; color: string }[] = [
+const DISTRICTS: { id: District | "all"; label: string; icon: string; color: string }[] = [
+  { id: "all", label: "全部", icon: "🗺️", color: "#F59E0B" },
   { id: "港島", label: "港島區", icon: "🏝️", color: "#00D9FF" },
   { id: "九龍", label: "九龍區", icon: "🌆", color: "#7C3AED" },
   { id: "新界", label: "新界區", icon: "🏞️", color: "#10B981" },
 ];
 
+// 學校類型顏色（與地圖組件保持一致）
+const CATEGORY_COLORS: Record<string, string> = {
+  國際: "#00D9FF",
+  直資: "#F59E0B",
+  私立: "#8B5CF6",
+  資助: "#22C55E",
+  公立: "#6B7280",
+};
+
 export default function SchoolMapScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const [selectedDistrict, setSelectedDistrict] = useState<District | null>(null);
+  const [selectedDistrict, setSelectedDistrict] = useState<District | "all">("all");
+  const [viewMode, setViewMode] = useState<"map" | "list">("map");
 
   // 按地區分組學校
   const schoolsByDistrict = useMemo(() => {
@@ -35,74 +49,53 @@ export default function SchoolMapScreen() {
   }, []);
 
   // 獲取地區統計
-  const getDistrictStats = (district: District) => {
-    const schools = schoolsByDistrict[district];
-    const categories = new Set(schools.map(s => s.category));
-    return {
-      total: schools.length,
-      categories: categories.size,
-    };
+  const getDistrictStats = (district: District | "all") => {
+    if (district === "all") {
+      return { total: SCHOOLS.length };
+    }
+    return { total: schoolsByDistrict[district].length };
   };
 
   const handleSchoolPress = (schoolId: string) => {
     router.push(`/school/${schoolId}` as any);
   };
 
-  const renderDistrictCard = (district: typeof DISTRICTS[0]) => {
-    const stats = getDistrictStats(district.id);
-    const isSelected = selectedDistrict === district.id;
-
-    return (
-      <TouchableOpacity
-        key={district.id}
-        style={[
-          styles.districtCard,
-          isSelected && { borderColor: district.color, borderWidth: 2 },
-        ]}
-        onPress={() => setSelectedDistrict(isSelected ? null : district.id)}
-        activeOpacity={0.7}
-      >
-        <View style={[styles.districtIconContainer, { backgroundColor: `${district.color}20` }]}>
-          <Text style={styles.districtIcon}>{district.icon}</Text>
-        </View>
-        <Text style={styles.districtLabel}>{district.label}</Text>
-        <View style={styles.districtStats}>
-          <Text style={[styles.districtCount, { color: district.color }]}>{stats.total}</Text>
-          <Text style={styles.districtCountLabel}>所學校</Text>
-        </View>
-        <Text style={styles.districtCategoryCount}>{stats.categories} 種類型</Text>
-      </TouchableOpacity>
-    );
+  const handleSchoolSelect = (school: School) => {
+    router.push(`/school/${school.id}` as any);
   };
 
-  const renderSchoolItem = ({ item }: { item: School }) => {
-    const districtData = DISTRICTS.find(d => d.id === item.district);
+  const filteredSchools = selectedDistrict === "all" 
+    ? SCHOOLS 
+    : schoolsByDistrict[selectedDistrict];
+
+  const renderSchoolItem = (school: School) => {
+    const categoryColor = CATEGORY_COLORS[school.category] || "#6B7280";
     
     return (
       <TouchableOpacity
+        key={school.id}
         style={styles.schoolItem}
-        onPress={() => handleSchoolPress(item.id)}
+        onPress={() => handleSchoolPress(school.id)}
         activeOpacity={0.7}
       >
         <View style={styles.schoolInfo}>
-          <Text style={styles.schoolName} numberOfLines={1}>{item.name}</Text>
+          <Text style={styles.schoolName} numberOfLines={1}>{school.name}</Text>
+          <Text style={styles.schoolNameEn} numberOfLines={1}>{school.nameEn}</Text>
           <View style={styles.schoolMeta}>
-            <View style={[styles.categoryTag, { backgroundColor: `${districtData?.color || "#00D9FF"}20` }]}>
-              <Text style={[styles.categoryTagText, { color: districtData?.color || "#00D9FF" }]}>
-                {item.category}
+            <View style={[styles.categoryTag, { backgroundColor: `${categoryColor}20` }]}>
+              <Text style={[styles.categoryTagText, { color: categoryColor }]}>
+                {school.category}
               </Text>
             </View>
-            <Text style={styles.schoolAddress} numberOfLines={1}>{item.address}</Text>
+            <View style={[styles.levelTag, { backgroundColor: "rgba(255,255,255,0.1)" }]}>
+              <Text style={styles.levelTagText}>{school.level}</Text>
+            </View>
           </View>
         </View>
         <IconSymbol name="chevron.right" size={16} color="rgba(255,255,255,0.3)" />
       </TouchableOpacity>
     );
   };
-
-  const filteredSchools = selectedDistrict 
-    ? schoolsByDistrict[selectedDistrict] 
-    : SCHOOLS;
 
   return (
     <View style={{ flex: 1 }}>
@@ -121,7 +114,16 @@ export default function SchoolMapScreen() {
           <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>學校在哪裡</Text>
-        <View style={styles.placeholder} />
+        {/* 切換視圖按鈕 */}
+        <TouchableOpacity
+          onPress={() => setViewMode(viewMode === "map" ? "list" : "map")}
+          style={styles.viewToggle}
+          activeOpacity={0.7}
+        >
+          <Text style={styles.viewToggleText}>
+            {viewMode === "map" ? "📋 列表" : "🗺️ 地圖"}
+          </Text>
+        </TouchableOpacity>
       </View>
 
       <ScrollView 
@@ -129,37 +131,100 @@ export default function SchoolMapScreen() {
         contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}
         showsVerticalScrollIndicator={false}
       >
-        {/* 地區選擇卡片 */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>選擇地區</Text>
-          <View style={styles.districtGrid}>
-            {DISTRICTS.map(renderDistrictCard)}
-          </View>
+        {/* 地區選擇標籤 */}
+        <View style={styles.districtTabs}>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View style={styles.tabsContainer}>
+              {DISTRICTS.map((district) => {
+                const isSelected = selectedDistrict === district.id;
+                const stats = getDistrictStats(district.id);
+                return (
+                  <TouchableOpacity
+                    key={district.id}
+                    style={[
+                      styles.districtTab,
+                      isSelected && { backgroundColor: district.color, borderColor: district.color },
+                    ]}
+                    onPress={() => setSelectedDistrict(district.id)}
+                    activeOpacity={0.7}
+                  >
+                    <Text style={styles.tabIcon}>{district.icon}</Text>
+                    <Text style={[styles.tabLabel, isSelected && styles.tabLabelActive]}>
+                      {district.label}
+                    </Text>
+                    <View style={[styles.tabBadge, isSelected && styles.tabBadgeActive]}>
+                      <Text style={[styles.tabBadgeText, isSelected && styles.tabBadgeTextActive]}>
+                        {stats.total}
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          </ScrollView>
         </View>
 
-        {/* 學校列表 */}
-        <View style={styles.section}>
-          <View style={styles.sectionHeader}>
-            <Text style={styles.sectionTitle}>
-              {selectedDistrict ? `${selectedDistrict}學校` : "所有學校"}
-            </Text>
-            <Text style={styles.schoolCount}>{filteredSchools.length} 所</Text>
-          </View>
-          
-          <View style={styles.schoolList}>
-            {filteredSchools.map((school) => (
-              <View key={school.id}>
-                {renderSchoolItem({ item: school })}
+        {viewMode === "map" ? (
+          <>
+            {/* 互動式地圖 */}
+            <View style={styles.mapSection}>
+              <SchoolMap
+                schools={SCHOOLS}
+                selectedDistrict={selectedDistrict}
+                onSchoolSelect={handleSchoolSelect}
+                height={Math.min(SCREEN_WIDTH - 32, 400)}
+              />
+              <MapLegend />
+            </View>
+
+            {/* 地圖下方的學校快速列表 */}
+            <View style={styles.section}>
+              <View style={styles.sectionHeader}>
+                <Text style={styles.sectionTitle}>
+                  {selectedDistrict === "all" ? "所有學校" : `${selectedDistrict}學校`}
+                </Text>
+                <Text style={styles.schoolCount}>{filteredSchools.length} 所</Text>
               </View>
-            ))}
+              
+              <View style={styles.schoolList}>
+                {filteredSchools.slice(0, 10).map(renderSchoolItem)}
+                {filteredSchools.length > 10 && (
+                  <TouchableOpacity
+                    style={styles.showMoreButton}
+                    onPress={() => setViewMode("list")}
+                    activeOpacity={0.7}
+                  >
+                    <Text style={styles.showMoreText}>
+                      查看全部 {filteredSchools.length} 所學校 →
+                    </Text>
+                  </TouchableOpacity>
+                )}
+              </View>
+            </View>
+          </>
+        ) : (
+          /* 列表視圖 */
+          <View style={styles.section}>
+            <View style={styles.sectionHeader}>
+              <Text style={styles.sectionTitle}>
+                {selectedDistrict === "all" ? "所有學校" : `${selectedDistrict}學校`}
+              </Text>
+              <Text style={styles.schoolCount}>{filteredSchools.length} 所</Text>
+            </View>
+            
+            <View style={styles.schoolList}>
+              {filteredSchools.map(renderSchoolItem)}
+            </View>
           </View>
-        </View>
+        )}
 
         {/* 提示信息 */}
         <View style={styles.tipContainer}>
           <Text style={styles.tipIcon}>💡</Text>
           <Text style={styles.tipText}>
-            點擊地區卡片可篩選該區學校，再次點擊取消篩選
+            {viewMode === "map" 
+              ? "點擊地圖上的標記可查看學校詳情，使用上方標籤切換地區"
+              : "點擊學校卡片可查看詳細資訊，點擊右上角切換回地圖視圖"}
           </Text>
         </View>
       </ScrollView>
@@ -187,15 +252,73 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "700",
     color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
     letterSpacing: 1,
   },
-  placeholder: {
-    width: 40,
+  viewToggle: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.1)",
+  },
+  viewToggleText: {
+    fontSize: 13,
+    color: "#FFFFFF",
+    fontWeight: "500",
   },
   content: {
     flex: 1,
     paddingHorizontal: 16,
+  },
+  districtTabs: {
+    marginBottom: 16,
+  },
+  tabsContainer: {
+    flexDirection: "row",
+    gap: 10,
+    paddingVertical: 4,
+  },
+  districtTab: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderRadius: 20,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.15)",
+    gap: 6,
+  },
+  tabIcon: {
+    fontSize: 16,
+  },
+  tabLabel: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "rgba(255,255,255,0.7)",
+  },
+  tabLabelActive: {
+    color: "#0F1629",
+    fontWeight: "600",
+  },
+  tabBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 10,
+    backgroundColor: "rgba(255,255,255,0.15)",
+  },
+  tabBadgeActive: {
+    backgroundColor: "rgba(15,22,41,0.2)",
+  },
+  tabBadgeText: {
+    fontSize: 11,
+    fontWeight: "600",
+    color: "rgba(255,255,255,0.7)",
+  },
+  tabBadgeTextActive: {
+    color: "#0F1629",
+  },
+  mapSection: {
+    marginBottom: 24,
   },
   section: {
     marginBottom: 24,
@@ -210,66 +333,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "600",
     color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 16,
   },
   schoolCount: {
     fontSize: 14,
     color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 16,
-  },
-  districtGrid: {
-    flexDirection: "row",
-    gap: 12,
-  },
-  districtCard: {
-    flex: 1,
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    padding: 16,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
-  },
-  districtIconContainer: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    justifyContent: "center",
-    alignItems: "center",
-    marginBottom: 12,
-  },
-  districtIcon: {
-    fontSize: 24,
-  },
-  districtLabel: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 8,
-  },
-  districtStats: {
-    flexDirection: "row",
-    alignItems: "baseline",
-    gap: 2,
-  },
-  districtCount: {
-    fontSize: 24,
-    fontWeight: "700",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  districtCountLabel: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  districtCategoryCount: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 4,
   },
   schoolList: {
     backgroundColor: "rgba(255,255,255,0.05)",
@@ -293,8 +360,12 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "600",
     color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 6,
+    marginBottom: 2,
+  },
+  schoolNameEn: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.5)",
+    marginBottom: 8,
   },
   schoolMeta: {
     flexDirection: "row",
@@ -303,19 +374,32 @@ const styles = StyleSheet.create({
   },
   categoryTag: {
     paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 4,
+    paddingVertical: 3,
+    borderRadius: 6,
   },
   categoryTagText: {
     fontSize: 11,
-    fontWeight: "500",
-    fontFamily: "NotoSerifSC-Regular",
+    fontWeight: "600",
   },
-  schoolAddress: {
-    flex: 1,
-    fontSize: 12,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
+  levelTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+  },
+  levelTagText: {
+    fontSize: 11,
+    fontWeight: "500",
+    color: "rgba(255,255,255,0.6)",
+  },
+  showMoreButton: {
+    padding: 16,
+    alignItems: "center",
+    backgroundColor: "rgba(0,217,255,0.1)",
+  },
+  showMoreText: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#00D9FF",
   },
   tipContainer: {
     flexDirection: "row",
@@ -333,7 +417,6 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: 13,
     color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
     lineHeight: 18,
   },
 });

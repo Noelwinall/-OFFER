@@ -26,6 +26,8 @@ export interface School {
   website: string;
   applicationMaterials: string[]; // 申請材料清單
   applicationLink: string; // 申請連結
+  latitude: number; // 緯度
+  longitude: number; // 經度
 }
 
 /**

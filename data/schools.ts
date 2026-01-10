@@ -39,7 +39,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.southislandschool.edu.hk/admissions"
+    "applicationLink": "https://www.southislandschool.edu.hk/admissions",
+    "latitude": 22.275735,
+    "longitude": 114.18111
   },
   {
     "id": "int-002",
@@ -73,7 +75,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.westislandschool.edu.hk/admissions"
+    "applicationLink": "https://www.westislandschool.edu.hk/admissions",
+    "latitude": 22.259747,
+    "longitude": 114.20673
   },
   {
     "id": "int-003",
@@ -106,7 +110,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.islandschool.edu.hk/admissions"
+    "applicationLink": "https://www.islandschool.edu.hk/admissions",
+    "latitude": 22.275613,
+    "longitude": 114.187781
   },
   {
     "id": "int-004",
@@ -140,7 +146,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatincollege.edu.hk/admissions"
+    "applicationLink": "https://www.shatincollege.edu.hk/admissions",
+    "latitude": 22.447815,
+    "longitude": 114.172779
   },
   {
     "id": "int-005",
@@ -173,7 +181,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kinggeorgevschool.edu.hk/admissions"
+    "applicationLink": "https://www.kinggeorgevschool.edu.hk/admissions",
+    "latitude": 22.310625,
+    "longitude": 114.178984
   },
   {
     "id": "int-006",
@@ -207,7 +217,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.renaissancecollege.edu.hk/admissions"
+    "applicationLink": "https://www.renaissancecollege.edu.hk/admissions",
+    "latitude": 22.46661,
+    "longitude": 114.033137
   },
   {
     "id": "int-007",
@@ -241,7 +253,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.discoverycollege.edu.hk/admissions"
+    "applicationLink": "https://www.discoverycollege.edu.hk/admissions",
+    "latitude": 22.280229,
+    "longitude": 114.22307
   },
   {
     "id": "int-008",
@@ -275,7 +289,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.beaconhillschool.edu.hk/admissions"
+    "applicationLink": "https://www.beaconhillschool.edu.hk/admissions",
+    "latitude": 22.307656,
+    "longitude": 114.17703
   },
   {
     "id": "int-009",
@@ -308,7 +324,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.bradburyschool.edu.hk/admissions"
+    "applicationLink": "https://www.bradburyschool.edu.hk/admissions",
+    "latitude": 22.257412,
+    "longitude": 114.194666
   },
   {
     "id": "int-010",
@@ -342,7 +360,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.clearwaterbayschool.edu.hk/admissions"
+    "applicationLink": "https://www.clearwaterbayschool.edu.hk/admissions",
+    "latitude": 22.386073,
+    "longitude": 114.278156
   },
   {
     "id": "int-011",
@@ -374,7 +394,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.glenealyschool.edu.hk/admissions"
+    "applicationLink": "https://www.glenealyschool.edu.hk/admissions",
+    "latitude": 22.280611,
+    "longitude": 114.170609
   },
   {
     "id": "int-012",
@@ -406,7 +428,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kennedyschool.edu.hk/admissions"
+    "applicationLink": "https://www.kennedyschool.edu.hk/admissions",
+    "latitude": 22.23328,
+    "longitude": 114.15056
   },
   {
     "id": "int-013",
@@ -440,7 +464,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kowloonjuniorschool.edu.hk/admissions"
+    "applicationLink": "https://www.kowloonjuniorschool.edu.hk/admissions",
+    "latitude": 22.349838,
+    "longitude": 114.198268
   },
   {
     "id": "int-014",
@@ -473,7 +499,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.peakschool.edu.hk/admissions"
+    "applicationLink": "https://www.peakschool.edu.hk/admissions",
+    "latitude": 22.282582,
+    "longitude": 114.156178
   },
   {
     "id": "int-015",
@@ -507,7 +535,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.quarrybayschool.edu.hk/admissions"
+    "applicationLink": "https://www.quarrybayschool.edu.hk/admissions",
+    "latitude": 22.278038,
+    "longitude": 114.216157
   },
   {
     "id": "int-016",
@@ -541,7 +571,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatinjuniorschool.edu.hk/admissions"
+    "applicationLink": "https://www.shatinjuniorschool.edu.hk/admissions",
+    "latitude": 22.386754,
+    "longitude": 114.274749
   },
   {
     "id": "int-017",
@@ -573,7 +605,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.abacusinternationalk.edu.hk/admissions"
+    "applicationLink": "https://www.abacusinternationalk.edu.hk/admissions",
+    "latitude": 22.339945,
+    "longitude": 114.193019
   },
   {
     "id": "int-018",
@@ -605,7 +639,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tsingyiinternational.edu.hk/admissions"
+    "applicationLink": "https://www.tsingyiinternational.edu.hk/admissions",
+    "latitude": 22.469241,
+    "longitude": 114.176689
   },
   {
     "id": "int-019",
@@ -637,7 +673,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tungchunginternation.edu.hk/admissions"
+    "applicationLink": "https://www.tungchunginternation.edu.hk/admissions",
+    "latitude": 22.253197,
+    "longitude": 114.008812
   },
   {
     "id": "int-020",
@@ -669,7 +707,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wukaishainternationa.edu.hk/admissions"
+    "applicationLink": "https://www.wukaishainternationa.edu.hk/admissions",
+    "latitude": 22.400515,
+    "longitude": 113.966008
   },
   {
     "id": "int-021",
@@ -701,7 +741,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hillsideinternationa.edu.hk/admissions"
+    "applicationLink": "https://www.hillsideinternationa.edu.hk/admissions",
+    "latitude": 22.520637,
+    "longitude": 114.165719
   },
   {
     "id": "int-022",
@@ -733,7 +775,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.abacusinternationalk.edu.hk/admissions"
+    "applicationLink": "https://www.abacusinternationalk.edu.hk/admissions",
+    "latitude": 22.243977,
+    "longitude": 114.18772
   },
   {
     "id": "int-023",
@@ -767,7 +811,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.chineseinternational.edu.hk/admissions"
+    "applicationLink": "https://www.chineseinternational.edu.hk/admissions",
+    "latitude": 22.275707,
+    "longitude": 114.185085
   },
   {
     "id": "int-024",
@@ -802,7 +848,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yewchunginternationa.edu.hk/admissions"
+    "applicationLink": "https://www.yewchunginternationa.edu.hk/admissions",
+    "latitude": 22.351566,
+    "longitude": 114.207563
   },
   {
     "id": "int-025",
@@ -836,7 +884,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hongkonginternationa.edu.hk/admissions"
+    "applicationLink": "https://www.hongkonginternationa.edu.hk/admissions",
+    "latitude": 22.286311,
+    "longitude": 114.15139
   },
   {
     "id": "int-026",
@@ -870,7 +920,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hongkongacademy.edu.hk/admissions"
+    "applicationLink": "https://www.hongkongacademy.edu.hk/admissions",
+    "latitude": 22.487203,
+    "longitude": 114.175433
   },
   {
     "id": "int-027",
@@ -904,7 +956,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.stamfordamericanscho.edu.hk/admissions"
+    "applicationLink": "https://www.stamfordamericanscho.edu.hk/admissions",
+    "latitude": 22.30483,
+    "longitude": 114.179417
   },
   {
     "id": "int-028",
@@ -937,7 +991,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions"
+    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions",
+    "latitude": 22.274427,
+    "longitude": 114.220149
   },
   {
     "id": "int-029",
@@ -971,7 +1027,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions"
+    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions",
+    "latitude": 22.273056,
+    "longitude": 114.238656
   },
   {
     "id": "int-030",
@@ -1005,7 +1063,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.malverncollegehongko.edu.hk/admissions"
+    "applicationLink": "https://www.malverncollegehongko.edu.hk/admissions",
+    "latitude": 22.39391,
+    "longitude": 114.27408
   },
   {
     "id": "int-031",
@@ -1039,7 +1099,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.nordangliainternatio.edu.hk/admissions"
+    "applicationLink": "https://www.nordangliainternatio.edu.hk/admissions",
+    "latitude": 22.305776,
+    "longitude": 114.164098
   },
   {
     "id": "int-032",
@@ -1072,7 +1134,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.independentschoolsfo.edu.hk/admissions"
+    "applicationLink": "https://www.independentschoolsfo.edu.hk/admissions",
+    "latitude": 22.27148,
+    "longitude": 114.238558
   },
   {
     "id": "int-033",
@@ -1106,7 +1170,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.harrowinternationals.edu.hk/admissions"
+    "applicationLink": "https://www.harrowinternationals.edu.hk/admissions",
+    "latitude": 22.388475,
+    "longitude": 114.186898
   },
   {
     "id": "int-034",
@@ -1140,7 +1206,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.americanschoolhongko.edu.hk/admissions"
+    "applicationLink": "https://www.americanschoolhongko.edu.hk/admissions",
+    "latitude": 22.396944,
+    "longitude": 113.989162
   },
   {
     "id": "int-035",
@@ -1174,7 +1242,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.frenchinternationals.edu.hk/admissions"
+    "applicationLink": "https://www.frenchinternationals.edu.hk/admissions",
+    "latitude": 22.255971,
+    "longitude": 114.174708
   },
   {
     "id": "int-036",
@@ -1208,7 +1278,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.japaneseinternationa.edu.hk/admissions"
+    "applicationLink": "https://www.japaneseinternationa.edu.hk/admissions",
+    "latitude": 22.283895,
+    "longitude": 114.210861
   },
   {
     "id": "int-037",
@@ -1242,7 +1314,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.koreaninternationals.edu.hk/admissions"
+    "applicationLink": "https://www.koreaninternationals.edu.hk/admissions",
+    "latitude": 22.47148,
+    "longitude": 114.181525
   },
   {
     "id": "int-038",
@@ -1276,7 +1350,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.singaporeinternation.edu.hk/admissions"
+    "applicationLink": "https://www.singaporeinternation.edu.hk/admissions",
+    "latitude": 22.241109,
+    "longitude": 114.208848
   },
   {
     "id": "int-039",
@@ -1309,7 +1385,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.australianinternatio.edu.hk/admissions"
+    "applicationLink": "https://www.australianinternatio.edu.hk/admissions",
+    "latitude": 22.321941,
+    "longitude": 114.162755
   },
   {
     "id": "int-040",
@@ -1343,7 +1421,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.internationalchristi.edu.hk/admissions"
+    "applicationLink": "https://www.internationalchristi.edu.hk/admissions",
+    "latitude": 22.352684,
+    "longitude": 114.119213
   },
   {
     "id": "int-041",
@@ -1377,7 +1457,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.christianallianceint.edu.hk/admissions"
+    "applicationLink": "https://www.christianallianceint.edu.hk/admissions",
+    "latitude": 22.32498,
+    "longitude": 114.152519
   },
   {
     "id": "int-042",
@@ -1409,7 +1491,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.concordiainternation.edu.hk/admissions"
+    "applicationLink": "https://www.concordiainternation.edu.hk/admissions",
+    "latitude": 22.312074,
+    "longitude": 114.172253
   },
   {
     "id": "int-043",
@@ -1443,7 +1527,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.carmelschool.edu.hk/admissions"
+    "applicationLink": "https://www.carmelschool.edu.hk/admissions",
+    "latitude": 22.28723,
+    "longitude": 114.148863
   },
   {
     "id": "int-044",
@@ -1477,7 +1563,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hanacademy.edu.hk/admissions"
+    "applicationLink": "https://www.hanacademy.edu.hk/admissions",
+    "latitude": 22.28428,
+    "longitude": 114.178128
   },
   {
     "id": "int-045",
@@ -1511,7 +1599,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.victoriashanghaiacad.edu.hk/admissions"
+    "applicationLink": "https://www.victoriashanghaiacad.edu.hk/admissions",
+    "latitude": 22.278336,
+    "longitude": 114.184107
   },
   {
     "id": "int-046",
@@ -1545,7 +1635,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.internationalmontess.edu.hk/admissions"
+    "applicationLink": "https://www.internationalmontess.edu.hk/admissions",
+    "latitude": 22.283971,
+    "longitude": 114.154041
   },
   {
     "id": "int-047",
@@ -1579,7 +1671,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wycombeabbeyschoolho.edu.hk/admissions"
+    "applicationLink": "https://www.wycombeabbeyschoolho.edu.hk/admissions",
+    "latitude": 22.384589,
+    "longitude": 114.113
   },
   {
     "id": "int-048",
@@ -1612,7 +1706,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shrewsburyinternatio.edu.hk/admissions"
+    "applicationLink": "https://www.shrewsburyinternatio.edu.hk/admissions",
+    "latitude": 22.467314,
+    "longitude": 114.17904
   },
   {
     "id": "int-049",
@@ -1644,7 +1740,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yewchunginternationa.edu.hk/admissions"
+    "applicationLink": "https://www.yewchunginternationa.edu.hk/admissions",
+    "latitude": 22.311675,
+    "longitude": 114.216818
   },
   {
     "id": "int-050",
@@ -1676,7 +1774,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.chineseinternational.edu.hk/admissions"
+    "applicationLink": "https://www.chineseinternational.edu.hk/admissions",
+    "latitude": 22.247961,
+    "longitude": 114.155613
   },
   {
     "id": "int-051",
@@ -1709,7 +1809,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hongkonginternationa.edu.hk/admissions"
+    "applicationLink": "https://www.hongkonginternationa.edu.hk/admissions",
+    "latitude": 22.277968,
+    "longitude": 114.235684
   },
   {
     "id": "int-052",
@@ -1742,7 +1844,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.isfacademyprimary.edu.hk/admissions"
+    "applicationLink": "https://www.isfacademyprimary.edu.hk/admissions",
+    "latitude": 22.275214,
+    "longitude": 114.218291
   },
   {
     "id": "int-053",
@@ -1775,7 +1879,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.harrowinternationals.edu.hk/admissions"
+    "applicationLink": "https://www.harrowinternationals.edu.hk/admissions",
+    "latitude": 22.467647,
+    "longitude": 114.012447
   },
   {
     "id": "int-054",
@@ -1808,7 +1914,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions"
+    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions",
+    "latitude": 22.280894,
+    "longitude": 114.181371
   },
   {
     "id": "int-055",
@@ -1841,7 +1949,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.frenchinternationals.edu.hk/admissions"
+    "applicationLink": "https://www.frenchinternationals.edu.hk/admissions",
+    "latitude": 22.280438,
+    "longitude": 114.224325
   },
   {
     "id": "int-056",
@@ -1874,7 +1984,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions"
+    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions",
+    "latitude": 22.286759,
+    "longitude": 114.145127
   },
   {
     "id": "int-057",
@@ -1907,7 +2019,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.victoriainternationa.edu.hk/admissions"
+    "applicationLink": "https://www.victoriainternationa.edu.hk/admissions",
+    "latitude": 22.28749,
+    "longitude": 114.143697
   },
   {
     "id": "int-058",
@@ -1939,7 +2053,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yewchunginternationa.edu.hk/admissions"
+    "applicationLink": "https://www.yewchunginternationa.edu.hk/admissions",
+    "latitude": 22.314016,
+    "longitude": 114.16213
   },
   {
     "id": "int-059",
@@ -1971,7 +2087,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.chineseinternational.edu.hk/admissions"
+    "applicationLink": "https://www.chineseinternational.edu.hk/admissions",
+    "latitude": 22.24905,
+    "longitude": 114.176311
   },
   {
     "id": "int-060",
@@ -2003,7 +2121,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions"
+    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions",
+    "latitude": 22.275983,
+    "longitude": 114.184538
   },
   {
     "id": "int-061",
@@ -2035,7 +2155,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.internationalmontess.edu.hk/admissions"
+    "applicationLink": "https://www.internationalmontess.edu.hk/admissions",
+    "latitude": 22.283964,
+    "longitude": 114.146963
   },
   {
     "id": "int-062",
@@ -2067,7 +2189,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sokakindergartenhong.edu.hk/admissions"
+    "applicationLink": "https://www.sokakindergartenhong.edu.hk/admissions",
+    "latitude": 22.308882,
+    "longitude": 114.1668
   },
   {
     "id": "int-063",
@@ -2099,7 +2223,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.americaninternationa.edu.hk/admissions"
+    "applicationLink": "https://www.americaninternationa.edu.hk/admissions",
+    "latitude": 22.33333,
+    "longitude": 114.151646
   },
   {
     "id": "int-064",
@@ -2131,7 +2257,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions"
+    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions",
+    "latitude": 22.285906,
+    "longitude": 114.242224
   },
   {
     "id": "int-065",
@@ -2163,7 +2291,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.australianinternatio.edu.hk/admissions"
+    "applicationLink": "https://www.australianinternatio.edu.hk/admissions",
+    "latitude": 22.334324,
+    "longitude": 114.195006
   },
   {
     "id": "int-066",
@@ -2195,7 +2325,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.singaporeinternation.edu.hk/admissions"
+    "applicationLink": "https://www.singaporeinternation.edu.hk/admissions",
+    "latitude": 22.270135,
+    "longitude": 114.232782
   },
   {
     "id": "dss-067",
@@ -2230,7 +2362,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulsco-education.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulsco-education.edu.hk/admissions",
+    "latitude": 22.28826,
+    "longitude": 114.218113
   },
   {
     "id": "dss-068",
@@ -2264,7 +2398,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.diocesanboysschool.edu.hk/admissions"
+    "applicationLink": "https://www.diocesanboysschool.edu.hk/admissions",
+    "latitude": 22.316331,
+    "longitude": 114.237608
   },
   {
     "id": "dss-069",
@@ -2298,7 +2434,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.diocesangirlsschool.edu.hk/admissions"
+    "applicationLink": "https://www.diocesangirlsschool.edu.hk/admissions",
+    "latitude": 22.336496,
+    "longitude": 114.169603
   },
   {
     "id": "dss-070",
@@ -2332,7 +2470,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.heepyunnschool.edu.hk/admissions"
+    "applicationLink": "https://www.heepyunnschool.edu.hk/admissions",
+    "latitude": 22.345981,
+    "longitude": 114.209613
   },
   {
     "id": "dss-071",
@@ -2366,7 +2506,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yingwacollege.edu.hk/admissions"
+    "applicationLink": "https://www.yingwacollege.edu.hk/admissions",
+    "latitude": 22.333622,
+    "longitude": 114.196279
   },
   {
     "id": "dss-072",
@@ -2400,7 +2542,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulscollege.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulscollege.edu.hk/admissions",
+    "latitude": 22.252597,
+    "longitude": 114.161365
   },
   {
     "id": "dss-073",
@@ -2434,7 +2578,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.stephenscollege.edu.hk/admissions"
+    "applicationLink": "https://www.st.stephenscollege.edu.hk/admissions",
+    "latitude": 22.282994,
+    "longitude": 114.174109
   },
   {
     "id": "dss-074",
@@ -2468,7 +2614,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hkugacollege.edu.hk/admissions"
+    "applicationLink": "https://www.hkugacollege.edu.hk/admissions",
+    "latitude": 22.2891,
+    "longitude": 114.235506
   },
   {
     "id": "dss-075",
@@ -2502,7 +2650,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plknganpolingcollege.edu.hk/admissions"
+    "applicationLink": "https://www.plknganpolingcollege.edu.hk/admissions",
+    "latitude": 22.331915,
+    "longitude": 114.191684
   },
   {
     "id": "dss-076",
@@ -2535,7 +2685,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plklawsfoundationcol.edu.hk/admissions"
+    "applicationLink": "https://www.plklawsfoundationcol.edu.hk/admissions",
+    "latitude": 22.384402,
+    "longitude": 114.180385
   },
   {
     "id": "dss-077",
@@ -2569,7 +2721,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.g.t.ellenyeungcolleg.edu.hk/admissions"
+    "applicationLink": "https://www.g.t.ellenyeungcolleg.edu.hk/admissions",
+    "latitude": 22.352493,
+    "longitude": 114.199164
   },
   {
     "id": "dss-078",
@@ -2603,7 +2757,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.fukiensecondaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.fukiensecondaryschoo.edu.hk/admissions",
+    "latitude": 22.350215,
+    "longitude": 114.196583
   },
   {
     "id": "dss-079",
@@ -2636,7 +2792,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.unitedchristiancolle.edu.hk/admissions"
+    "applicationLink": "https://www.unitedchristiancolle.edu.hk/admissions",
+    "latitude": 22.349806,
+    "longitude": 114.202492
   },
   {
     "id": "dss-080",
@@ -2670,7 +2828,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.elchklutheranseconda.edu.hk/admissions"
+    "applicationLink": "https://www.elchklutheranseconda.edu.hk/admissions",
+    "latitude": 22.383618,
+    "longitude": 113.969287
   },
   {
     "id": "dss-081",
@@ -2704,7 +2864,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hkbuaffiliatedschool.edu.hk/admissions"
+    "applicationLink": "https://www.hkbuaffiliatedschool.edu.hk/admissions",
+    "latitude": 22.468823,
+    "longitude": 114.034732
   },
   {
     "id": "dss-082",
@@ -2738,7 +2900,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.puikiucollege.edu.hk/admissions"
+    "applicationLink": "https://www.puikiucollege.edu.hk/admissions",
+    "latitude": 22.513038,
+    "longitude": 114.120147
   },
   {
     "id": "dss-083",
@@ -2772,7 +2936,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hkiccleeshaukeeschoo.edu.hk/admissions"
+    "applicationLink": "https://www.hkiccleeshaukeeschoo.edu.hk/admissions",
+    "latitude": 22.31681,
+    "longitude": 114.167575
   },
   {
     "id": "dss-084",
@@ -2806,7 +2972,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lamtaifaicollege.edu.hk/admissions"
+    "applicationLink": "https://www.lamtaifaicollege.edu.hk/admissions",
+    "latitude": 22.456747,
+    "longitude": 114.047043
   },
   {
     "id": "dss-085",
@@ -2839,7 +3007,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.goodhopeschool.edu.hk/admissions"
+    "applicationLink": "https://www.goodhopeschool.edu.hk/admissions",
+    "latitude": 22.354257,
+    "longitude": 114.194747
   },
   {
     "id": "dss-086",
@@ -2872,7 +3042,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.thetruthlutheranscho.edu.hk/admissions"
+    "applicationLink": "https://www.thetruthlutheranscho.edu.hk/admissions",
+    "latitude": 22.391298,
+    "longitude": 114.287611
   },
   {
     "id": "dss-087",
@@ -2906,7 +3078,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.evangelcollege.edu.hk/admissions"
+    "applicationLink": "https://www.evangelcollege.edu.hk/admissions",
+    "latitude": 22.434483,
+    "longitude": 113.981286
   },
   {
     "id": "dss-088",
@@ -2940,7 +3114,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hkmadavidlikwokpocol.edu.hk/admissions"
+    "applicationLink": "https://www.hkmadavidlikwokpocol.edu.hk/admissions",
+    "latitude": 22.345905,
+    "longitude": 114.208406
   },
   {
     "id": "dss-089",
@@ -2974,7 +3150,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.margaretsco-educa.edu.hk/admissions"
+    "applicationLink": "https://www.st.margaretsco-educa.edu.hk/admissions",
+    "latitude": 22.338823,
+    "longitude": 114.206346
   },
   {
     "id": "dss-090",
@@ -3007,7 +3185,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tsungtsinchristianac.edu.hk/admissions"
+    "applicationLink": "https://www.tsungtsinchristianac.edu.hk/admissions",
+    "latitude": 22.310971,
+    "longitude": 114.22244
   },
   {
     "id": "dss-091",
@@ -3040,7 +3220,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.thechinesefoundation.edu.hk/admissions"
+    "applicationLink": "https://www.thechinesefoundation.edu.hk/admissions",
+    "latitude": 22.272059,
+    "longitude": 114.240559
   },
   {
     "id": "dss-092",
@@ -3073,7 +3255,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.deliamemorialschool.edu.hk/admissions"
+    "applicationLink": "https://www.deliamemorialschool.edu.hk/admissions",
+    "latitude": 22.330816,
+    "longitude": 114.157601
   },
   {
     "id": "dss-093",
@@ -3107,7 +3291,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.mankwanqualiedcolleg.edu.hk/admissions"
+    "applicationLink": "https://www.mankwanqualiedcolleg.edu.hk/admissions",
+    "latitude": 22.477072,
+    "longitude": 114.187361
   },
   {
     "id": "dss-094",
@@ -3140,7 +3326,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lingnanuniversityalu.edu.hk/admissions"
+    "applicationLink": "https://www.lingnanuniversityalu.edu.hk/admissions",
+    "latitude": 22.404859,
+    "longitude": 113.968257
   },
   {
     "id": "dss-095",
@@ -3173,7 +3361,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plkcamõestansiulinpr.edu.hk/admissions"
+    "applicationLink": "https://www.plkcamõestansiulinpr.edu.hk/admissions",
+    "latitude": 22.306333,
+    "longitude": 114.176932
   },
   {
     "id": "dss-096",
@@ -3206,7 +3396,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yingwaprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.yingwaprimaryschool.edu.hk/admissions",
+    "latitude": 22.332071,
+    "longitude": 114.189829
   },
   {
     "id": "dss-097",
@@ -3239,7 +3431,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.diocesanboysschoolpr.edu.hk/admissions"
+    "applicationLink": "https://www.diocesanboysschoolpr.edu.hk/admissions",
+    "latitude": 22.335458,
+    "longitude": 114.166753
   },
   {
     "id": "dss-098",
@@ -3272,7 +3466,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.diocesangirlsjuniors.edu.hk/admissions"
+    "applicationLink": "https://www.diocesangirlsjuniors.edu.hk/admissions",
+    "latitude": 22.335822,
+    "longitude": 114.193234
   },
   {
     "id": "dss-099",
@@ -3305,7 +3501,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulsco-education.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulsco-education.edu.hk/admissions",
+    "latitude": 22.282427,
+    "longitude": 114.142271
   },
   {
     "id": "dss-100",
@@ -3338,7 +3536,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hkugaprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.hkugaprimaryschool.edu.hk/admissions",
+    "latitude": 22.248623,
+    "longitude": 114.176232
   },
   {
     "id": "dss-101",
@@ -3371,7 +3571,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.puikiuprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.puikiuprimaryschool.edu.hk/admissions",
+    "latitude": 22.391086,
+    "longitude": 114.219263
   },
   {
     "id": "dss-102",
@@ -3404,7 +3606,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.fukiensecondaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.fukiensecondaryschoo.edu.hk/admissions",
+    "latitude": 22.323827,
+    "longitude": 114.164601
   },
   {
     "id": "dss-103",
@@ -3436,7 +3640,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.g.t.ellenyeungcolleg.edu.hk/admissions"
+    "applicationLink": "https://www.g.t.ellenyeungcolleg.edu.hk/admissions",
+    "latitude": 22.313699,
+    "longitude": 114.213122
   },
   {
     "id": "dss-104",
@@ -3468,7 +3674,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.thetruthlutheranscho.edu.hk/admissions"
+    "applicationLink": "https://www.thetruthlutheranscho.edu.hk/admissions",
+    "latitude": 22.513625,
+    "longitude": 114.144799
   },
   {
     "id": "dss-105",
@@ -3500,7 +3708,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.evangelcollegeprimar.edu.hk/admissions"
+    "applicationLink": "https://www.evangelcollegeprimar.edu.hk/admissions",
+    "latitude": 22.475597,
+    "longitude": 114.176943
   },
   {
     "id": "dss-106",
@@ -3532,7 +3742,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.margaretsprimary.edu.hk/admissions"
+    "applicationLink": "https://www.st.margaretsprimary.edu.hk/admissions",
+    "latitude": 22.343064,
+    "longitude": 114.189991
   },
   {
     "id": "pri-107",
@@ -3566,7 +3778,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulsconventschoo.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulsconventschoo.edu.hk/admissions",
+    "latitude": 22.286679,
+    "longitude": 114.15774
   },
   {
     "id": "pri-108",
@@ -3600,7 +3814,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.rosaryhillschool.edu.hk/admissions"
+    "applicationLink": "https://www.rosaryhillschool.edu.hk/admissions",
+    "latitude": 22.23937,
+    "longitude": 114.159197
   },
   {
     "id": "pri-109",
@@ -3634,7 +3850,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.puichingmiddleschool.edu.hk/admissions"
+    "applicationLink": "https://www.puichingmiddleschool.edu.hk/admissions",
+    "latitude": 22.310803,
+    "longitude": 114.235671
   },
   {
     "id": "pri-110",
@@ -3668,7 +3886,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kowloontruelightscho.edu.hk/admissions"
+    "applicationLink": "https://www.kowloontruelightscho.edu.hk/admissions",
+    "latitude": 22.314503,
+    "longitude": 114.174173
   },
   {
     "id": "pri-111",
@@ -3701,7 +3921,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.truelightmiddleschoo.edu.hk/admissions"
+    "applicationLink": "https://www.truelightmiddleschoo.edu.hk/admissions",
+    "latitude": 22.28251,
+    "longitude": 114.187336
   },
   {
     "id": "pri-112",
@@ -3735,7 +3957,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.louisschool.edu.hk/admissions"
+    "applicationLink": "https://www.st.louisschool.edu.hk/admissions",
+    "latitude": 22.281489,
+    "longitude": 114.154489
   },
   {
     "id": "pri-113",
@@ -3768,7 +3992,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.raimondicollege.edu.hk/admissions"
+    "applicationLink": "https://www.raimondicollege.edu.hk/admissions",
+    "latitude": 22.280322,
+    "longitude": 114.153542
   },
   {
     "id": "pri-114",
@@ -3802,7 +4028,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.francisxavierscol.edu.hk/admissions"
+    "applicationLink": "https://www.st.francisxavierscol.edu.hk/admissions",
+    "latitude": 22.348485,
+    "longitude": 114.207216
   },
   {
     "id": "pri-115",
@@ -3836,7 +4064,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.newmethodcollege.edu.hk/admissions"
+    "applicationLink": "https://www.newmethodcollege.edu.hk/admissions",
+    "latitude": 22.352371,
+    "longitude": 114.202948
   },
   {
     "id": "pri-116",
@@ -3870,7 +4100,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ccckungleecollege.edu.hk/admissions"
+    "applicationLink": "https://www.ccckungleecollege.edu.hk/admissions",
+    "latitude": 22.285128,
+    "longitude": 114.146167
   },
   {
     "id": "pri-117",
@@ -3904,7 +4136,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.caritaschaiwanmarden.edu.hk/admissions"
+    "applicationLink": "https://www.caritaschaiwanmarden.edu.hk/admissions",
+    "latitude": 22.278363,
+    "longitude": 114.186369
   },
   {
     "id": "pri-118",
@@ -3937,7 +4171,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kiangsu-chekiangcoll.edu.hk/admissions"
+    "applicationLink": "https://www.kiangsu-chekiangcoll.edu.hk/admissions",
+    "latitude": 22.274736,
+    "longitude": 114.241891
   },
   {
     "id": "pri-119",
@@ -3970,7 +4206,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions"
+    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions",
+    "latitude": 22.282539,
+    "longitude": 114.187217
   },
   {
     "id": "pri-120",
@@ -4004,7 +4242,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.maryscanossiancol.edu.hk/admissions"
+    "applicationLink": "https://www.st.maryscanossiancol.edu.hk/admissions",
+    "latitude": 22.312164,
+    "longitude": 114.23927
   },
   {
     "id": "pri-121",
@@ -4037,7 +4277,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions"
+    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions",
+    "latitude": 22.318489,
+    "longitude": 114.212134
   },
   {
     "id": "pri-122",
@@ -4070,7 +4312,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.claresgirlsschool.edu.hk/admissions"
+    "applicationLink": "https://www.st.claresgirlsschool.edu.hk/admissions",
+    "latitude": 22.280609,
+    "longitude": 114.159359
   },
   {
     "id": "pri-123",
@@ -4103,7 +4347,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.pooitomiddleschool.edu.hk/admissions"
+    "applicationLink": "https://www.pooitomiddleschool.edu.hk/admissions",
+    "latitude": 22.332981,
+    "longitude": 114.188777
   },
   {
     "id": "pri-124",
@@ -4136,7 +4382,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.munsangcollege.edu.hk/admissions"
+    "applicationLink": "https://www.munsangcollege.edu.hk/admissions",
+    "latitude": 22.341027,
+    "longitude": 114.197513
   },
   {
     "id": "pri-125",
@@ -4168,7 +4416,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulsconventschoo.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulsconventschoo.edu.hk/admissions",
+    "latitude": 22.274315,
+    "longitude": 114.224721
   },
   {
     "id": "pri-126",
@@ -4200,7 +4450,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.rosaryhillschoolprim.edu.hk/admissions"
+    "applicationLink": "https://www.rosaryhillschoolprim.edu.hk/admissions",
+    "latitude": 22.273867,
+    "longitude": 114.248489
   },
   {
     "id": "pri-127",
@@ -4233,7 +4485,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.puichingprimaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.puichingprimaryschoo.edu.hk/admissions",
+    "latitude": 22.331582,
+    "longitude": 114.155271
   },
   {
     "id": "pri-128",
@@ -4265,7 +4519,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kowloontruelightscho.edu.hk/admissions"
+    "applicationLink": "https://www.kowloontruelightscho.edu.hk/admissions",
+    "latitude": 22.306354,
+    "longitude": 114.173753
   },
   {
     "id": "pri-129",
@@ -4298,7 +4554,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.munsangcollegeprimar.edu.hk/admissions"
+    "applicationLink": "https://www.munsangcollegeprimar.edu.hk/admissions",
+    "latitude": 22.34451,
+    "longitude": 114.192835
   },
   {
     "id": "pri-130",
@@ -4331,7 +4589,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.francisofassisise.edu.hk/admissions"
+    "applicationLink": "https://www.st.francisofassisise.edu.hk/admissions",
+    "latitude": 22.340648,
+    "longitude": 114.201252
   },
   {
     "id": "pri-131",
@@ -4364,7 +4624,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kowloontongschoolpri.edu.hk/admissions"
+    "applicationLink": "https://www.kowloontongschoolpri.edu.hk/admissions",
+    "latitude": 22.32907,
+    "longitude": 114.162173
   },
   {
     "id": "pri-132",
@@ -4397,7 +4659,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.allianceprimaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.allianceprimaryschoo.edu.hk/admissions",
+    "latitude": 22.326293,
+    "longitude": 114.223289
   },
   {
     "id": "pri-133",
@@ -4430,7 +4694,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.josephsanglo-chin.edu.hk/admissions"
+    "applicationLink": "https://www.st.josephsanglo-chin.edu.hk/admissions",
+    "latitude": 22.314302,
+    "longitude": 114.217799
   },
   {
     "id": "pri-134",
@@ -4462,7 +4728,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions"
+    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions",
+    "latitude": 22.270822,
+    "longitude": 114.217009
   },
   {
     "id": "pri-135",
@@ -4495,7 +4763,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kiangsu&chekiangprim.edu.hk/admissions"
+    "applicationLink": "https://www.kiangsu&chekiangprim.edu.hk/admissions",
+    "latitude": 22.280657,
+    "longitude": 114.178671
   },
   {
     "id": "pri-136",
@@ -4528,7 +4798,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kauyanschool.edu.hk/admissions"
+    "applicationLink": "https://www.kauyanschool.edu.hk/admissions",
+    "latitude": 22.258827,
+    "longitude": 114.215796
   },
   {
     "id": "pri-137",
@@ -4561,7 +4833,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.raimondicollegeprima.edu.hk/admissions"
+    "applicationLink": "https://www.raimondicollegeprima.edu.hk/admissions",
+    "latitude": 22.281752,
+    "longitude": 114.182149
   },
   {
     "id": "pri-138",
@@ -4594,7 +4868,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.claresprimaryscho.edu.hk/admissions"
+    "applicationLink": "https://www.st.claresprimaryscho.edu.hk/admissions",
+    "latitude": 22.284715,
+    "longitude": 114.140872
   },
   {
     "id": "pri-139",
@@ -4627,7 +4903,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.takngaprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.takngaprimaryschool.edu.hk/admissions",
+    "latitude": 22.303026,
+    "longitude": 114.168642
   },
   {
     "id": "pri-140",
@@ -4660,7 +4938,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.creativeprimaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.creativeprimaryschoo.edu.hk/admissions",
+    "latitude": 22.314883,
+    "longitude": 114.178783
   },
   {
     "id": "pri-141",
@@ -4693,7 +4973,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.pooitoprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.pooitoprimaryschool.edu.hk/admissions",
+    "latitude": 22.331232,
+    "longitude": 114.166367
   },
   {
     "id": "pri-142",
@@ -4726,7 +5008,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.victoriakindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.victoriakindergarten.edu.hk/admissions",
+    "latitude": 22.280734,
+    "longitude": 114.147307
   },
   {
     "id": "pri-143",
@@ -4759,7 +5043,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kentvillekindergarte.edu.hk/admissions"
+    "applicationLink": "https://www.kentvillekindergarte.edu.hk/admissions",
+    "latitude": 22.329583,
+    "longitude": 114.233907
   },
   {
     "id": "pri-144",
@@ -4792,7 +5078,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.learninghabitatkinde.edu.hk/admissions"
+    "applicationLink": "https://www.learninghabitatkinde.edu.hk/admissions",
+    "latitude": 22.33094,
+    "longitude": 114.196502
   },
   {
     "id": "pri-145",
@@ -4825,7 +5113,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yorkinternationalkin.edu.hk/admissions"
+    "applicationLink": "https://www.yorkinternationalkin.edu.hk/admissions",
+    "latitude": 22.305585,
+    "longitude": 114.164731
   },
   {
     "id": "pri-146",
@@ -4858,7 +5148,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulskindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulskindergarten.edu.hk/admissions",
+    "latitude": 22.275391,
+    "longitude": 114.235757
   },
   {
     "id": "pri-147",
@@ -4891,7 +5183,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions"
+    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions",
+    "latitude": 22.275911,
+    "longitude": 114.177851
   },
   {
     "id": "pri-148",
@@ -4923,7 +5217,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.victoriakindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.victoriakindergarten.edu.hk/admissions",
+    "latitude": 22.276828,
+    "longitude": 114.18797
   },
   {
     "id": "pri-149",
@@ -4956,7 +5252,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.poshankindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.poshankindergarten.edu.hk/admissions",
+    "latitude": 22.252371,
+    "longitude": 114.20758
   },
   {
     "id": "pri-150",
@@ -4988,7 +5286,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.stephensgirlscoll.edu.hk/admissions"
+    "applicationLink": "https://www.st.stephensgirlscoll.edu.hk/admissions",
+    "latitude": 22.288136,
+    "longitude": 114.14696
   },
   {
     "id": "pri-151",
@@ -5020,7 +5320,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kenningkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.kenningkindergarten.edu.hk/admissions",
+    "latitude": 22.328655,
+    "longitude": 114.218301
   },
   {
     "id": "pri-152",
@@ -5052,7 +5354,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.catherinesinterna.edu.hk/admissions"
+    "applicationLink": "https://www.st.catherinesinterna.edu.hk/admissions",
+    "latitude": 22.318663,
+    "longitude": 114.178595
   },
   {
     "id": "pri-153",
@@ -5084,7 +5388,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.goodhopeprimaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.goodhopeprimaryschoo.edu.hk/admissions",
+    "latitude": 22.30912,
+    "longitude": 114.169393
   },
   {
     "id": "pri-154",
@@ -5116,7 +5422,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.munsangcollegekinder.edu.hk/admissions"
+    "applicationLink": "https://www.munsangcollegekinder.edu.hk/admissions",
+    "latitude": 22.351571,
+    "longitude": 114.202159
   },
   {
     "id": "pri-155",
@@ -5148,7 +5456,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.puichingkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.puichingkindergarten.edu.hk/admissions",
+    "latitude": 22.312533,
+    "longitude": 114.210655
   },
   {
     "id": "pri-156",
@@ -5180,7 +5490,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.skhkindergarten.edu.hk/admissions",
+    "latitude": 22.282048,
+    "longitude": 114.171021
   },
   {
     "id": "aid-157",
@@ -5213,7 +5525,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.queenscollege.edu.hk/admissions"
+    "applicationLink": "https://www.queenscollege.edu.hk/admissions",
+    "latitude": 22.283933,
+    "longitude": 114.140883
   },
   {
     "id": "aid-158",
@@ -5246,7 +5560,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kingscollege.edu.hk/admissions"
+    "applicationLink": "https://www.kingscollege.edu.hk/admissions",
+    "latitude": 22.275495,
+    "longitude": 114.231175
   },
   {
     "id": "aid-159",
@@ -5279,7 +5595,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.beliliospublicschool.edu.hk/admissions"
+    "applicationLink": "https://www.beliliospublicschool.edu.hk/admissions",
+    "latitude": 22.280746,
+    "longitude": 114.175266
   },
   {
     "id": "aid-160",
@@ -5312,7 +5630,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wahyancollegehongkon.edu.hk/admissions"
+    "applicationLink": "https://www.wahyancollegehongkon.edu.hk/admissions",
+    "latitude": 22.270001,
+    "longitude": 114.215074
   },
   {
     "id": "aid-161",
@@ -5345,7 +5665,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wahyancollegekowloon.edu.hk/admissions"
+    "applicationLink": "https://www.wahyancollegekowloon.edu.hk/admissions",
+    "latitude": 22.328811,
+    "longitude": 114.19645
   },
   {
     "id": "aid-162",
@@ -5378,7 +5700,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lasallecollege.edu.hk/admissions"
+    "applicationLink": "https://www.lasallecollege.edu.hk/admissions",
+    "latitude": 22.328608,
+    "longitude": 114.218832
   },
   {
     "id": "aid-163",
@@ -5411,7 +5735,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.josephscollege.edu.hk/admissions"
+    "applicationLink": "https://www.st.josephscollege.edu.hk/admissions",
+    "latitude": 22.280244,
+    "longitude": 114.170152
   },
   {
     "id": "aid-164",
@@ -5444,7 +5770,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulsco-education.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulsco-education.edu.hk/admissions",
+    "latitude": 22.274527,
+    "longitude": 114.228525
   },
   {
     "id": "aid-165",
@@ -5477,7 +5805,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yingwagirlsschool.edu.hk/admissions"
+    "applicationLink": "https://www.yingwagirlsschool.edu.hk/admissions",
+    "latitude": 22.230586,
+    "longitude": 114.202988
   },
   {
     "id": "aid-166",
@@ -5510,7 +5840,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.stephensgirlscoll.edu.hk/admissions"
+    "applicationLink": "https://www.st.stephensgirlscoll.edu.hk/admissions",
+    "latitude": 22.270936,
+    "longitude": 114.224105
   },
   {
     "id": "aid-167",
@@ -5543,7 +5875,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions"
+    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions",
+    "latitude": 22.28754,
+    "longitude": 114.154062
   },
   {
     "id": "aid-168",
@@ -5576,7 +5910,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.marymountsecondarysc.edu.hk/admissions"
+    "applicationLink": "https://www.marymountsecondarysc.edu.hk/admissions",
+    "latitude": 22.277875,
+    "longitude": 114.239986
   },
   {
     "id": "aid-169",
@@ -5609,7 +5945,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.claresgirlsschool.edu.hk/admissions"
+    "applicationLink": "https://www.st.claresgirlsschool.edu.hk/admissions",
+    "latitude": 22.27168,
+    "longitude": 114.249658
   },
   {
     "id": "aid-170",
@@ -5642,7 +5980,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.truelightmiddleschoo.edu.hk/admissions"
+    "applicationLink": "https://www.truelightmiddleschoo.edu.hk/admissions",
+    "latitude": 22.287824,
+    "longitude": 114.157527
   },
   {
     "id": "aid-171",
@@ -5675,7 +6015,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhtangshiukinsecond.edu.hk/admissions"
+    "applicationLink": "https://www.skhtangshiukinsecond.edu.hk/admissions",
+    "latitude": 22.282637,
+    "longitude": 114.184298
   },
   {
     "id": "aid-172",
@@ -5708,7 +6050,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.cheungchukshancolleg.edu.hk/admissions"
+    "applicationLink": "https://www.cheungchukshancolleg.edu.hk/admissions",
+    "latitude": 22.272591,
+    "longitude": 114.247924
   },
   {
     "id": "aid-173",
@@ -5741,7 +6085,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions"
+    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions",
+    "latitude": 22.286197,
+    "longitude": 114.150982
   },
   {
     "id": "aid-174",
@@ -5774,7 +6120,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.clementisecondarysch.edu.hk/admissions"
+    "applicationLink": "https://www.clementisecondarysch.edu.hk/admissions",
+    "latitude": 22.233476,
+    "longitude": 114.173384
   },
   {
     "id": "aid-175",
@@ -5807,7 +6155,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.marksschool.edu.hk/admissions"
+    "applicationLink": "https://www.st.marksschool.edu.hk/admissions",
+    "latitude": 22.285357,
+    "longitude": 114.157279
   },
   {
     "id": "aid-176",
@@ -5840,7 +6190,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.munsangcollegehongko.edu.hk/admissions"
+    "applicationLink": "https://www.munsangcollegehongko.edu.hk/admissions",
+    "latitude": 22.239406,
+    "longitude": 114.214761
   },
   {
     "id": "aid-177",
@@ -5873,7 +6225,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.queenelizabethschool.edu.hk/admissions"
+    "applicationLink": "https://www.queenelizabethschool.edu.hk/admissions",
+    "latitude": 22.334946,
+    "longitude": 114.163954
   },
   {
     "id": "aid-178",
@@ -5906,7 +6260,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wayingcollege.edu.hk/admissions"
+    "applicationLink": "https://www.wayingcollege.edu.hk/admissions",
+    "latitude": 22.305899,
+    "longitude": 114.165412
   },
   {
     "id": "aid-179",
@@ -5939,7 +6295,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.bishophalljubileesch.edu.hk/admissions"
+    "applicationLink": "https://www.bishophalljubileesch.edu.hk/admissions",
+    "latitude": 22.307673,
+    "longitude": 114.165218
   },
   {
     "id": "aid-180",
@@ -5972,7 +6330,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.mongkokworkerschildr.edu.hk/admissions"
+    "applicationLink": "https://www.mongkokworkerschildr.edu.hk/admissions",
+    "latitude": 22.302064,
+    "longitude": 114.160171
   },
   {
     "id": "aid-181",
@@ -6005,7 +6365,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.francisxavierscol.edu.hk/admissions"
+    "applicationLink": "https://www.st.francisxavierscol.edu.hk/admissions",
+    "latitude": 22.329533,
+    "longitude": 114.153725
   },
   {
     "id": "aid-182",
@@ -6038,7 +6400,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.maryscanossiancol.edu.hk/admissions"
+    "applicationLink": "https://www.st.maryscanossiancol.edu.hk/admissions",
+    "latitude": 22.343598,
+    "longitude": 114.203067
   },
   {
     "id": "aid-183",
@@ -6071,7 +6435,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions"
+    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions",
+    "latitude": 22.344622,
+    "longitude": 114.195454
   },
   {
     "id": "aid-184",
@@ -6104,7 +6470,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.takngasecondaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.takngasecondaryschoo.edu.hk/admissions",
+    "latitude": 22.318283,
+    "longitude": 114.239875
   },
   {
     "id": "aid-185",
@@ -6137,7 +6505,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.carmelsecondaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.carmelsecondaryschoo.edu.hk/admissions",
+    "latitude": 22.347948,
+    "longitude": 114.191271
   },
   {
     "id": "aid-186",
@@ -6170,7 +6540,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kwuntonggovernmentse.edu.hk/admissions"
+    "applicationLink": "https://www.kwuntonggovernmentse.edu.hk/admissions",
+    "latitude": 22.302463,
+    "longitude": 114.163827
   },
   {
     "id": "aid-187",
@@ -6203,7 +6575,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kwuntongmaryknollcol.edu.hk/admissions"
+    "applicationLink": "https://www.kwuntongmaryknollcol.edu.hk/admissions",
+    "latitude": 22.317156,
+    "longitude": 114.236858
   },
   {
     "id": "aid-188",
@@ -6236,7 +6610,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.catharinesschoolf.edu.hk/admissions"
+    "applicationLink": "https://www.st.catharinesschoolf.edu.hk/admissions",
+    "latitude": 22.317449,
+    "longitude": 114.230933
   },
   {
     "id": "aid-189",
@@ -6269,7 +6645,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulsschoollamtin.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulsschoollamtin.edu.hk/admissions",
+    "latitude": 22.349394,
+    "longitude": 114.201702
   },
   {
     "id": "aid-190",
@@ -6302,7 +6680,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shunleecatholicsecon.edu.hk/admissions"
+    "applicationLink": "https://www.shunleecatholicsecon.edu.hk/admissions",
+    "latitude": 22.337585,
+    "longitude": 114.183242
   },
   {
     "id": "aid-191",
@@ -6335,7 +6715,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.singyinsecondaryscho.edu.hk/admissions"
+    "applicationLink": "https://www.singyinsecondaryscho.edu.hk/admissions",
+    "latitude": 22.319116,
+    "longitude": 114.17515
   },
   {
     "id": "aid-192",
@@ -6368,7 +6750,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatingovernmentseco.edu.hk/admissions"
+    "applicationLink": "https://www.shatingovernmentseco.edu.hk/admissions",
+    "latitude": 22.463511,
+    "longitude": 114.150959
   },
   {
     "id": "aid-193",
@@ -6401,7 +6785,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatinpuiyingcollege.edu.hk/admissions"
+    "applicationLink": "https://www.shatinpuiyingcollege.edu.hk/admissions",
+    "latitude": 22.383429,
+    "longitude": 114.172237
   },
   {
     "id": "aid-194",
@@ -6434,7 +6820,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatinmethodistcolle.edu.hk/admissions"
+    "applicationLink": "https://www.shatinmethodistcolle.edu.hk/admissions",
+    "latitude": 22.367603,
+    "longitude": 114.14408
   },
   {
     "id": "aid-195",
@@ -6467,7 +6855,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.baptistluimingchoise.edu.hk/admissions"
+    "applicationLink": "https://www.baptistluimingchoise.edu.hk/admissions",
+    "latitude": 22.5032,
+    "longitude": 114.179966
   },
   {
     "id": "aid-196",
@@ -6500,7 +6890,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhtsangshiutimsecon.edu.hk/admissions"
+    "applicationLink": "https://www.skhtsangshiutimsecon.edu.hk/admissions",
+    "latitude": 22.417624,
+    "longitude": 114.191803
   },
   {
     "id": "aid-197",
@@ -6533,7 +6925,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhlamkaumowsecondar.edu.hk/admissions"
+    "applicationLink": "https://www.skhlamkaumowsecondar.edu.hk/admissions",
+    "latitude": 22.527426,
+    "longitude": 114.159408
   },
   {
     "id": "aid-198",
@@ -6566,7 +6960,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kwoktaksengcatholics.edu.hk/admissions"
+    "applicationLink": "https://www.kwoktaksengcatholics.edu.hk/admissions",
+    "latitude": 22.411084,
+    "longitude": 114.205017
   },
   {
     "id": "aid-199",
@@ -6599,7 +6995,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.immaculateheartofmar.edu.hk/admissions"
+    "applicationLink": "https://www.immaculateheartofmar.edu.hk/admissions",
+    "latitude": 22.504694,
+    "longitude": 114.149831
   },
   {
     "id": "aid-200",
@@ -6632,7 +7030,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.cuhkfaachanchunhasec.edu.hk/admissions"
+    "applicationLink": "https://www.cuhkfaachanchunhasec.edu.hk/admissions",
+    "latitude": 22.374999,
+    "longitude": 114.172502
   },
   {
     "id": "aid-201",
@@ -6665,7 +7065,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plkcentenarylishiuch.edu.hk/admissions"
+    "applicationLink": "https://www.plkcentenarylishiuch.edu.hk/admissions",
+    "latitude": 22.513036,
+    "longitude": 114.134859
   },
   {
     "id": "aid-202",
@@ -6698,7 +7100,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tuenmungovernmentsec.edu.hk/admissions"
+    "applicationLink": "https://www.tuenmungovernmentsec.edu.hk/admissions",
+    "latitude": 22.529145,
+    "longitude": 114.170797
   },
   {
     "id": "aid-203",
@@ -6731,7 +7135,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.stfaleungkaukuicolle.edu.hk/admissions"
+    "applicationLink": "https://www.stfaleungkaukuicolle.edu.hk/admissions",
+    "latitude": 22.481452,
+    "longitude": 114.124707
   },
   {
     "id": "aid-204",
@@ -6764,7 +7170,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plktongyukteiseconda.edu.hk/admissions"
+    "applicationLink": "https://www.plktongyukteiseconda.edu.hk/admissions",
+    "latitude": 22.510381,
+    "longitude": 114.139027
   },
   {
     "id": "aid-205",
@@ -6797,7 +7205,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yuenlongpublicsecond.edu.hk/admissions"
+    "applicationLink": "https://www.yuenlongpublicsecond.edu.hk/admissions",
+    "latitude": 22.453759,
+    "longitude": 114.042809
   },
   {
     "id": "aid-206",
@@ -6830,7 +7240,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tinshuiwaigovernment.edu.hk/admissions"
+    "applicationLink": "https://www.tinshuiwaigovernment.edu.hk/admissions",
+    "latitude": 22.462585,
+    "longitude": 114.173301
   },
   {
     "id": "aid-207",
@@ -6863,7 +7275,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hennessyroadgovernme.edu.hk/admissions"
+    "applicationLink": "https://www.hennessyroadgovernme.edu.hk/admissions",
+    "latitude": 22.279758,
+    "longitude": 114.179328
   },
   {
     "id": "aid-208",
@@ -6896,7 +7310,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.northpointgovernment.edu.hk/admissions"
+    "applicationLink": "https://www.northpointgovernment.edu.hk/admissions",
+    "latitude": 22.280045,
+    "longitude": 114.14749
   },
   {
     "id": "aid-209",
@@ -6929,7 +7345,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.aldrichbaygovernment.edu.hk/admissions"
+    "applicationLink": "https://www.aldrichbaygovernment.edu.hk/admissions",
+    "latitude": 22.280348,
+    "longitude": 114.224648
   },
   {
     "id": "aid-210",
@@ -6962,7 +7380,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions"
+    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions",
+    "latitude": 22.285456,
+    "longitude": 114.23925
   },
   {
     "id": "aid-211",
@@ -6995,7 +7415,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hongkongsoutherndist.edu.hk/admissions"
+    "applicationLink": "https://www.hongkongsoutherndist.edu.hk/admissions",
+    "latitude": 22.270589,
+    "longitude": 114.218551
   },
   {
     "id": "aid-212",
@@ -7028,7 +7450,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.bonhamroadgovernment.edu.hk/admissions"
+    "applicationLink": "https://www.bonhamroadgovernment.edu.hk/admissions",
+    "latitude": 22.235087,
+    "longitude": 114.202591
   },
   {
     "id": "aid-213",
@@ -7061,7 +7485,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lisingprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.lisingprimaryschool.edu.hk/admissions",
+    "latitude": 22.275044,
+    "longitude": 114.24418
   },
   {
     "id": "aid-214",
@@ -7094,7 +7520,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhst.petersprimarys.edu.hk/admissions"
+    "applicationLink": "https://www.skhst.petersprimarys.edu.hk/admissions",
+    "latitude": 22.281587,
+    "longitude": 114.151722
   },
   {
     "id": "aid-215",
@@ -7127,7 +7555,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhluimingchoimemori.edu.hk/admissions"
+    "applicationLink": "https://www.skhluimingchoimemori.edu.hk/admissions",
+    "latitude": 22.285413,
+    "longitude": 114.228926
   },
   {
     "id": "aid-216",
@@ -7160,7 +7590,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions"
+    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions",
+    "latitude": 22.289491,
+    "longitude": 114.235071
   },
   {
     "id": "aid-217",
@@ -7193,7 +7625,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.marymountprimaryscho.edu.hk/admissions"
+    "applicationLink": "https://www.marymountprimaryscho.edu.hk/admissions",
+    "latitude": 22.278584,
+    "longitude": 114.223862
   },
   {
     "id": "aid-218",
@@ -7226,7 +7660,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.josephsprimarysch.edu.hk/admissions"
+    "applicationLink": "https://www.st.josephsprimarysch.edu.hk/admissions",
+    "latitude": 22.281558,
+    "longitude": 114.171103
   },
   {
     "id": "aid-219",
@@ -7259,7 +7695,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.punuassociationwahya.edu.hk/admissions"
+    "applicationLink": "https://www.punuassociationwahya.edu.hk/admissions",
+    "latitude": 22.279779,
+    "longitude": 114.181334
   },
   {
     "id": "aid-220",
@@ -7292,7 +7730,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhtinwanchinamprima.edu.hk/admissions"
+    "applicationLink": "https://www.skhtinwanchinamprima.edu.hk/admissions",
+    "latitude": 22.272373,
+    "longitude": 114.221282
   },
   {
     "id": "aid-221",
@@ -7325,7 +7765,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.aberdeenst.peterscat.edu.hk/admissions"
+    "applicationLink": "https://www.aberdeenst.peterscat.edu.hk/admissions",
+    "latitude": 22.257285,
+    "longitude": 114.208983
   },
   {
     "id": "aid-222",
@@ -7358,7 +7800,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yaumaticatholicprima.edu.hk/admissions"
+    "applicationLink": "https://www.yaumaticatholicprima.edu.hk/admissions",
+    "latitude": 22.325983,
+    "longitude": 114.186811
   },
   {
     "id": "aid-223",
@@ -7391,7 +7835,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kowloontongbishopwal.edu.hk/admissions"
+    "applicationLink": "https://www.kowloontongbishopwal.edu.hk/admissions",
+    "latitude": 22.323221,
+    "longitude": 114.236713
   },
   {
     "id": "aid-224",
@@ -7424,7 +7870,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lasalleprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.lasalleprimaryschool.edu.hk/admissions",
+    "latitude": 22.302024,
+    "longitude": 114.163375
   },
   {
     "id": "aid-225",
@@ -7456,7 +7904,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions"
+    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions",
+    "latitude": 22.334202,
+    "longitude": 114.152107
   },
   {
     "id": "aid-226",
@@ -7489,7 +7939,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.maryscanossiansch.edu.hk/admissions"
+    "applicationLink": "https://www.st.maryscanossiansch.edu.hk/admissions",
+    "latitude": 22.311618,
+    "longitude": 114.179946
   },
   {
     "id": "aid-227",
@@ -7522,7 +7974,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.heepyunnprimaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.heepyunnprimaryschoo.edu.hk/admissions",
+    "latitude": 22.320101,
+    "longitude": 114.163397
   },
   {
     "id": "aid-228",
@@ -7555,7 +8009,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.bishopwalshprimarysc.edu.hk/admissions"
+    "applicationLink": "https://www.bishopwalshprimarysc.edu.hk/admissions",
+    "latitude": 22.319829,
+    "longitude": 114.162144
   },
   {
     "id": "aid-229",
@@ -7588,7 +8044,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhfungkeiprimarysch.edu.hk/admissions"
+    "applicationLink": "https://www.skhfungkeiprimarysch.edu.hk/admissions",
+    "latitude": 22.312993,
+    "longitude": 114.177496
   },
   {
     "id": "aid-230",
@@ -7621,7 +8079,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhst.timothysprimar.edu.hk/admissions"
+    "applicationLink": "https://www.skhst.timothysprimar.edu.hk/admissions",
+    "latitude": 22.322515,
+    "longitude": 114.169374
   },
   {
     "id": "aid-231",
@@ -7654,7 +8114,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ccckeiwaprimaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.ccckeiwaprimaryschoo.edu.hk/admissions",
+    "latitude": 22.337832,
+    "longitude": 114.152069
   },
   {
     "id": "aid-232",
@@ -7687,7 +8149,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhyanlaapprimarysch.edu.hk/admissions"
+    "applicationLink": "https://www.skhyanlaapprimarysch.edu.hk/admissions",
+    "latitude": 22.260992,
+    "longitude": 113.929635
   },
   {
     "id": "aid-233",
@@ -7720,7 +8184,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.baptistshatinwailuim.edu.hk/admissions"
+    "applicationLink": "https://www.baptistshatinwailuim.edu.hk/admissions",
+    "latitude": 22.403335,
+    "longitude": 113.991861
   },
   {
     "id": "aid-234",
@@ -7753,7 +8219,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatingovernmentprim.edu.hk/admissions"
+    "applicationLink": "https://www.shatingovernmentprim.edu.hk/admissions",
+    "latitude": 22.281469,
+    "longitude": 113.968706
   },
   {
     "id": "aid-235",
@@ -7786,7 +8254,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.maonshanlingliangpri.edu.hk/admissions"
+    "applicationLink": "https://www.maonshanlingliangpri.edu.hk/admissions",
+    "latitude": 22.396226,
+    "longitude": 113.981293
   },
   {
     "id": "aid-236",
@@ -7819,7 +8289,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plkchongkeetingprima.edu.hk/admissions"
+    "applicationLink": "https://www.plkchongkeetingprima.edu.hk/admissions",
+    "latitude": 22.360143,
+    "longitude": 114.127367
   },
   {
     "id": "aid-237",
@@ -7852,7 +8324,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plkdr.jimmywongchi-h.edu.hk/admissions"
+    "applicationLink": "https://www.plkdr.jimmywongchi-h.edu.hk/admissions",
+    "latitude": 22.2575,
+    "longitude": 114.019487
   },
   {
     "id": "aid-238",
@@ -7885,7 +8359,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhmaonshanholyspiri.edu.hk/admissions"
+    "applicationLink": "https://www.skhmaonshanholyspiri.edu.hk/admissions",
+    "latitude": 22.442683,
+    "longitude": 114.197981
   },
   {
     "id": "aid-239",
@@ -7918,7 +8394,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tinshuiwaicatholicpr.edu.hk/admissions"
+    "applicationLink": "https://www.tinshuiwaicatholicpr.edu.hk/admissions",
+    "latitude": 22.389134,
+    "longitude": 114.114427
   },
   {
     "id": "aid-240",
@@ -7951,7 +8429,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yuenlonggovernmentpr.edu.hk/admissions"
+    "applicationLink": "https://www.yuenlonggovernmentpr.edu.hk/admissions",
+    "latitude": 22.364488,
+    "longitude": 114.115592
   },
   {
     "id": "aid-241",
@@ -7984,7 +8464,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tuenmungovernmentpri.edu.hk/admissions"
+    "applicationLink": "https://www.tuenmungovernmentpri.edu.hk/admissions",
+    "latitude": 22.344067,
+    "longitude": 114.130884
   },
   {
     "id": "aid-242",
@@ -8017,7 +8499,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plkchihoprimaryschoo.edu.hk/admissions"
+    "applicationLink": "https://www.plkchihoprimaryschoo.edu.hk/admissions",
+    "latitude": 22.473524,
+    "longitude": 114.166479
   },
   {
     "id": "aid-243",
@@ -8050,7 +8534,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.stfahoyattungprimary.edu.hk/admissions"
+    "applicationLink": "https://www.stfahoyattungprimary.edu.hk/admissions",
+    "latitude": 22.451048,
+    "longitude": 114.167802
   },
   {
     "id": "aid-244",
@@ -8083,7 +8569,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yanchaihospitalchoih.edu.hk/admissions"
+    "applicationLink": "https://www.yanchaihospitalchoih.edu.hk/admissions",
+    "latitude": 22.381267,
+    "longitude": 114.110022
   },
   {
     "id": "aid-245",
@@ -8116,7 +8604,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tseungkwanogovernmen.edu.hk/admissions"
+    "applicationLink": "https://www.tseungkwanogovernmen.edu.hk/admissions",
+    "latitude": 22.461238,
+    "longitude": 114.194588
   },
   {
     "id": "aid-246",
@@ -8148,7 +8638,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.saikungsungtsuncatho.edu.hk/admissions"
+    "applicationLink": "https://www.saikungsungtsuncatho.edu.hk/admissions",
+    "latitude": 22.373532,
+    "longitude": 114.214558
   },
   {
     "id": "aid-247",
@@ -8180,7 +8672,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.skhkindergarten.edu.hk/admissions",
+    "latitude": 22.238983,
+    "longitude": 114.161453
   },
   {
     "id": "aid-248",
@@ -8212,7 +8706,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.jamessettlementki.edu.hk/admissions"
+    "applicationLink": "https://www.st.jamessettlementki.edu.hk/admissions",
+    "latitude": 22.283218,
+    "longitude": 114.15143
   },
   {
     "id": "aid-249",
@@ -8244,7 +8740,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hkcskindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.hkcskindergarten.edu.hk/admissions",
+    "latitude": 22.315381,
+    "longitude": 114.211434
   },
   {
     "id": "aid-250",
@@ -8276,7 +8774,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plkkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.plkkindergarten.edu.hk/admissions",
+    "latitude": 22.317809,
+    "longitude": 114.215874
   },
   {
     "id": "aid-251",
@@ -8308,7 +8808,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.twghskindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.twghskindergarten.edu.hk/admissions",
+    "latitude": 22.317987,
+    "longitude": 114.236395
   },
   {
     "id": "aid-252",
@@ -8340,7 +8842,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yanchaihospitalkinde.edu.hk/admissions"
+    "applicationLink": "https://www.yanchaihospitalkinde.edu.hk/admissions",
+    "latitude": 22.361105,
+    "longitude": 114.113595
   },
   {
     "id": "aid-253",
@@ -8372,7 +8876,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.pokoihospitalkinderg.edu.hk/admissions"
+    "applicationLink": "https://www.pokoihospitalkinderg.edu.hk/admissions",
+    "latitude": 22.346513,
+    "longitude": 114.117243
   },
   {
     "id": "aid-254",
@@ -8404,7 +8910,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.salvationarmykinderg.edu.hk/admissions"
+    "applicationLink": "https://www.salvationarmykinderg.edu.hk/admissions",
+    "latitude": 22.315209,
+    "longitude": 114.176169
   },
   {
     "id": "aid-255",
@@ -8436,7 +8944,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.methodistkindergarte.edu.hk/admissions"
+    "applicationLink": "https://www.methodistkindergarte.edu.hk/admissions",
+    "latitude": 22.288842,
+    "longitude": 114.226976
   },
   {
     "id": "aid-256",
@@ -8468,7 +8978,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.baptistkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.baptistkindergarten.edu.hk/admissions",
+    "latitude": 22.319693,
+    "longitude": 114.161083
   },
   {
     "id": "gov-257",
@@ -8501,7 +9013,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.queenscollege.edu.hk/admissions"
+    "applicationLink": "https://www.queenscollege.edu.hk/admissions",
+    "latitude": 22.254698,
+    "longitude": 114.185984
   },
   {
     "id": "gov-258",
@@ -8534,7 +9048,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kingscollege.edu.hk/admissions"
+    "applicationLink": "https://www.kingscollege.edu.hk/admissions",
+    "latitude": 22.232601,
+    "longitude": 114.185318
   },
   {
     "id": "gov-259",
@@ -8567,7 +9083,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.beliliospublicschool.edu.hk/admissions"
+    "applicationLink": "https://www.beliliospublicschool.edu.hk/admissions",
+    "latitude": 22.287573,
+    "longitude": 114.231222
   },
   {
     "id": "gov-260",
@@ -8600,7 +9118,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.clementisecondarysch.edu.hk/admissions"
+    "applicationLink": "https://www.clementisecondarysch.edu.hk/admissions",
+    "latitude": 22.284455,
+    "longitude": 114.189251
   },
   {
     "id": "gov-261",
@@ -8633,7 +9153,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions"
+    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions",
+    "latitude": 22.275113,
+    "longitude": 114.17675
   },
   {
     "id": "gov-262",
@@ -8666,7 +9188,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tangshiukinvictoriag.edu.hk/admissions"
+    "applicationLink": "https://www.tangshiukinvictoriag.edu.hk/admissions",
+    "latitude": 22.281129,
+    "longitude": 114.15274
   },
   {
     "id": "gov-263",
@@ -8699,7 +9223,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.homantingovernmentse.edu.hk/admissions"
+    "applicationLink": "https://www.homantingovernmentse.edu.hk/admissions",
+    "latitude": 22.310983,
+    "longitude": 114.165819
   },
   {
     "id": "gov-264",
@@ -8732,7 +9258,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.queenelizabethschool.edu.hk/admissions"
+    "applicationLink": "https://www.queenelizabethschool.edu.hk/admissions",
+    "latitude": 22.325146,
+    "longitude": 114.194022
   },
   {
     "id": "gov-265",
@@ -8765,7 +9293,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kowloontechnicalscho.edu.hk/admissions"
+    "applicationLink": "https://www.kowloontechnicalscho.edu.hk/admissions",
+    "latitude": 22.309843,
+    "longitude": 114.177375
   },
   {
     "id": "gov-266",
@@ -8798,7 +9328,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kwuntonggovernmentse.edu.hk/admissions"
+    "applicationLink": "https://www.kwuntonggovernmentse.edu.hk/admissions",
+    "latitude": 22.328401,
+    "longitude": 114.230692
   },
   {
     "id": "gov-267",
@@ -8831,7 +9363,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sirelliskadoorieseco.edu.hk/admissions"
+    "applicationLink": "https://www.sirelliskadoorieseco.edu.hk/admissions",
+    "latitude": 22.300824,
+    "longitude": 114.163339
   },
   {
     "id": "gov-268",
@@ -8864,7 +9398,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ntheungyeekukyuenlon.edu.hk/admissions"
+    "applicationLink": "https://www.ntheungyeekukyuenlon.edu.hk/admissions",
+    "latitude": 22.364476,
+    "longitude": 114.140544
   },
   {
     "id": "gov-269",
@@ -8897,7 +9433,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatingovernmentseco.edu.hk/admissions"
+    "applicationLink": "https://www.shatingovernmentseco.edu.hk/admissions",
+    "latitude": 22.374111,
+    "longitude": 114.125878
   },
   {
     "id": "gov-270",
@@ -8930,7 +9468,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tuenmungovernmentsec.edu.hk/admissions"
+    "applicationLink": "https://www.tuenmungovernmentsec.edu.hk/admissions",
+    "latitude": 22.390658,
+    "longitude": 113.990234
   },
   {
     "id": "gov-271",
@@ -8963,7 +9503,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tinshuiwaigovernment.edu.hk/admissions"
+    "applicationLink": "https://www.tinshuiwaigovernment.edu.hk/admissions",
+    "latitude": 22.44855,
+    "longitude": 114.025962
   },
   {
     "id": "gov-272",
@@ -8996,7 +9538,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.fanlinggovernmentsec.edu.hk/admissions"
+    "applicationLink": "https://www.fanlinggovernmentsec.edu.hk/admissions",
+    "latitude": 22.251016,
+    "longitude": 113.925552
   },
   {
     "id": "gov-273",
@@ -9029,7 +9573,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sheungshuigovernment.edu.hk/admissions"
+    "applicationLink": "https://www.sheungshuigovernment.edu.hk/admissions",
+    "latitude": 22.413804,
+    "longitude": 114.20449
   },
   {
     "id": "gov-274",
@@ -9062,7 +9608,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.taipogovernmentsecon.edu.hk/admissions"
+    "applicationLink": "https://www.taipogovernmentsecon.edu.hk/admissions",
+    "latitude": 22.408154,
+    "longitude": 113.962084
   },
   {
     "id": "gov-275",
@@ -9095,7 +9643,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tsuenwangovernmentse.edu.hk/admissions"
+    "applicationLink": "https://www.tsuenwangovernmentse.edu.hk/admissions",
+    "latitude": 22.402848,
+    "longitude": 114.176444
   },
   {
     "id": "gov-276",
@@ -9128,7 +9678,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kwaichunggovernments.edu.hk/admissions"
+    "applicationLink": "https://www.kwaichunggovernments.edu.hk/admissions",
+    "latitude": 22.381522,
+    "longitude": 114.111002
   },
   {
     "id": "gov-277",
@@ -9161,7 +9713,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hennessyroadgovernme.edu.hk/admissions"
+    "applicationLink": "https://www.hennessyroadgovernme.edu.hk/admissions",
+    "latitude": 22.282313,
+    "longitude": 114.14097
   },
   {
     "id": "gov-278",
@@ -9194,7 +9748,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.northpointgovernment.edu.hk/admissions"
+    "applicationLink": "https://www.northpointgovernment.edu.hk/admissions",
+    "latitude": 22.2869,
+    "longitude": 114.155447
   },
   {
     "id": "gov-279",
@@ -9227,7 +9783,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.aldrichbaygovernment.edu.hk/admissions"
+    "applicationLink": "https://www.aldrichbaygovernment.edu.hk/admissions",
+    "latitude": 22.277949,
+    "longitude": 114.176316
   },
   {
     "id": "gov-280",
@@ -9260,7 +9818,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions"
+    "applicationLink": "https://www.shaukeiwangovernment.edu.hk/admissions",
+    "latitude": 22.282303,
+    "longitude": 114.244961
   },
   {
     "id": "gov-281",
@@ -9293,7 +9853,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hongkongsoutherndist.edu.hk/admissions"
+    "applicationLink": "https://www.hongkongsoutherndist.edu.hk/admissions",
+    "latitude": 22.250168,
+    "longitude": 114.201022
   },
   {
     "id": "gov-282",
@@ -9326,7 +9888,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.bonhamroadgovernment.edu.hk/admissions"
+    "applicationLink": "https://www.bonhamroadgovernment.edu.hk/admissions",
+    "latitude": 22.276233,
+    "longitude": 114.173471
   },
   {
     "id": "gov-283",
@@ -9359,7 +9923,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lisingprimaryschool.edu.hk/admissions"
+    "applicationLink": "https://www.lisingprimaryschool.edu.hk/admissions",
+    "latitude": 22.289139,
+    "longitude": 114.237758
   },
   {
     "id": "gov-284",
@@ -9392,7 +9958,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kowloontonggovernmen.edu.hk/admissions"
+    "applicationLink": "https://www.kowloontonggovernmen.edu.hk/admissions",
+    "latitude": 22.345942,
+    "longitude": 114.1918
   },
   {
     "id": "gov-285",
@@ -9425,7 +9993,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yaumatigovernmentpri.edu.hk/admissions"
+    "applicationLink": "https://www.yaumatigovernmentpri.edu.hk/admissions",
+    "latitude": 22.354952,
+    "longitude": 114.196294
   },
   {
     "id": "gov-286",
@@ -9458,7 +10028,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wongtaisingovernment.edu.hk/admissions"
+    "applicationLink": "https://www.wongtaisingovernment.edu.hk/admissions",
+    "latitude": 22.33154,
+    "longitude": 114.194886
   },
   {
     "id": "gov-287",
@@ -9491,7 +10063,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.kwuntonggovernmentpr.edu.hk/admissions"
+    "applicationLink": "https://www.kwuntonggovernmentpr.edu.hk/admissions",
+    "latitude": 22.334005,
+    "longitude": 114.162054
   },
   {
     "id": "gov-288",
@@ -9524,7 +10098,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shatingovernmentprim.edu.hk/admissions"
+    "applicationLink": "https://www.shatingovernmentprim.edu.hk/admissions",
+    "latitude": 22.383751,
+    "longitude": 113.966259
   },
   {
     "id": "gov-289",
@@ -9557,7 +10133,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tuenmungovernmentpri.edu.hk/admissions"
+    "applicationLink": "https://www.tuenmungovernmentpri.edu.hk/admissions",
+    "latitude": 22.364568,
+    "longitude": 114.123844
   },
   {
     "id": "gov-290",
@@ -9590,7 +10168,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yuenlonggovernmentpr.edu.hk/admissions"
+    "applicationLink": "https://www.yuenlonggovernmentpr.edu.hk/admissions",
+    "latitude": 22.369565,
+    "longitude": 114.124648
   },
   {
     "id": "gov-291",
@@ -9623,7 +10203,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tinshuiwaigovernment.edu.hk/admissions"
+    "applicationLink": "https://www.tinshuiwaigovernment.edu.hk/admissions",
+    "latitude": 22.373325,
+    "longitude": 114.257204
   },
   {
     "id": "gov-292",
@@ -9656,7 +10238,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tseungkwanogovernmen.edu.hk/admissions"
+    "applicationLink": "https://www.tseungkwanogovernmen.edu.hk/admissions",
+    "latitude": 22.366973,
+    "longitude": 114.123172
   },
   {
     "id": "gov-293",
@@ -9689,7 +10273,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.taipogovernmentprima.edu.hk/admissions"
+    "applicationLink": "https://www.taipogovernmentprima.edu.hk/admissions",
+    "latitude": 22.340684,
+    "longitude": 114.125071
   },
   {
     "id": "gov-294",
@@ -9722,7 +10308,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.fanlinggovernmentpri.edu.hk/admissions"
+    "applicationLink": "https://www.fanlinggovernmentpri.edu.hk/admissions",
+    "latitude": 22.434181,
+    "longitude": 113.994584
   },
   {
     "id": "gov-295",
@@ -9755,7 +10343,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sheungshuigovernment.edu.hk/admissions"
+    "applicationLink": "https://www.sheungshuigovernment.edu.hk/admissions",
+    "latitude": 22.497212,
+    "longitude": 114.17708
   },
   {
     "id": "gov-296",
@@ -9788,7 +10378,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tsuenwangovernmentpr.edu.hk/admissions"
+    "applicationLink": "https://www.tsuenwangovernmentpr.edu.hk/admissions",
+    "latitude": 22.255476,
+    "longitude": 113.988716
   },
   {
     "id": "aid-297",
@@ -9821,7 +10413,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.cccmingyincollege.edu.hk/admissions"
+    "applicationLink": "https://www.cccmingyincollege.edu.hk/admissions",
+    "latitude": 22.318922,
+    "longitude": 114.179339
   },
   {
     "id": "aid-298",
@@ -9854,7 +10448,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ccckeitosecondarysch.edu.hk/admissions"
+    "applicationLink": "https://www.ccckeitosecondarysch.edu.hk/admissions",
+    "latitude": 22.318286,
+    "longitude": 114.162264
   },
   {
     "id": "aid-299",
@@ -9887,7 +10483,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.cccmongmanwaicollege.edu.hk/admissions"
+    "applicationLink": "https://www.cccmongmanwaicollege.edu.hk/admissions",
+    "latitude": 22.352662,
+    "longitude": 114.20891
   },
   {
     "id": "aid-300",
@@ -9920,7 +10518,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.cccheepwohcollege.edu.hk/admissions"
+    "applicationLink": "https://www.cccheepwohcollege.edu.hk/admissions",
+    "latitude": 22.322973,
+    "longitude": 114.155586
   },
   {
     "id": "aid-301",
@@ -9953,7 +10553,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ccckungleecollege.edu.hk/admissions"
+    "applicationLink": "https://www.ccckungleecollege.edu.hk/admissions",
+    "latitude": 22.286445,
+    "longitude": 114.153171
   },
   {
     "id": "aid-302",
@@ -9986,7 +10588,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhholytrinitychurch.edu.hk/admissions"
+    "applicationLink": "https://www.skhholytrinitychurch.edu.hk/admissions",
+    "latitude": 22.335858,
+    "longitude": 114.201749
   },
   {
     "id": "aid-303",
@@ -10019,7 +10623,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhlipingsecondarysc.edu.hk/admissions"
+    "applicationLink": "https://www.skhlipingsecondarysc.edu.hk/admissions",
+    "latitude": 22.251985,
+    "longitude": 114.048883
   },
   {
     "id": "aid-304",
@@ -10052,7 +10658,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhchanyoungsecondar.edu.hk/admissions"
+    "applicationLink": "https://www.skhchanyoungsecondar.edu.hk/admissions",
+    "latitude": 22.443113,
+    "longitude": 114.021001
   },
   {
     "id": "aid-305",
@@ -10085,7 +10693,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhbishopmoksautseng.edu.hk/admissions"
+    "applicationLink": "https://www.skhbishopmoksautseng.edu.hk/admissions",
+    "latitude": 22.513529,
+    "longitude": 114.168759
   },
   {
     "id": "aid-306",
@@ -10118,7 +10728,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhbishopbakersecond.edu.hk/admissions"
+    "applicationLink": "https://www.skhbishopbakersecond.edu.hk/admissions",
+    "latitude": 22.407561,
+    "longitude": 114.254817
   },
   {
     "id": "aid-307",
@@ -10151,7 +10763,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.daughtersofmaryhelpo.edu.hk/admissions"
+    "applicationLink": "https://www.daughtersofmaryhelpo.edu.hk/admissions",
+    "latitude": 22.323968,
+    "longitude": 114.21644
   },
   {
     "id": "aid-308",
@@ -10184,7 +10798,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.puishingcatholicseco.edu.hk/admissions"
+    "applicationLink": "https://www.puishingcatholicseco.edu.hk/admissions",
+    "latitude": 22.455254,
+    "longitude": 114.194644
   },
   {
     "id": "aid-309",
@@ -10217,7 +10833,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ngwahcatholicseconda.edu.hk/admissions"
+    "applicationLink": "https://www.ngwahcatholicseconda.edu.hk/admissions",
+    "latitude": 22.319437,
+    "longitude": 114.220857
   },
   {
     "id": "aid-310",
@@ -10250,7 +10868,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shungtakcatholicengl.edu.hk/admissions"
+    "applicationLink": "https://www.shungtakcatholicengl.edu.hk/admissions",
+    "latitude": 22.342462,
+    "longitude": 114.116746
   },
   {
     "id": "aid-311",
@@ -10283,7 +10903,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.pochiucatholicsecond.edu.hk/admissions"
+    "applicationLink": "https://www.pochiucatholicsecond.edu.hk/admissions",
+    "latitude": 22.32626,
+    "longitude": 114.214515
   },
   {
     "id": "aid-312",
@@ -10316,7 +10938,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistwongfungling.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistwongfungling.edu.hk/admissions",
+    "latitude": 22.283325,
+    "longitude": 114.178476
   },
   {
     "id": "aid-313",
@@ -10349,7 +10973,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistsintakcolleg.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistsintakcolleg.edu.hk/admissions",
+    "latitude": 22.41113,
+    "longitude": 114.217948
   },
   {
     "id": "aid-314",
@@ -10382,7 +11008,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhisttaihungcolle.edu.hk/admissions"
+    "applicationLink": "https://www.buddhisttaihungcolle.edu.hk/admissions",
+    "latitude": 22.305781,
+    "longitude": 114.163947
   },
   {
     "id": "aid-315",
@@ -10415,7 +11043,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhisthungseanchau.edu.hk/admissions"
+    "applicationLink": "https://www.buddhisthungseanchau.edu.hk/admissions",
+    "latitude": 22.407385,
+    "longitude": 114.253224
   },
   {
     "id": "aid-316",
@@ -10448,7 +11078,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistmaufungmemor.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistmaufungmemor.edu.hk/admissions",
+    "latitude": 22.474945,
+    "longitude": 114.189091
   },
   {
     "id": "aid-317",
@@ -10481,7 +11113,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hktatheyuenyueninsti.edu.hk/admissions"
+    "applicationLink": "https://www.hktatheyuenyueninsti.edu.hk/admissions",
+    "latitude": 22.436267,
+    "longitude": 113.98027
   },
   {
     "id": "aid-318",
@@ -10514,7 +11148,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hktatheyuenyueninsti.edu.hk/admissions"
+    "applicationLink": "https://www.hktatheyuenyueninsti.edu.hk/admissions",
+    "latitude": 22.380348,
+    "longitude": 114.177337
   },
   {
     "id": "aid-319",
@@ -10547,7 +11183,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hktatheyuenyueninsti.edu.hk/admissions"
+    "applicationLink": "https://www.hktatheyuenyueninsti.edu.hk/admissions",
+    "latitude": 22.388423,
+    "longitude": 114.112253
   },
   {
     "id": "aid-320",
@@ -10580,7 +11218,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.islamickasimtuetmemo.edu.hk/admissions"
+    "applicationLink": "https://www.islamickasimtuetmemo.edu.hk/admissions",
+    "latitude": 22.317688,
+    "longitude": 114.17304
   },
   {
     "id": "aid-321",
@@ -10613,7 +11253,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hktatanghinmemorials.edu.hk/admissions"
+    "applicationLink": "https://www.hktatanghinmemorials.edu.hk/admissions",
+    "latitude": 22.443144,
+    "longitude": 113.986435
   },
   {
     "id": "aid-322",
@@ -10646,7 +11288,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhkeiyanprimaryscho.edu.hk/admissions"
+    "applicationLink": "https://www.skhkeiyanprimaryscho.edu.hk/admissions",
+    "latitude": 22.310655,
+    "longitude": 114.213888
   },
   {
     "id": "aid-323",
@@ -10679,7 +11323,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhtaktinleisiukeung.edu.hk/admissions"
+    "applicationLink": "https://www.skhtaktinleisiukeung.edu.hk/admissions",
+    "latitude": 22.322213,
+    "longitude": 114.215302
   },
   {
     "id": "aid-324",
@@ -10712,7 +11358,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhyautongkeihinprim.edu.hk/admissions"
+    "applicationLink": "https://www.skhyautongkeihinprim.edu.hk/admissions",
+    "latitude": 22.340107,
+    "longitude": 114.194316
   },
   {
     "id": "aid-325",
@@ -10745,7 +11393,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhtseungkwanokeitak.edu.hk/admissions"
+    "applicationLink": "https://www.skhtseungkwanokeitak.edu.hk/admissions",
+    "latitude": 22.375921,
+    "longitude": 114.306055
   },
   {
     "id": "aid-326",
@@ -10778,7 +11428,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.andrewscatholicpr.edu.hk/admissions"
+    "applicationLink": "https://www.st.andrewscatholicpr.edu.hk/admissions",
+    "latitude": 22.329144,
+    "longitude": 114.167834
   },
   {
     "id": "aid-327",
@@ -10811,7 +11463,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ourladyofchinacathol.edu.hk/admissions"
+    "applicationLink": "https://www.ourladyofchinacathol.edu.hk/admissions",
+    "latitude": 22.520425,
+    "longitude": 114.155405
   },
   {
     "id": "aid-328",
@@ -10844,7 +11498,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shakchungshanmemoria.edu.hk/admissions"
+    "applicationLink": "https://www.shakchungshanmemoria.edu.hk/admissions",
+    "latitude": 22.380941,
+    "longitude": 114.178021
   },
   {
     "id": "aid-329",
@@ -10877,7 +11533,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lingtocatholicprimar.edu.hk/admissions"
+    "applicationLink": "https://www.lingtocatholicprimar.edu.hk/admissions",
+    "latitude": 22.329985,
+    "longitude": 114.192863
   },
   {
     "id": "aid-330",
@@ -10910,7 +11568,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.immaculateheartofmar.edu.hk/admissions"
+    "applicationLink": "https://www.immaculateheartofmar.edu.hk/admissions",
+    "latitude": 22.305917,
+    "longitude": 114.172683
   },
   {
     "id": "aid-331",
@@ -10943,7 +11603,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistlimkimtianme.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistlimkimtianme.edu.hk/admissions",
+    "latitude": 22.356076,
+    "longitude": 114.112604
   },
   {
     "id": "aid-332",
@@ -10976,7 +11638,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistchikingprima.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistchikingprima.edu.hk/admissions",
+    "latitude": 22.321593,
+    "longitude": 114.231216
   },
   {
     "id": "aid-333",
@@ -11009,7 +11673,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistchungwahkorn.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistchungwahkorn.edu.hk/admissions",
+    "latitude": 22.281043,
+    "longitude": 114.171838
   },
   {
     "id": "aid-334",
@@ -11042,7 +11708,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistwingyanschoo.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistwingyanschoo.edu.hk/admissions",
+    "latitude": 22.344194,
+    "longitude": 114.138489
   },
   {
     "id": "aid-335",
@@ -11075,7 +11743,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.taoistchingchungprim.edu.hk/admissions"
+    "applicationLink": "https://www.taoistchingchungprim.edu.hk/admissions",
+    "latitude": 22.370142,
+    "longitude": 114.120852
   },
   {
     "id": "aid-336",
@@ -11108,7 +11778,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hktawuntsuenschool.edu.hk/admissions"
+    "applicationLink": "https://www.hktawuntsuenschool.edu.hk/admissions",
+    "latitude": 22.409559,
+    "longitude": 113.952023
   },
   {
     "id": "aid-337",
@@ -11140,7 +11812,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhst.matthewschurch.edu.hk/admissions"
+    "applicationLink": "https://www.skhst.matthewschurch.edu.hk/admissions",
+    "latitude": 22.275259,
+    "longitude": 114.186389
   },
   {
     "id": "aid-338",
@@ -11172,7 +11846,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhst.jameschurchkin.edu.hk/admissions"
+    "applicationLink": "https://www.skhst.jameschurchkin.edu.hk/admissions",
+    "latitude": 22.273842,
+    "longitude": 114.240873
   },
   {
     "id": "aid-339",
@@ -11204,7 +11880,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.skhst.peterschurchki.edu.hk/admissions"
+    "applicationLink": "https://www.skhst.peterschurchki.edu.hk/admissions",
+    "latitude": 22.334351,
+    "longitude": 114.151213
   },
   {
     "id": "aid-340",
@@ -11236,7 +11914,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ourladyskindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.ourladyskindergarten.edu.hk/admissions",
+    "latitude": 22.351358,
+    "longitude": 114.200157
   },
   {
     "id": "aid-341",
@@ -11268,7 +11948,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.teresaskindergart.edu.hk/admissions"
+    "applicationLink": "https://www.st.teresaskindergart.edu.hk/admissions",
+    "latitude": 22.33102,
+    "longitude": 114.162398
   },
   {
     "id": "aid-342",
@@ -11300,7 +11982,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistkamlaikinder.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistkamlaikinder.edu.hk/admissions",
+    "latitude": 22.447353,
+    "longitude": 114.007153
   },
   {
     "id": "aid-343",
@@ -11332,7 +12016,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.buddhistchikwongkind.edu.hk/admissions"
+    "applicationLink": "https://www.buddhistchikwongkind.edu.hk/admissions",
+    "latitude": 22.304847,
+    "longitude": 114.176568
   },
   {
     "id": "aid-344",
@@ -11364,7 +12050,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.taoistchingchungwuki.edu.hk/admissions"
+    "applicationLink": "https://www.taoistchingchungwuki.edu.hk/admissions",
+    "latitude": 22.361385,
+    "longitude": 114.1234
   },
   {
     "id": "aid-345",
@@ -11396,7 +12084,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.salvationarmytinkapi.edu.hk/admissions"
+    "applicationLink": "https://www.salvationarmytinkapi.edu.hk/admissions",
+    "latitude": 22.347497,
+    "longitude": 114.133535
   },
   {
     "id": "aid-346",
@@ -11428,7 +12118,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.methodistepworthvill.edu.hk/admissions"
+    "applicationLink": "https://www.methodistepworthvill.edu.hk/admissions",
+    "latitude": 22.27491,
+    "longitude": 114.229431
   },
   {
     "id": "pri-347",
@@ -11460,7 +12152,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.paulsnursery.edu.hk/admissions"
+    "applicationLink": "https://www.st.paulsnursery.edu.hk/admissions",
+    "latitude": 22.286339,
+    "longitude": 114.215347
   },
   {
     "id": "pri-348",
@@ -11492,7 +12186,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions"
+    "applicationLink": "https://www.sacredheartcanossian.edu.hk/admissions",
+    "latitude": 22.287569,
+    "longitude": 114.230958
   },
   {
     "id": "pri-349",
@@ -11524,7 +12220,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions"
+    "applicationLink": "https://www.maryknollconventscho.edu.hk/admissions",
+    "latitude": 22.320831,
+    "longitude": 114.227929
   },
   {
     "id": "pri-350",
@@ -11556,7 +12254,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.goodhopekindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.goodhopekindergarten.edu.hk/admissions",
+    "latitude": 22.318018,
+    "longitude": 114.179036
   },
   {
     "id": "pri-351",
@@ -11588,7 +12288,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.heepyunnkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.heepyunnkindergarten.edu.hk/admissions",
+    "latitude": 22.32342,
+    "longitude": 114.237325
   },
   {
     "id": "pri-352",
@@ -11620,7 +12322,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.diocesangirlsjuniors.edu.hk/admissions"
+    "applicationLink": "https://www.diocesangirlsjuniors.edu.hk/admissions",
+    "latitude": 22.327927,
+    "longitude": 114.194666
   },
   {
     "id": "pri-353",
@@ -11652,7 +12356,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.stephensgirlscoll.edu.hk/admissions"
+    "applicationLink": "https://www.st.stephensgirlscoll.edu.hk/admissions",
+    "latitude": 22.283738,
+    "longitude": 114.187741
   },
   {
     "id": "pri-354",
@@ -11684,7 +12390,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.truelightkindergarte.edu.hk/admissions"
+    "applicationLink": "https://www.truelightkindergarte.edu.hk/admissions",
+    "latitude": 22.340137,
+    "longitude": 114.193152
   },
   {
     "id": "pri-355",
@@ -11716,7 +12424,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.puichingkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.puichingkindergarten.edu.hk/admissions",
+    "latitude": 22.339673,
+    "longitude": 114.169661
   },
   {
     "id": "pri-356",
@@ -11748,7 +12458,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.munsangcollegekinder.edu.hk/admissions"
+    "applicationLink": "https://www.munsangcollegekinder.edu.hk/admissions",
+    "latitude": 22.318622,
+    "longitude": 114.224562
   },
   {
     "id": "int-357",
@@ -11780,7 +12492,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.shrewsburyinternatio.edu.hk/admissions"
+    "applicationLink": "https://www.shrewsburyinternatio.edu.hk/admissions",
+    "latitude": 22.407806,
+    "longitude": 114.260668
   },
   {
     "id": "int-358",
@@ -11812,7 +12526,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wycombeabbeyinternat.edu.hk/admissions"
+    "applicationLink": "https://www.wycombeabbeyinternat.edu.hk/admissions",
+    "latitude": 22.344295,
+    "longitude": 114.112927
   },
   {
     "id": "int-359",
@@ -11844,7 +12560,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.malverncollegeintern.edu.hk/admissions"
+    "applicationLink": "https://www.malverncollegeintern.edu.hk/admissions",
+    "latitude": 22.373327,
+    "longitude": 114.311589
   },
   {
     "id": "int-360",
@@ -11876,7 +12594,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.nordangliainternatio.edu.hk/admissions"
+    "applicationLink": "https://www.nordangliainternatio.edu.hk/admissions",
+    "latitude": 22.32565,
+    "longitude": 114.215341
   },
   {
     "id": "int-361",
@@ -11908,7 +12628,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.harrowinternationalk.edu.hk/admissions"
+    "applicationLink": "https://www.harrowinternationalk.edu.hk/admissions",
+    "latitude": 22.430113,
+    "longitude": 113.985306
   },
   {
     "id": "int-362",
@@ -11940,7 +12662,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.isfkindergarten.edu.hk/admissions"
+    "applicationLink": "https://www.isfkindergarten.edu.hk/admissions",
+    "latitude": 22.279948,
+    "longitude": 114.220518
   },
   {
     "id": "int-363",
@@ -11972,7 +12696,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.stamfordamericaninte.edu.hk/admissions"
+    "applicationLink": "https://www.stamfordamericaninte.edu.hk/admissions",
+    "latitude": 22.308062,
+    "longitude": 114.161484
   },
   {
     "id": "int-364",
@@ -12004,7 +12730,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions"
+    "applicationLink": "https://www.canadianinternationa.edu.hk/admissions",
+    "latitude": 22.336482,
+    "longitude": 114.198688
   },
   {
     "id": "int-365",
@@ -12036,7 +12764,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.frenchinternationalk.edu.hk/admissions"
+    "applicationLink": "https://www.frenchinternationalk.edu.hk/admissions",
+    "latitude": 22.289139,
+    "longitude": 114.155532
   },
   {
     "id": "int-366",
@@ -12068,7 +12798,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions"
+    "applicationLink": "https://www.germanswissinternati.edu.hk/admissions",
+    "latitude": 22.320306,
+    "longitude": 114.154207
   },
   {
     "id": "dss-367",
@@ -12101,7 +12833,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plklukhingtooprimary.edu.hk/admissions"
+    "applicationLink": "https://www.plklukhingtooprimary.edu.hk/admissions",
+    "latitude": 22.372656,
+    "longitude": 114.11728
   },
   {
     "id": "dss-368",
@@ -12134,7 +12868,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.plklammanchanenglish.edu.hk/admissions"
+    "applicationLink": "https://www.plklammanchanenglish.edu.hk/admissions",
+    "latitude": 22.336556,
+    "longitude": 114.156461
   },
   {
     "id": "dss-369",
@@ -12167,7 +12903,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.wfjosephleeprimarysc.edu.hk/admissions"
+    "applicationLink": "https://www.wfjosephleeprimarysc.edu.hk/admissions",
+    "latitude": 22.452978,
+    "longitude": 114.035252
   },
   {
     "id": "dss-370",
@@ -12199,7 +12937,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.honwahcollegeprimary.edu.hk/admissions"
+    "applicationLink": "https://www.honwahcollegeprimary.edu.hk/admissions",
+    "latitude": 22.282262,
+    "longitude": 114.140686
   },
   {
     "id": "dss-371",
@@ -12231,7 +12971,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.hkbuaffiliatedschool.edu.hk/admissions"
+    "applicationLink": "https://www.hkbuaffiliatedschool.edu.hk/admissions",
+    "latitude": 22.289973,
+    "longitude": 114.04213
   },
   {
     "id": "dss-372",
@@ -12263,7 +13005,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.elchklutheranacademy.edu.hk/admissions"
+    "applicationLink": "https://www.elchklutheranacademy.edu.hk/admissions",
+    "latitude": 22.410129,
+    "longitude": 114.316838
   },
   {
     "id": "dss-373",
@@ -12295,7 +13039,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.hilarysschoolprim.edu.hk/admissions"
+    "applicationLink": "https://www.st.hilarysschoolprim.edu.hk/admissions",
+    "latitude": 22.37551,
+    "longitude": 114.260809
   },
   {
     "id": "dss-374",
@@ -12327,7 +13073,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.creativesecondarysch.edu.hk/admissions"
+    "applicationLink": "https://www.creativesecondarysch.edu.hk/admissions",
+    "latitude": 22.343906,
+    "longitude": 114.19001
   },
   {
     "id": "dss-375",
@@ -12359,7 +13107,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.deliamankiuenglishpr.edu.hk/admissions"
+    "applicationLink": "https://www.deliamankiuenglishpr.edu.hk/admissions",
+    "latitude": 22.330501,
+    "longitude": 114.162635
   },
   {
     "id": "dss-376",
@@ -12391,7 +13141,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.mankwanpakkaucollege.edu.hk/admissions"
+    "applicationLink": "https://www.mankwanpakkaucollege.edu.hk/admissions",
+    "latitude": 22.459082,
+    "longitude": 114.019034
   },
   {
     "id": "pri-377",
@@ -12424,7 +13176,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.st.josephsanglo-chin.edu.hk/admissions"
+    "applicationLink": "https://www.st.josephsanglo-chin.edu.hk/admissions",
+    "latitude": 22.32001,
+    "longitude": 114.22763
   },
   {
     "id": "pri-378",
@@ -12458,7 +13212,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ccckungleecollege.edu.hk/admissions"
+    "applicationLink": "https://www.ccckungleecollege.edu.hk/admissions",
+    "latitude": 22.230526,
+    "longitude": 114.161559
   },
   {
     "id": "pri-379",
@@ -12492,7 +13248,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.caritasmaonshansecon.edu.hk/admissions"
+    "applicationLink": "https://www.caritasmaonshansecon.edu.hk/admissions",
+    "latitude": 22.457991,
+    "longitude": 114.176201
   },
   {
     "id": "pri-380",
@@ -12526,7 +13284,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.caritastuenmunmarden.edu.hk/admissions"
+    "applicationLink": "https://www.caritastuenmunmarden.edu.hk/admissions",
+    "latitude": 22.471527,
+    "longitude": 114.168763
   },
   {
     "id": "pri-381",
@@ -12559,7 +13319,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.caritascharlesvathco.edu.hk/admissions"
+    "applicationLink": "https://www.caritascharlesvathco.edu.hk/admissions",
+    "latitude": 22.334035,
+    "longitude": 114.164347
   },
   {
     "id": "pri-382",
@@ -12593,7 +13355,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.chinaholinesscollege.edu.hk/admissions"
+    "applicationLink": "https://www.chinaholinesscollege.edu.hk/admissions",
+    "latitude": 22.34025,
+    "longitude": 114.1982
   },
   {
     "id": "pri-383",
@@ -12627,7 +13391,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.stewardspooikeicolle.edu.hk/admissions"
+    "applicationLink": "https://www.stewardspooikeicolle.edu.hk/admissions",
+    "latitude": 22.408387,
+    "longitude": 114.301996
   },
   {
     "id": "pri-384",
@@ -12661,7 +13427,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.stewardspooitunsecon.edu.hk/admissions"
+    "applicationLink": "https://www.stewardspooitunsecon.edu.hk/admissions",
+    "latitude": 22.3218,
+    "longitude": 114.213793
   },
   {
     "id": "pri-385",
@@ -12694,7 +13462,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.qualiedcollege.edu.hk/admissions"
+    "applicationLink": "https://www.qualiedcollege.edu.hk/admissions",
+    "latitude": 22.416842,
+    "longitude": 114.184246
   },
   {
     "id": "pri-386",
@@ -12728,7 +13498,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.ymcaofhongkongchrist.edu.hk/admissions"
+    "applicationLink": "https://www.ymcaofhongkongchrist.edu.hk/admissions",
+    "latitude": 22.442549,
+    "longitude": 114.178359
   },
   {
     "id": "gov-387",
@@ -12761,7 +13533,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.stanleygovernmentsec.edu.hk/admissions"
+    "applicationLink": "https://www.stanleygovernmentsec.edu.hk/admissions",
+    "latitude": 22.259501,
+    "longitude": 114.213855
   },
   {
     "id": "gov-388",
@@ -12794,7 +13568,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.aberdeentechnicalsch.edu.hk/admissions"
+    "applicationLink": "https://www.aberdeentechnicalsch.edu.hk/admissions",
+    "latitude": 22.286209,
+    "longitude": 114.156727
   },
   {
     "id": "gov-389",
@@ -12827,7 +13603,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tangkingposchool.edu.hk/admissions"
+    "applicationLink": "https://www.tangkingposchool.edu.hk/admissions",
+    "latitude": 22.335417,
+    "longitude": 114.192006
   },
   {
     "id": "gov-390",
@@ -12860,7 +13638,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.yuchunkeungmemorialc.edu.hk/admissions"
+    "applicationLink": "https://www.yuchunkeungmemorialc.edu.hk/admissions",
+    "latitude": 22.314593,
+    "longitude": 114.230234
   },
   {
     "id": "gov-391",
@@ -12893,7 +13673,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.lungcheunggovernment.edu.hk/admissions"
+    "applicationLink": "https://www.lungcheunggovernment.edu.hk/admissions",
+    "latitude": 22.346738,
+    "longitude": 114.190924
   },
   {
     "id": "gov-392",
@@ -12926,7 +13708,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.tseungkwanogovernmen.edu.hk/admissions"
+    "applicationLink": "https://www.tseungkwanogovernmen.edu.hk/admissions",
+    "latitude": 22.463665,
+    "longitude": 114.178646
   },
   {
     "id": "gov-393",
@@ -12959,7 +13743,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.maonshangovernmentse.edu.hk/admissions"
+    "applicationLink": "https://www.maonshangovernmentse.edu.hk/admissions",
+    "latitude": 22.364115,
+    "longitude": 114.120408
   },
   {
     "id": "gov-394",
@@ -12992,7 +13778,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.cheungshawancatholic.edu.hk/admissions"
+    "applicationLink": "https://www.cheungshawancatholic.edu.hk/admissions",
+    "latitude": 22.340499,
+    "longitude": 114.187723
   },
   {
     "id": "gov-395",
@@ -13025,7 +13813,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.twghswongfutnamcolle.edu.hk/admissions"
+    "applicationLink": "https://www.twghswongfutnamcolle.edu.hk/admissions",
+    "latitude": 22.322136,
+    "longitude": 114.228429
   },
   {
     "id": "gov-396",
@@ -13058,7 +13848,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.twghslokontingmemori.edu.hk/admissions"
+    "applicationLink": "https://www.twghslokontingmemori.edu.hk/admissions",
+    "latitude": 22.405648,
+    "longitude": 114.203851
   },
   {
     "id": "pri-397",
@@ -13091,7 +13883,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.瑪利諾明德學校.edu.hk/admissions"
+    "applicationLink": "https://www.瑪利諾明德學校.edu.hk/admissions",
+    "latitude": 22.259703,
+    "longitude": 114.212142
   },
   {
     "id": "aid-398",
@@ -13124,7 +13918,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會聖德幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會聖德幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.282064,
+    "longitude": 114.147161
   },
   {
     "id": "pri-399",
@@ -13157,7 +13953,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.民生慈航小學.edu.hk/admissions"
+    "applicationLink": "https://www.民生慈航小學.edu.hk/admissions",
+    "latitude": 22.281205,
+    "longitude": 114.171971
   },
   {
     "id": "aid-400",
@@ -13190,7 +13988,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會望德學校.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會望德學校.edu.hk/admissions",
+    "latitude": 22.27899,
+    "longitude": 114.179524
   },
   {
     "id": "pri-401",
@@ -13223,7 +14023,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖和平小學.edu.hk/admissions"
+    "applicationLink": "https://www.聖和平小學.edu.hk/admissions",
+    "latitude": 22.326313,
+    "longitude": 114.217365
   },
   {
     "id": "pri-402",
@@ -13256,7 +14058,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.瑪利諾培英中學.edu.hk/admissions"
+    "applicationLink": "https://www.瑪利諾培英中學.edu.hk/admissions",
+    "latitude": 22.280971,
+    "longitude": 114.219037
   },
   {
     "id": "gov-403",
@@ -13289,7 +14093,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立育才書院.edu.hk/admissions"
+    "applicationLink": "https://www.官立育才書院.edu.hk/admissions",
+    "latitude": 22.28063,
+    "longitude": 114.186378
   },
   {
     "id": "aid-404",
@@ -13322,7 +14128,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理育英小學.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理育英小學.edu.hk/admissions",
+    "latitude": 22.27853,
+    "longitude": 114.245766
   },
   {
     "id": "aid-405",
@@ -13355,7 +14163,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會和平幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會和平幼兒園.edu.hk/admissions",
+    "latitude": 22.463089,
+    "longitude": 114.194061
   },
   {
     "id": "gov-406",
@@ -13388,7 +14198,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府和平幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.政府和平幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.490359,
+    "longitude": 114.171779
   },
   {
     "id": "pri-407",
@@ -13422,7 +14234,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.培善導中學.edu.hk/admissions"
+    "applicationLink": "https://www.培善導中學.edu.hk/admissions",
+    "latitude": 22.283345,
+    "longitude": 114.182507
   },
   {
     "id": "gov-408",
@@ -13455,7 +14269,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府育才幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.政府育才幼稚園.edu.hk/admissions",
+    "latitude": 22.354901,
+    "longitude": 114.203202
   },
   {
     "id": "aid-409",
@@ -13488,7 +14304,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理望德中學.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理望德中學.edu.hk/admissions",
+    "latitude": 22.249671,
+    "longitude": 114.165689
   },
   {
     "id": "aid-410",
@@ -13521,7 +14339,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.浸信會望德小學.edu.hk/admissions"
+    "applicationLink": "https://www.浸信會望德小學.edu.hk/admissions",
+    "latitude": 22.286053,
+    "longitude": 114.243099
   },
   {
     "id": "aid-411",
@@ -13554,7 +14374,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.佛教培德幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.佛教培德幼兒園.edu.hk/admissions",
+    "latitude": 22.278975,
+    "longitude": 114.246121
   },
   {
     "id": "pri-412",
@@ -13587,7 +14409,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.嘉諾撒博愛幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.嘉諾撒博愛幼稚園.edu.hk/admissions",
+    "latitude": 22.338154,
+    "longitude": 114.198265
   },
   {
     "id": "aid-413",
@@ -13620,7 +14444,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.中華基督教會望德學校.edu.hk/admissions"
+    "applicationLink": "https://www.中華基督教會望德學校.edu.hk/admissions",
+    "latitude": 22.288346,
+    "longitude": 114.223916
   },
   {
     "id": "aid-414",
@@ -13653,7 +14479,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教培英小學.edu.hk/admissions"
+    "applicationLink": "https://www.天主教培英小學.edu.hk/admissions",
+    "latitude": 22.39774,
+    "longitude": 114.20339
   },
   {
     "id": "aid-415",
@@ -13686,7 +14514,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會培德小學.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會培德小學.edu.hk/admissions",
+    "latitude": 22.270068,
+    "longitude": 114.211879
   },
   {
     "id": "pri-416",
@@ -13719,7 +14549,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.瑪利諾樹人小學.edu.hk/admissions"
+    "applicationLink": "https://www.瑪利諾樹人小學.edu.hk/admissions",
+    "latitude": 22.451481,
+    "longitude": 114.157303
   },
   {
     "id": "gov-417",
@@ -13752,7 +14584,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立育英幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.官立育英幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.351322,
+    "longitude": 114.146552
   },
   {
     "id": "aid-418",
@@ -13785,7 +14619,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教望德小學.edu.hk/admissions"
+    "applicationLink": "https://www.天主教望德小學.edu.hk/admissions",
+    "latitude": 22.308543,
+    "longitude": 114.171438
   },
   {
     "id": "aid-419",
@@ -13818,7 +14654,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教培英小學.edu.hk/admissions"
+    "applicationLink": "https://www.天主教培英小學.edu.hk/admissions",
+    "latitude": 22.328275,
+    "longitude": 114.181979
   },
   {
     "id": "aid-420",
@@ -13851,7 +14689,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會培德學校.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會培德學校.edu.hk/admissions",
+    "latitude": 22.244115,
+    "longitude": 114.198262
   },
   {
     "id": "aid-421",
@@ -13884,7 +14724,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會慈航幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會慈航幼稚園.edu.hk/admissions",
+    "latitude": 22.280518,
+    "longitude": 114.187025
   },
   {
     "id": "gov-422",
@@ -13917,7 +14759,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府慈航幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.政府慈航幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.280615,
+    "longitude": 114.180468
   },
   {
     "id": "pri-423",
@@ -13950,7 +14794,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.培樹人幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.培樹人幼兒園.edu.hk/admissions",
+    "latitude": 22.324463,
+    "longitude": 114.225067
   },
   {
     "id": "pri-424",
@@ -13984,7 +14830,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.民生聖德學校.edu.hk/admissions"
+    "applicationLink": "https://www.民生聖德學校.edu.hk/admissions",
+    "latitude": 22.328759,
+    "longitude": 114.222148
   },
   {
     "id": "gov-425",
@@ -14017,7 +14865,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立明德小學.edu.hk/admissions"
+    "applicationLink": "https://www.官立明德小學.edu.hk/admissions",
+    "latitude": 22.237429,
+    "longitude": 114.171425
   },
   {
     "id": "gov-426",
@@ -14050,7 +14900,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府崇德幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.政府崇德幼兒園.edu.hk/admissions",
+    "latitude": 22.237739,
+    "longitude": 114.156309
   },
   {
     "id": "aid-427",
@@ -14083,7 +14935,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理育英學校.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理育英學校.edu.hk/admissions",
+    "latitude": 22.282339,
+    "longitude": 114.174533
   },
   {
     "id": "pri-428",
@@ -14116,7 +14970,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.嘉諾撒樹人幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.嘉諾撒樹人幼兒園.edu.hk/admissions",
+    "latitude": 22.315886,
+    "longitude": 114.178878
   },
   {
     "id": "aid-429",
@@ -14149,7 +15005,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.道教普濟幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.道教普濟幼稚園.edu.hk/admissions",
+    "latitude": 22.439014,
+    "longitude": 114.046838
   },
   {
     "id": "gov-430",
@@ -14182,7 +15040,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府育英小學.edu.hk/admissions"
+    "applicationLink": "https://www.政府育英小學.edu.hk/admissions",
+    "latitude": 22.4556,
+    "longitude": 114.039211
   },
   {
     "id": "aid-431",
@@ -14215,7 +15075,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教育才幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.天主教育才幼稚園.edu.hk/admissions",
+    "latitude": 22.372195,
+    "longitude": 114.178695
   },
   {
     "id": "aid-432",
@@ -14248,7 +15110,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教培英小學.edu.hk/admissions"
+    "applicationLink": "https://www.天主教培英小學.edu.hk/admissions",
+    "latitude": 22.405301,
+    "longitude": 114.291251
   },
   {
     "id": "gov-433",
@@ -14281,7 +15145,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府仁愛幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.政府仁愛幼稚園.edu.hk/admissions",
+    "latitude": 22.336688,
+    "longitude": 114.19759
   },
   {
     "id": "gov-434",
@@ -14314,7 +15180,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府榮光小學.edu.hk/admissions"
+    "applicationLink": "https://www.政府榮光小學.edu.hk/admissions",
+    "latitude": 22.27521,
+    "longitude": 114.240155
   },
   {
     "id": "aid-435",
@@ -14347,7 +15215,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會仁愛書院.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會仁愛書院.edu.hk/admissions",
+    "latitude": 22.302187,
+    "longitude": 114.17946
   },
   {
     "id": "aid-436",
@@ -14380,7 +15250,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.浸信會聖德書院.edu.hk/admissions"
+    "applicationLink": "https://www.浸信會聖德書院.edu.hk/admissions",
+    "latitude": 22.315781,
+    "longitude": 114.231007
   },
   {
     "id": "aid-437",
@@ -14413,7 +15285,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.浸信會善導書院.edu.hk/admissions"
+    "applicationLink": "https://www.浸信會善導書院.edu.hk/admissions",
+    "latitude": 22.334827,
+    "longitude": 114.159367
   },
   {
     "id": "aid-438",
@@ -14446,7 +15320,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理培德學校.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理培德學校.edu.hk/admissions",
+    "latitude": 22.281433,
+    "longitude": 114.147977
   },
   {
     "id": "pri-439",
@@ -14479,7 +15355,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.真光啟明幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.真光啟明幼稚園.edu.hk/admissions",
+    "latitude": 22.3317,
+    "longitude": 114.169465
   },
   {
     "id": "gov-440",
@@ -14512,7 +15390,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府慈航書院.edu.hk/admissions"
+    "applicationLink": "https://www.政府慈航書院.edu.hk/admissions",
+    "latitude": 22.329877,
+    "longitude": 114.228648
   },
   {
     "id": "pri-441",
@@ -14545,7 +15425,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖榮光幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.聖榮光幼稚園.edu.hk/admissions",
+    "latitude": 22.359432,
+    "longitude": 114.119783
   },
   {
     "id": "aid-442",
@@ -14578,7 +15460,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會望德中學.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會望德中學.edu.hk/admissions",
+    "latitude": 22.317651,
+    "longitude": 114.17246
   },
   {
     "id": "aid-443",
@@ -14611,7 +15495,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會仁愛學校.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會仁愛學校.edu.hk/admissions",
+    "latitude": 22.319888,
+    "longitude": 114.214617
   },
   {
     "id": "gov-444",
@@ -14644,7 +15530,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立普濟幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.官立普濟幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.460139,
+    "longitude": 114.036458
   },
   {
     "id": "aid-445",
@@ -14677,7 +15565,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.佛教善導學校.edu.hk/admissions"
+    "applicationLink": "https://www.佛教善導學校.edu.hk/admissions",
+    "latitude": 22.284814,
+    "longitude": 114.18692
   },
   {
     "id": "pri-446",
@@ -14710,7 +15600,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.培望德幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.培望德幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.305543,
+    "longitude": 114.173571
   },
   {
     "id": "aid-447",
@@ -14743,7 +15635,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會育才幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會育才幼兒園.edu.hk/admissions",
+    "latitude": 22.250516,
+    "longitude": 114.197699
   },
   {
     "id": "aid-448",
@@ -14776,7 +15670,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.中華基督教會光明幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.中華基督教會光明幼兒園.edu.hk/admissions",
+    "latitude": 22.314818,
+    "longitude": 114.173653
   },
   {
     "id": "aid-449",
@@ -14809,7 +15705,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.佛教博愛幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.佛教博愛幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.39143,
+    "longitude": 114.207516
   },
   {
     "id": "aid-450",
@@ -14842,7 +15740,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.道教明德學校.edu.hk/admissions"
+    "applicationLink": "https://www.道教明德學校.edu.hk/admissions",
+    "latitude": 22.342414,
+    "longitude": 114.190542
   },
   {
     "id": "gov-451",
@@ -14875,7 +15775,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立啟明幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.官立啟明幼稚園.edu.hk/admissions",
+    "latitude": 22.336087,
+    "longitude": 114.163708
   },
   {
     "id": "gov-452",
@@ -14908,7 +15810,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立恩典小學.edu.hk/admissions"
+    "applicationLink": "https://www.官立恩典小學.edu.hk/admissions",
+    "latitude": 22.416811,
+    "longitude": 113.979805
   },
   {
     "id": "aid-453",
@@ -14941,7 +15845,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教仁愛幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.天主教仁愛幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.273572,
+    "longitude": 114.237494
   },
   {
     "id": "aid-454",
@@ -14974,7 +15880,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會培英小學.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會培英小學.edu.hk/admissions",
+    "latitude": 22.281192,
+    "longitude": 113.918132
   },
   {
     "id": "aid-455",
@@ -15007,7 +15915,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.佛教光明書院.edu.hk/admissions"
+    "applicationLink": "https://www.佛教光明書院.edu.hk/admissions",
+    "latitude": 22.440865,
+    "longitude": 114.197052
   },
   {
     "id": "aid-456",
@@ -15040,7 +15950,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.浸信會恩典幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.浸信會恩典幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.289679,
+    "longitude": 114.153773
   },
   {
     "id": "pri-457",
@@ -15073,7 +15985,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.真光樹人幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.真光樹人幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.343648,
+    "longitude": 114.192511
   },
   {
     "id": "aid-458",
@@ -15106,7 +16020,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.佛教培德學校.edu.hk/admissions"
+    "applicationLink": "https://www.佛教培德學校.edu.hk/admissions",
+    "latitude": 22.355814,
+    "longitude": 114.127809
   },
   {
     "id": "gov-459",
@@ -15139,7 +16055,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府樹人幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.政府樹人幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.308314,
+    "longitude": 114.161466
   },
   {
     "id": "aid-460",
@@ -15172,7 +16090,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會聖德中學.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會聖德中學.edu.hk/admissions",
+    "latitude": 22.34414,
+    "longitude": 114.183484
   },
   {
     "id": "gov-461",
@@ -15205,7 +16125,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府和平幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.政府和平幼稚園.edu.hk/admissions",
+    "latitude": 22.332767,
+    "longitude": 114.188935
   },
   {
     "id": "pri-462",
@@ -15238,7 +16160,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖育英小學.edu.hk/admissions"
+    "applicationLink": "https://www.聖育英小學.edu.hk/admissions",
+    "latitude": 22.367938,
+    "longitude": 114.100723
   },
   {
     "id": "aid-463",
@@ -15271,7 +16195,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理育才學校.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理育才學校.edu.hk/admissions",
+    "latitude": 22.341603,
+    "longitude": 114.193543
   },
   {
     "id": "gov-464",
@@ -15304,7 +16230,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立仁愛幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.官立仁愛幼稚園.edu.hk/admissions",
+    "latitude": 22.36426,
+    "longitude": 114.129405
   },
   {
     "id": "aid-465",
@@ -15337,7 +16265,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理善導學校.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理善導學校.edu.hk/admissions",
+    "latitude": 22.351411,
+    "longitude": 114.11071
   },
   {
     "id": "aid-466",
@@ -15370,7 +16300,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教培英幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.天主教培英幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.284648,
+    "longitude": 114.157048
   },
   {
     "id": "pri-467",
@@ -15403,7 +16335,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.瑪利諾培德幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.瑪利諾培德幼稚園.edu.hk/admissions",
+    "latitude": 22.344386,
+    "longitude": 114.208869
   },
   {
     "id": "aid-468",
@@ -15436,7 +16370,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.道教榮光學校.edu.hk/admissions"
+    "applicationLink": "https://www.道教榮光學校.edu.hk/admissions",
+    "latitude": 22.280198,
+    "longitude": 114.159346
   },
   {
     "id": "gov-469",
@@ -15469,7 +16405,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立崇德小學.edu.hk/admissions"
+    "applicationLink": "https://www.官立崇德小學.edu.hk/admissions",
+    "latitude": 22.320649,
+    "longitude": 114.233962
   },
   {
     "id": "pri-470",
@@ -15502,7 +16440,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖恩典學校.edu.hk/admissions"
+    "applicationLink": "https://www.聖恩典學校.edu.hk/admissions",
+    "latitude": 22.458388,
+    "longitude": 114.000484
   },
   {
     "id": "gov-471",
@@ -15535,7 +16475,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立聖德中學.edu.hk/admissions"
+    "applicationLink": "https://www.官立聖德中學.edu.hk/admissions",
+    "latitude": 22.286135,
+    "longitude": 114.155455
   },
   {
     "id": "pri-472",
@@ -15568,7 +16510,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.瑪利諾光明小學.edu.hk/admissions"
+    "applicationLink": "https://www.瑪利諾光明小學.edu.hk/admissions",
+    "latitude": 22.241474,
+    "longitude": 114.188139
   },
   {
     "id": "pri-473",
@@ -15602,7 +16546,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.嘉諾撒啟明學校.edu.hk/admissions"
+    "applicationLink": "https://www.嘉諾撒啟明學校.edu.hk/admissions",
+    "latitude": 22.279268,
+    "longitude": 114.239039
   },
   {
     "id": "aid-474",
@@ -15635,7 +16581,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.中華基督教會普濟小學.edu.hk/admissions"
+    "applicationLink": "https://www.中華基督教會普濟小學.edu.hk/admissions",
+    "latitude": 22.316489,
+    "longitude": 114.164799
   },
   {
     "id": "aid-475",
@@ -15668,7 +16616,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.道教育才小學.edu.hk/admissions"
+    "applicationLink": "https://www.道教育才小學.edu.hk/admissions",
+    "latitude": 22.363256,
+    "longitude": 114.114591
   },
   {
     "id": "gov-476",
@@ -15701,7 +16651,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立培德學校.edu.hk/admissions"
+    "applicationLink": "https://www.官立培德學校.edu.hk/admissions",
+    "latitude": 22.440548,
+    "longitude": 114.037374
   },
   {
     "id": "aid-477",
@@ -15734,7 +16686,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.中華基督教會崇德幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.中華基督教會崇德幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.354036,
+    "longitude": 114.193182
   },
   {
     "id": "pri-478",
@@ -15767,7 +16721,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖明德幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.聖明德幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.283092,
+    "longitude": 114.177365
   },
   {
     "id": "pri-479",
@@ -15800,7 +16756,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.嘉諾撒培德小學.edu.hk/admissions"
+    "applicationLink": "https://www.嘉諾撒培德小學.edu.hk/admissions",
+    "latitude": 22.322257,
+    "longitude": 114.218897
   },
   {
     "id": "aid-480",
@@ -15833,7 +16791,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理慈航幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理慈航幼稚園.edu.hk/admissions",
+    "latitude": 22.317754,
+    "longitude": 114.161308
   },
   {
     "id": "gov-481",
@@ -15866,7 +16826,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立崇德中學.edu.hk/admissions"
+    "applicationLink": "https://www.官立崇德中學.edu.hk/admissions",
+    "latitude": 22.353338,
+    "longitude": 114.202992
   },
   {
     "id": "gov-482",
@@ -15899,7 +16861,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.政府光明中學.edu.hk/admissions"
+    "applicationLink": "https://www.政府光明中學.edu.hk/admissions",
+    "latitude": 22.433055,
+    "longitude": 114.034309
   },
   {
     "id": "aid-483",
@@ -15932,7 +16896,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會博愛學校.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會博愛學校.edu.hk/admissions",
+    "latitude": 22.315535,
+    "longitude": 114.164967
   },
   {
     "id": "aid-484",
@@ -15965,7 +16931,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.道教培德中學.edu.hk/admissions"
+    "applicationLink": "https://www.道教培德中學.edu.hk/admissions",
+    "latitude": 22.303835,
+    "longitude": 114.17618
   },
   {
     "id": "gov-485",
@@ -15998,7 +16966,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立崇德學校.edu.hk/admissions"
+    "applicationLink": "https://www.官立崇德學校.edu.hk/admissions",
+    "latitude": 22.364194,
+    "longitude": 114.101521
   },
   {
     "id": "pri-486",
@@ -16032,7 +17002,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.瑪利諾育才書院.edu.hk/admissions"
+    "applicationLink": "https://www.瑪利諾育才書院.edu.hk/admissions",
+    "latitude": 22.320811,
+    "longitude": 114.22238
   },
   {
     "id": "aid-487",
@@ -16065,7 +17037,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.浸信會善導小學.edu.hk/admissions"
+    "applicationLink": "https://www.浸信會善導小學.edu.hk/admissions",
+    "latitude": 22.482351,
+    "longitude": 114.154701
   },
   {
     "id": "aid-488",
@@ -16098,7 +17072,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會信義小學.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會信義小學.edu.hk/admissions",
+    "latitude": 22.341192,
+    "longitude": 114.183134
   },
   {
     "id": "aid-489",
@@ -16131,7 +17107,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.浸信會培英幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.浸信會培英幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.340946,
+    "longitude": 114.12333
   },
   {
     "id": "aid-490",
@@ -16164,7 +17142,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教善導幼稚園暨幼兒中心.edu.hk/admissions"
+    "applicationLink": "https://www.天主教善導幼稚園暨幼兒中心.edu.hk/admissions",
+    "latitude": 22.280188,
+    "longitude": 114.180122
   },
   {
     "id": "gov-491",
@@ -16197,7 +17177,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.官立慈航中學.edu.hk/admissions"
+    "applicationLink": "https://www.官立慈航中學.edu.hk/admissions",
+    "latitude": 22.363274,
+    "longitude": 114.132035
   },
   {
     "id": "aid-492",
@@ -16230,7 +17212,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.天主教榮光小學.edu.hk/admissions"
+    "applicationLink": "https://www.天主教榮光小學.edu.hk/admissions",
+    "latitude": 22.512198,
+    "longitude": 114.155702
   },
   {
     "id": "aid-493",
@@ -16263,7 +17247,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.聖公會仁愛學校.edu.hk/admissions"
+    "applicationLink": "https://www.聖公會仁愛學校.edu.hk/admissions",
+    "latitude": 22.319147,
+    "longitude": 114.172071
   },
   {
     "id": "aid-494",
@@ -16296,7 +17282,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.循道衛理聖德書院.edu.hk/admissions"
+    "applicationLink": "https://www.循道衛理聖德書院.edu.hk/admissions",
+    "latitude": 22.438569,
+    "longitude": 114.026826
   },
   {
     "id": "aid-495",
@@ -16329,7 +17317,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會信義幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會信義幼稚園.edu.hk/admissions",
+    "latitude": 22.407652,
+    "longitude": 114.204232
   },
   {
     "id": "pri-496",
@@ -16362,7 +17352,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.培信義幼兒園.edu.hk/admissions"
+    "applicationLink": "https://www.培信義幼兒園.edu.hk/admissions",
+    "latitude": 22.306578,
+    "longitude": 114.168969
   },
   {
     "id": "pri-497",
@@ -16395,7 +17387,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.嘉諾撒博愛學校.edu.hk/admissions"
+    "applicationLink": "https://www.嘉諾撒博愛學校.edu.hk/admissions",
+    "latitude": 22.344773,
+    "longitude": 114.197064
   },
   {
     "id": "pri-498",
@@ -16428,7 +17422,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.培恩典幼稚園.edu.hk/admissions"
+    "applicationLink": "https://www.培恩典幼稚園.edu.hk/admissions",
+    "latitude": 22.270206,
+    "longitude": 114.241068
   },
   {
     "id": "aid-499",
@@ -16461,7 +17457,9 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.宣道會仁愛學校.edu.hk/admissions"
+    "applicationLink": "https://www.宣道會仁愛學校.edu.hk/admissions",
+    "latitude": 22.334946,
+    "longitude": 114.151247
   },
   {
     "id": "aid-500",
@@ -16494,6 +17492,8 @@ export const SCHOOLS: School[] = [
       "推薦信",
       "身份證明文件"
     ],
-    "applicationLink": "https://www.佛教育英學校.edu.hk/admissions"
+    "applicationLink": "https://www.佛教育英學校.edu.hk/admissions",
+    "latitude": 22.348849,
+    "longitude": 114.205345
   }
 ];
