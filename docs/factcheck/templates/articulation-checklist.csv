@@ -1,0 +1,2 @@
+school_id,school_name,articulation_type,guarantee,linked_school_ids,source_url,captured_at,confidence,status,risk_level,notes
+sch_XXXXX,學校名稱,EDB_THROUGH_TRAIN|ALL_THROUGH_SCHOOL|SCHOOL_NETWORK_CONTINUITY|AFFILIATED_PRIORITY|NONE|UNKNOWN,GUARANTEED|CONDITIONAL|SUBJECT_TO_AVAILABILITY|NOT_STATED,"sch_00001,sch_00002",https://example.edu.hk/articulation,2026-01-10,HIGH|MEDIUM|LOW,PASS|FAIL|UNKNOWN|NEED_REVIEW,AUTO-FIX|NEED-APPROVAL,備註
