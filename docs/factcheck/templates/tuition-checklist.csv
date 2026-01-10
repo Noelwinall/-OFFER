@@ -1,2 +1,0 @@
-school_id,school_name,category,current_tuition_min,current_tuition_max,verified_tuition_min,verified_tuition_max,source_url,captured_at,confidence,status,risk_level,notes
-sch_XXXXX,學校名稱,國際|資助|直資|私立|公立,0,0,0,0,https://example.edu.hk/fees,2026-01-10,HIGH|MEDIUM|LOW,PASS|FAIL|UNKNOWN|NEED_REVIEW,AUTO-FIX|NEED-APPROVAL,備註

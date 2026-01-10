@@ -1,120 +1,99 @@
 # Fact Check Framework
 
 > HK Edu App 数据核验框架
-> 版本：v1 clean
+> 版本：zero-inference v1
 > 依据：BOSS.md v1
 
 ---
 
-## 目标
+## 目的
 
-确保 HK Edu App 中的学校数据：
+确保学校数据的**准确性、可溯源性、零推断**。
 
-1. **准确** - 与官方来源一致
-2. **可溯源** - 每条关键数据有证据链
-3. **不过度承诺** - 无证据则标"待確認"
-
----
-
-## 核验范围
-
-### 强制 Evidence 字段（三件套）
-
-以下字段必须提供完整证据：
-
-| 字段 | Evidence 要求 |
-|------|---------------|
-| `tuition` (学费) | sourceUrl + capturedAt + confidence |
-| `articulation` (升学衔接) | sourceUrl + capturedAt + confidence |
-
-### 其他字段
-
-- 不强制三件套
-- 但必须有可核验来源（学校官网优先，EDB 辅助）
-- 禁止使用论坛/第三方汇总站作为证据
+| 原则 | 说明 |
+|------|------|
+| 准确 | 数据必须与权威来源一致 |
+| 可溯源 | 每条关键数据必须有 Evidence |
+| 零推断 | 无官方原文 = UNKNOWN，不得猜测 |
 
 ---
 
-## 证据规则
+## 证据优先级
 
-### 可接受来源（按优先级）
+### Tier 1（可作为 Evidence）
 
-1. **学校官网** - 最优先
-2. **教育局 (EDB)** - 官方权威
-3. **政府公报** - 法定文件
+| 来源 | 示例 |
+|------|------|
+| 学校官网 | https://www.example.edu.hk/fees |
+| 教育局 (EDB) | https://www.edb.gov.hk/... |
+| 政府公报 | https://www.gld.gov.hk/... |
 
-### 不可接受来源
+### Tier 2（仅作参考）
 
-- 论坛（如 EK Forum、Baby Kingdom）
-- 第三方汇总站
-- 家长口述/经验分享
-- 未标注来源的资料
+| 来源 | 用途 |
+|------|------|
+| 媒体报道 | 线索，需官方确认 |
+| 学校年报 | 辅助验证 |
 
-### Evidence 三件套格式
+### 禁止来源
+
+| 来源 | 原因 |
+|------|------|
+| 论坛 (EK Forum, Baby Kingdom) | 非官方 |
+| 第三方汇总站 | 未经核实 |
+| 家长口述 | 无法验证 |
+
+---
+
+## 零推断原则
+
+### 核心规则
+
+1. **无官方原文 → UNKNOWN**
+   - 不得根据"常理"推断
+   - 不得根据"类似学校"推断
+   - 不得根据"以前是这样"推断
+
+2. **模糊表述 → UNKNOWN**
+   - 官方说"约 XXX" → 记录原文，标 UNKNOWN
+   - 官方说"视情况而定" → 记录原文，标 UNKNOWN
+
+3. **过期信息 → UNKNOWN**
+   - 超过 12 个月的数据需重新核验
+   - capturedAt 必须记录
+
+### 字段默认状态
+
+| 类型 | 默认状态 |
+|------|----------|
+| 学费 (tuition) | UNKNOWN（除非有官网截图/链接） |
+| 升学衔接 (articulation) | UNKNOWN（除非有官方声明） |
+| 课程 (curriculum) | UNKNOWN（除非官网明确列出） |
+| 其他字段 | 按 data-dictionary.md 规则 |
+
+---
+
+## Evidence 格式
+
+### 强制 Evidence 字段
+
+学费和升学衔接必须有完整 Evidence：
 
 ```yaml
 evidence:
-  sourceUrl: "https://www.example.edu.hk/fees"
-  capturedAt: "2026-01-10"
-  confidence: "HIGH"  # HIGH / MEDIUM / LOW
+  sourceUrl: "https://..."     # 必填
+  capturedAt: "2026-01-10"     # 必填，ISO 日期
+  confidence: "HIGH"           # HIGH / MEDIUM / LOW
+  rawText: "原文摘录..."       # 建议填写
 ```
 
----
+### Confidence 定义
 
-## 核验状态
-
-| 状态 | 含义 | 处理方式 |
-|------|------|----------|
-| `PASS` | 已核验，数据正确 | 无需处理 |
-| `FAIL` | 已核验，数据错误 | 需修正 |
-| `UNKNOWN` | 无法核验 | 标"待確認" |
-| `NEED_REVIEW` | 需人工确认 | 等待老板决策 |
-
----
-
-## 风险分级
-
-| 级别 | 含义 | 处理方式 |
-|------|------|----------|
-| `AUTO-FIX` | 低风险，客观可核验 | 可自动修正 |
-| `NEED-APPROVAL` | 高风险，主观/争议 | 需老板确认 |
-
-### AUTO-FIX 适用
-
-- 链接格式修正
-- 电话格式标准化
-- 明显拼写错误
-- 经纬度范围修正
-
-### NEED-APPROVAL 适用
-
-- 学费数值变更
-- 升学衔接分类
-- 学校分类变更
-- 任何主观描述
-
----
-
-## 如何提交核验结果
-
-### Step 1: 使用模板
-
-从 `templates/` 目录选择对应模板：
-- 学费核验：`tuition-checklist.csv`
-- 升学衔接：`articulation-checklist.md` / `.csv`
-- 单校完整核验：`school-factcheck-issue-template.md`
-
-### Step 2: 填写证据
-
-- 每条数据填写 sourceUrl
-- 记录 capturedAt（核验日期）
-- 评估 confidence
-
-### Step 3: 提交
-
-- 将完成的核验文件放入 `docs/factcheck/reports/` (按需创建)
-- 提交 PR 或直接 commit
-- commit message 格式：`docs(factcheck): [scope] description`
+| 级别 | 定义 |
+|------|------|
+| HIGH | 官方明确表述，无歧义 |
+| MEDIUM | 官方有提及但表述模糊 |
+| LOW | 需推断或来源非最新 |
 
 ---
 
@@ -124,24 +103,22 @@ evidence:
 docs/factcheck/
 ├── README.md              # 本文件
 ├── data-dictionary.md     # 字段定义与核验规则
-├── templates/             # 核验模板
-│   ├── articulation-checklist.md
-│   ├── articulation-checklist.csv
-│   ├── tuition-checklist.csv
-│   └── school-factcheck-issue-template.md
-└── reports/               # 核验结果（按需创建）
+└── templates/
+    ├── master-issues.csv      # 问题清单模板
+    ├── evidence-record.csv    # 证据记录模板
+    └── per-school-issue.md    # 单校问题模板
 ```
 
 ---
 
-## 原则（引自 BOSS.md）
+## 工作流程
 
-- 不得自行发明分类、标签、文案
-- 不得为了"看起来完整"而假精确
-- 不得越权做产品决策
-- 不确定就标「待確認」，不得猜测
+1. **发现问题** → 记录到 master-issues.csv
+2. **收集证据** → 记录到 evidence-record.csv
+3. **单校详情** → 使用 per-school-issue.md 模板
+4. **修正数据** → 需 Evidence，commit message 说明来源
 
 ---
 
-*框架版本：v1 clean*
+*框架版本：zero-inference v1*
 *依据：BOSS.md v1*
