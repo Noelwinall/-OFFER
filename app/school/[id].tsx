@@ -3,13 +3,14 @@ import { View, Text, ScrollView, TouchableOpacity, Platform, Alert, Linking, Sty
 import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
-import { SCHOOLS } from "@/data/schools";
+import { schools } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage";
 import { formatTuitionRange } from "@/types/school";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import * as Clipboard from "expo-clipboard";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { SCHOOL_TEXT } from "@/constants/school-text";
 
 export default function SchoolDetailScreen() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function SchoolDetailScreen() {
   }, [params.id]);
 
   const loadSchool = () => {
-    const found = SCHOOLS.find((s) => s.id === params.id);
+    const found = schools.find((s) => s.id === params.id);
     setSchool(found || null);
   };
 
@@ -126,7 +127,7 @@ export default function SchoolDetailScreen() {
           style={StyleSheet.absoluteFill}
         />
         <View style={[styles.container, { paddingTop: insets.top, justifyContent: "center", alignItems: "center" }]}>
-          <Text style={styles.emptyText}>找不到學校資訊</Text>
+          <Text style={styles.emptyText}>{SCHOOL_TEXT.SCHOOL_NOT_FOUND}</Text>
         </View>
       </View>
     );
@@ -160,6 +161,9 @@ export default function SchoolDetailScreen() {
           {/* 學校名稱 */}
           <View style={styles.titleContainer}>
             <Text style={styles.schoolName}>{school.name}</Text>
+            {school.nameEn && (
+              <Text style={styles.schoolNameEn}>{school.nameEn}</Text>
+            )}
             <View style={styles.tagRow}>
               <View style={styles.tag}>
                 <Text style={styles.tagText}>{school.category}</Text>
@@ -167,31 +171,49 @@ export default function SchoolDetailScreen() {
               <View style={styles.tag}>
                 <Text style={styles.tagText}>{school.district}</Text>
               </View>
+              <View style={styles.tag}>
+                <Text style={styles.tagText}>{school.level}</Text>
+              </View>
             </View>
           </View>
 
           {/* 基本資訊 */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>基本資訊</Text>
+            <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_BASIC_INFO}</Text>
             <View style={styles.infoGrid}>
-              <InfoRow label="學段" value={school.level} />
-              <InfoRow label="學費" value={formatTuitionRange(school.tuitionMin, school.tuitionMax, school.category)} />
-              <Text style={styles.tuitionCaption}>
-                主要費用估算：學費 + 必要 levy / 建校費；不含校車、午餐等雜費。
-              </Text>
-              <InfoRow label="課程體系" value={school.curriculum.join(", ")} />
-              <InfoRow label="教學語言" value={school.language} />
+              <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
+              <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={school.category} />
+              <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
+              <InfoRow
+                label="學費"
+                value={formatTuitionRange(school.tuitionMin, school.tuitionMax, school.category)}
+                isPending={school.tuitionMin === 0 && school.tuitionMax === 0 && school.category !== "公立" && school.category !== "資助"}
+              />
+              <InfoRow
+                label="課程體系"
+                value={school.curriculum.length > 0 ? school.curriculum.join(", ") : ""}
+                isPending={school.curriculum.length === 0}
+              />
+              <InfoRow
+                label="教學語言"
+                value={school.language}
+              />
             </View>
           </View>
 
           {/* 聯絡方式 */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>聯絡方式</Text>
+            <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_CONTACT}</Text>
             <View style={styles.infoGrid}>
-              <InfoRow label="地址" value={school.address} />
-              <InfoRow label="電話" value={school.phone} />
-              <TouchableOpacity onPress={handleOpenWebsite}>
-                <InfoRow label="網站" value={school.website} isLink />
+              <InfoRow label="地址" value={school.address} isPending={!school.address} />
+              <InfoRow label="電話" value={school.phone} isPending={!school.phone} />
+              <TouchableOpacity onPress={school.website ? handleOpenWebsite : undefined} disabled={!school.website}>
+                <InfoRow
+                  label={SCHOOL_TEXT.LABEL_WEBSITE}
+                  value={school.website || ""}
+                  isLink={!!school.website}
+                  isPending={!school.website}
+                />
               </TouchableOpacity>
             </View>
           </View>
@@ -222,44 +244,55 @@ export default function SchoolDetailScreen() {
             </Text>
           </TouchableOpacity>
 
-          {/* 學校亮點 */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>學校亮點</Text>
-            <View style={styles.highlightsContainer}>
-              {school.highlights.map((highlight, index) => (
-                <View key={index} style={styles.highlightRow}>
-                  <Text style={styles.highlightBullet}>•</Text>
-                  <Text style={styles.highlightText}>{highlight}</Text>
-                </View>
-              ))}
+          {/* 學校亮點 - 只在有内容时显示 */}
+          {school.highlights.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>學校亮點</Text>
+              <View style={styles.highlightsContainer}>
+                {school.highlights.map((highlight, index) => (
+                  <View key={index} style={styles.highlightRow}>
+                    <Text style={styles.highlightBullet}>•</Text>
+                    <Text style={styles.highlightText}>{highlight}</Text>
+                  </View>
+                ))}
+              </View>
             </View>
-          </View>
+          )}
 
-          {/* 申請資訊 */}
-          <View style={styles.section}>
-            <Text style={styles.sectionTitle}>申請資訊</Text>
-            <Text style={styles.materialsLabel}>所需材料：</Text>
-            <View style={styles.materialsContainer}>
-              {school.applicationMaterials.map((material, index) => (
-                <Text key={index} style={styles.materialText}>
-                  {index + 1}. {material}
-                </Text>
-              ))}
+          {/* 申請資訊 - 只在有内容时显示 */}
+          {(school.applicationMaterials.length > 0 || school.applicationLink) && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>申請資訊</Text>
+              {school.applicationMaterials.length > 0 ? (
+                <>
+                  <Text style={styles.materialsLabel}>所需材料：</Text>
+                  <View style={styles.materialsContainer}>
+                    {school.applicationMaterials.map((material, index) => (
+                      <Text key={index} style={styles.materialText}>
+                        {index + 1}. {material}
+                      </Text>
+                    ))}
+                  </View>
+                </>
+              ) : (
+                <Text style={styles.pendingText}>{SCHOOL_TEXT.PENDING}</Text>
+              )}
+              {school.applicationLink && (
+                <TouchableOpacity
+                  onPress={handleCopyLink}
+                  style={styles.copyButton}
+                  activeOpacity={0.8}
+                >
+                  <Text style={styles.copyButtonText}>複製申請連結</Text>
+                </TouchableOpacity>
+              )}
             </View>
-            <TouchableOpacity
-              onPress={handleCopyLink}
-              style={styles.copyButton}
-              activeOpacity={0.8}
-            >
-              <Text style={styles.copyButtonText}>複製申請連結</Text>
-            </TouchableOpacity>
-          </View>
+          )}
 
           {/* 免責聲明 */}
           <View style={styles.disclaimerContainer}>
-            <Text style={styles.disclaimerText}>
-              資訊基於公開資料整理，僅供參考，以學校官方為準
-            </Text>
+            <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_SOURCE}</Text>
+            <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_DISCLAIMER}</Text>
           </View>
         </ScrollView>
 
@@ -288,11 +321,12 @@ export default function SchoolDetailScreen() {
   );
 }
 
-function InfoRow({ label, value, isLink = false }: { label: string; value: string; isLink?: boolean }) {
+function InfoRow({ label, value, isLink = false, isPending = false }: { label: string; value: string; isLink?: boolean; isPending?: boolean }) {
+  const displayValue = isPending ? SCHOOL_TEXT.PENDING : value;
   return (
     <View style={infoStyles.row}>
       <Text style={infoStyles.label}>{label}</Text>
-      <Text style={[infoStyles.value, isLink && infoStyles.link]}>{value}</Text>
+      <Text style={[infoStyles.value, isLink && infoStyles.link, isPending && infoStyles.pending]}>{displayValue}</Text>
     </View>
   );
 }
@@ -317,6 +351,10 @@ const infoStyles = StyleSheet.create({
   link: {
     color: "#00D9FF",
     textDecorationLine: "underline",
+  },
+  pending: {
+    color: "rgba(255,255,255,0.4)",
+    fontStyle: "italic",
   },
 });
 
@@ -365,6 +403,12 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     lineHeight: 34,
+    marginBottom: 4,
+  },
+  schoolNameEn: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.6)",
+    fontFamily: "NotoSerifSC-Regular",
     marginBottom: 12,
   },
   tagRow: {
@@ -429,6 +473,12 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,0.6)",
     fontFamily: "NotoSerifSC-Regular",
     marginBottom: 8,
+  },
+  pendingText: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontStyle: "italic",
   },
   materialsContainer: {
     gap: 4,
