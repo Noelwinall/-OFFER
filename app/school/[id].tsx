@@ -5,10 +5,8 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { schools } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage";
-import { formatTuitionRange } from "@/types/school";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
-import * as Clipboard from "expo-clipboard";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { SCHOOL_TEXT } from "@/constants/school-text";
 
@@ -92,29 +90,9 @@ export default function SchoolDetailScreen() {
     }
   };
 
-  const handleCopyLink = async () => {
-    if (Platform.OS !== "web") {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    }
-
-    if (school?.applicationLink) {
-      await Clipboard.setStringAsync(school.applicationLink);
-      Alert.alert("成功", "申請連結已複製到剪貼簿");
-    }
-  };
-
   const handleOpenWebsite = () => {
     if (school?.website) {
       Linking.openURL(school.website);
-    }
-  };
-
-  const handleApplyNow = () => {
-    if (Platform.OS !== "web") {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
-    }
-    if (school?.applicationLink) {
-      Linking.openURL(school.applicationLink);
     }
   };
 
@@ -177,36 +155,20 @@ export default function SchoolDetailScreen() {
             </View>
           </View>
 
-          {/* 基本資訊 */}
+          {/* 基本資訊 - 只显示 v0 字段 */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_BASIC_INFO}</Text>
             <View style={styles.infoGrid}>
               <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
               <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={school.category} />
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
-              <InfoRow
-                label="學費"
-                value={formatTuitionRange(school.tuitionMin, school.tuitionMax, school.category)}
-                isPending={school.tuitionMin === 0 && school.tuitionMax === 0 && school.category !== "公立" && school.category !== "資助"}
-              />
-              <InfoRow
-                label="課程體系"
-                value={school.curriculum.length > 0 ? school.curriculum.join(", ") : ""}
-                isPending={school.curriculum.length === 0}
-              />
-              <InfoRow
-                label="教學語言"
-                value={school.language}
-              />
             </View>
           </View>
 
-          {/* 聯絡方式 */}
+          {/* 聯絡方式 - 只显示 website */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_CONTACT}</Text>
             <View style={styles.infoGrid}>
-              <InfoRow label="地址" value={school.address} isPending={!school.address} />
-              <InfoRow label="電話" value={school.phone} isPending={!school.phone} />
               <TouchableOpacity onPress={school.website ? handleOpenWebsite : undefined} disabled={!school.website}>
                 <InfoRow
                   label={SCHOOL_TEXT.LABEL_WEBSITE}
@@ -244,50 +206,7 @@ export default function SchoolDetailScreen() {
             </Text>
           </TouchableOpacity>
 
-          {/* 學校亮點 - 只在有内容时显示 */}
-          {school.highlights.length > 0 && (
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>學校亮點</Text>
-              <View style={styles.highlightsContainer}>
-                {school.highlights.map((highlight, index) => (
-                  <View key={index} style={styles.highlightRow}>
-                    <Text style={styles.highlightBullet}>•</Text>
-                    <Text style={styles.highlightText}>{highlight}</Text>
-                  </View>
-                ))}
-              </View>
-            </View>
-          )}
 
-          {/* 申請資訊 - 只在有内容时显示 */}
-          {(school.applicationMaterials.length > 0 || school.applicationLink) && (
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>申請資訊</Text>
-              {school.applicationMaterials.length > 0 ? (
-                <>
-                  <Text style={styles.materialsLabel}>所需材料：</Text>
-                  <View style={styles.materialsContainer}>
-                    {school.applicationMaterials.map((material, index) => (
-                      <Text key={index} style={styles.materialText}>
-                        {index + 1}. {material}
-                      </Text>
-                    ))}
-                  </View>
-                </>
-              ) : (
-                <Text style={styles.pendingText}>{SCHOOL_TEXT.PENDING}</Text>
-              )}
-              {school.applicationLink && (
-                <TouchableOpacity
-                  onPress={handleCopyLink}
-                  style={styles.copyButton}
-                  activeOpacity={0.8}
-                >
-                  <Text style={styles.copyButtonText}>複製申請連結</Text>
-                </TouchableOpacity>
-              )}
-            </View>
-          )}
 
           {/* 免責聲明 */}
           <View style={styles.disclaimerContainer}>
@@ -307,14 +226,16 @@ export default function SchoolDetailScreen() {
               {isInCompare ? "從對比中移除" : "加入對比"}
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity
-            onPress={handleApplyNow}
-            style={styles.applyButton}
-            activeOpacity={0.8}
-          >
-            <IconSymbol name="paperplane.fill" size={18} color="#FFFFFF" />
-            <Text style={styles.applyButtonText}>立即申請</Text>
-          </TouchableOpacity>
+          {school.website && (
+            <TouchableOpacity
+              onPress={handleOpenWebsite}
+              style={styles.applyButton}
+              activeOpacity={0.8}
+            >
+              <IconSymbol name="safari" size={18} color="#FFFFFF" />
+              <Text style={styles.applyButtonText}>前往官網</Text>
+            </TouchableOpacity>
+          )}
         </View>
       </View>
     </View>
@@ -441,72 +362,6 @@ const styles = StyleSheet.create({
   },
   infoGrid: {
     gap: 4,
-  },
-  tuitionCaption: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginLeft: 80,
-    marginBottom: 4,
-  },
-  highlightsContainer: {
-    gap: 8,
-  },
-  highlightRow: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-  },
-  highlightBullet: {
-    color: "#00D9FF",
-    marginRight: 8,
-    fontSize: 16,
-  },
-  highlightText: {
-    flex: 1,
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    fontSize: 14,
-    lineHeight: 22,
-  },
-  materialsLabel: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 8,
-  },
-  pendingText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-    fontStyle: "italic",
-  },
-  materialsContainer: {
-    gap: 4,
-    marginBottom: 16,
-  },
-  materialText: {
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    fontSize: 14,
-    lineHeight: 22,
-  },
-  copyButton: {
-    backgroundColor: "#00D9FF",
-    paddingVertical: 16,
-    borderRadius: 16,
-    shadowColor: "#00D9FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  copyButtonText: {
-    color: "#0F1629",
-    fontSize: 16,
-    fontWeight: "600",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 1,
   },
   disclaimerContainer: {
     paddingHorizontal: 24,

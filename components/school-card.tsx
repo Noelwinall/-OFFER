@@ -1,8 +1,8 @@
+import React from "react";
 import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColors } from "@/hooks/use-colors";
 import type { School } from "@/types/school";
-import { formatTuitionRange } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
 interface SchoolCardProps {
@@ -15,8 +15,9 @@ interface SchoolCardProps {
 /**
  * 統一學校卡片組件
  * 用於所有學校列表展示場景
+ * v0 字段: name/nameEn/category/level/district
  */
-export function SchoolCard({
+export const SchoolCard = React.memo(function SchoolCard({
   school,
   isFavorite = false,
   onPress,
@@ -81,8 +82,8 @@ export function SchoolCard({
         </Pressable>
       </View>
 
-      {/* 學校類型標籤 */}
-      <View className="flex-row items-center mb-2">
+      {/* 學校類型標籤 - 只显示 v0 字段 */}
+      <View className="flex-row items-center flex-wrap gap-1">
         <View
           className="px-2 py-1 rounded"
           style={{ backgroundColor: getCategoryColor(school.category) }}
@@ -91,33 +92,19 @@ export function SchoolCard({
             {school.category}
           </Text>
         </View>
-        <Text className="text-xs text-muted ml-2">{school.level}</Text>
-      </View>
-
-      {/* 地區與學費 */}
-      <View className="mb-3">
-        <Text className="text-sm text-muted">
-          {school.district} • {formatTuitionRange(school.tuitionMin, school.tuitionMax, school.category)}
-        </Text>
-        <Text className="text-xs text-muted mt-1" style={{ opacity: 0.6 }}>
-          主要費用估算：學費 + 必要 levy / 建校費；不含校車、午餐等雜費。
-        </Text>
-      </View>
-
-      {/* 亮點 Snapshot */}
-      <View className="gap-1">
-        {school.highlights.slice(0, 3).map((highlight, index) => (
-          <View key={index} className="flex-row items-start">
-            <Text className="text-muted mr-1">•</Text>
-            <Text className="text-sm text-foreground flex-1" numberOfLines={1}>
-              {highlight}
-            </Text>
-          </View>
-        ))}
+        <View className="px-2 py-1 rounded bg-gray-600/30">
+          <Text className="text-xs text-muted">{school.level}</Text>
+        </View>
+        <View className="px-2 py-1 rounded bg-gray-600/30">
+          <Text className="text-xs text-muted">{school.district}</Text>
+        </View>
       </View>
     </Pressable>
   );
-}
+}, (prev, next) =>
+  prev.school.id === next.school.id &&
+  prev.isFavorite === next.isFavorite
+);
 
 /**
  * 根據學校類型返回對應顏色 - 穩重活力風格
