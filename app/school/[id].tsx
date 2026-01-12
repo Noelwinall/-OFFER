@@ -5,6 +5,7 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { schools } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage";
+import { isInternational } from "@/lib/international-schools";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -143,8 +144,10 @@ export default function SchoolDetailScreen() {
               <Text style={styles.schoolNameEn}>{school.nameEn}</Text>
             )}
             <View style={styles.tagRow}>
-              <View style={styles.tag}>
-                <Text style={styles.tagText}>{school.category}</Text>
+              <View style={[styles.tag, isInternational(school) && styles.internationalTag]}>
+                <Text style={[styles.tagText, isInternational(school) && styles.internationalTagText]}>
+                  {isInternational(school) ? "國際" : school.category}
+                </Text>
               </View>
               <View style={styles.tag}>
                 <Text style={styles.tagText}>{school.district}</Text>
@@ -160,7 +163,7 @@ export default function SchoolDetailScreen() {
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_BASIC_INFO}</Text>
             <View style={styles.infoGrid}>
               <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
-              <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={school.category} />
+              <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={isInternational(school) ? "國際" : school.category} />
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
             </View>
           </View>
@@ -342,10 +345,17 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 8,
   },
+  internationalTag: {
+    backgroundColor: "#00D9FF",
+  },
   tagText: {
     fontSize: 13,
     color: "#00D9FF",
     fontFamily: "NotoSerifSC-Regular",
+  },
+  internationalTagText: {
+    color: "#0F1629",
+    fontWeight: "600",
   },
   section: {
     paddingHorizontal: 24,

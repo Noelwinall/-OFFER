@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColors } from "@/hooks/use-colors";
+import { isInternational } from "@/lib/international-schools";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
@@ -86,10 +87,10 @@ export const SchoolCard = React.memo(function SchoolCard({
       <View className="flex-row items-center flex-wrap gap-1">
         <View
           className="px-2 py-1 rounded"
-          style={{ backgroundColor: getCategoryColor(school.category) }}
+          style={{ backgroundColor: getDisplayTypeColor(school) }}
         >
           <Text className="text-xs font-semibold text-white">
-            {school.category}
+            {getDisplayType(school)}
           </Text>
         </View>
         <View className="px-2 py-1 rounded bg-gray-600/30">
@@ -107,17 +108,25 @@ export const SchoolCard = React.memo(function SchoolCard({
 );
 
 /**
- * 根據學校類型返回對應顏色 - 穩重活力風格
+ * 獲取學校顯示類型（國際學校優先）
  */
-function getCategoryColor(category: School["category"]): string {
-  const colors: Record<School["category"], string> = {
+function getDisplayType(school: School): string {
+  return isInternational(school) ? "國際" : school.category;
+}
+
+/**
+ * 根據學校顯示類型返回對應顏色
+ */
+function getDisplayTypeColor(school: School): string {
+  const colors: Record<string, string> = {
     國際: "#00D9FF",
     資助: "#6B5B95",
     直資: "#E8756F",
     私立: "#7C3AED",
     公立: "#3B82F6",
   };
-  return colors[category];
+  const displayType = getDisplayType(school);
+  return colors[displayType] || colors["私立"];
 }
 
 const styles = StyleSheet.create({
