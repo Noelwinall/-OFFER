@@ -2,7 +2,14 @@
  * 學校資料類型定義
  */
 
+// 辦學類別 (funding/governance type)
 export type SchoolCategory = "國際" | "資助" | "直資" | "私立" | "公立";
+
+// 學校性質 (school sector) - Phase R3
+// INTERNATIONAL = EDB 認可國際學校 (53所 + 分校)
+// LOCAL = 本地學校
+export type SchoolSector = "INTERNATIONAL" | "LOCAL";
+
 export type District = "港島" | "九龍" | "新界";
 export type Level = "幼稚園" | "小學" | "中學";
 export type Curriculum = "IB" | "DSE" | "IGCSE" | "A-Level" | "AP" | "美式課程" | "英式課程" | "德式課程" | "澳洲課程" | "新加坡課程" | "法式課程" | "加拿大課程" | "其他";
@@ -14,6 +21,7 @@ export interface School {
   nameEn: string; // 英文名稱
   searchKeywords: string[]; // 搜索關鍵字（包含英文簡稱、別名等）
   category: SchoolCategory;
+  sector: SchoolSector; // 學校性質 (INTERNATIONAL/LOCAL) - Phase R3
   district: District;
   level: Level;
   tuitionMin: number; // 學費下限（港幣/年）

@@ -1,9 +1,9 @@
 // 香港學校數據庫
 // Schema: types/school.ts
-// Source: EDB baseline-schools.csv (Phase R1 Rebuild v0)
+// Source: EDB baseline-schools.csv (Phase R1) + international tagging (Phase R3)
 // Generated: 2026-01-12
 // Total: 3510 schools
-// Note: tuition/articulation/highlights NOT filled (v0)
+// Sector: INTERNATIONAL 166 / LOCAL 3344
 
 import { School } from "@/types/school";
 
@@ -30,7 +30,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114855000323",
@@ -55,7 +56,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114855000223",
@@ -80,7 +82,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115584000223",
@@ -105,7 +108,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610224000123",
@@ -130,7 +134,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512036000123",
@@ -155,7 +160,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115762000123",
@@ -180,7 +186,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114928000123",
@@ -205,7 +212,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114723000123",
@@ -230,7 +238,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512060000223",
@@ -255,7 +264,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514519000223",
@@ -280,7 +290,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511161000123",
@@ -305,7 +316,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511129000123",
@@ -330,7 +342,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115320000123",
@@ -355,7 +368,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114499000123",
@@ -380,7 +394,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518425000123",
@@ -405,7 +420,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113247000123",
@@ -430,7 +446,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513474000123",
@@ -455,7 +472,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512176000123",
@@ -480,7 +498,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560642000123",
@@ -505,7 +524,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543233000223",
@@ -530,7 +550,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113417000223",
@@ -555,7 +576,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115568000123",
@@ -580,7 +602,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114634000223",
@@ -605,7 +628,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115509000123",
@@ -630,7 +654,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536547000223",
@@ -655,7 +680,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113000000123",
@@ -680,7 +706,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512176000223",
@@ -705,7 +732,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623709000123",
@@ -730,7 +758,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513687000122",
@@ -755,7 +784,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513130000223",
@@ -780,7 +810,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114871000123",
@@ -805,7 +836,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150436000123",
@@ -830,7 +862,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513385000123",
@@ -855,7 +888,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579220000123",
@@ -880,7 +914,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170194000223",
@@ -905,7 +940,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511439000123",
@@ -930,7 +966,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543179000123",
@@ -955,7 +992,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113190000123",
@@ -980,7 +1018,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115355000123",
@@ -1005,7 +1044,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511366000123",
@@ -1030,7 +1070,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114758000123",
@@ -1055,7 +1096,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115126000123",
@@ -1080,7 +1122,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535630000123",
@@ -1105,7 +1148,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535800000123",
@@ -1130,7 +1174,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543195000123",
@@ -1155,7 +1200,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115037000123",
@@ -1180,7 +1226,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522023000123",
@@ -1205,7 +1252,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518506000123",
@@ -1230,7 +1278,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516880000123",
@@ -1255,7 +1304,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115576000123",
@@ -1280,7 +1330,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511749000123",
@@ -1305,7 +1356,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115215000123",
@@ -1330,7 +1382,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115649000123",
@@ -1355,7 +1408,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114529000123",
@@ -1380,7 +1434,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529540000123",
@@ -1405,7 +1460,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115142000123",
@@ -1430,7 +1486,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114391000123",
@@ -1455,7 +1512,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516996000123",
@@ -1480,7 +1538,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115487000123",
@@ -1505,7 +1564,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114502000123",
@@ -1530,7 +1590,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114820000123",
@@ -1555,7 +1616,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513180000123",
@@ -1580,7 +1642,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112666000123",
@@ -1605,7 +1668,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542580000123",
@@ -1630,7 +1694,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512389000123",
@@ -1655,7 +1720,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575720000123",
@@ -1680,7 +1746,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_584118000123",
@@ -1705,7 +1772,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578320000223",
@@ -1730,7 +1798,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579513000123",
@@ -1755,7 +1824,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_584126000123",
@@ -1780,7 +1850,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579548000123",
@@ -1805,7 +1876,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575844000123",
@@ -1830,7 +1902,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575500000123",
@@ -1855,7 +1928,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575607000123",
@@ -1880,7 +1954,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579556000123",
@@ -1905,7 +1980,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_572357000123",
@@ -1930,7 +2006,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575534000123",
@@ -1955,7 +2032,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575615000123",
@@ -1980,7 +2058,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510769000123",
@@ -2005,7 +2084,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514632000123",
@@ -2030,7 +2110,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510017000123",
@@ -2055,7 +2136,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512362000123",
@@ -2080,7 +2162,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510904000223",
@@ -2104,7 +2187,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511846000123",
@@ -2129,7 +2213,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512524000123",
@@ -2154,7 +2239,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511404000123",
@@ -2179,7 +2265,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513318000123",
@@ -2204,7 +2291,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513326000123",
@@ -2229,7 +2317,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114405000123",
@@ -2254,7 +2343,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_134872000123",
@@ -2279,7 +2369,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511609000223",
@@ -2304,7 +2395,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114901000123",
@@ -2329,7 +2421,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115053000123",
@@ -2354,7 +2447,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150550000123",
@@ -2379,7 +2473,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510343000123",
@@ -2404,7 +2499,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115746000123",
@@ -2429,7 +2525,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113174000123",
@@ -2454,7 +2551,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510947000123",
@@ -2479,7 +2577,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115061000123",
@@ -2504,7 +2603,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115525000123",
@@ -2529,7 +2629,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114847000123",
@@ -2554,7 +2655,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529257000123",
@@ -2579,7 +2681,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_317098000123",
@@ -2604,7 +2707,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114030000123",
@@ -2629,7 +2733,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115681000123",
@@ -2654,7 +2759,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114413000123",
@@ -2679,7 +2785,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513164000123",
@@ -2704,7 +2811,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535621000223",
@@ -2729,7 +2837,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115428000123",
@@ -2754,7 +2863,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512249000123",
@@ -2779,7 +2889,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535770000123",
@@ -2804,7 +2915,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113328000123",
@@ -2829,7 +2941,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115495000123",
@@ -2854,7 +2967,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113107000123",
@@ -2879,7 +2993,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114545000123",
@@ -2904,7 +3019,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114936000123",
@@ -2929,7 +3045,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115290000123",
@@ -2954,7 +3071,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513458000123",
@@ -2979,7 +3097,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115045000123",
@@ -3004,7 +3123,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516899000123",
@@ -3029,7 +3149,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115401000123",
@@ -3054,7 +3175,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540188000123",
@@ -3079,7 +3201,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540170000123",
@@ -3104,7 +3227,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529591000123",
@@ -3129,7 +3253,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510955000123",
@@ -3154,7 +3279,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518484000123",
@@ -3179,7 +3305,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511382000123",
@@ -3204,7 +3331,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543225000123",
@@ -3229,7 +3357,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513148000123",
@@ -3254,7 +3383,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_531510000123",
@@ -3279,7 +3409,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511412000123",
@@ -3304,7 +3435,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513628000123",
@@ -3329,7 +3461,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535745000123",
@@ -3354,7 +3487,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115800000123",
@@ -3379,7 +3513,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115770000123",
@@ -3404,7 +3539,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511625000223",
@@ -3429,7 +3565,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114855000123",
@@ -3454,7 +3591,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114685000123",
@@ -3479,7 +3617,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114707000123",
@@ -3504,7 +3643,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513636000223",
@@ -3529,7 +3669,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115274000123",
@@ -3554,7 +3695,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513962000223",
@@ -3579,7 +3721,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543241000123",
@@ -3604,7 +3747,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513431000123",
@@ -3629,7 +3773,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543284000123",
@@ -3654,7 +3799,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550370000123",
@@ -3679,7 +3825,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535702000123",
@@ -3704,7 +3851,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519596000123",
@@ -3729,7 +3877,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115592000123",
@@ -3754,7 +3903,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114995000123",
@@ -3779,7 +3929,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535605000123",
@@ -3804,7 +3955,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513598000223",
@@ -3829,7 +3981,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510564000123",
@@ -3854,7 +4007,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_136204000223",
@@ -3879,7 +4033,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114090000323",
@@ -3904,7 +4059,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115410000123",
@@ -3929,7 +4085,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112836000123",
@@ -3954,7 +4111,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518441000123",
@@ -3979,7 +4137,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522066000123",
@@ -4004,7 +4163,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518492000123",
@@ -4029,7 +4189,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115150000123",
@@ -4054,7 +4215,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543187000123",
@@ -4079,7 +4241,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530000000123",
@@ -4104,7 +4267,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530026000123",
@@ -4129,7 +4293,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540196000223",
@@ -4154,7 +4319,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535672000223",
@@ -4179,7 +4345,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540226000123",
@@ -4204,7 +4371,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513822000123",
@@ -4229,7 +4397,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513857000123",
@@ -4254,7 +4423,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514497000123",
@@ -4279,7 +4449,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514004000123",
@@ -4304,7 +4475,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514233000123",
@@ -4329,7 +4501,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513750000123",
@@ -4354,7 +4527,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_515051000123",
@@ -4379,7 +4553,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514683000123",
@@ -4404,7 +4579,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513059000123",
@@ -4429,7 +4605,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_515086000123",
@@ -4454,7 +4631,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512559000123",
@@ -4479,7 +4657,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512729000123",
@@ -4504,7 +4683,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513105000123",
@@ -4529,7 +4709,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512257000123",
@@ -4554,7 +4735,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511293000123",
@@ -4579,7 +4761,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513334000123",
@@ -4604,7 +4787,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513512000123",
@@ -4629,7 +4813,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513601000123",
@@ -4654,7 +4839,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511250000123",
@@ -4679,7 +4865,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511323000123",
@@ -4704,7 +4891,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115584000123",
@@ -4729,7 +4917,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170062000223",
@@ -4754,7 +4943,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170151000123",
@@ -4779,7 +4969,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115789000123",
@@ -4804,7 +4995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510149000123",
@@ -4829,7 +5021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511730000223",
@@ -4854,7 +5047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115517000123",
@@ -4879,7 +5073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114596000123",
@@ -4904,7 +5099,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511862000123",
@@ -4929,7 +5125,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516864000123",
@@ -4954,7 +5151,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511340000123",
@@ -4979,7 +5177,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511730000123",
@@ -5004,7 +5203,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522163000123",
@@ -5029,7 +5229,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115258000123",
@@ -5054,7 +5255,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535737000123",
@@ -5079,7 +5281,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115371000123",
@@ -5104,7 +5307,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522015000123",
@@ -5129,7 +5333,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114170000123",
@@ -5154,7 +5359,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114642000123",
@@ -5179,7 +5385,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513580000123",
@@ -5204,7 +5411,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114006000223",
@@ -5229,7 +5437,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512214000223",
@@ -5254,7 +5463,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115614000123",
@@ -5279,7 +5489,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550400000123",
@@ -5304,7 +5515,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115169000123",
@@ -5329,7 +5541,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543306000123",
@@ -5354,7 +5567,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543322000223",
@@ -5379,7 +5593,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543217000123",
@@ -5404,7 +5619,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543250000123",
@@ -5429,7 +5645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535753000223",
@@ -5454,7 +5671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540242000123",
@@ -5479,7 +5697,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549371000223",
@@ -5504,7 +5723,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539953000123",
@@ -5529,7 +5749,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533882000123",
@@ -5554,7 +5775,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535729000123",
@@ -5579,7 +5801,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514551000123",
@@ -5604,7 +5827,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522031000123",
@@ -5629,7 +5853,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518476000123",
@@ -5654,7 +5879,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522074000223",
@@ -5679,7 +5905,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_515248000123",
@@ -5704,7 +5931,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535591000123",
@@ -5729,7 +5957,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534242000123",
@@ -5754,7 +5983,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535648000123",
@@ -5779,7 +6009,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514055000323",
@@ -5804,7 +6035,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514500000123",
@@ -5829,7 +6061,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512303000123",
@@ -5854,7 +6087,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514250000123",
@@ -5879,7 +6113,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516872000123",
@@ -5904,7 +6139,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514160000123",
@@ -5929,7 +6165,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513490000123",
@@ -5954,7 +6191,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513687000123",
@@ -5979,7 +6217,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512370000123",
@@ -6004,7 +6243,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513954000123",
@@ -6029,7 +6269,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513539000223",
@@ -6054,7 +6295,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566462000123",
@@ -6079,7 +6321,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512850000123",
@@ -6104,7 +6347,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514080000123",
@@ -6129,7 +6373,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569631000123",
@@ -6154,7 +6399,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_572365000123",
@@ -6179,7 +6425,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571962000123",
@@ -6204,7 +6451,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560448000123",
@@ -6229,7 +6477,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575526000123",
@@ -6254,7 +6503,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560430000123",
@@ -6279,7 +6529,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558672000123",
@@ -6304,7 +6555,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556483000123",
@@ -6329,7 +6581,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554596000123",
@@ -6354,7 +6607,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560685000123",
@@ -6379,7 +6633,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554685000123",
@@ -6404,7 +6659,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560529000123",
@@ -6429,7 +6685,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514411000123",
@@ -6454,7 +6711,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512125000123",
@@ -6479,7 +6737,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512290000223",
@@ -6504,7 +6763,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510734000123",
@@ -6529,7 +6789,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510858000123",
@@ -6554,7 +6815,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150720000123",
@@ -6579,7 +6841,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115819000123",
@@ -6604,7 +6867,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511315000123",
@@ -6629,7 +6893,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115720000123",
@@ -6654,7 +6919,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510190000123",
@@ -6679,7 +6945,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511552000123",
@@ -6704,7 +6971,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510335000123",
@@ -6729,7 +6997,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510963000123",
@@ -6754,7 +7023,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115665000123",
@@ -6779,7 +7049,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511560000123",
@@ -6804,7 +7075,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115070000123",
@@ -6829,7 +7101,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114987000123",
@@ -6854,7 +7127,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115010000123",
@@ -6879,7 +7153,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115118000123",
@@ -6904,7 +7179,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554650000123",
@@ -6929,7 +7205,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115347000123",
@@ -6954,7 +7231,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550450000123",
@@ -6979,7 +7257,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115185000123",
@@ -7004,7 +7283,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554634000123",
@@ -7029,7 +7309,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554618000123",
@@ -7054,7 +7335,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554626000123",
@@ -7079,7 +7361,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554669000123",
@@ -7104,7 +7387,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550469000123",
@@ -7129,7 +7413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554600000123",
@@ -7154,7 +7439,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550426000123",
@@ -7179,7 +7465,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510939000223",
@@ -7204,7 +7491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511692000223",
@@ -7229,7 +7517,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512010000123",
@@ -7254,7 +7543,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514926000123",
@@ -7279,7 +7569,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550418000223",
@@ -7304,7 +7595,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511579000123",
@@ -7329,7 +7621,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112836000223",
@@ -7354,7 +7647,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513814000123",
@@ -7379,7 +7673,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_521990000123",
@@ -7404,7 +7699,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115193000123",
@@ -7429,7 +7725,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114146000123",
@@ -7454,7 +7751,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115240000123",
@@ -7479,7 +7777,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115134000123",
@@ -7504,7 +7803,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114863000123",
@@ -7529,7 +7829,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115177000123",
@@ -7554,7 +7855,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114960000123",
@@ -7579,7 +7881,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114944000123",
@@ -7604,7 +7907,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114790000123",
@@ -7629,7 +7933,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113409000223",
@@ -7654,7 +7959,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114561000123",
@@ -7679,7 +7985,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114979000223",
@@ -7704,7 +8011,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114804000123",
@@ -7729,7 +8037,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113972000123",
@@ -7754,7 +8063,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114430000123",
@@ -7779,7 +8089,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114774000123",
@@ -7804,7 +8115,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550396000123",
@@ -7829,7 +8141,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114715000123",
@@ -7854,7 +8167,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510181000223",
@@ -7879,7 +8193,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114910000123",
@@ -7904,7 +8219,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529532000123",
@@ -7929,7 +8245,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115622000123",
@@ -7954,7 +8271,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535796000123",
@@ -7979,7 +8297,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510920000223",
@@ -8004,7 +8323,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112992000123",
@@ -8029,7 +8349,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113980000223",
@@ -8054,7 +8375,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114200000223",
@@ -8079,7 +8401,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528986000123",
@@ -8104,7 +8427,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535664000123",
@@ -8129,7 +8453,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511242000223",
@@ -8154,7 +8479,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511196000123",
@@ -8179,7 +8505,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514446000223",
@@ -8204,7 +8531,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512192000123",
@@ -8229,7 +8557,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132853000123",
@@ -8254,7 +8583,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511676000123",
@@ -8279,7 +8609,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115398000123",
@@ -8304,7 +8635,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513253000123",
@@ -8329,7 +8661,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115703000123",
@@ -8354,7 +8687,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511137000123",
@@ -8379,7 +8713,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115533000123",
@@ -8404,7 +8739,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150819000123",
@@ -8429,7 +8765,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512044000123",
@@ -8454,7 +8791,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113778000123",
@@ -8479,7 +8817,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113433000123",
@@ -8504,7 +8843,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522040000123",
@@ -8529,7 +8869,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535788000123",
@@ -8554,7 +8895,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512060000123",
@@ -8579,7 +8921,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522171000123",
@@ -8604,7 +8947,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113751000123",
@@ -8629,7 +8973,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524581000123",
@@ -8654,7 +8999,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536377000123",
@@ -8679,7 +9025,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514365000123",
@@ -8704,7 +9051,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115657000123",
@@ -8729,7 +9077,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514454000123",
@@ -8754,7 +9103,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514390000123",
@@ -8779,7 +9129,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511358000123",
@@ -8804,7 +9155,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510971000123",
@@ -8829,7 +9181,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115606000123",
@@ -8854,7 +9207,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_515000000123",
@@ -8879,7 +9233,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513113000123",
@@ -8904,7 +9259,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115223000123",
@@ -8929,7 +9285,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115304000123",
@@ -8954,7 +9311,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511722000123",
@@ -8979,7 +9337,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115479000123",
@@ -9004,7 +9363,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115266000123",
@@ -9029,7 +9389,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150770000223",
@@ -9054,7 +9415,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115738000123",
@@ -9079,7 +9441,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512664000123",
@@ -9104,7 +9467,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114839000123",
@@ -9129,7 +9493,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530409000123",
@@ -9154,7 +9519,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513768000223",
@@ -9179,7 +9545,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512770000123",
@@ -9204,7 +9571,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518433000123",
@@ -9229,7 +9597,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512826000123",
@@ -9254,7 +9623,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115363000123",
@@ -9279,7 +9649,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513466000123",
@@ -9304,7 +9675,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114898000123",
@@ -9329,7 +9701,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511021000123",
@@ -9354,7 +9727,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115630000123",
@@ -9379,7 +9753,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114766000123",
@@ -9404,7 +9779,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511927000223",
@@ -9429,7 +9805,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510750000123",
@@ -9454,7 +9831,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115711000223",
@@ -9479,7 +9857,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115339000123",
@@ -9504,7 +9883,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511790000123",
@@ -9529,7 +9909,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115380000123",
@@ -9554,7 +9935,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522007000123",
@@ -9579,7 +9961,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550248000123",
@@ -9604,7 +9987,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529770000123",
@@ -9629,7 +10013,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114316000123",
@@ -9654,7 +10039,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539520000123",
@@ -9679,7 +10065,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_538809000123",
@@ -9704,7 +10091,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529249000123",
@@ -9729,7 +10117,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522180000223",
@@ -9754,7 +10143,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535680000123",
@@ -9779,7 +10169,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540200000123",
@@ -9804,7 +10195,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535613000123",
@@ -9829,7 +10221,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524824000123",
@@ -9854,7 +10247,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513849000123",
@@ -9879,7 +10273,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543276000123",
@@ -9904,7 +10299,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514136000123",
@@ -9929,7 +10325,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535699000123",
@@ -9954,7 +10351,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514713000123",
@@ -9979,7 +10377,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512052000123",
@@ -10004,7 +10403,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514837000123",
@@ -10029,7 +10429,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518468000123",
@@ -10054,7 +10455,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513083000123",
@@ -10079,7 +10481,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512443000123",
@@ -10104,7 +10507,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115797000123",
@@ -10129,7 +10533,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513555000123",
@@ -10154,7 +10559,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112550000323",
@@ -10179,7 +10585,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114472000123",
@@ -10204,7 +10611,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115002000223",
@@ -10229,7 +10637,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112755000123",
@@ -10254,7 +10663,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170054000123",
@@ -10279,7 +10689,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114510000223",
@@ -10304,7 +10715,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114880000123",
@@ -10329,7 +10741,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513644000123",
@@ -10354,7 +10767,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511420000123",
@@ -10379,7 +10793,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560634000123",
@@ -10404,7 +10819,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112950000223",
@@ -10429,7 +10845,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115100000123",
@@ -10454,7 +10871,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115460000123",
@@ -10479,7 +10897,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540218000123",
@@ -10504,7 +10923,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543268000123",
@@ -10529,7 +10949,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512648000123",
@@ -10554,7 +10975,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513610000123",
@@ -10579,7 +11001,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512591000123",
@@ -10604,7 +11027,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610160000223",
@@ -10629,7 +11053,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618128000123",
@@ -10654,7 +11079,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617407000123",
@@ -10679,7 +11105,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131806000123",
@@ -10704,7 +11131,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512842000233",
@@ -10729,7 +11157,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524590000133",
@@ -10754,7 +11183,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511307000133",
@@ -10779,7 +11209,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514802000133",
@@ -10804,7 +11235,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190586000133",
@@ -10829,7 +11261,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190144000133",
@@ -10854,7 +11287,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511030000333",
@@ -10879,7 +11313,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170720000133",
@@ -10904,7 +11339,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190500000133",
@@ -10929,7 +11365,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190454000133",
@@ -10954,7 +11391,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230774000133",
@@ -10979,7 +11417,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170461000133",
@@ -11004,7 +11443,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623857000133",
@@ -11029,7 +11469,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511170000133",
@@ -11054,7 +11495,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_283495000333",
@@ -11079,7 +11521,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270148000133",
@@ -11104,7 +11547,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230820000133",
@@ -11129,7 +11573,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512818000133",
@@ -11154,7 +11599,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536547000233",
@@ -11179,7 +11625,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524557000133",
@@ -11204,7 +11651,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510912000133",
@@ -11229,7 +11677,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270067000133",
@@ -11254,7 +11703,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230782000133",
@@ -11279,7 +11729,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270083000133",
@@ -11304,7 +11755,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530247000133",
@@ -11329,7 +11781,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511854000133",
@@ -11354,7 +11807,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190411000133",
@@ -11379,7 +11833,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113794000133",
@@ -11404,7 +11859,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519006000133",
@@ -11429,7 +11885,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190187000233",
@@ -11454,7 +11911,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190667000133",
@@ -11479,7 +11937,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230839000133",
@@ -11504,7 +11963,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213195000133",
@@ -11529,7 +11989,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270040000133",
@@ -11554,7 +12015,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170267000233",
@@ -11579,7 +12041,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190152000133",
@@ -11604,7 +12067,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190195000133",
@@ -11629,7 +12093,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230456000133",
@@ -11654,7 +12119,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230758000133",
@@ -11679,7 +12145,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170852000233",
@@ -11704,7 +12171,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190578000133",
@@ -11729,7 +12197,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190470000133",
@@ -11754,7 +12223,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524816000133",
@@ -11779,7 +12249,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230855000133",
@@ -11804,7 +12275,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270180000133",
@@ -11829,7 +12301,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545228000133",
@@ -11854,7 +12327,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190560000133",
@@ -11879,7 +12353,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170577000133",
@@ -11904,7 +12379,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_316628000133",
@@ -11929,7 +12405,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560499000133",
@@ -11954,7 +12431,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230790000133",
@@ -11979,7 +12457,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512869000133",
@@ -12004,7 +12483,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529761000133",
@@ -12029,7 +12509,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_212318000133",
@@ -12054,7 +12535,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529990000233",
@@ -12079,7 +12561,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133078000133",
@@ -12104,7 +12587,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_130893000233",
@@ -12129,7 +12613,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190268000133",
@@ -12154,7 +12639,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510580000233",
@@ -12179,7 +12665,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190683000133",
@@ -12204,7 +12691,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190209000133",
@@ -12229,7 +12717,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_283002000133",
@@ -12254,7 +12743,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114120000133",
@@ -12278,7 +12768,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170755000133",
@@ -12303,7 +12794,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210129000133",
@@ -12328,7 +12820,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190764000133",
@@ -12353,7 +12846,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190241000133",
@@ -12378,7 +12872,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514047000133",
@@ -12403,7 +12898,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190420000133",
@@ -12428,7 +12924,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190497000133",
@@ -12453,7 +12950,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270091000133",
@@ -12478,7 +12976,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213845000133",
@@ -12503,7 +13002,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190390000133",
@@ -12528,7 +13028,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322857000133",
@@ -12553,7 +13054,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530441000133",
@@ -12578,7 +13080,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529656000133",
@@ -12603,7 +13106,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170437000133",
@@ -12628,7 +13132,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516988000233",
@@ -12653,7 +13158,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518409000133",
@@ -12678,7 +13184,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210277000133",
@@ -12703,7 +13210,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_135712000133",
@@ -12728,7 +13236,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170593000133",
@@ -12753,7 +13262,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132209000133",
@@ -12778,7 +13288,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170801000233",
@@ -12803,7 +13314,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522155000133",
@@ -12828,7 +13340,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214965000133",
@@ -12853,7 +13366,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170305000133",
@@ -12878,7 +13392,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114111000133",
@@ -12903,7 +13418,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_316377000133",
@@ -12928,7 +13444,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512583000133",
@@ -12953,7 +13470,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230510000133",
@@ -12978,7 +13496,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537152000233",
@@ -13003,7 +13522,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190250000133",
@@ -13028,7 +13548,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270105000133",
@@ -13053,7 +13574,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230928000133",
@@ -13078,7 +13600,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190691000133",
@@ -13103,7 +13626,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190594000133",
@@ -13128,7 +13652,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511030000133",
@@ -13153,7 +13678,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190080000133",
@@ -13178,7 +13704,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513407000133",
@@ -13203,7 +13730,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132756000133",
@@ -13228,7 +13756,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190373000133",
@@ -13253,7 +13782,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190110000133",
@@ -13278,7 +13808,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190055000133",
@@ -13303,7 +13834,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536580000133",
@@ -13328,7 +13860,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170135000133",
@@ -13353,7 +13886,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214973000133",
@@ -13378,7 +13912,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190705000133",
@@ -13403,7 +13938,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170526000133",
@@ -13428,7 +13964,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541168000133",
@@ -13453,7 +13990,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190780000133",
@@ -13478,7 +14016,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513997000133",
@@ -13503,7 +14042,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_284955000133",
@@ -13528,7 +14068,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215139000133",
@@ -13553,7 +14094,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510459000133",
@@ -13578,7 +14120,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_310042000133",
@@ -13603,7 +14146,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541842000233",
@@ -13628,7 +14172,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513288000133",
@@ -13653,7 +14198,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230910000133",
@@ -13678,7 +14224,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_212067000133",
@@ -13703,7 +14250,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170666000133",
@@ -13728,7 +14276,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190519000133",
@@ -13753,7 +14302,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170364000133",
@@ -13778,7 +14328,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170410000133",
@@ -13803,7 +14354,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170372000133",
@@ -13828,7 +14380,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_171000000233",
@@ -13853,7 +14406,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170658000133",
@@ -13878,7 +14432,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133469000133",
@@ -13903,7 +14458,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210528000133",
@@ -13928,7 +14484,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170089000133",
@@ -13953,7 +14510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170500000133",
@@ -13978,7 +14536,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190233000133",
@@ -14003,7 +14562,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514144000233",
@@ -14028,7 +14588,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_135968000233",
@@ -14053,7 +14614,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514276000133",
@@ -14078,7 +14640,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524530000133",
@@ -14103,7 +14666,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510890000133",
@@ -14127,7 +14691,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170100000133",
@@ -14152,7 +14717,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519111000233",
@@ -14177,7 +14743,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_171042000233",
@@ -14202,7 +14769,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513300000233",
@@ -14227,7 +14795,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517011000133",
@@ -14252,7 +14821,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511650000133",
@@ -14277,7 +14847,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230936000133",
@@ -14302,7 +14873,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270024000133",
@@ -14327,7 +14899,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250740000133",
@@ -14352,7 +14925,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230847000133",
@@ -14377,7 +14951,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190810000133",
@@ -14402,7 +14977,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510203000133",
@@ -14427,7 +15003,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170534000133",
@@ -14452,7 +15029,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_171018000133",
@@ -14477,7 +15055,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510831000133",
@@ -14502,7 +15081,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190802000133",
@@ -14527,7 +15107,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510998000133",
@@ -14552,7 +15133,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190098000133",
@@ -14577,7 +15159,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519162000233",
@@ -14602,7 +15185,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170542000133",
@@ -14627,7 +15211,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260312000133",
@@ -14652,7 +15237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_527467000233",
@@ -14677,7 +15263,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190888000233",
@@ -14702,7 +15289,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510475000133",
@@ -14727,7 +15315,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524808000133",
@@ -14752,7 +15341,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516970000133",
@@ -14777,7 +15367,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170763000233",
@@ -14802,7 +15393,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514110000233",
@@ -14827,7 +15419,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511617000133",
@@ -14852,7 +15445,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170445000233",
@@ -14877,7 +15471,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516961000133",
@@ -14902,7 +15497,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170810000233",
@@ -14927,7 +15523,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170569000133",
@@ -14952,7 +15549,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170607000133",
@@ -14977,7 +15575,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_284939000133",
@@ -15002,7 +15601,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530450000133",
@@ -15027,7 +15627,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213209000133",
@@ -15052,7 +15653,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512605000133",
@@ -15077,7 +15679,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_211265000133",
@@ -15101,7 +15704,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552666000133",
@@ -15126,7 +15730,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530352000133",
@@ -15151,7 +15756,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545201000133",
@@ -15176,7 +15782,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190403000133",
@@ -15201,7 +15808,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_171026000133",
@@ -15226,7 +15834,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170631000133",
@@ -15251,7 +15860,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113182000133",
@@ -15276,7 +15886,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230901000133",
@@ -15301,7 +15912,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230472000133",
@@ -15326,7 +15938,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517020000133",
@@ -15351,7 +15964,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514330000133",
@@ -15376,7 +15990,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170488000133",
@@ -15401,7 +16016,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170690000133",
@@ -15426,7 +16042,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170780000133",
@@ -15451,7 +16068,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190330000133",
@@ -15476,7 +16094,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517160000233",
@@ -15501,7 +16120,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170984000133",
@@ -15526,7 +16146,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_135011000133",
@@ -15551,7 +16172,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524573000133",
@@ -15576,7 +16198,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535761000133",
@@ -15601,7 +16224,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190071000133",
@@ -15626,7 +16250,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170968000133",
@@ -15651,7 +16276,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190063000133",
@@ -15676,7 +16302,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190020000133",
@@ -15701,7 +16328,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170518000133",
@@ -15726,7 +16354,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133124000133",
@@ -15750,7 +16379,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170925000133",
@@ -15775,7 +16405,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170844000233",
@@ -15800,7 +16431,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_113840000133",
@@ -15825,7 +16457,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132918000133",
@@ -15850,7 +16483,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131709000133",
@@ -15875,7 +16509,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170097000133",
@@ -15900,7 +16535,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522082000133",
@@ -15925,7 +16561,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190381000133",
@@ -15950,7 +16587,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545198000133",
@@ -15975,7 +16613,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230120000133",
@@ -16000,7 +16639,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230812000133",
@@ -16025,7 +16665,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230804000133",
@@ -16050,7 +16691,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230421000133",
@@ -16075,7 +16717,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230430000133",
@@ -16100,7 +16743,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230880000133",
@@ -16125,7 +16769,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230766000133",
@@ -16150,7 +16795,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270156000133",
@@ -16175,7 +16821,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514268000133",
@@ -16200,7 +16847,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270032000133",
@@ -16225,7 +16873,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270202000133",
@@ -16250,7 +16899,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270172000133",
@@ -16275,7 +16925,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270121000133",
@@ -16300,7 +16951,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170186000133",
@@ -16325,7 +16977,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_311863000133",
@@ -16350,7 +17003,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170046000133",
@@ -16375,7 +17029,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170313000133",
@@ -16400,7 +17055,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214957000133",
@@ -16425,7 +17081,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552917000133",
@@ -16450,7 +17107,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170585000133",
@@ -16475,7 +17133,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170470000133",
@@ -16500,7 +17159,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190837000133",
@@ -16525,7 +17185,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190527000233",
@@ -16550,7 +17211,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190349000133",
@@ -16575,7 +17237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190136000133",
@@ -16600,7 +17263,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170704000133",
@@ -16625,7 +17289,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522058000133",
@@ -16650,7 +17315,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522074000233",
@@ -16675,7 +17341,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190306000133",
@@ -16700,7 +17367,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190659000133",
@@ -16725,7 +17393,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518417000133",
@@ -16750,7 +17419,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190535000133",
@@ -16775,7 +17445,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230740000133",
@@ -16800,7 +17471,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_282758000233",
@@ -16825,7 +17497,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190632000133",
@@ -16850,7 +17523,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170402000133",
@@ -16875,7 +17549,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214590000133",
@@ -16900,7 +17575,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190616000133",
@@ -16925,7 +17601,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170550000133",
@@ -16950,7 +17627,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_212431000133",
@@ -16975,7 +17653,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190870000133",
@@ -17000,7 +17679,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190756000133",
@@ -17025,7 +17705,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170615000133",
@@ -17050,7 +17731,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230871000133",
@@ -17075,7 +17757,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214990000133",
@@ -17100,7 +17783,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230286000233",
@@ -17125,7 +17809,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270199000133",
@@ -17150,7 +17835,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170216000133",
@@ -17175,7 +17861,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511943000133",
@@ -17200,7 +17887,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190489000133",
@@ -17225,7 +17913,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519162000133",
@@ -17250,7 +17939,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190799000133",
@@ -17275,7 +17965,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214485000233",
@@ -17300,7 +17991,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512141000233",
@@ -17325,7 +18017,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_320609000133",
@@ -17350,7 +18043,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511102000133",
@@ -17375,7 +18069,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214426000133",
@@ -17399,7 +18094,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213764000133",
@@ -17424,7 +18120,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213195000233",
@@ -17449,7 +18146,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213705000133",
@@ -17474,7 +18172,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230057000133",
@@ -17499,7 +18198,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190551000133",
@@ -17524,7 +18224,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_212725000133",
@@ -17549,7 +18250,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213292000133",
@@ -17574,7 +18276,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190721000133",
@@ -17599,7 +18302,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190730000133",
@@ -17624,7 +18328,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190462000133",
@@ -17649,7 +18354,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190748000133",
@@ -17674,7 +18380,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190772000133",
@@ -17699,7 +18406,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170771000233",
@@ -17724,7 +18432,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190179000133",
@@ -17749,7 +18458,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190217000133",
@@ -17774,7 +18484,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151335000133",
@@ -17799,7 +18510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170933000133",
@@ -17824,7 +18536,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530778000133",
@@ -17849,7 +18562,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512281000133",
@@ -17874,7 +18588,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270130000133",
@@ -17899,7 +18614,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_521981000133",
@@ -17924,7 +18640,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510599000133",
@@ -17949,7 +18666,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190896000233",
@@ -17974,7 +18692,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524549000133",
@@ -17999,7 +18718,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170682000133",
@@ -18024,7 +18744,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170143000133",
@@ -18049,7 +18770,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132764000133",
@@ -18073,7 +18795,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190438000133",
@@ -18098,7 +18821,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170429000233",
@@ -18123,7 +18847,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518360000133",
@@ -18148,7 +18873,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530034000133",
@@ -18173,7 +18899,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514101000133",
@@ -18198,7 +18925,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210137000133",
@@ -18223,7 +18951,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545147000133",
@@ -18248,7 +18977,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518379000133",
@@ -18273,7 +19003,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541850000233",
@@ -18298,7 +19029,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514020000133",
@@ -18323,7 +19055,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523208000133",
@@ -18348,7 +19081,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530689000133",
@@ -18373,7 +19107,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518310000133",
@@ -18398,7 +19133,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230898000133",
@@ -18423,7 +19159,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214981000133",
@@ -18448,7 +19185,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512710000133",
@@ -18473,7 +19211,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_285285000133",
@@ -18498,7 +19237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190284000133",
@@ -18523,7 +19263,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170623000133",
@@ -18548,7 +19289,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190292000133",
@@ -18573,7 +19315,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190160000133",
@@ -18598,7 +19341,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190357000133",
@@ -18623,7 +19367,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170453000133",
@@ -18648,7 +19393,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190012000133",
@@ -18673,7 +19419,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170321000133",
@@ -18698,7 +19445,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170283000133",
@@ -18723,7 +19471,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170178000133",
@@ -18748,7 +19497,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170380000133",
@@ -18773,7 +19523,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152196000133",
@@ -18798,7 +19549,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512834000133",
@@ -18823,7 +19575,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190446000133",
@@ -18848,7 +19601,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536539000133",
@@ -18873,7 +19627,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190640000133",
@@ -18898,7 +19653,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112810000133",
@@ -18923,7 +19679,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518395000133",
@@ -18948,7 +19705,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_191671000133",
@@ -18973,7 +19731,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170291000133",
@@ -18998,7 +19757,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114081000133",
@@ -19023,7 +19783,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_270075000133",
@@ -19048,7 +19809,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190101000133",
@@ -19073,7 +19835,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513067000133",
@@ -19098,7 +19861,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523305000133",
@@ -19123,7 +19887,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_313076000133",
@@ -19148,7 +19913,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190225000133",
@@ -19173,7 +19939,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214477000133",
@@ -19198,7 +19965,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190853000233",
@@ -19223,7 +19991,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170976000133",
@@ -19248,7 +20017,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230863000133",
@@ -19273,7 +20043,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210536000133",
@@ -19297,7 +20068,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190187000133",
@@ -19322,7 +20094,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529788000133",
@@ -19347,7 +20120,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_212636000133",
@@ -19372,7 +20146,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170208000133",
@@ -19397,7 +20172,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_211990000233",
@@ -19422,7 +20198,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514128000133",
@@ -19447,7 +20224,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560480000133",
@@ -19472,7 +20250,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214752000233",
@@ -19497,7 +20276,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215040000133",
@@ -19522,7 +20302,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518387000133",
@@ -19547,7 +20328,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170496000133",
@@ -19572,7 +20354,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210390000133",
@@ -19597,7 +20380,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_311103000233",
@@ -19622,7 +20406,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190624000133",
@@ -19647,7 +20432,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522090000133",
@@ -19672,7 +20458,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530018000133",
@@ -19697,7 +20484,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190845000133",
@@ -19722,7 +20510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190667000233",
@@ -19747,7 +20536,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512869000233",
@@ -19772,7 +20562,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190780000233",
@@ -19797,7 +20588,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512605000233",
@@ -19822,7 +20614,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250627000133",
@@ -19847,7 +20640,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250627000123",
@@ -19872,7 +20666,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250490000133",
@@ -19897,7 +20692,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250490000123",
@@ -19922,7 +20718,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250368000123",
@@ -19947,7 +20744,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250368000133",
@@ -19972,7 +20770,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250317000233",
@@ -19997,7 +20796,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250317000223",
@@ -20022,7 +20822,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114448000133",
@@ -20047,7 +20848,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114448000123",
@@ -20072,7 +20874,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114227000223",
@@ -20097,7 +20900,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_114227000233",
@@ -20122,7 +20926,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250139000133",
@@ -20147,7 +20952,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250139000123",
@@ -20172,7 +20978,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250309000133",
@@ -20197,7 +21004,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250309000123",
@@ -20222,7 +21030,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250244000433",
@@ -20247,7 +21056,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250244000423",
@@ -20272,7 +21082,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215002023",
@@ -20297,7 +21108,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260339000123",
@@ -20322,7 +21134,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_608491000133",
@@ -20347,7 +21160,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001133",
@@ -20372,7 +21186,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000723",
@@ -20397,7 +21212,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000733",
@@ -20422,7 +21238,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250384000323",
@@ -20447,7 +21264,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250384000333",
@@ -20472,7 +21290,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250473000323",
@@ -20497,7 +21316,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250473000333",
@@ -20522,7 +21342,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001123",
@@ -20547,7 +21368,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250732000223",
@@ -20572,7 +21394,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250449000233",
@@ -20597,7 +21420,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250449000223",
@@ -20622,7 +21446,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250546000133",
@@ -20647,7 +21472,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250546000123",
@@ -20672,7 +21498,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250228000223",
@@ -20697,7 +21524,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250228000233",
@@ -20722,7 +21550,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250422000233",
@@ -20747,7 +21576,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250422000223",
@@ -20772,7 +21602,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250627000233",
@@ -20797,7 +21628,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250627000223",
@@ -20822,7 +21654,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250147000123",
@@ -20847,7 +21680,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250147000133",
@@ -20872,7 +21706,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250589000333",
@@ -20897,7 +21732,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250589000323",
@@ -20922,7 +21758,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260150000123",
@@ -20947,7 +21784,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260150000133",
@@ -20972,7 +21810,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618276000133",
@@ -20997,7 +21836,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618276000123",
@@ -21022,7 +21862,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250538000123",
@@ -21047,7 +21888,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250732000233",
@@ -21072,7 +21914,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260266000133",
@@ -21097,7 +21940,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250589000123",
@@ -21122,7 +21966,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250031000123",
@@ -21147,7 +21992,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250031000133",
@@ -21172,7 +22018,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250325000323",
@@ -21197,7 +22044,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250325000333",
@@ -21222,7 +22070,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250538000133",
@@ -21247,7 +22096,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260142000133",
@@ -21272,7 +22122,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250333000323",
@@ -21297,7 +22148,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250341000123",
@@ -21322,7 +22174,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250201000123",
@@ -21347,7 +22200,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250619000223",
@@ -21372,7 +22226,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260142000123",
@@ -21397,7 +22252,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250201000133",
@@ -21422,7 +22278,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250333000333",
@@ -21447,7 +22304,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250236000123",
@@ -21472,7 +22330,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250236000133",
@@ -21497,7 +22356,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250465000323",
@@ -21522,7 +22382,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250619000233",
@@ -21547,7 +22408,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250465000333",
@@ -21572,7 +22434,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250651000133",
@@ -21597,7 +22460,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250082000133",
@@ -21622,7 +22486,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250651000123",
@@ -21647,7 +22512,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250082000123",
@@ -21672,7 +22538,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250074000233",
@@ -21697,7 +22564,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250074000223",
@@ -21722,7 +22590,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250520000233",
@@ -21747,7 +22616,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250503000123",
@@ -21772,7 +22642,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260320000123",
@@ -21797,7 +22668,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112526000123",
@@ -21822,7 +22694,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250406000233",
@@ -21847,7 +22720,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250503000133",
@@ -21872,7 +22746,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250406000223",
@@ -21897,7 +22772,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112526000133",
@@ -21922,7 +22798,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250163000123",
@@ -21947,7 +22824,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250341000133",
@@ -21972,7 +22850,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250350000123",
@@ -21997,7 +22876,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250350000133",
@@ -22022,7 +22902,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250376000133",
@@ -22047,7 +22928,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250457000233",
@@ -22072,7 +22954,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250376000123",
@@ -22097,7 +22980,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250457000223",
@@ -22122,7 +23006,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250163000133",
@@ -22147,7 +23032,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250520000223",
@@ -22172,7 +23058,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250112000133",
@@ -22197,7 +23084,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250112000123",
@@ -22222,7 +23110,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260339000133",
@@ -22247,7 +23136,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260282000133",
@@ -22272,7 +23162,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260320000133",
@@ -22297,7 +23188,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260290000123",
@@ -22322,7 +23214,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250279000123",
@@ -22347,7 +23240,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250279000133",
@@ -22372,7 +23266,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260290000133",
@@ -22397,7 +23292,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260037000133",
@@ -22422,7 +23318,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260037000123",
@@ -22447,7 +23344,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260304000223",
@@ -22472,7 +23370,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260304000233",
@@ -22497,7 +23396,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250600000333",
@@ -22522,7 +23422,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250481000133",
@@ -22547,7 +23448,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250392000223",
@@ -22572,7 +23474,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250392000233",
@@ -22597,7 +23500,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250481000123",
@@ -22622,7 +23526,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324574000223",
@@ -22647,7 +23552,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250635000133",
@@ -22672,7 +23578,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250635000123",
@@ -22697,7 +23604,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250210000233",
@@ -22722,7 +23630,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250210000223",
@@ -22747,7 +23656,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324574000233",
@@ -22772,7 +23682,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250414000333",
@@ -22797,7 +23708,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250414000323",
@@ -22822,7 +23734,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260266000123",
@@ -22847,7 +23760,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250589000133",
@@ -22872,7 +23786,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_250600000323",
@@ -22897,7 +23812,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_154105000233",
@@ -22922,7 +23838,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_313343000233",
@@ -22947,7 +23864,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_154105000223",
@@ -22972,7 +23890,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615471000123",
@@ -22997,7 +23916,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_313343000223",
@@ -23022,7 +23942,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615471000133",
@@ -23047,7 +23968,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215002033",
@@ -23072,7 +23994,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001923",
@@ -23097,7 +24020,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001933",
@@ -23122,7 +24046,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001733",
@@ -23147,7 +24072,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001723",
@@ -23172,7 +24098,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000133",
@@ -23197,7 +24124,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000123",
@@ -23222,7 +24150,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000333",
@@ -23247,7 +24176,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001433",
@@ -23272,7 +24202,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001033",
@@ -23297,7 +24228,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000633",
@@ -23322,7 +24254,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000623",
@@ -23347,7 +24280,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000533",
@@ -23372,7 +24306,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000833",
@@ -23397,7 +24332,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000823",
@@ -23422,7 +24358,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001023",
@@ -23447,7 +24384,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000523",
@@ -23472,7 +24410,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000923",
@@ -23497,7 +24436,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000933",
@@ -23522,7 +24462,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001223",
@@ -23547,7 +24488,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000233",
@@ -23572,7 +24514,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001233",
@@ -23597,7 +24540,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001333",
@@ -23622,7 +24566,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001323",
@@ -23647,7 +24592,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001623",
@@ -23672,7 +24618,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001523",
@@ -23697,7 +24644,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001633",
@@ -23722,7 +24670,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001533",
@@ -23747,7 +24696,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215001423",
@@ -23772,7 +24722,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000433",
@@ -23797,7 +24748,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000223",
@@ -23822,7 +24774,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000323",
@@ -23847,7 +24800,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_260215000423",
@@ -23872,7 +24826,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_134724000133",
@@ -23897,7 +24852,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133183000133",
@@ -23922,7 +24878,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514187000323",
@@ -23947,7 +24904,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571504000223",
@@ -23972,7 +24930,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170070000323",
@@ -23997,7 +24956,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560553000123",
@@ -24022,7 +24982,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510777000123",
@@ -24047,7 +25008,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579319000123",
@@ -24072,7 +25034,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567337000123",
@@ -24096,7 +25059,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579530000123",
@@ -24121,7 +25085,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569895000123",
@@ -24146,7 +25111,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550477000123",
@@ -24171,7 +25137,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_115207000123",
@@ -24196,7 +25163,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512079000223",
@@ -24221,7 +25189,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_529796000123",
@@ -24246,7 +25215,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567353000123",
@@ -24271,7 +25241,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539961000123",
@@ -24296,7 +25267,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571504000123",
@@ -24321,7 +25293,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567000000123",
@@ -24346,7 +25319,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542105000323",
@@ -24371,7 +25345,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540234000123",
@@ -24396,7 +25371,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543314000223",
@@ -24421,7 +25397,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569909000123",
@@ -24446,7 +25423,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543292000323",
@@ -24471,7 +25449,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543292000223",
@@ -24496,7 +25475,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231622000133",
@@ -24521,7 +25501,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151807000133",
@@ -24546,7 +25527,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_211338000133",
@@ -24570,7 +25552,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_564419000133",
@@ -24595,7 +25578,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513369000133",
@@ -24620,7 +25604,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560553000133",
@@ -24645,7 +25630,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560472000133",
@@ -24669,7 +25655,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_568287000133",
@@ -24694,7 +25681,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558044000233",
@@ -24719,7 +25707,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536598000133",
@@ -24744,7 +25733,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558567000133",
@@ -24769,7 +25759,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543314000333",
@@ -24794,7 +25785,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542105000333",
@@ -24819,7 +25811,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514209000133",
@@ -24844,7 +25837,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552801000233",
@@ -24869,7 +25863,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216143000133",
@@ -24894,7 +25889,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558060000233",
@@ -24919,7 +25915,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190829000133",
@@ -24944,7 +25941,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552836000133",
@@ -24969,7 +25967,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133477000133",
@@ -24994,7 +25993,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558079000133",
@@ -25019,7 +26019,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567337000133",
@@ -25043,7 +26044,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510777000133",
@@ -25068,7 +26070,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579530000133",
@@ -25093,7 +26096,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552828000333",
@@ -25118,7 +26122,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_553700000133",
@@ -25143,7 +26148,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213039000133",
@@ -25168,7 +26174,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230030000533",
@@ -25193,7 +26200,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552844000233",
@@ -25218,7 +26226,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214930000133",
@@ -25243,7 +26252,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214906000133",
@@ -25268,7 +26278,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131318000133",
@@ -25293,7 +26304,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536571000133",
@@ -25318,7 +26330,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_134333000133",
@@ -25343,7 +26356,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511536000333",
@@ -25368,7 +26382,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558095000233",
@@ -25393,7 +26408,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_515027000233",
@@ -25418,7 +26434,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511960000533",
@@ -25443,7 +26460,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131814000133",
@@ -25468,7 +26486,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511935000133",
@@ -25493,7 +26512,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536563000133",
@@ -25518,7 +26538,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552810000133",
@@ -25543,7 +26564,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512079000233",
@@ -25568,7 +26590,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511714000133",
@@ -25593,7 +26616,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190128000133",
@@ -25618,7 +26642,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567353000133",
@@ -25643,7 +26668,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510980000133",
@@ -25668,7 +26694,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514217000133",
@@ -25693,7 +26720,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132837000133",
@@ -25718,7 +26746,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170712000133",
@@ -25743,7 +26772,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536857000133",
@@ -25768,7 +26798,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150894000133",
@@ -25793,7 +26824,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543292000233",
@@ -25818,7 +26850,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541532000133",
@@ -25843,7 +26876,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512915000133",
@@ -25868,7 +26902,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131385000133",
@@ -25893,7 +26928,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549487000133",
@@ -25918,7 +26954,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131814000333",
@@ -25943,7 +26980,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190543000123",
@@ -25968,7 +27006,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170887000123",
@@ -25992,7 +27031,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_171034000123",
@@ -26017,7 +27057,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170879000123",
@@ -26041,7 +27082,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170860000123",
@@ -26065,7 +27107,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_171034000223",
@@ -26090,7 +27133,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170348000123",
@@ -26115,7 +27159,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_250686000223",
@@ -26140,7 +27185,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170895000123",
@@ -26165,7 +27211,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170909000123",
@@ -26190,7 +27237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170747000123",
@@ -26214,7 +27262,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170399000133",
@@ -26238,7 +27287,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_190314000233",
@@ -26262,7 +27312,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_190314000133",
@@ -26286,7 +27337,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_170836000133",
@@ -26311,7 +27363,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_250686000233",
@@ -26336,7 +27389,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170992000133",
@@ -26361,7 +27415,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_170917000133",
@@ -26386,7 +27441,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_510742000223",
@@ -26411,7 +27467,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_572403000123",
@@ -26436,7 +27493,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543551000123",
@@ -26461,7 +27519,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510823000123",
@@ -26486,7 +27545,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510254000223",
@@ -26511,7 +27571,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536989000123",
@@ -26536,7 +27597,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_572373000123",
@@ -26561,7 +27623,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510157000123",
@@ -26586,7 +27649,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510530000123",
@@ -26611,7 +27675,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510238000123",
@@ -26636,7 +27701,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510360000123",
@@ -26661,7 +27727,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510084000123",
@@ -26686,7 +27753,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534196000123",
@@ -26711,7 +27779,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571180000123",
@@ -26736,7 +27805,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510513000123",
@@ -26761,7 +27831,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510718000123",
@@ -26786,7 +27857,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510874000123",
@@ -26811,7 +27883,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528773000123",
@@ -26836,7 +27909,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528781000123",
@@ -26861,7 +27935,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510602000123",
@@ -26886,7 +27961,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516848000123",
@@ -26911,7 +27987,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510289000123",
@@ -26936,7 +28013,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510696000123",
@@ -26961,7 +28039,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510882000123",
@@ -26986,7 +28065,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510050000123",
@@ -27011,7 +28091,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539180000123",
@@ -27036,7 +28117,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510629000123",
@@ -27061,7 +28143,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510785000123",
@@ -27086,7 +28169,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539171000123",
@@ -27111,7 +28195,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601667000123",
@@ -27136,7 +28221,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510505000123",
@@ -27161,7 +28247,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510130000123",
@@ -27186,7 +28273,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510688000123",
@@ -27211,7 +28299,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510432000133",
@@ -27235,7 +28324,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510556000133",
@@ -27260,7 +28350,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536997000133",
@@ -27285,7 +28376,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510661000133",
@@ -27310,7 +28402,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510483000133",
@@ -27335,7 +28428,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510092000133",
@@ -27360,7 +28454,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510467000133",
@@ -27385,7 +28480,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510440000133",
@@ -27410,7 +28506,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510394000133",
@@ -27435,7 +28532,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510645000133",
@@ -27460,7 +28558,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510424000133",
@@ -27485,7 +28584,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510408000133",
@@ -27509,7 +28609,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510165000133",
@@ -27534,7 +28635,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510700000133",
@@ -27559,7 +28661,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510297000133",
@@ -27584,7 +28687,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510076000133",
@@ -27609,7 +28713,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510262000133",
@@ -27634,7 +28739,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510378000133",
@@ -27659,7 +28765,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510416000133",
@@ -27684,7 +28791,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510114000133",
@@ -27709,7 +28817,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510025000133",
@@ -27734,7 +28843,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510033000133",
@@ -27759,7 +28869,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510041000133",
@@ -27784,7 +28895,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510386000133",
@@ -27809,7 +28921,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510610000133",
@@ -27834,7 +28947,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510491000133",
@@ -27859,7 +28973,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510521000133",
@@ -27884,7 +28999,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510270000133",
@@ -27909,7 +29025,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510220000133",
@@ -27934,7 +29051,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_511072000133",
@@ -27959,7 +29077,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534579000123",
@@ -27984,7 +29103,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_548430000623",
@@ -28009,7 +29129,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_570370000423",
@@ -28034,7 +29155,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216186000423",
@@ -28058,7 +29180,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215406000423",
@@ -28082,7 +29205,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_605557000123",
@@ -28107,7 +29231,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_325147000223",
@@ -28132,7 +29257,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215791000123",
@@ -28157,7 +29283,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215406000123",
@@ -28181,7 +29308,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214558000221",
@@ -28206,7 +29334,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216011000523",
@@ -28231,7 +29360,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230987000123",
@@ -28256,7 +29386,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_518620000123",
@@ -28281,7 +29412,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_527882000123",
@@ -28306,7 +29438,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_317357000123",
@@ -28331,7 +29464,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216186000323",
@@ -28355,7 +29489,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_518620000223",
@@ -28380,7 +29515,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_590800000123",
@@ -28405,7 +29541,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_287695000223",
@@ -28430,7 +29567,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216003000223",
@@ -28455,7 +29593,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_598356000223",
@@ -28480,7 +29619,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_213772000123",
@@ -28505,7 +29645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215520000123",
@@ -28530,7 +29671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216127000123",
@@ -28555,7 +29697,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214558000123",
@@ -28580,7 +29723,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216275000623",
@@ -28605,7 +29749,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_325147000623",
@@ -28630,7 +29775,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_522775000123",
@@ -28655,7 +29801,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_539155000323",
@@ -28680,7 +29827,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_325147000423",
@@ -28705,7 +29853,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216216000123",
@@ -28730,7 +29879,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215589000123",
@@ -28755,7 +29905,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214949000523",
@@ -28780,7 +29931,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_541915000123",
@@ -28805,7 +29957,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_570370000323",
@@ -28830,7 +29983,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214558000121",
@@ -28855,7 +30009,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_518620000423",
@@ -28880,7 +30035,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214949000123",
@@ -28905,7 +30061,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_606766000123",
@@ -28930,7 +30087,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_603902000123",
@@ -28955,7 +30113,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_607525000123",
@@ -28980,7 +30139,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214949000723",
@@ -29005,7 +30165,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_132730000223",
@@ -29030,7 +30191,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230979000123",
@@ -29055,7 +30217,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_534579000133",
@@ -29080,7 +30243,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215406000433",
@@ -29104,7 +30268,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_548430000633",
@@ -29129,7 +30294,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216186000433",
@@ -29153,7 +30319,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_570370000333",
@@ -29178,7 +30345,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_598356000333",
@@ -29203,7 +30371,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_605557000133",
@@ -29228,7 +30397,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215791000133",
@@ -29253,7 +30423,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216003000433",
@@ -29278,7 +30449,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216011000533",
@@ -29303,7 +30475,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_287695000233",
@@ -29328,7 +30501,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230987000233",
@@ -29353,7 +30527,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215996000133",
@@ -29378,7 +30553,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_539155000333",
@@ -29403,7 +30579,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214558000133",
@@ -29428,7 +30605,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215589000133",
@@ -29453,7 +30631,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216275000633",
@@ -29478,7 +30657,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216216000133",
@@ -29503,7 +30683,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_213772000233",
@@ -29528,7 +30709,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_590800000133",
@@ -29553,7 +30735,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230987000133",
@@ -29578,7 +30761,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214949000433",
@@ -29603,7 +30787,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_578789000133",
@@ -29628,7 +30813,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_317357000133",
@@ -29653,7 +30839,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_606766000133",
@@ -29678,7 +30865,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_603902000133",
@@ -29703,7 +30891,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_214949000733",
@@ -29728,7 +30917,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_601861000112",
@@ -29753,7 +30943,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601861000111",
@@ -29778,7 +30969,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157406000113",
@@ -29803,7 +30995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133779000112",
@@ -29828,7 +31021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133779000111",
@@ -29853,7 +31047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615366000113",
@@ -29877,7 +31072,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514659000112",
@@ -29902,7 +31098,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514659000113",
@@ -29927,7 +31124,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514659000111",
@@ -29952,7 +31150,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513350000112",
@@ -29977,7 +31176,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513350000111",
@@ -30002,7 +31202,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548430000611",
@@ -30027,7 +31228,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_152269000112",
@@ -30052,7 +31254,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152269000111",
@@ -30077,7 +31280,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158640000111",
@@ -30102,7 +31306,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158640000112",
@@ -30127,7 +31332,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158640000113",
@@ -30152,7 +31358,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624918000113",
@@ -30177,7 +31384,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624918000112",
@@ -30202,7 +31410,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624918000111",
@@ -30227,7 +31436,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133779000113",
@@ -30252,7 +31462,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325821000113",
@@ -30277,7 +31488,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216135000113",
@@ -30302,7 +31514,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150860000313",
@@ -30327,7 +31540,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150860000311",
@@ -30352,7 +31566,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150860000312",
@@ -30377,7 +31592,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322822000212",
@@ -30402,7 +31618,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322822000211",
@@ -30427,7 +31644,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_627550000113",
@@ -30452,7 +31670,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581739000212",
@@ -30477,7 +31696,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581739000211",
@@ -30502,7 +31722,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_627178000112",
@@ -30527,7 +31748,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_627178000113",
@@ -30552,7 +31774,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_627178000111",
@@ -30577,7 +31800,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548430000311",
@@ -30602,7 +31826,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_532533000113",
@@ -30627,7 +31852,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158593000113",
@@ -30652,7 +31878,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607886000113",
@@ -30677,7 +31904,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607886000111",
@@ -30702,7 +31930,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609137000113",
@@ -30727,7 +31956,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609137000112",
@@ -30752,7 +31982,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159255000112",
@@ -30777,7 +32008,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159255000113",
@@ -30802,7 +32034,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159255000111",
@@ -30827,7 +32060,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319813000111",
@@ -30852,7 +32086,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319813000112",
@@ -30877,7 +32112,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319813000113",
@@ -30902,7 +32138,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_627275000113",
@@ -30927,7 +32164,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216259000112",
@@ -30952,7 +32190,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216259000111",
@@ -30977,7 +32216,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231010000211",
@@ -31002,7 +32242,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231010000212",
@@ -31027,7 +32268,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231010000213",
@@ -31052,7 +32294,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516384000213",
@@ -31077,7 +32320,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516384000212",
@@ -31102,7 +32346,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516384000211",
@@ -31127,7 +32372,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325651000113",
@@ -31152,7 +32398,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325651000112",
@@ -31177,7 +32424,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325651000111",
@@ -31202,7 +32450,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609641000111",
@@ -31227,7 +32476,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609641000112",
@@ -31252,7 +32502,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_525758000112",
@@ -31277,7 +32528,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_525758000113",
@@ -31302,7 +32554,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552739000211",
@@ -31327,7 +32580,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552739000213",
@@ -31352,7 +32606,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552739000212",
@@ -31377,7 +32632,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552739000111",
@@ -31402,7 +32658,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552739000112",
@@ -31427,7 +32684,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552739000113",
@@ -31452,7 +32710,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_525758000111",
@@ -31477,7 +32736,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158321000112",
@@ -31502,7 +32762,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158321000111",
@@ -31527,7 +32788,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158623000212",
@@ -31552,7 +32814,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325619000112",
@@ -31577,7 +32840,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325619000113",
@@ -31602,7 +32866,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325619000111",
@@ -31627,7 +32892,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513423000113",
@@ -31652,7 +32918,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_589144000112",
@@ -31677,7 +32944,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_589144000113",
@@ -31702,7 +32970,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_589144000111",
@@ -31727,7 +32996,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231584000113",
@@ -31752,7 +33022,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231584000112",
@@ -31777,7 +33048,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231584000111",
@@ -31802,7 +33074,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575429000111",
@@ -31827,7 +33100,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575429000112",
@@ -31852,7 +33126,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575429000113",
@@ -31877,7 +33152,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618594000111",
@@ -31902,7 +33178,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618594000112",
@@ -31927,7 +33204,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618594000113",
@@ -31952,7 +33230,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324850000113",
@@ -31977,7 +33256,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324850000111",
@@ -32002,7 +33282,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324850000112",
@@ -32027,7 +33308,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325414000211",
@@ -32052,7 +33334,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325414000213",
@@ -32077,7 +33360,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325414000212",
@@ -32102,7 +33386,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_619841000111",
@@ -32127,7 +33412,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_619841000112",
@@ -32152,7 +33438,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158534000113",
@@ -32177,7 +33464,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158534000112",
@@ -32202,7 +33490,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158534000111",
@@ -32227,7 +33516,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325775000211",
@@ -32252,7 +33542,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325775000212",
@@ -32277,7 +33568,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325775000213",
@@ -32302,7 +33594,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532533000112",
@@ -32327,7 +33620,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532533000111",
@@ -32352,7 +33646,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523089000112",
@@ -32377,7 +33672,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523089000113",
@@ -32402,7 +33698,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523089000111",
@@ -32427,7 +33724,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157074000113",
@@ -32452,7 +33750,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157074000112",
@@ -32477,7 +33776,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157074000111",
@@ -32502,7 +33802,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575410000112",
@@ -32527,7 +33828,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575410000111",
@@ -32552,7 +33854,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155624000112",
@@ -32577,7 +33880,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155624000111",
@@ -32602,7 +33906,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548430000312",
@@ -32627,7 +33932,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_157864000111",
@@ -32652,7 +33958,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157864000113",
@@ -32677,7 +33984,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157864000112",
@@ -32702,7 +34010,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324736000113",
@@ -32727,7 +34036,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324736000111",
@@ -32752,7 +34062,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324736000112",
@@ -32777,7 +34088,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601985000111",
@@ -32802,7 +34114,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601985000112",
@@ -32827,7 +34140,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324477000112",
@@ -32852,7 +34166,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324477000111",
@@ -32877,7 +34192,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156493000112",
@@ -32902,7 +34218,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158410000113",
@@ -32927,7 +34244,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158410000111",
@@ -32952,7 +34270,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158410000112",
@@ -32977,7 +34296,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158909000111",
@@ -33002,7 +34322,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158909000113",
@@ -33027,7 +34348,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158909000112",
@@ -33052,7 +34374,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622869000112",
@@ -33077,7 +34400,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622869000113",
@@ -33102,7 +34426,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622869000111",
@@ -33127,7 +34452,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132047000112",
@@ -33152,7 +34478,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132047000111",
@@ -33177,7 +34504,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614904000112",
@@ -33202,7 +34530,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614904000111",
@@ -33227,7 +34556,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_547069000113",
@@ -33252,7 +34582,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_547069000112",
@@ -33277,7 +34608,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_547069000111",
@@ -33302,7 +34634,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578630000111",
@@ -33327,7 +34660,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578630000112",
@@ -33352,7 +34686,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578053000112",
@@ -33377,7 +34712,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578053000111",
@@ -33402,7 +34738,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607215000111",
@@ -33427,7 +34764,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607215000112",
@@ -33452,7 +34790,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325767000211",
@@ -33477,7 +34816,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325767000213",
@@ -33502,7 +34842,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325767000212",
@@ -33527,7 +34868,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_520144000211",
@@ -33552,7 +34894,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_520144000212",
@@ -33577,7 +34920,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_520144000213",
@@ -33602,7 +34946,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516627000113",
@@ -33627,7 +34972,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325830000113",
@@ -33652,7 +34998,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156493000113",
@@ -33677,7 +35024,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156493000111",
@@ -33702,7 +35050,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158577000113",
@@ -33727,7 +35076,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158577000111",
@@ -33752,7 +35102,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158577000112",
@@ -33777,7 +35128,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216011000512",
@@ -33802,7 +35154,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_151009000111",
@@ -33827,7 +35180,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151009000112",
@@ -33852,7 +35206,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216011000511",
@@ -33877,7 +35232,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_324930000212",
@@ -33902,7 +35258,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324930000211",
@@ -33927,7 +35284,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323055000113",
@@ -33952,7 +35310,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323055000112",
@@ -33977,7 +35336,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323055000111",
@@ -34002,7 +35362,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157791000112",
@@ -34027,7 +35388,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607150000212",
@@ -34052,7 +35414,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607150000211",
@@ -34077,7 +35440,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_546038000111",
@@ -34102,7 +35466,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_546038000112",
@@ -34127,7 +35492,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133787000111",
@@ -34151,7 +35517,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_546038000113",
@@ -34176,7 +35543,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157791000113",
@@ -34201,7 +35569,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542326000211",
@@ -34226,7 +35595,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517518000111",
@@ -34251,7 +35621,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_320544000211",
@@ -34276,7 +35647,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590029000111",
@@ -34301,7 +35673,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590029000112",
@@ -34326,7 +35699,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590029000113",
@@ -34351,7 +35725,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542326000212",
@@ -34376,7 +35751,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542326000213",
@@ -34401,7 +35777,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_320544000213",
@@ -34426,7 +35803,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600377000112",
@@ -34451,7 +35829,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600377000111",
@@ -34476,7 +35855,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231398000111",
@@ -34501,7 +35881,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150860000213",
@@ -34526,7 +35907,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150860000211",
@@ -34551,7 +35933,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150860000212",
@@ -34576,7 +35959,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231398000112",
@@ -34601,7 +35985,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231398000113",
@@ -34626,7 +36011,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157791000111",
@@ -34651,7 +36037,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519634000113",
@@ -34676,7 +36063,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158836000113",
@@ -34701,7 +36089,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159018000113",
@@ -34726,7 +36115,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524204000113",
@@ -34751,7 +36141,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536911000113",
@@ -34776,7 +36167,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159190000113",
@@ -34801,7 +36193,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542601000113",
@@ -34826,7 +36219,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158585000113",
@@ -34851,7 +36245,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324957000213",
@@ -34876,7 +36271,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519090000113",
@@ -34901,7 +36297,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156728000113",
@@ -34926,7 +36323,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533351000113",
@@ -34951,7 +36349,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152498000113",
@@ -34976,7 +36375,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614114000113",
@@ -35001,7 +36401,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605530000113",
@@ -35026,7 +36427,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157090000113",
@@ -35051,7 +36453,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319511000113",
@@ -35076,7 +36479,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530417000113",
@@ -35101,7 +36505,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554901000113",
@@ -35126,7 +36531,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158500000113",
@@ -35151,7 +36557,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325198000112",
@@ -35176,7 +36583,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516309000113",
@@ -35201,7 +36609,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155705000211",
@@ -35226,7 +36635,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155705000212",
@@ -35251,7 +36661,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605530000112",
@@ -35276,7 +36687,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216070000112",
@@ -35300,7 +36712,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158496000113",
@@ -35325,7 +36738,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325635000113",
@@ -35350,7 +36764,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216070000113",
@@ -35374,7 +36789,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524123000113",
@@ -35399,7 +36815,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157503000113",
@@ -35424,7 +36841,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324795000113",
@@ -35449,7 +36867,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617741000111",
@@ -35474,7 +36893,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325732000113",
@@ -35499,7 +36919,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615641000111",
@@ -35524,7 +36945,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615641000112",
@@ -35549,7 +36971,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615641000113",
@@ -35574,7 +36997,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324264000412",
@@ -35599,7 +37023,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539163000213",
@@ -35624,7 +37049,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539163000212",
@@ -35649,7 +37075,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_594130000112",
@@ -35674,7 +37101,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324094000113",
@@ -35699,7 +37127,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612561000113",
@@ -35724,7 +37153,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607290000111",
@@ -35749,7 +37179,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614114000112",
@@ -35774,7 +37205,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607290000112",
@@ -35799,7 +37231,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612561000111",
@@ -35824,7 +37257,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614114000111",
@@ -35849,7 +37283,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615633000113",
@@ -35874,7 +37309,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616001000113",
@@ -35899,7 +37335,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615633000111",
@@ -35924,7 +37361,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616001000112",
@@ -35949,7 +37387,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615633000112",
@@ -35974,7 +37413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618039000112",
@@ -35999,7 +37439,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614106000112",
@@ -36024,7 +37465,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324264000411",
@@ -36049,7 +37491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614106000113",
@@ -36074,7 +37517,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_619787000111",
@@ -36099,7 +37543,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612936000111",
@@ -36124,7 +37569,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614106000111",
@@ -36149,7 +37595,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611093000111",
@@ -36174,7 +37621,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_619787000112",
@@ -36199,7 +37647,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542768000113",
@@ -36224,7 +37673,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612936000113",
@@ -36249,7 +37699,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611093000112",
@@ -36274,7 +37725,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231134000113",
@@ -36299,7 +37751,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612936000112",
@@ -36324,7 +37777,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581852000111",
@@ -36349,7 +37803,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556122000112",
@@ -36374,7 +37829,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536768000313",
@@ -36399,7 +37855,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581852000112",
@@ -36424,7 +37881,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536768000311",
@@ -36449,7 +37907,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610771000111",
@@ -36474,7 +37933,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536768000312",
@@ -36499,7 +37959,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556122000113",
@@ -36524,7 +37985,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610771000112",
@@ -36549,7 +38011,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216208000113",
@@ -36574,7 +38037,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159026000113",
@@ -36599,7 +38063,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216208000111",
@@ -36624,7 +38089,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523526000213",
@@ -36649,7 +38115,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216208000112",
@@ -36674,7 +38141,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523526000212",
@@ -36699,7 +38167,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324884000211",
@@ -36724,7 +38193,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324884000213",
@@ -36749,7 +38219,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324884000212",
@@ -36774,7 +38245,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548430000711",
@@ -36799,7 +38271,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215872000113",
@@ -36824,7 +38297,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532550000213",
@@ -36849,7 +38323,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532550000211",
@@ -36874,7 +38349,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532550000212",
@@ -36899,7 +38375,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613509000111",
@@ -36924,7 +38401,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_594130000111",
@@ -36949,7 +38427,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613509000112",
@@ -36974,7 +38453,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215872000111",
@@ -36999,7 +38479,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215872000112",
@@ -37024,7 +38505,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325988000113",
@@ -37049,7 +38531,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613509000113",
@@ -37074,7 +38557,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530131000213",
@@ -37099,7 +38583,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530131000212",
@@ -37124,7 +38609,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523526000211",
@@ -37149,7 +38635,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581852000311",
@@ -37174,7 +38661,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597384000211",
@@ -37198,7 +38686,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605735000112",
@@ -37223,7 +38712,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581852000312",
@@ -37248,7 +38738,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_608475000112",
@@ -37273,7 +38764,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_608475000111",
@@ -37298,7 +38790,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_597384000212",
@@ -37322,7 +38815,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605735000111",
@@ -37347,7 +38841,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615080000111",
@@ -37372,7 +38867,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615080000113",
@@ -37397,7 +38893,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593630000112",
@@ -37421,7 +38918,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615080000112",
@@ -37446,7 +38944,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598054000111",
@@ -37471,7 +38970,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593630000111",
@@ -37495,7 +38995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598054000112",
@@ -37520,7 +39021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609625000112",
@@ -37545,7 +39047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214949000513",
@@ -37570,7 +39073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_621366000113",
@@ -37595,7 +39099,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535818000312",
@@ -37620,7 +39125,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558346000311",
@@ -37645,7 +39151,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535818000311",
@@ -37670,7 +39177,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535818000313",
@@ -37695,7 +39203,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_558346000312",
@@ -37720,7 +39229,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_577987000111",
@@ -37745,7 +39255,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325953000112",
@@ -37770,7 +39281,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214949000713",
@@ -37795,7 +39307,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_325953000113",
@@ -37820,7 +39333,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216208000213",
@@ -37845,7 +39359,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325953000111",
@@ -37870,7 +39385,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216208000212",
@@ -37895,7 +39411,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532541000111",
@@ -37920,7 +39437,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_544167000111",
@@ -37945,7 +39463,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324078000112",
@@ -37970,7 +39489,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324078000113",
@@ -37995,7 +39515,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532355000111",
@@ -38020,7 +39541,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518247000111",
@@ -38045,7 +39567,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324078000111",
@@ -38070,7 +39593,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528153000113",
@@ -38095,7 +39619,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564680000113",
@@ -38120,7 +39645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325821000111",
@@ -38145,7 +39671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_316504000111",
@@ -38169,7 +39696,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_544167000112",
@@ -38194,7 +39722,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_544167000113",
@@ -38219,7 +39748,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543861000111",
@@ -38244,7 +39774,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519863000312",
@@ -38269,7 +39800,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_543861000112",
@@ -38294,7 +39826,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325821000112",
@@ -38319,7 +39852,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537594000111",
@@ -38344,7 +39878,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516929000111",
@@ -38369,7 +39904,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569569000111",
@@ -38394,7 +39930,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210021000112",
@@ -38419,7 +39956,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569569000112",
@@ -38444,7 +39982,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210021000111",
@@ -38469,7 +40008,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569569000113",
@@ -38494,7 +40034,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516929000112",
@@ -38519,7 +40060,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539554000111",
@@ -38544,7 +40086,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528153000112",
@@ -38569,7 +40112,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517518000113",
@@ -38594,7 +40138,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517518000112",
@@ -38619,7 +40164,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216208000211",
@@ -38644,7 +40190,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536040000113",
@@ -38669,7 +40216,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_315435000111",
@@ -38694,7 +40242,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_315435000112",
@@ -38719,7 +40268,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323969000211",
@@ -38744,7 +40294,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323969000212",
@@ -38769,7 +40320,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158674000111",
@@ -38794,7 +40346,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323969000213",
@@ -38819,7 +40372,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325830000111",
@@ -38844,7 +40398,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216178000111",
@@ -38869,7 +40424,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216178000113",
@@ -38894,7 +40450,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216178000112",
@@ -38919,7 +40476,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596442000111",
@@ -38944,7 +40502,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151157000111",
@@ -38969,7 +40528,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578509000111",
@@ -38994,7 +40554,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_519863000311",
@@ -39019,7 +40580,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_151157000112",
@@ -39044,7 +40606,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516627000111",
@@ -39069,7 +40632,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156981000111",
@@ -39094,7 +40658,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155233000211",
@@ -39119,7 +40684,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158240000111",
@@ -39144,7 +40710,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609137000111",
@@ -39169,7 +40736,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156981000112",
@@ -39194,7 +40762,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325511000212",
@@ -39219,7 +40788,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600601000211",
@@ -39244,7 +40814,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325511000211",
@@ -39269,7 +40840,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323853000211",
@@ -39294,7 +40866,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215244000212",
@@ -39319,7 +40892,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_608319000111",
@@ -39344,7 +40918,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532550000113",
@@ -39369,7 +40944,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_608319000112",
@@ -39394,7 +40970,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215244000211",
@@ -39419,7 +40996,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532550000111",
@@ -39444,7 +41022,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156426000112",
@@ -39469,7 +41048,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156426000113",
@@ -39494,7 +41074,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532550000112",
@@ -39519,7 +41100,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156426000111",
@@ -39544,7 +41126,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323080000112",
@@ -39569,7 +41152,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324787000111",
@@ -39594,7 +41178,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323080000111",
@@ -39619,7 +41204,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324680000111",
@@ -39644,7 +41230,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325988000112",
@@ -39669,7 +41256,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324787000113",
@@ -39694,7 +41282,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542199000111",
@@ -39719,7 +41308,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324787000112",
@@ -39744,7 +41334,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323080000113",
@@ -39769,7 +41360,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324680000112",
@@ -39794,7 +41386,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325988000111",
@@ -39819,7 +41412,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542199000112",
@@ -39844,7 +41438,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542199000113",
@@ -39869,7 +41464,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133582000111",
@@ -39894,7 +41490,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133582000112",
@@ -39919,7 +41516,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324922000113",
@@ -39944,7 +41542,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324922000112",
@@ -39969,7 +41568,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325317000111",
@@ -39994,7 +41594,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325317000112",
@@ -40019,7 +41620,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325317000113",
@@ -40044,7 +41646,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324922000111",
@@ -40069,7 +41672,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324094000112",
@@ -40094,7 +41698,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230987000113",
@@ -40119,7 +41724,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_324094000111",
@@ -40144,7 +41750,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157309000111",
@@ -40169,7 +41776,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157309000112",
@@ -40194,7 +41802,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157309000113",
@@ -40219,7 +41828,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230944000112",
@@ -40244,7 +41854,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230944000113",
@@ -40269,7 +41880,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_230944000111",
@@ -40294,7 +41906,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_540579000112",
@@ -40319,7 +41932,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540579000113",
@@ -40344,7 +41958,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540579000111",
@@ -40369,7 +41984,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_544744000112",
@@ -40394,7 +42010,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324248000112",
@@ -40419,7 +42036,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_287695000213",
@@ -40444,7 +42062,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_159204000111",
@@ -40469,7 +42088,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159204000112",
@@ -40494,7 +42114,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_287695000211",
@@ -40519,7 +42140,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_324248000111",
@@ -40544,7 +42166,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131636000212",
@@ -40569,7 +42192,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131636000211",
@@ -40594,7 +42218,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325147000611",
@@ -40619,7 +42244,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_544744000111",
@@ -40644,7 +42270,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324809000111",
@@ -40669,7 +42296,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323268000112",
@@ -40694,7 +42322,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323268000113",
@@ -40719,7 +42348,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324248000113",
@@ -40744,7 +42374,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323268000111",
@@ -40769,7 +42400,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324809000112",
@@ -40794,7 +42426,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324809000113",
@@ -40819,7 +42452,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216003000211",
@@ -40844,7 +42478,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216003000212",
@@ -40869,7 +42504,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_528811000111",
@@ -40894,7 +42530,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528811000112",
@@ -40919,7 +42556,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554901000112",
@@ -40944,7 +42582,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554901000111",
@@ -40969,7 +42608,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324833000112",
@@ -40994,7 +42634,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324833000111",
@@ -41019,7 +42660,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158488000111",
@@ -41044,7 +42686,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325996000111",
@@ -41069,7 +42712,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158488000112",
@@ -41094,7 +42738,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158488000113",
@@ -41119,7 +42764,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548278000212",
@@ -41144,7 +42790,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325996000112",
@@ -41169,7 +42816,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548278000213",
@@ -41194,7 +42842,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548278000211",
@@ -41219,7 +42868,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215244000112",
@@ -41244,7 +42894,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324833000113",
@@ -41269,7 +42920,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215244000111",
@@ -41294,7 +42946,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215520000111",
@@ -41319,7 +42972,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_157295000111",
@@ -41344,7 +42998,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157295000112",
@@ -41369,7 +43024,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215520000113",
@@ -41394,7 +43050,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_157295000113",
@@ -41419,7 +43076,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215520000112",
@@ -41444,7 +43102,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_530417000112",
@@ -41469,7 +43128,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519448000113",
@@ -41494,7 +43154,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530417000111",
@@ -41519,7 +43180,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519448000112",
@@ -41544,7 +43206,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595969000111",
@@ -41569,7 +43232,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595969000112",
@@ -41594,7 +43258,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519448000111",
@@ -41619,7 +43284,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539104000111",
@@ -41644,7 +43310,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539104000112",
@@ -41669,7 +43336,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596442000113",
@@ -41694,7 +43362,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528609000113",
@@ -41719,7 +43388,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528609000111",
@@ -41744,7 +43414,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325147000612",
@@ -41769,7 +43440,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_528609000112",
@@ -41794,7 +43466,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593630000113",
@@ -41818,7 +43491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133787000112",
@@ -41842,7 +43516,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325147000613",
@@ -41867,7 +43542,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_600601000212",
@@ -41892,7 +43568,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157473000112",
@@ -41917,7 +43594,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157473000113",
@@ -41942,7 +43620,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133787000113",
@@ -41966,7 +43645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157279000111",
@@ -41991,7 +43671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157384000111",
@@ -42016,7 +43697,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157279000112",
@@ -42041,7 +43723,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157279000113",
@@ -42066,7 +43749,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157376000111",
@@ -42091,7 +43775,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157384000113",
@@ -42116,7 +43801,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157376000112",
@@ -42141,7 +43827,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157384000112",
@@ -42166,7 +43853,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157406000112",
@@ -42191,7 +43879,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157406000111",
@@ -42216,7 +43905,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157449000113",
@@ -42241,7 +43931,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157449000112",
@@ -42266,7 +43957,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157449000111",
@@ -42291,7 +43983,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157252000111",
@@ -42316,7 +44009,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157031000113",
@@ -42341,7 +44035,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157252000112",
@@ -42366,7 +44061,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156981000113",
@@ -42391,7 +44087,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157058000111",
@@ -42416,7 +44113,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157031000111",
@@ -42441,7 +44139,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157031000112",
@@ -42466,7 +44165,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157236000113",
@@ -42491,7 +44191,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157058000112",
@@ -42516,7 +44217,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157058000113",
@@ -42541,7 +44243,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157236000112",
@@ -42566,7 +44269,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157090000112",
@@ -42591,7 +44295,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157090000111",
@@ -42616,7 +44321,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157252000113",
@@ -42641,7 +44347,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157236000111",
@@ -42666,7 +44373,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156930000111",
@@ -42691,7 +44399,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156744000111",
@@ -42716,7 +44425,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156728000111",
@@ -42741,7 +44451,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156795000112",
@@ -42766,7 +44477,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156795000111",
@@ -42791,7 +44503,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156728000112",
@@ -42816,7 +44529,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156744000112",
@@ -42841,7 +44555,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156752000111",
@@ -42866,7 +44581,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156744000113",
@@ -42891,7 +44607,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156930000112",
@@ -42916,7 +44633,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156752000113",
@@ -42941,7 +44659,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156752000112",
@@ -42966,7 +44685,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156779000112",
@@ -42991,7 +44711,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156779000111",
@@ -43016,7 +44737,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210196000111",
@@ -43041,7 +44763,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156973000111",
@@ -43066,7 +44789,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156973000112",
@@ -43091,7 +44815,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_313637000113",
@@ -43116,7 +44841,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158240000113",
@@ -43141,7 +44867,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_313637000112",
@@ -43166,7 +44893,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159034000113",
@@ -43191,7 +44919,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159034000112",
@@ -43216,7 +44945,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158240000112",
@@ -43241,7 +44971,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156272000113",
@@ -43266,7 +44997,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132152000112",
@@ -43291,7 +45023,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156019000112",
@@ -43316,7 +45049,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578126000112",
@@ -43341,7 +45075,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156019000113",
@@ -43366,7 +45101,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156272000112",
@@ -43391,7 +45127,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156205000111",
@@ -43416,7 +45153,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156205000112",
@@ -43441,7 +45179,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156272000111",
@@ -43466,7 +45205,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156205000113",
@@ -43491,7 +45231,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156515000111",
@@ -43516,7 +45257,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156515000112",
@@ -43541,7 +45283,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153087000111",
@@ -43566,7 +45309,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156019000111",
@@ -43591,7 +45335,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153907000112",
@@ -43616,7 +45361,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156515000113",
@@ -43641,7 +45387,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153451000112",
@@ -43666,7 +45413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153451000111",
@@ -43691,7 +45439,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153087000113",
@@ -43716,7 +45465,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155560000113",
@@ -43741,7 +45491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153087000112",
@@ -43766,7 +45517,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_154601000111",
@@ -43791,7 +45543,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153931000113",
@@ -43816,7 +45569,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153931000111",
@@ -43841,7 +45595,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153931000112",
@@ -43866,7 +45621,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153907000111",
@@ -43891,7 +45647,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_154601000112",
@@ -43916,7 +45673,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155560000111",
@@ -43941,7 +45699,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155560000112",
@@ -43966,7 +45725,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155705000111",
@@ -43991,7 +45751,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155233000213",
@@ -44016,7 +45777,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152498000112",
@@ -44041,7 +45803,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_155705000112",
@@ -44066,7 +45829,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152978000112",
@@ -44091,7 +45855,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152978000111",
@@ -44116,7 +45881,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151696000112",
@@ -44141,7 +45907,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151696000111",
@@ -44166,7 +45933,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152978000113",
@@ -44191,7 +45959,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152498000111",
@@ -44216,7 +45985,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151947000112",
@@ -44241,7 +46011,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151947000113",
@@ -44266,7 +46037,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133744000112",
@@ -44291,7 +46063,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133744000111",
@@ -44316,7 +46089,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132896000111",
@@ -44341,7 +46115,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132870000111",
@@ -44366,7 +46141,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132870000112",
@@ -44391,7 +46167,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132896000112",
@@ -44416,7 +46193,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133019000111",
@@ -44441,7 +46219,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_138835000312",
@@ -44466,7 +46245,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133019000112",
@@ -44491,7 +46271,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_138835000311",
@@ -44516,7 +46297,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548723000113",
@@ -44541,7 +46323,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578126000111",
@@ -44566,7 +46349,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610291000111",
@@ -44591,7 +46375,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516309000112",
@@ -44616,7 +46401,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600890000111",
@@ -44641,7 +46427,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599700000111",
@@ -44666,7 +46453,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597384000112",
@@ -44690,7 +46478,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_588130000112",
@@ -44715,7 +46504,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600890000113",
@@ -44740,7 +46530,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_588130000111",
@@ -44765,7 +46556,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595365000112",
@@ -44790,7 +46582,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595365000111",
@@ -44815,7 +46608,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595365000113",
@@ -44840,7 +46634,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590614000112",
@@ -44865,7 +46660,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578509000112",
@@ -44890,7 +46686,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_590614000113",
@@ -44915,7 +46712,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542687000111",
@@ -44939,7 +46737,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548723000111",
@@ -44964,7 +46763,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539872000111",
@@ -44989,7 +46789,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539872000112",
@@ -45014,7 +46815,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549304000112",
@@ -45039,7 +46841,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536067000113",
@@ -45063,7 +46866,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528153000111",
@@ -45088,7 +46892,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542687000112",
@@ -45112,7 +46917,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530131000211",
@@ -45137,7 +46943,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530131000111",
@@ -45162,7 +46969,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533351000112",
@@ -45187,7 +46995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530131000112",
@@ -45212,7 +47021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530131000113",
@@ -45237,7 +47047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516627000112",
@@ -45262,7 +47073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536067000112",
@@ -45286,7 +47098,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516309000111",
@@ -45311,7 +47124,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324647000111",
@@ -45336,7 +47150,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322300000112",
@@ -45360,7 +47175,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_313637000111",
@@ -45385,7 +47201,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322300000212",
@@ -45409,7 +47226,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215694000111",
@@ -45434,7 +47252,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215120000111",
@@ -45459,7 +47278,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215120000211",
@@ -45484,7 +47304,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215694000113",
@@ -45509,7 +47330,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158780000113",
@@ -45534,7 +47356,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322300000111",
@@ -45558,7 +47381,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322300000211",
@@ -45582,7 +47406,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605620000112",
@@ -45607,7 +47432,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610771000113",
@@ -45632,7 +47458,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575518000111",
@@ -45657,7 +47484,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605620000111",
@@ -45682,7 +47510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605662000113",
@@ -45707,7 +47536,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605530000111",
@@ -45732,7 +47562,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575518000112",
@@ -45757,7 +47588,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157627000213",
@@ -45782,7 +47614,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519090000111",
@@ -45807,7 +47640,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158720000111",
@@ -45832,7 +47666,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519090000112",
@@ -45857,7 +47692,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158720000113",
@@ -45882,7 +47718,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567051000112",
@@ -45907,7 +47744,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549304000111",
@@ -45932,7 +47770,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158720000112",
@@ -45957,7 +47796,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158453000113",
@@ -45982,7 +47822,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158780000112",
@@ -46007,7 +47848,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536067000111",
@@ -46031,7 +47873,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158453000112",
@@ -46056,7 +47899,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549304000113",
@@ -46081,7 +47925,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158453000111",
@@ -46106,7 +47951,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158780000111",
@@ -46131,7 +47977,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523445000211",
@@ -46156,7 +48003,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523445000212",
@@ -46181,7 +48029,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158550000112",
@@ -46206,7 +48055,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523445000213",
@@ -46231,7 +48081,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132152000111",
@@ -46256,7 +48107,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159034000111",
@@ -46281,7 +48133,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542768000111",
@@ -46306,7 +48159,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542768000112",
@@ -46331,7 +48185,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549240000112",
@@ -46356,7 +48211,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_158704000111",
@@ -46381,7 +48237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152579000111",
@@ -46406,7 +48263,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158704000112",
@@ -46431,7 +48289,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158704000113",
@@ -46456,7 +48315,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_152579000112",
@@ -46481,7 +48341,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325635000111",
@@ -46506,7 +48367,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156230000112",
@@ -46531,7 +48393,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325090000113",
@@ -46556,7 +48419,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325090000112",
@@ -46581,7 +48445,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578126000113",
@@ -46606,7 +48471,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156230000111",
@@ -46631,7 +48497,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158313000112",
@@ -46656,7 +48523,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158313000111",
@@ -46681,7 +48549,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325090000111",
@@ -46706,7 +48575,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158550000111",
@@ -46731,7 +48601,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158763000111",
@@ -46756,7 +48627,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158313000113",
@@ -46781,7 +48653,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157813000112",
@@ -46806,7 +48679,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157813000111",
@@ -46831,7 +48705,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158763000113",
@@ -46856,7 +48731,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216275000612",
@@ -46881,7 +48757,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_319511000111",
@@ -46906,7 +48783,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216275000613",
@@ -46931,7 +48809,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216275000611",
@@ -46956,7 +48835,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_311650000113",
@@ -46981,7 +48861,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_311650000111",
@@ -47006,7 +48887,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319511000112",
@@ -47031,7 +48913,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536709000112",
@@ -47056,7 +48939,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536709000113",
@@ -47081,7 +48965,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536709000111",
@@ -47106,7 +48991,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214558000211",
@@ -47131,7 +49017,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_215538000111",
@@ -47156,7 +49043,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215538000113",
@@ -47181,7 +49069,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548723000112",
@@ -47206,7 +49095,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567051000111",
@@ -47231,7 +49121,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157856000113",
@@ -47256,7 +49147,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215589000112",
@@ -47281,7 +49173,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_158364000112",
@@ -47306,7 +49199,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215538000112",
@@ -47331,7 +49225,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158763000112",
@@ -47356,7 +49251,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158364000111",
@@ -47381,7 +49277,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215589000111",
@@ -47406,7 +49303,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_324230000113",
@@ -47431,7 +49329,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324230000111",
@@ -47456,7 +49355,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158674000112",
@@ -47481,7 +49381,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324230000112",
@@ -47506,7 +49407,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325635000112",
@@ -47531,7 +49433,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158674000113",
@@ -47556,7 +49459,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230987000112",
@@ -47581,7 +49485,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_534790000113",
@@ -47605,7 +49510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_316504000113",
@@ -47629,7 +49535,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539155000311",
@@ -47654,7 +49561,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_524360000212",
@@ -47678,7 +49586,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524360000213",
@@ -47702,7 +49611,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524360000211",
@@ -47726,7 +49636,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_576743000111",
@@ -47751,7 +49662,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567051000113",
@@ -47776,7 +49688,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534790000112",
@@ -47800,7 +49713,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534790000111",
@@ -47824,7 +49738,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607886000112",
@@ -47849,7 +49764,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_576743000113",
@@ -47874,7 +49790,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325848000111",
@@ -47899,7 +49816,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_576743000112",
@@ -47924,7 +49842,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590800000113",
@@ -47949,7 +49868,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_590614000111",
@@ -47974,7 +49894,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540560000111",
@@ -47999,7 +49920,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536040000112",
@@ -48024,7 +49946,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_594130000113",
@@ -48049,7 +49972,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540560000113",
@@ -48074,7 +49998,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325368000111",
@@ -48099,7 +50024,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216216000113",
@@ -48124,7 +50050,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_325368000112",
@@ -48149,7 +50076,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540560000112",
@@ -48174,7 +50102,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526665000113",
@@ -48199,7 +50128,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526665000111",
@@ -48224,7 +50154,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526665000112",
@@ -48249,7 +50180,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325198000111",
@@ -48274,7 +50206,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541230000113",
@@ -48299,7 +50232,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541230000112",
@@ -48324,7 +50258,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541230000111",
@@ -48349,7 +50284,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549240000111",
@@ -48374,7 +50310,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_231371000111",
@@ -48399,7 +50336,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579149000111",
@@ -48424,7 +50362,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_564770000112",
@@ -48448,7 +50387,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231371000112",
@@ -48473,7 +50413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565628000111",
@@ -48498,7 +50439,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_531910000111",
@@ -48523,7 +50465,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565628000112",
@@ -48548,7 +50491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564770000111",
@@ -48572,7 +50516,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579149000112",
@@ -48597,7 +50542,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_542598000211",
@@ -48622,7 +50568,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542598000212",
@@ -48647,7 +50594,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518077000113",
@@ -48672,7 +50620,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159000000111",
@@ -48697,7 +50646,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_531910000112",
@@ -48722,7 +50672,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159000000112",
@@ -48747,7 +50698,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156841000111",
@@ -48772,7 +50724,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159000000113",
@@ -48797,7 +50750,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215120000212",
@@ -48822,7 +50776,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159166000113",
@@ -48847,7 +50802,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156841000112",
@@ -48872,7 +50828,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215120000112",
@@ -48897,7 +50854,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214868000112",
@@ -48922,7 +50880,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325252000113",
@@ -48947,7 +50906,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214868000111",
@@ -48972,7 +50932,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325600000111",
@@ -48997,7 +50958,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_312134000213",
@@ -49022,7 +50984,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536040000111",
@@ -49047,7 +51010,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325600000112",
@@ -49072,7 +51036,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524026000112",
@@ -49097,7 +51062,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534153000113",
@@ -49122,7 +51088,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534153000112",
@@ -49147,7 +51114,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539554000112",
@@ -49172,7 +51140,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524026000111",
@@ -49197,7 +51166,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534153000111",
@@ -49222,7 +51192,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539554000113",
@@ -49247,7 +51218,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542830000112",
@@ -49272,7 +51244,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541389000113",
@@ -49297,7 +51270,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542830000113",
@@ -49322,7 +51296,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541389000112",
@@ -49347,7 +51322,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541389000111",
@@ -49372,7 +51348,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542830000111",
@@ -49397,7 +51374,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_525731000112",
@@ -49422,7 +51400,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_555436000111",
@@ -49447,7 +51426,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543004000113",
@@ -49472,7 +51452,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_555436000112",
@@ -49497,7 +51478,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133850000112",
@@ -49522,7 +51504,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_555576000111",
@@ -49547,7 +51530,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_555576000112",
@@ -49572,7 +51556,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157732000111",
@@ -49596,7 +51581,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159212000113",
@@ -49621,7 +51607,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157732000112",
@@ -49645,7 +51632,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159158000111",
@@ -49670,7 +51658,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159158000112",
@@ -49695,7 +51684,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_317403000212",
@@ -49720,7 +51710,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159212000111",
@@ -49745,7 +51736,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216070000111",
@@ -49769,7 +51761,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159212000112",
@@ -49794,7 +51787,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324957000212",
@@ -49819,7 +51813,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_317403000213",
@@ -49844,7 +51839,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_317403000211",
@@ -49869,7 +51865,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324957000211",
@@ -49894,7 +51891,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325694000113",
@@ -49919,7 +51917,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528625000111",
@@ -49944,7 +51943,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536024000111",
@@ -49969,7 +51969,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528625000112",
@@ -49994,7 +51995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536024000112",
@@ -50019,7 +52021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536024000113",
@@ -50044,7 +52047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559768000112",
@@ -50069,7 +52073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533351000111",
@@ -50094,7 +52099,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_316660000111",
@@ -50119,7 +52125,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513423000111",
@@ -50144,7 +52151,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559768000111",
@@ -50169,7 +52177,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595144000112",
@@ -50194,7 +52203,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595144000111",
@@ -50219,7 +52229,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595144000113",
@@ -50244,7 +52255,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_316660000112",
@@ -50269,7 +52281,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512273000211",
@@ -50294,7 +52307,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537594000112",
@@ -50319,7 +52333,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537594000113",
@@ -50344,7 +52359,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_582530000111",
@@ -50369,7 +52385,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541427000111",
@@ -50394,7 +52411,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605662000111",
@@ -50419,7 +52437,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605662000112",
@@ -50444,7 +52463,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541427000112",
@@ -50469,7 +52489,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605620000113",
@@ -50494,7 +52515,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610291000113",
@@ -50519,7 +52541,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530379000111",
@@ -50544,7 +52567,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610291000112",
@@ -50569,7 +52593,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216054000111",
@@ -50594,7 +52619,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216054000112",
@@ -50619,7 +52645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_582530000113",
@@ -50644,7 +52671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523895000111",
@@ -50669,7 +52697,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530379000112",
@@ -50694,7 +52723,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522910000113",
@@ -50719,7 +52749,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523895000112",
@@ -50744,7 +52775,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512273000213",
@@ -50769,7 +52801,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512273000212",
@@ -50794,7 +52827,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522910000112",
@@ -50819,7 +52853,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325236000111",
@@ -50844,7 +52879,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325929000113",
@@ -50869,7 +52905,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522910000111",
@@ -50894,7 +52931,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325236000113",
@@ -50919,7 +52957,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325236000112",
@@ -50944,7 +52983,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_311910000112",
@@ -50969,7 +53009,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322270000113",
@@ -50994,7 +53035,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322270000111",
@@ -51019,7 +53061,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158496000111",
@@ -51044,7 +53087,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_311910000113",
@@ -51069,7 +53113,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215449000112",
@@ -51094,7 +53139,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_311910000111",
@@ -51119,7 +53165,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158496000112",
@@ -51144,7 +53191,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158429000111",
@@ -51169,7 +53217,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158429000113",
@@ -51194,7 +53243,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157503000112",
@@ -51219,7 +53269,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215449000111",
@@ -51244,7 +53295,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158429000112",
@@ -51269,7 +53321,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151203000113",
@@ -51294,7 +53347,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153036000113",
@@ -51319,7 +53373,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153036000111",
@@ -51344,7 +53399,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_153036000112",
@@ -51369,7 +53425,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157503000111",
@@ -51394,7 +53451,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_138177000112",
@@ -51419,7 +53477,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151203000111",
@@ -51444,7 +53503,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133850000111",
@@ -51469,7 +53529,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150843000111",
@@ -51494,7 +53555,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150843000112",
@@ -51519,7 +53581,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_150843000113",
@@ -51544,7 +53607,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133850000113",
@@ -51569,7 +53633,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549169000111",
@@ -51594,7 +53659,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537349000112",
@@ -51619,7 +53685,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549169000112",
@@ -51644,7 +53711,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_138177000111",
@@ -51669,7 +53737,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549169000113",
@@ -51694,7 +53763,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537349000111",
@@ -51719,7 +53789,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158887000111",
@@ -51744,7 +53815,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537349000113",
@@ -51769,7 +53841,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158887000112",
@@ -51794,7 +53867,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325732000112",
@@ -51819,7 +53893,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158887000113",
@@ -51844,7 +53919,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158160000112",
@@ -51869,7 +53945,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325732000111",
@@ -51894,7 +53971,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158160000113",
@@ -51919,7 +53997,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158208000113",
@@ -51944,7 +54023,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158208000111",
@@ -51969,7 +54049,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158208000112",
@@ -51994,7 +54075,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157511000111",
@@ -52019,7 +54101,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157597000113",
@@ -52044,7 +54127,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157597000112",
@@ -52069,7 +54153,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157511000113",
@@ -52094,7 +54179,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158160000111",
@@ -52119,7 +54205,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157511000112",
@@ -52144,7 +54231,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157597000111",
@@ -52169,7 +54257,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325864000113",
@@ -52194,7 +54283,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325864000111",
@@ -52219,7 +54309,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543357000112",
@@ -52244,7 +54335,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325864000112",
@@ -52269,7 +54361,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543357000113",
@@ -52294,7 +54387,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159220000112",
@@ -52319,7 +54413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158895000113",
@@ -52344,7 +54439,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158895000112",
@@ -52369,7 +54465,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158895000111",
@@ -52394,7 +54491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158070000112",
@@ -52419,7 +54517,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158070000113",
@@ -52444,7 +54543,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158070000111",
@@ -52469,7 +54569,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159220000111",
@@ -52494,7 +54595,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565628000113",
@@ -52519,7 +54621,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600890000112",
@@ -52544,7 +54647,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325830000112",
@@ -52569,7 +54673,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518247000112",
@@ -52594,7 +54699,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543357000111",
@@ -52619,7 +54725,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596442000112",
@@ -52644,7 +54751,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513423000112",
@@ -52669,7 +54777,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_570885000111",
@@ -52694,7 +54803,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158593000111",
@@ -52719,7 +54829,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158593000112",
@@ -52744,7 +54855,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_316504000112",
@@ -52768,7 +54880,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524204000112",
@@ -52793,7 +54906,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_570885000112",
@@ -52818,7 +54932,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532169000112",
@@ -52843,7 +54958,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_570885000113",
@@ -52868,7 +54984,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524204000111",
@@ -52893,7 +55010,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532169000111",
@@ -52918,7 +55036,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325708000111",
@@ -52943,7 +55062,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325708000113",
@@ -52968,7 +55088,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319562000111",
@@ -52993,7 +55114,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325708000112",
@@ -53018,7 +55140,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319562000112",
@@ -53043,7 +55166,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214612000111",
@@ -53068,7 +55192,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319562000113",
@@ -53093,7 +55218,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214612000112",
@@ -53118,7 +55244,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158500000111",
@@ -53143,7 +55270,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151629000111",
@@ -53168,7 +55296,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158500000112",
@@ -53193,7 +55322,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151629000112",
@@ -53218,7 +55348,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151564000112",
@@ -53243,7 +55374,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564680000111",
@@ -53268,7 +55400,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560740000113",
@@ -53293,7 +55426,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151564000111",
@@ -53318,7 +55452,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151564000113",
@@ -53343,7 +55478,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543918000113",
@@ -53368,7 +55504,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560740000111",
@@ -53393,7 +55530,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564680000112",
@@ -53418,7 +55556,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543012000111",
@@ -53443,7 +55582,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543012000113",
@@ -53468,7 +55608,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543489000112",
@@ -53493,7 +55634,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543489000113",
@@ -53518,7 +55660,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560740000112",
@@ -53543,7 +55686,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543918000112",
@@ -53568,7 +55712,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543012000112",
@@ -53593,7 +55738,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528161000111",
@@ -53618,7 +55764,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543489000111",
@@ -53643,7 +55790,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543918000111",
@@ -53668,7 +55816,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542296000112",
@@ -53693,7 +55842,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528161000112",
@@ -53718,7 +55868,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542296000113",
@@ -53743,7 +55894,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528161000113",
@@ -53768,7 +55920,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542296000111",
@@ -53793,7 +55946,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519103000111",
@@ -53818,7 +55972,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519103000112",
@@ -53843,7 +55998,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519103000113",
@@ -53868,7 +56024,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516376000111",
@@ -53893,7 +56050,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516376000112",
@@ -53918,7 +56076,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325929000111",
@@ -53943,7 +56102,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325970000112",
@@ -53968,7 +56128,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325929000112",
@@ -53993,7 +56154,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325856000113",
@@ -54018,7 +56180,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_326011000113",
@@ -54043,7 +56206,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325856000112",
@@ -54068,7 +56232,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325970000111",
@@ -54093,7 +56258,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325856000111",
@@ -54118,7 +56284,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325694000112",
@@ -54143,7 +56310,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_326011000111",
@@ -54168,7 +56336,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325678000111",
@@ -54193,7 +56362,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325678000112",
@@ -54218,7 +56388,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324159000112",
@@ -54242,7 +56413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324159000113",
@@ -54266,7 +56438,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325678000113",
@@ -54291,7 +56464,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324159000111",
@@ -54315,7 +56489,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325694000111",
@@ -54340,7 +56515,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_321192000111",
@@ -54365,7 +56541,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319775000112",
@@ -54390,7 +56567,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_321192000113",
@@ -54415,7 +56593,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_321087000111",
@@ -54440,7 +56619,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319775000113",
@@ -54465,7 +56645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_321087000112",
@@ -54490,7 +56671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_321192000112",
@@ -54515,7 +56697,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_319775000111",
@@ -54540,7 +56723,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231134000112",
@@ -54565,7 +56749,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231088000113",
@@ -54590,7 +56775,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214248000112",
@@ -54614,7 +56800,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214248000111",
@@ -54638,7 +56825,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231134000111",
@@ -54663,7 +56851,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_214248000113",
@@ -54687,7 +56876,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231088000112",
@@ -54712,7 +56902,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158461000111",
@@ -54737,7 +56928,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158461000112",
@@ -54762,7 +56954,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158526000112",
@@ -54787,7 +56980,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158461000113",
@@ -54812,7 +57006,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158526000113",
@@ -54837,7 +57032,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158526000111",
@@ -54862,7 +57058,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158259000112",
@@ -54887,7 +57084,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156191000111",
@@ -54912,7 +57110,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158585000111",
@@ -54937,7 +57136,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575666000113",
@@ -54962,7 +57162,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575666000111",
@@ -54987,7 +57188,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158259000111",
@@ -55012,7 +57214,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156191000113",
@@ -55037,7 +57240,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550663000113",
@@ -55062,7 +57266,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550035000113",
@@ -55087,7 +57292,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575666000112",
@@ -55112,7 +57318,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550035000112",
@@ -55137,7 +57344,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550663000112",
@@ -55162,7 +57370,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542601000111",
@@ -55187,7 +57396,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536482000113",
@@ -55212,7 +57422,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550663000111",
@@ -55237,7 +57448,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550035000111",
@@ -55262,7 +57474,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543390000113",
@@ -55287,7 +57500,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542601000112",
@@ -55312,7 +57526,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_546127000113",
@@ -55337,7 +57552,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_546127000111",
@@ -55362,7 +57578,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543390000112",
@@ -55387,7 +57604,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_546127000112",
@@ -55412,7 +57630,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543390000111",
@@ -55437,7 +57656,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532800000112",
@@ -55462,7 +57682,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535583000113",
@@ -55487,7 +57708,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536482000112",
@@ -55512,7 +57734,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536482000111",
@@ -55537,7 +57760,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532800000113",
@@ -55562,7 +57786,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231657000111",
@@ -55587,7 +57812,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535583000111",
@@ -55612,7 +57838,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535583000112",
@@ -55637,7 +57864,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231657000112",
@@ -55662,7 +57890,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519634000111",
@@ -55687,7 +57916,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158976000111",
@@ -55712,7 +57942,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158828000113",
@@ -55737,7 +57968,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158984000112",
@@ -55762,7 +57994,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532800000111",
@@ -55787,7 +58020,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158828000112",
@@ -55812,7 +58046,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158976000113",
@@ -55837,7 +58072,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158984000111",
@@ -55862,7 +58098,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158984000113",
@@ -55887,7 +58124,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159166000112",
@@ -55912,7 +58150,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158976000112",
@@ -55937,7 +58176,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159166000111",
@@ -55962,7 +58202,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158828000111",
@@ -55987,7 +58228,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597384000111",
@@ -56011,7 +58253,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_326011000112",
@@ -56036,7 +58279,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540498000113",
@@ -56060,7 +58304,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532355000112",
@@ -56085,7 +58330,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540498000111",
@@ -56109,7 +58355,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540498000112",
@@ -56133,7 +58380,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324426000112",
@@ -56158,7 +58406,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231690000113",
@@ -56183,7 +58432,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231690000112",
@@ -56208,7 +58458,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324426000113",
@@ -56233,7 +58484,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324426000111",
@@ -56258,7 +58510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157856000112",
@@ -56283,7 +58536,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156698000112",
@@ -56308,7 +58562,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157856000111",
@@ -56333,7 +58588,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231690000111",
@@ -56358,7 +58614,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599700000112",
@@ -56383,7 +58640,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599700000113",
@@ -56408,7 +58666,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532541000112",
@@ -56433,7 +58692,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_536911000111",
@@ -56458,7 +58718,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536911000112",
@@ -56483,7 +58744,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231533000111",
@@ -56508,7 +58770,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231533000112",
@@ -56533,7 +58796,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_525731000111",
@@ -56558,7 +58822,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231347000113",
@@ -56583,7 +58848,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_525731000113",
@@ -56608,7 +58874,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231347000112",
@@ -56633,7 +58900,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216038000112",
@@ -56658,7 +58926,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216038000111",
@@ -56683,7 +58952,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159190000112",
@@ -56708,7 +58978,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231347000111",
@@ -56733,7 +59004,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158658000113",
@@ -56758,7 +59030,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216038000113",
@@ -56783,7 +59056,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158380000111",
@@ -56808,7 +59082,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158380000113",
@@ -56833,7 +59108,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159190000111",
@@ -56858,7 +59134,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158380000112",
@@ -56883,7 +59160,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158658000112",
@@ -56908,7 +59186,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158658000111",
@@ -56933,7 +59212,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554251000112",
@@ -56958,7 +59238,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559962000113",
@@ -56983,7 +59264,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559962000112",
@@ -57008,7 +59290,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559962000111",
@@ -57033,7 +59316,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549355000111",
@@ -57058,7 +59342,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554251000113",
@@ -57083,7 +59368,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549355000112",
@@ -57108,7 +59394,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543616000113",
@@ -57133,7 +59420,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543616000111",
@@ -57158,7 +59446,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554251000111",
@@ -57183,7 +59472,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542547000112",
@@ -57208,7 +59498,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543616000112",
@@ -57233,7 +59524,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542547000111",
@@ -57258,7 +59550,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543004000112",
@@ -57283,7 +59576,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543004000111",
@@ -57308,7 +59602,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542547000113",
@@ -57333,7 +59628,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524123000111",
@@ -57358,7 +59654,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524123000112",
@@ -57383,7 +59680,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524328000111",
@@ -57408,7 +59706,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523429000111",
@@ -57433,7 +59732,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524328000113",
@@ -57458,7 +59758,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523429000113",
@@ -57483,7 +59784,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524328000112",
@@ -57508,7 +59810,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523429000112",
@@ -57533,7 +59836,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519812000113",
@@ -57558,7 +59862,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519812000112",
@@ -57583,7 +59888,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519812000111",
@@ -57608,7 +59914,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517127000113",
@@ -57633,7 +59940,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518077000111",
@@ -57658,7 +59966,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_518077000112",
@@ -57683,7 +59992,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517127000112",
@@ -57708,7 +60018,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517127000111",
@@ -57733,7 +60044,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325252000111",
@@ -57758,7 +60070,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325252000112",
@@ -57783,7 +60096,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323357000111",
@@ -57808,7 +60122,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324795000112",
@@ -57833,7 +60148,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322580000113",
@@ -57858,7 +60174,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322580000112",
@@ -57883,7 +60200,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324795000111",
@@ -57908,7 +60226,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323250000112",
@@ -57933,7 +60252,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323250000111",
@@ -57958,7 +60278,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323357000112",
@@ -57983,7 +60304,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323357000113",
@@ -58008,7 +60330,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_312479000112",
@@ -58033,7 +60356,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322580000111",
@@ -58058,7 +60382,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216135000112",
@@ -58083,7 +60408,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_312134000211",
@@ -58108,7 +60434,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215899000113",
@@ -58133,7 +60460,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_312134000212",
@@ -58158,7 +60486,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_312479000111",
@@ -58183,7 +60512,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216135000111",
@@ -58208,7 +60538,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_311650000112",
@@ -58233,7 +60564,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159140000111",
@@ -58258,7 +60590,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215899000112",
@@ -58283,7 +60616,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215899000111",
@@ -58308,7 +60642,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159131000112",
@@ -58333,7 +60668,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159131000111",
@@ -58358,7 +60694,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159131000113",
@@ -58383,7 +60720,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159140000113",
@@ -58408,7 +60746,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159042000111",
@@ -58433,7 +60772,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159093000112",
@@ -58458,7 +60798,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159093000111",
@@ -58483,7 +60824,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159093000113",
@@ -58508,7 +60850,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159050000113",
@@ -58533,7 +60876,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159050000112",
@@ -58558,7 +60902,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159042000112",
@@ -58583,7 +60928,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159018000111",
@@ -58608,7 +60954,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159026000112",
@@ -58633,7 +60980,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159018000112",
@@ -58658,7 +61006,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159050000111",
@@ -58683,7 +61032,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158747000112",
@@ -58708,7 +61058,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158836000111",
@@ -58733,7 +61084,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159026000111",
@@ -58758,7 +61110,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158836000112",
@@ -58783,7 +61136,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158747000113",
@@ -58808,7 +61162,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158739000113",
@@ -58833,7 +61188,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158747000111",
@@ -58858,7 +61214,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158739000111",
@@ -58883,7 +61240,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158739000112",
@@ -58908,7 +61266,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158119000111",
@@ -58933,7 +61292,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158119000112",
@@ -58958,7 +61318,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158054000113",
@@ -58983,7 +61344,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158054000112",
@@ -59008,7 +61370,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158119000113",
@@ -59033,7 +61396,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157627000111",
@@ -59058,7 +61422,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157627000211",
@@ -59083,7 +61448,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157627000112",
@@ -59108,7 +61474,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157627000113",
@@ -59133,7 +61500,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157627000212",
@@ -59158,7 +61526,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158054000111",
@@ -59183,7 +61552,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324647000112",
@@ -59208,7 +61578,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_549355000113",
@@ -59233,7 +61604,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215724000112",
@@ -59258,7 +61630,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_577987000112",
@@ -59283,7 +61656,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324647000113",
@@ -59308,7 +61682,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215724000111",
@@ -59333,7 +61708,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_520071000112",
@@ -59358,7 +61734,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_520071000111",
@@ -59383,7 +61760,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157643000113",
@@ -59408,7 +61786,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157643000111",
@@ -59433,7 +61812,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157643000112",
@@ -59458,7 +61838,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131466000112",
@@ -59483,7 +61864,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131466000111",
@@ -59508,7 +61890,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323497000111",
@@ -59533,7 +61916,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323497000112",
@@ -59558,7 +61942,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215848000111",
@@ -59583,7 +61968,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215848000112",
@@ -59608,7 +61994,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_539163000211",
@@ -59633,7 +62020,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231088000111",
@@ -59658,7 +62046,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156698000111",
@@ -59683,7 +62072,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587877000111",
@@ -59708,7 +62098,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_230987000111",
@@ -59733,7 +62124,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_157473000111",
@@ -59758,7 +62150,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600814000111",
@@ -59783,7 +62176,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151947000111",
@@ -59808,7 +62202,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618527000112",
@@ -59833,7 +62228,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158232000211",
@@ -59858,7 +62254,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158232000212",
@@ -59883,7 +62280,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615315000113",
@@ -59908,7 +62306,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621366000111",
@@ -59933,7 +62332,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618527000111",
@@ -59958,7 +62358,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600814000112",
@@ -59983,7 +62384,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556122000111",
@@ -60008,7 +62410,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615315000111",
@@ -60033,7 +62436,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600814000113",
@@ -60058,7 +62462,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616001000111",
@@ -60083,7 +62488,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615315000112",
@@ -60108,7 +62514,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158232000213",
@@ -60133,7 +62540,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215848000113",
@@ -60158,7 +62566,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_618039000111",
@@ -60183,7 +62592,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158623000211",
@@ -60208,7 +62618,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609625000111",
@@ -60233,7 +62644,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599182000111",
@@ -60258,7 +62670,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599182000112",
@@ -60283,7 +62696,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599182000113",
@@ -60308,7 +62722,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593788000112",
@@ -60333,7 +62748,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616443000111",
@@ -60358,7 +62774,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616443000112",
@@ -60383,7 +62800,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564958000111",
@@ -60408,7 +62826,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564958000112",
@@ -60433,7 +62852,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565105000111",
@@ -60458,7 +62878,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565105000112",
@@ -60483,7 +62904,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565105000113",
@@ -60508,7 +62930,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_548430000411",
@@ -60533,7 +62956,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_548430000412",
@@ -60558,7 +62982,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_612391000111",
@@ -60583,7 +63008,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612391000112",
@@ -60608,7 +63034,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_314684000112",
@@ -60633,7 +63060,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564265000113",
@@ -60658,7 +63086,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_594725000111",
@@ -60683,7 +63112,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_594725000112",
@@ -60708,7 +63138,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564125000113",
@@ -60733,7 +63164,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564141000113",
@@ -60758,7 +63190,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563595000113",
@@ -60783,7 +63216,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563579000113",
@@ -60808,7 +63242,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622699000113",
@@ -60833,7 +63268,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622699000111",
@@ -60858,7 +63294,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622699000112",
@@ -60883,7 +63320,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621480000112",
@@ -60908,7 +63346,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621480000113",
@@ -60933,7 +63372,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621480000111",
@@ -60958,7 +63398,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566322000113",
@@ -60983,7 +63424,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624829000112",
@@ -61008,7 +63450,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624829000111",
@@ -61033,7 +63476,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624829000113",
@@ -61058,7 +63502,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623580000113",
@@ -61083,7 +63528,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623580000112",
@@ -61108,7 +63554,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623580000111",
@@ -61133,7 +63580,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_527211000112",
@@ -61158,7 +63606,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_527211000113",
@@ -61183,7 +63632,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_527211000111",
@@ -61208,7 +63658,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_314684000111",
@@ -61233,7 +63684,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_620149000113",
@@ -61258,7 +63710,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537225000112",
@@ -61282,7 +63735,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537225000113",
@@ -61306,7 +63760,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537225000111",
@@ -61330,7 +63785,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614998000111",
@@ -61355,7 +63811,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324779000111",
@@ -61380,7 +63837,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324779000112",
@@ -61405,7 +63863,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324779000113",
@@ -61430,7 +63889,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623474000113",
@@ -61455,7 +63915,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581836000212",
@@ -61480,7 +63941,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623474000111",
@@ -61505,7 +63967,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623474000112",
@@ -61530,7 +63993,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564001000113",
@@ -61555,7 +64019,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565954000113",
@@ -61580,7 +64045,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624195000111",
@@ -61605,7 +64071,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_624195000112",
@@ -61630,7 +64097,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215937000112",
@@ -61655,7 +64123,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215937000111",
@@ -61680,7 +64149,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596787000111",
@@ -61705,7 +64175,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596787000112",
@@ -61730,7 +64201,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607592000213",
@@ -61755,7 +64227,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607592000212",
@@ -61780,7 +64253,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607592000211",
@@ -61805,7 +64279,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616281000113",
@@ -61829,7 +64304,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616281000111",
@@ -61853,7 +64329,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616281000112",
@@ -61877,7 +64354,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598089000112",
@@ -61902,7 +64380,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526100000111",
@@ -61927,7 +64406,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593788000111",
@@ -61952,7 +64432,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_588032000111",
@@ -61977,7 +64458,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_588032000112",
@@ -62002,7 +64484,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_588032000113",
@@ -62027,7 +64510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566349000113",
@@ -62052,7 +64536,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566330000113",
@@ -62077,7 +64562,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566314000113",
@@ -62102,7 +64588,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566306000113",
@@ -62127,7 +64614,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564869000113",
@@ -62152,7 +64640,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563170000113",
@@ -62177,7 +64666,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213632000213",
@@ -62202,7 +64692,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213632000212",
@@ -62227,7 +64718,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_213632000211",
@@ -62252,7 +64744,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158860000113",
@@ -62277,7 +64770,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158860000112",
@@ -62302,7 +64796,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158860000111",
@@ -62327,7 +64822,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622265000111",
@@ -62352,7 +64848,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622265000112",
@@ -62377,7 +64874,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622265000113",
@@ -62402,7 +64900,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616311000112",
@@ -62427,7 +64926,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616311000111",
@@ -62452,7 +64952,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526100000112",
@@ -62477,7 +64978,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526100000113",
@@ -62502,7 +65004,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519871000212",
@@ -62527,7 +65030,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519871000211",
@@ -62552,7 +65056,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216267000111",
@@ -62577,7 +65082,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216267000113",
@@ -62602,7 +65108,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216267000112",
@@ -62627,7 +65134,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604615000113",
@@ -62652,7 +65160,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595543000113",
@@ -62676,7 +65185,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581836000213",
@@ -62701,7 +65211,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622982000111",
@@ -62726,7 +65237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622982000112",
@@ -62751,7 +65263,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158569000113",
@@ -62776,7 +65289,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158569000112",
@@ -62801,7 +65315,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158569000111",
@@ -62826,7 +65341,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621986000111",
@@ -62851,7 +65367,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621986000113",
@@ -62876,7 +65393,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621986000112",
@@ -62901,7 +65419,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622389000112",
@@ -62926,7 +65445,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622389000113",
@@ -62951,7 +65471,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622389000111",
@@ -62976,7 +65497,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587869000111",
@@ -63001,7 +65523,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587869000113",
@@ -63026,7 +65549,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587869000112",
@@ -63051,7 +65575,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215767000111",
@@ -63076,7 +65601,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215767000112",
@@ -63101,7 +65627,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216011000611",
@@ -63126,7 +65653,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_216011000612",
@@ -63151,7 +65679,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_583774000111",
@@ -63176,7 +65705,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_583774000112",
@@ -63201,7 +65731,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611484000112",
@@ -63226,7 +65757,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611484000111",
@@ -63251,7 +65783,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156612000212",
@@ -63275,7 +65808,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156612000213",
@@ -63299,7 +65833,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156612000211",
@@ -63323,7 +65858,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231517000112",
@@ -63348,7 +65884,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231517000111",
@@ -63373,7 +65910,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564567000113",
@@ -63398,7 +65936,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564575000113",
@@ -63423,7 +65962,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564583000113",
@@ -63448,7 +65988,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564583000111",
@@ -63473,7 +66014,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564559000113",
@@ -63498,7 +66040,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562963000113",
@@ -63523,7 +66066,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_602256000112",
@@ -63548,7 +66092,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530735000112",
@@ -63573,7 +66118,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530735000113",
@@ -63598,7 +66144,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_530735000111",
@@ -63623,7 +66170,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565938000212",
@@ -63648,7 +66196,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565938000211",
@@ -63673,7 +66222,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556220000112",
@@ -63698,7 +66248,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556220000113",
@@ -63723,7 +66274,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556220000111",
@@ -63748,7 +66300,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564524000113",
@@ -63773,7 +66326,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562890000113",
@@ -63798,7 +66352,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563099000113",
@@ -63823,7 +66378,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563145000113",
@@ -63848,7 +66404,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563072000113",
@@ -63873,7 +66430,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563064000113",
@@ -63898,7 +66456,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566535000113",
@@ -63923,7 +66482,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562955000113",
@@ -63948,7 +66508,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523364000112",
@@ -63973,7 +66534,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523364000111",
@@ -63998,7 +66560,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613916000112",
@@ -64023,7 +66586,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231266000112",
@@ -64048,7 +66612,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231266000113",
@@ -64073,7 +66638,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231266000111",
@@ -64098,7 +66664,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_602256000111",
@@ -64123,7 +66690,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_620998000112",
@@ -64148,7 +66716,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_620998000111",
@@ -64173,7 +66742,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_620998000113",
@@ -64198,7 +66768,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_623598000113",
@@ -64223,7 +66794,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325457000111",
@@ -64248,7 +66820,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325457000112",
@@ -64273,7 +66846,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325457000113",
@@ -64298,7 +66872,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566080000112",
@@ -64323,7 +66898,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566080000111",
@@ -64348,7 +66924,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609919000113",
@@ -64373,7 +66950,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609919000112",
@@ -64398,7 +66976,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609919000111",
@@ -64423,7 +67002,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613916000111",
@@ -64448,7 +67028,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616290000111",
@@ -64473,7 +67054,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616290000112",
@@ -64498,7 +67080,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607223000111",
@@ -64523,7 +67106,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607223000112",
@@ -64548,7 +67132,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_606979000113",
@@ -64573,7 +67158,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_606979000111",
@@ -64598,7 +67184,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_606979000112",
@@ -64623,7 +67210,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_564010000113",
@@ -64648,7 +67236,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565261000113",
@@ -64673,7 +67262,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565237000113",
@@ -64698,7 +67288,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564028000113",
@@ -64723,7 +67314,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_572764000111",
@@ -64747,7 +67339,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613665000111",
@@ -64772,7 +67365,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613665000113",
@@ -64797,7 +67391,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613665000112",
@@ -64822,7 +67417,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593770000212",
@@ -64846,7 +67442,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593770000211",
@@ -64870,7 +67467,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603864000211",
@@ -64895,7 +67493,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603864000212",
@@ -64920,7 +67519,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603864000213",
@@ -64945,7 +67545,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610623000111",
@@ -64970,7 +67571,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610623000113",
@@ -64995,7 +67597,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610623000112",
@@ -65020,7 +67623,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600350000112",
@@ -65045,7 +67649,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_600350000111",
@@ -65070,7 +67675,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_565318000113",
@@ -65095,7 +67701,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563960000113",
@@ -65120,7 +67727,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566683000113",
@@ -65145,7 +67753,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325783000112",
@@ -65170,7 +67779,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536415000113",
@@ -65195,7 +67805,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540811000113",
@@ -65220,7 +67831,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_602000000113",
@@ -65245,7 +67857,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581119000111",
@@ -65270,7 +67883,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617849000113",
@@ -65295,7 +67909,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_602329000111",
@@ -65320,7 +67935,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599263000112",
@@ -65345,7 +67961,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578479000111",
@@ -65370,7 +67987,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578479000112",
@@ -65395,7 +68013,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599263000111",
@@ -65420,7 +68039,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612189000111",
@@ -65445,7 +68065,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612189000112",
@@ -65470,7 +68091,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215678000112",
@@ -65495,7 +68117,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_602329000112",
@@ -65520,7 +68143,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215678000113",
@@ -65545,7 +68169,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575852000112",
@@ -65570,7 +68195,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575755000111",
@@ -65595,7 +68221,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604470000111",
@@ -65620,7 +68247,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575852000111",
@@ -65645,7 +68273,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_602000000112",
@@ -65670,7 +68299,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604470000112",
@@ -65695,7 +68325,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_573973000112",
@@ -65720,7 +68351,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_573973000111",
@@ -65745,7 +68377,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599999000111",
@@ -65770,7 +68403,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575755000112",
@@ -65795,7 +68429,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599999000113",
@@ -65820,7 +68455,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604445000112",
@@ -65845,7 +68481,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_599999000112",
@@ -65870,7 +68507,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578193000112",
@@ -65895,7 +68533,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567892000212",
@@ -65920,7 +68559,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567892000213",
@@ -65945,7 +68585,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604445000111",
@@ -65970,7 +68611,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_578193000111",
@@ -65995,7 +68637,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_586625000112",
@@ -66020,7 +68663,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587524000111",
@@ -66045,7 +68689,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609528000112",
@@ -66070,7 +68715,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587524000112",
@@ -66095,7 +68741,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567892000211",
@@ -66120,7 +68767,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_586625000111",
@@ -66145,7 +68793,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601403000112",
@@ -66169,7 +68818,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601403000111",
@@ -66193,7 +68843,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603643000111",
@@ -66218,7 +68869,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603643000112",
@@ -66243,7 +68895,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587524000113",
@@ -66268,7 +68921,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604585000112",
@@ -66293,7 +68947,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_602000000111",
@@ -66318,7 +68973,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604291000111",
@@ -66343,7 +68999,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605441000112",
@@ -66368,7 +69025,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605794000111",
@@ -66393,7 +69051,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604291000112",
@@ -66418,7 +69077,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605794000112",
@@ -66443,7 +69103,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605441000111",
@@ -66468,7 +69129,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604585000111",
@@ -66493,7 +69155,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607703000111",
@@ -66518,7 +69181,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_584606000113",
@@ -66543,7 +69207,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607703000112",
@@ -66568,7 +69233,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597538000211",
@@ -66593,7 +69259,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609528000111",
@@ -66618,7 +69285,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601721000112",
@@ -66643,7 +69311,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601721000111",
@@ -66668,7 +69337,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597538000212",
@@ -66693,7 +69363,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616990000112",
@@ -66718,7 +69389,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616990000113",
@@ -66743,7 +69415,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616990000111",
@@ -66768,7 +69441,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612782000113",
@@ -66793,7 +69467,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612782000111",
@@ -66818,7 +69493,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612782000112",
@@ -66843,7 +69519,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613037000111",
@@ -66868,7 +69545,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_613088000112",
@@ -66893,7 +69571,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615250000111",
@@ -66918,7 +69597,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613037000112",
@@ -66943,7 +69623,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_613088000113",
@@ -66968,7 +69649,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613088000111",
@@ -66993,7 +69675,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615170000112",
@@ -67018,7 +69701,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615250000112",
@@ -67043,7 +69727,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605026000111",
@@ -67067,7 +69752,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605026000112",
@@ -67091,7 +69777,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613681000111",
@@ -67116,7 +69803,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615170000111",
@@ -67141,7 +69829,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613681000112",
@@ -67166,7 +69855,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614920000113",
@@ -67191,7 +69881,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604615000112",
@@ -67216,7 +69907,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598089000111",
@@ -67241,7 +69933,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613037000113",
@@ -67266,7 +69959,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_613517000111",
@@ -67291,7 +69985,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_607258000113",
@@ -67316,7 +70011,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604615000111",
@@ -67341,7 +70037,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613517000112",
@@ -67366,7 +70063,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_607258000111",
@@ -67391,7 +70089,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_538132000111",
@@ -67416,7 +70115,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607258000112",
@@ -67441,7 +70141,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613517000113",
@@ -67466,7 +70167,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_590673000112",
@@ -67490,7 +70192,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157716000112",
@@ -67515,7 +70218,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590401000111",
@@ -67540,7 +70244,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564338000312",
@@ -67565,7 +70270,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593133000111",
@@ -67590,7 +70296,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532835000111",
@@ -67615,7 +70322,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564338000313",
@@ -67640,7 +70348,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540811000111",
@@ -67665,7 +70374,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_540811000112",
@@ -67690,7 +70400,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_326003000111",
@@ -67715,7 +70426,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_326003000113",
@@ -67740,7 +70452,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601250000111",
@@ -67765,7 +70478,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_326003000112",
@@ -67790,7 +70504,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601497000112",
@@ -67815,7 +70530,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559415000112",
@@ -67840,7 +70556,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_592080000113",
@@ -67865,7 +70582,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_592080000112",
@@ -67890,7 +70608,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559415000111",
@@ -67915,7 +70634,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581739000112",
@@ -67940,7 +70660,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231592000111",
@@ -67965,7 +70686,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581739000111",
@@ -67990,7 +70712,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_592080000111",
@@ -68015,7 +70738,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581119000112",
@@ -68040,7 +70764,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611646000111",
@@ -68065,7 +70790,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604372000112",
@@ -68090,7 +70816,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604372000111",
@@ -68115,7 +70842,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158062000111",
@@ -68140,7 +70868,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325783000111",
@@ -68165,7 +70894,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158062000113",
@@ -68190,7 +70920,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158062000112",
@@ -68215,7 +70946,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325775000112",
@@ -68240,7 +70972,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537098000113",
@@ -68265,7 +70998,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325775000113",
@@ -68290,7 +71024,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325775000111",
@@ -68315,7 +71050,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603724000112",
@@ -68340,7 +71076,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603724000113",
@@ -68365,7 +71102,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603724000111",
@@ -68390,7 +71128,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325597000113",
@@ -68415,7 +71154,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325961000211",
@@ -68439,7 +71179,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325937000112",
@@ -68464,7 +71205,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325597000112",
@@ -68489,7 +71231,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325937000111",
@@ -68514,7 +71257,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325937000113",
@@ -68539,7 +71283,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_614998000112",
@@ -68564,7 +71309,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325597000111",
@@ -68589,7 +71335,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_619850000111",
@@ -68614,7 +71361,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_619850000112",
@@ -68639,7 +71387,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604259000113",
@@ -68664,7 +71413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604259000111",
@@ -68689,7 +71439,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604259000112",
@@ -68714,7 +71465,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571490000113",
@@ -68739,7 +71491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131440000111",
@@ -68764,7 +71517,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231886000212",
@@ -68789,7 +71543,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231886000213",
@@ -68814,7 +71569,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131440000113",
@@ -68839,7 +71595,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231886000211",
@@ -68864,7 +71621,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522678000113",
@@ -68889,7 +71647,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159239000112",
@@ -68914,7 +71673,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131440000112",
@@ -68939,7 +71699,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_159239000111",
@@ -68964,7 +71725,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597031000112",
@@ -68989,7 +71751,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597031000111",
@@ -69014,7 +71777,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522678000112",
@@ -69039,7 +71803,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522678000111",
@@ -69064,7 +71829,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158852000111",
@@ -69089,7 +71855,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158852000113",
@@ -69114,7 +71881,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595543000111",
@@ -69138,7 +71906,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595543000112",
@@ -69162,7 +71931,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158852000112",
@@ -69187,7 +71957,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590673000113",
@@ -69211,7 +71982,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587141000113",
@@ -69236,7 +72008,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600334000211",
@@ -69261,7 +72034,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600334000212",
@@ -69286,7 +72060,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611646000113",
@@ -69311,7 +72086,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587141000112",
@@ -69336,7 +72112,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611646000112",
@@ -69361,7 +72138,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587141000111",
@@ -69386,7 +72164,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541222000111",
@@ -69410,7 +72189,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_584606000112",
@@ -69435,7 +72215,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_584606000111",
@@ -69460,7 +72241,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541222000112",
@@ -69484,7 +72266,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231592000113",
@@ -69509,7 +72292,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231592000112",
@@ -69534,7 +72318,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541222000113",
@@ -69558,7 +72343,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609749000112",
@@ -69583,7 +72369,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609749000111",
@@ -69608,7 +72395,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604402000113",
@@ -69633,7 +72421,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604402000112",
@@ -69658,7 +72447,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_604402000111",
@@ -69683,7 +72473,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597716000111",
@@ -69708,7 +72499,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595837000111",
@@ -69733,7 +72525,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590860000111",
@@ -69757,7 +72550,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597716000112",
@@ -69782,7 +72576,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_583421000112",
@@ -69807,7 +72602,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590860000112",
@@ -69831,7 +72627,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_583421000111",
@@ -69856,7 +72653,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_583421000113",
@@ -69881,7 +72679,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_583340000112",
@@ -69906,7 +72705,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_583340000111",
@@ -69931,7 +72731,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541613000113",
@@ -69956,7 +72757,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323896000112",
@@ -69981,7 +72783,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533360000212",
@@ -70006,7 +72809,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323896000113",
@@ -70031,7 +72835,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533360000211",
@@ -70056,7 +72861,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541613000112",
@@ -70081,7 +72887,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533360000213",
@@ -70106,7 +72913,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323896000111",
@@ -70131,7 +72939,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231240000113",
@@ -70156,7 +72965,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_541613000111",
@@ -70181,7 +72991,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231240000112",
@@ -70206,7 +73017,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560090000113",
@@ -70231,7 +73043,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158771000312",
@@ -70256,7 +73069,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158771000313",
@@ -70281,7 +73095,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158470000111",
@@ -70306,7 +73121,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560090000111",
@@ -70331,7 +73147,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560090000112",
@@ -70356,7 +73173,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158470000113",
@@ -70381,7 +73199,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158470000112",
@@ -70406,7 +73225,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565199000212",
@@ -70431,7 +73251,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565199000211",
@@ -70456,7 +73277,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565199000213",
@@ -70481,7 +73303,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216186000211",
@@ -70505,7 +73328,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_601250000112",
@@ -70530,7 +73354,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601250000113",
@@ -70555,7 +73380,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_158771000311",
@@ -70580,7 +73406,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215830000113",
@@ -70605,7 +73432,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215740000111",
@@ -70630,7 +73458,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215830000112",
@@ -70655,7 +73484,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215740000113",
@@ -70680,7 +73510,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215740000112",
@@ -70705,7 +73536,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215830000111",
@@ -70730,7 +73562,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_538132000113",
@@ -70755,7 +73588,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322687000113",
@@ -70780,7 +73614,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324230000211",
@@ -70805,7 +73640,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157678000111",
@@ -70830,7 +73666,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231185000112",
@@ -70855,7 +73692,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322687000112",
@@ -70880,7 +73718,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324230000213",
@@ -70905,7 +73744,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231185000113",
@@ -70930,7 +73770,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157678000112",
@@ -70955,7 +73796,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231185000111",
@@ -70980,7 +73822,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_322687000111",
@@ -71005,7 +73848,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324230000212",
@@ -71030,7 +73874,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559385000111",
@@ -71055,7 +73900,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559385000113",
@@ -71080,7 +73926,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_559385000112",
@@ -71105,7 +73952,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575640000112",
@@ -71130,7 +73978,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575640000113",
@@ -71155,7 +74004,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571490000111",
@@ -71180,7 +74030,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575640000111",
@@ -71205,7 +74056,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133280000111",
@@ -71230,7 +74082,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133280000113",
@@ -71255,7 +74108,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_591777000112",
@@ -71280,7 +74134,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571490000112",
@@ -71305,7 +74160,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596116000113",
@@ -71330,7 +74186,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_591777000111",
@@ -71355,7 +74212,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_584517000112",
@@ -71379,7 +74237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133280000112",
@@ -71404,7 +74263,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597295000113",
@@ -71429,7 +74289,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_584517000111",
@@ -71453,7 +74314,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597295000112",
@@ -71478,7 +74340,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537950000111",
@@ -71502,7 +74365,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567329000112",
@@ -71527,7 +74391,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_597295000111",
@@ -71552,7 +74417,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593133000112",
@@ -71577,7 +74443,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567329000111",
@@ -71602,7 +74469,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564338000311",
@@ -71627,7 +74495,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534200000111",
@@ -71652,7 +74521,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_561207000111",
@@ -71677,7 +74547,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532835000113",
@@ -71702,7 +74573,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_561207000112",
@@ -71727,7 +74599,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533858000112",
@@ -71752,7 +74625,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534200000112",
@@ -71777,7 +74651,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533858000111",
@@ -71802,7 +74677,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542504000111",
@@ -71827,7 +74703,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536415000112",
@@ -71852,7 +74729,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_536415000111",
@@ -71877,7 +74755,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517712000112",
@@ -71902,7 +74781,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523933000112",
@@ -71927,7 +74807,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523984000212",
@@ -71952,7 +74833,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_532835000112",
@@ -71977,7 +74859,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523933000113",
@@ -72002,7 +74885,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542504000112",
@@ -72027,7 +74911,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517712000111",
@@ -72052,7 +74937,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523933000111",
@@ -72077,7 +74963,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523984000211",
@@ -72102,7 +74989,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517712000113",
@@ -72127,7 +75015,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325570000113",
@@ -72152,7 +75041,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325570000112",
@@ -72177,7 +75067,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523984000213",
@@ -72202,7 +75093,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156949000112",
@@ -72227,7 +75119,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156949000111",
@@ -72252,7 +75145,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325570000111",
@@ -72277,7 +75171,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325040000113",
@@ -72302,7 +75197,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_531898000112",
@@ -72327,7 +75223,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325040000112",
@@ -72352,7 +75249,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325040000111",
@@ -72377,7 +75275,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231363000112",
@@ -72402,7 +75301,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231363000113",
@@ -72427,7 +75327,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231363000111",
@@ -72452,7 +75353,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325961000212",
@@ -72476,7 +75378,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_582417000113",
@@ -72501,7 +75404,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569828000112",
@@ -72526,7 +75430,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598623000111",
@@ -72551,7 +75456,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_582417000112",
@@ -72576,7 +75482,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598623000113",
@@ -72601,7 +75508,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_582417000111",
@@ -72626,7 +75534,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590673000111",
@@ -72650,7 +75559,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_574708000112",
@@ -72675,7 +75585,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_574708000113",
@@ -72700,7 +75611,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569828000113",
@@ -72725,7 +75637,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569828000111",
@@ -72750,7 +75663,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_574708000111",
@@ -72775,7 +75689,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567329000113",
@@ -72800,7 +75715,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564753000212",
@@ -72825,7 +75741,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564753000211",
@@ -72850,7 +75767,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564753000213",
@@ -72875,7 +75793,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550892000112",
@@ -72900,7 +75819,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_550892000111",
@@ -72925,7 +75845,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534226000112",
@@ -72950,7 +75871,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537527000111",
@@ -72975,7 +75897,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535818000211",
@@ -73000,7 +75923,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537527000113",
@@ -73025,7 +75949,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537527000112",
@@ -73050,7 +75975,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535818000212",
@@ -73075,7 +76001,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537713000111",
@@ -73100,7 +76027,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537713000112",
@@ -73125,7 +76053,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215929000212",
@@ -73150,7 +76079,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_531898000111",
@@ -73175,7 +76105,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325481000113",
@@ -73199,7 +76130,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534226000113",
@@ -73224,7 +76156,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215678000111",
@@ -73249,7 +76182,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215929000213",
@@ -73274,7 +76208,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_535818000213",
@@ -73299,7 +76234,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534226000111",
@@ -73324,7 +76260,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325180000113",
@@ -73349,7 +76286,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215929000211",
@@ -73374,7 +76312,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610534000112",
@@ -73399,7 +76338,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_610534000111",
@@ -73424,7 +76364,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151424000111",
@@ -73449,7 +76390,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157066000111",
@@ -73474,7 +76416,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157490000112",
@@ -73499,7 +76442,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216194000111",
@@ -73524,7 +76468,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157490000113",
@@ -73549,7 +76494,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_212466000413",
@@ -73574,7 +76520,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151424000113",
@@ -73599,7 +76546,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157490000111",
@@ -73624,7 +76572,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151424000112",
@@ -73649,7 +76598,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325546000112",
@@ -73674,7 +76624,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325643000111",
@@ -73699,7 +76650,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325546000111",
@@ -73724,7 +76676,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325546000113",
@@ -73749,7 +76702,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325643000113",
@@ -73774,7 +76728,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325686000113",
@@ -73799,7 +76754,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325643000112",
@@ -73824,7 +76780,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216194000113",
@@ -73849,7 +76806,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325686000111",
@@ -73874,7 +76832,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216194000112",
@@ -73899,7 +76858,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517828000312",
@@ -73924,7 +76884,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231240000111",
@@ -73949,7 +76910,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519499000112",
@@ -73974,7 +76936,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517828000311",
@@ -73999,7 +76962,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519499000113",
@@ -74024,7 +76988,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_519499000111",
@@ -74049,7 +77014,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157716000111",
@@ -74074,7 +77040,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_572764000112",
@@ -74098,7 +77065,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_572764000113",
@@ -74122,7 +77090,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593680000113",
@@ -74147,7 +77116,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593680000111",
@@ -74172,7 +77142,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598038000112",
@@ -74197,7 +77168,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590401000113",
@@ -74222,7 +77194,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590401000112",
@@ -74247,7 +77220,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598038000113",
@@ -74272,7 +77246,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598038000111",
@@ -74297,7 +77272,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_538132000112",
@@ -74322,7 +77298,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595837000113",
@@ -74347,7 +77324,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_593680000112",
@@ -74372,7 +77350,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_156949000113",
@@ -74397,7 +77376,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325163000112",
@@ -74422,7 +77402,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_595837000112",
@@ -74447,7 +77428,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325163000113",
@@ -74472,7 +77454,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325163000111",
@@ -74497,7 +77480,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523178000112",
@@ -74522,7 +77506,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324965000113",
@@ -74547,7 +77532,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324965000112",
@@ -74572,7 +77558,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231614000112",
@@ -74597,7 +77584,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325244000111",
@@ -74622,7 +77610,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556246000113",
@@ -74647,7 +77636,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324965000111",
@@ -74672,7 +77662,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_231614000111",
@@ -74697,7 +77688,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325716000111",
@@ -74722,7 +77714,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_561207000113",
@@ -74747,7 +77740,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325716000113",
@@ -74772,7 +77766,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524441000112",
@@ -74797,7 +77792,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524441000113",
@@ -74822,7 +77818,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325244000112",
@@ -74847,7 +77844,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325716000112",
@@ -74872,7 +77870,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524441000111",
@@ -74897,7 +77896,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523178000113",
@@ -74922,7 +77922,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325244000113",
@@ -74947,7 +77948,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_523178000111",
@@ -74972,7 +77974,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556246000111",
@@ -74997,7 +78000,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552747000111",
@@ -75022,7 +78026,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537098000111",
@@ -75047,7 +78052,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537098000112",
@@ -75072,7 +78078,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_556246000112",
@@ -75097,7 +78104,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_315907000111",
@@ -75122,7 +78130,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132730000112",
@@ -75147,7 +78156,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_157066000113",
@@ -75172,7 +78182,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_157066000112",
@@ -75197,7 +78208,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132730000113",
@@ -75222,7 +78234,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_323926000111",
@@ -75246,7 +78259,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132730000111",
@@ -75271,7 +78285,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_323926000113",
@@ -75295,7 +78310,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323926000112",
@@ -75319,7 +78335,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_315907000112",
@@ -75344,7 +78361,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323683000113",
@@ -75369,7 +78387,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323683000111",
@@ -75394,7 +78413,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_323683000112",
@@ -75419,7 +78439,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552747000112",
@@ -75444,7 +78465,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524034000211",
@@ -75469,7 +78491,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524034000212",
@@ -75494,7 +78517,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526010000112",
@@ -75519,7 +78543,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325589000113",
@@ -75544,7 +78569,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325589000112",
@@ -75569,7 +78595,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522953000112",
@@ -75594,7 +78621,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537578000113",
@@ -75619,7 +78647,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537950000112",
@@ -75643,7 +78672,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510726000113",
@@ -75668,7 +78698,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325481000112",
@@ -75692,7 +78723,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_522953000111",
@@ -75717,7 +78749,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510726000111",
@@ -75742,7 +78775,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537578000111",
@@ -75767,7 +78801,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325481000111",
@@ -75791,7 +78826,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_510726000112",
@@ -75816,7 +78852,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526010000111",
@@ -75841,7 +78878,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325589000111",
@@ -75866,7 +78904,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554383000111",
@@ -75891,7 +78930,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528366000112",
@@ -75916,7 +78956,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_552747000113",
@@ -75941,7 +78982,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554383000113",
@@ -75966,7 +79008,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325791000113",
@@ -75991,7 +79034,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545589000112",
@@ -76016,7 +79060,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545333000112",
@@ -76041,7 +79086,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537578000112",
@@ -76066,7 +79112,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_537950000113",
@@ -76090,7 +79137,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542164000113",
@@ -76115,7 +79163,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325880000113",
@@ -76140,7 +79189,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545589000111",
@@ -76165,7 +79215,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325880000111",
@@ -76190,7 +79241,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325791000111",
@@ -76215,7 +79267,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542164000112",
@@ -76240,7 +79293,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545333000111",
@@ -76265,7 +79319,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542164000111",
@@ -76290,7 +79345,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516910000113",
@@ -76315,7 +79371,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325791000112",
@@ -76340,7 +79397,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_545333000113",
@@ -76365,7 +79423,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516910000112",
@@ -76390,7 +79449,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_516910000111",
@@ -76415,7 +79475,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528366000113",
@@ -76440,7 +79501,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_554383000112",
@@ -76465,7 +79527,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528366000111",
@@ -76490,7 +79553,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325899000111",
@@ -76515,7 +79579,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_601497000111",
@@ -76540,7 +79605,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325899000112",
@@ -76565,7 +79631,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_325899000113",
@@ -76590,7 +79657,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581836000211",
@@ -76615,7 +79683,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609285000111",
@@ -76640,7 +79709,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_613169000113",
@@ -76665,7 +79735,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609285000112",
@@ -76690,7 +79761,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617474000111",
@@ -76715,7 +79787,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617474000112",
@@ -76740,7 +79813,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622060000112",
@@ -76765,7 +79839,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622060000113",
@@ -76790,7 +79865,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622060000111",
@@ -76815,7 +79891,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566179000113",
@@ -76840,7 +79917,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566179000111",
@@ -76865,7 +79943,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566179000112",
@@ -76890,7 +79969,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563269000113",
@@ -76915,7 +79995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563307000113",
@@ -76940,7 +80021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563277000113",
@@ -76965,7 +80047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565130000111",
@@ -76990,7 +80073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565130000112",
@@ -77015,7 +80099,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563463000111",
@@ -77040,7 +80125,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563463000112",
@@ -77065,7 +80151,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565431000111",
@@ -77090,7 +80177,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565113000111",
@@ -77115,7 +80203,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565113000112",
@@ -77140,7 +80229,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565113000113",
@@ -77165,7 +80255,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565024000113",
@@ -77190,7 +80281,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569712000113",
@@ -77215,7 +80307,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566403000111",
@@ -77240,7 +80333,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567345000113",
@@ -77265,7 +80359,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_568104000113",
@@ -77290,7 +80385,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563498000111",
@@ -77315,7 +80411,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564486000113",
@@ -77340,7 +80437,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564850000113",
@@ -77365,7 +80463,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563641000113",
@@ -77390,7 +80489,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564834000113",
@@ -77415,7 +80515,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565571000113",
@@ -77440,7 +80541,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565474000113",
@@ -77465,7 +80567,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565687000112",
@@ -77490,7 +80593,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565687000111",
@@ -77515,7 +80619,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565970000113",
@@ -77540,7 +80645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565709000113",
@@ -77565,7 +80671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565687000113",
@@ -77590,7 +80697,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566284000111",
@@ -77614,7 +80722,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565997000113",
@@ -77639,7 +80748,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565830000111",
@@ -77664,7 +80774,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566250000113",
@@ -77689,7 +80800,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565830000113",
@@ -77714,7 +80826,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566284000112",
@@ -77738,7 +80851,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566071000113",
@@ -77763,7 +80877,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566110000113",
@@ -77788,7 +80903,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_566284000113",
@@ -77812,7 +80928,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566071000112",
@@ -77837,7 +80954,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566071000111",
@@ -77862,7 +80980,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564397000113",
@@ -77887,7 +81006,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564800000113",
@@ -77912,7 +81032,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564648000113",
@@ -77937,7 +81058,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563420000113",
@@ -77962,7 +81084,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563226000113",
@@ -77987,7 +81110,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564761000111",
@@ -78011,7 +81135,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563536000113",
@@ -78036,7 +81161,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564176000113",
@@ -78061,7 +81187,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563935000113",
@@ -78086,7 +81213,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563366000113",
@@ -78111,7 +81239,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563285000113",
@@ -78136,7 +81265,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563862000113",
@@ -78161,7 +81291,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564630000113",
@@ -78186,7 +81317,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564826000113",
@@ -78211,7 +81343,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563811000113",
@@ -78236,7 +81369,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563544000113",
@@ -78261,7 +81395,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565679000111",
@@ -78286,7 +81421,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564761000112",
@@ -78310,7 +81446,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565431000113",
@@ -78335,7 +81472,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564761000113",
@@ -78359,7 +81497,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564818000113",
@@ -78384,7 +81523,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564842000113",
@@ -78409,7 +81549,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565679000112",
@@ -78434,7 +81575,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565989000113",
@@ -78459,7 +81601,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564630000111",
@@ -78484,7 +81627,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565962000113",
@@ -78509,7 +81653,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565369000113",
@@ -78534,7 +81679,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565679000113",
@@ -78559,7 +81705,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567027000111",
@@ -78584,7 +81731,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566101000112",
@@ -78609,7 +81757,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565946000113",
@@ -78634,7 +81783,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566012000113",
@@ -78659,7 +81809,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566101000113",
@@ -78684,7 +81835,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566012000111",
@@ -78709,7 +81861,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566101000111",
@@ -78734,7 +81887,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567027000112",
@@ -78759,7 +81913,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567027000113",
@@ -78784,7 +81939,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562904000113",
@@ -78809,7 +81965,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563234000113",
@@ -78834,7 +81991,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562874000113",
@@ -78859,7 +82017,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563331000113",
@@ -78884,7 +82043,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563447000112",
@@ -78909,7 +82069,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563382000113",
@@ -78934,7 +82095,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563498000113",
@@ -78959,7 +82121,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563552000113",
@@ -78984,7 +82147,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563447000111",
@@ -79009,7 +82173,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563609000113",
@@ -79034,7 +82199,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563293000113",
@@ -79059,7 +82225,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563749000113",
@@ -79084,7 +82251,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563463000113",
@@ -79109,7 +82277,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563617000113",
@@ -79134,7 +82303,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563455000113",
@@ -79159,7 +82329,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563722000112",
@@ -79184,7 +82355,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563447000113",
@@ -79209,7 +82381,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563757000113",
@@ -79234,7 +82407,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563722000113",
@@ -79259,7 +82433,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563943000113",
@@ -79284,7 +82459,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563692000113",
@@ -79309,7 +82485,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563625000113",
@@ -79334,7 +82511,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563722000111",
@@ -79359,7 +82537,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563820000113",
@@ -79384,7 +82563,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563854000113",
@@ -79409,7 +82589,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563781000113",
@@ -79434,7 +82615,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563790000113",
@@ -79459,7 +82641,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563633000113",
@@ -79484,7 +82667,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563714000113",
@@ -79509,7 +82693,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564060000113",
@@ -79534,7 +82719,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564150000113",
@@ -79559,7 +82745,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564087000113",
@@ -79584,7 +82771,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564109000113",
@@ -79609,7 +82797,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563951000113",
@@ -79634,7 +82823,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564184000113",
@@ -79659,7 +82849,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563919000113",
@@ -79684,7 +82875,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563927000111",
@@ -79709,7 +82901,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563978000113",
@@ -79734,7 +82927,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564036000113",
@@ -79759,7 +82953,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563994000113",
@@ -79784,7 +82979,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563927000113",
@@ -79809,7 +83005,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563900000113",
@@ -79834,7 +83031,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564230000113",
@@ -79859,7 +83057,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564249000113",
@@ -79884,7 +83083,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564290000111",
@@ -79909,7 +83109,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564044000113",
@@ -79934,7 +83135,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563927000112",
@@ -79959,7 +83161,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564290000113",
@@ -79984,7 +83187,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564320000113",
@@ -80009,7 +83213,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564478000113",
@@ -80034,7 +83239,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564443000113",
@@ -80059,7 +83265,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564389000113",
@@ -80084,7 +83291,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564370000113",
@@ -80109,7 +83317,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564303000113",
@@ -80134,7 +83343,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564516000113",
@@ -80159,7 +83369,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564222000113",
@@ -80184,7 +83395,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564257000113",
@@ -80209,7 +83421,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564745000113",
@@ -80234,7 +83447,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564435000113",
@@ -80259,7 +83473,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564451000113",
@@ -80284,7 +83499,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565091000113",
@@ -80309,7 +83525,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564281000113",
@@ -80334,7 +83551,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565059000113",
@@ -80359,7 +83577,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564702000113",
@@ -80384,7 +83603,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564907000113",
@@ -80409,7 +83629,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564664000113",
@@ -80434,7 +83655,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564656000113",
@@ -80459,7 +83681,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565253000113",
@@ -80484,7 +83707,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564931000113",
@@ -80509,7 +83733,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565016000113",
@@ -80534,7 +83759,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565016000111",
@@ -80559,7 +83785,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564923000113",
@@ -80584,7 +83811,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564729000113",
@@ -80609,7 +83837,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565210000113",
@@ -80634,7 +83863,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564893000113",
@@ -80659,7 +83889,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565229000113",
@@ -80684,7 +83915,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565300000113",
@@ -80709,7 +83941,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565202000113",
@@ -80734,7 +83967,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565440000113",
@@ -80759,7 +83993,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565415000113",
@@ -80784,7 +84019,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565288000113",
@@ -80809,7 +84045,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565008000113",
@@ -80834,7 +84071,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565458000113",
@@ -80859,7 +84097,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565067000113",
@@ -80884,7 +84123,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565296000113",
@@ -80909,7 +84149,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565563000113",
@@ -80934,7 +84175,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565911000113",
@@ -80959,7 +84201,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565890000113",
@@ -80984,7 +84227,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565393000113",
@@ -81009,7 +84253,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565504000113",
@@ -81034,7 +84279,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565814000113",
@@ -81059,7 +84305,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565857000113",
@@ -81084,7 +84331,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566128000111",
@@ -81109,7 +84357,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_565865000113",
@@ -81134,7 +84383,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565873000113",
@@ -81159,7 +84409,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565849000113",
@@ -81184,7 +84435,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566128000113",
@@ -81209,7 +84461,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_566128000112",
@@ -81234,7 +84487,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_566152000112",
@@ -81259,7 +84513,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566047000113",
@@ -81284,7 +84539,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566152000111",
@@ -81309,7 +84565,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566152000113",
@@ -81334,7 +84591,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566160000113",
@@ -81359,7 +84617,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566403000113",
@@ -81384,7 +84643,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566675000113",
@@ -81409,7 +84669,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566900000112",
@@ -81434,7 +84695,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567108000112",
@@ -81459,7 +84721,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566900000113",
@@ -81484,7 +84747,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567116000112",
@@ -81509,7 +84773,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566900000111",
@@ -81534,7 +84799,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566292000113",
@@ -81559,7 +84825,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567108000113",
@@ -81584,7 +84851,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567108000111",
@@ -81609,7 +84877,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567116000113",
@@ -81634,7 +84903,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566969000113",
@@ -81659,7 +84929,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567116000111",
@@ -81684,7 +84955,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565784000111",
@@ -81709,7 +84981,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565784000113",
@@ -81734,7 +85007,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566950000113",
@@ -81759,7 +85033,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565768000111",
@@ -81784,7 +85059,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565423000113",
@@ -81809,7 +85085,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563897000113",
@@ -81834,7 +85111,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564273000113",
@@ -81859,7 +85137,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565407000113",
@@ -81884,7 +85163,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565377000113",
@@ -81909,7 +85189,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566705000113",
@@ -81934,7 +85215,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566420000113",
@@ -81959,7 +85241,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565385000113",
@@ -81984,7 +85267,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566039000113",
@@ -82009,7 +85293,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563889000113",
@@ -82034,7 +85319,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565733000111",
@@ -82059,7 +85345,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566748000113",
@@ -82084,7 +85371,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565750000113",
@@ -82109,7 +85397,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565733000113",
@@ -82134,7 +85423,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565750000111",
@@ -82159,7 +85449,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565768000113",
@@ -82184,7 +85475,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563560000113",
@@ -82209,7 +85501,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565695000113",
@@ -82234,7 +85527,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565199000113",
@@ -82259,7 +85553,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565741000113",
@@ -82284,7 +85579,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565199000111",
@@ -82309,7 +85605,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565199000112",
@@ -82334,7 +85631,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565741000111",
@@ -82359,7 +85657,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564508000113",
@@ -82384,7 +85683,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565644000113",
@@ -82409,7 +85709,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567140000111",
@@ -82434,7 +85735,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567140000112",
@@ -82459,7 +85761,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564346000113",
@@ -82484,7 +85787,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567140000113",
@@ -82509,7 +85813,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563803000111",
@@ -82534,7 +85839,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563404000113",
@@ -82559,7 +85865,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563439000113",
@@ -82584,7 +85891,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563374000113",
@@ -82609,7 +85917,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563412000113",
@@ -82634,7 +85943,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563773000113",
@@ -82659,7 +85969,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564095000113",
@@ -82684,7 +85995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563803000112",
@@ -82709,7 +86021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565806000113",
@@ -82734,7 +86047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564133000113",
@@ -82759,7 +86073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563803000113",
@@ -82784,7 +86099,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564710000113",
@@ -82809,7 +86125,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566365000112",
@@ -82834,7 +86151,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566365000111",
@@ -82859,7 +86177,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566365000113",
@@ -82884,7 +86203,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566578000113",
@@ -82909,7 +86229,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565717000111",
@@ -82934,7 +86255,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565717000113",
@@ -82959,7 +86281,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566926000113",
@@ -82984,7 +86307,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566004000113",
@@ -83009,7 +86333,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563676000113",
@@ -83034,7 +86359,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564982000113",
@@ -83059,7 +86385,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566241000113",
@@ -83084,7 +86411,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566241000111",
@@ -83109,7 +86437,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566241000112",
@@ -83134,7 +86463,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563480000113",
@@ -83159,7 +86489,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566780000113",
@@ -83184,7 +86515,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563340000113",
@@ -83209,7 +86541,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563730000113",
@@ -83234,7 +86567,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563471000113",
@@ -83259,7 +86593,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566942000111",
@@ -83284,7 +86619,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565326000113",
@@ -83309,7 +86645,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566942000112",
@@ -83334,7 +86671,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566934000111",
@@ -83359,7 +86697,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566934000112",
@@ -83384,7 +86723,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566942000113",
@@ -83409,7 +86749,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565270000113",
@@ -83434,7 +86775,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566691000113",
@@ -83459,7 +86801,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566411000113",
@@ -83484,7 +86827,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565466000111",
@@ -83509,7 +86853,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564400000113",
@@ -83534,7 +86879,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563390000113",
@@ -83559,7 +86905,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563323000113",
@@ -83584,7 +86931,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563188000113",
@@ -83609,7 +86957,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565466000112",
@@ -83634,7 +86983,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566977000111",
@@ -83659,7 +87009,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566977000112",
@@ -83684,7 +87035,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566977000113",
@@ -83709,7 +87061,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566560000113",
@@ -83734,7 +87087,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566586000113",
@@ -83759,7 +87113,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_564354000113",
@@ -83784,7 +87139,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565903000111",
@@ -83809,7 +87165,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565903000113",
@@ -83834,7 +87191,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563153000113",
@@ -83859,7 +87217,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563102000113",
@@ -83884,7 +87243,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562866000113",
@@ -83909,7 +87269,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565903000112",
@@ -83934,7 +87295,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563129000113",
@@ -83959,7 +87321,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563110000113",
@@ -83984,7 +87347,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563161000113",
@@ -84009,7 +87373,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563080000113",
@@ -84034,7 +87399,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562947000113",
@@ -84059,7 +87425,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_562939000113",
@@ -84084,7 +87451,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565725000111",
@@ -84109,7 +87477,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566187000113",
@@ -84134,7 +87503,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565725000113",
@@ -84159,7 +87529,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566390000113",
@@ -84184,7 +87555,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566187000112",
@@ -84209,7 +87581,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566187000111",
@@ -84234,7 +87607,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566373000113",
@@ -84259,7 +87633,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575011000113",
@@ -84284,7 +87659,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566381000113",
@@ -84309,7 +87685,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_565520000113",
@@ -84334,7 +87711,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563846000113",
@@ -84359,7 +87737,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563838000113",
@@ -84384,7 +87763,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_566020000113",
@@ -84409,7 +87789,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_563510000113",
@@ -84434,7 +87815,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_598062000123",
@@ -84459,7 +87841,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_130060000123",
@@ -84484,7 +87867,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_603600000123",
@@ -84509,7 +87893,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543560000423",
@@ -84534,7 +87919,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_626902000123",
@@ -84558,7 +87944,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615285000123",
@@ -84582,7 +87969,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607371000223",
@@ -84607,7 +87995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_514659000123",
@@ -84632,7 +88021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513350000123",
@@ -84657,7 +88047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133566000123",
@@ -84682,7 +88073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_589055000123",
@@ -84707,7 +88099,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609781000123",
@@ -84732,7 +88125,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609781000223",
@@ -84757,7 +88151,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_112720000123",
@@ -84782,7 +88177,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596140000123",
@@ -84807,7 +88203,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617334000123",
@@ -84832,7 +88229,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_620548000123",
@@ -84857,7 +88255,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617334000223",
@@ -84882,7 +88281,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324477000123",
@@ -84907,7 +88307,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_528617000123",
@@ -84932,7 +88333,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_620785000123",
@@ -84957,7 +88359,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_606812000123",
@@ -84982,7 +88385,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132047000123",
@@ -85007,7 +88411,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_571130000323",
@@ -85032,7 +88437,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609498000223",
@@ -85057,7 +88463,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_619957000123",
@@ -85081,7 +88488,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609498000123",
@@ -85106,7 +88514,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_622079000123",
@@ -85130,7 +88539,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216224000123",
@@ -85155,7 +88565,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607290000123",
@@ -85180,7 +88591,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_591904000123",
@@ -85205,7 +88617,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605638000123",
@@ -85230,7 +88643,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_608327000123",
@@ -85254,7 +88668,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_579009000123",
@@ -85279,7 +88694,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607819000123",
@@ -85303,7 +88719,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611751000123",
@@ -85328,7 +88745,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210021000123",
@@ -85353,7 +88771,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216208000123",
@@ -85378,7 +88797,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575399000123",
@@ -85403,7 +88823,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_608319000223",
@@ -85428,7 +88849,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_587567000123",
@@ -85452,7 +88874,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617393000123",
@@ -85477,7 +88900,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_324434000123",
@@ -85502,7 +88926,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_132730000123",
@@ -85527,7 +88952,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_132730000121",
@@ -85552,7 +88978,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_517100000223",
@@ -85577,7 +89004,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_131350000123",
@@ -85602,7 +89030,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512516000123",
@@ -85627,7 +89056,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_590371000223",
@@ -85652,7 +89082,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_594792000123",
@@ -85677,7 +89108,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210706000123",
@@ -85702,7 +89134,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567485000123",
@@ -85726,7 +89159,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_212326000123",
@@ -85751,7 +89185,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_151262000123",
@@ -85776,7 +89211,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569836000123",
@@ -85801,7 +89237,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569747000223",
@@ -85825,7 +89262,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_534285000123",
@@ -85850,7 +89288,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581259000123",
@@ -85875,7 +89314,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_553867000323",
@@ -85900,7 +89340,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_592188000123",
@@ -85925,7 +89366,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513725000123",
@@ -85950,7 +89392,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517372000123",
@@ -85975,7 +89418,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_133442000123",
@@ -86000,7 +89444,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_575240000123",
@@ -86025,7 +89470,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_512273000223",
@@ -86050,7 +89496,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_588130000123",
@@ -86075,7 +89522,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560138000223",
@@ -86100,7 +89548,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_325279000123",
@@ -86125,7 +89574,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_553190000323",
@@ -86150,7 +89600,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_216232000123",
@@ -86175,7 +89626,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_212466000423",
@@ -86200,7 +89652,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_210315000121",
@@ -86225,7 +89678,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_211303000123",
@@ -86250,7 +89704,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_138177000123",
@@ -86275,7 +89730,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_289515000123",
@@ -86299,7 +89755,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_600814000123",
@@ -86324,7 +89781,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_626864000133",
@@ -86349,7 +89807,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_623067000133",
@@ -86374,7 +89833,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215287000933",
@@ -86399,7 +89859,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_543560000433",
@@ -86424,7 +89885,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607371000233",
@@ -86449,7 +89911,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_289094000233",
@@ -86473,7 +89936,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_289094000232",
@@ -86497,7 +89961,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_289094000231",
@@ -86521,7 +89986,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_240656000234",
@@ -86546,7 +90012,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609498000133",
@@ -86571,7 +90038,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609781000133",
@@ -86596,7 +90064,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609781000233",
@@ -86621,7 +90090,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_627267000133",
@@ -86646,7 +90116,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_609498000233",
@@ -86671,7 +90142,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215287001134",
@@ -86696,7 +90168,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215287001234",
@@ -86721,7 +90194,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617334000133",
@@ -86746,7 +90220,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_315699000333",
@@ -86771,7 +90246,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_617334000233",
@@ -86796,7 +90272,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_625264000133",
@@ -86821,7 +90298,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_533343000134",
@@ -86846,7 +90324,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524867000131",
@@ -86871,7 +90350,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_524867000132",
@@ -86896,7 +90376,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_612820000133",
@@ -86920,7 +90401,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_615137000133",
@@ -86945,7 +90427,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_596140000233",
@@ -86970,7 +90453,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_621374000133",
@@ -86995,7 +90479,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215287001534",
@@ -87020,7 +90505,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_616354000133",
@@ -87045,7 +90531,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_607819000133",
@@ -87069,7 +90556,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_611751000133",
@@ -87094,7 +90582,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_542644000134",
@@ -87119,7 +90608,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215287001334",
@@ -87144,7 +90634,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215287001034",
@@ -87169,7 +90660,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_608319000233",
@@ -87194,7 +90686,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_608327000133",
@@ -87218,7 +90711,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_531880000134",
@@ -87243,7 +90737,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_581259000133",
@@ -87268,7 +90763,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_567485000133",
@@ -87292,7 +90788,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_567450000133",
@@ -87317,7 +90814,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_226564000234",
@@ -87342,7 +90840,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_553867000333",
@@ -87367,7 +90866,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_553190000333",
@@ -87392,7 +90892,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_569836000133",
@@ -87417,7 +90918,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_513725000133",
@@ -87442,7 +90944,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_560138000233",
@@ -87467,7 +90970,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   },
   {
     "id": "edb_569747000233",
@@ -87491,7 +90995,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_526720000134",
@@ -87516,7 +91021,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_517569000134",
@@ -87541,7 +91047,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_215287001434",
@@ -87566,7 +91073,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_289515000133",
@@ -87590,7 +91098,8 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "LOCAL"
   },
   {
     "id": "edb_605638000133",
@@ -87615,6 +91124,7 @@ export const schools: School[] = [
     "applicationMaterials": [],
     "applicationLink": "",
     "latitude": 0,
-    "longitude": 0
+    "longitude": 0,
+    "sector": "INTERNATIONAL"
   }
 ];
