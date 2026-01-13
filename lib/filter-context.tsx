@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, ReactNode } from "react";
 
-import type { Curriculum, Language, SchoolCategory, District } from "@/types/school";
+import type { Curriculum, Language, SchoolCategory, District, District18 } from "@/types/school";
 
 // 排序選項類型
 export type SortOption = "relevance" | "tuition_low" | "tuition_high" | "name_asc" | "name_desc";
@@ -11,6 +11,7 @@ export interface FilterState {
   language: Language | null;
   category: SchoolCategory[];
   district: District[];
+  district18: District18[];  // 18區篩選
   sortBy: SortOption;
 }
 
@@ -22,6 +23,8 @@ export type FilterAction =
   | { type: "CLEAR_LANGUAGE" }
   | { type: "TOGGLE_CATEGORY"; payload: SchoolCategory }
   | { type: "TOGGLE_DISTRICT"; payload: District }
+  | { type: "TOGGLE_DISTRICT18"; payload: District18 }
+  | { type: "CLEAR_DISTRICT18" }
   | { type: "SET_SORT"; payload: SortOption }
   | { type: "RESET_FILTERS" };
 
@@ -31,6 +34,7 @@ const initialState: FilterState = {
   language: null,
   category: [],
   district: [],
+  district18: [],
   sortBy: "relevance",
 };
 
@@ -71,6 +75,16 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         : [...state.district, action.payload as District];
       return { ...state, district: updated };
     }
+
+    case "TOGGLE_DISTRICT18": {
+      const updated = state.district18.includes(action.payload)
+        ? state.district18.filter((d) => d !== action.payload)
+        : [...state.district18, action.payload];
+      return { ...state, district18: updated };
+    }
+
+    case "CLEAR_DISTRICT18":
+      return { ...state, district18: [] };
 
     case "SET_SORT":
       return { ...state, sortBy: action.payload };
@@ -119,7 +133,8 @@ export function hasActiveFilters(state: FilterState): boolean {
     state.curriculum.length > 0 ||
     state.language !== null ||
     state.category.length > 0 ||
-    state.district.length > 0
+    state.district.length > 0 ||
+    state.district18.length > 0
   );
 }
 
@@ -151,7 +166,11 @@ export function getFilterLabels(state: FilterState): string[] {
   }
 
   if (state.district.length > 0) {
-    labels.push(`地區: ${state.district.join(", ")}`);
+    labels.push(`大區: ${state.district.join(", ")}`);
+  }
+
+  if (state.district18.length > 0) {
+    labels.push(`分區: ${state.district18.join(", ")}`);
   }
 
   return labels;

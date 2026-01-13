@@ -39,6 +39,11 @@ export function matchesAdvancedFilters(
     if (!filters.district.includes(school.district)) return false;
   }
 
+  // 18區篩選（多選，任一匹配即可）
+  if (filters.district18.length > 0) {
+    if (!filters.district18.includes(school.district18)) return false;
+  }
+
   return true;
 }
 
@@ -105,6 +110,11 @@ export function calculateSearchRelevance(
   // 地區匹配（加分）
   if (filters.district.length > 0 && filters.district.includes(school.district)) {
     score += 20;
+  }
+
+  // 18區匹配（加分）
+  if (filters.district18.length > 0 && filters.district18.includes(school.district18)) {
+    score += 25;
   }
 
   // 類型匹配（加分）
