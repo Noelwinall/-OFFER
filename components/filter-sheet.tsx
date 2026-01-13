@@ -148,8 +148,12 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
 
             <ScrollView
               style={styles.content}
-              showsVerticalScrollIndicator={false}
               contentContainerStyle={styles.contentContainer}
+              showsVerticalScrollIndicator={true}
+              nestedScrollEnabled={true}
+              bounces={true}
+              scrollEventThrottle={16}
+              keyboardShouldPersistTaps="handled"
             >
               {/* 學費範圍 */}
               <View style={styles.section}>
@@ -398,8 +402,8 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
               </View>
 
-              {/* 底部間距 */}
-              <View style={{ height: 120 }} />
+              {/* 底部間距（為固定底部按鈕留空間） */}
+              <View style={{ height: 140 }} />
             </ScrollView>
 
             {/* 底部按鈕 */}
@@ -433,6 +437,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   sheet: {
+    flex: 1,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     minHeight: 500,
@@ -474,6 +479,7 @@ const styles = StyleSheet.create({
   contentContainer: {
     paddingHorizontal: 24,
     paddingTop: 20,
+    paddingBottom: 20,
   },
   section: {
     marginBottom: 28,
