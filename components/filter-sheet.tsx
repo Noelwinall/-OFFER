@@ -241,27 +241,29 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                   })}
                 </View>
 
-                {/* 第二層：18區（始終顯示，按三大區分組） */}
-                <View style={styles.sectionHeader}>
-                  <Text style={[styles.subsectionTitle, { marginTop: 0, marginBottom: 0 }]}>
-                    選擇分區{state.district18.length > 0 && ` (已選 ${state.district18.length})`}
-                  </Text>
-                  {state.district18.length > 0 && (
-                    <TouchableOpacity
-                      onPress={() => {
-                        triggerHaptic();
-                        dispatch({ type: "CLEAR_DISTRICT18" });
-                      }}
-                    >
-                      <Text style={styles.clearText}>清除已選分區</Text>
-                    </TouchableOpacity>
-                  )}
-                </View>
-                {DISTRICT_OPTIONS.map((regionOption) => (
-                  <View key={regionOption.value} style={styles.district18Group}>
-                    <Text style={styles.district18GroupLabel}>{regionOption.label}</Text>
+                {/* 第二層：18區（始終顯示，不依賴三大區選擇） */}
+                <View style={{ marginTop: 20 }}>
+                  <View style={styles.sectionHeader}>
+                    <Text style={styles.subsectionTitle}>
+                      選擇分區（18區）{state.district18.length > 0 && ` - 已選 ${state.district18.length}`}
+                    </Text>
+                    {state.district18.length > 0 && (
+                      <TouchableOpacity
+                        onPress={() => {
+                          triggerHaptic();
+                          dispatch({ type: "CLEAR_DISTRICT18" });
+                        }}
+                      >
+                        <Text style={styles.clearText}>清除已選分區</Text>
+                      </TouchableOpacity>
+                    )}
+                  </View>
+
+                  {/* 港島區 - 4區 */}
+                  <View style={styles.district18Group}>
+                    <Text style={styles.district18GroupLabel}>港島區</Text>
                     <View style={styles.chipContainer}>
-                      {DISTRICT_TO_DISTRICT18[regionOption.value as District].map((d18) => {
+                      {(["中西區", "東區", "南區", "灣仔區"] as District18[]).map((d18) => {
                         const isSelected = state.district18.includes(d18);
                         return (
                           <TouchableOpacity
@@ -269,7 +271,6 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                             style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
                             onPress={() => {
                               triggerHaptic();
-                              // 選擇 18 區時，自動添加對應的三大區
                               const parentRegion = DISTRICT18_TO_DISTRICT[d18];
                               if (!state.district.includes(parentRegion)) {
                                 dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
@@ -285,12 +286,68 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                       })}
                     </View>
                   </View>
-                ))}
 
-                {/* 提示文字 */}
-                <Text style={styles.hintText}>
-                  可直接選擇分區（多選），系統自動推斷大區
-                </Text>
+                  {/* 九龍區 - 5區 */}
+                  <View style={styles.district18Group}>
+                    <Text style={styles.district18GroupLabel}>九龍區</Text>
+                    <View style={styles.chipContainer}>
+                      {(["九龍城區", "觀塘區", "深水埗區", "黃大仙區", "油尖旺區"] as District18[]).map((d18) => {
+                        const isSelected = state.district18.includes(d18);
+                        return (
+                          <TouchableOpacity
+                            key={d18}
+                            style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              const parentRegion = DISTRICT18_TO_DISTRICT[d18];
+                              if (!state.district.includes(parentRegion)) {
+                                dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
+                              }
+                              dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                            }}
+                          >
+                            <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                              {d18}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+
+                  {/* 新界區 - 9區 */}
+                  <View style={styles.district18Group}>
+                    <Text style={styles.district18GroupLabel}>新界區</Text>
+                    <View style={styles.chipContainer}>
+                      {(["離島區", "葵青區", "北區", "西貢區", "沙田區", "大埔區", "荃灣區", "屯門區", "元朗區"] as District18[]).map((d18) => {
+                        const isSelected = state.district18.includes(d18);
+                        return (
+                          <TouchableOpacity
+                            key={d18}
+                            style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              const parentRegion = DISTRICT18_TO_DISTRICT[d18];
+                              if (!state.district.includes(parentRegion)) {
+                                dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
+                              }
+                              dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                            }}
+                          >
+                            <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                              {d18}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+
+                  {/* 提示文字 */}
+                  <Text style={styles.hintText}>
+                    可直接選擇任意分區（多選），系統自動推斷所屬大區
+                  </Text>
+                </View>
               </View>
 
               {/* 課程體系 */}
