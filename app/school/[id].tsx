@@ -9,7 +9,7 @@ import { isInternational } from "@/lib/international-schools";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { SCHOOL_TEXT } from "@/constants/school-text";
+import { SCHOOL_TEXT, formatTuitionValue, getTuitionSourceNote } from "@/constants/school-text";
 
 export default function SchoolDetailScreen() {
   const router = useRouter();
@@ -165,7 +165,16 @@ export default function SchoolDetailScreen() {
               <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
               <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={isInternational(school) ? "國際" : school.category} />
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
+              <InfoRow
+                label={SCHOOL_TEXT.LABEL_TUITION}
+                value={formatTuitionValue(school.category, school.tuitionMin, school.tuitionMax)}
+                isPending={!(school.category === "直資" && school.tuitionMin > 0 && school.tuitionMax > 0)}
+              />
             </View>
+            {/* 學費來源說明 - R3-4 */}
+            <Text style={styles.tuitionSourceNote}>
+              {getTuitionSourceNote(school.category, school.tuitionMin, school.tuitionMax)}
+            </Text>
           </View>
 
           {/* 聯絡方式 - 只显示 website */}
@@ -372,6 +381,13 @@ const styles = StyleSheet.create({
   },
   infoGrid: {
     gap: 4,
+  },
+  tuitionSourceNote: {
+    fontSize: 11,
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
+    marginTop: 8,
+    fontStyle: "italic",
   },
   disclaimerContainer: {
     paddingHorizontal: 24,

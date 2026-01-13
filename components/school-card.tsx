@@ -3,6 +3,7 @@ import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColors } from "@/hooks/use-colors";
 import { isInternational } from "@/lib/international-schools";
+import { formatTuitionDisplay } from "@/constants/school-text";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
@@ -100,6 +101,11 @@ export const SchoolCard = React.memo(function SchoolCard({
           <Text className="text-xs text-muted">{school.district}</Text>
         </View>
       </View>
+
+      {/* 學費資訊 - R3-4 */}
+      <Text className="text-xs text-muted mt-2">
+        {formatTuitionDisplay(school.category, school.tuitionMin, school.tuitionMax)}
+      </Text>
     </Pressable>
   );
 }, (prev, next) =>
