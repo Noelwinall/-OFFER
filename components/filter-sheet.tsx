@@ -12,7 +12,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useFilter } from "@/lib/filter-context";
-import { DISTRICT_TO_DISTRICT18, type District, type District18 } from "@/types/school";
+import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18 } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
 interface FilterSheetProps {
@@ -240,38 +240,44 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                   })}
                 </View>
 
-                {/* 第二層：18區（根據選中的大區顯示） */}
-                {state.district.length > 0 && (
-                  <>
-                    <Text style={[styles.subsectionTitle, { marginTop: 16 }]}>選擇分區</Text>
+                {/* 第二層：18區（始終顯示，按三大區分組） */}
+                <Text style={[styles.subsectionTitle, { marginTop: 16 }]}>
+                  選擇分區{state.district18.length > 0 && ` (已選 ${state.district18.length})`}
+                </Text>
+                {DISTRICT_OPTIONS.map((regionOption) => (
+                  <View key={regionOption.value} style={styles.district18Group}>
+                    <Text style={styles.district18GroupLabel}>{regionOption.label}</Text>
                     <View style={styles.chipContainer}>
-                      {state.district.flatMap((region) =>
-                        DISTRICT_TO_DISTRICT18[region as District].map((d18) => {
-                          const isSelected = state.district18.includes(d18);
-                          return (
-                            <TouchableOpacity
-                              key={d18}
-                              style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
-                              onPress={() => {
-                                triggerHaptic();
-                                dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
-                              }}
-                            >
-                              <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
-                                {d18}
-                              </Text>
-                            </TouchableOpacity>
-                          );
-                        })
-                      )}
+                      {DISTRICT_TO_DISTRICT18[regionOption.value as District].map((d18) => {
+                        const isSelected = state.district18.includes(d18);
+                        return (
+                          <TouchableOpacity
+                            key={d18}
+                            style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              // 選擇 18 區時，自動添加對應的三大區
+                              const parentRegion = DISTRICT18_TO_DISTRICT[d18];
+                              if (!state.district.includes(parentRegion)) {
+                                dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
+                              }
+                              dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                            }}
+                          >
+                            <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                              {d18}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
                     </View>
-                  </>
-                )}
+                  </View>
+                ))}
 
                 {/* 提示文字 */}
-                {state.district.length === 0 && (
-                  <Text style={styles.hintText}>選擇大區後可進一步選擇分區</Text>
-                )}
+                <Text style={styles.hintText}>
+                  可直接選擇分區（多選），系統自動推斷大區
+                </Text>
               </View>
 
               {/* 課程體系 */}
@@ -491,6 +497,15 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: "rgba(255, 255, 255, 0.4)",
     marginTop: 8,
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  district18Group: {
+    marginBottom: 12,
+  },
+  district18GroupLabel: {
+    fontSize: 12,
+    color: "rgba(255, 255, 255, 0.5)",
+    marginBottom: 8,
     fontFamily: "NotoSerifSC-Regular",
   },
 });
