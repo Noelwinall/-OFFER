@@ -1,5 +1,6 @@
 import { View, Text, ScrollView, TouchableOpacity, Platform, StyleSheet } from "react-native";
 import { useFilter, getFilterLabels, hasActiveFilters } from "@/lib/filter-context";
+import type { District18 } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
 export function ActiveFilterTags() {
@@ -56,7 +57,7 @@ export function ActiveFilterTags() {
     });
   });
 
-  // 地區
+  // 地區（三大區）
   state.district.forEach((dist) => {
     tags.push({
       key: `district-${dist}`,
@@ -64,6 +65,18 @@ export function ActiveFilterTags() {
       onRemove: () => {
         triggerHaptic();
         dispatch({ type: "TOGGLE_DISTRICT", payload: dist });
+      },
+    });
+  });
+
+  // 18區（分區）
+  state.district18.forEach((d18) => {
+    tags.push({
+      key: `district18-${d18}`,
+      label: d18,
+      onRemove: () => {
+        triggerHaptic();
+        dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 as District18 });
       },
     });
   });

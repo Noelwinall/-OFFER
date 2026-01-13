@@ -115,6 +115,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
     if (state.language) count++;
     if (state.category.length > 0) count++;
     if (state.district.length > 0) count++;
+    if (state.district18.length > 0) count++;
     return count;
   };
 
@@ -241,9 +242,21 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
 
                 {/* 第二層：18區（始終顯示，按三大區分組） */}
-                <Text style={[styles.subsectionTitle, { marginTop: 16 }]}>
-                  選擇分區{state.district18.length > 0 && ` (已選 ${state.district18.length})`}
-                </Text>
+                <View style={styles.sectionHeader}>
+                  <Text style={[styles.subsectionTitle, { marginTop: 0, marginBottom: 0 }]}>
+                    選擇分區{state.district18.length > 0 && ` (已選 ${state.district18.length})`}
+                  </Text>
+                  {state.district18.length > 0 && (
+                    <TouchableOpacity
+                      onPress={() => {
+                        triggerHaptic();
+                        dispatch({ type: "CLEAR_DISTRICT18" });
+                      }}
+                    >
+                      <Text style={styles.clearText}>清除已選分區</Text>
+                    </TouchableOpacity>
+                  )}
+                </View>
                 {DISTRICT_OPTIONS.map((regionOption) => (
                   <View key={regionOption.value} style={styles.district18Group}>
                     <Text style={styles.district18GroupLabel}>{regionOption.label}</Text>
