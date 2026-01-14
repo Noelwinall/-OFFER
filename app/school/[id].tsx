@@ -317,10 +317,10 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
         </View>
       </View>
 
-      {/* 強制性費用區塊 */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_MANDATORY_CHARGES}</Text>
-        {mandatoryCharges.length > 0 ? (
+      {/* 強制性費用區塊（僅在有資料時顯示） */}
+      {mandatoryCharges.length > 0 && (
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_MANDATORY_CHARGES}</Text>
           <View style={feeStyles.chargesContainer}>
             {mandatoryCharges.map((charge, index) => (
               <View key={index} style={feeStyles.chargeItem}>
@@ -342,10 +342,11 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
               </View>
             ))}
           </View>
-        ) : (
-          <Text style={feeStyles.pendingText}>{SCHOOL_TEXT.PENDING}</Text>
-        )}
-        {/* 總體學費說明 */}
+        </View>
+      )}
+
+      {/* 總體學費說明（永遠顯示） */}
+      <View style={styles.section}>
         <View style={feeStyles.noteContainer}>
           <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_NOTE}</Text>
           <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_EXCLUDES}</Text>

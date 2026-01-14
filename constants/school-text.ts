@@ -72,6 +72,10 @@ export const SCHOOL_TEXT = {
   OVERALL_TUITION_NOTE: "總體學費 = 學費 + 強制性費用（capital levy / 強制性債券等）",
   OVERALL_TUITION_EXCLUDES: "不包括校車、午餐、校服及其他選擇性收費",
 
+  // 占位文案 (R3-7)
+  TUITION_NOT_PUBLISHED: "學校未公布統一學費表",
+  NO_MANDATORY_CHARGES: "未發現強制性費用",
+
   // 强制性费用类型标签
   CHARGE_TYPE_CAPITAL_LEVY: "Capital Levy",
   CHARGE_TYPE_REFUNDABLE_DEBENTURE: "可退回債券",
@@ -84,7 +88,7 @@ export const SCHOOL_TEXT = {
 
   // 频率标签
   FREQUENCY_ONE_OFF: "一次性",
-  FREQUENCY_ANNUAL: "年度",
+  FREQUENCY_ANNUAL: "每年",
   FREQUENCY_UNKNOWN: "未確認",
 
   // 来源等级标签
@@ -192,7 +196,7 @@ export function formatTuitionBands(
   bands: TuitionBand[] | undefined
 ): Array<{ label: string; value: string }> {
   if (!bands || bands.length === 0) {
-    return [{ label: "全部年級", value: SCHOOL_TEXT.PENDING }];
+    return [{ label: "", value: SCHOOL_TEXT.TUITION_NOT_PUBLISHED }];
   }
 
   return bands.map((band) => {
