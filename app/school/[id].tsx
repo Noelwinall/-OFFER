@@ -290,8 +290,10 @@ function InfoRow({ label, value, isLink = false, isPending = false }: { label: s
 }
 
 /**
- * R3-5: 費用區塊組件（國際/私校）
- * 包含：學費、強制性費用
+ * R3-5/R3-7: 費用區塊組件（國際/私校）
+ * 閱讀順序：總體學費 → 學費明細 → 強制性費用（如有） → 小字說明 → 小字來源
+ *
+ * TODO R3-7.3: Scholarship / Sibling Discount 預留位置（暫不渲染）
  */
 function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
   const tuitionBands = formatTuitionBands(fees?.tuition.bands);
@@ -299,28 +301,28 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
   const hasSource = fees?.sourceNotes && fees.sourceNotes.length > 0;
 
   return (
-    <>
-      {/* 學費區塊 */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>
-          {SCHOOL_TEXT.OVERALL_TUITION_LABEL}
-        </Text>
-        <View style={styles.infoGrid}>
-          {tuitionBands.map((band, index) => (
-            <View key={index} style={feeStyles.bandRow}>
-              <Text style={feeStyles.bandLabel}>{band.label}</Text>
-              <Text style={[feeStyles.bandValue, band.value === SCHOOL_TEXT.PENDING && feeStyles.pending]}>
-                {band.value}
-              </Text>
-            </View>
-          ))}
-        </View>
+    <View style={styles.section}>
+      {/* 1. 總體學費標題 */}
+      <Text style={styles.sectionTitle}>
+        {SCHOOL_TEXT.OVERALL_TUITION_LABEL}
+      </Text>
+
+      {/* 2. 學費明細（按年級） */}
+      <View style={styles.infoGrid}>
+        {tuitionBands.map((band, index) => (
+          <View key={index} style={feeStyles.bandRow}>
+            <Text style={feeStyles.bandLabel}>{band.label}</Text>
+            <Text style={[feeStyles.bandValue, band.value === SCHOOL_TEXT.TUITION_NOT_PUBLISHED && feeStyles.pending]}>
+              {band.value}
+            </Text>
+          </View>
+        ))}
       </View>
 
-      {/* 強制性費用區塊（僅在有資料時顯示） */}
+      {/* 3. 強制性費用（僅在有資料時顯示） */}
       {mandatoryCharges.length > 0 && (
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_MANDATORY_CHARGES}</Text>
+        <View style={feeStyles.chargesSection}>
+          <Text style={feeStyles.chargesTitle}>{SCHOOL_TEXT.SECTION_MANDATORY_CHARGES}</Text>
           <View style={feeStyles.chargesContainer}>
             {mandatoryCharges.map((charge, index) => (
               <View key={index} style={feeStyles.chargeItem}>
@@ -345,17 +347,15 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
         </View>
       )}
 
-      {/* 總體學費說明（永遠顯示） */}
-      <View style={styles.section}>
-        <View style={feeStyles.noteContainer}>
-          <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_NOTE}</Text>
-          <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_EXCLUDES}</Text>
-          <Text style={feeStyles.sourceInline}>
-            {hasSource ? "資料來源：學校官網（2025/26）" : "資料來源：待確認"}
-          </Text>
-        </View>
+      {/* 4. 小字說明 + 5. 小字來源 */}
+      <View style={feeStyles.noteContainer}>
+        <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_NOTE}</Text>
+        <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_EXCLUDES}</Text>
+        <Text style={feeStyles.sourceInline}>
+          {hasSource ? "資料來源：學校官網（2025/26）" : "資料來源：待確認"}
+        </Text>
       </View>
-    </>
+    </View>
   );
 }
 
@@ -381,6 +381,19 @@ const feeStyles = StyleSheet.create({
   pending: {
     color: "rgba(255,255,255,0.4)",
     fontStyle: "italic",
+  },
+  chargesSection: {
+    marginTop: 16,
+    paddingTop: 16,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255,255,255,0.1)",
+  },
+  chargesTitle: {
+    color: "rgba(255,255,255,0.7)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+    fontWeight: "600",
+    marginBottom: 12,
   },
   chargesContainer: {
     gap: 12,
