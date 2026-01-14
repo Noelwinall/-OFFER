@@ -67,10 +67,10 @@ export const SCHOOL_TEXT = {
   TUITION_OTHER_SOURCE: "暫無統一官方學費表，稍後補充",
 
   // 总体学费展示 (R3-5)
-  OVERALL_TUITION_LABEL: "總體學費（2025/26）",
+  OVERALL_TUITION_LABEL: "總體學費（含強制性費用）",
   OVERALL_TUITION_PENDING: "總體學費：待確認",
   OVERALL_TUITION_NOTE: "總體學費 = 學費 + 強制性費用（capital levy / 強制性債券等）",
-  OVERALL_TUITION_EXCLUDES: "不包含：校車、午餐、活動、校服、雜費等",
+  OVERALL_TUITION_EXCLUDES: "不包括校車、午餐、校服及其他選擇性收費",
 
   // 强制性费用类型标签
   CHARGE_TYPE_CAPITAL_LEVY: "Capital Levy",

@@ -306,7 +306,7 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
       {/* 學費區塊 */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>
-          {SCHOOL_TEXT.SECTION_TUITION}（{SCHOOL_TEXT.TUITION_YEAR}）
+          {SCHOOL_TEXT.OVERALL_TUITION_LABEL}
         </Text>
         <View style={styles.infoGrid}>
           {tuitionBands.map((band, index) => (
