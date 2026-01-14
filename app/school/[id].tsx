@@ -7,15 +7,26 @@ import { schools } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage";
 import { isInternational } from "@/lib/international-schools";
 import type { School } from "@/types/school";
+import type { SchoolFees } from "@/types/fees";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { SCHOOL_TEXT, formatTuitionValue, getTuitionSourceNote } from "@/constants/school-text";
+import {
+  SCHOOL_TEXT,
+  formatTuitionValue,
+  getTuitionSourceNote,
+  formatTuitionBands,
+  formatMandatoryCharges,
+  formatSourceNotes,
+  hasValidFeesData,
+} from "@/constants/school-text";
+import { getSchoolFees } from "@/data/fees-2025-26";
 
 export default function SchoolDetailScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const params = useLocalSearchParams();
   const [school, setSchool] = useState<School | null>(null);
+  const [fees, setFees] = useState<SchoolFees | undefined>(undefined);
   const [isFavorite, setIsFavorite] = useState(false);
   const [isInCompare, setIsInCompare] = useState(false);
   const [reviewCount, setReviewCount] = useState(0);
@@ -23,6 +34,7 @@ export default function SchoolDetailScreen() {
 
   useEffect(() => {
     loadSchool();
+    loadFees();
     loadFavoriteStatus();
     loadCompareStatus();
     loadReviewStats();
@@ -31,6 +43,11 @@ export default function SchoolDetailScreen() {
   const loadSchool = () => {
     const found = schools.find((s) => s.id === params.id);
     setSchool(found || null);
+  };
+
+  const loadFees = () => {
+    const schoolFees = getSchoolFees(params.id as string);
+    setFees(schoolFees);
   };
 
   const loadFavoriteStatus = async () => {
@@ -165,17 +182,27 @@ export default function SchoolDetailScreen() {
               <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
               <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={isInternational(school) ? "國際" : school.category} />
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
-              <InfoRow
-                label={SCHOOL_TEXT.LABEL_TUITION}
-                value={formatTuitionValue(school.category, school.tuitionMin, school.tuitionMax)}
-                isPending={!(school.category === "直資" && school.tuitionMin > 0 && school.tuitionMax > 0)}
-              />
+              {/* 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示 */}
+              {school.category === "直資" && (
+                <InfoRow
+                  label={SCHOOL_TEXT.LABEL_TUITION}
+                  value={formatTuitionValue(school.category, school.tuitionMin, school.tuitionMax)}
+                  isPending={!(school.tuitionMin > 0 && school.tuitionMax > 0)}
+                />
+              )}
             </View>
-            {/* 學費來源說明 - R3-4 */}
-            <Text style={styles.tuitionSourceNote}>
-              {getTuitionSourceNote(school.category, school.tuitionMin, school.tuitionMax)}
-            </Text>
+            {/* 直資學費來源說明 - R3-4 */}
+            {school.category === "直資" && (
+              <Text style={styles.tuitionSourceNote}>
+                {getTuitionSourceNote(school.category, school.tuitionMin, school.tuitionMax)}
+              </Text>
+            )}
           </View>
+
+          {/* R3-5: 學費區塊（國際/私校） */}
+          {(isInternational(school) || school.category === "私立") && (
+            <FeesSection fees={fees} />
+          )}
 
           {/* 聯絡方式 - 只显示 website */}
           <View style={styles.section}>
@@ -263,6 +290,239 @@ function InfoRow({ label, value, isLink = false, isPending = false }: { label: s
     </View>
   );
 }
+
+/**
+ * R3-5: 費用區塊組件（國際/私校）
+ * 包含：學費、強制性費用、資料來源
+ */
+function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
+  const tuitionBands = formatTuitionBands(fees?.tuition.bands);
+  const mandatoryCharges = formatMandatoryCharges(fees?.mandatoryCharges);
+  const sourceNotes = formatSourceNotes(fees?.sourceNotes);
+  const hasFees = hasValidFeesData(fees);
+
+  return (
+    <>
+      {/* 學費區塊 */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>
+          {SCHOOL_TEXT.SECTION_TUITION}（{SCHOOL_TEXT.TUITION_YEAR}）
+        </Text>
+        <View style={styles.infoGrid}>
+          {tuitionBands.map((band, index) => (
+            <View key={index} style={feeStyles.bandRow}>
+              <Text style={feeStyles.bandLabel}>{band.label}</Text>
+              <Text style={[feeStyles.bandValue, band.value === SCHOOL_TEXT.PENDING && feeStyles.pending]}>
+                {band.value}
+              </Text>
+            </View>
+          ))}
+        </View>
+      </View>
+
+      {/* 強制性費用區塊 */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_MANDATORY_CHARGES}</Text>
+        {mandatoryCharges.length > 0 ? (
+          <View style={feeStyles.chargesContainer}>
+            {mandatoryCharges.map((charge, index) => (
+              <View key={index} style={feeStyles.chargeItem}>
+                <View style={feeStyles.chargeHeader}>
+                  <Text style={feeStyles.chargeLabel}>{charge.label}</Text>
+                  <Text style={feeStyles.chargeAmount}>{charge.amount}</Text>
+                </View>
+                <View style={feeStyles.chargeMeta}>
+                  <View style={feeStyles.metaTag}>
+                    <Text style={feeStyles.metaText}>{charge.refundable}</Text>
+                  </View>
+                  <View style={feeStyles.metaTag}>
+                    <Text style={feeStyles.metaText}>{charge.frequency}</Text>
+                  </View>
+                </View>
+                {charge.note && (
+                  <Text style={feeStyles.chargeNote}>{charge.note}</Text>
+                )}
+              </View>
+            ))}
+          </View>
+        ) : (
+          <Text style={feeStyles.pendingText}>{SCHOOL_TEXT.PENDING}</Text>
+        )}
+        {/* 總體學費說明 */}
+        <View style={feeStyles.noteContainer}>
+          <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_NOTE}</Text>
+          <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_EXCLUDES}</Text>
+        </View>
+      </View>
+
+      {/* 資料來源區塊 */}
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_FEE_SOURCES}</Text>
+        {sourceNotes.length > 0 ? (
+          <View style={feeStyles.sourcesContainer}>
+            {sourceNotes.map((source, index) => (
+              <TouchableOpacity
+                key={index}
+                style={feeStyles.sourceItem}
+                onPress={() => source.url && Linking.openURL(source.url)}
+                disabled={!source.url}
+              >
+                <View style={feeStyles.sourceHeader}>
+                  <Text style={feeStyles.sourceTitle}>{source.title}</Text>
+                  <View style={feeStyles.evidenceTag}>
+                    <Text style={feeStyles.evidenceText}>{source.evidenceLabel}</Text>
+                  </View>
+                </View>
+                <Text style={feeStyles.sourceDate}>擷取日期：{source.retrievedAt}</Text>
+                {source.url && (
+                  <Text style={feeStyles.sourceUrl} numberOfLines={1}>{source.url}</Text>
+                )}
+              </TouchableOpacity>
+            ))}
+          </View>
+        ) : (
+          <Text style={feeStyles.pendingText}>資料待確認</Text>
+        )}
+      </View>
+    </>
+  );
+}
+
+const feeStyles = StyleSheet.create({
+  bandRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 8,
+    borderBottomWidth: 1,
+    borderBottomColor: "rgba(255,255,255,0.05)",
+  },
+  bandLabel: {
+    color: "rgba(255,255,255,0.7)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+  },
+  bandValue: {
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+    fontWeight: "500",
+  },
+  pending: {
+    color: "rgba(255,255,255,0.4)",
+    fontStyle: "italic",
+  },
+  chargesContainer: {
+    gap: 12,
+  },
+  chargeItem: {
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderRadius: 12,
+    padding: 12,
+  },
+  chargeHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  chargeLabel: {
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+    fontWeight: "600",
+    flex: 1,
+  },
+  chargeAmount: {
+    color: "#00D9FF",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+    fontWeight: "600",
+  },
+  chargeMeta: {
+    flexDirection: "row",
+    gap: 8,
+  },
+  metaTag: {
+    backgroundColor: "rgba(0,217,255,0.1)",
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  metaText: {
+    color: "rgba(255,255,255,0.6)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 11,
+  },
+  chargeNote: {
+    color: "rgba(255,255,255,0.5)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 12,
+    marginTop: 8,
+    fontStyle: "italic",
+  },
+  pendingText: {
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+    fontStyle: "italic",
+  },
+  noteContainer: {
+    marginTop: 12,
+    paddingTop: 12,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255,255,255,0.1)",
+  },
+  noteText: {
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 11,
+    lineHeight: 16,
+  },
+  sourcesContainer: {
+    gap: 12,
+  },
+  sourceItem: {
+    backgroundColor: "rgba(255,255,255,0.05)",
+    borderRadius: 12,
+    padding: 12,
+  },
+  sourceHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 4,
+  },
+  sourceTitle: {
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+    fontWeight: "500",
+    flex: 1,
+  },
+  evidenceTag: {
+    backgroundColor: "rgba(0,217,255,0.15)",
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+  },
+  evidenceText: {
+    color: "#00D9FF",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 10,
+  },
+  sourceDate: {
+    color: "rgba(255,255,255,0.5)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 11,
+    marginBottom: 4,
+  },
+  sourceUrl: {
+    color: "rgba(0,217,255,0.7)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 11,
+    textDecorationLine: "underline",
+  },
+});
 
 const infoStyles = StyleSheet.create({
   row: {

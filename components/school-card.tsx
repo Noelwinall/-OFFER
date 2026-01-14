@@ -3,7 +3,8 @@ import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColors } from "@/hooks/use-colors";
 import { isInternational } from "@/lib/international-schools";
-import { formatTuitionDisplay } from "@/constants/school-text";
+import { formatTuitionDisplay, formatOverallTuition } from "@/constants/school-text";
+import { getSchoolFees } from "@/data/fees-2025-26";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
@@ -102,9 +103,9 @@ export const SchoolCard = React.memo(function SchoolCard({
         </View>
       </View>
 
-      {/* 學費資訊 - R3-4 */}
+      {/* 學費資訊 - R3-4 (DSS) + R3-5 (國際/私校) */}
       <Text className="text-xs text-muted mt-2">
-        {formatTuitionDisplay(school.category, school.tuitionMin, school.tuitionMax)}
+        {getTuitionDisplayText(school)}
       </Text>
     </Pressable>
   );
@@ -133,6 +134,27 @@ function getDisplayTypeColor(school: School): string {
   };
   const displayType = getDisplayType(school);
   return colors[displayType] || colors["私立"];
+}
+
+/**
+ * 獲取學費顯示文字
+ * R3-4: 直資學校顯示 DSS 學費
+ * R3-5: 國際/私校顯示總體學費（若有數據）
+ */
+function getTuitionDisplayText(school: School): string {
+  // 直資學校：使用原有 DSS 邏輯
+  if (school.category === "直資") {
+    return formatTuitionDisplay(school.category, school.tuitionMin, school.tuitionMax);
+  }
+
+  // 國際/私校：嘗試使用 R3-5 費用結構
+  if (isInternational(school) || school.category === "私立") {
+    const fees = getSchoolFees(school.id);
+    return formatOverallTuition(fees);
+  }
+
+  // 其他類型：顯示待確認
+  return formatTuitionDisplay(school.category, school.tuitionMin, school.tuitionMax);
 }
 
 const styles = StyleSheet.create({
