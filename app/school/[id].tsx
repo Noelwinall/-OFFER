@@ -16,8 +16,6 @@ import {
   getTuitionSourceNote,
   formatTuitionBands,
   formatMandatoryCharges,
-  formatSourceNotes,
-  hasValidFeesData,
 } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 
@@ -293,13 +291,12 @@ function InfoRow({ label, value, isLink = false, isPending = false }: { label: s
 
 /**
  * R3-5: 費用區塊組件（國際/私校）
- * 包含：學費、強制性費用、資料來源
+ * 包含：學費、強制性費用
  */
 function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
   const tuitionBands = formatTuitionBands(fees?.tuition.bands);
   const mandatoryCharges = formatMandatoryCharges(fees?.mandatoryCharges);
-  const sourceNotes = formatSourceNotes(fees?.sourceNotes);
-  const hasFees = hasValidFeesData(fees);
+  const hasSource = fees?.sourceNotes && fees.sourceNotes.length > 0;
 
   return (
     <>
@@ -352,37 +349,10 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
         <View style={feeStyles.noteContainer}>
           <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_NOTE}</Text>
           <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_EXCLUDES}</Text>
+          <Text style={feeStyles.sourceInline}>
+            {hasSource ? "資料來源：學校官網（2025/26）" : "資料來源：待確認"}
+          </Text>
         </View>
-      </View>
-
-      {/* 資料來源區塊 */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_FEE_SOURCES}</Text>
-        {sourceNotes.length > 0 ? (
-          <View style={feeStyles.sourcesContainer}>
-            {sourceNotes.map((source, index) => (
-              <TouchableOpacity
-                key={index}
-                style={feeStyles.sourceItem}
-                onPress={() => source.url && Linking.openURL(source.url)}
-                disabled={!source.url}
-              >
-                <View style={feeStyles.sourceHeader}>
-                  <Text style={feeStyles.sourceTitle}>{source.title}</Text>
-                  <View style={feeStyles.evidenceTag}>
-                    <Text style={feeStyles.evidenceText}>{source.evidenceLabel}</Text>
-                  </View>
-                </View>
-                <Text style={feeStyles.sourceDate}>擷取日期：{source.retrievedAt}</Text>
-                {source.url && (
-                  <Text style={feeStyles.sourceUrl} numberOfLines={1}>{source.url}</Text>
-                )}
-              </TouchableOpacity>
-            ))}
-          </View>
-        ) : (
-          <Text style={feeStyles.pendingText}>資料待確認</Text>
-        )}
       </View>
     </>
   );
@@ -478,49 +448,11 @@ const feeStyles = StyleSheet.create({
     fontSize: 11,
     lineHeight: 16,
   },
-  sourcesContainer: {
-    gap: 12,
-  },
-  sourceItem: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 12,
-    padding: 12,
-  },
-  sourceHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 4,
-  },
-  sourceTitle: {
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    fontSize: 14,
-    fontWeight: "500",
-    flex: 1,
-  },
-  evidenceTag: {
-    backgroundColor: "rgba(0,217,255,0.15)",
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-    borderRadius: 6,
-  },
-  evidenceText: {
-    color: "#00D9FF",
+  sourceInline: {
+    color: "rgba(255,255,255,0.3)",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 10,
-  },
-  sourceDate: {
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    fontSize: 11,
-    marginBottom: 4,
-  },
-  sourceUrl: {
-    color: "rgba(0,217,255,0.7)",
-    fontFamily: "NotoSerifSC-Regular",
-    fontSize: 11,
-    textDecorationLine: "underline",
+    marginTop: 8,
   },
 });
 
