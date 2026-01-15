@@ -109,6 +109,13 @@ export function groupSchoolsBySession(
   const groups = new Map<string, School[]>();
 
   for (const school of schools) {
+    // [TEMP] 調試：檢查 大埔浸信會公立學校
+    if (school.name === "大埔浸信會公立學校") {
+      const predicateResult = predicate(school);
+      const groupKey = getGroupKey(school.id);
+      console.log(`[TEMP-DEBUG] 第一循環: id=${school.id}, level="${school.level}", predicate=${predicateResult}, groupKey=${groupKey}`);
+    }
+
     // 不符合條件的學校直接加入結果
     if (!predicate(school)) {
       result.push(school);
