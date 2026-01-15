@@ -13,6 +13,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useFilter } from "@/lib/filter-context";
 import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18 } from "@/types/school";
+import { KG_CATEGORY_PRIVATE, KG_CATEGORY_NONPROFIT, type ExtendedCategory } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
 
 interface FilterSheetProps {
@@ -45,12 +46,16 @@ const LANGUAGE_OPTIONS = [
   { label: "以中文為主", value: "以中文為主" as const },
 ];
 
-const CATEGORY_OPTIONS = [
-  { label: "國際學校", value: "國際" as const },
-  { label: "直資學校", value: "直資" as const },
-  { label: "私立學校", value: "私立" as const },
-  { label: "資助學校", value: "資助" as const },
-  { label: "公立學校", value: "公立" as const },
+// Category options with KG-specific categories
+const CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
+  { label: "國際學校", value: "國際" },
+  { label: "直資學校", value: "直資" },
+  { label: "私立學校", value: "私立" },
+  { label: "資助學校", value: "資助" },
+  { label: "公立學校", value: "公立" },
+  // KG-specific categories
+  { label: "私立幼稚園", value: KG_CATEGORY_PRIVATE },
+  { label: "非牟利幼稚園", value: KG_CATEGORY_NONPROFIT },
 ];
 
 const DISTRICT_OPTIONS = [

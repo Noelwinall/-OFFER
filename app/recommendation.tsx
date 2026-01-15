@@ -7,7 +7,7 @@ import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { getSortedRecommendations, calculateMatchScore, getMatchDescription } from "@/lib/recommendation";
 import { FavoritesStorage } from "@/lib/storage";
-import { groupSchoolsBySession, type GroupedSchool, isKindergarten, isPrimary } from "@/constants/session-grouping";
+import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
 import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -59,17 +59,7 @@ export default function RecommendationScreen() {
 
   // 合併幼稚園/小學同校不同班別（AM/PM/WD）
   const displayRecommendations = useMemo(() => {
-    const grouped = groupSchoolsBySession(recommendations);
-
-    // [TEMP] 驗證合併效果 - 確認後刪除
-    const beforeKG = recommendations.filter(isKindergarten).length;
-    const afterKG = grouped.filter(isKindergarten).length;
-    const beforePrimary = recommendations.filter(isPrimary).length;
-    const afterPrimary = grouped.filter(isPrimary).length;
-    console.log(`[TEMP-REC] 幼稚園: ${beforeKG} → ${afterKG} (減少 ${beforeKG - afterKG})`);
-    console.log(`[TEMP-REC] 小學: ${beforePrimary} → ${afterPrimary} (減少 ${beforePrimary - afterPrimary})`);
-
-    return grouped;
+    return groupSchoolsBySession(recommendations);
   }, [recommendations]);
 
   // 檢查合併後的學校是否被收藏

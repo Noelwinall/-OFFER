@@ -6,7 +6,8 @@ import { isInternational } from "@/lib/international-schools";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 import type { School } from "@/types/school";
-import { type SessionType, SESSION_LABELS, SESSION_COLORS } from "@/constants/session-grouping";
+import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/constants/session-grouping";
+import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
 
 interface SchoolCardProps {
@@ -92,16 +93,28 @@ export const SchoolCard = React.memo(function SchoolCard({
         </Pressable>
       </View>
 
-      {/* 學校類型標籤 - 只显示 v0 字段 */}
+      {/* 學校類型標籤 - 幼稚園顯示 School Nature，其他顯示 category */}
       <View className="flex-row items-center flex-wrap gap-1">
-        <View
-          className="px-2 py-1 rounded"
-          style={{ backgroundColor: getDisplayTypeColor(school) }}
-        >
-          <Text className="text-xs font-semibold text-white">
-            {getDisplayType(school)}
-          </Text>
-        </View>
+        {/* 類型標籤：KG 用 nature，其他用 category */}
+        {isKindergarten(school) ? (
+          <View
+            className="px-2 py-1 rounded"
+            style={{ backgroundColor: getKGNatureColor(getKGNature(school)!) }}
+          >
+            <Text className="text-xs font-semibold text-white">
+              {getKGNatureLabel(getKGNature(school)!)}
+            </Text>
+          </View>
+        ) : (
+          <View
+            className="px-2 py-1 rounded"
+            style={{ backgroundColor: getDisplayTypeColor(school) }}
+          >
+            <Text className="text-xs font-semibold text-white">
+              {getDisplayType(school)}
+            </Text>
+          </View>
+        )}
         <View className="px-2 py-1 rounded bg-gray-600/30">
           <Text className="text-xs text-muted">{school.level}</Text>
         </View>

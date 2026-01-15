@@ -109,13 +109,6 @@ export function groupSchoolsBySession(
   const groups = new Map<string, School[]>();
 
   for (const school of schools) {
-    // [TEMP] 調試：檢查 大埔浸信會公立學校
-    if (school.name === "大埔浸信會公立學校") {
-      const predicateResult = predicate(school);
-      const groupKey = getGroupKey(school.id);
-      console.log(`[TEMP-DEBUG] 第一循環: id=${school.id}, level="${school.level}", predicate=${predicateResult}, groupKey=${groupKey}`);
-    }
-
     // 不符合條件的學校直接加入結果
     if (!predicate(school)) {
       result.push(school);
@@ -156,13 +149,6 @@ export function groupSchoolsBySession(
       nameGroups.set(nameKey, []);
     }
     nameGroups.get(nameKey)!.push(school);
-  }
-
-  // [TEMP] 調試：檢查 大埔浸信會公立學校 的合併情況
-  const tpDebug = nameGroups.get("大埔浸信會公立學校");
-  if (tpDebug) {
-    console.log(`[TEMP-DEBUG] 大埔浸信會公立學校 name group size: ${tpDebug.length}`);
-    tpDebug.forEach((s, i) => console.log(`  [${i}] id=${s.id}, level=${s.level}`));
   }
 
   // 合併同名學校

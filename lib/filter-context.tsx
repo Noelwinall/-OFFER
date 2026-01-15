@@ -1,6 +1,7 @@
 import React, { createContext, useReducer, ReactNode } from "react";
 
 import type { Curriculum, Language, SchoolCategory, District, District18 } from "@/types/school";
+import type { ExtendedCategory } from "@/constants/kg-nature";
 
 // 排序選項類型
 export type SortOption = "relevance" | "tuition_low" | "tuition_high" | "name_asc" | "name_desc";
@@ -9,7 +10,7 @@ export interface FilterState {
   tuitionRange: { min: number; max: number } | null;
   curriculum: Curriculum[];
   language: Language | null;
-  category: SchoolCategory[];
+  category: ExtendedCategory[];  // Extended to include KG-specific categories
   district: District[];
   district18: District18[];  // 18區篩選
   sortBy: SortOption;
@@ -21,7 +22,7 @@ export type FilterAction =
   | { type: "TOGGLE_CURRICULUM"; payload: Curriculum }
   | { type: "SET_LANGUAGE"; payload: Language }
   | { type: "CLEAR_LANGUAGE" }
-  | { type: "TOGGLE_CATEGORY"; payload: SchoolCategory }
+  | { type: "TOGGLE_CATEGORY"; payload: ExtendedCategory }
   | { type: "TOGGLE_DISTRICT"; payload: District }
   | { type: "TOGGLE_DISTRICT18"; payload: District18 }
   | { type: "CLEAR_DISTRICT18" }

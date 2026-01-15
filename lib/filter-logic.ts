@@ -2,6 +2,12 @@ import type { School } from "@/types/school";
 import type { FilterState, SortOption } from "@/lib/filter-context";
 import { isInternational } from "@/lib/international-schools";
 import { expandSearchQuery } from "@/constants/search-aliases";
+import {
+  KG_CATEGORY_PRIVATE,
+  KG_CATEGORY_NONPROFIT,
+  matchesKGCategory,
+  isNonInternationalKG,
+} from "@/constants/kg-nature";
 
 /**
  * 檢查學校是否符合進階篩選條件
@@ -33,12 +39,25 @@ export function matchesAdvancedFilters(
 
   // 學校類型篩選（多選，任一匹配即可）
   // R3-8: "國際" 需用 isInternational() 判定，其他類型用 category 字段
+  // KG Category System: Non-international KGs use new categories (私立幼稚園/非牟利幼稚園)
   if (filters.category.length > 0) {
     const matchesCategory = filters.category.some((cat) => {
+      // KG-specific categories
+      if (cat === KG_CATEGORY_PRIVATE || cat === KG_CATEGORY_NONPROFIT) {
+        return matchesKGCategory(school, cat);
+      }
+
       if (cat === "國際") {
         // 國際學校通過名稱模式判定，非 category 字段
         return isInternational(school);
       }
+
+      // Original 5 categories: exclude non-international KGs
+      // Non-international KGs should only appear in KG-specific categories
+      if (isNonInternationalKG(school)) {
+        return false;
+      }
+
       // 其他類型：直接比對 category 字段
       // 注意：若選了"私立"但學校是國際學校，應排除（國際學校單獨一類）
       if (cat === "私立" && isInternational(school)) {

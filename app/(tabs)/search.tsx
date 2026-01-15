@@ -16,7 +16,7 @@ import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SCHOOL_TEXT } from "@/constants/school-text";
-import { groupSchoolsBySession, type GroupedSchool, isKindergarten, isPrimary } from "@/constants/session-grouping";
+import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
 
 // 快捷功能入口
 const QUICK_ACTIONS = [
@@ -72,17 +72,7 @@ export default function SearchScreen() {
     const results = filterSchools(schools, debouncedSearch, filters);
     const sorted = sortSearchResults(results, debouncedSearch, filters);
     // 合併幼稚園/小學同校不同班別（AM/PM/WD）
-    const grouped = groupSchoolsBySession(sorted);
-
-    // [TEMP] 驗證合併效果 - 確認後刪除
-    const beforeKG = sorted.filter(isKindergarten).length;
-    const afterKG = grouped.filter(isKindergarten).length;
-    const beforePrimary = sorted.filter(isPrimary).length;
-    const afterPrimary = grouped.filter(isPrimary).length;
-    console.log(`[TEMP] 幼稚園: ${beforeKG} → ${afterKG} (減少 ${beforeKG - afterKG})`);
-    console.log(`[TEMP] 小學: ${beforePrimary} → ${afterPrimary} (減少 ${beforePrimary - afterPrimary})`);
-
-    return grouped;
+    return groupSchoolsBySession(sorted);
   }, [debouncedSearch, filters]);
 
   /**

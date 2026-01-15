@@ -6,6 +6,8 @@ import { useRouter, useLocalSearchParams } from "expo-router";
 import { schools } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage";
 import { isInternational } from "@/lib/international-schools";
+import { isKindergarten } from "@/constants/session-grouping";
+import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import type { School } from "@/types/school";
 import type { SchoolFees } from "@/types/fees";
 import * as Haptics from "expo-haptics";
@@ -202,11 +204,20 @@ export default function SchoolDetailScreen() {
               <Text style={styles.schoolNameEn}>{school.nameEn}</Text>
             )}
             <View style={styles.tagRow}>
-              <View style={[styles.tag, isInternational(school) && styles.internationalTag]}>
-                <Text style={[styles.tagText, isInternational(school) && styles.internationalTagText]}>
-                  {isInternational(school) ? "國際" : school.category}
-                </Text>
-              </View>
+              {/* 類型標籤：KG 用 nature，其他用 category */}
+              {isKindergarten(school) ? (
+                <View style={[styles.tag, { backgroundColor: getKGNatureColor(getKGNature(school)!) }]}>
+                  <Text style={[styles.tagText, { color: "#FFFFFF" }]}>
+                    {getKGNatureLabel(getKGNature(school)!)}
+                  </Text>
+                </View>
+              ) : (
+                <View style={[styles.tag, isInternational(school) && styles.internationalTag]}>
+                  <Text style={[styles.tagText, isInternational(school) && styles.internationalTagText]}>
+                    {isInternational(school) ? "國際" : school.category}
+                  </Text>
+                </View>
+              )}
               <View style={styles.tag}>
                 <Text style={styles.tagText}>{school.district}</Text>
               </View>
@@ -221,7 +232,10 @@ export default function SchoolDetailScreen() {
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_BASIC_INFO}</Text>
             <View style={styles.infoGrid}>
               <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
-              <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={isInternational(school) ? "國際" : school.category} />
+              <InfoRow
+                label={SCHOOL_TEXT.LABEL_CATEGORY}
+                value={isKindergarten(school) ? getKGNatureLabel(getKGNature(school)!) : (isInternational(school) ? "國際" : school.category)}
+              />
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
               {/* R3-8: 教學語言顯示（國際/私校顯示兜底文案） */}
               <InfoRow
