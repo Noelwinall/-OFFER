@@ -1,10 +1,11 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet, Modal, TextInput, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { SchoolCard } from "@/components/school-card";
 import { useRouter } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, FavoriteGroupsStorage, DEFAULT_GROUPS, type FavoriteGroup } from "@/lib/storage";
+import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useFocusEffect } from "@react-navigation/native";
@@ -80,6 +81,11 @@ export default function FavoritesScreen() {
     setSelectedGroupId(groupId);
     filterSchoolsByGroup(favorites, groupId, schoolGroupMappings);
   };
+
+  // 合併幼稚園同校不同班別（AM/PM/WD）
+  const displayFavorites = useMemo(() => {
+    return groupSchoolsBySession(favoriteSchools);
+  }, [favoriteSchools]);
 
   const handleFavoriteToggle = async (schoolId: string) => {
     if (Platform.OS !== "web") {
@@ -201,7 +207,7 @@ export default function FavoritesScreen() {
         </ScrollView>
 
         <FlatList
-          data={favoriteSchools}
+          data={displayFavorites}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <View>
@@ -210,6 +216,7 @@ export default function FavoritesScreen() {
                 isFavorite={true}
                 onPress={() => handleSchoolPress(item.id)}
                 onFavoritePress={() => handleFavoriteToggle(item.id)}
+                sessions={item.__sessions}
               />
               {/* 分組標籤 */}
               <TouchableOpacity

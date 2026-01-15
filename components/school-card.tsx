@@ -6,7 +6,7 @@ import { isInternational } from "@/lib/international-schools";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 import type { School } from "@/types/school";
-import type { KgSession } from "@/constants/kg-session";
+import { type SessionType, SESSION_LABELS, SESSION_COLORS } from "@/constants/session-grouping";
 import * as Haptics from "expo-haptics";
 
 interface SchoolCardProps {
@@ -14,16 +14,9 @@ interface SchoolCardProps {
   isFavorite?: boolean;
   onPress?: () => void;
   onFavoritePress?: () => void;
-  /** 幼稚園班別標籤（AM/PM/WD） */
-  kgSessions?: KgSession[];
+  /** 班別標籤（聚合後的 AM/PM/WD） */
+  sessions?: SessionType[];
 }
-
-/** 班別標籤顏色（鮮艷高飽和） */
-const KG_SESSION_COLORS: Record<KgSession, string> = {
-  AM: "#8B5CF6",   // 紫色 - 上午班
-  PM: "#3B82F6",   // 藍色 - 下午班
-  WD: "#10B981",   // 綠色 - 全日班
-};
 
 /**
  * 統一學校卡片組件
@@ -35,7 +28,7 @@ export const SchoolCard = React.memo(function SchoolCard({
   isFavorite = false,
   onPress,
   onFavoritePress,
-  kgSessions,
+  sessions,
 }: SchoolCardProps) {
   const colors = useColors();
 
@@ -112,13 +105,13 @@ export const SchoolCard = React.memo(function SchoolCard({
         <View className="px-2 py-1 rounded bg-gray-600/30">
           <Text className="text-xs text-muted">{school.district}</Text>
         </View>
-        {/* 幼稚園班別標籤（AM/PM/WD） */}
-        {kgSessions && kgSessions.length > 0 && kgSessions.map((session) => (
+        {/* 班別標籤（聚合後顯示中文：上午班/下午班/全天） */}
+        {sessions && sessions.length > 0 && sessions.map((session) => (
           <View
             key={session}
-            style={[styles.kgSessionTag, { backgroundColor: KG_SESSION_COLORS[session] }]}
+            style={[styles.sessionTag, { backgroundColor: SESSION_COLORS[session] }]}
           >
-            <Text style={styles.kgSessionText}>{session}</Text>
+            <Text style={styles.sessionText}>{SESSION_LABELS[session]}</Text>
           </View>
         ))}
       </View>
@@ -132,7 +125,7 @@ export const SchoolCard = React.memo(function SchoolCard({
 }, (prev, next) =>
   prev.school.id === next.school.id &&
   prev.isFavorite === next.isFavorite &&
-  JSON.stringify(prev.kgSessions) === JSON.stringify(next.kgSessions)
+  JSON.stringify(prev.sessions) === JSON.stringify(next.sessions)
 );
 
 /**
@@ -199,12 +192,12 @@ const styles = StyleSheet.create({
   cardPressed: {
     opacity: 0.85,
   },
-  kgSessionTag: {
+  sessionTag: {
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 6,
   },
-  kgSessionText: {
+  sessionText: {
     fontSize: 11,
     fontWeight: "700",
     color: "#FFFFFF",

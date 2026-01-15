@@ -16,7 +16,7 @@ import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SCHOOL_TEXT } from "@/constants/school-text";
-import { groupKindergartenVariants, type GroupedSchool } from "@/constants/kg-session";
+import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
 
 // 快捷功能入口
 const QUICK_ACTIONS = [
@@ -72,7 +72,7 @@ export default function SearchScreen() {
     const results = filterSchools(schools, debouncedSearch, filters);
     const sorted = sortSearchResults(results, debouncedSearch, filters);
     // 合併幼稚園同校不同班別（AM/PM/WD）
-    return groupKindergartenVariants(sorted);
+    return groupSchoolsBySession(sorted);
   }, [debouncedSearch, filters]);
 
   /**
@@ -93,7 +93,7 @@ export default function SearchScreen() {
       isFavorite={isSchoolFavorite(item)}
       onPress={() => handleSchoolPress(item.id)}
       onFavoritePress={() => handleFavoriteToggle(item.id)}
-      kgSessions={item.__kgSessions}
+      sessions={item.__sessions}
     />
   ), [favorites, isSchoolFavorite]);
 

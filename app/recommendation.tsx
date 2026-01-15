@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { SchoolCard } from "@/components/school-card";
@@ -7,6 +7,7 @@ import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { getSortedRecommendations, calculateMatchScore, getMatchDescription } from "@/lib/recommendation";
 import { FavoritesStorage } from "@/lib/storage";
+import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
 import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -56,6 +57,19 @@ export default function RecommendationScreen() {
     setFavorites(favs);
   };
 
+  // 合併幼稚園同校不同班別（AM/PM/WD）
+  const displayRecommendations = useMemo(() => {
+    return groupSchoolsBySession(recommendations);
+  }, [recommendations]);
+
+  // 檢查合併後的學校是否被收藏
+  const isSchoolFavorite = useCallback((item: GroupedSchool): boolean => {
+    if (item.__variantIds && item.__variantIds.length > 0) {
+      return item.__variantIds.some((id) => favorites.includes(id));
+    }
+    return favorites.includes(item.id);
+  }, [favorites]);
+
   const handleFavoriteToggle = async (schoolId: string) => {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -103,14 +117,14 @@ export default function RecommendationScreen() {
         {/* 結果統計 */}
         <View style={styles.statsContainer}>
           <Text style={styles.statsTitle}>
-            為您推薦 {recommendations.length} 所學校
+            為您推薦 {displayRecommendations.length} 所學校
           </Text>
-          {isRelaxedMatch && recommendations.length > 0 && (
+          {isRelaxedMatch && displayRecommendations.length > 0 && (
             <Text style={styles.statsSubtitle}>
               已放寬篩選條件，顯示部分匹配的學校
             </Text>
           )}
-          {recommendations.length === 0 && (
+          {displayRecommendations.length === 0 && (
             <Text style={styles.statsSubtitle}>
               沒有找到符合條件的學校，請調整篩選條件
             </Text>
@@ -118,14 +132,15 @@ export default function RecommendationScreen() {
         </View>
 
         <FlatList
-          data={recommendations}
+          data={displayRecommendations}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <SchoolCard
               school={item}
-              isFavorite={favorites.includes(item.id)}
+              isFavorite={isSchoolFavorite(item)}
               onPress={() => handleSchoolPress(item.id)}
               onFavoritePress={() => handleFavoriteToggle(item.id)}
+              sessions={item.__sessions}
             />
           )}
           contentContainerStyle={{ paddingVertical: 8, paddingBottom: 180 }}

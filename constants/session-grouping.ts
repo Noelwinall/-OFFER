@@ -1,0 +1,161 @@
+/**
+ * Session 分組工具（通用）
+ *
+ * 用於合併同一學校不同班別（AM/PM/WD）的記錄
+ * 目前支援幼稚園，未來可擴展到小學
+ *
+ * ID 格式：edb_XXXXXXXXXXXX（edb_ + 12位數字）
+ * - 前 6 位 = school_no
+ * - 中間 4 位 = location_no
+ * - 最後 2 位 = session_code（11=AM, 12=PM, 13=WD）
+ */
+
+import type { School } from "@/types/school";
+
+export type SessionType = "AM" | "PM" | "WD";
+
+/** Session code 到類型的映射 */
+const SESSION_CODE_MAP: Record<string, SessionType> = {
+  "11": "AM",
+  "12": "PM",
+  "13": "WD",
+};
+
+/** Session 中文顯示名稱 */
+export const SESSION_LABELS: Record<SessionType, string> = {
+  AM: "上午班",
+  PM: "下午班",
+  WD: "全天",
+};
+
+/** Session 標籤顏色（鮮艷高飽和） */
+export const SESSION_COLORS: Record<SessionType, string> = {
+  AM: "#8B5CF6", // 紫色 - 上午班
+  PM: "#3B82F6", // 藍色 - 下午班
+  WD: "#10B981", // 綠色 - 全天
+};
+
+/** ID 正則：edb_ + 12位數字 */
+const EDB_ID_REGEX = /^edb_(\d{12})$/;
+
+/**
+ * 從學校 ID 提取 session 類型
+ * @returns 'AM' | 'PM' | 'WD' | null（格式不符或未知 session code）
+ */
+export function getSessionFromId(id: string): SessionType | null {
+  const match = id.match(EDB_ID_REGEX);
+  if (!match) return null;
+
+  const digits = match[1];
+  const sessionCode = digits.slice(-2); // 最後 2 位
+  return SESSION_CODE_MAP[sessionCode] || null;
+}
+
+/**
+ * 從學校 ID 取得分組 key
+ * @returns `edb_${schoolNo}${locationNo}`（前 10 位）| null
+ */
+export function getGroupKey(id: string): string | null {
+  const match = id.match(EDB_ID_REGEX);
+  if (!match) return null;
+
+  const digits = match[1];
+  // 取前 10 位（school_no + location_no）
+  return `edb_${digits.slice(0, 10)}`;
+}
+
+/** 合併後的學校類型（帶 session 元數據） */
+export interface GroupedSchool extends School {
+  __sessions?: SessionType[];
+  __variantIds?: string[];
+}
+
+/** 分組條件函數類型 */
+export type GroupPredicate = (school: School) => boolean;
+
+/** 默認條件：僅對幼稚園啟用（寬鬆匹配） */
+export const defaultPredicate: GroupPredicate = (school) =>
+  String(school.level ?? "").includes("幼稚園");
+
+/**
+ * 合併同校不同班別（通用函數）
+ *
+ * @param schools 原始學校列表
+ * @param predicate 分組條件（默認只對幼稚園啟用）
+ * @returns 合併後的學校列表
+ *
+ * 合併規則：
+ * - 僅對符合 predicate 的學校執行合併
+ * - 代表項優先級：WD > AM > PM > 第一條
+ * - 在代表項上附加 __sessions 和 __variantIds
+ */
+export function groupSchoolsBySession(
+  schools: School[],
+  predicate: GroupPredicate = defaultPredicate
+): GroupedSchool[] {
+  const result: GroupedSchool[] = [];
+  const groups = new Map<string, School[]>();
+
+  for (const school of schools) {
+    // 不符合條件的學校直接加入結果
+    if (!predicate(school)) {
+      result.push(school);
+      continue;
+    }
+
+    const groupKey = getGroupKey(school.id);
+    // 格式不符的學校也直接加入
+    if (!groupKey) {
+      result.push(school);
+      continue;
+    }
+
+    // 按 key 分組
+    if (!groups.has(groupKey)) {
+      groups.set(groupKey, []);
+    }
+    groups.get(groupKey)!.push(school);
+  }
+
+  // 處理分組
+  for (const [, variants] of groups) {
+    // 收集 sessions
+    const sessions: SessionType[] = [];
+    const variantIds: string[] = [];
+
+    for (const v of variants) {
+      const session = getSessionFromId(v.id);
+      if (session && !sessions.includes(session)) {
+        sessions.push(session);
+      }
+      variantIds.push(v.id);
+    }
+
+    // 排序 sessions：AM, PM, WD
+    sessions.sort((a, b) => {
+      const order = { AM: 0, PM: 1, WD: 2 };
+      return order[a] - order[b];
+    });
+
+    // 選代表項：WD > AM > PM > 第一條
+    let representative: School = variants[0];
+    for (const priority of ["WD", "AM", "PM"] as SessionType[]) {
+      const found = variants.find((v) => getSessionFromId(v.id) === priority);
+      if (found) {
+        representative = found;
+        break;
+      }
+    }
+
+    // 構建合併結果
+    const grouped: GroupedSchool = {
+      ...representative,
+      __sessions: sessions.length > 0 ? sessions : undefined,
+      __variantIds: variantIds.length > 1 ? variantIds : undefined,
+    };
+
+    result.push(grouped);
+  }
+
+  return result;
+}
