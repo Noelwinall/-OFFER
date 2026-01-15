@@ -136,10 +136,10 @@ export function groupSchoolsBySession(
     firstPassResults.push(grouped);
   }
 
-  // 第二步：按名稱合併不同 location 的同名幼稚園
+  // 第二步：按名稱合併不同 location 的同名學校（幼稚園+小學）
   const nameGroups = new Map<string, GroupedSchool[]>();
   for (const school of firstPassResults) {
-    // 只對幼稚園做名稱合併
+    // 只對符合條件的學校做名稱合併
     if (!predicate(school)) {
       result.push(school);
       continue;
@@ -149,6 +149,13 @@ export function groupSchoolsBySession(
       nameGroups.set(nameKey, []);
     }
     nameGroups.get(nameKey)!.push(school);
+  }
+
+  // [TEMP] 調試：檢查 大埔浸信會公立學校 的合併情況
+  const tpDebug = nameGroups.get("大埔浸信會公立學校");
+  if (tpDebug) {
+    console.log(`[TEMP-DEBUG] 大埔浸信會公立學校 name group size: ${tpDebug.length}`);
+    tpDebug.forEach((s, i) => console.log(`  [${i}] id=${s.id}, level=${s.level}`));
   }
 
   // 合併同名學校
