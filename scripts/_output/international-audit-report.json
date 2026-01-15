@@ -1,0 +1,1377 @@
+{
+  "timestamp": "2026-01-15T16:21:25.633Z",
+  "summary": {
+    "esfSchools": 32,
+    "otherInternational": 121,
+    "totalInternational": 153,
+    "categorizedAsPrivateButInternational": [
+      {
+        "id": "edb_534579000123",
+        "nameEn": "SEAR ROGERS INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000623",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216186000423",
+        "nameEn": "CARMEL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215406000423",
+        "nameEn": "KELLETT SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_605557000123",
+        "nameEn": "CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_325147000223",
+        "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215791000123",
+        "nameEn": "DSC INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215406000123",
+        "nameEn": "KELLETT SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214558000221",
+        "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216011000523",
+        "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230987000123",
+        "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_518620000123",
+        "nameEn": "LANTAU INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_527882000123",
+        "nameEn": "AMERICAN INTERNATIONAL SCHOOL (PRIMARY BRANCH)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216186000323",
+        "nameEn": "CARMEL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_518620000223",
+        "nameEn": "LANTAU INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_590800000123",
+        "nameEn": "HARROW INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_287695000223",
+        "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216003000223",
+        "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_598356000223",
+        "nameEn": "NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_213772000123",
+        "nameEn": "HONG KONG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215520000123",
+        "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214558000123",
+        "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216275000623",
+        "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_325147000623",
+        "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_522775000123",
+        "nameEn": "JAPANESE INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_539155000323",
+        "nameEn": "HONG KONG ACADEMY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_325147000423",
+        "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216216000123",
+        "nameEn": "KOREAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215589000123",
+        "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214949000523",
+        "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214558000121",
+        "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_518620000423",
+        "nameEn": "LANTAU INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214949000123",
+        "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_606766000123",
+        "nameEn": "MALVERN COLLEGE HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_607525000123",
+        "nameEn": "SHREWSBURY INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214949000723",
+        "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230979000123",
+        "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (PRIMARY SECTION)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_534579000133",
+        "nameEn": "SEAR ROGERS INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215406000433",
+        "nameEn": "KELLETT SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000633",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216186000433",
+        "nameEn": "CARMEL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_598356000333",
+        "nameEn": "NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_605557000133",
+        "nameEn": "CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215791000133",
+        "nameEn": "DSC INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216003000433",
+        "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216011000533",
+        "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_287695000233",
+        "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230987000233",
+        "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215996000133",
+        "nameEn": "CONCORDIA INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_539155000333",
+        "nameEn": "HONG KONG ACADEMY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214558000133",
+        "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215589000133",
+        "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216275000633",
+        "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216216000133",
+        "nameEn": "KOREAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_213772000233",
+        "nameEn": "HONG KONG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_590800000133",
+        "nameEn": "HARROW INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230987000133",
+        "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214949000433",
+        "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_578789000133",
+        "nameEn": "INTERNATIONAL COLLEGE HONG KONG (NEW TERRITORIES)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_606766000133",
+        "nameEn": "MALVERN COLLEGE HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214949000733",
+        "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000611",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000311",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000312",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_578053000112",
+        "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_578053000111",
+        "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216011000512",
+        "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216011000511",
+        "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000711",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214949000513",
+        "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214949000713",
+        "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230987000113",
+        "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230944000112",
+        "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (KINDERGARTEN SECTION)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230944000113",
+        "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (KINDERGARTEN SECTION)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230944000111",
+        "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (KINDERGARTEN SECTION)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_287695000213",
+        "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_287695000211",
+        "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_325147000611",
+        "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216003000211",
+        "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216003000212",
+        "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215520000111",
+        "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215520000113",
+        "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215520000112",
+        "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_325147000612",
+        "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_325147000613",
+        "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216275000612",
+        "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216275000613",
+        "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216275000611",
+        "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_214558000211",
+        "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215589000112",
+        "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_215589000111",
+        "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230987000112",
+        "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_539155000311",
+        "nameEn": "HONG KONG ACADEMY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_590800000113",
+        "nameEn": "HARROW INTERNATIONAL SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216216000113",
+        "nameEn": "KOREAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_542598000211",
+        "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL - KINDERGARTEN",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_542598000212",
+        "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL - KINDERGARTEN",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_230987000111",
+        "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000411",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_548430000412",
+        "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216011000611",
+        "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216011000612",
+        "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_606979000113",
+        "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_606979000111",
+        "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_606979000112",
+        "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_601721000112",
+        "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_601721000111",
+        "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_613037000111",
+        "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG (ISLAND WEST)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_613037000112",
+        "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG (ISLAND WEST)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_613037000113",
+        "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG (ISLAND WEST)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_216186000211",
+        "nameEn": "CARMEL SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_605638000123",
+        "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_569836000123",
+        "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_560138000223",
+        "nameEn": "VICTORIA SHANGHAI ACADEMY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_553190000323",
+        "nameEn": "THE INDEPENDENT SCHOOLS FOUNDATION ACADEMY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_626864000133",
+        "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG (WEST KOWLOON)",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_567450000133",
+        "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL - SECONDARY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_553190000333",
+        "nameEn": "THE INDEPENDENT SCHOOLS FOUNDATION ACADEMY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_569836000133",
+        "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_560138000233",
+        "nameEn": "VICTORIA SHANGHAI ACADEMY",
+        "note": "Categorized as 私立 but is international school"
+      },
+      {
+        "id": "edb_605638000133",
+        "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG",
+        "note": "Categorized as 私立 but is international school"
+      }
+    ]
+  },
+  "esfSchools": [
+    "SHATIN JUNIOR SCHOOL",
+    "GLENEALY SCHOOL",
+    "CLEARWATER BAY SCHOOL",
+    "KENNEDY SCHOOL",
+    "PEAK SCHOOL",
+    "CLEARWATER BAY SCHOOL",
+    "BEACON HILL SCHOOL",
+    "JOCKEY CLUB SARAH ROE SCHOOL",
+    "QUARRY BAY SCHOOL",
+    "KOWLOON JUNIOR SCHOOL",
+    "BRADBURY SCHOOL",
+    "ISLAND SCHOOL",
+    "SHATIN COLLEGE",
+    "SHATIN COLLEGE",
+    "THE SOUTH ISLAND SCHOOL",
+    "JOCKEY CLUB SARAH ROE SCHOOL",
+    "WEST ISLAND SCHOOL",
+    "KING GEORGE V SCHOOL",
+    "ESF INTERNATIONAL KINDERGARTEN (TSING YI)",
+    "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)",
+    "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)",
+    "ESF ABACUS INTERNATIONAL KINDERGARTEN",
+    "ESF ABACUS INTERNATIONAL KINDERGARTEN",
+    "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)",
+    "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)",
+    "ESF INTERNATIONAL KINDERGARTEN (TSING YI)",
+    "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)",
+    "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)",
+    "RENAISSANCE COLLEGE",
+    "DISCOVERY COLLEGE",
+    "RENAISSANCE COLLEGE",
+    "DISCOVERY COLLEGE"
+  ],
+  "otherInternational": [
+    {
+      "id": "edb_534579000123",
+      "nameEn": "SEAR ROGERS INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_548430000623",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_216186000423",
+      "nameEn": "CARMEL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_215406000423",
+      "nameEn": "KELLETT SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_605557000123",
+      "nameEn": "CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_325147000223",
+      "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_215791000123",
+      "nameEn": "DSC INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_215406000123",
+      "nameEn": "KELLETT SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_214558000221",
+      "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_216011000523",
+      "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_230987000123",
+      "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_518620000123",
+      "nameEn": "LANTAU INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_527882000123",
+      "nameEn": "AMERICAN INTERNATIONAL SCHOOL (PRIMARY BRANCH)",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_216186000323",
+      "nameEn": "CARMEL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_518620000223",
+      "nameEn": "LANTAU INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_590800000123",
+      "nameEn": "HARROW INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_287695000223",
+      "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_216003000223",
+      "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_598356000223",
+      "nameEn": "NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_213772000123",
+      "nameEn": "HONG KONG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_215520000123",
+      "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_214558000123",
+      "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_216275000623",
+      "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_325147000623",
+      "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_522775000123",
+      "nameEn": "JAPANESE INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_539155000323",
+      "nameEn": "HONG KONG ACADEMY",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_325147000423",
+      "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_216216000123",
+      "nameEn": "KOREAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_215589000123",
+      "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_214949000523",
+      "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_214558000121",
+      "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_518620000423",
+      "nameEn": "LANTAU INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_214949000123",
+      "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_606766000123",
+      "nameEn": "MALVERN COLLEGE HONG KONG",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_607525000123",
+      "nameEn": "SHREWSBURY INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_214949000723",
+      "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_230979000123",
+      "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (PRIMARY SECTION)",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_534579000133",
+      "nameEn": "SEAR ROGERS INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_215406000433",
+      "nameEn": "KELLETT SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_548430000633",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_216186000433",
+      "nameEn": "CARMEL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_598356000333",
+      "nameEn": "NORD ANGLIA INTERNATIONAL SCHOOL, HONG KONG",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_605557000133",
+      "nameEn": "CHRISTIAN ALLIANCE INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_215791000133",
+      "nameEn": "DSC INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_216003000433",
+      "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_216011000533",
+      "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_287695000233",
+      "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_230987000233",
+      "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_215996000133",
+      "nameEn": "CONCORDIA INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_539155000333",
+      "nameEn": "HONG KONG ACADEMY",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_214558000133",
+      "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_215589000133",
+      "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_216275000633",
+      "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_216216000133",
+      "nameEn": "KOREAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_213772000233",
+      "nameEn": "HONG KONG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_590800000133",
+      "nameEn": "HARROW INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_230987000133",
+      "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_214949000433",
+      "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_578789000133",
+      "nameEn": "INTERNATIONAL COLLEGE HONG KONG (NEW TERRITORIES)",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_606766000133",
+      "nameEn": "MALVERN COLLEGE HONG KONG",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_214949000733",
+      "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_548430000611",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_548430000311",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_548430000312",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_578053000112",
+      "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_578053000111",
+      "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN SOUTHSIDE",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216011000512",
+      "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216011000511",
+      "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_548430000711",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_214949000513",
+      "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_214949000713",
+      "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_230987000113",
+      "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_230944000112",
+      "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (KINDERGARTEN SECTION)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_230944000113",
+      "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (KINDERGARTEN SECTION)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_230944000111",
+      "nameEn": "INTERNATIONAL COLLEGE HONG KONG HONG LOK YUEN (KINDERGARTEN SECTION)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_287695000213",
+      "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_287695000211",
+      "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_325147000611",
+      "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216003000211",
+      "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216003000212",
+      "nameEn": "SINGAPORE INTERNATIONAL SCHOOL (HONG KONG)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_215520000111",
+      "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_215520000113",
+      "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_215520000112",
+      "nameEn": "NORWEGIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_325147000612",
+      "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_325147000613",
+      "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216275000612",
+      "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216275000613",
+      "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216275000611",
+      "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_214558000211",
+      "nameEn": "GERMAN SWISS INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_215589000112",
+      "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_215589000111",
+      "nameEn": "CHINESE INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_230987000112",
+      "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_539155000311",
+      "nameEn": "HONG KONG ACADEMY",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_590800000113",
+      "nameEn": "HARROW INTERNATIONAL SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216216000113",
+      "nameEn": "KOREAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_542598000211",
+      "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL - KINDERGARTEN",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_542598000212",
+      "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL - KINDERGARTEN",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_230987000111",
+      "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_548430000411",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_548430000412",
+      "nameEn": "THE INTERNATIONAL MONTESSORI SCHOOL - AN IMEF SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216011000611",
+      "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216011000612",
+      "nameEn": "CANADIAN INTERNATIONAL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_606979000113",
+      "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_606979000111",
+      "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_606979000112",
+      "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_601721000112",
+      "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_601721000111",
+      "nameEn": "MULBERRY HOUSE INTERNATIONAL KINDERGARTEN",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_613037000111",
+      "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG (ISLAND WEST)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_613037000112",
+      "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG (ISLAND WEST)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_613037000113",
+      "nameEn": "MALVERN COLLEGE PRE-SCHOOL HONG KONG (ISLAND WEST)",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_216186000211",
+      "nameEn": "CARMEL SCHOOL",
+      "currentCategory": "私立",
+      "level": "幼稚園"
+    },
+    {
+      "id": "edb_605638000123",
+      "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_569836000123",
+      "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_560138000223",
+      "nameEn": "VICTORIA SHANGHAI ACADEMY",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_553190000323",
+      "nameEn": "THE INDEPENDENT SCHOOLS FOUNDATION ACADEMY",
+      "currentCategory": "私立",
+      "level": "小學"
+    },
+    {
+      "id": "edb_626864000133",
+      "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG (WEST KOWLOON)",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_567450000133",
+      "nameEn": "YEW CHUNG INTERNATIONAL SCHOOL - SECONDARY",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_553190000333",
+      "nameEn": "THE INDEPENDENT SCHOOLS FOUNDATION ACADEMY",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_569836000133",
+      "nameEn": "INTERNATIONAL CHRISTIAN SCHOOL",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_560138000233",
+      "nameEn": "VICTORIA SHANGHAI ACADEMY",
+      "currentCategory": "私立",
+      "level": "中學"
+    },
+    {
+      "id": "edb_605638000133",
+      "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG",
+      "currentCategory": "私立",
+      "level": "中學"
+    }
+  ]
+}

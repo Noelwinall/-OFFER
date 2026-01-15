@@ -1,7 +1,7 @@
 import type { School } from "@/types/school";
 import type { FilterState, SortOption } from "@/lib/filter-context";
 import { isInternational } from "@/lib/international-schools";
-import { expandSearchQuery } from "@/constants/search-aliases";
+import { getGroupSearchId, matchesGroupSearch, expandSearchQuery } from "@/constants/search-aliases";
 import {
   KG_CATEGORY_PRIVATE,
   KG_CATEGORY_NONPROFIT,
@@ -86,26 +86,38 @@ export function filterSchools(
   searchQuery: string,
   filters: FilterState
 ): School[] {
+  const trimmedQuery = searchQuery.trim();
+
+  // Check if this is a group search (e.g., "ESF", "英基")
+  const groupId = trimmedQuery ? getGroupSearchId(trimmedQuery) : null;
+
   return schools
     .filter((school) => {
-      // 文字搜尋（支援中英文名稱和關鍵字）
-      // R3-8: 支援 query alias expansion (ESF/英基 等)
-      if (searchQuery.trim()) {
-        const expandedQueries = expandSearchQuery(searchQuery);
-        const matchesSearch = expandedQueries.some((q) => {
-          const query = q.toLowerCase();
-          return (
-            school.name.toLowerCase().includes(query) ||
-            school.nameEn.toLowerCase().includes(query) ||
-            school.searchKeywords.some(kw => kw.toLowerCase().includes(query)) ||
-            school.district.toLowerCase().includes(query) ||
-            school.category.toLowerCase().includes(query)
-          );
-        });
-        if (!matchesSearch) return false;
+      // Text search (supports Chinese/English names and keywords)
+      if (trimmedQuery) {
+        // GROUP SEARCH: Use strict group membership matching
+        if (groupId) {
+          if (!matchesGroupSearch(school, groupId)) {
+            return false;
+          }
+        } else {
+          // REGULAR SEARCH: Use keyword matching
+          const expandedQueries = expandSearchQuery(trimmedQuery);
+          const matchesSearch = expandedQueries.some((q) => {
+            const query = q.toLowerCase();
+            return (
+              school.name.toLowerCase().includes(query) ||
+              school.nameEn.toLowerCase().includes(query) ||
+              school.searchKeywords.some(kw => kw.toLowerCase().includes(query)) ||
+              school.district.toLowerCase().includes(query) ||
+              school.category.toLowerCase().includes(query)
+            );
+          });
+          if (!matchesSearch) return false;
+        }
       }
 
-      // 進階篩選
+      // Advanced filters
       return matchesAdvancedFilters(school, filters);
     });
 }

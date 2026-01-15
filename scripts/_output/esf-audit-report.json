@@ -1,0 +1,311 @@
+{
+  "timestamp": "2026-01-15T16:21:25.564Z",
+  "summary": {
+    "canonicalCount": 22,
+    "matchedCount": 32,
+    "unmatchedCanonical": [],
+    "falsePositives": []
+  },
+  "matched": [
+    {
+      "id": "edb_190543000123",
+      "nameEn": "SHATIN JUNIOR SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "SHATIN JUNIOR SCHOOL"
+    },
+    {
+      "id": "edb_170887000123",
+      "nameEn": "GLENEALY SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "GLENEALY SCHOOL"
+    },
+    {
+      "id": "edb_171034000123",
+      "nameEn": "CLEARWATER BAY SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "CLEARWATER BAY SCHOOL"
+    },
+    {
+      "id": "edb_170879000123",
+      "nameEn": "KENNEDY SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "KENNEDY SCHOOL"
+    },
+    {
+      "id": "edb_170860000123",
+      "nameEn": "PEAK SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "PEAK SCHOOL"
+    },
+    {
+      "id": "edb_171034000223",
+      "nameEn": "CLEARWATER BAY SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "CLEARWATER BAY SCHOOL"
+    },
+    {
+      "id": "edb_170348000123",
+      "nameEn": "BEACON HILL SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "BEACON HILL SCHOOL"
+    },
+    {
+      "id": "edb_250686000223",
+      "nameEn": "JOCKEY CLUB SARAH ROE SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "SPECIAL",
+      "canonicalName": "JOCKEY CLUB SARAH ROE SCHOOL"
+    },
+    {
+      "id": "edb_170895000123",
+      "nameEn": "QUARRY BAY SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "QUARRY BAY SCHOOL"
+    },
+    {
+      "id": "edb_170909000123",
+      "nameEn": "KOWLOON JUNIOR SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "KOWLOON JUNIOR SCHOOL"
+    },
+    {
+      "id": "edb_170747000123",
+      "nameEn": "BRADBURY SCHOOL",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "PRIMARY",
+      "canonicalName": "BRADBURY SCHOOL"
+    },
+    {
+      "id": "edb_170399000133",
+      "nameEn": "ISLAND SCHOOL",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "SECONDARY",
+      "canonicalName": "ISLAND SCHOOL"
+    },
+    {
+      "id": "edb_190314000233",
+      "nameEn": "SHATIN COLLEGE",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "SECONDARY",
+      "canonicalName": "SHATIN COLLEGE"
+    },
+    {
+      "id": "edb_190314000133",
+      "nameEn": "SHATIN COLLEGE",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "SECONDARY",
+      "canonicalName": "SHATIN COLLEGE"
+    },
+    {
+      "id": "edb_170836000133",
+      "nameEn": "THE SOUTH ISLAND SCHOOL",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "SECONDARY",
+      "canonicalName": "SOUTH ISLAND SCHOOL"
+    },
+    {
+      "id": "edb_250686000233",
+      "nameEn": "JOCKEY CLUB SARAH ROE SCHOOL",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "SPECIAL",
+      "canonicalName": "JOCKEY CLUB SARAH ROE SCHOOL"
+    },
+    {
+      "id": "edb_170992000133",
+      "nameEn": "WEST ISLAND SCHOOL",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "SECONDARY",
+      "canonicalName": "WEST ISLAND SCHOOL"
+    },
+    {
+      "id": "edb_170917000133",
+      "nameEn": "KING GEORGE V SCHOOL",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "SECONDARY",
+      "canonicalName": "KING GEORGE V SCHOOL"
+    },
+    {
+      "id": "edb_532541000111",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (TSING YI)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (TSING YI)"
+    },
+    {
+      "id": "edb_578509000111",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)"
+    },
+    {
+      "id": "edb_578509000112",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)"
+    },
+    {
+      "id": "edb_549240000112",
+      "nameEn": "ESF ABACUS INTERNATIONAL KINDERGARTEN",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF ABACUS INTERNATIONAL KINDERGARTEN"
+    },
+    {
+      "id": "edb_549240000111",
+      "nameEn": "ESF ABACUS INTERNATIONAL KINDERGARTEN",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF ABACUS INTERNATIONAL KINDERGARTEN"
+    },
+    {
+      "id": "edb_579149000111",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)"
+    },
+    {
+      "id": "edb_579149000112",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)"
+    },
+    {
+      "id": "edb_532541000112",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (TSING YI)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (TSING YI)"
+    },
+    {
+      "id": "edb_600350000112",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)"
+    },
+    {
+      "id": "edb_600350000111",
+      "nameEn": "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)",
+      "category": "私立",
+      "level": "幼稚園",
+      "esfPhase": "KINDERGARTEN",
+      "canonicalName": "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)"
+    },
+    {
+      "id": "edb_567485000123",
+      "nameEn": "RENAISSANCE COLLEGE",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "ALL_THROUGH",
+      "canonicalName": "RENAISSANCE COLLEGE"
+    },
+    {
+      "id": "edb_569747000223",
+      "nameEn": "DISCOVERY COLLEGE",
+      "category": "私立",
+      "level": "小學",
+      "esfPhase": "ALL_THROUGH",
+      "canonicalName": "DISCOVERY COLLEGE"
+    },
+    {
+      "id": "edb_567485000133",
+      "nameEn": "RENAISSANCE COLLEGE",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "ALL_THROUGH",
+      "canonicalName": "RENAISSANCE COLLEGE"
+    },
+    {
+      "id": "edb_569747000233",
+      "nameEn": "DISCOVERY COLLEGE",
+      "category": "私立",
+      "level": "中學",
+      "esfPhase": "ALL_THROUGH",
+      "canonicalName": "DISCOVERY COLLEGE"
+    }
+  ],
+  "byPhase": {
+    "PRIMARY": [
+      "SHATIN JUNIOR SCHOOL",
+      "GLENEALY SCHOOL",
+      "CLEARWATER BAY SCHOOL",
+      "KENNEDY SCHOOL",
+      "PEAK SCHOOL",
+      "CLEARWATER BAY SCHOOL",
+      "BEACON HILL SCHOOL",
+      "QUARRY BAY SCHOOL",
+      "KOWLOON JUNIOR SCHOOL",
+      "BRADBURY SCHOOL"
+    ],
+    "SECONDARY": [
+      "ISLAND SCHOOL",
+      "SHATIN COLLEGE",
+      "SHATIN COLLEGE",
+      "THE SOUTH ISLAND SCHOOL",
+      "WEST ISLAND SCHOOL",
+      "KING GEORGE V SCHOOL"
+    ],
+    "ALL_THROUGH": [
+      "RENAISSANCE COLLEGE",
+      "DISCOVERY COLLEGE",
+      "RENAISSANCE COLLEGE",
+      "DISCOVERY COLLEGE"
+    ],
+    "SPECIAL": [
+      "JOCKEY CLUB SARAH ROE SCHOOL",
+      "JOCKEY CLUB SARAH ROE SCHOOL"
+    ],
+    "KINDERGARTEN": [
+      "ESF INTERNATIONAL KINDERGARTEN (TSING YI)",
+      "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)",
+      "ESF INTERNATIONAL KINDERGARTEN (WU KAI SHA)",
+      "ESF ABACUS INTERNATIONAL KINDERGARTEN",
+      "ESF ABACUS INTERNATIONAL KINDERGARTEN",
+      "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)",
+      "ESF INTERNATIONAL KINDERGARTEN (HILLSIDE)",
+      "ESF INTERNATIONAL KINDERGARTEN (TSING YI)",
+      "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)",
+      "ESF INTERNATIONAL KINDERGARTEN (TUNG CHUNG)"
+    ]
+  }
+}

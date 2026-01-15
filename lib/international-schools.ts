@@ -1,35 +1,32 @@
 /**
- * International School Lookup
- * Source: EDB official list of 53 international schools
- * https://www.edb.gov.hk/en/edu-system/primary-secondary/applicable-to-primary-secondary/sbm/international-schools/index.html
+ * International School Classification
  *
- * NOTE: This is an independent lookup file. DO NOT modify types/school.ts or data/schools.ts.
+ * AUTHORITATIVE SOURCES:
+ * - EDB International Schools List
+ * - School group canonical lists (ESF, etc.)
+ *
+ * RULES:
+ * - International school status is determined by:
+ *   1. Membership in an international school group (e.g., ESF)
+ *   2. Registration as international school with EDB
+ * - NOT by curriculum (IB/A-Level) or language
+ * - NOT by keyword matching
+ *
+ * NOTE: This module does NOT modify types/school.ts or data/schools.ts
  */
 
 import type { School } from "@/types/school";
+import { isEsfSchool, getSchoolGroup } from "@/constants/school-groups";
 
 /**
- * Official EDB international school name patterns
- * These are matched against school.nameEn (case-insensitive)
+ * Canonical list of non-ESF international schools
+ * Source: EDB international school registry
+ *
+ * These schools are registered with EDB as international schools
+ * and are NOT part of a school group (like ESF).
  */
-const INTERNATIONAL_SCHOOL_PATTERNS: string[] = [
-  // ESF (English Schools Foundation) - 22 schools
-  "ESF",
-  "BEACON HILL SCHOOL",
-  "BRADBURY SCHOOL",
-  "CLEARWATER BAY SCHOOL",
-  "GLENEALY SCHOOL",
-  "KENNEDY SCHOOL",
-  "PEAK SCHOOL",
-  "QUARRY BAY SCHOOL",
-  "SHA TIN JUNIOR SCHOOL",
-  "ISLAND SCHOOL",
-  "KING GEORGE V SCHOOL",
-  "SOUTH ISLAND SCHOOL",
-  "WEST ISLAND SCHOOL",
-  "RENAISSANCE COLLEGE",
-
-  // Major International Schools
+const NON_GROUP_INTERNATIONAL_SCHOOLS: string[] = [
+  // Major standalone international schools
   "AMERICAN INTERNATIONAL SCHOOL",
   "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
   "CANADIAN INTERNATIONAL SCHOOL",
@@ -59,7 +56,6 @@ const INTERNATIONAL_SCHOOL_PATTERNS: string[] = [
   "SHREWSBURY INTERNATIONAL SCHOOL",
   "SINGAPORE INTERNATIONAL SCHOOL",
   "STAMFORD AMERICAN SCHOOL HONG KONG",
-  "ST. STEPHEN'S COLLEGE INTERNATIONAL",
   "THE INDEPENDENT SCHOOLS FOUNDATION ACADEMY",
   "VICTORIA SHANGHAI ACADEMY",
   "WOODLAND PRE-SCHOOLS",
@@ -67,26 +63,62 @@ const INTERNATIONAL_SCHOOL_PATTERNS: string[] = [
 ];
 
 /**
- * Compiled regex patterns for efficient matching
+ * Normalize school name for matching
  */
-const internationalPatterns = INTERNATIONAL_SCHOOL_PATTERNS.map(
-  (pattern) => new RegExp(pattern.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i")
-);
+function normalizeForMatch(name: string): string {
+  return name
+    .toUpperCase()
+    .replace(/\s+/g, " ")
+    .replace(/^THE\s+/, "")
+    .trim();
+}
+
+/**
+ * Check if school matches a non-group international school
+ */
+function matchesNonGroupInternational(school: Pick<School, "nameEn">): boolean {
+  if (!school.nameEn) return false;
+
+  const normalizedName = normalizeForMatch(school.nameEn);
+
+  for (const pattern of NON_GROUP_INTERNATIONAL_SCHOOLS) {
+    const normalizedPattern = normalizeForMatch(pattern);
+    // Check if the school name contains the pattern
+    if (normalizedName.includes(normalizedPattern)) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 /**
  * Check if a school is an international school
+ *
+ * A school is international if:
+ * 1. It belongs to an international school group (e.g., ESF)
+ * 2. It is registered as a standalone international school with EDB
+ *
  * @param school - School object with nameEn
- * @returns true if school matches EDB international school list
+ * @returns true if school is an international school
  */
 export function isInternational(school: Pick<School, "nameEn">): boolean {
   if (!school.nameEn) return false;
-  const nameEn = school.nameEn.toUpperCase();
-  return internationalPatterns.some((pattern) => pattern.test(nameEn));
+
+  // Rule 1: Check school group membership
+  const group = getSchoolGroup(school);
+  if (group === "ESF") return true;
+
+  // Rule 2: Check non-group international schools
+  if (matchesNonGroupInternational(school)) return true;
+
+  return false;
 }
 
 /**
  * Get display type for a school
  * Returns "國際學校" for international schools, otherwise the original category
+ *
  * @param school - School object
  * @returns Display string for school type
  */
@@ -97,6 +129,6 @@ export function getSchoolDisplayType(
 }
 
 /**
- * Export patterns for debugging/statistics
+ * Export for testing/debugging
  */
-export const INTERNATIONAL_PATTERNS = INTERNATIONAL_SCHOOL_PATTERNS;
+export const INTERNATIONAL_SCHOOL_PATTERNS = NON_GROUP_INTERNATIONAL_SCHOOLS;
