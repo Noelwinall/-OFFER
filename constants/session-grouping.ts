@@ -68,14 +68,24 @@ export function getGroupKey(id: string): string | null {
 export interface GroupedSchool extends School {
   __sessions?: SessionType[];
   __variantIds?: string[];
+  /** 是否顯示 session 標籤（幼稚園=true, 小學=false） */
+  __showSessions?: boolean;
 }
 
 /** 分組條件函數類型 */
 export type GroupPredicate = (school: School) => boolean;
 
-/** 默認條件：僅對幼稚園啟用（寬鬆匹配） */
-export const defaultPredicate: GroupPredicate = (school) =>
+/** 檢查是否為幼稚園 */
+export const isKindergarten = (school: School): boolean =>
   String(school.level ?? "").includes("幼稚園");
+
+/** 檢查是否為小學 */
+export const isPrimary = (school: School): boolean =>
+  String(school.level ?? "").includes("小學");
+
+/** 默認條件：對幼稚園和小學啟用合併 */
+export const defaultPredicate: GroupPredicate = (school) =>
+  isKindergarten(school) || isPrimary(school);
 
 /**
  * 合併同校不同班別（通用函數）
@@ -186,10 +196,14 @@ function mergeVariants(variants: School[]): GroupedSchool {
     }
   }
 
+  // 幼稚園顯示標籤，小學不顯示
+  const showSessions = isKindergarten(representative);
+
   return {
     ...representative,
     __sessions: sessions.length > 0 ? sessions : undefined,
     __variantIds: variantIds.length > 1 ? variantIds : undefined,
+    __showSessions: showSessions,
   };
 }
 
@@ -233,9 +247,13 @@ function mergeGroupedSchools(schools: GroupedSchool[]): GroupedSchool {
     }
   }
 
+  // 幼稚園顯示標籤，小學不顯示
+  const showSessions = isKindergarten(representative);
+
   return {
     ...representative,
     __sessions: allSessions.length > 0 ? allSessions : undefined,
     __variantIds: allVariantIds.length > 1 ? allVariantIds : undefined,
+    __showSessions: showSessions,
   };
 }

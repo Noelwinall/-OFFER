@@ -16,6 +16,8 @@ interface SchoolCardProps {
   onFavoritePress?: () => void;
   /** 班別標籤（聚合後的 AM/PM/WD） */
   sessions?: SessionType[];
+  /** 是否顯示 session 標籤（幼稚園=true, 小學=false） */
+  showSessions?: boolean;
 }
 
 /**
@@ -29,6 +31,7 @@ export const SchoolCard = React.memo(function SchoolCard({
   onPress,
   onFavoritePress,
   sessions,
+  showSessions = true,
 }: SchoolCardProps) {
   const colors = useColors();
 
@@ -105,8 +108,8 @@ export const SchoolCard = React.memo(function SchoolCard({
         <View className="px-2 py-1 rounded bg-gray-600/30">
           <Text className="text-xs text-muted">{school.district}</Text>
         </View>
-        {/* 班別標籤（聚合後顯示中文：上午班/下午班/全天） */}
-        {sessions && sessions.length > 0 && sessions.map((session) => (
+        {/* 班別標籤（僅幼稚園顯示：上午班/下午班/全天；小學不顯示） */}
+        {showSessions && sessions && sessions.length > 0 && sessions.map((session) => (
           <View
             key={session}
             style={[styles.sessionTag, { backgroundColor: SESSION_COLORS[session] }]}
@@ -125,7 +128,8 @@ export const SchoolCard = React.memo(function SchoolCard({
 }, (prev, next) =>
   prev.school.id === next.school.id &&
   prev.isFavorite === next.isFavorite &&
-  JSON.stringify(prev.sessions) === JSON.stringify(next.sessions)
+  JSON.stringify(prev.sessions) === JSON.stringify(next.sessions) &&
+  prev.showSessions === next.showSessions
 );
 
 /**

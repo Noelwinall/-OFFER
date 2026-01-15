@@ -16,7 +16,7 @@ import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SCHOOL_TEXT } from "@/constants/school-text";
-import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
+import { groupSchoolsBySession, type GroupedSchool, isKindergarten, isPrimary } from "@/constants/session-grouping";
 
 // 快捷功能入口
 const QUICK_ACTIONS = [
@@ -67,12 +67,22 @@ export default function SearchScreen() {
     loadFavorites();
   }, []);
 
-  // 使用 useMemo 優化篩選邏輯 + 幼稚園合併
+  // 使用 useMemo 優化篩選邏輯 + 幼稚園/小學合併
   const displaySchools = useMemo(() => {
     const results = filterSchools(schools, debouncedSearch, filters);
     const sorted = sortSearchResults(results, debouncedSearch, filters);
-    // 合併幼稚園同校不同班別（AM/PM/WD）
-    return groupSchoolsBySession(sorted);
+    // 合併幼稚園/小學同校不同班別（AM/PM/WD）
+    const grouped = groupSchoolsBySession(sorted);
+
+    // [TEMP] 驗證合併效果 - 確認後刪除
+    const beforeKG = sorted.filter(isKindergarten).length;
+    const afterKG = grouped.filter(isKindergarten).length;
+    const beforePrimary = sorted.filter(isPrimary).length;
+    const afterPrimary = grouped.filter(isPrimary).length;
+    console.log(`[TEMP] 幼稚園: ${beforeKG} → ${afterKG} (減少 ${beforeKG - afterKG})`);
+    console.log(`[TEMP] 小學: ${beforePrimary} → ${afterPrimary} (減少 ${beforePrimary - afterPrimary})`);
+
+    return grouped;
   }, [debouncedSearch, filters]);
 
   /**
@@ -86,7 +96,7 @@ export default function SearchScreen() {
     return favorites.includes(item.id);
   }, [favorites]);
 
-  // Stable renderItem callback（支援幼稚園班別標籤）
+  // Stable renderItem callback（支援幼稚園班別標籤，小學不顯示）
   const renderSchoolItem = useCallback(({ item }: { item: GroupedSchool }) => (
     <SchoolCard
       school={item}
@@ -94,6 +104,7 @@ export default function SearchScreen() {
       onPress={() => handleSchoolPress(item.id)}
       onFavoritePress={() => handleFavoriteToggle(item.id)}
       sessions={item.__sessions}
+      showSessions={item.__showSessions}
     />
   ), [favorites, isSchoolFavorite]);
 

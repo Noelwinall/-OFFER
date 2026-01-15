@@ -5,7 +5,7 @@ import { SchoolCard } from "@/components/school-card";
 import { useRouter } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, FavoriteGroupsStorage, DEFAULT_GROUPS, type FavoriteGroup } from "@/lib/storage";
-import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
+import { groupSchoolsBySession, type GroupedSchool, isKindergarten, isPrimary } from "@/constants/session-grouping";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useFocusEffect } from "@react-navigation/native";
@@ -82,9 +82,19 @@ export default function FavoritesScreen() {
     filterSchoolsByGroup(favorites, groupId, schoolGroupMappings);
   };
 
-  // 合併幼稚園同校不同班別（AM/PM/WD）
+  // 合併幼稚園/小學同校不同班別（AM/PM/WD）
   const displayFavorites = useMemo(() => {
-    return groupSchoolsBySession(favoriteSchools);
+    const grouped = groupSchoolsBySession(favoriteSchools);
+
+    // [TEMP] 驗證合併效果 - 確認後刪除
+    const beforeKG = favoriteSchools.filter(isKindergarten).length;
+    const afterKG = grouped.filter(isKindergarten).length;
+    const beforePrimary = favoriteSchools.filter(isPrimary).length;
+    const afterPrimary = grouped.filter(isPrimary).length;
+    console.log(`[TEMP-FAV] 幼稚園: ${beforeKG} → ${afterKG} (減少 ${beforeKG - afterKG})`);
+    console.log(`[TEMP-FAV] 小學: ${beforePrimary} → ${afterPrimary} (減少 ${beforePrimary - afterPrimary})`);
+
+    return grouped;
   }, [favoriteSchools]);
 
   const handleFavoriteToggle = async (schoolId: string) => {
@@ -217,6 +227,7 @@ export default function FavoritesScreen() {
                 onPress={() => handleSchoolPress(item.id)}
                 onFavoritePress={() => handleFavoriteToggle(item.id)}
                 sessions={item.__sessions}
+                showSessions={item.__showSessions}
               />
               {/* 分組標籤 */}
               <TouchableOpacity
