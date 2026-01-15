@@ -1,5 +1,7 @@
 import type { School } from "@/types/school";
 import type { FilterState, SortOption } from "@/lib/filter-context";
+import { isInternational } from "@/lib/international-schools";
+import { expandSearchQuery } from "@/constants/search-aliases";
 
 /**
  * 檢查學校是否符合進階篩選條件
@@ -30,8 +32,21 @@ export function matchesAdvancedFilters(
   }
 
   // 學校類型篩選（多選，任一匹配即可）
+  // R3-8: "國際" 需用 isInternational() 判定，其他類型用 category 字段
   if (filters.category.length > 0) {
-    if (!filters.category.includes(school.category)) return false;
+    const matchesCategory = filters.category.some((cat) => {
+      if (cat === "國際") {
+        // 國際學校通過名稱模式判定，非 category 字段
+        return isInternational(school);
+      }
+      // 其他類型：直接比對 category 字段
+      // 注意：若選了"私立"但學校是國際學校，應排除（國際學校單獨一類）
+      if (cat === "私立" && isInternational(school)) {
+        return false;
+      }
+      return school.category === cat;
+    });
+    if (!matchesCategory) return false;
   }
 
   // 地區篩選（多選，任一匹配即可）
@@ -55,17 +70,32 @@ export function filterSchools(
   searchQuery: string,
   filters: FilterState
 ): School[] {
+  // R3-8 DEV DEBUG: 輸出各類別數量（可移除）
+  if (__DEV__) {
+    const intlCount = schools.filter(isInternational).length;
+    const privateCount = schools.filter(s => s.category === "私立" && !isInternational(s)).length;
+    const dssCount = schools.filter(s => s.category === "直資").length;
+    const aidedCount = schools.filter(s => s.category === "資助").length;
+    const govtCount = schools.filter(s => s.category === "公立").length;
+    console.log(`[R3-8 DEBUG] 學校類別統計: 國際=${intlCount}, 私立(非國際)=${privateCount}, 直資=${dssCount}, 資助=${aidedCount}, 公立=${govtCount}`);
+  }
+
   return schools
     .filter((school) => {
       // 文字搜尋（支援中英文名稱和關鍵字）
+      // R3-8: 支援 query alias expansion (ESF/英基 等)
       if (searchQuery.trim()) {
-        const query = searchQuery.toLowerCase();
-        const matchesSearch =
-          school.name.toLowerCase().includes(query) ||
-          school.nameEn.toLowerCase().includes(query) ||
-          school.searchKeywords.some(kw => kw.toLowerCase().includes(query)) ||
-          school.district.toLowerCase().includes(query) ||
-          school.category.toLowerCase().includes(query);
+        const expandedQueries = expandSearchQuery(searchQuery);
+        const matchesSearch = expandedQueries.some((q) => {
+          const query = q.toLowerCase();
+          return (
+            school.name.toLowerCase().includes(query) ||
+            school.nameEn.toLowerCase().includes(query) ||
+            school.searchKeywords.some(kw => kw.toLowerCase().includes(query)) ||
+            school.district.toLowerCase().includes(query) ||
+            school.category.toLowerCase().includes(query)
+          );
+        });
         if (!matchesSearch) return false;
       }
 

@@ -19,6 +19,19 @@ import {
 } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 
+/**
+ * R3-8: 獲取教學語言顯示值
+ * 國際/私校數據不可信（EDB 默認為"以中文為主"），顯示兜底文案
+ */
+function getLanguageDisplayValue(school: School): string {
+  // 國際學校或私立學校：語言數據不可信，顯示兜底
+  if (isInternational(school) || school.category === "私立") {
+    return SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE;
+  }
+  // 其他學校：顯示原始數據
+  return school.language || SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE;
+}
+
 export default function SchoolDetailScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -180,6 +193,12 @@ export default function SchoolDetailScreen() {
               <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
               <InfoRow label={SCHOOL_TEXT.LABEL_CATEGORY} value={isInternational(school) ? "國際" : school.category} />
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
+              {/* R3-8: 教學語言顯示（國際/私校顯示兜底文案） */}
+              <InfoRow
+                label={SCHOOL_TEXT.LABEL_LANGUAGE}
+                value={getLanguageDisplayValue(school)}
+                isPending={isInternational(school) || school.category === "私立"}
+              />
               {/* 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示 */}
               {school.category === "直資" && (
                 <InfoRow
