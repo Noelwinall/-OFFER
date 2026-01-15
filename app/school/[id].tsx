@@ -125,6 +125,36 @@ export default function SchoolDetailScreen() {
     }
   };
 
+  /**
+   * 處理申請連結點擊
+   * 優先跳轉申請頁，否則跳轉官網首頁
+   */
+  const handleApplicationLink = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    const url = school?.applicationLink || school?.website;
+    if (url) {
+      Linking.openURL(url);
+    }
+  };
+
+  /**
+   * 獲取申請按鈕狀態
+   * - 有 applicationLink：正常跳轉，無提示
+   * - 僅有 website：跳官網，顯示「（學校官網首頁）」
+   * - 都沒有：按鈕置灰，顯示「（暫無連結）」
+   */
+  const getApplicationButtonState = () => {
+    if (school?.applicationLink) {
+      return { disabled: false, hint: null };
+    }
+    if (school?.website) {
+      return { disabled: false, hint: "（學校官網首頁）" };
+    }
+    return { disabled: true, hint: "（暫無連結）" };
+  };
+
   if (!school) {
     return (
       <View style={{ flex: 1 }}>
@@ -282,16 +312,34 @@ export default function SchoolDetailScreen() {
               {isInCompare ? "從對比中移除" : "加入對比"}
             </Text>
           </TouchableOpacity>
-          {school.website && (
+          <View style={styles.applyButtonContainer}>
             <TouchableOpacity
-              onPress={handleOpenWebsite}
-              style={styles.applyButton}
+              onPress={handleApplicationLink}
+              style={[
+                styles.applyButton,
+                getApplicationButtonState().disabled && styles.applyButtonDisabled
+              ]}
               activeOpacity={0.8}
+              disabled={getApplicationButtonState().disabled}
             >
-              <IconSymbol name="safari" size={18} color="#FFFFFF" />
-              <Text style={styles.applyButtonText}>前往官網</Text>
+              <IconSymbol
+                name="safari"
+                size={18}
+                color={getApplicationButtonState().disabled ? "#8E8E93" : "#FFFFFF"}
+              />
+              <Text style={[
+                styles.applyButtonText,
+                getApplicationButtonState().disabled && styles.applyButtonTextDisabled
+              ]}>
+                申請連結
+              </Text>
             </TouchableOpacity>
-          )}
+            {getApplicationButtonState().hint && (
+              <Text style={styles.applyButtonHint}>
+                {getApplicationButtonState().hint}
+              </Text>
+            )}
+          </View>
         </View>
       </View>
     </View>
@@ -689,6 +737,24 @@ const styles = StyleSheet.create({
     color: "#0F1629",
     fontFamily: "NotoSerifSC-Regular",
     letterSpacing: 1,
+  },
+  applyButtonContainer: {
+    flex: 1,
+    alignItems: "center",
+  },
+  applyButtonDisabled: {
+    backgroundColor: "rgba(142, 142, 147, 0.3)",
+    shadowOpacity: 0,
+    elevation: 0,
+  },
+  applyButtonTextDisabled: {
+    color: "#8E8E93",
+  },
+  applyButtonHint: {
+    fontSize: 12,
+    color: "#8E8E93",
+    fontFamily: "NotoSerifSC-Regular",
+    marginTop: 6,
   },
   emptyText: {
     color: "rgba(255,255,255,0.5)",
