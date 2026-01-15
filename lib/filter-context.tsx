@@ -41,15 +41,18 @@ const initialState: FilterState = {
 
 function filterReducer(state: FilterState, action: FilterAction): FilterState {
   switch (action.type) {
-    case "SET_STAGE":
+    case "SET_STAGE": {
+      // Toggle stage: click same stage again to deselect
+      const newStage = state.stage === action.payload ? null : action.payload;
       return {
         ...state,
-        stage: state.stage === action.payload ? null : action.payload,
-        // Clear KG-specific categories when switching away from 幼稚園
-        category: action.payload !== "幼稚園"
+        stage: newStage,
+        // Clear KG-specific categories when NOT in 幼稚園 (including when toggling off)
+        category: newStage !== "幼稚園"
           ? state.category.filter((c) => c !== "私立幼稚園" && c !== "非牟利幼稚園")
           : state.category,
       };
+    }
 
     case "CLEAR_STAGE":
       return {

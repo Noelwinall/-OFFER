@@ -12,7 +12,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useFilter } from "@/lib/filter-context";
 import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18, type Level } from "@/types/school";
-import { KG_CATEGORY_PRIVATE, KG_CATEGORY_NONPROFIT, type ExtendedCategory } from "@/constants/kg-nature";
+import { NON_KG_CATEGORY_OPTIONS, KG_CATEGORY_OPTIONS } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
 
 interface FilterSheetProps {
@@ -27,19 +27,9 @@ const STAGE_OPTIONS: { label: string; value: Level }[] = [
   { label: "中學", value: "中學" },
 ];
 
-// 2. School Type options (base + KG-specific)
-const BASE_CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
-  { label: "國際學校", value: "國際" },
-  { label: "私立學校", value: "私立" },
-  { label: "直資學校", value: "直資" },
-  { label: "資助學校", value: "資助" },
-  { label: "公立學校", value: "公立" },
-];
-
-const KG_CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
-  { label: "私立幼稚園", value: KG_CATEGORY_PRIVATE },
-  { label: "非牟利幼稚園", value: KG_CATEGORY_NONPROFIT },
-];
+// 2. School Type options - imported from @/constants/kg-nature
+// NON_KG_CATEGORY_OPTIONS: 國際/私立/直資/資助/公立 (for 小學/中學)
+// KG_CATEGORY_OPTIONS: 國際/私立幼稚園/非牟利幼稚園 (for 幼稚園 only)
 
 // 3. District options
 const DISTRICT_OPTIONS: { label: string; value: District }[] = [
@@ -86,13 +76,13 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
   };
 
   // Get category options based on selected stage
+  // Stage=幼稚園: 國際/私立幼稚園/非牟利幼稚園 (3 options only)
+  // Stage=小學/中學 or no stage: 國際/私立/直資/資助/公立 (5 options)
   const getCategoryOptions = () => {
     if (state.stage === "幼稚園") {
-      // Show base categories + KG-specific categories for kindergarten
-      return [...BASE_CATEGORY_OPTIONS, ...KG_CATEGORY_OPTIONS];
+      return KG_CATEGORY_OPTIONS;
     }
-    // For primary/secondary or no stage selected, show only base categories
-    return BASE_CATEGORY_OPTIONS;
+    return NON_KG_CATEGORY_OPTIONS;
   };
 
   // 計算活躍篩選數量
@@ -189,11 +179,6 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                     );
                   })}
                 </View>
-                {state.stage === "幼稚園" && (
-                  <Text style={styles.hintText}>
-                    私立幼稚園/非牟利幼稚園僅篩選非國際幼稚園
-                  </Text>
-                )}
               </View>
 
               {/* 3. 地區 (District/Region) */}

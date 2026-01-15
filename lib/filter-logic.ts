@@ -86,16 +86,6 @@ export function filterSchools(
   searchQuery: string,
   filters: FilterState
 ): School[] {
-  // R3-8 DEV DEBUG: 輸出各類別數量（可移除）
-  if (__DEV__) {
-    const intlCount = schools.filter(isInternational).length;
-    const privateCount = schools.filter(s => s.category === "私立" && !isInternational(s)).length;
-    const dssCount = schools.filter(s => s.category === "直資").length;
-    const aidedCount = schools.filter(s => s.category === "資助").length;
-    const govtCount = schools.filter(s => s.category === "公立").length;
-    console.log(`[R3-8 DEBUG] 學校類別統計: 國際=${intlCount}, 私立(非國際)=${privateCount}, 直資=${dssCount}, 資助=${aidedCount}, 公立=${govtCount}`);
-  }
-
   return schools
     .filter((school) => {
       // 文字搜尋（支援中英文名稱和關鍵字）

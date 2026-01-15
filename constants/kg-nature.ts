@@ -35,6 +35,27 @@ export const KG_NATURE_LABELS: Record<KGNature, string> = {
 export const KG_CATEGORY_PRIVATE = "私立幼稚園" as const;
 export const KG_CATEGORY_NONPROFIT = "非牟利幼稚園" as const;
 
+/**
+ * Category options for filter UI
+ * Centralized definition - UI components should import from here
+ */
+
+/** Category options for primary/secondary schools (non-KG) */
+export const NON_KG_CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
+  { label: "國際學校", value: "國際" },
+  { label: "私立學校", value: "私立" },
+  { label: "直資學校", value: "直資" },
+  { label: "資助學校", value: "資助" },
+  { label: "公立學校", value: "公立" },
+];
+
+/** Category options ONLY for kindergartens (Stage=幼稚園) */
+export const KG_CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
+  { label: "國際學校", value: "國際" },
+  { label: "私立幼稚園", value: KG_CATEGORY_PRIVATE },
+  { label: "非牟利幼稚園", value: KG_CATEGORY_NONPROFIT },
+];
+
 /** Display colors for nature badges */
 export const KG_NATURE_COLORS: Record<KGNature, string> = {
   international: "#00D9FF", // Cyan - matches existing international color
