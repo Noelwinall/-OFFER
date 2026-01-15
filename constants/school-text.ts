@@ -94,6 +94,9 @@ export const SCHOOL_TEXT = {
   // 来源等级标签
   EVIDENCE_SCHOOL_SITE: "學校官網",
   EVIDENCE_DOCUMENT_PDF: "官方 PDF",
+
+  // 国际学校无费用数据时的兜底文案
+  REFER_TO_SCHOOL_WEBSITE: "參考學校官網",
 } as const;
 
 /**

@@ -293,9 +293,22 @@ function InfoRow({ label, value, isLink = false, isPending = false }: { label: s
  * R3-5/R3-7: 費用區塊組件（國際/私校）
  * 閱讀順序：總體學費 → 學費明細 → 強制性費用（如有） → 小字說明 → 小字來源
  *
- * TODO R3-7.3: Scholarship / Sibling Discount 預留位置（暫不渲染）
+ * R3-8: 無費用數據時顯示「參考學校官網」
  */
 function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
+  // 判斷是否有有效費用數據
+  const hasValidFees = fees && fees.tuition && fees.tuition.bands && fees.tuition.bands.length > 0;
+
+  // 無費用數據時的兜底處理：顯示「參考學校官網」
+  if (!hasValidFees) {
+    return (
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_TUITION}</Text>
+        <Text style={feeStyles.fallbackText}>{SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE}</Text>
+      </View>
+    );
+  }
+
   const tuitionBands = formatTuitionBands(fees?.tuition.bands);
   const mandatoryCharges = formatMandatoryCharges(fees?.mandatoryCharges);
   const hasSource = fees?.sourceNotes && fees.sourceNotes.length > 0;
@@ -467,6 +480,12 @@ const feeStyles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 10,
     marginTop: 8,
+  },
+  fallbackText: {
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 14,
+    fontStyle: "italic",
   },
 });
 

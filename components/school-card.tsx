@@ -3,7 +3,7 @@ import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColors } from "@/hooks/use-colors";
 import { isInternational } from "@/lib/international-schools";
-import { formatTuitionDisplay, formatOverallTuition } from "@/constants/school-text";
+import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
@@ -140,6 +140,7 @@ function getDisplayTypeColor(school: School): string {
  * 獲取學費顯示文字
  * R3-4: 直資學校顯示 DSS 學費
  * R3-5: 國際/私校顯示總體學費（若有數據）
+ * R3-8: 國際/私校無數據時顯示「參考學校官網」
  */
 function getTuitionDisplayText(school: School): string {
   // 直資學校：使用原有 DSS 邏輯
@@ -150,6 +151,10 @@ function getTuitionDisplayText(school: School): string {
   // 國際/私校：嘗試使用 R3-5 費用結構
   if (isInternational(school) || school.category === "私立") {
     const fees = getSchoolFees(school.id);
+    // 無有效費用數據時顯示兜底文案
+    if (!hasValidFeesData(fees)) {
+      return SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE;
+    }
     return formatOverallTuition(fees);
   }
 
