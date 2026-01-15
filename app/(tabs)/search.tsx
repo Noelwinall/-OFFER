@@ -16,6 +16,7 @@ import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SCHOOL_TEXT } from "@/constants/school-text";
+import { groupKindergartenVariants, type GroupedSchool } from "@/constants/kg-session";
 
 // 快捷功能入口
 const QUICK_ACTIONS = [
@@ -66,21 +67,35 @@ export default function SearchScreen() {
     loadFavorites();
   }, []);
 
-  // 使用 useMemo 優化篩選邏輯
-  const filteredSchools = useMemo(() => {
+  // 使用 useMemo 優化篩選邏輯 + 幼稚園合併
+  const displaySchools = useMemo(() => {
     const results = filterSchools(schools, debouncedSearch, filters);
-    return sortSearchResults(results, debouncedSearch, filters);
+    const sorted = sortSearchResults(results, debouncedSearch, filters);
+    // 合併幼稚園同校不同班別（AM/PM/WD）
+    return groupKindergartenVariants(sorted);
   }, [debouncedSearch, filters]);
 
-  // Stable renderItem callback
-  const renderSchoolItem = useCallback(({ item }: { item: School }) => (
+  /**
+   * 檢查合併後的學校是否被收藏
+   * 對於合併的幼稚園，檢查任一變體是否在收藏列表中
+   */
+  const isSchoolFavorite = useCallback((item: GroupedSchool): boolean => {
+    if (item.__variantIds && item.__variantIds.length > 0) {
+      return item.__variantIds.some((id) => favorites.includes(id));
+    }
+    return favorites.includes(item.id);
+  }, [favorites]);
+
+  // Stable renderItem callback（支援幼稚園班別標籤）
+  const renderSchoolItem = useCallback(({ item }: { item: GroupedSchool }) => (
     <SchoolCard
       school={item}
-      isFavorite={favorites.includes(item.id)}
+      isFavorite={isSchoolFavorite(item)}
       onPress={() => handleSchoolPress(item.id)}
       onFavoritePress={() => handleFavoriteToggle(item.id)}
+      kgSessions={item.__kgSessions}
     />
-  ), [favorites]);
+  ), [favorites, isSchoolFavorite]);
 
   const loadFavorites = async () => {
     const favs = await FavoritesStorage.getAll();
@@ -183,7 +198,7 @@ export default function SearchScreen() {
         {/* 結果統計與排序 */}
         <View style={styles.resultStats}>
           <Text style={styles.resultText}>
-            找到 {filteredSchools.length} 所學校
+            找到 {displaySchools.length} 所學校
           </Text>
           <SortSelector />
         </View>
@@ -193,7 +208,7 @@ export default function SearchScreen() {
 
         {/* 學校列表 */}
         <FlatList
-          data={filteredSchools}
+          data={displaySchools}
           keyExtractor={(item) => item.id}
           renderItem={renderSchoolItem}
           contentContainerStyle={{ paddingVertical: 8, paddingBottom: 100 }}

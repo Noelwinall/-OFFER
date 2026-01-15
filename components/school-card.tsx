@@ -6,6 +6,7 @@ import { isInternational } from "@/lib/international-schools";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 import type { School } from "@/types/school";
+import type { KgSession } from "@/constants/kg-session";
 import * as Haptics from "expo-haptics";
 
 interface SchoolCardProps {
@@ -13,7 +14,16 @@ interface SchoolCardProps {
   isFavorite?: boolean;
   onPress?: () => void;
   onFavoritePress?: () => void;
+  /** 幼稚園班別標籤（AM/PM/WD） */
+  kgSessions?: KgSession[];
 }
+
+/** 班別標籤顏色（鮮艷高飽和） */
+const KG_SESSION_COLORS: Record<KgSession, string> = {
+  AM: "#8B5CF6",   // 紫色 - 上午班
+  PM: "#3B82F6",   // 藍色 - 下午班
+  WD: "#10B981",   // 綠色 - 全日班
+};
 
 /**
  * 統一學校卡片組件
@@ -25,6 +35,7 @@ export const SchoolCard = React.memo(function SchoolCard({
   isFavorite = false,
   onPress,
   onFavoritePress,
+  kgSessions,
 }: SchoolCardProps) {
   const colors = useColors();
 
@@ -101,6 +112,15 @@ export const SchoolCard = React.memo(function SchoolCard({
         <View className="px-2 py-1 rounded bg-gray-600/30">
           <Text className="text-xs text-muted">{school.district}</Text>
         </View>
+        {/* 幼稚園班別標籤（AM/PM/WD） */}
+        {kgSessions && kgSessions.length > 0 && kgSessions.map((session) => (
+          <View
+            key={session}
+            style={[styles.kgSessionTag, { backgroundColor: KG_SESSION_COLORS[session] }]}
+          >
+            <Text style={styles.kgSessionText}>{session}</Text>
+          </View>
+        ))}
       </View>
 
       {/* 學費資訊 - R3-4 (DSS) + R3-5 (國際/私校) */}
@@ -111,7 +131,8 @@ export const SchoolCard = React.memo(function SchoolCard({
   );
 }, (prev, next) =>
   prev.school.id === next.school.id &&
-  prev.isFavorite === next.isFavorite
+  prev.isFavorite === next.isFavorite &&
+  JSON.stringify(prev.kgSessions) === JSON.stringify(next.kgSessions)
 );
 
 /**
@@ -177,5 +198,16 @@ const styles = StyleSheet.create({
   },
   cardPressed: {
     opacity: 0.85,
+  },
+  kgSessionTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  kgSessionText: {
+    fontSize: 11,
+    fontWeight: "700",
+    color: "#FFFFFF",
+    letterSpacing: 0.5,
   },
 });
