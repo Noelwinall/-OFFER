@@ -86,6 +86,8 @@ export const defaultPredicate: GroupPredicate = (school) =>
  *
  * 合併規則：
  * - 僅對符合 predicate 的學校執行合併
+ * - 第一步：按 ID 前 10 位（school_no + location_no）分組
+ * - 第二步：再按名稱合併不同 location 的同名學校
  * - 代表項優先級：WD > AM > PM > 第一條
  * - 在代表項上附加 __sessions 和 __variantIds
  */
@@ -117,45 +119,123 @@ export function groupSchoolsBySession(
     groups.get(groupKey)!.push(school);
   }
 
-  // 處理分組
+  // 第一步：處理 ID 分組
+  const firstPassResults: GroupedSchool[] = [];
   for (const [, variants] of groups) {
-    // 收集 sessions
-    const sessions: SessionType[] = [];
-    const variantIds: string[] = [];
+    const grouped = mergeVariants(variants);
+    firstPassResults.push(grouped);
+  }
 
-    for (const v of variants) {
-      const session = getSessionFromId(v.id);
-      if (session && !sessions.includes(session)) {
-        sessions.push(session);
-      }
-      variantIds.push(v.id);
+  // 第二步：按名稱合併不同 location 的同名幼稚園
+  const nameGroups = new Map<string, GroupedSchool[]>();
+  for (const school of firstPassResults) {
+    // 只對幼稚園做名稱合併
+    if (!predicate(school)) {
+      result.push(school);
+      continue;
     }
-
-    // 排序 sessions：AM, PM, WD
-    sessions.sort((a, b) => {
-      const order = { AM: 0, PM: 1, WD: 2 };
-      return order[a] - order[b];
-    });
-
-    // 選代表項：WD > AM > PM > 第一條
-    let representative: School = variants[0];
-    for (const priority of ["WD", "AM", "PM"] as SessionType[]) {
-      const found = variants.find((v) => getSessionFromId(v.id) === priority);
-      if (found) {
-        representative = found;
-        break;
-      }
+    const nameKey = school.name;
+    if (!nameGroups.has(nameKey)) {
+      nameGroups.set(nameKey, []);
     }
+    nameGroups.get(nameKey)!.push(school);
+  }
 
-    // 構建合併結果
-    const grouped: GroupedSchool = {
-      ...representative,
-      __sessions: sessions.length > 0 ? sessions : undefined,
-      __variantIds: variantIds.length > 1 ? variantIds : undefined,
-    };
-
-    result.push(grouped);
+  // 合併同名學校
+  for (const [, sameNameSchools] of nameGroups) {
+    if (sameNameSchools.length === 1) {
+      result.push(sameNameSchools[0]);
+    } else {
+      // 合併多個同名學校
+      const merged = mergeGroupedSchools(sameNameSchools);
+      result.push(merged);
+    }
   }
 
   return result;
+}
+
+/**
+ * 合併多個變體為一個 GroupedSchool
+ */
+function mergeVariants(variants: School[]): GroupedSchool {
+  const sessions: SessionType[] = [];
+  const variantIds: string[] = [];
+
+  for (const v of variants) {
+    const session = getSessionFromId(v.id);
+    if (session && !sessions.includes(session)) {
+      sessions.push(session);
+    }
+    variantIds.push(v.id);
+  }
+
+  // 排序 sessions：AM, PM, WD
+  sessions.sort((a, b) => {
+    const order = { AM: 0, PM: 1, WD: 2 };
+    return order[a] - order[b];
+  });
+
+  // 選代表項：WD > AM > PM > 第一條
+  let representative: School = variants[0];
+  for (const priority of ["WD", "AM", "PM"] as SessionType[]) {
+    const found = variants.find((v) => getSessionFromId(v.id) === priority);
+    if (found) {
+      representative = found;
+      break;
+    }
+  }
+
+  return {
+    ...representative,
+    __sessions: sessions.length > 0 ? sessions : undefined,
+    __variantIds: variantIds.length > 1 ? variantIds : undefined,
+  };
+}
+
+/**
+ * 合併多個已分組的 GroupedSchool（用於同名學校合併）
+ */
+function mergeGroupedSchools(schools: GroupedSchool[]): GroupedSchool {
+  const allSessions: SessionType[] = [];
+  const allVariantIds: string[] = [];
+
+  for (const school of schools) {
+    // 收集所有 sessions
+    if (school.__sessions) {
+      for (const s of school.__sessions) {
+        if (!allSessions.includes(s)) {
+          allSessions.push(s);
+        }
+      }
+    }
+    // 收集所有 variant IDs
+    if (school.__variantIds) {
+      allVariantIds.push(...school.__variantIds);
+    } else {
+      allVariantIds.push(school.id);
+    }
+  }
+
+  // 排序 sessions
+  allSessions.sort((a, b) => {
+    const order = { AM: 0, PM: 1, WD: 2 };
+    return order[a] - order[b];
+  });
+
+  // 選擇代表項：優先選有 WD 的，其次 AM，其次 PM
+  let representative = schools[0];
+  for (const priority of ["WD", "AM", "PM"] as SessionType[]) {
+    const found = schools.find((s) => s.__sessions?.includes(priority));
+    if (found) {
+      representative = found;
+      break;
+    }
+  }
+
+  return {
+    ...representative,
+    __sessions: allSessions.length > 0 ? allSessions : undefined,
+    __variantIds: allVariantIds.length > 1 ? allVariantIds : undefined,
+  };
 }
