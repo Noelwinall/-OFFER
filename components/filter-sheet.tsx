@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   View,
   Text,
@@ -12,7 +11,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useFilter } from "@/lib/filter-context";
-import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18 } from "@/types/school";
+import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18, type Level } from "@/types/school";
 import { KG_CATEGORY_PRIVATE, KG_CATEGORY_NONPROFIT, type ExtendedCategory } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
 
@@ -21,15 +20,35 @@ interface FilterSheetProps {
   onClose: () => void;
 }
 
-const TUITION_PRESETS = [
-  { label: "免費", min: 0, max: 0 },
-  { label: "$5萬以下", min: 0, max: 50000 },
-  { label: "$5-10萬", min: 50000, max: 100000 },
-  { label: "$10-15萬", min: 100000, max: 150000 },
-  { label: "$15-20萬", min: 150000, max: 200000 },
-  { label: "$20萬以上", min: 200000, max: 500000 },
+// 1. Stage (階段) options
+const STAGE_OPTIONS: { label: string; value: Level }[] = [
+  { label: "幼稚園", value: "幼稚園" },
+  { label: "小學", value: "小學" },
+  { label: "中學", value: "中學" },
 ];
 
+// 2. School Type options (base + KG-specific)
+const BASE_CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
+  { label: "國際學校", value: "國際" },
+  { label: "私立學校", value: "私立" },
+  { label: "直資學校", value: "直資" },
+  { label: "資助學校", value: "資助" },
+  { label: "公立學校", value: "公立" },
+];
+
+const KG_CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
+  { label: "私立幼稚園", value: KG_CATEGORY_PRIVATE },
+  { label: "非牟利幼稚園", value: KG_CATEGORY_NONPROFIT },
+];
+
+// 3. District options
+const DISTRICT_OPTIONS: { label: string; value: District }[] = [
+  { label: "港島區", value: "港島" },
+  { label: "九龍區", value: "九龍" },
+  { label: "新界區", value: "新界" },
+];
+
+// 4. Curriculum options
 const CURRICULUM_OPTIONS = [
   { label: "IB 課程", value: "IB" as const },
   { label: "DSE 課程", value: "DSE" as const },
@@ -40,42 +59,15 @@ const CURRICULUM_OPTIONS = [
   { label: "英式課程", value: "英式課程" as const },
 ];
 
+// 5. Teaching Language options
 const LANGUAGE_OPTIONS = [
   { label: "全英文", value: "全英文" as const },
   { label: "中英雙語", value: "中英雙語" as const },
   { label: "以中文為主", value: "以中文為主" as const },
 ];
 
-// Category options with KG-specific categories
-const CATEGORY_OPTIONS: { label: string; value: ExtendedCategory }[] = [
-  { label: "國際學校", value: "國際" },
-  { label: "直資學校", value: "直資" },
-  { label: "私立學校", value: "私立" },
-  { label: "資助學校", value: "資助" },
-  { label: "公立學校", value: "公立" },
-  // KG-specific categories
-  { label: "私立幼稚園", value: KG_CATEGORY_PRIVATE },
-  { label: "非牟利幼稚園", value: KG_CATEGORY_NONPROFIT },
-];
-
-const DISTRICT_OPTIONS = [
-  { label: "港島區", value: "港島" as const },
-  { label: "九龍區", value: "九龍" as const },
-  { label: "新界區", value: "新界" as const },
-];
-
 export function FilterSheet({ visible, onClose }: FilterSheetProps) {
   const { state, dispatch } = useFilter();
-  const [localTuition, setLocalTuition] = useState<{ min: number; max: number } | null>(
-    state.tuitionRange
-  );
-
-  // 同步外部狀態
-  useEffect(() => {
-    if (visible) {
-      setLocalTuition(state.tuitionRange);
-    }
-  }, [visible, state.tuitionRange]);
 
   const triggerHaptic = () => {
     if (Platform.OS !== "web") {
@@ -85,42 +77,33 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
 
   const handleApplyFilters = () => {
     triggerHaptic();
-    if (localTuition) {
-      dispatch({ type: "SET_TUITION_RANGE", payload: localTuition });
-    } else {
-      dispatch({ type: "CLEAR_TUITION_RANGE" });
-    }
     onClose();
   };
 
   const handleResetFilters = () => {
     triggerHaptic();
     dispatch({ type: "RESET_FILTERS" });
-    setLocalTuition(null);
   };
 
-  const handleTuitionSelect = (min: number, max: number) => {
-    triggerHaptic();
-    if (localTuition?.min === min && localTuition?.max === max) {
-      setLocalTuition(null);
-    } else {
-      setLocalTuition({ min, max });
+  // Get category options based on selected stage
+  const getCategoryOptions = () => {
+    if (state.stage === "幼稚園") {
+      // Show base categories + KG-specific categories for kindergarten
+      return [...BASE_CATEGORY_OPTIONS, ...KG_CATEGORY_OPTIONS];
     }
-  };
-
-  const isTuitionSelected = (min: number, max: number) => {
-    return localTuition?.min === min && localTuition?.max === max;
+    // For primary/secondary or no stage selected, show only base categories
+    return BASE_CATEGORY_OPTIONS;
   };
 
   // 計算活躍篩選數量
   const getActiveCount = () => {
     let count = 0;
-    if (localTuition) count++;
-    if (state.curriculum.length > 0) count++;
-    if (state.language) count++;
+    if (state.stage) count++;
     if (state.category.length > 0) count++;
     if (state.district.length > 0) count++;
     if (state.district18.length > 0) count++;
+    if (state.curriculum.length > 0) count++;
+    if (state.language) count++;
     return count;
   };
 
@@ -160,37 +143,35 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
               scrollEventThrottle={16}
               keyboardShouldPersistTaps="handled"
             >
-              {/* 學費範圍 */}
+              {/* 1. 階段 (Stage) */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>💰 學費範圍（每年）</Text>
+                <Text style={styles.sectionTitle}>📚 階段</Text>
                 <View style={styles.chipContainer}>
-                  {TUITION_PRESETS.map((preset) => (
-                    <TouchableOpacity
-                      key={preset.label}
-                      style={[
-                        styles.chip,
-                        isTuitionSelected(preset.min, preset.max) && styles.chipSelected,
-                      ]}
-                      onPress={() => handleTuitionSelect(preset.min, preset.max)}
-                    >
-                      <Text
-                        style={[
-                          styles.chipText,
-                          isTuitionSelected(preset.min, preset.max) && styles.chipTextSelected,
-                        ]}
+                  {STAGE_OPTIONS.map((option) => {
+                    const isSelected = state.stage === option.value;
+                    return (
+                      <TouchableOpacity
+                        key={option.value}
+                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        onPress={() => {
+                          triggerHaptic();
+                          dispatch({ type: "SET_STAGE", payload: option.value });
+                        }}
                       >
-                        {preset.label}
-                      </Text>
-                    </TouchableOpacity>
-                  ))}
+                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                          {option.label}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
                 </View>
               </View>
 
-              {/* 學校類型 */}
+              {/* 2. 學校類型 (School Type) */}
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>🏫 學校類型</Text>
                 <View style={styles.chipContainer}>
-                  {CATEGORY_OPTIONS.map((option) => {
+                  {getCategoryOptions().map((option) => {
                     const isSelected = state.category.includes(option.value);
                     return (
                       <TouchableOpacity
@@ -208,9 +189,14 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                     );
                   })}
                 </View>
+                {state.stage === "幼稚園" && (
+                  <Text style={styles.hintText}>
+                    私立幼稚園/非牟利幼稚園僅篩選非國際幼稚園
+                  </Text>
+                )}
               </View>
 
-              {/* 地區（兩層篩選） */}
+              {/* 3. 地區 (District/Region) */}
               <View style={styles.section}>
                 <View style={styles.sectionHeader}>
                   <Text style={[styles.sectionTitle, { marginBottom: 0 }]}>📍 地區</Text>
@@ -218,7 +204,6 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                     <TouchableOpacity
                       onPress={() => {
                         triggerHaptic();
-                        // 只清除地區相關的篩選
                         dispatch({ type: "CLEAR_DISTRICT18" });
                         state.district.forEach(d => dispatch({ type: "TOGGLE_DISTRICT", payload: d }));
                       }}
@@ -228,7 +213,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                   )}
                 </View>
 
-                {/* 第一層：三大區 */}
+                {/* 三大區 */}
                 <Text style={styles.subsectionTitle}>選擇大區</Text>
                 <View style={styles.chipContainer}>
                   {DISTRICT_OPTIONS.map((option) => {
@@ -250,7 +235,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                   })}
                 </View>
 
-                {/* 第二層：18區（始終顯示，不依賴三大區選擇） */}
+                {/* 18區 */}
                 <View style={{ marginTop: 20 }}>
                   <View style={styles.sectionHeader}>
                     <Text style={styles.subsectionTitle}>
@@ -268,7 +253,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                     )}
                   </View>
 
-                  {/* 港島區 - 4區 */}
+                  {/* 港島區 */}
                   <View style={styles.district18Group}>
                     <Text style={styles.district18GroupLabel}>港島區</Text>
                     <View style={styles.chipContainer}>
@@ -296,7 +281,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                     </View>
                   </View>
 
-                  {/* 九龍區 - 5區 */}
+                  {/* 九龍區 */}
                   <View style={styles.district18Group}>
                     <Text style={styles.district18GroupLabel}>九龍區</Text>
                     <View style={styles.chipContainer}>
@@ -324,7 +309,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                     </View>
                   </View>
 
-                  {/* 新界區 - 9區 */}
+                  {/* 新界區 */}
                   <View style={styles.district18Group}>
                     <Text style={styles.district18GroupLabel}>新界區</Text>
                     <View style={styles.chipContainer}>
@@ -352,14 +337,13 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                     </View>
                   </View>
 
-                  {/* 提示文字 */}
                   <Text style={styles.hintText}>
                     可直接選擇任意分區（多選），系統自動推斷所屬大區
                   </Text>
                 </View>
               </View>
 
-              {/* 課程體系 */}
+              {/* 4. 課程體系 (Curriculum) */}
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>🎓 課程體系</Text>
                 <View style={styles.chipContainer}>
@@ -383,7 +367,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
               </View>
 
-              {/* 教學語言 */}
+              {/* 5. 教學語言 (Teaching Language) */}
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>🌐 教學語言</Text>
                 <View style={styles.chipContainer}>
@@ -407,7 +391,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
               </View>
 
-              {/* 底部間距（為固定底部按鈕留空間） */}
+              {/* 底部間距 */}
               <View style={{ height: 140 }} />
             </ScrollView>
 

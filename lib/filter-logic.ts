@@ -16,12 +16,9 @@ export function matchesAdvancedFilters(
   school: School,
   filters: FilterState
 ): boolean {
-  // 學費篩選
-  if (filters.tuitionRange) {
-    const { min, max } = filters.tuitionRange;
-    const hasOverlap =
-      school.tuitionMin <= max && school.tuitionMax >= min;
-    if (!hasOverlap) return false;
+  // 階段篩選（單選）
+  if (filters.stage && school.level !== filters.stage) {
+    return false;
   }
 
   // 課程篩選（多選，任一匹配即可）
@@ -154,6 +151,11 @@ export function calculateSearchRelevance(
   // 關鍵字包含搜尋詞（中分）
   if (school.searchKeywords.some(kw => kw.toLowerCase().includes(searchQuery.toLowerCase()))) {
     score += 40;
+  }
+
+  // 階段匹配（加分）
+  if (filters.stage && school.level === filters.stage) {
+    score += 30;
   }
 
   // 地區匹配（加分）

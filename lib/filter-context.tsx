@@ -1,24 +1,24 @@
 import React, { createContext, useReducer, ReactNode } from "react";
 
-import type { Curriculum, Language, SchoolCategory, District, District18 } from "@/types/school";
+import type { Curriculum, Language, SchoolCategory, District, District18, Level } from "@/types/school";
 import type { ExtendedCategory } from "@/constants/kg-nature";
 
 // 排序選項類型
 export type SortOption = "relevance" | "tuition_low" | "tuition_high" | "name_asc" | "name_desc";
 
 export interface FilterState {
-  tuitionRange: { min: number; max: number } | null;
-  curriculum: Curriculum[];
-  language: Language | null;
+  stage: Level | null;  // 階段篩選：幼稚園/小學/中學
   category: ExtendedCategory[];  // Extended to include KG-specific categories
   district: District[];
   district18: District18[];  // 18區篩選
+  curriculum: Curriculum[];
+  language: Language | null;
   sortBy: SortOption;
 }
 
 export type FilterAction =
-  | { type: "SET_TUITION_RANGE"; payload: { min: number; max: number } }
-  | { type: "CLEAR_TUITION_RANGE" }
+  | { type: "SET_STAGE"; payload: Level }
+  | { type: "CLEAR_STAGE" }
   | { type: "TOGGLE_CURRICULUM"; payload: Curriculum }
   | { type: "SET_LANGUAGE"; payload: Language }
   | { type: "CLEAR_LANGUAGE" }
@@ -30,22 +30,34 @@ export type FilterAction =
   | { type: "RESET_FILTERS" };
 
 const initialState: FilterState = {
-  tuitionRange: null,
-  curriculum: [],
-  language: null,
+  stage: null,
   category: [],
   district: [],
   district18: [],
+  curriculum: [],
+  language: null,
   sortBy: "relevance",
 };
 
 function filterReducer(state: FilterState, action: FilterAction): FilterState {
   switch (action.type) {
-    case "SET_TUITION_RANGE":
-      return { ...state, tuitionRange: action.payload };
+    case "SET_STAGE":
+      return {
+        ...state,
+        stage: state.stage === action.payload ? null : action.payload,
+        // Clear KG-specific categories when switching away from 幼稚園
+        category: action.payload !== "幼稚園"
+          ? state.category.filter((c) => c !== "私立幼稚園" && c !== "非牟利幼稚園")
+          : state.category,
+      };
 
-    case "CLEAR_TUITION_RANGE":
-      return { ...state, tuitionRange: null };
+    case "CLEAR_STAGE":
+      return {
+        ...state,
+        stage: null,
+        // Clear KG-specific categories when clearing stage
+        category: state.category.filter((c) => c !== "私立幼稚園" && c !== "非牟利幼稚園"),
+      };
 
     case "TOGGLE_CURRICULUM": {
       const updated = state.curriculum.includes(action.payload)
@@ -130,12 +142,12 @@ export function useFilter() {
  */
 export function hasActiveFilters(state: FilterState): boolean {
   return (
-    state.tuitionRange !== null ||
-    state.curriculum.length > 0 ||
-    state.language !== null ||
+    state.stage !== null ||
     state.category.length > 0 ||
     state.district.length > 0 ||
-    state.district18.length > 0
+    state.district18.length > 0 ||
+    state.curriculum.length > 0 ||
+    state.language !== null
   );
 }
 
@@ -145,21 +157,8 @@ export function hasActiveFilters(state: FilterState): boolean {
 export function getFilterLabels(state: FilterState): string[] {
   const labels: string[] = [];
 
-  if (state.tuitionRange) {
-    const { min, max } = state.tuitionRange;
-    if (max === Infinity) {
-      labels.push(`學費: ${min.toLocaleString()} 以上`);
-    } else {
-      labels.push(`學費: ${min.toLocaleString()}-${max.toLocaleString()}`);
-    }
-  }
-
-  if (state.curriculum.length > 0) {
-    labels.push(`課程: ${state.curriculum.join(", ")}`);
-  }
-
-  if (state.language) {
-    labels.push(`語言: ${state.language}`);
+  if (state.stage) {
+    labels.push(`階段: ${state.stage}`);
   }
 
   if (state.category.length > 0) {
@@ -172,6 +171,14 @@ export function getFilterLabels(state: FilterState): string[] {
 
   if (state.district18.length > 0) {
     labels.push(`分區: ${state.district18.join(", ")}`);
+  }
+
+  if (state.curriculum.length > 0) {
+    labels.push(`課程: ${state.curriculum.join(", ")}`);
+  }
+
+  if (state.language) {
+    labels.push(`語言: ${state.language}`);
   }
 
   return labels;
