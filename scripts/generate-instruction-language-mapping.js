@@ -5,29 +5,26 @@
  * NO inference from school type/category/group/name/tuition.
  *
  * Sources:
- * - data/psp_2025_en.csv (Primary schools) -> medium_of_instruction column
- * - data/ssp_2025_2026_en.csv (Secondary schools) -> language_policy column
+ * - data/psp_2025_en.csv (Primary EN) -> medium_of_instruction
+ * - data/psp_2025_tc.csv (Primary TC) -> 教學語言
+ * - data/ssp_2025_2026_en.csv (Secondary EN) -> language_policy
+ * - data/ssp_2025_2026_tc.csv (Secondary TC) -> 全校語文政策
+ *
+ * Matching strategy:
+ * 1. Try English name + district match
+ * 2. Try Chinese name match from TC CSV
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const PRIMARY_CSV = path.join(__dirname, '..', 'data', 'psp_2025_en.csv');
-const SECONDARY_CSV = path.join(__dirname, '..', 'data', 'ssp_2025_2026_en.csv');
+const PRIMARY_EN_CSV = path.join(__dirname, '..', 'data', 'psp_2025_en.csv');
+const PRIMARY_TC_CSV = path.join(__dirname, '..', 'data', 'psp_2025_tc.csv');
+const SECONDARY_EN_CSV = path.join(__dirname, '..', 'data', 'ssp_2025_2026_en.csv');
+const SECONDARY_TC_CSV = path.join(__dirname, '..', 'data', 'ssp_2025_2026_tc.csv');
 const SCHOOLS_FILE = path.join(__dirname, '..', 'data', 'schools.ts');
 const OUTPUT_FILE = path.join(__dirname, '..', 'data', 'instruction_language_mapping_v1.csv');
 const NEEDS_REVIEW_FILE = path.join(__dirname, '..', 'data', 'instruction_language_needs_review_v1.csv');
-
-// Valid instruction language values
-const VALID_LANGUAGES = [
-  'ENGLISH',
-  'CANTONESE',
-  'PUTONGHUA',
-  'FRENCH',
-  'GERMAN',
-  'JAPANESE',
-  'KOREAN'
-];
 
 /**
  * Parse CSV with proper handling of quoted fields
@@ -52,9 +49,6 @@ function parseCSV(content) {
   return rows;
 }
 
-/**
- * Parse a single CSV line handling quoted fields
- */
 function parseCSVLine(line) {
   const result = [];
   let current = '';
@@ -83,9 +77,9 @@ function parseCSVLine(line) {
 }
 
 /**
- * Normalize school name for matching
+ * Normalize school name for matching (English)
  */
-function normalizeName(name) {
+function normalizeNameEn(name) {
   return name
     .toLowerCase()
     .replace(/['']/g, "'")
@@ -96,60 +90,66 @@ function normalizeName(name) {
 }
 
 /**
- * Parse medium_of_instruction from primary school CSV
- * Returns array of InstructionLanguage values
+ * Normalize Chinese name for matching
  */
-function parsePrimaryMOI(moi) {
-  if (!moi) return [];
+function normalizeNameCn(name) {
+  return name
+    .replace(/\s+/g, '')
+    .replace(/（/g, '(')
+    .replace(/）/g, ')')
+    .trim();
+}
 
+/**
+ * Parse medium_of_instruction from primary school CSV (English)
+ */
+function parsePrimaryMOI_EN(moi) {
+  if (!moi) return [];
   const languages = [];
   const moiLower = moi.toLowerCase();
 
-  // Check for English
-  if (moiLower.includes('english')) {
-    languages.push('ENGLISH');
-  }
-
-  // Check for Chinese/Cantonese
-  if (moiLower.includes('chinese') && !moiLower.includes('putonghua')) {
-    languages.push('CANTONESE');
-  }
-
-  // Check for Putonghua
+  if (moiLower.includes('english')) languages.push('ENGLISH');
   if (moiLower.includes('putonghua')) {
     languages.push('PUTONGHUA');
-    // If it says "Chinese(incl.: Putonghua)", also add Cantonese
-    if (moiLower.includes('chinese')) {
-      languages.push('CANTONESE');
-    }
-  }
-
-  // If only "Chinese" without more specific info, assume Cantonese
-  if (moiLower === 'chinese') {
-    return ['CANTONESE'];
+    if (moiLower.includes('chinese')) languages.push('CANTONESE');
+  } else if (moiLower.includes('chinese')) {
+    languages.push('CANTONESE');
   }
 
   return [...new Set(languages)];
 }
 
 /**
- * Parse language_policy from secondary school CSV
- * Returns array of InstructionLanguage values
+ * Parse 教學語言 from primary school CSV (TC)
  */
-function parseSecondaryMOI(languagePolicy) {
-  if (!languagePolicy) return [];
-
+function parsePrimaryMOI_TC(moi) {
+  if (!moi) return [];
   const languages = [];
-  const policyLower = languagePolicy.toLowerCase();
 
-  // Strong indicators of English medium
+  if (moi.includes('英文') || moi.includes('英語')) languages.push('ENGLISH');
+  if (moi.includes('普通話')) {
+    languages.push('PUTONGHUA');
+    if (moi.includes('中文')) languages.push('CANTONESE');
+  } else if (moi.includes('中文')) {
+    languages.push('CANTONESE');
+  }
+
+  return [...new Set(languages)];
+}
+
+/**
+ * Parse language_policy from secondary school CSV (English)
+ */
+function parseSecondaryMOI_EN(policy) {
+  if (!policy) return [];
+  const languages = [];
+  const policyLower = policy.toLowerCase();
+
   const englishIndicators = [
     'english is the official medium of instruction',
     'english is the medium of instruction',
     'english has been adopted as the medium of instruction',
     'english is used as the medium of instruction',
-    'english medium',
-    'emi school',
     'using english as the medium of instruction'
   ];
 
@@ -160,11 +160,8 @@ function parseSecondaryMOI(languagePolicy) {
     }
   }
 
-  // Check for Chinese medium indicators
   const chineseIndicators = [
     'chinese is the medium of instruction',
-    'chinese medium',
-    'cmi school',
     'using chinese as the medium of instruction'
   ];
 
@@ -175,9 +172,54 @@ function parseSecondaryMOI(languagePolicy) {
     }
   }
 
-  // Check for Putonghua
   if (policyLower.includes('putonghua') &&
-      (policyLower.includes('teaching') || policyLower.includes('instruction') || policyLower.includes('medium'))) {
+      (policyLower.includes('teaching') || policyLower.includes('instruction'))) {
+    languages.push('PUTONGHUA');
+  }
+
+  return [...new Set(languages)];
+}
+
+/**
+ * Parse 全校語文政策 from secondary school CSV (TC)
+ */
+function parseSecondaryMOI_TC(policy) {
+  if (!policy) return [];
+  const languages = [];
+
+  // Check for English medium indicators
+  const englishIndicators = [
+    '以英語授課',
+    '英語教學',
+    '英文為教學語言',
+    '以英文為教學語言',
+    '所有科目均以英語授課',
+    '英語為主要教學語言'
+  ];
+
+  for (const indicator of englishIndicators) {
+    if (policy.includes(indicator)) {
+      languages.push('ENGLISH');
+      break;
+    }
+  }
+
+  // Check for Chinese medium indicators
+  const chineseIndicators = [
+    '以中文為教學語言',
+    '中文為教學語言',
+    '以母語教學'
+  ];
+
+  for (const indicator of chineseIndicators) {
+    if (policy.includes(indicator)) {
+      languages.push('CANTONESE');
+      break;
+    }
+  }
+
+  // Check for Putonghua
+  if (policy.includes('普通話') && (policy.includes('教授') || policy.includes('教學'))) {
     languages.push('PUTONGHUA');
   }
 
@@ -189,7 +231,6 @@ function parseSecondaryMOI(languagePolicy) {
  */
 function extractSchools(content) {
   const schools = [];
-  // Match school objects more carefully
   const schoolRegex = /\{\s*"id":\s*"(edb_[^"]+)"[\s\S]*?"nameEn":\s*"([^"]+)"[\s\S]*?"name":\s*"([^"]+)"[\s\S]*?"level":\s*"([^"]+)"[\s\S]*?"district18":\s*"([^"]+)"/g;
 
   let match;
@@ -206,9 +247,9 @@ function extractSchools(content) {
 }
 
 /**
- * Map district18 to CHSC district names
+ * Map district18 to CHSC district names (English)
  */
-function mapDistrict(district18) {
+function mapDistrictToEn(district18) {
   const mapping = {
     '中西區': 'Central & Western',
     '東區': 'Eastern',
@@ -232,58 +273,84 @@ function mapDistrict(district18) {
   return mapping[district18] || '';
 }
 
+/**
+ * Map district18 to CHSC district names (TC - without 區)
+ */
+function mapDistrictToTc(district18) {
+  // TC CSV uses district without 區 suffix
+  return district18.replace('區', '');
+}
+
 function main() {
-  console.log('=== Generating Instruction Language Mapping V1 (CHSC CSV Only) ===\n');
+  console.log('=== Generating Instruction Language Mapping V1 (CHSC CSV - EN + TC) ===\n');
 
   // Check CSV files exist
-  if (!fs.existsSync(PRIMARY_CSV)) {
-    console.error('ERROR: Primary CSV not found:', PRIMARY_CSV);
-    process.exit(1);
-  }
-  if (!fs.existsSync(SECONDARY_CSV)) {
-    console.error('ERROR: Secondary CSV not found:', SECONDARY_CSV);
-    process.exit(1);
+  const csvFiles = [PRIMARY_EN_CSV, PRIMARY_TC_CSV, SECONDARY_EN_CSV, SECONDARY_TC_CSV];
+  for (const file of csvFiles) {
+    if (!fs.existsSync(file)) {
+      console.error('ERROR: CSV not found:', file);
+      process.exit(1);
+    }
   }
 
   // Read and parse CSV files
-  const primaryContent = fs.readFileSync(PRIMARY_CSV, 'utf-8');
-  const secondaryContent = fs.readFileSync(SECONDARY_CSV, 'utf-8');
+  const primaryEnRows = parseCSV(fs.readFileSync(PRIMARY_EN_CSV, 'utf-8'));
+  const primaryTcRows = parseCSV(fs.readFileSync(PRIMARY_TC_CSV, 'utf-8'));
+  const secondaryEnRows = parseCSV(fs.readFileSync(SECONDARY_EN_CSV, 'utf-8'));
+  const secondaryTcRows = parseCSV(fs.readFileSync(SECONDARY_TC_CSV, 'utf-8'));
 
-  const primaryRows = parseCSV(primaryContent);
-  const secondaryRows = parseCSV(secondaryContent);
+  console.log(`Primary EN CSV: ${primaryEnRows.length} rows`);
+  console.log(`Primary TC CSV: ${primaryTcRows.length} rows`);
+  console.log(`Secondary EN CSV: ${secondaryEnRows.length} rows`);
+  console.log(`Secondary TC CSV: ${secondaryTcRows.length} rows`);
 
-  console.log(`Primary schools in CSV: ${primaryRows.length}`);
-  console.log(`Secondary schools in CSV: ${secondaryRows.length}`);
-
-  // Build lookup maps from CSV data
-  // Key: normalized(school_name) -> { district, moi[] }
-  const csvPrimaryMap = new Map();
-  const csvSecondaryMap = new Map();
-
-  for (const row of primaryRows) {
-    const name = normalizeName(row.school_name || '');
-    const district = (row.district || '').trim();
-    const moi = parsePrimaryMOI(row.medium_of_instruction || '');
-
+  // Build lookup maps
+  // Primary EN: normalized(school_name)|district -> moi
+  const primaryEnMap = new Map();
+  for (const row of primaryEnRows) {
+    const name = normalizeNameEn(row.school_name || '');
+    const district = (row.district || '').toLowerCase();
+    const moi = parsePrimaryMOI_EN(row.medium_of_instruction || '');
     if (name && moi.length > 0) {
-      const key = `${name}|${district.toLowerCase()}`;
-      csvPrimaryMap.set(key, { district, moi, rawMOI: row.medium_of_instruction });
+      primaryEnMap.set(`${name}|${district}`, { moi, source: 'CHSC primary EN' });
     }
   }
 
-  for (const row of secondaryRows) {
-    const name = normalizeName(row.school_name || '');
-    const district = (row.district || '').trim();
-    const moi = parseSecondaryMOI(row.language_policy || '');
+  // Primary TC: normalized(學校名稱) -> moi
+  const primaryTcMap = new Map();
+  for (const row of primaryTcRows) {
+    const name = normalizeNameCn(row['學校名稱'] || row['\ufeff學校名稱'] || '');
+    const moi = parsePrimaryMOI_TC(row['教學語言'] || '');
+    if (name && moi.length > 0) {
+      primaryTcMap.set(name, { moi, source: 'CHSC primary TC' });
+    }
+  }
 
+  // Secondary EN: normalized(school_name)|district -> moi
+  const secondaryEnMap = new Map();
+  for (const row of secondaryEnRows) {
+    const name = normalizeNameEn(row.school_name || '');
+    const district = (row.district || '').toLowerCase();
+    const moi = parseSecondaryMOI_EN(row.language_policy || '');
     if (name) {
-      const key = `${name}|${district.toLowerCase()}`;
-      csvSecondaryMap.set(key, { district, moi, rawMOI: row.language_policy?.substring(0, 100) });
+      secondaryEnMap.set(`${name}|${district}`, { moi, source: 'CHSC secondary EN' });
     }
   }
 
-  console.log(`\nPrimary schools with MOI data: ${csvPrimaryMap.size}`);
-  console.log(`Secondary schools in map: ${csvSecondaryMap.size}`);
+  // Secondary TC: normalized(學校名稱) -> moi
+  const secondaryTcMap = new Map();
+  for (const row of secondaryTcRows) {
+    const name = normalizeNameCn(row['學校名稱'] || row['\ufeff學校名稱'] || '');
+    const moi = parseSecondaryMOI_TC(row['全校語文政策'] || '');
+    if (name) {
+      secondaryTcMap.set(name, { moi, source: 'CHSC secondary TC' });
+    }
+  }
+
+  console.log(`\nPrimary EN map: ${primaryEnMap.size} with MOI`);
+  console.log(`Primary TC map: ${primaryTcMap.size} with MOI`);
+  console.log(`Secondary EN map: ${secondaryEnMap.size} entries`);
+  console.log(`Secondary TC map: ${secondaryTcMap.size} entries`);
 
   // Read schools.ts
   const schoolsContent = fs.readFileSync(SCHOOLS_FILE, 'utf-8');
@@ -291,7 +358,6 @@ function main() {
 
   console.log(`\nTotal schools in schools.ts: ${schools.length}`);
 
-  // Filter to Primary and Secondary only
   const eligibleSchools = schools.filter(s => s.level === '小學' || s.level === '中學');
   console.log(`Eligible schools (Primary/Secondary): ${eligibleSchools.length}`);
 
@@ -303,46 +369,60 @@ function main() {
     if (processed.has(school.id)) continue;
     processed.add(school.id);
 
-    const normalizedName = normalizeName(school.nameEn);
-    const mappedDistrict = mapDistrict(school.district18);
-    const lookupKey = `${normalizedName}|${mappedDistrict.toLowerCase()}`;
+    const normalizedNameEn = normalizeNameEn(school.nameEn);
+    const normalizedNameCn = normalizeNameCn(school.name);
+    const mappedDistrictEn = mapDistrictToEn(school.district18);
+    const lookupKeyEn = `${normalizedNameEn}|${mappedDistrictEn.toLowerCase()}`;
 
     let found = false;
     let csvData = null;
-    let source = '';
 
     if (school.level === '小學') {
-      // Try exact match first
-      if (csvPrimaryMap.has(lookupKey)) {
-        csvData = csvPrimaryMap.get(lookupKey);
-        source = 'CHSC primary (exact)';
+      // Try EN exact match
+      if (primaryEnMap.has(lookupKeyEn)) {
+        csvData = primaryEnMap.get(lookupKeyEn);
         found = true;
-      } else {
-        // Try name-only match
-        for (const [key, data] of csvPrimaryMap) {
-          if (key.startsWith(normalizedName + '|')) {
+      }
+      // Try EN name-only match
+      if (!found) {
+        for (const [key, data] of primaryEnMap) {
+          if (key.startsWith(normalizedNameEn + '|')) {
             csvData = data;
-            source = 'CHSC primary (name)';
             found = true;
             break;
           }
         }
       }
-    } else if (school.level === '中學') {
-      // Try exact match first
-      if (csvSecondaryMap.has(lookupKey)) {
-        csvData = csvSecondaryMap.get(lookupKey);
-        source = 'CHSC secondary (exact)';
+      // Try TC name match
+      if (!found && primaryTcMap.has(normalizedNameCn)) {
+        csvData = primaryTcMap.get(normalizedNameCn);
         found = true;
-      } else {
-        // Try name-only match
-        for (const [key, data] of csvSecondaryMap) {
-          if (key.startsWith(normalizedName + '|')) {
+      }
+    } else if (school.level === '中學') {
+      // Try EN exact match
+      if (secondaryEnMap.has(lookupKeyEn)) {
+        const data = secondaryEnMap.get(lookupKeyEn);
+        if (data.moi.length > 0) {
+          csvData = data;
+          found = true;
+        }
+      }
+      // Try EN name-only match
+      if (!found) {
+        for (const [key, data] of secondaryEnMap) {
+          if (key.startsWith(normalizedNameEn + '|') && data.moi.length > 0) {
             csvData = data;
-            source = 'CHSC secondary (name)';
             found = true;
             break;
           }
+        }
+      }
+      // Try TC name match
+      if (!found && secondaryTcMap.has(normalizedNameCn)) {
+        const data = secondaryTcMap.get(normalizedNameCn);
+        if (data.moi.length > 0) {
+          csvData = data;
+          found = true;
         }
       }
     }
@@ -353,16 +433,13 @@ function main() {
         stage: school.level,
         instruction_languages: csvData.moi.join('|'),
         confidence: 'HIGH',
-        source: source,
+        source: csvData.source,
       });
     } else {
-      const reason = found
-        ? 'CHSC match but no MOI field parsed'
-        : 'No CHSC match';
       needsReview.push({
         school_id: school.id,
         stage: school.level,
-        reason: reason,
+        reason: found ? 'CHSC match but no MOI field parsed' : 'No CHSC match',
         candidate_info: `${school.nameEn} | ${school.name} | ${school.district18}`,
       });
     }
@@ -396,6 +473,16 @@ function main() {
   console.log('\nBy instruction language combination:');
   for (const [langs, count] of Object.entries(summary).sort((a, b) => b[1] - a[1])) {
     console.log(`  ${langs}: ${count}`);
+  }
+
+  // Summary by source
+  const sourceStats = {};
+  for (const m of mappings) {
+    sourceStats[m.source] = (sourceStats[m.source] || 0) + 1;
+  }
+  console.log('\nBy source:');
+  for (const [src, count] of Object.entries(sourceStats).sort((a, b) => b[1] - a[1])) {
+    console.log(`  ${src}: ${count}`);
   }
 }
 
