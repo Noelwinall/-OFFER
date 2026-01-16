@@ -27317,31 +27317,6 @@ export const schools: School[] = [
     "longitude": 114.18812947
   },
   {
-    "id": "edb_190314000133",
-    "name": "SHATIN COLLEGE",
-    "nameEn": "SHATIN COLLEGE",
-    "searchKeywords": [
-      "SHATIN COLLEGE",
-      "SHATIN COLLEGE"
-    ],
-    "category": "私立",
-    "district": "新界",
-    "district18": "沙田區",
-    "level": "中學",
-    "tuitionMin": 0,
-    "tuitionMax": 0,
-    "curriculum": [],
-    "language": "以中文為主",
-    "highlights": [],
-    "address": "新界沙田火炭麗禾里1號、沙田市區地段211及234",
-    "phone": "26991811",
-    "website": "http://www.shatincollege.esf.edu.hk",
-    "applicationMaterials": [],
-    "applicationLink": "",
-    "latitude": 22.39251077,
-    "longitude": 114.18812947
-  },
-  {
     "id": "edb_170836000133",
     "name": "THE SOUTH ISLAND SCHOOL",
     "nameEn": "THE SOUTH ISLAND SCHOOL",

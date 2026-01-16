@@ -11,12 +11,19 @@ import { schools } from "@/data/schools";
 import { FavoritesStorage } from "@/lib/storage";
 import { FilterContext } from "@/lib/filter-context";
 import { filterSchools, sortSearchResults } from "@/lib/filter-logic";
-import type { School } from "@/types/school";
+import type { School, Level } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SCHOOL_TEXT } from "@/constants/school-text";
 import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
+
+// Stage filter options for quick filter bar
+const STAGE_OPTIONS: { label: string; value: Level }[] = [
+  { label: "幼稚園", value: "幼稚園" },
+  { label: "小學", value: "小學" },
+  { label: "中學", value: "中學" },
+];
 
 // 快捷功能入口
 const QUICK_ACTIONS = [
@@ -129,6 +136,13 @@ export default function SearchScreen() {
     router.push(route as any);
   };
 
+  const handleStageSelect = (stage: Level) => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    filterContext.dispatch({ type: "SET_STAGE", payload: stage });
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -190,6 +204,27 @@ export default function SearchScreen() {
             >
               <IconSymbol name="slider.horizontal.3" size={20} color="#00D9FF" />
             </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* 階段快速篩選 */}
+        <View style={styles.stageFilterContainer}>
+          <Text style={styles.stageFilterLabel}>階段</Text>
+          <View style={styles.stageFilterChips}>
+            {STAGE_OPTIONS.map((option) => {
+              const isSelected = filters.stage === option.value;
+              return (
+                <TouchableOpacity
+                  key={option.value}
+                  style={[styles.stageChip, isSelected && styles.stageChipSelected]}
+                  onPress={() => handleStageSelect(option.value)}
+                >
+                  <Text style={[styles.stageChipText, isSelected && styles.stageChipTextSelected]}>
+                    {option.label}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
           </View>
         </View>
 
@@ -327,6 +362,43 @@ const styles = StyleSheet.create({
     paddingLeft: 12,
     borderLeftWidth: 1,
     borderLeftColor: "rgba(255,255,255,0.2)",
+  },
+  stageFilterContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 24,
+    paddingVertical: 8,
+    gap: 12,
+  },
+  stageFilterLabel: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.6)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  stageFilterChips: {
+    flexDirection: "row",
+    gap: 8,
+  },
+  stageChip: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.15)",
+  },
+  stageChipSelected: {
+    backgroundColor: "rgba(0, 217, 255, 0.2)",
+    borderColor: "#00D9FF",
+  },
+  stageChipText: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.7)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  stageChipTextSelected: {
+    color: "#00D9FF",
+    fontWeight: "600",
   },
   resultStats: {
     flexDirection: "row",
