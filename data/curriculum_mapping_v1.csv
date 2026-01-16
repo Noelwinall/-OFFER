@@ -1,0 +1,1101 @@
+id,name,nameEn,level,type,fundingType,curriculums,confidence,reason
+sch_01001,新加坡國際東區小學,Singapore International School Primary,小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01002,法國國際小學,French International School Primary,小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01003,哈羅香港國際小學,Harrow International School Hong Kong Primary,小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01004,香港國際學校深水埗區小學部,Hong Kong International School Primary,小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01005,法國國際小學,French International School Primary,小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01006,德瑞國際小學,German Swiss International School Primary,小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01007,弘立書院小學部,Independent Schools Foundation Academy Primary,小學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01008,德瑞國際小學,German Swiss International School Primary,小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01009,漢基國際小學,Chinese International School Primary,小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01010,澳洲國際小學,Australian International School Primary,小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01011,哈羅香港國際小學,Harrow International School Hong Kong Primary,小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01012,弘立書院中西區小學部,Independent Schools Foundation Academy Primary,小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01013,美國國際九龍城區小學,American School Hong Kong Primary,小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01014,新加坡國際觀塘區小學（西區）,Singapore International School Primary (觀塘區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01015,漢基國際葵青區小學（葵青區分校）,Chinese International School Primary (葵青區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01016,德瑞國際小學（西區）,German Swiss International School Primary (黃大仙區),小學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01017,香港國際學校小學部（第2校）,Hong Kong International School Primary (東區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01018,漢基國際深水埗區小學（深水埗區）,Chinese International School Primary (深水埗區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01019,德瑞國際葵青區小學（第4校）,German Swiss International School Primary (葵青區),小學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01020,哈羅香港國際小學（西區）,Harrow International School Hong Kong Primary (深水埗區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01021,新加坡國際灣仔區小學（東區）,Singapore International School Primary (灣仔區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01022,澳洲國際小學（九龍城區分校）,Australian International School Primary (九龍城區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01023,耀中國際小學（第3校）,Yew Chung International Primary School (南區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01024,德瑞國際荃灣區小學（第4校）,German Swiss International School Primary (荃灣區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01025,澳洲國際小學（東區）,Australian International School Primary (黃大仙區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01026,德瑞國際荃灣區小學（荃灣區）,German Swiss International School Primary (荃灣區),小學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01027,弘立書院小學部（第2校）,Independent Schools Foundation Academy Primary (屯門區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01028,美國國際葵青區小學（葵青區分校）,American School Hong Kong Primary (葵青區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01029,加拿大國際小學（東區）,Canadian International School Primary (中西區),小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01030,弘立書院小學部（屯門區）,Independent Schools Foundation Academy Primary (屯門區),小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01031,澳洲國際沙田區小學（沙田區分校）,Australian International School Primary (沙田區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01032,新加坡國際西貢區小學（西貢區）,Singapore International School Primary (西貢區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01033,哈羅香港國際小學（第3校）,Harrow International School Hong Kong Primary (東區),小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01034,英基小學（第4校）,ESF Primary School (西貢區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01035,新加坡國際油尖旺區小學（油尖旺區）,Singapore International School Primary (油尖旺區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01036,新加坡國際南區小學（南區）,Singapore International School Primary (南區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01037,加拿大國際小學（第2校）,Canadian International School Primary (南區),小學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01038,美國國際北區小學（北區）,American School Hong Kong Primary (北區),小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01039,澳洲國際小學（第4校）,Australian International School Primary (南區),小學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01040,法國國際灣仔區小學（灣仔區分校）,French International School Primary (灣仔區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01041,耀中國際灣仔區小學（灣仔區分校）,Yew Chung International Primary School (灣仔區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01042,弘立書院西貢區小學部（西貢區分校）,Independent Schools Foundation Academy Primary (西貢區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01043,法國國際西貢區小學（第3校）,French International School Primary (西貢區),小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01044,香港國際學校小學部（北區）,Hong Kong International School Primary (離島區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01045,德瑞國際小學（第5校）,German Swiss International School Primary (西貢區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01046,澳洲國際小學（第1校）,Australian International School Primary (沙田區),小學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01047,澳洲國際北區小學（北區分校）,Australian International School Primary (北區),小學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01048,美國國際北區小學（西區）,American School Hong Kong Primary (北區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01049,香港國際學校離島區小學部（第4校）,Hong Kong International School Primary (離島區),小學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01050,加拿大國際小學（油尖旺區分校）,Canadian International School Primary (油尖旺區),小學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01051,聖保羅男女中學附屬小學,St. Paul's Co-educational College Primary School,小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01052,培僑小學,Pui Kiu Primary School,小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01053,拔萃女小學,Diocesan Girls' Junior School,小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01054,港大同學會中西區小學,HKUGA Primary School,小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01055,聖保羅男女中學附屬葵青區小學,St. Paul's Co-educational College Primary School,小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01056,培僑小學,Pui Kiu Primary School,小學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01057,保良局陳守仁沙田區小學,PLK Camões Tan Siu Lin Primary School,小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01058,培僑觀塘區小學,Pui Kiu Primary School,小學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01059,英華中西區小學,Ying Wa Primary School,小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01060,港大同學會小學,HKUGA Primary School,小學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01061,保良局陳守仁屯門區小學（屯門區分校）,PLK Camões Tan Siu Lin Primary School (屯門區),小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01062,拔萃女小學（第2校）,Diocesan Girls' Junior School (大埔區),小學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01063,英華小學（元朗區）,Ying Wa Primary School (元朗區),小學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01064,聖保羅書院小學（南區）,St. Paul's College Primary School (元朗區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01065,拔萃男書院附屬小學（第5校）,Diocesan Boys' School Primary Division (灣仔區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01066,聖保羅男女荃灣區中學附屬小學（北區）,St. Paul's Co-educational College Primary School (荃灣區),小學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01067,拔萃男書院附屬小學（南區）,Diocesan Boys' School Primary Division (屯門區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01068,培僑油尖旺區小學（油尖旺區分校）,Pui Kiu Primary School (油尖旺區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01069,聖保羅書院中西區小學（中西區）,St. Paul's College Primary School (中西區),小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01070,福建元朗區中學附屬學校（元朗區分校）,Fukien Secondary School Affiliated School (元朗區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01071,拔萃女小學（第1校）,Diocesan Girls' Junior School (北區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01072,聖保羅男女油尖旺區中學附屬小學（第2校）,St. Paul's Co-educational College Primary School (油尖旺區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01073,保良局陳守仁油尖旺區小學（油尖旺區）,PLK Camões Tan Siu Lin Primary School (油尖旺區),小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01074,港大同學會觀塘區小學（第4校）,HKUGA Primary School (觀塘區),小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01075,保良局陳守仁小學（第5校）,PLK Camões Tan Siu Lin Primary School (中西區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01076,培僑小學（第1校）,Pui Kiu Primary School (深水埗區),小學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01077,港大同學會小學（觀塘區分校）,HKUGA Primary School (觀塘區),小學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01078,聖保羅書院小學（西區）,St. Paul's College Primary School (大埔區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01079,英華九龍城區小學（九龍城區）,Ying Wa Primary School (九龍城區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01080,聖保羅書院離島區小學（離島區）,St. Paul's College Primary School (離島區),小學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01081,德望灣仔區小學暨幼稚園,Good Hope Primary School cum Kindergarten,小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01082,高主教書院大埔區小學部,Raimondi College Primary Section,小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01083,聖士提反書院附屬屯門區小學,St. Stephen's College Preparatory School,小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01084,九龍塘學校（北區小學部）,Kowloon Tong School (Primary Section),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01085,玫瑰崗學校（小學部）,Rosaryhill School (Primary Section),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01086,聖方濟各英文東區小學,St. Francis of Assisi's English Primary School,小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01087,高主教書院中西區小學部,Raimondi College Primary Section,小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01088,香港培道小學,Pooi To Primary School,小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01089,德望小學暨幼稚園（東區）,Good Hope Primary School cum Kindergarten (黃大仙區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01090,九龍塘學校（觀塘區小學部）（東區）,Kowloon Tong School (Primary Section) (觀塘區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01091,聖士提反書院附屬小學（南區）,St. Stephen's College Preparatory School (九龍城區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01092,香港培道小學（沙田區）,Pooi To Primary School (沙田區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01093,玫瑰崗學校（小學部）（荃灣區分校）,Rosaryhill School (Primary Section) (荃灣區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01094,九龍塘學校（小學部）（第4校）,Kowloon Tong School (Primary Section) (南區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01095,九龍塘學校（小學部）（離島區分校）,Kowloon Tong School (Primary Section) (離島區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01096,聖方濟各英文黃大仙區小學（北區）,St. Francis of Assisi's English Primary School (黃大仙區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01097,聖士提反書院附屬小學（中西區）,St. Stephen's College Preparatory School (中西區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01098,聖方濟各英文南區小學（第3校）,St. Francis of Assisi's English Primary School (南區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01099,高主教書院小學部（南區分校）,Raimondi College Primary Section (南區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01100,聖士提反書院附屬西貢區小學（第5校）,St. Stephen's College Preparatory School (西貢區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01101,聖方濟各英文小學（西區）,St. Francis of Assisi's English Primary School (深水埗區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01102,德望小學暨幼稚園（九龍城區）,Good Hope Primary School cum Kindergarten (九龍城區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01103,九龍塘學校（觀塘區小學部）（觀塘區分校）,Kowloon Tong School (Primary Section) (觀塘區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01104,香港培道深水埗區小學（南區）,Pooi To Primary School (深水埗區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01105,高主教書院小學部（西區）,Raimondi College Primary Section (北區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01106,德望小學暨黃大仙區幼稚園（西區）,Good Hope Primary School cum Kindergarten (黃大仙區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01107,玫瑰崗學校（東區小學部）（北區）,Rosaryhill School (Primary Section) (東區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01108,德望小學暨大埔區幼稚園（大埔區分校）,Good Hope Primary School cum Kindergarten (大埔區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01109,玫瑰崗學校（小學部）（東區）,Rosaryhill School (Primary Section) (九龍城區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01110,玫瑰崗學校（南區小學部）（第5校）,Rosaryhill School (Primary Section) (南區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01111,德望小學暨東區幼稚園（東區分校）,Good Hope Primary School cum Kindergarten (東區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01112,香港培道小學（西貢區）,Pooi To Primary School (西貢區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01113,玫瑰崗學校（東區小學部）（第3校）,Rosaryhill School (Primary Section) (東區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01114,聖士提反書院附屬大埔區小學（大埔區）,St. Stephen's College Preparatory School (大埔區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01115,高主教書院南區小學部（南區分校）,Raimondi College Primary Section (南區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01116,玫瑰崗學校（油尖旺區小學部）（油尖旺區）,Rosaryhill School (Primary Section) (油尖旺區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01117,高主教書院小學部（離島區）,Raimondi College Primary Section (離島區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01118,聖士提反書院附屬觀塘區小學（第3校）,St. Stephen's College Preparatory School (觀塘區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01119,高主教書院小學部（西區）,Raimondi College Primary Section (元朗區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01120,九龍塘學校（觀塘區小學部）（觀塘區分校）,Kowloon Tong School (Primary Section) (觀塘區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01121,玫瑰崗學校（小學部）（第1校）,Rosaryhill School (Primary Section) (沙田區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01122,聖方濟各英文小學（西區）,St. Francis of Assisi's English Primary School (黃大仙區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01123,高主教書院小學部（南區分校）,Raimondi College Primary Section (南區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01124,高主教書院小學部（第4校）,Raimondi College Primary Section (東區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01125,德望葵青區小學暨葵青區幼稚園（東區）,Good Hope Primary School cum Kindergarten (葵青區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01126,香港培道深水埗區小學（北區）,Pooi To Primary School (深水埗區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01127,聖士提反書院附屬南區小學（第2校）,St. Stephen's College Preparatory School (南區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01128,玫瑰崗學校（灣仔區小學部）（灣仔區）,Rosaryhill School (Primary Section) (灣仔區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01129,九龍塘學校（小學部）（北區）,Kowloon Tong School (Primary Section) (屯門區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01130,聖士提反書院附屬小學（西區）,St. Stephen's College Preparatory School (油尖旺區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01131,玫瑰崗學校（小學部）（第1校）,Rosaryhill School (Primary Section) (南區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01132,九龍塘學校（小學部）（沙田區分校）,Kowloon Tong School (Primary Section) (沙田區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01133,聖士提反書院附屬小學（離島區）,St. Stephen's College Preparatory School (離島區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01134,德望北區小學暨幼稚園（第4校）,Good Hope Primary School cum Kindergarten (北區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01135,香港培道小學（黃大仙區分校）,Pooi To Primary School (黃大仙區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01136,玫瑰崗學校（深水埗區小學部）（南區）,Rosaryhill School (Primary Section) (深水埗區),小學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01137,香港培道小學（北區）,Pooi To Primary School (灣仔區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01138,高主教書院油尖旺區小學部（西區）,Raimondi College Primary Section (油尖旺區),小學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01139,九龍塘學校（沙田區小學部）（南區）,Kowloon Tong School (Primary Section) (沙田區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01140,玫瑰崗學校（小學部）（深水埗區）,Rosaryhill School (Primary Section) (深水埗區),小學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01141,仁濟醫院小學,Yan Chai Hospital Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01142,中華基督教會東區小學,C.C.C. Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01143,浸信會小學,Baptist Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01144,浸信會小學,Baptist Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01145,東華三院南區小學,Tung Wah Group of Hospitals Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01146,救世軍北區小學,Salvation Army Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01147,路德會南區小學,Lutheran Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01148,路德會小學,Lutheran Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01149,天主教小學,Catholic Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01150,中華基督教會深水埗區小學,C.C.C. Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01151,道教南區小學,Taoist Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01152,東華三院小學,Tung Wah Group of Hospitals Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01153,救世軍南區小學,Salvation Army Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01154,佛教灣仔區小學,Buddhist Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01155,路德會小學,Lutheran Primary School,小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01156,循道衛理小學（第1校）,Methodist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01157,聖公會九龍城區小學（九龍城區分校）,S.K.H. Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01158,佛教小學（灣仔區）,Buddhist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01159,循道衛理中西區小學（中西區）,Methodist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01160,保良局小學（東區）,Po Leung Kuk Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01161,道教黃大仙區小學（黃大仙區）,Taoist Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01162,佛教九龍城區小學（東區）,Buddhist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01163,浸信會小學（灣仔區分校）,Baptist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01164,救世軍東區小學（東區）,Salvation Army Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01165,中華基督教會北區小學（第5校）,C.C.C. Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01166,聖公會荃灣區小學（荃灣區分校）,S.K.H. Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01167,路德會小學（南區分校）,Lutheran Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01168,佛教小學（黃大仙區）,Buddhist Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01169,浸信會中西區小學（中西區分校）,Baptist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01170,保良局小學（第5校）,Po Leung Kuk Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01171,浸信會油尖旺區小學（油尖旺區分校）,Baptist Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01172,浸信會觀塘區小學（第2校）,Baptist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01173,博愛醫院小學（第3校）,Pok Oi Hospital Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01174,循道衛理屯門區小學（屯門區）,Methodist Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01175,保良局小學（第5校）,Po Leung Kuk Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01176,保良局小學（第1校）,Po Leung Kuk Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01177,仁濟醫院小學（東區）,Yan Chai Hospital Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01178,嗇色園東區小學（東區）,Sik Sik Yuen Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01179,天主教小學（觀塘區）,Catholic Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01180,仁濟醫院東區小學（東區）,Yan Chai Hospital Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01181,浸信會小學（觀塘區分校）,Baptist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01182,循道衛理小學（大埔區）,Methodist Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01183,仁濟醫院東區小學（東區分校）,Yan Chai Hospital Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01184,東華三院觀塘區小學（東區）,Tung Wah Group of Hospitals Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01185,中華基督教會油尖旺區小學（第5校）,C.C.C. Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01186,天主教東區小學（東區分校）,Catholic Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01187,嗇色園小學（第2校）,Sik Sik Yuen Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01188,天主教小學（第3校）,Catholic Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01189,天主教元朗區小學（第4校）,Catholic Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01190,東華三院南區小學（南區）,Tung Wah Group of Hospitals Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01191,聖公會小學（東區分校）,S.K.H. Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01192,浸信會東區小學（西區）,Baptist Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01193,循道衛理小學（屯門區）,Methodist Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01194,路德會小學（北區）,Lutheran Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01195,佛教小學（第5校）,Buddhist Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01196,仁濟醫院沙田區小學（沙田區）,Yan Chai Hospital Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01197,救世軍小學（東區）,Salvation Army Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01198,仁濟醫院灣仔區小學（灣仔區）,Yan Chai Hospital Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01199,東華三院小學（南區）,Tung Wah Group of Hospitals Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01200,聖公會小學（北區）,S.K.H. Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01201,博愛醫院灣仔區小學（灣仔區分校）,Pok Oi Hospital Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01202,浸信會小學（第2校）,Baptist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01203,嗇色園小學（中西區）,Sik Sik Yuen Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01204,路德會小學（第4校）,Lutheran Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01205,路德會小學（北區）,Lutheran Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01206,浸信會小學（第1校）,Baptist Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01207,聖公會西貢區小學（西貢區分校）,S.K.H. Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01208,佛教中西區小學（第3校）,Buddhist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01209,天主教葵青區小學（西區）,Catholic Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01210,保良局中西區小學（中西區分校）,Po Leung Kuk Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01211,中華基督教會小學（第1校）,C.C.C. Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01212,路德會北區小學（北區）,Lutheran Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01213,佛教南區小學（南區）,Buddhist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01214,循道衛理小學（元朗區分校）,Methodist Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01215,嗇色園灣仔區小學（東區）,Sik Sik Yuen Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01216,嗇色園小學（第1校）,Sik Sik Yuen Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01217,道教深水埗區小學（深水埗區）,Taoist Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01218,浸信會小學（北區）,Baptist Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01219,浸信會深水埗區小學（深水埗區）,Baptist Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01220,中華基督教會小學（灣仔區分校）,C.C.C. Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01221,循道衛理油尖旺區小學（油尖旺區）,Methodist Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01222,路德會小學（南區）,Lutheran Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01223,嗇色園小學（北區）,Sik Sik Yuen Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01224,中華基督教會小學（第4校）,C.C.C. Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01225,東華三院黃大仙區小學（第5校）,Tung Wah Group of Hospitals Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01226,中華基督教會小學（南區）,C.C.C. Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01227,佛教小學（葵青區）,Buddhist Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01228,路德會離島區小學（離島區）,Lutheran Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01229,博愛醫院小學（第4校）,Pok Oi Hospital Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01230,道教小學（第5校）,Taoist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01231,保良局西貢區小學（西貢區分校）,Po Leung Kuk Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01232,循道衛理小學（觀塘區）,Methodist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01233,浸信會小學（第3校）,Baptist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01234,博愛醫院小學（灣仔區分校）,Pok Oi Hospital Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01235,聖公會灣仔區小學（第5校）,S.K.H. Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01236,浸信會小學（灣仔區）,Baptist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01237,保良局小學（南區）,Po Leung Kuk Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01238,保良局南區小學（北區）,Po Leung Kuk Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01239,天主教灣仔區小學（第4校）,Catholic Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01240,仁濟醫院小學（南區）,Yan Chai Hospital Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01241,博愛醫院小學（西區）,Pok Oi Hospital Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01242,道教小學（九龍城區分校）,Taoist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01243,循道衛理南區小學（南區分校）,Methodist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01244,東華三院小學（北區）,Tung Wah Group of Hospitals Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01245,佛教小學（南區）,Buddhist Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01246,浸信會觀塘區小學（第1校）,Baptist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01247,佛教元朗區小學（北區）,Buddhist Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01248,聖公會小學（東區）,S.K.H. Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01249,保良局小學（第4校）,Po Leung Kuk Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01250,保良局觀塘區小學（第5校）,Po Leung Kuk Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01251,仁濟醫院九龍城區小學（九龍城區）,Yan Chai Hospital Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01252,東華三院離島區小學（第2校）,Tung Wah Group of Hospitals Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01253,中華基督教會小學（西貢區分校）,C.C.C. Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01254,仁濟醫院中西區小學（中西區分校）,Yan Chai Hospital Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01255,救世軍小學（中西區）,Salvation Army Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01256,佛教小學（第1校）,Buddhist Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01257,中華基督教會小學（東區）,C.C.C. Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01258,循道衛理小學（第3校）,Methodist Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01259,循道衛理西貢區小學（西貢區分校）,Methodist Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01260,佛教小學（第5校）,Buddhist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01261,聖公會屯門區小學（屯門區分校）,S.K.H. Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01262,博愛醫院小學（北區）,Pok Oi Hospital Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01263,佛教東區小學（東區）,Buddhist Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01264,中華基督教會小學（第4校）,C.C.C. Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01265,保良局東區小學（東區分校）,Po Leung Kuk Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01266,循道衛理小學（東區）,Methodist Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01267,中華基督教會小學（第2校）,C.C.C. Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01268,保良局小學（東區分校）,Po Leung Kuk Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01269,東華三院小學（屯門區）,Tung Wah Group of Hospitals Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01270,中華基督教會南區小學（南區）,C.C.C. Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01271,聖公會小學（第1校）,S.K.H. Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01272,嗇色園屯門區小學（屯門區分校）,Sik Sik Yuen Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01273,仁濟醫院小學（大埔區）,Yan Chai Hospital Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01274,仁濟醫院小學（黃大仙區分校）,Yan Chai Hospital Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01275,博愛醫院小學（荃灣區分校）,Pok Oi Hospital Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01276,道教中西區小學（中西區分校）,Taoist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01277,嗇色園灣仔區小學（灣仔區分校）,Sik Sik Yuen Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01278,天主教沙田區小學（沙田區）,Catholic Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01279,聖公會小學（黃大仙區分校）,S.K.H. Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01280,東華三院黃大仙區小學（第5校）,Tung Wah Group of Hospitals Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01281,循道衛理東區小學（第1校）,Methodist Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01282,嗇色園小學（屯門區分校）,Sik Sik Yuen Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01283,東華三院觀塘區小學（觀塘區）,Tung Wah Group of Hospitals Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01284,循道衛理深水埗區小學（北區）,Methodist Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01285,路德會小學（葵青區）,Lutheran Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01286,天主教小學（觀塘區分校）,Catholic Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01287,循道衛理小學（深水埗區分校）,Methodist Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01288,救世軍小學（東區）,Salvation Army Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01289,道教小學（西貢區分校）,Taoist Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01290,保良局小學（第5校）,Po Leung Kuk Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01291,中華基督教會離島區小學（離島區）,C.C.C. Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01292,仁濟醫院小學（南區）,Yan Chai Hospital Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01293,佛教小學（第3校）,Buddhist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01294,天主教屯門區小學（北區）,Catholic Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01295,救世軍觀塘區小學（觀塘區）,Salvation Army Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01296,仁濟醫院葵青區小學（第1校）,Yan Chai Hospital Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01297,佛教中西區小學（北區）,Buddhist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01298,仁濟醫院北區小學（北區分校）,Yan Chai Hospital Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01299,博愛醫院南區小學（第4校）,Pok Oi Hospital Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01300,仁濟醫院小學（沙田區）,Yan Chai Hospital Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01301,聖公會小學（屯門區分校）,S.K.H. Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01302,浸信會荃灣區小學（第2校）,Baptist Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01303,循道衛理離島區小學（離島區分校）,Methodist Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01304,嗇色園小學（黃大仙區分校）,Sik Sik Yuen Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01305,中華基督教會小學（大埔區分校）,C.C.C. Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01306,天主教小學（南區分校）,Catholic Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01307,保良局小學（第2校）,Po Leung Kuk Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01308,浸信會觀塘區小學（觀塘區分校）,Baptist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01309,道教油尖旺區小學（第4校）,Taoist Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01310,保良局荃灣區小學（東區）,Po Leung Kuk Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01311,嗇色園九龍城區小學（九龍城區分校）,Sik Sik Yuen Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01312,聖公會南區小學（北區）,S.K.H. Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01313,東華三院九龍城區小學（第3校）,Tung Wah Group of Hospitals Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01314,東華三院深水埗區小學（深水埗區）,Tung Wah Group of Hospitals Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01315,浸信會觀塘區小學（觀塘區分校）,Baptist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01316,保良局沙田區小學（第1校）,Po Leung Kuk Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01317,佛教南區小學（北區）,Buddhist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01318,東華三院小學（黃大仙區分校）,Tung Wah Group of Hospitals Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01319,浸信會葵青區小學（第4校）,Baptist Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01320,循道衛理灣仔區小學（灣仔區分校）,Methodist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01321,保良局南區小學（第1校）,Po Leung Kuk Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01322,仁濟醫院中西區小學（中西區分校）,Yan Chai Hospital Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01323,仁濟醫院小學（南區）,Yan Chai Hospital Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01324,循道衛理小學（觀塘區）,Methodist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01325,仁濟醫院大埔區小學（第5校）,Yan Chai Hospital Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01326,中華基督教會小學（中西區分校）,C.C.C. Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01327,中華基督教會小學（深水埗區）,C.C.C. Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01328,中華基督教會小學（西區）,C.C.C. Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01329,聖公會九龍城區小學（九龍城區分校）,S.K.H. Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01330,路德會小學（第5校）,Lutheran Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01331,保良局觀塘區小學（西區）,Po Leung Kuk Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01332,仁濟醫院小學（西區）,Yan Chai Hospital Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01333,浸信會小學（第3校）,Baptist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01334,路德會小學（第4校）,Lutheran Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01335,循道衛理南區小學（南區）,Methodist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01336,東華三院中西區小學（中西區）,Tung Wah Group of Hospitals Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01337,佛教深水埗區小學（北區）,Buddhist Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01338,佛教沙田區小學（第3校）,Buddhist Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01339,保良局觀塘區小學（觀塘區）,Po Leung Kuk Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01340,佛教小學（第5校）,Buddhist Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01341,浸信會東區小學（東區）,Baptist Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01342,中華基督教會小學（屯門區分校）,C.C.C. Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01343,保良局小學（中西區）,Po Leung Kuk Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01344,嗇色園大埔區小學（大埔區）,Sik Sik Yuen Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01345,聖公會南區小學（東區）,S.K.H. Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01346,道教小學（第1校）,Taoist Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01347,救世軍離島區小學（離島區分校）,Salvation Army Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01348,保良局中西區小學（中西區）,Po Leung Kuk Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01349,救世軍小學（北區）,Salvation Army Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01350,天主教南區小學（第5校）,Catholic Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01351,浸信會中西區小學（南區）,Baptist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01352,路德會中西區小學（中西區分校）,Lutheran Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01353,浸信會小學（油尖旺區分校）,Baptist Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01354,佛教小學（南區）,Buddhist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01355,天主教油尖旺區小學（油尖旺區分校）,Catholic Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01356,道教大埔區小學（第1校）,Taoist Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01357,浸信會灣仔區小學（東區）,Baptist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01358,浸信會九龍城區小學（九龍城區分校）,Baptist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01359,聖公會中西區小學（南區）,S.K.H. Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01360,中華基督教會離島區小學（離島區）,C.C.C. Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01361,路德會小學（第1校）,Lutheran Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01362,嗇色園東區小學（東區）,Sik Sik Yuen Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01363,救世軍小學（灣仔區）,Salvation Army Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01364,救世軍深水埗區小學（北區）,Salvation Army Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01365,天主教黃大仙區小學（北區）,Catholic Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01366,東華三院小學（荃灣區）,Tung Wah Group of Hospitals Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01367,救世軍南區小學（西區）,Salvation Army Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01368,救世軍小學（第3校）,Salvation Army Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01369,中華基督教會北區小學（北區分校）,C.C.C. Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01370,天主教深水埗區小學（第5校）,Catholic Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01371,路德會小學（第1校）,Lutheran Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01372,路德會小學（屯門區分校）,Lutheran Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01373,聖公會南區小學（南區）,S.K.H. Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01374,道教中西區小學（中西區分校）,Taoist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01375,仁濟醫院小學（葵青區分校）,Yan Chai Hospital Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01376,浸信會離島區小學（北區）,Baptist Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01377,東華三院小學（西區）,Tung Wah Group of Hospitals Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01378,路德會油尖旺區小學（油尖旺區）,Lutheran Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01379,浸信會南區小學（南區分校）,Baptist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01380,天主教東區小學（東區）,Catholic Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01381,保良局東區小學（東區分校）,Po Leung Kuk Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01382,天主教小學（第2校）,Catholic Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01383,博愛醫院小學（第3校）,Pok Oi Hospital Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01384,天主教灣仔區小學（南區）,Catholic Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01385,東華三院北區小學（北區分校）,Tung Wah Group of Hospitals Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01386,天主教沙田區小學（第1校）,Catholic Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01387,博愛醫院南區小學（南區）,Pok Oi Hospital Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01388,佛教荃灣區小學（北區）,Buddhist Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01389,循道衛理觀塘區小學（南區）,Methodist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01390,仁濟醫院大埔區小學（大埔區）,Yan Chai Hospital Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01391,嗇色園小學（第1校）,Sik Sik Yuen Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01392,中華基督教會屯門區小學（西區）,C.C.C. Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01393,東華三院小學（第3校）,Tung Wah Group of Hospitals Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01394,中華基督教會小學（黃大仙區分校）,C.C.C. Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01395,救世軍小學（北區分校）,Salvation Army Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01396,浸信會小學（東區）,Baptist Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01397,佛教小學（西區）,Buddhist Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01398,道教小學（第3校）,Taoist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01399,嗇色園小學（第4校）,Sik Sik Yuen Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01400,佛教小學（大埔區分校）,Buddhist Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01401,仁濟醫院觀塘區小學（觀塘區）,Yan Chai Hospital Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01402,仁濟醫院小學（油尖旺區）,Yan Chai Hospital Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01403,中華基督教會小學（中西區分校）,C.C.C. Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01404,博愛醫院觀塘區小學（第4校）,Pok Oi Hospital Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01405,救世軍離島區小學（第5校）,Salvation Army Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01406,循道衛理南區小學（西區）,Methodist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01407,嗇色園小學（第2校）,Sik Sik Yuen Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01408,循道衛理小學（元朗區）,Methodist Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01409,道教小學（第4校）,Taoist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01410,天主教小學（北區）,Catholic Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01411,浸信會九龍城區小學（九龍城區）,Baptist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01412,佛教南區小學（南區）,Buddhist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01413,循道衛理九龍城區小學（東區）,Methodist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01414,佛教中西區小學（中西區）,Buddhist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01415,仁濟醫院小學（第5校）,Yan Chai Hospital Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01416,聖公會沙田區小學（西區）,S.K.H. Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01417,天主教小學（沙田區分校）,Catholic Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01418,中華基督教會小學（北區）,C.C.C. Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01419,道教小學（第4校）,Taoist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01420,保良局油尖旺區小學（油尖旺區）,Po Leung Kuk Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01421,路德會小學（東區）,Lutheran Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01422,嗇色園小學（北區）,Sik Sik Yuen Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01423,聖公會小學（第3校）,S.K.H. Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01424,路德會離島區小學（離島區分校）,Lutheran Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01425,循道衛理小學（中西區分校）,Methodist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01426,救世軍小學（西貢區）,Salvation Army Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01427,中華基督教會小學（第2校）,C.C.C. Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01428,東華三院小學（北區）,Tung Wah Group of Hospitals Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01429,天主教荃灣區小學（荃灣區分校）,Catholic Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01430,天主教油尖旺區小學（油尖旺區分校）,Catholic Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01431,聖公會小學（荃灣區）,S.K.H. Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01432,東華三院小學（第2校）,Tung Wah Group of Hospitals Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01433,循道衛理小學（觀塘區）,Methodist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01434,佛教元朗區小學（元朗區）,Buddhist Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01435,博愛醫院小學（北區）,Pok Oi Hospital Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01436,仁濟醫院小學（北區）,Yan Chai Hospital Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01437,浸信會小學（南區）,Baptist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01438,救世軍中西區小學（中西區分校）,Salvation Army Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01439,路德會小學（北區）,Lutheran Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01440,博愛醫院東區小學（東區分校）,Pok Oi Hospital Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01441,浸信會小學（南區）,Baptist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01442,中華基督教會中西區小學（北區）,C.C.C. Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01443,中華基督教會九龍城區小學（九龍城區分校）,C.C.C. Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01444,嗇色園南區小學（南區）,Sik Sik Yuen Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01445,循道衛理小學（第5校）,Methodist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01446,仁濟醫院油尖旺區小學（第1校）,Yan Chai Hospital Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01447,路德會小學（西區）,Lutheran Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01448,博愛醫院南區小學（南區分校）,Pok Oi Hospital Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01449,佛教小學（西區）,Buddhist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01450,天主教南區小學（第5校）,Catholic Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01451,東華三院小學（九龍城區）,Tung Wah Group of Hospitals Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01452,天主教油尖旺區小學（油尖旺區分校）,Catholic Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01453,道教觀塘區小學（觀塘區分校）,Taoist Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01454,仁濟醫院荃灣區小學（荃灣區）,Yan Chai Hospital Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01455,循道衛理小學（油尖旺區）,Methodist Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01456,聖公會葵青區小學（第1校）,S.K.H. Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01457,中華基督教會葵青區小學（葵青區分校）,C.C.C. Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01458,聖公會觀塘區小學（觀塘區分校）,S.K.H. Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01459,循道衛理大埔區小學（大埔區分校）,Methodist Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01460,保良局黃大仙區小學（東區）,Po Leung Kuk Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01461,佛教小學（第1校）,Buddhist Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01462,嗇色園小學（第2校）,Sik Sik Yuen Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01463,浸信會黃大仙區小學（黃大仙區）,Baptist Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01464,仁濟醫院黃大仙區小學（第4校）,Yan Chai Hospital Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01465,嗇色園小學（第5校）,Sik Sik Yuen Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01466,仁濟醫院離島區小學（第1校）,Yan Chai Hospital Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01467,道教小學（東區）,Taoist Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01468,博愛醫院觀塘區小學（觀塘區）,Pok Oi Hospital Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01469,救世軍小學（離島區分校）,Salvation Army Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01470,佛教離島區小學（南區）,Buddhist Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01471,保良局小學（東區分校）,Po Leung Kuk Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01472,博愛醫院小學（南區）,Pok Oi Hospital Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01473,道教灣仔區小學（灣仔區）,Taoist Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01474,浸信會中西區小學（中西區分校）,Baptist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01475,博愛醫院荃灣區小學（東區）,Pok Oi Hospital Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01476,天主教小學（第1校）,Catholic Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01477,東華三院元朗區小學（第2校）,Tung Wah Group of Hospitals Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01478,聖公會荃灣區小學（第3校）,S.K.H. Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01479,嗇色園屯門區小學（第4校）,Sik Sik Yuen Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01480,東華三院中西區小學（中西區）,Tung Wah Group of Hospitals Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01481,浸信會小學（大埔區分校）,Baptist Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01482,天主教小學（南區）,Catholic Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01483,聖公會灣仔區小學（北區）,S.K.H. Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01484,保良局小學（中西區）,Po Leung Kuk Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01485,仁濟醫院中西區小學（第5校）,Yan Chai Hospital Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01486,保良局小學（元朗區）,Po Leung Kuk Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01487,循道衛理小學（第2校）,Methodist Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01488,道教北區小學（西區）,Taoist Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01489,救世軍小學（第4校）,Salvation Army Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01490,天主教灣仔區小學（灣仔區分校）,Catholic Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01491,聖公會小學（第1校）,S.K.H. Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01492,路德會灣仔區小學（灣仔區）,Lutheran Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01493,浸信會北區小學（北區分校）,Baptist Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01494,道教小學（元朗區）,Taoist Primary School (元朗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01495,救世軍深水埗區小學（第5校）,Salvation Army Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01496,天主教小學（第1校）,Catholic Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01497,博愛醫院小學（大埔區分校）,Pok Oi Hospital Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01498,救世軍觀塘區小學（第3校）,Salvation Army Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01499,天主教離島區小學（離島區分校）,Catholic Primary School (離島區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01500,天主教油尖旺區小學（第5校）,Catholic Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01501,道教小學（西貢區分校）,Taoist Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01502,浸信會沙田區小學（沙田區）,Baptist Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01503,道教南區小學（南區）,Taoist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01504,嗇色園屯門區小學（第4校）,Sik Sik Yuen Primary School (屯門區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01505,博愛醫院觀塘區小學（第5校）,Pok Oi Hospital Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01506,天主教小學（黃大仙區）,Catholic Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01507,佛教小學（東區）,Buddhist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01508,佛教中西區小學（南區）,Buddhist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01509,嗇色園小學（第4校）,Sik Sik Yuen Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01510,仁濟醫院小學（油尖旺區）,Yan Chai Hospital Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01511,路德會小學（第1校）,Lutheran Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01512,仁濟醫院葵青區小學（葵青區）,Yan Chai Hospital Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01513,佛教中西區小學（北區）,Buddhist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01514,聖公會小學（油尖旺區分校）,S.K.H. Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01515,中華基督教會小學（黃大仙區分校）,C.C.C. Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01516,循道衛理油尖旺區小學（第1校）,Methodist Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01517,博愛醫院小學（第2校）,Pok Oi Hospital Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01518,仁濟醫院小學（南區）,Yan Chai Hospital Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01519,保良局小學（第4校）,Po Leung Kuk Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01520,嗇色園小學（第5校）,Sik Sik Yuen Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01521,救世軍小學（油尖旺區分校）,Salvation Army Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01522,聖公會荃灣區小學（第2校）,S.K.H. Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01523,仁濟醫院南區小學（第3校）,Yan Chai Hospital Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01524,中華基督教會小學（深水埗區）,C.C.C. Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01525,天主教小學（東區分校）,Catholic Primary School (東區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01526,路德會沙田區小學（沙田區分校）,Lutheran Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01527,嗇色園小學（第2校）,Sik Sik Yuen Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01528,佛教荃灣區小學（荃灣區分校）,Buddhist Primary School (荃灣區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01529,天主教小學（西貢區）,Catholic Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01530,路德會小學（灣仔區分校）,Lutheran Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01531,仁濟醫院灣仔區小學（第1校）,Yan Chai Hospital Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01532,路德會小學（第2校）,Lutheran Primary School (深水埗區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01533,中華基督教會小學（第3校）,C.C.C. Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01534,天主教小學（第4校）,Catholic Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01535,佛教黃大仙區小學（北區）,Buddhist Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01536,路德會小學（黃大仙區分校）,Lutheran Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01537,東華三院小學（大埔區）,Tung Wah Group of Hospitals Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01538,嗇色園小學（北區）,Sik Sik Yuen Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01539,聖公會小學（南區）,S.K.H. Primary School (沙田區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01540,中華基督教會小學（西貢區分校）,C.C.C. Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01541,嗇色園小學（大埔區）,Sik Sik Yuen Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01542,循道衛理中西區小學（第2校）,Methodist Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01543,天主教小學（葵青區）,Catholic Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01544,東華三院灣仔區小學（灣仔區分校）,Tung Wah Group of Hospitals Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01545,聖公會小學（第5校）,S.K.H. Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01546,路德會油尖旺區小學（西區）,Lutheran Primary School (油尖旺區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01547,浸信會小學（第2校）,Baptist Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01548,嗇色園小學（東區）,Sik Sik Yuen Primary School (觀塘區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01549,路德會南區小學（第4校）,Lutheran Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01550,路德會小學（第5校）,Lutheran Primary School (葵青區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01551,道教北區小學（北區分校）,Taoist Primary School (北區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01552,循道衛理九龍城區小學（九龍城區）,Methodist Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01553,嗇色園小學（西區）,Sik Sik Yuen Primary School (大埔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01554,救世軍小學（第4校）,Salvation Army Primary School (九龍城區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01555,循道衛理南區小學（南區）,Methodist Primary School (南區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01556,東華三院西貢區小學（西貢區）,Tung Wah Group of Hospitals Primary School (西貢區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01557,天主教小學（南區）,Catholic Primary School (灣仔區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01558,聖公會中西區小學（中西區）,S.K.H. Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01559,保良局中西區小學（中西區分校）,Po Leung Kuk Primary School (中西區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01560,嗇色園黃大仙區小學（黃大仙區）,Sik Sik Yuen Primary School (黃大仙區),小學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01561,李陞小學,Li Sing Primary School,小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01562,北角官立小學,North Point Government Primary School,小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01563,李陞葵青區小學,Li Sing Primary School,小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01564,愛秩序灣官立黃大仙區小學,Aldrich Bay Government Primary School,小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01565,愛秩序灣官立小學,Aldrich Bay Government Primary School,小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01566,愛秩序灣官立荃灣區小學,Aldrich Bay Government Primary School,小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01567,軒尼詩道官立南區小學（第2校）,Hennessy Road Government Primary School (南區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01568,愛秩序灣官立小學（元朗區分校）,Aldrich Bay Government Primary School (元朗區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01569,北角官立離島區小學（離島區）,North Point Government Primary School (離島區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01570,愛秩序灣官立西貢區小學（西貢區）,Aldrich Bay Government Primary School (西貢區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01571,軒尼詩道官立大埔區小學（東區）,Hennessy Road Government Primary School (大埔區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01572,李陞中西區小學（中西區）,Li Sing Primary School (中西區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01573,李陞小學（第3校）,Li Sing Primary School (九龍城區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01574,軒尼詩道官立南區小學（南區分校）,Hennessy Road Government Primary School (南區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01575,北角官立小學（灣仔區）,North Point Government Primary School (灣仔區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01576,愛秩序灣官立油尖旺區小學（油尖旺區）,Aldrich Bay Government Primary School (油尖旺區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01577,北角官立離島區小學（離島區）,North Point Government Primary School (離島區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01578,北角官立小學（第3校）,North Point Government Primary School (沙田區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01579,北角官立小學（中西區分校）,North Point Government Primary School (中西區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01580,愛秩序灣官立小學（北區）,Aldrich Bay Government Primary School (油尖旺區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01581,軒尼詩道官立觀塘區小學（西區）,Hennessy Road Government Primary School (觀塘區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01582,官立小學（西區）,Government Primary School (東區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01583,軒尼詩道官立南區小學（北區）,Hennessy Road Government Primary School (南區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01584,愛秩序灣官立離島區小學（離島區）,Aldrich Bay Government Primary School (離島區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01585,軒尼詩道官立小學（油尖旺區）,Hennessy Road Government Primary School (油尖旺區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01586,官立南區小學（南區分校）,Government Primary School (南區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01587,愛秩序灣官立小學（東區）,Aldrich Bay Government Primary School (東區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01588,北角官立油尖旺區小學（第3校）,North Point Government Primary School (油尖旺區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01589,軒尼詩道官立油尖旺區小學（第4校）,Hennessy Road Government Primary School (油尖旺區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01590,軒尼詩道官立小學（第5校）,Hennessy Road Government Primary School (中西區),小學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_01591,弘立書院,Independent Schools Foundation Academy,中學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01592,加拿大國際學校,Canadian International School of Hong Kong,中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01593,澳洲國際學校,Australian International School Hong Kong,中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01594,澳洲國際學校,Australian International School Hong Kong,中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01595,新加坡國際學校,Singapore International School (Hong Kong),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01596,耀中國際中學,Yew Chung International Secondary School,中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01597,弘立書院,Independent Schools Foundation Academy,中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01598,加拿大國際學校,Canadian International School of Hong Kong,中學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01599,加拿大國際學校,Canadian International School of Hong Kong,中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01600,德瑞國際學校,German Swiss International School,中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01601,加拿大國際學校,Canadian International School of Hong Kong,中學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01602,加拿大國際學校,Canadian International School of Hong Kong,中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01603,啟新書院,Renaissance College Hong Kong,中學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01604,耀中國際中學,Yew Chung International Secondary School,中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01605,英基南區中學,ESF Secondary School,中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01606,美國學校,American School Hong Kong,中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01607,漢基國際學校（西貢區）,Chinese International School (西貢區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01608,弘立書院（第3校）,Independent Schools Foundation Academy (灣仔區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01609,加拿大國際學校（第4校）,Canadian International School of Hong Kong (九龍城區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01610,耀中國際南區中學（南區分校）,Yew Chung International Secondary School (南區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01611,弘立書院（第1校）,Independent Schools Foundation Academy (東區),中學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01612,澳洲國際學校（東區分校）,Australian International School Hong Kong (東區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01613,美國學校（西區）,American School Hong Kong (北區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01614,弘立書院（第4校）,Independent Schools Foundation Academy (東區),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01615,英基中學（第5校）,ESF Secondary School (東區),中學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01616,啟新書院（南區）,Renaissance College Hong Kong (南區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01617,澳洲國際學校（油尖旺區）,Australian International School Hong Kong (油尖旺區),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01618,漢基國際學校（南區）,Chinese International School (南區),中學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01619,諾德安達國際學校（第4校）,Nord Anglia International School Hong Kong (灣仔區),中學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01620,德瑞國際學校（九龍城區分校）,German Swiss International School (九龍城區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01621,漢基國際學校（北區）,Chinese International School (九龍城區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01622,漢基國際學校（第2校）,Chinese International School (九龍城區),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01623,新加坡國際學校（黃大仙區分校）,Singapore International School (Hong Kong) (黃大仙區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01624,香港國際學校（第4校）,Hong Kong International School (中西區),中學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01625,諾德安達國際學校（北區）,Nord Anglia International School Hong Kong (觀塘區),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01626,加拿大國際學校（南區分校）,Canadian International School of Hong Kong (南區),中學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01627,法國國際學校（北區）,French International School (元朗區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01628,新加坡國際學校（荃灣區分校）,Singapore International School (Hong Kong) (荃灣區),中學,國際學校,私立,CANADIAN,HIGH,dataset curriculum=Canadian
+sch_01629,哈羅香港國際學校（東區）,Harrow International School Hong Kong (灣仔區),中學,國際學校,私立,AUSTRALIAN,HIGH,dataset curriculum=Australian
+sch_01630,哈羅香港國際學校（南區）,Harrow International School Hong Kong (油尖旺區),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01631,新加坡國際學校（北區）,Singapore International School (Hong Kong) (九龍城區),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01632,加拿大國際學校（北區）,Canadian International School of Hong Kong (深水埗區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01633,新加坡國際學校（大埔區）,Singapore International School (Hong Kong) (大埔區),中學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01634,墨爾文國際學校（南區分校）,Malvern College Hong Kong (南區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01635,墨爾文國際學校（深水埗區分校）,Malvern College Hong Kong (深水埗區),中學,國際學校,私立,AMERICAN,HIGH,dataset curriculum=American
+sch_01636,哈羅香港國際學校（油尖旺區）,Harrow International School Hong Kong (油尖旺區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01637,美國學校（第2校）,American School Hong Kong (沙田區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01638,美國學校（南區）,American School Hong Kong (深水埗區),中學,國際學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01639,法國國際學校（大埔區）,French International School (大埔區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01640,美國學校（第5校）,American School Hong Kong (九龍城區),中學,國際學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01641,德信中學,Tak Sun Secondary School,中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01642,德信中學,Tak Sun Secondary School,中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01643,培僑葵青區中學,Pui Kiu Middle School,中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01644,英華書院,Ying Wa College,中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01645,匯基書院,United Christian College,中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01646,英華書院,Ying Wa College,中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01647,聖保羅男女油尖旺區中學,St. Paul's Co-educational College,中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01648,香港浸會大學附屬學校王錦輝中九龍城區小學,HKBU Affiliated School Wong Kam Fai Secondary and Primary School,中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01649,聖保羅男女葵青區中學,St. Paul's Co-educational College,中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01650,保良局羅氏基金南區中學,PLK Laws Foundation College,中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01651,德信離島區中學,Tak Sun Secondary School,中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01652,拔萃女書院,Diocesan Girls' School,中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01653,香港浸會大學附屬學校王錦輝中小學,HKBU Affiliated School Wong Kam Fai Secondary and Primary School,中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01654,港大同學會書院（北區）,HKUGA College (灣仔區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01655,聖保羅男女黃大仙區中學（第5校）,St. Paul's Co-educational College (黃大仙區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01656,保良局羅氏基金南區中學（第1校）,PLK Laws Foundation College (南區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01657,德信中學（西區）,Tak Sun Secondary School (屯門區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01658,拔萃男書院（東區）,Diocesan Boys' School (油尖旺區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01659,拔萃女書院（北區分校）,Diocesan Girls' School (北區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01660,優才（楊殷有娣）書院（第5校）,G.T. (Ellen Yeung) College (九龍城區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01661,香港浸會大學附屬學校王錦輝中南區小學（北區）,HKBU Affiliated School Wong Kam Fai Secondary and Primary School (南區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01662,拔萃男書院（西貢區）,Diocesan Boys' School (西貢區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01663,匯基書院（南區）,United Christian College (南區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01664,拔萃男書院（西區）,Diocesan Boys' School (觀塘區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01665,匯基書院（西區）,United Christian College (油尖旺區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01666,匯基書院（北區）,United Christian College (東區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01667,保良局羅氏基金中學（深水埗區）,PLK Laws Foundation College (深水埗區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01668,聖保羅男女荃灣區中學（荃灣區分校）,St. Paul's Co-educational College (荃灣區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01669,培僑灣仔區中學（灣仔區）,Pui Kiu Middle School (灣仔區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01670,聖保羅男女油尖旺區中學（油尖旺區分校）,St. Paul's Co-educational College (油尖旺區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01671,聖保羅男女深水埗區中學（南區）,St. Paul's Co-educational College (深水埗區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01672,拔萃男書院（第2校）,Diocesan Boys' School (觀塘區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01673,培僑九龍城區中學（九龍城區）,Pui Kiu Middle School (九龍城區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01674,港大同學會書院（第4校）,HKUGA College (深水埗區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01675,拔萃男書院（第5校）,Diocesan Boys' School (南區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01676,拔萃女書院（第1校）,Diocesan Girls' School (西貢區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01677,聖保羅男女灣仔區中學（第2校）,St. Paul's Co-educational College (灣仔區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01678,拔萃女書院（第3校）,Diocesan Girls' School (大埔區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01679,拔萃女書院（油尖旺區分校）,Diocesan Girls' School (油尖旺區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01680,拔萃女書院（中西區分校）,Diocesan Girls' School (中西區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01681,港大同學會書院（南區）,HKUGA College (南區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01682,拔萃男書院（第2校）,Diocesan Boys' School (中西區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01683,德信北區中學（東區）,Tak Sun Secondary School (北區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01684,拔萃男書院（油尖旺區）,Diocesan Boys' School (油尖旺區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01685,德信南區中學（西區）,Tak Sun Secondary School (南區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01686,港大同學會書院（北區）,HKUGA College (南區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01687,拔萃女書院（第2校）,Diocesan Girls' School (中西區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01688,英華書院（沙田區分校）,Ying Wa College (沙田區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01689,聖保羅書院（第4校）,St. Paul's College (南區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01690,匯基書院（黃大仙區）,United Christian College (黃大仙區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01691,德信中學（南區）,Tak Sun Secondary School (葵青區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01692,德信黃大仙區中學（北區）,Tak Sun Secondary School (黃大仙區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01693,港大同學會書院（油尖旺區）,HKUGA College (油尖旺區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01694,匯基書院（中西區）,United Christian College (中西區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01695,英華書院（第5校）,Ying Wa College (荃灣區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01696,優才（楊殷有娣）書院（第1校）,G.T. (Ellen Yeung) College (深水埗區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01697,香港浸會大學附屬學校王錦輝中九龍城區小學（第2校）,HKBU Affiliated School Wong Kam Fai Secondary and Primary School (九龍城區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01698,拔萃男書院（第3校）,Diocesan Boys' School (屯門區),中學,直資學校,直資,HK_LOCAL|IB,MED,dataset curriculum=dual-track (assumed HK_LOCAL+IB; please verify)
+sch_01699,聖保羅書院（第4校）,St. Paul's College (離島區),中學,直資學校,直資,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01700,港大同學會書院（第5校）,HKUGA College (觀塘區),中學,直資學校,直資,IB,HIGH,dataset curriculum=IB
+sch_01701,玫瑰崗學校,Rosaryhill School,中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01702,聖士提反書院,St. Stephen's College,中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01703,九龍華仁書院,"Wah Yan College, Kowloon",中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01704,高主教書院,Raimondi College,中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01705,聖士提反書院,St. Stephen's College,中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01706,聖士提反書院,St. Stephen's College,中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01707,香港華仁書院,"Wah Yan College, Hong Kong",中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01708,九龍華仁書院,"Wah Yan College, Kowloon",中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01709,玫瑰崗學校（第4校）,Rosaryhill School (北區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01710,九龍華仁書院（深水埗區分校）,"Wah Yan College, Kowloon (深水埗區)",中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01711,香港華仁書院（北區）,"Wah Yan College, Hong Kong (中西區)",中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01712,德望學校（第2校）,Good Hope School (九龍城區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01713,香港華仁書院（東區）,"Wah Yan College, Hong Kong (灣仔區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01714,德望學校（屯門區）,Good Hope School (屯門區),中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01715,香港華仁書院（東區）,"Wah Yan College, Hong Kong (沙田區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01716,高主教書院（北區）,Raimondi College (黃大仙區),中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01717,九龍華仁書院（觀塘區）,"Wah Yan College, Kowloon (觀塘區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01718,聖士提反書院（第3校）,St. Stephen's College (沙田區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01719,香港華仁書院（第4校）,"Wah Yan College, Hong Kong (深水埗區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01720,玫瑰崗學校（屯門區分校）,Rosaryhill School (屯門區),中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01721,九龍華仁書院（第1校）,"Wah Yan College, Kowloon (九龍城區)",中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01722,香港華仁書院（沙田區）,"Wah Yan College, Hong Kong (沙田區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01723,聖士提反書院（南區）,St. Stephen's College (灣仔區),中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01724,玫瑰崗學校（南區）,Rosaryhill School (南區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01725,香港華仁書院（第5校）,"Wah Yan College, Hong Kong (中西區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01726,玫瑰崗學校（黃大仙區分校）,Rosaryhill School (黃大仙區),中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01727,聖士提反書院（中西區）,St. Stephen's College (中西區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01728,德望學校（黃大仙區分校）,Good Hope School (黃大仙區),中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01729,香港華仁書院（荃灣區）,"Wah Yan College, Hong Kong (荃灣區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01730,九龍華仁書院（荃灣區分校）,"Wah Yan College, Kowloon (荃灣區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01731,德望學校（離島區）,Good Hope School (離島區),中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01732,九龍華仁書院（葵青區分校）,"Wah Yan College, Kowloon (葵青區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01733,玫瑰崗學校（油尖旺區）,Rosaryhill School (油尖旺區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01734,協恩南區中學（南區分校）,Heep Yunn School (南區),中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01735,香港華仁書院（第5校）,"Wah Yan College, Hong Kong (中西區)",中學,私立學校,私立,HK_LOCAL,HIGH,dataset curriculum=DSE
+sch_01736,聖士提反書院（大埔區分校）,St. Stephen's College (大埔區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01737,聖士提反書院（南區分校）,St. Stephen's College (南區),中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01738,聖士提反書院（第3校）,St. Stephen's College (荃灣區),中學,私立學校,私立,IB,HIGH,dataset curriculum=IB
+sch_01739,德望學校（中西區）,Good Hope School (中西區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01740,玫瑰崗學校（東區）,Rosaryhill School (東區),中學,私立學校,私立,BRITISH,HIGH,dataset curriculum=British
+sch_01741,保良局中學,Po Leung Kuk Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01742,中華基督教會離島區中學,C.C.C. Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01743,循道衛理中學,Methodist Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01744,佛教中學,Buddhist Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01745,香港道教聯合會中學,Hong Kong Taoist Association Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01746,道教九龍城區中學,Taoist Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01747,佛教中西區中學,Buddhist Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01748,循道衛理中學,Methodist Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01749,仁濟醫院屯門區中學,Yan Chai Hospital Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01750,佛教大埔區中學,Buddhist Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01751,佛教黃大仙區中學,Buddhist Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01752,救世軍中學,Salvation Army Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01753,嗇色園中學,Sik Sik Yuen Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01754,香港道教聯合會中學,Hong Kong Taoist Association Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01755,救世軍中學,Salvation Army Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01756,救世軍西貢區中學,Salvation Army Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01757,順德聯誼總會黃大仙區中學,Shun Tak Fraternal Association Secondary School,中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01758,保良局中學（第3校）,Po Leung Kuk Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01759,道教北區中學（北區）,Taoist Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01760,順德聯誼總會黃大仙區中學（黃大仙區）,Shun Tak Fraternal Association Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01761,浸信會觀塘區中學（觀塘區分校）,Baptist Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01762,路德會屯門區中學（屯門區分校）,Lutheran Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01763,嗇色園中學（九龍城區）,Sik Sik Yuen Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01764,仁濟醫院中學（深水埗區分校）,Yan Chai Hospital Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01765,天主教中學（第5校）,Catholic Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01766,道教北區中學（北區）,Taoist Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01767,順德聯誼總會中學（第2校）,Shun Tak Fraternal Association Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01768,浸信會南區中學（南區）,Baptist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01769,救世軍葵青區中學（第4校）,Salvation Army Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01770,聖公會中學（葵青區）,S.K.H. Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01771,保良局油尖旺區中學（第1校）,Po Leung Kuk Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01772,嗇色園中學（第2校）,Sik Sik Yuen Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01773,仁濟醫院中學（第3校）,Yan Chai Hospital Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01774,浸信會屯門區中學（西區）,Baptist Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01775,中華基督教會東區中學（東區分校）,C.C.C. Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01776,佛教中學（離島區）,Buddhist Secondary School (離島區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01777,佛教中學（西區）,Buddhist Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01778,香港道教聯合會中學（北區）,Hong Kong Taoist Association Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01779,路德會東區中學（北區）,Lutheran Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01780,救世軍深水埗區中學（西區）,Salvation Army Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01781,順德聯誼總會中學（油尖旺區分校）,Shun Tak Fraternal Association Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01782,嗇色園沙田區中學（第2校）,Sik Sik Yuen Secondary School (沙田區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01783,保良局黃大仙區中學（第3校）,Po Leung Kuk Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01784,香港道教聯合會中學（第4校）,Hong Kong Taoist Association Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01785,仁濟醫院深水埗區中學（深水埗區）,Yan Chai Hospital Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01786,天主教西貢區中學（東區）,Catholic Secondary School (西貢區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01787,仁濟醫院中學（葵青區）,Yan Chai Hospital Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01788,保良局深水埗區中學（深水埗區）,Po Leung Kuk Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01789,保良局灣仔區中學（灣仔區）,Po Leung Kuk Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01790,天主教觀塘區中學（觀塘區分校）,Catholic Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01791,道教油尖旺區中學（油尖旺區）,Taoist Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01792,東華三院中學（北區分校）,Tung Wah Group of Hospitals Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01793,聖公會中學（屯門區）,S.K.H. Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01794,仁濟醫院深水埗區中學（深水埗區）,Yan Chai Hospital Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01795,順德聯誼總會中學（第5校）,Shun Tak Fraternal Association Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01796,循道衛理灣仔區中學（第1校）,Methodist Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01797,救世軍中西區中學（中西區）,Salvation Army Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01798,東華三院中學（荃灣區分校）,Tung Wah Group of Hospitals Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01799,佛教中學（黃大仙區）,Buddhist Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01800,救世軍中學（南區）,Salvation Army Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01801,博愛醫院南區中學（東區）,Pok Oi Hospital Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01802,路德會南區中學（第2校）,Lutheran Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01803,中華基督教會中學（東區）,C.C.C. Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01804,香港道教聯合會中學（深水埗區分校）,Hong Kong Taoist Association Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01805,聖公會中學（第5校）,S.K.H. Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01806,天主教中學（東區）,Catholic Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01807,浸信會大埔區中學（北區）,Baptist Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01808,聖公會中西區中學（中西區分校）,S.K.H. Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01809,保良局中學（油尖旺區）,Po Leung Kuk Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01810,中華基督教會南區中學（南區分校）,C.C.C. Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01811,博愛醫院油尖旺區中學（第1校）,Pok Oi Hospital Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01812,聖公會荃灣區中學（第2校）,S.K.H. Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01813,嗇色園中學（第3校）,Sik Sik Yuen Secondary School (沙田區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01814,浸信會深水埗區中學（北區）,Baptist Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01815,救世軍黃大仙區中學（黃大仙區分校）,Salvation Army Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01816,順德聯誼總會深水埗區中學（東區）,Shun Tak Fraternal Association Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01817,博愛醫院中學（北區）,Pok Oi Hospital Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01818,博愛醫院中學（深水埗區）,Pok Oi Hospital Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01819,中華基督教會南區中學（南區）,C.C.C. Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01820,中華基督教會中學（北區）,C.C.C. Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01821,救世軍南區中學（南區）,Salvation Army Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01822,路德會東區中學（東區）,Lutheran Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01823,仁濟醫院中學（第3校）,Yan Chai Hospital Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01824,順德聯誼總會油尖旺區中學（第4校）,Shun Tak Fraternal Association Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01825,順德聯誼總會中學（第5校）,Shun Tak Fraternal Association Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01826,聖公會中學（北區）,S.K.H. Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01827,博愛醫院中學（東區）,Pok Oi Hospital Secondary School (西貢區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01828,浸信會中學（第3校）,Baptist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01829,天主教油尖旺區中學（油尖旺區）,Catholic Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01830,佛教中西區中學（西區）,Buddhist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01831,博愛醫院中學（東區）,Pok Oi Hospital Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01832,浸信會中學（北區）,Baptist Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01833,東華三院中學（第3校）,Tung Wah Group of Hospitals Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01834,仁濟醫院南區中學（南區分校）,Yan Chai Hospital Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01835,循道衛理沙田區中學（第5校）,Methodist Secondary School (沙田區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01836,路德會中學（南區）,Lutheran Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01837,救世軍九龍城區中學（西區）,Salvation Army Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01838,道教觀塘區中學（西區）,Taoist Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01839,浸信會東區中學（第4校）,Baptist Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01840,路德會大埔區中學（大埔區分校）,Lutheran Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01841,博愛醫院中學（黃大仙區分校）,Pok Oi Hospital Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01842,救世軍中學（第2校）,Salvation Army Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01843,天主教中學（荃灣區分校）,Catholic Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01844,佛教東區中學（西區）,Buddhist Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01845,天主教中學（第5校）,Catholic Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01846,中華基督教會東區中學（東區）,C.C.C. Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01847,東華三院中學（北區）,Tung Wah Group of Hospitals Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01848,仁濟醫院觀塘區中學（第3校）,Yan Chai Hospital Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01849,香港道教聯合會東區中學（東區）,Hong Kong Taoist Association Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01850,浸信會中學（中西區分校）,Baptist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01851,中華基督教會中學（大埔區）,C.C.C. Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01852,中華基督教會北區中學（南區）,C.C.C. Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01853,保良局元朗區中學（南區）,Po Leung Kuk Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01854,救世軍九龍城區中學（九龍城區）,Salvation Army Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01855,東華三院中學（北區）,Tung Wah Group of Hospitals Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01856,聖公會北區中學（北區）,S.K.H. Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01857,救世軍中學（大埔區分校）,Salvation Army Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01858,天主教南區中學（東區）,Catholic Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01859,香港道教聯合會東區中學（第4校）,Hong Kong Taoist Association Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01860,佛教元朗區中學（西區）,Buddhist Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01861,路德會中學（九龍城區分校）,Lutheran Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01862,中華基督教會南區中學（南區）,C.C.C. Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01863,道教南區中學（南區分校）,Taoist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01864,仁濟醫院屯門區中學（屯門區分校）,Yan Chai Hospital Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01865,聖公會中學（第5校）,S.K.H. Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01866,仁濟醫院深水埗區中學（第1校）,Yan Chai Hospital Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01867,救世軍中學（西區）,Salvation Army Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01868,香港道教聯合會屯門區中學（屯門區分校）,Hong Kong Taoist Association Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01869,道教中學（北區）,Taoist Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01870,嗇色園灣仔區中學（第5校）,Sik Sik Yuen Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01871,聖公會中學（油尖旺區分校）,S.K.H. Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01872,順德聯誼總會深水埗區中學（深水埗區）,Shun Tak Fraternal Association Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01873,香港道教聯合會九龍城區中學（九龍城區分校）,Hong Kong Taoist Association Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01874,中華基督教會元朗區中學（元朗區分校）,C.C.C. Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01875,保良局中學（第5校）,Po Leung Kuk Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01876,聖公會中學（南區）,S.K.H. Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01877,路德會中學（屯門區）,Lutheran Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01878,佛教南區中學（第3校）,Buddhist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01879,香港道教聯合會中學（第4校）,Hong Kong Taoist Association Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01880,仁濟醫院中學（第5校）,Yan Chai Hospital Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01881,保良局中學（北區分校）,Po Leung Kuk Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01882,循道衛理中學（東區分校）,Methodist Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01883,香港道教聯合會深水埗區中學（深水埗區分校）,Hong Kong Taoist Association Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01884,聖公會大埔區中學（大埔區分校）,S.K.H. Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01885,循道衛理中學（第5校）,Methodist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01886,路德會中學（油尖旺區分校）,Lutheran Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01887,嗇色園中學（九龍城區分校）,Sik Sik Yuen Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01888,路德會中西區中學（第3校）,Lutheran Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01889,循道衛理中學（西區）,Methodist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01890,嗇色園中學（油尖旺區）,Sik Sik Yuen Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01891,順德聯誼總會中西區中學（中西區分校）,Shun Tak Fraternal Association Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01892,聖公會中學（第2校）,S.K.H. Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01893,博愛醫院沙田區中學（第3校）,Pok Oi Hospital Secondary School (沙田區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01894,中華基督教會觀塘區中學（第4校）,C.C.C. Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01895,佛教元朗區中學（元朗區）,Buddhist Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01896,順德聯誼總會中學（西區）,Shun Tak Fraternal Association Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01897,嗇色園中學（南區）,Sik Sik Yuen Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01898,聖公會觀塘區中學（東區）,S.K.H. Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01899,道教中西區中學（中西區）,Taoist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01900,天主教九龍城區中學（九龍城區分校）,Catholic Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01901,循道衛理中學（北區）,Methodist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01902,浸信會中學（九龍城區分校）,Baptist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01903,仁濟醫院中學（中西區分校）,Yan Chai Hospital Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01904,嗇色園中學（第4校）,Sik Sik Yuen Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01905,聖公會中學（深水埗區）,S.K.H. Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01906,順德聯誼總會中學（第1校）,Shun Tak Fraternal Association Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01907,路德會西貢區中學（西貢區分校）,Lutheran Secondary School (西貢區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01908,香港道教聯合會灣仔區中學（北區）,Hong Kong Taoist Association Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01909,救世軍屯門區中學（屯門區分校）,Salvation Army Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01910,浸信會中學（深水埗區）,Baptist Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01911,嗇色園南區中學（第1校）,Sik Sik Yuen Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01912,東華三院深水埗區中學（北區）,Tung Wah Group of Hospitals Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01913,佛教中西區中學（第3校）,Buddhist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01914,佛教離島區中學（離島區）,Buddhist Secondary School (離島區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01915,博愛醫院中學（西區）,Pok Oi Hospital Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01916,浸信會九龍城區中學（西區）,Baptist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01917,路德會中學（南區）,Lutheran Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01918,浸信會中學（南區）,Baptist Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01919,東華三院荃灣區中學（荃灣區分校）,Tung Wah Group of Hospitals Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01920,香港道教聯合會油尖旺區中學（油尖旺區分校）,Hong Kong Taoist Association Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01921,博愛醫院中學（第1校）,Pok Oi Hospital Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01922,聖公會中學（東區）,S.K.H. Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01923,保良局中學（第3校）,Po Leung Kuk Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01924,香港道教聯合會中學（觀塘區）,Hong Kong Taoist Association Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01925,嗇色園北區中學（北區）,Sik Sik Yuen Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01926,聖公會灣仔區中學（灣仔區）,S.K.H. Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01927,救世軍中學（第2校）,Salvation Army Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01928,保良局中學（東區）,Po Leung Kuk Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01929,路德會北區中學（西區）,Lutheran Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01930,救世軍中學（南區）,Salvation Army Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01931,道教中學（屯門區）,Taoist Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01932,路德會中學（北區分校）,Lutheran Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01933,順德聯誼總會油尖旺區中學（南區）,Shun Tak Fraternal Association Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01934,路德會中學（觀塘區）,Lutheran Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01935,循道衛理荃灣區中學（第5校）,Methodist Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01936,嗇色園觀塘區中學（觀塘區）,Sik Sik Yuen Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01937,救世軍中學（黃大仙區分校）,Salvation Army Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01938,浸信會九龍城區中學（九龍城區）,Baptist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01939,道教油尖旺區中學（油尖旺區）,Taoist Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01940,順德聯誼總會中學（觀塘區分校）,Shun Tak Fraternal Association Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01941,仁濟醫院中學（大埔區分校）,Yan Chai Hospital Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01942,救世軍中學（元朗區）,Salvation Army Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01943,天主教屯門區中學（屯門區）,Catholic Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01944,保良局中學（東區）,Po Leung Kuk Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01945,聖公會東區中學（第5校）,S.K.H. Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01946,佛教葵青區中學（第1校）,Buddhist Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01947,路德會東區中學（東區）,Lutheran Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01948,博愛醫院中學（第3校）,Pok Oi Hospital Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01949,東華三院中學（東區）,Tung Wah Group of Hospitals Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01950,聖公會中學（西區）,S.K.H. Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01951,聖公會中學（第1校）,S.K.H. Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01952,聖公會北區中學（北區分校）,S.K.H. Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01953,中華基督教會觀塘區中學（第3校）,C.C.C. Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01954,佛教中學（南區）,Buddhist Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01955,路德會元朗區中學（第5校）,Lutheran Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01956,仁濟醫院中學（南區分校）,Yan Chai Hospital Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01957,嗇色園中學（東區）,Sik Sik Yuen Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01958,路德會觀塘區中學（第3校）,Lutheran Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01959,中華基督教會深水埗區中學（第4校）,C.C.C. Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01960,路德會中西區中學（中西區）,Lutheran Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01961,中華基督教會南區中學（南區）,C.C.C. Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01962,浸信會中西區中學（中西區）,Baptist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01963,循道衛理中西區中學（第3校）,Methodist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01964,循道衛理中學（北區）,Methodist Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01965,天主教南區中學（南區）,Catholic Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01966,救世軍元朗區中學（元朗區）,Salvation Army Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01967,聖公會深水埗區中學（深水埗區分校）,S.K.H. Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01968,天主教中西區中學（南區）,Catholic Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01969,嗇色園中學（油尖旺區）,Sik Sik Yuen Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01970,聖公會中西區中學（西區）,S.K.H. Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01971,循道衛理南區中學（南區分校）,Methodist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01972,浸信會中學（灣仔區分校）,Baptist Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01973,道教葵青區中學（葵青區）,Taoist Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01974,道教中學（油尖旺區分校）,Taoist Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01975,路德會中學（第5校）,Lutheran Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01976,循道衛理灣仔區中學（北區）,Methodist Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01977,循道衛理九龍城區中學（南區）,Methodist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01978,中華基督教會元朗區中學（第3校）,C.C.C. Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01979,循道衛理中學（中西區）,Methodist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01980,天主教中學（深水埗區）,Catholic Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01981,博愛醫院中學（北區）,Pok Oi Hospital Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01982,香港道教聯合會中學（九龍城區）,Hong Kong Taoist Association Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01983,浸信會灣仔區中學（灣仔區分校）,Baptist Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01984,保良局中學（東區）,Po Leung Kuk Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01985,博愛醫院九龍城區中學（西區）,Pok Oi Hospital Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01986,路德會中學（觀塘區分校）,Lutheran Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01987,救世軍東區中學（西區）,Salvation Army Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01988,保良局荃灣區中學（西區）,Po Leung Kuk Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01989,東華三院深水埗區中學（西區）,Tung Wah Group of Hospitals Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01990,聖公會中學（大埔區）,S.K.H. Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01991,嗇色園南區中學（南區）,Sik Sik Yuen Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01992,仁濟醫院中學（沙田區分校）,Yan Chai Hospital Secondary School (沙田區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01993,循道衛理中學（北區）,Methodist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01994,道教中學（第4校）,Taoist Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01995,保良局中學（西區）,Po Leung Kuk Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01996,嗇色園觀塘區中學（第1校）,Sik Sik Yuen Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01997,路德會中學（灣仔區）,Lutheran Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01998,香港道教聯合會中學（西貢區分校）,Hong Kong Taoist Association Secondary School (西貢區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_01999,循道衛理中西區中學（中西區分校）,Methodist Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02000,道教中學（第5校）,Taoist Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02001,浸信會中學（九龍城區分校）,Baptist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02002,仁濟醫院葵青區中學（葵青區分校）,Yan Chai Hospital Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02003,道教南區中學（第3校）,Taoist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02004,救世軍黃大仙區中學（第4校）,Salvation Army Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02005,保良局南區中學（南區分校）,Po Leung Kuk Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02006,順德聯誼總會南區中學（西區）,Shun Tak Fraternal Association Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02007,中華基督教會中學（第2校）,C.C.C. Secondary School (離島區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02008,佛教中學（東區）,Buddhist Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02009,嗇色園中學（黃大仙區分校）,Sik Sik Yuen Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02010,聖公會九龍城區中學（第5校）,S.K.H. Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02011,天主教中學（九龍城區分校）,Catholic Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02012,順德聯誼總會沙田區中學（第2校）,Shun Tak Fraternal Association Secondary School (沙田區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02013,天主教東區中學（西區）,Catholic Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02014,聖公會北區中學（第4校）,S.K.H. Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02015,佛教觀塘區中學（觀塘區）,Buddhist Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02016,博愛醫院中學（第1校）,Pok Oi Hospital Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02017,救世軍元朗區中學（元朗區）,Salvation Army Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02018,浸信會中學（黃大仙區分校）,Baptist Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02019,道教中學（觀塘區分校）,Taoist Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02020,浸信會葵青區中學（第5校）,Baptist Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02021,香港道教聯合會灣仔區中學（灣仔區）,Hong Kong Taoist Association Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02022,博愛醫院西貢區中學（西貢區分校）,Pok Oi Hospital Secondary School (西貢區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02023,順德聯誼總會深水埗區中學（深水埗區分校）,Shun Tak Fraternal Association Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02024,保良局中學（北區）,Po Leung Kuk Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02025,救世軍東區中學（東區分校）,Salvation Army Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02026,聖公會沙田區中學（西區）,S.K.H. Secondary School (沙田區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02027,東華三院中學（中西區）,Tung Wah Group of Hospitals Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02028,博愛醫院中學（北區）,Pok Oi Hospital Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02029,嗇色園中學（深水埗區分校）,Sik Sik Yuen Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02030,仁濟醫院中學（第5校）,Yan Chai Hospital Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02031,順德聯誼總會中學（西貢區）,Shun Tak Fraternal Association Secondary School (西貢區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02032,循道衛理中學（第2校）,Methodist Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02033,聖公會深水埗區中學（南區）,S.K.H. Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02034,道教九龍城區中學（西區）,Taoist Secondary School (九龍城區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02035,救世軍東區中學（東區）,Salvation Army Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02036,路德會油尖旺區中學（第1校）,Lutheran Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02037,東華三院油尖旺區中學（北區）,Tung Wah Group of Hospitals Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02038,浸信會南區中學（南區分校）,Baptist Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02039,中華基督教會東區中學（第4校）,C.C.C. Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02040,救世軍中學（東區）,Salvation Army Secondary School (大埔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02041,仁濟醫院觀塘區中學（觀塘區分校）,Yan Chai Hospital Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02042,天主教黃大仙區中學（第2校）,Catholic Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02043,仁濟醫院中學（第3校）,Yan Chai Hospital Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02044,香港道教聯合會元朗區中學（元朗區分校）,Hong Kong Taoist Association Secondary School (元朗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02045,浸信會中學（灣仔區分校）,Baptist Secondary School (灣仔區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02046,聖公會中學（荃灣區分校）,S.K.H. Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02047,救世軍中學（葵青區分校）,Salvation Army Secondary School (葵青區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02048,香港道教聯合會中學（東區分校）,Hong Kong Taoist Association Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02049,順德聯誼總會中學（東區）,Shun Tak Fraternal Association Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02050,循道衛理油尖旺區中學（油尖旺區分校）,Methodist Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02051,道教深水埗區中學（第1校）,Taoist Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02052,救世軍油尖旺區中學（油尖旺區）,Salvation Army Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02053,天主教中學（第3校）,Catholic Secondary School (離島區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02054,救世軍離島區中學（離島區）,Salvation Army Secondary School (離島區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02055,仁濟醫院中學（屯門區）,Yan Chai Hospital Secondary School (屯門區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02056,保良局中學（第1校）,Po Leung Kuk Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02057,路德會中學（東區分校）,Lutheran Secondary School (東區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02058,香港道教聯合會中西區中學（中西區）,Hong Kong Taoist Association Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02059,東華三院中學（深水埗區分校）,Tung Wah Group of Hospitals Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02060,仁濟醫院中學（第5校）,Yan Chai Hospital Secondary School (南區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02061,保良局中學（西貢區分校）,Po Leung Kuk Secondary School (西貢區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02062,仁濟醫院中學（油尖旺區分校）,Yan Chai Hospital Secondary School (油尖旺區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02063,保良局北區中學（北區）,Po Leung Kuk Secondary School (北區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02064,中華基督教會深水埗區中學（第4校）,C.C.C. Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02065,浸信會中學（黃大仙區分校）,Baptist Secondary School (黃大仙區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02066,保良局中學（第1校）,Po Leung Kuk Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02067,佛教中學（深水埗區）,Buddhist Secondary School (深水埗區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02068,保良局中學（第3校）,Po Leung Kuk Secondary School (荃灣區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02069,天主教中西區中學（中西區）,Catholic Secondary School (中西區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02070,救世軍觀塘區中學（觀塘區）,Salvation Army Secondary School (觀塘區),中學,資助學校,資助,HK_LOCAL,HIGH,fundingType=資助 => HK_LOCAL
+sch_02071,金文泰中學,Clementi Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02072,觀塘官立北區中學,Kwun Tong Government Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02073,荃灣官立葵青區中學,Tsuen Wan Government Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02074,何文田官立中學,Ho Man Tin Government Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02075,金文泰觀塘區中學,Clementi Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02076,伊利沙伯沙田區中學,Queen Elizabeth School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02077,庇理羅士女子沙田區中學,Belilios Public School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02078,何文田官立中學,Ho Man Tin Government Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02079,荃灣官立中學,Tsuen Wan Government Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02080,何文田官立中學,Ho Man Tin Government Secondary School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02081,伊利沙伯中學,Queen Elizabeth School,中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02082,何文田官立中學（北區）,Ho Man Tin Government Secondary School (大埔區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02083,觀塘官立葵青區中學（東區）,Kwun Tong Government Secondary School (葵青區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02084,官立嘉道理爵士西貢區中學（西貢區）,Sir Ellis Kadoorie Secondary School (西貢區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02085,伊利沙伯中學（第5校）,Queen Elizabeth School (中西區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02086,何文田官立灣仔區中學（灣仔區）,Ho Man Tin Government Secondary School (灣仔區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02087,官立嘉道理爵士沙田區中學（沙田區分校）,Sir Ellis Kadoorie Secondary School (沙田區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02088,伊利沙伯中學（油尖旺區分校）,Queen Elizabeth School (油尖旺區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02089,觀塘官立屯門區中學（北區）,Kwun Tong Government Secondary School (屯門區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02090,伊利沙伯中學（東區）,Queen Elizabeth School (東區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02091,皇仁書院（東區）,Queen's College (西貢區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02092,英皇書院（油尖旺區分校）,King's College (油尖旺區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02093,英皇書院（屯門區分校）,King's College (屯門區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02094,觀塘官立中學（第4校）,Kwun Tong Government Secondary School (北區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02095,賽馬會官立深水埗區中學（深水埗區分校）,Jockey Club Government Secondary School (深水埗區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02096,荃灣官立中學（北區）,Tsuen Wan Government Secondary School (東區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02097,觀塘官立中學（北區）,Kwun Tong Government Secondary School (深水埗區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02098,賽馬會官立中學（觀塘區分校）,Jockey Club Government Secondary School (觀塘區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02099,荃灣官立中學（東區）,Tsuen Wan Government Secondary School (九龍城區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
+sch_02100,觀塘官立中學（東區）,Kwun Tong Government Secondary School (深水埗區),中學,官立學校,官立,HK_LOCAL,HIGH,fundingType=官立 => HK_LOCAL
