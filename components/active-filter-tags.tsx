@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity, Platform, StyleSheet } from "react-native";
 import { useFilter, getFilterLabels, hasActiveFilters } from "@/lib/filter-context";
-import type { District18, CurriculumV2 } from "@/types/school";
-import { CURRICULUM_V2_LABELS } from "@/types/school";
+import type { District18, CurriculumV2, InstructionLanguage } from "@/types/school";
+import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
 export function ActiveFilterTags() {
@@ -94,17 +94,17 @@ export function ActiveFilterTags() {
     });
   });
 
-  // 語言
-  if (state.language) {
+  // 授課語言
+  state.instructionLanguages.forEach((lang) => {
     tags.push({
-      key: "language",
-      label: state.language,
+      key: `instructionLang-${lang}`,
+      label: INSTRUCTION_LANGUAGE_LABELS[lang],
       onRemove: () => {
         triggerHaptic();
-        dispatch({ type: "CLEAR_LANGUAGE" });
+        dispatch({ type: "TOGGLE_INSTRUCTION_LANGUAGE", payload: lang as InstructionLanguage });
       },
     });
-  }
+  });
 
   return (
     <View style={styles.container}>

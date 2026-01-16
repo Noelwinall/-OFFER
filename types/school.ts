@@ -41,6 +41,32 @@ export const CURRICULUM_V2_LABELS: Record<CurriculumV2, string> = {
 
 export type Language = "全英文" | "中英雙語" | "以中文為主";
 
+/**
+ * Instruction Language - Medium of Instruction
+ * Source: CHSC profiles / EDB data
+ */
+export type InstructionLanguage =
+  | "ENGLISH"
+  | "CANTONESE"
+  | "PUTONGHUA"
+  | "FRENCH"
+  | "GERMAN"
+  | "JAPANESE"
+  | "KOREAN";
+
+/**
+ * InstructionLanguage display labels
+ */
+export const INSTRUCTION_LANGUAGE_LABELS: Record<InstructionLanguage, string> = {
+  ENGLISH: "英文",
+  CANTONESE: "粵語",
+  PUTONGHUA: "普通話",
+  FRENCH: "法文",
+  GERMAN: "德文",
+  JAPANESE: "日文",
+  KOREAN: "韓文",
+};
+
 export interface School {
   id: string;
   name: string;
@@ -54,6 +80,7 @@ export interface School {
   tuitionMax: number; // 學費上限（港幣/年）
   curriculum: Curriculum[];
   curriculumV2: CurriculumV2[]; // V2 課程分類（Primary/Secondary only）
+  instructionLanguages: InstructionLanguage[]; // 授課語言（Primary/Secondary only）
   language: Language;
   highlights: string[]; // 亮點描述（2-3 條）
   address: string;

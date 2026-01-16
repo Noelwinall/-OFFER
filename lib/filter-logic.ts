@@ -30,7 +30,16 @@ export function matchesAdvancedFilters(
     if (!hasMatchingCurriculumV2) return false;
   }
 
-  // 教學語言篩選（單選）
+  // 授課語言篩選（多選，任一匹配即可）
+  // Only applies to Primary/Secondary - KG schools have empty instructionLanguages
+  if (filters.instructionLanguages.length > 0) {
+    const hasMatchingLanguage = filters.instructionLanguages.some((l) =>
+      school.instructionLanguages.includes(l)
+    );
+    if (!hasMatchingLanguage) return false;
+  }
+
+  // 教學語言篩選（單選）- legacy filter
   if (filters.language && school.language !== filters.language) {
     return false;
   }

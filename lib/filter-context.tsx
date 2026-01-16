@@ -1,6 +1,6 @@
 import React, { createContext, useReducer, ReactNode } from "react";
 
-import type { Curriculum, CurriculumV2, Language, SchoolCategory, District, District18, Level } from "@/types/school";
+import type { Curriculum, CurriculumV2, InstructionLanguage, Language, SchoolCategory, District, District18, Level } from "@/types/school";
 import type { ExtendedCategory } from "@/constants/kg-nature";
 
 // 排序選項類型
@@ -13,6 +13,7 @@ export interface FilterState {
   district18: District18[];  // 18區篩選
   curriculum: Curriculum[];
   curriculumV2: CurriculumV2[];  // V2 課程篩選（Primary/Secondary only）
+  instructionLanguages: InstructionLanguage[];  // 授課語言篩選（Primary/Secondary only）
   language: Language | null;
   sortBy: SortOption;
 }
@@ -22,6 +23,7 @@ export type FilterAction =
   | { type: "CLEAR_STAGE" }
   | { type: "TOGGLE_CURRICULUM"; payload: Curriculum }
   | { type: "TOGGLE_CURRICULUM_V2"; payload: CurriculumV2 }
+  | { type: "TOGGLE_INSTRUCTION_LANGUAGE"; payload: InstructionLanguage }
   | { type: "SET_LANGUAGE"; payload: Language }
   | { type: "CLEAR_LANGUAGE" }
   | { type: "TOGGLE_CATEGORY"; payload: ExtendedCategory }
@@ -38,6 +40,7 @@ const initialState: FilterState = {
   district18: [],
   curriculum: [],
   curriculumV2: [],
+  instructionLanguages: [],
   language: null,
   sortBy: "relevance",
 };
@@ -77,6 +80,13 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         ? state.curriculumV2.filter((c) => c !== action.payload)
         : [...state.curriculumV2, action.payload];
       return { ...state, curriculumV2: updated };
+    }
+
+    case "TOGGLE_INSTRUCTION_LANGUAGE": {
+      const updated = state.instructionLanguages.includes(action.payload)
+        ? state.instructionLanguages.filter((l) => l !== action.payload)
+        : [...state.instructionLanguages, action.payload];
+      return { ...state, instructionLanguages: updated };
     }
 
     case "SET_LANGUAGE":
@@ -161,6 +171,7 @@ export function hasActiveFilters(state: FilterState): boolean {
     state.district18.length > 0 ||
     state.curriculum.length > 0 ||
     state.curriculumV2.length > 0 ||
+    state.instructionLanguages.length > 0 ||
     state.language !== null
   );
 }
@@ -191,6 +202,12 @@ export function getFilterLabels(state: FilterState): string[] {
     const { CURRICULUM_V2_LABELS } = require("@/types/school");
     const curriculumLabels = state.curriculumV2.map((c) => CURRICULUM_V2_LABELS[c] || c);
     labels.push(`課程: ${curriculumLabels.join(", ")}`);
+  }
+
+  if (state.instructionLanguages.length > 0) {
+    const { INSTRUCTION_LANGUAGE_LABELS } = require("@/types/school");
+    const langLabels = state.instructionLanguages.map((l) => INSTRUCTION_LANGUAGE_LABELS[l] || l);
+    labels.push(`授課語言: ${langLabels.join(", ")}`);
   }
 
   if (state.language) {

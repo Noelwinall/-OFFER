@@ -39,7 +39,7 @@ const DISTRICT_OPTIONS: { label: string; value: District }[] = [
 ];
 
 // 4. Curriculum V2 options (data-driven from school_curriculums)
-import type { CurriculumV2 } from "@/types/school";
+import type { CurriculumV2, InstructionLanguage } from "@/types/school";
 
 const CURRICULUM_V2_OPTIONS: { label: string; value: CurriculumV2 }[] = [
   { label: "本地課程（DSE）", value: "HK_LOCAL" },
@@ -52,11 +52,15 @@ const CURRICULUM_V2_OPTIONS: { label: string; value: CurriculumV2 }[] = [
   { label: "雙軌（本地+國際）", value: "DUAL_TRACK" },
 ];
 
-// 5. Teaching Language options
-const LANGUAGE_OPTIONS = [
-  { label: "全英文", value: "全英文" as const },
-  { label: "中英雙語", value: "中英雙語" as const },
-  { label: "以中文為主", value: "以中文為主" as const },
+// 5. Instruction Language options (Medium of Instruction)
+const INSTRUCTION_LANGUAGE_OPTIONS: { label: string; value: InstructionLanguage }[] = [
+  { label: "英文", value: "ENGLISH" },
+  { label: "粵語", value: "CANTONESE" },
+  { label: "普通話", value: "PUTONGHUA" },
+  { label: "法文", value: "FRENCH" },
+  { label: "德文", value: "GERMAN" },
+  { label: "日文", value: "JAPANESE" },
+  { label: "韓文", value: "KOREAN" },
 ];
 
 export function FilterSheet({ visible, onClose }: FilterSheetProps) {
@@ -96,7 +100,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
     if (state.district.length > 0) count++;
     if (state.district18.length > 0) count++;
     if (state.curriculumV2.length > 0) count++;
-    if (state.language) count++;
+    if (state.instructionLanguages.length > 0) count++;
     return count;
   };
 
@@ -355,19 +359,19 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
               </View>
 
-              {/* 5. 教學語言 (Teaching Language) */}
+              {/* 5. 授課語言 (Instruction Language / Medium of Instruction) */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>🌐 教學語言</Text>
+                <Text style={styles.sectionTitle}>🌐 授課語言</Text>
                 <View style={styles.chipContainer}>
-                  {LANGUAGE_OPTIONS.map((option) => {
-                    const isSelected = state.language === option.value;
+                  {INSTRUCTION_LANGUAGE_OPTIONS.map((option) => {
+                    const isSelected = state.instructionLanguages.includes(option.value);
                     return (
                       <TouchableOpacity
                         key={option.value}
                         style={[styles.chip, isSelected && styles.chipSelected]}
                         onPress={() => {
                           triggerHaptic();
-                          dispatch({ type: "SET_LANGUAGE", payload: option.value });
+                          dispatch({ type: "TOGGLE_INSTRUCTION_LANGUAGE", payload: option.value });
                         }}
                       >
                         <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
