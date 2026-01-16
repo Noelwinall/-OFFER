@@ -1,6 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity, Platform, StyleSheet } from "react-native";
 import { useFilter, getFilterLabels, hasActiveFilters } from "@/lib/filter-context";
-import type { District18 } from "@/types/school";
+import type { District18, CurriculumV2 } from "@/types/school";
+import { CURRICULUM_V2_LABELS } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
 export function ActiveFilterTags() {
@@ -81,14 +82,14 @@ export function ActiveFilterTags() {
     });
   });
 
-  // 課程
-  state.curriculum.forEach((curr) => {
+  // 課程 V2
+  state.curriculumV2.forEach((curr) => {
     tags.push({
-      key: `curriculum-${curr}`,
-      label: curr,
+      key: `curriculumV2-${curr}`,
+      label: CURRICULUM_V2_LABELS[curr],
       onRemove: () => {
         triggerHaptic();
-        dispatch({ type: "TOGGLE_CURRICULUM", payload: curr });
+        dispatch({ type: "TOGGLE_CURRICULUM_V2", payload: curr as CurriculumV2 });
       },
     });
   });

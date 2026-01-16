@@ -5,7 +5,8 @@ import { useColors } from "@/hooks/use-colors";
 import { isInternational } from "@/lib/international-schools";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
-import type { School } from "@/types/school";
+import type { School, CurriculumV2 } from "@/types/school";
+import { CURRICULUM_V2_LABELS } from "@/types/school";
 import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
@@ -130,6 +131,15 @@ export const SchoolCard = React.memo(function SchoolCard({
             <Text style={styles.sessionText}>{SESSION_LABELS[session]}</Text>
           </View>
         ))}
+        {/* 課程標籤 V2（Primary/Secondary only） */}
+        {school.curriculumV2 && school.curriculumV2.length > 0 && school.curriculumV2.map((curriculum) => (
+          <View
+            key={curriculum}
+            style={[styles.curriculumTag, { backgroundColor: getCurriculumColor(curriculum) }]}
+          >
+            <Text style={styles.curriculumText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
+          </View>
+        ))}
       </View>
 
       {/* 學費資訊 - R3-4 (DSS) + R3-5 (國際/私校) */}
@@ -165,6 +175,23 @@ function getDisplayTypeColor(school: School): string {
   };
   const displayType = getDisplayType(school);
   return colors[displayType] || colors["私立"];
+}
+
+/**
+ * 根據課程類型返回對應顏色
+ */
+function getCurriculumColor(curriculum: CurriculumV2): string {
+  const colors: Record<CurriculumV2, string> = {
+    HK_LOCAL: "#10B981",    // green
+    IB: "#F59E0B",          // amber
+    BRITISH: "#3B82F6",     // blue
+    AMERICAN: "#EF4444",    // red
+    CANADIAN: "#DC2626",    // red darker
+    AUSTRALIAN: "#059669",  // emerald
+    OTHER_INTL: "#8B5CF6",  // violet
+    DUAL_TRACK: "#EC4899",  // pink
+  };
+  return colors[curriculum] || "#6B7280";
 }
 
 /**
@@ -219,5 +246,15 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#FFFFFF",
     letterSpacing: 0.5,
+  },
+  curriculumTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  curriculumText: {
+    fontSize: 10,
+    fontWeight: "600",
+    color: "#FFFFFF",
   },
 });

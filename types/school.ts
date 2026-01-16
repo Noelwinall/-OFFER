@@ -10,6 +10,35 @@ export type District18 =
   | "離島區" | "葵青區" | "北區" | "西貢區" | "沙田區" | "大埔區" | "荃灣區" | "屯門區" | "元朗區"; // 新界 (9)
 export type Level = "幼稚園" | "小學" | "中學";
 export type Curriculum = "IB" | "DSE" | "IGCSE" | "A-Level" | "AP" | "美式課程" | "英式課程" | "德式課程" | "澳洲課程" | "新加坡課程" | "法式課程" | "加拿大課程" | "其他";
+
+/**
+ * Curriculum V2 - Standardized curriculum classification
+ * Used for filtering and display (Primary + Secondary only)
+ */
+export type CurriculumV2 =
+  | "HK_LOCAL"      // 本地課程（DSE）
+  | "IB"            // IB
+  | "BRITISH"       // 英國課程
+  | "AMERICAN"      // 美國課程
+  | "CANADIAN"      // 加拿大課程
+  | "AUSTRALIAN"    // 澳洲課程
+  | "OTHER_INTL"    // 其他國際課程
+  | "DUAL_TRACK";   // 雙軌（本地+國際）
+
+/**
+ * CurriculumV2 display labels
+ */
+export const CURRICULUM_V2_LABELS: Record<CurriculumV2, string> = {
+  HK_LOCAL: "本地課程（DSE）",
+  IB: "IB",
+  BRITISH: "英國課程",
+  AMERICAN: "美國課程",
+  CANADIAN: "加拿大課程",
+  AUSTRALIAN: "澳洲課程",
+  OTHER_INTL: "其他國際課程",
+  DUAL_TRACK: "雙軌（本地+國際）",
+};
+
 export type Language = "全英文" | "中英雙語" | "以中文為主";
 
 export interface School {
@@ -24,6 +53,7 @@ export interface School {
   tuitionMin: number; // 學費下限（港幣/年）
   tuitionMax: number; // 學費上限（港幣/年）
   curriculum: Curriculum[];
+  curriculumV2: CurriculumV2[]; // V2 課程分類（Primary/Secondary only）
   language: Language;
   highlights: string[]; // 亮點描述（2-3 條）
   address: string;

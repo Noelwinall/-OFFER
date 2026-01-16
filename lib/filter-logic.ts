@@ -21,12 +21,13 @@ export function matchesAdvancedFilters(
     return false;
   }
 
-  // 課程篩選（多選，任一匹配即可）
-  if (filters.curriculum.length > 0) {
-    const hasMatchingCurriculum = filters.curriculum.some((c) =>
-      school.curriculum.includes(c)
+  // 課程篩選 V2（多選，任一匹配即可）
+  // DUAL_TRACK is standalone - do NOT auto-include when filtering IB or BRITISH
+  if (filters.curriculumV2.length > 0) {
+    const hasMatchingCurriculumV2 = filters.curriculumV2.some((c) =>
+      school.curriculumV2.includes(c)
     );
-    if (!hasMatchingCurriculum) return false;
+    if (!hasMatchingCurriculumV2) return false;
   }
 
   // 教學語言篩選（單選）
@@ -175,10 +176,10 @@ export function calculateSearchRelevance(
     score += 15;
   }
 
-  // 課程匹配（加分）
+  // 課程匹配 V2（加分）
   if (
-    filters.curriculum.length > 0 &&
-    filters.curriculum.some((c) => school.curriculum.includes(c))
+    filters.curriculumV2.length > 0 &&
+    filters.curriculumV2.some((c) => school.curriculumV2.includes(c))
   ) {
     score += 10;
   }

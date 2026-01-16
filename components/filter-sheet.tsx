@@ -38,15 +38,18 @@ const DISTRICT_OPTIONS: { label: string; value: District }[] = [
   { label: "新界區", value: "新界" },
 ];
 
-// 4. Curriculum options
-const CURRICULUM_OPTIONS = [
-  { label: "IB 課程", value: "IB" as const },
-  { label: "DSE 課程", value: "DSE" as const },
-  { label: "IGCSE", value: "IGCSE" as const },
-  { label: "A-Level", value: "A-Level" as const },
-  { label: "AP 課程", value: "AP" as const },
-  { label: "美式課程", value: "美式課程" as const },
-  { label: "英式課程", value: "英式課程" as const },
+// 4. Curriculum V2 options (data-driven from school_curriculums)
+import type { CurriculumV2 } from "@/types/school";
+
+const CURRICULUM_V2_OPTIONS: { label: string; value: CurriculumV2 }[] = [
+  { label: "本地課程（DSE）", value: "HK_LOCAL" },
+  { label: "IB", value: "IB" },
+  { label: "英國課程", value: "BRITISH" },
+  { label: "美國課程", value: "AMERICAN" },
+  { label: "加拿大課程", value: "CANADIAN" },
+  { label: "澳洲課程", value: "AUSTRALIAN" },
+  { label: "其他國際課程", value: "OTHER_INTL" },
+  { label: "雙軌（本地+國際）", value: "DUAL_TRACK" },
 ];
 
 // 5. Teaching Language options
@@ -92,7 +95,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
     if (state.category.length > 0) count++;
     if (state.district.length > 0) count++;
     if (state.district18.length > 0) count++;
-    if (state.curriculum.length > 0) count++;
+    if (state.curriculumV2.length > 0) count++;
     if (state.language) count++;
     return count;
   };
@@ -328,19 +331,19 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
               </View>
 
-              {/* 4. 課程體系 (Curriculum) */}
+              {/* 4. 課程體系 (Curriculum V2) */}
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>🎓 課程體系</Text>
                 <View style={styles.chipContainer}>
-                  {CURRICULUM_OPTIONS.map((option) => {
-                    const isSelected = state.curriculum.includes(option.value);
+                  {CURRICULUM_V2_OPTIONS.map((option) => {
+                    const isSelected = state.curriculumV2.includes(option.value);
                     return (
                       <TouchableOpacity
                         key={option.value}
                         style={[styles.chip, isSelected && styles.chipSelected]}
                         onPress={() => {
                           triggerHaptic();
-                          dispatch({ type: "TOGGLE_CURRICULUM", payload: option.value });
+                          dispatch({ type: "TOGGLE_CURRICULUM_V2", payload: option.value });
                         }}
                       >
                         <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>

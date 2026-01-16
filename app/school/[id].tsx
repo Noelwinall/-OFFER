@@ -8,7 +8,8 @@ import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage"
 import { isInternational } from "@/lib/international-schools";
 import { isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
-import type { School } from "@/types/school";
+import type { School, CurriculumV2 } from "@/types/school";
+import { CURRICULUM_V2_LABELS } from "@/types/school";
 import type { SchoolFees } from "@/types/fees";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -20,6 +21,23 @@ import {
   formatMandatoryCharges,
 } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
+
+/**
+ * 根據課程類型返回對應顏色
+ */
+function getCurriculumColor(curriculum: CurriculumV2): string {
+  const colors: Record<CurriculumV2, string> = {
+    HK_LOCAL: "#10B981",    // green
+    IB: "#F59E0B",          // amber
+    BRITISH: "#3B82F6",     // blue
+    AMERICAN: "#EF4444",    // red
+    CANADIAN: "#DC2626",    // red darker
+    AUSTRALIAN: "#059669",  // emerald
+    OTHER_INTL: "#8B5CF6",  // violet
+    DUAL_TRACK: "#EC4899",  // pink
+  };
+  return colors[curriculum] || "#6B7280";
+}
 
 /**
  * R3-8: 獲取教學語言顯示值
@@ -225,6 +243,19 @@ export default function SchoolDetailScreen() {
                 <Text style={styles.tagText}>{school.level}</Text>
               </View>
             </View>
+            {/* 課程標籤 V2（Primary/Secondary only） */}
+            {school.curriculumV2 && school.curriculumV2.length > 0 && (
+              <View style={styles.curriculumTagRow}>
+                {school.curriculumV2.map((curriculum) => (
+                  <View
+                    key={curriculum}
+                    style={[styles.curriculumTag, { backgroundColor: getCurriculumColor(curriculum) }]}
+                  >
+                    <Text style={styles.curriculumTagText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
+                  </View>
+                ))}
+              </View>
+            )}
           </View>
 
           {/* 基本資訊 - 只显示 v0 字段 */}
@@ -652,7 +683,25 @@ const styles = StyleSheet.create({
   },
   tagRow: {
     flexDirection: "row",
+    flexWrap: "wrap",
     gap: 8,
+  },
+  curriculumTagRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginTop: 8,
+  },
+  curriculumTag: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  curriculumTagText: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
   },
   tag: {
     backgroundColor: "rgba(0, 217, 255, 0.15)",
