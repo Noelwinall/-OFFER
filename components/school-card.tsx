@@ -5,8 +5,8 @@ import { useColors } from "@/hooks/use-colors";
 import { isInternational } from "@/lib/international-schools";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
-import type { School, CurriculumV2, SchoolGender } from "@/types/school";
-import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS } from "@/types/school";
+import type { School, CurriculumV2, SchoolGender, SchoolRelationship } from "@/types/school";
+import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS } from "@/types/school";
 import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
@@ -146,6 +146,30 @@ export const SchoolCard = React.memo(function SchoolCard({
             <Text style={styles.genderText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
           </View>
         )}
+        {/* 宗教標籤（只在有宗教時顯示） */}
+        {school.religion && (
+          <View style={[styles.metadataTag, { backgroundColor: "#8B5CF6" }]}>
+            <Text style={styles.metadataText}>{school.religion}</Text>
+          </View>
+        )}
+        {/* 校網標籤（只在小學有校網時顯示） */}
+        {school.schoolNet && (
+          <View style={[styles.metadataTag, { backgroundColor: "#6366F1" }]}>
+            <Text style={styles.metadataText}>校網：{school.schoolNet}</Text>
+          </View>
+        )}
+        {/* 特殊學校標籤 */}
+        {school.isSpecialSchool && (
+          <View style={[styles.metadataTag, { backgroundColor: "#059669" }]}>
+            <Text style={styles.metadataText}>特殊學校</Text>
+          </View>
+        )}
+        {/* 結龍/直屬/聯繫學校標籤（小學） */}
+        {school.relationship && (
+          <View style={[styles.relationshipTag, { backgroundColor: getRelationshipColor(school.relationship) }]}>
+            <Text style={styles.relationshipText}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
+          </View>
+        )}
       </View>
 
       {/* 學費資訊 - R3-4 (DSS) + R3-5 (國際/私校) */}
@@ -210,6 +234,18 @@ function getGenderColor(gender: SchoolGender): string {
     MIXED: "#6B7280",   // gray (not used in display)
   };
   return colors[gender] || "#6B7280";
+}
+
+/**
+ * 根據學校關係類型返回對應顏色
+ */
+function getRelationshipColor(relationship: SchoolRelationship): string {
+  const colors: Record<SchoolRelationship, string> = {
+    THROUGH_TRAIN: "#F59E0B",   // amber - 結龍學校
+    AFFILIATED: "#10B981",      // emerald - 直屬學校
+    LINKED: "#0EA5E9",          // sky blue - 聯繫學校
+  };
+  return colors[relationship] || "#6B7280";
 }
 
 /**
@@ -281,6 +317,26 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   genderText: {
+    fontSize: 10,
+    fontWeight: "600",
+    color: "#FFFFFF",
+  },
+  metadataTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  metadataText: {
+    fontSize: 10,
+    fontWeight: "600",
+    color: "#FFFFFF",
+  },
+  relationshipTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  relationshipText: {
     fontSize: 10,
     fontWeight: "600",
     color: "#FFFFFF",

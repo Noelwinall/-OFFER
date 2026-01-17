@@ -8,8 +8,8 @@ import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage"
 import { isInternational } from "@/lib/international-schools";
 import { isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
-import type { School, CurriculumV2, SchoolGender } from "@/types/school";
-import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS } from "@/types/school";
+import type { School, CurriculumV2, SchoolGender, SchoolRelationship } from "@/types/school";
+import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS } from "@/types/school";
 import type { SchoolFees } from "@/types/fees";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -49,6 +49,18 @@ function getGenderColor(gender: SchoolGender): string {
     MIXED: "#6B7280",   // gray (not used in display)
   };
   return colors[gender] || "#6B7280";
+}
+
+/**
+ * 根據學校關係類型返回對應顏色
+ */
+function getRelationshipColor(relationship: SchoolRelationship): string {
+  const colors: Record<SchoolRelationship, string> = {
+    THROUGH_TRAIN: "#F59E0B",   // amber - 結龍學校
+    AFFILIATED: "#10B981",      // emerald - 直屬學校
+    LINKED: "#0EA5E9",          // sky blue - 聯繫學校
+  };
+  return colors[relationship] || "#6B7280";
 }
 
 /**
@@ -276,6 +288,33 @@ export default function SchoolDetailScreen() {
                 </View>
               </View>
             )}
+            {/* 新增元數據標籤行 (R4) */}
+            <View style={styles.metadataTagRow}>
+              {/* 宗教標籤（只在有宗教時顯示） */}
+              {school.religion && (
+                <View style={[styles.metadataTag, { backgroundColor: "#8B5CF6" }]}>
+                  <Text style={styles.metadataTagText}>{school.religion}</Text>
+                </View>
+              )}
+              {/* 校網標籤（只在小學有校網時顯示） */}
+              {school.schoolNet && (
+                <View style={[styles.metadataTag, { backgroundColor: "#6366F1" }]}>
+                  <Text style={styles.metadataTagText}>校網：{school.schoolNet}</Text>
+                </View>
+              )}
+              {/* 特殊學校標籤 */}
+              {school.isSpecialSchool && (
+                <View style={[styles.metadataTag, { backgroundColor: "#059669" }]}>
+                  <Text style={styles.metadataTagText}>特殊學校</Text>
+                </View>
+              )}
+              {/* 結龍/直屬/聯繫學校標籤（小學） */}
+              {school.relationship && (
+                <View style={[styles.metadataTag, { backgroundColor: getRelationshipColor(school.relationship) }]}>
+                  <Text style={styles.metadataTagText}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
+                </View>
+              )}
+            </View>
           </View>
 
           {/* 基本資訊 - 只显示 v0 字段 */}
@@ -735,6 +774,23 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   genderTagText: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  metadataTagRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginTop: 8,
+  },
+  metadataTag: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  metadataTagText: {
     fontSize: 12,
     fontWeight: "600",
     color: "#FFFFFF",

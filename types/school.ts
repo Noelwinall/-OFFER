@@ -84,6 +84,22 @@ export const SCHOOL_GENDER_LABELS: Record<SchoolGender, string> = {
   MIXED: "男女校",
 };
 
+/**
+ * School Relationship Type - Through-train / Affiliated / Linked
+ * Source: EDB / CHSC data
+ * Only applicable to Primary schools
+ */
+export type SchoolRelationship = "THROUGH_TRAIN" | "AFFILIATED" | "LINKED";
+
+/**
+ * SchoolRelationship display labels
+ */
+export const SCHOOL_RELATIONSHIP_LABELS: Record<SchoolRelationship, string> = {
+  THROUGH_TRAIN: "結龍學校",
+  AFFILIATED: "直屬學校",
+  LINKED: "聯繫學校",
+};
+
 export interface School {
   id: string;
   name: string;
@@ -108,6 +124,11 @@ export interface School {
   applicationLink: string; // 申請連結
   latitude: number; // 緯度
   longitude: number; // 經度
+  // New metadata fields (R4)
+  religion?: string; // 宗教 (e.g. "天主教", "基督教", "佛教") - empty/無 means no religion
+  schoolNet?: string; // 校網 (e.g. "11", "34") - Primary schools only
+  isSpecialSchool?: boolean; // 特殊學校 flag
+  relationship?: SchoolRelationship; // 結龍/直屬/聯繫 - Primary schools only
 }
 
 /**
