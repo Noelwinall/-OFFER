@@ -1,330 +1,383 @@
-school_id,stage,instruction_languages,confidence,source,match_method,match_score,chsc_name
-edb_513709000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Salesian School"
-edb_115584000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Stewards Pooi Kei Primary School"
-edb_115762000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"仁愛堂劉皇發夫人小學"
-edb_512060000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Holy Family Canossian School"
-edb_511129000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Alliance Primary School, Tai Hang Tung"
-edb_518425000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Lee Shiu Keung Primary School"
-edb_512176000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Hop Yat Church School"
-edb_113417000223,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"中華基督教會蒙黃花沃紀念小學"
-edb_115509000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Sha Tin Methodist Primary School"
-edb_512176000223,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Hop Yat Church School"
-edb_513130000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Cheung Sha Wan Catholic Primary School"
-edb_513385000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Pui Tak Canossian Primary School"
-edb_511439000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"聖公會青衣主恩小學"
-edb_115355000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"迦密梁省德學校"
-edb_115126000123,小學,PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Sung Tak Wong Kin Sheung Memorial School"
-edb_543195000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Yan Laap Memorial Primary School"
-edb_518506000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"香海正覺蓮社佛教黃藻森學校"
-edb_511749000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Fanling Public School"
-edb_114529000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Toi Shan Association Primary School"
-edb_114391000123,小學,PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Shatin Tsung Tsin School"
-edb_114502000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"保良局王賜豪（田心谷）小學"
-edb_112666000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tung Tak School"
-edb_575720000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Shek Lei St. John's Catholic Primary School"
-edb_579513000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"順德聯誼總會李金小學"
-edb_575844000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Yuen Chen Maun Chen Jubilee Primary School"
-edb_579556000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Chinese Methodist School, Tanner Hill"
-edb_575615000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Jordan Valley St. Joseph's Catholic Primary School"
-edb_510017000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Bishop Walsh Primary School"
-edb_511846000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Fresh Fish Traders' School"
-edb_513318000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Precious Blood Primary School"
-edb_134872000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Emmanuel Primary School, Kowloon"
-edb_115053000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"長洲聖心學校"
-edb_115746000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"天佑小學"
-edb_115061000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Mung Yan Primary School"
-edb_529257000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tseung Kwan O Catholic Primary School"
-edb_115681000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Lee Chi Tat Memorial School"
-edb_535621000223,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"保良局莊啟程小學"
-edb_535770000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Christian Alliance S.Y. Yeh Memorial Primary School"
-edb_113107000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tsuen Wan Chiu Chow Public School"
-edb_115290000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"聖公會奉基小學"
-edb_516899000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"林村公立黃福鑾紀念學校"
-edb_540170000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"東華三院李東海小學"
-edb_518484000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Islamic Dharwood Pau Memorial Primary School"
-edb_513148000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Pat Heung Central Primary School"
-edb_513628000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. St. Peter's Primary School"
-edb_115770000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Ho Chak Wan Primary School"
-edb_114685000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Kwong Ming School"
-edb_115274000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Yuen Long Long Ping Estate Wai Chow School"
-edb_513431000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Chi Fu Chi Nam Primary School"
-edb_535702000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"聖愛德華天主教小學"
-edb_114995000123,小學,PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Yuen Chen Maun Chen Primary School"
-edb_510564000123,小學,PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Our Lady of China Catholic Primary School"
-edb_115410000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Kowloon City Baptist Church Hay Nien Primary School"
-edb_522066000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"嗇色園主辦可立小學"
-edb_543187000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Bishop Paschang Catholic School"
-edb_540196000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Holy Family Canossian School (Kowloon Tong)"
-edb_513822000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Shanghai Alumni Primary School"
-edb_514004000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Bonaventure Catholic Primary School"
-edb_515051000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Yuen Long Merchants Association Primary School"
-edb_515086000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Yuk Yin School"
-edb_513105000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Northern Lamma School"
-edb_513334000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Price Memorial Catholic Primary School"
-edb_511250000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Buddhist Chung Wah Kornhill Primary School"
-edb_170062000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Francis' Canossian School"
-edb_510149000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Mui Wo School"
-edb_114596000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"聖公會牧愛小學"
-edb_511340000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Canossa Primary School"
-edb_115258000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Yan Chai Hospital Law Chan Chor Si Primary School"
-edb_522015000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Hong Kong Baptist Convention Primary School"
-edb_513580000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. St. James' Primary School"
-edb_115614000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Leung Kui Kau Lutheran Primary School"
-edb_543306000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"樂善堂梁銶琚學校（分校）"
-edb_543250000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Patrick's Catholic Primary School (Po Kong Village Road)"
-edb_549371000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Tin Shui Wai Ling Oi Primary School"
-edb_535729000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Ma On Shan Holy Spirit Primary School"
-edb_518476000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"嗇色園主辦可譽中學暨可譽小學"
-edb_535591000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Precious Blood Primary School (South Horizons)"
-edb_514055000323,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Francis of Assisi's Caritas School"
-edb_514250000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Rose of Lima's School"
-edb_513490000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Kei Oi Primary School"
-edb_513954000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Anthony's School"
-edb_512850000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Marymount Primary School"
-edb_572365000123,小學,PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"The Salvation Army Centaline Charity Fund School"
-edb_575526000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Si Yuan School of the Precious Blood"
-edb_556483000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tseung Kwan O Methodist Primary School"
-edb_554685000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Kwong Ming Ying Loi School"
-edb_512125000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Chun Tok School"
-edb_510858000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"慈航學校"
-edb_511315000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Bui O Public School"
-edb_511552000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Chiu Sheung School, Hong Kong"
-edb_115665000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Po Leung Kuk Tin Ka Ping Primary School"
-edb_114987000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Kowloon City Baptist Church Hay Nien (Yan Ping) Primary School"
-edb_554650000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. St. Andrew's Primary School"
-edb_115185000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"潮陽百欣小學"
-edb_554626000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Kei Fook Primary School"
-edb_554600000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Andrew's Catholic Primary School"
-edb_511692000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Conservative Baptist Lui Ming Choi Primary School"
-edb_550418000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Canossa Primary School (San Po Kong)"
-edb_513814000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Shamshuipo Kaifong Welfare Association Primary School"
-edb_114146000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Castle Peak Catholic Primary School"
-edb_114863000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Kwai-ming Wu Memorial School of The Precious Blood"
-edb_114944000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"中華基督教會基慧小學"
-edb_114561000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"The Little Flower's Catholic Primary School"
-edb_113972000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Yan Laap Primary School"
-edb_550396000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Kowloon Bay Kei Lok Primary School"
-edb_114910000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"伊利沙伯中學舊生會小學分校"
-edb_535796000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Yaumati Catholic Primary School (Hoi Wang Road)"
-edb_113980000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Chu Oi Primary School"
-edb_535664000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Sau Ming Primary School"
-edb_514446000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Taikoo Primary School"
-edb_511676000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Confucian Tai Shing Primary School"
-edb_115703000123,小學,PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tai Po Methodist School"
-edb_150819000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Emmanuel Primary School"
-edb_113433000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Holy Family School"
-edb_512060000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Holy Family Canossian School"
-edb_524581000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Chi Lin Buddhist Primary School"
-edb_115657000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Sacred Heart of Mary Catholic Primary School"
-edb_511358000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Canossa School (Hong Kong)"
-edb_515000000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Yaumati Kaifong Association School"
-edb_115304000123,小學,ENGLISH,HIGH,"CHSC primary TC",exact_zh,1.000,"拔萃小學"
-edb_115266000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Shek Wu Hui Public School"
-edb_512664000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Ling To Catholic Primary School"
-edb_513768000223,小學,PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Sau Mau Ping Catholic Primary School"
-edb_512826000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Maryknoll Convent School (Primary Section)"
-edb_114898000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"油蔴地天主教小學"
-edb_114766000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"協恩中學附屬小學"
-edb_115711000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Ho Ming Primary School (Sponsored by Sik Sik Yuen)"
-edb_115380000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"黃埔宣道小學"
-edb_529770000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Lions Clubs International Ho Tak Sum Primary School"
-edb_538809000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Hong Kong And Macau Lutheran Church Ming Tao Primary School"
-edb_535680000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Ka Fuk Wing Chun Primary School"
-edb_524824000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"路德會沙崙學校"
-edb_514136000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Mary's Canossian School"
-edb_512052000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Holy Carpenter Primary School"
-edb_513083000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"英皇書院同學會小學"
-edb_513555000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"S.K.H. Lui Ming Choi Memorial Primary School"
-edb_115002000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"元朗寶覺小學"
-edb_114510000223,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"樂善堂梁黃蕙芳紀念學校"
-edb_511420000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Chan Sui Ki (La Salle) Primary School"
-edb_115100000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"沙頭角中心小學"
-edb_543268000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tsz Wan Shan Catholic Primary School"
-edb_512591000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"La Salle Primary School"
-edb_617407000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"TWGHs Tseng Hin Pei Primary School"
-edb_524590000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Fukien Secondary School (Siu Sai Wan)"
-edb_190586000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Po Leung Kuk Tang Yuk Tien College"
-edb_170720000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"東華三院吳祥川紀念中學"
-edb_230774000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Po Leung Kuk Centenary Li Shiu Chung Memorial College"
-edb_511170000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Bethel High School"
-edb_230820000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Baptist Lui Ming Choi Secondary School"
-edb_524557000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Christian Alliance S W Chan Memorial College"
-edb_230782000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Buddhist Sum Heung Lam Memorial College"
-edb_511854000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Fung Kai No. 1 Secondary School"
-edb_519006000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Lions Clubs International Tseung Chui King College"
-edb_230839000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Shatin Pui Ying College"
-edb_170267000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Peter's Secondary School"
-edb_230456000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Shek Lei Catholic Secondary School"
-edb_190578000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Tung Wah Group of Hospitals Lo Kon Ting Memorial College"
-edb_230855000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Kwai Chung Methodist College"
-edb_190560000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Carmel Divine Grace Foundation Secondary School"
-edb_560499000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Cumberland Presbyterian Church Yao Dao Secondary School"
-edb_529761000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"神召會康樂中學"
-edb_133078000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Lock Tao Secondary School"
-edb_510580000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Pui Shing Catholic Secondary School"
-edb_283002000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"SKH Holy Carpenter Secondary School"
-edb_210129000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Kau Yan College"
-edb_514047000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Francis' Canossian College"
-edb_270091000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"寶血會上智英文書院"
-edb_322857000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"New Asia Middle School"
-edb_170437000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"東華三院呂潤財紀念中學"
-edb_210277000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Francis Xavier's College"
-edb_132209000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Tang King Po School"
-edb_214965000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Buddhist Yip Kei Nam Memorial College"
-edb_316377000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Pui Tak Canossian College"
-edb_537152000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Po Kok Secondary School"
-edb_230928000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ju Ching Chu Secondary School (Tuen Mun)"
-edb_511030000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ying Wa Girls' School"
-edb_132756000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Concordia Lutheran School"
-edb_190055000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Salesians of Don Bosco Ng Siu Mui Secondary School"
-edb_214973000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Buddhist Hung Sean Chau Memorial College"
-edb_541168000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Shun Tak Fraternal Association Yung Yau College"
-edb_284955000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"香港中國婦女會中學"
-edb_310042000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Tak Nga Secondary School"
-edb_230910000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"天主教新民書院"
-edb_190519000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"可立中學（嗇色園主辦）"
-edb_170372000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Buddhist Tai Hung College"
-edb_133469000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Joan of Arc Secondary School"
-edb_170500000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Our Lady of The Rosary College"
-edb_135968000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Carmel Secondary School"
-edb_510890000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Methodist College"
-edb_171042000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Lingnan Secondary School"
-edb_511650000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"裘錦秋中學（葵涌）"
-edb_250740000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"路德會呂明才中學"
-edb_510203000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Sacred Heart Canossian College"
-edb_510831000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"香港中國婦女會馮堯敬紀念中學"
-edb_190098000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ho Fung College (Sponsored by Sik Sik Yuen)"
-edb_260312000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Hong Kong Sea School"
-edb_510475000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Wah Yan College, Kowloon"
-edb_170763000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"聖馬可中學"
-edb_170445000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Sing Yin Secondary School"
-edb_170569000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Holy Family Canossian College"
-edb_530450000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"余振強紀念中學"
-edb_211265000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Raimondi College"
-edb_545201000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"東華三院李嘉誠中學"
-edb_170631000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"True Light Girls' College"
-edb_230472000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"The Methodist Lee Wai Lee College"
-edb_170488000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Paul's School (Lam Tin)"
-edb_190330000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Po Leung Kuk Lee Shing Pik College"
-edb_135011000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"迦密聖道中學"
-edb_190071000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"S.K.H. St. Simon's Lui Ming Choi Secondary School"
-edb_190020000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"觀塘瑪利諾書院"
-edb_170925000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"聖若瑟英文中學"
-edb_132918000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"PAOC Ka Chi Secondary School"
-edb_522082000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Islamic Kasim Tuet Memorial College"
-edb_230120000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"東華三院馮黃鳳亭中學"
-edb_230421000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"葵涌蘇浙公學"
-edb_230766000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Lok Sin Tong Ku Chiu Man Secondary School"
-edb_270032000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Caritas Tuen Mun Marden Foundation Secondary School"
-edb_270121000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"張祝珊英文中學"
-edb_170046000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Choi Hung Estate Catholic Secondary School"
-edb_552917000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"HKFEW Wong Cho Bau Secondary School"
-edb_190837000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"沙田崇真中學"
-edb_190136000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Tung Wah Group of Hospitals Mrs. Wu York Yu Memorial College"
-edb_522074000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ho Yu College and Primary School (Sponsored by Sik Sik Yuen)"
-edb_518417000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"樂善堂梁植偉紀念中學"
-edb_282758000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Caritas Chong Yuet Ming Secondary School"
-edb_214590000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Man Kiu College"
-edb_212431000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"田家炳中學"
-edb_170615000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"聖公會李炳中學"
-edb_230286000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ju Ching Chu Secondary School (Yuen Long)"
-edb_511943000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Henrietta Secondary School"
-edb_190799000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ho Dao College (Sponsored by Sik Sik Yuen)"
-edb_320609000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Stewards Pooi Tun Secondary School"
-edb_213764000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Kowloon Tong School (Secondary Section)"
-edb_230057000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Shung Tak Catholic English College"
-edb_213292000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"聖公會陳融中學"
-edb_190462000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Liu Po Shan Memorial College"
-edb_170771000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Francis of Assisi's College"
-edb_151335000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"香港道教聯合會青松中學"
-edb_512281000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"中華基督教會馮梁結紀念中學"
-edb_510599000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Semple Memorial Secondary School"
-edb_170682000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Leung Shek Chee College"
-edb_190438000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Pentecostal Lam Hon Kwong School"
-edb_530034000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Fanling Rhenish Church Secondary School"
-edb_545147000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ling Liang Church E Wun Secondary School"
-edb_514020000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Clare's Girls' School"
-edb_518310000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Ma On Shan St. Joseph's Secondary School"
-edb_512710000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Lok Sin Tong Wong Chung Ming Secondary School"
-edb_170623000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"東華三院辛亥年總理中學"
-edb_190357000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Carmel Alison Lam Foundation Secondary School"
-edb_170321000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Catharine's School for Girls"
-edb_170380000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"The Y.W.C.A. Hioe Tjo Yoeng College"
-edb_190446000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"SALEM-Immanuel Lutheran College"
-edb_112810000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Wong Shiu Chi Secondary School"
-edb_170291000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Cheung Sha Wan Catholic Secondary School"
-edb_190101000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Buddhist Sin Tak College"
-edb_313076000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Nam Wah Catholic Secondary School"
-edb_190853000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"King Ling College"
-edb_210536000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Munsang College"
-edb_212636000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Notre Dame College"
-edb_514128000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Mary's Canossian College"
-edb_215040000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"伊利沙伯中學舊生會中學"
-edb_210390000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"宣道中學"
-edb_522090000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Shun Tak Fraternal Association Cheng Yu Tung Secondary School"
-edb_190667000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Kwok Tak Seng Catholic Secondary School"
-edb_512605000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Lai Chack Middle School"
-edb_260215000423,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"滙基書院"
-edb_514187000323,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Paul's Co-educational College Primary School"
-edb_567337000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Evangel College"
-edb_550477000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Ying Wa Primary School"
-edb_529796000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Po Leung Kuk Camões Tan Siu Lin Primary School"
-edb_571504000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Po Leung Kuk Lam Man Chan English Primary School"
-edb_540234000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"HKUGA Primary School"
-edb_543292000323,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"G.T. (Ellen Yeung) College"
-edb_151807000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Fanling Lutheran Secondary School"
-edb_513369000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Pui Kiu Middle School"
-edb_568287000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"HKFYG Lee Shau Kee College"
-edb_558567000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Stewards Pooi Kei College"
-edb_514209000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"保良局顏寶鈴書院"
-edb_558060000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Lam Tai Fai College"
-edb_133477000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Mu Kuang English School"
-edb_510777000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Diocesan Boys' School"
-edb_553700000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"地利亞修女紀念學校（協和二中）"
-edb_552844000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Man Kwan QualiEd College"
-edb_131318000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Wai Kiu College"
-edb_511536000333,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"香港兆基創意書院 (李兆基基金會贊助、香港當代文化中心主辦)"
-edb_511960000533,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Heung To Middle School"
-edb_536563000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"HKMA David Li Kwok Po College"
-edb_511714000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Diocesan Girls' School"
-edb_510980000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Paul's Co-educational College"
-edb_170712000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"St. Stephen's College"
-edb_543292000233,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"G.T. (Ellen Yeung) College"
-edb_131385000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Academy of Innovation (Confucius Hall)"
-edb_572403000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"South Yuen Long Government Primary School"
-edb_510254000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tai Po Government Primary School"
-edb_510157000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"North Point Government Primary School"
-edb_510360000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Yuen Long Government Primary School"
-edb_571180000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"North Point Government Primary School (Cloud View Road)"
-edb_510874000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Li Cheng Uk Government Primary School"
-edb_510602000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"天水圍官立小學"
-edb_510696000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"李陞小學"
-edb_539180000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Kowloon Tong Government Primary School"
-edb_539171000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Ma Tau Chung Government Primary School (Hung Hom Bay)"
-edb_510130000123,小學,CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"塘尾道官立小學"
-edb_510556000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"官立嘉道理爵士中學（西九龍）"
-edb_510483000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Yuen Long Public Secondary School"
-edb_510440000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Shau Kei Wan Government Secondary School"
-edb_510424000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Queen Elizabeth School"
-edb_510700000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary TC",exact_zh,1.000,"屯門官立中學"
-edb_510262000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Tang Shiu Kin Victoria Government Secondary School"
-edb_510114000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Kwun Tong Kung Lok Government Secondary School"
-edb_510041000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Fanling Government Secondary School"
-edb_510491000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Chiu Lut Sau Memorial Secondary School"
-edb_510220000133,中學,ENGLISH|CANTONESE,HIGH,"CHSC secondary EN",exact_en,1.000,"Shau Kei Wan East Government Secondary School"
-edb_598062000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Zenith English Primary School"
-edb_607371000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"崇真小學暨幼稚園"
-edb_133566000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Francis of Assisi's English Primary School"
-edb_324477000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Pooi To Primary School"
-edb_606812000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"香港真光中學附屬小學暨幼稚園"
-edb_622079000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"Anchors Academy"
-edb_591904000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Louis School (Primary Section)"
-edb_210021000123,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"St. Clare's Primary School"
-edb_324434000123,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Tak Nga Primary School"
-edb_517100000223,小學,CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Chan's Creative School"
-edb_590371000223,小學,ENGLISH|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"九龍真光中學（小學部）"
-edb_567485000123,小學,ENGLISH,HIGH,"CHSC primary TC",exact_zh,1.000,"聖保祿學校（小學部）"
-edb_581259000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary TC",exact_zh,1.000,"國際基督教優質音樂中學暨小學"
-edb_513725000123,小學,ENGLISH,HIGH,"CHSC primary TC",exact_zh,1.000,"聖士提反書院附屬小學"
-edb_575240000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,"CHSC primary EN",exact_en,1.000,"Raimondi College Primary Section"
-edb_211303000123,小學,ENGLISH,HIGH,"CHSC primary EN",exact_en,1.000,"St. Joseph's Anglo-Chinese Primary School"
+school_id,stage,instruction_languages,confidence,source,match_method,match_score,chsc_name,inference_reason
+edb_513709000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Salesian School,
+edb_115584000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Stewards Pooi Kei Primary School,
+edb_115762000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,仁愛堂劉皇發夫人小學,
+edb_512060000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Holy Family Canossian School,
+edb_511129000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,"Alliance Primary School, Tai Hang Tung",
+edb_518425000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Lee Shiu Keung Primary School,
+edb_512176000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Hop Yat Church School,
+edb_113417000223,小學,ENGLISH|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,中華基督教會蒙黃花沃紀念小學,
+edb_115509000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Sha Tin Methodist Primary School,
+edb_512176000223,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Hop Yat Church School,
+edb_513130000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Cheung Sha Wan Catholic Primary School,
+edb_513385000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Pui Tak Canossian Primary School,
+edb_511439000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,聖公會青衣主恩小學,
+edb_115355000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,迦密梁省德學校,
+edb_115126000123,小學,PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Sung Tak Wong Kin Sheung Memorial School,
+edb_543195000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Yan Laap Memorial Primary School,
+edb_518506000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,香海正覺蓮社佛教黃藻森學校,
+edb_511749000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Fanling Public School,
+edb_114529000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Toi Shan Association Primary School,
+edb_114391000123,小學,PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Shatin Tsung Tsin School,
+edb_114502000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,保良局王賜豪（田心谷）小學,
+edb_112666000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tung Tak School,
+edb_575720000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Shek Lei St. John's Catholic Primary School,
+edb_579513000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,順德聯誼總會李金小學,
+edb_575844000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Yuen Chen Maun Chen Jubilee Primary School,
+edb_579556000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,"Chinese Methodist School, Tanner Hill",
+edb_575615000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Jordan Valley St. Joseph's Catholic Primary School,
+edb_510017000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Bishop Walsh Primary School,
+edb_511846000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Fresh Fish Traders' School,
+edb_513318000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Precious Blood Primary School,
+edb_134872000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,"Emmanuel Primary School, Kowloon",
+edb_115053000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,長洲聖心學校,
+edb_115746000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,天佑小學,
+edb_115061000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Mung Yan Primary School,
+edb_529257000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tseung Kwan O Catholic Primary School,
+edb_115681000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Lee Chi Tat Memorial School,
+edb_535621000223,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,保良局莊啟程小學,
+edb_535770000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Christian Alliance S.Y. Yeh Memorial Primary School,
+edb_113107000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tsuen Wan Chiu Chow Public School,
+edb_115290000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,聖公會奉基小學,
+edb_516899000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,林村公立黃福鑾紀念學校,
+edb_540170000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,東華三院李東海小學,
+edb_518484000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Islamic Dharwood Pau Memorial Primary School,
+edb_513148000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Pat Heung Central Primary School,
+edb_513628000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. St. Peter's Primary School,
+edb_115770000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Ho Chak Wan Primary School,
+edb_114685000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Kwong Ming School,
+edb_115274000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Yuen Long Long Ping Estate Wai Chow School,
+edb_513431000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Chi Fu Chi Nam Primary School,
+edb_535702000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,聖愛德華天主教小學,
+edb_114995000123,小學,PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Yuen Chen Maun Chen Primary School,
+edb_510564000123,小學,PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Our Lady of China Catholic Primary School,
+edb_115410000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Kowloon City Baptist Church Hay Nien Primary School,
+edb_522066000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,嗇色園主辦可立小學,
+edb_543187000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Bishop Paschang Catholic School,
+edb_540196000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Holy Family Canossian School (Kowloon Tong),
+edb_513822000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Shanghai Alumni Primary School,
+edb_514004000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Bonaventure Catholic Primary School,
+edb_515051000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Yuen Long Merchants Association Primary School,
+edb_515086000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Yuk Yin School,
+edb_513105000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Northern Lamma School,
+edb_513334000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Price Memorial Catholic Primary School,
+edb_511250000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Buddhist Chung Wah Kornhill Primary School,
+edb_170062000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Francis' Canossian School,
+edb_510149000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Mui Wo School,
+edb_114596000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,聖公會牧愛小學,
+edb_511340000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Canossa Primary School,
+edb_115258000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Yan Chai Hospital Law Chan Chor Si Primary School,
+edb_522015000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Hong Kong Baptist Convention Primary School,
+edb_513580000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. St. James' Primary School,
+edb_115614000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Leung Kui Kau Lutheran Primary School,
+edb_543306000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,樂善堂梁銶琚學校（分校）,
+edb_543250000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Patrick's Catholic Primary School (Po Kong Village Road),
+edb_549371000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Tin Shui Wai Ling Oi Primary School,
+edb_535729000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Ma On Shan Holy Spirit Primary School,
+edb_518476000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,嗇色園主辦可譽中學暨可譽小學,
+edb_535591000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Precious Blood Primary School (South Horizons),
+edb_514055000323,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Francis of Assisi's Caritas School,
+edb_514250000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Rose of Lima's School,
+edb_513490000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Kei Oi Primary School,
+edb_513954000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Anthony's School,
+edb_512850000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Marymount Primary School,
+edb_572365000123,小學,PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,The Salvation Army Centaline Charity Fund School,
+edb_575526000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Si Yuan School of the Precious Blood,
+edb_556483000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tseung Kwan O Methodist Primary School,
+edb_554685000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Kwong Ming Ying Loi School,
+edb_512125000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Chun Tok School,
+edb_510858000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,慈航學校,
+edb_511315000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Bui O Public School,
+edb_511552000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,"Chiu Sheung School, Hong Kong",
+edb_115665000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Po Leung Kuk Tin Ka Ping Primary School,
+edb_114987000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Kowloon City Baptist Church Hay Nien (Yan Ping) Primary School,
+edb_554650000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. St. Andrew's Primary School,
+edb_115185000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,潮陽百欣小學,
+edb_554626000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Kei Fook Primary School,
+edb_554600000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Andrew's Catholic Primary School,
+edb_511692000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Conservative Baptist Lui Ming Choi Primary School,
+edb_550418000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Canossa Primary School (San Po Kong),
+edb_513814000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Shamshuipo Kaifong Welfare Association Primary School,
+edb_114146000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Castle Peak Catholic Primary School,
+edb_114863000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Kwai-ming Wu Memorial School of The Precious Blood,
+edb_114944000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,中華基督教會基慧小學,
+edb_114561000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,The Little Flower's Catholic Primary School,
+edb_113972000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Yan Laap Primary School,
+edb_550396000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Kowloon Bay Kei Lok Primary School,
+edb_114910000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,伊利沙伯中學舊生會小學分校,
+edb_535796000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Yaumati Catholic Primary School (Hoi Wang Road),
+edb_113980000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Chu Oi Primary School,
+edb_535664000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Sau Ming Primary School,
+edb_514446000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Taikoo Primary School,
+edb_511676000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Confucian Tai Shing Primary School,
+edb_115703000123,小學,PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tai Po Methodist School,
+edb_150819000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Emmanuel Primary School,
+edb_113433000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Holy Family School,
+edb_512060000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Holy Family Canossian School,
+edb_524581000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Chi Lin Buddhist Primary School,
+edb_115657000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Sacred Heart of Mary Catholic Primary School,
+edb_511358000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Canossa School (Hong Kong),
+edb_515000000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Yaumati Kaifong Association School,
+edb_115304000123,小學,ENGLISH,HIGH,CHSC primary TC,exact_zh,1.000,拔萃小學,
+edb_115266000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Shek Wu Hui Public School,
+edb_512664000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Ling To Catholic Primary School,
+edb_513768000223,小學,PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Sau Mau Ping Catholic Primary School,
+edb_512826000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Maryknoll Convent School (Primary Section),
+edb_114898000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,油蔴地天主教小學,
+edb_114766000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,協恩中學附屬小學,
+edb_115711000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Ho Ming Primary School (Sponsored by Sik Sik Yuen),
+edb_115380000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,黃埔宣道小學,
+edb_529770000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Lions Clubs International Ho Tak Sum Primary School,
+edb_538809000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Hong Kong And Macau Lutheran Church Ming Tao Primary School,
+edb_535680000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Ka Fuk Wing Chun Primary School,
+edb_524824000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,路德會沙崙學校,
+edb_514136000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Mary's Canossian School,
+edb_512052000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Holy Carpenter Primary School,
+edb_513083000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,英皇書院同學會小學,
+edb_513555000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,S.K.H. Lui Ming Choi Memorial Primary School,
+edb_115002000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,元朗寶覺小學,
+edb_114510000223,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,樂善堂梁黃蕙芳紀念學校,
+edb_511420000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Chan Sui Ki (La Salle) Primary School,
+edb_115100000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,沙頭角中心小學,
+edb_543268000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tsz Wan Shan Catholic Primary School,
+edb_512591000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,La Salle Primary School,
+edb_617407000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,TWGHs Tseng Hin Pei Primary School,
+edb_524590000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Fukien Secondary School (Siu Sai Wan),
+edb_190586000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Po Leung Kuk Tang Yuk Tien College,
+edb_170720000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,東華三院吳祥川紀念中學,
+edb_230774000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Po Leung Kuk Centenary Li Shiu Chung Memorial College,
+edb_511170000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Bethel High School,
+edb_230820000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Baptist Lui Ming Choi Secondary School,
+edb_524557000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Christian Alliance S W Chan Memorial College,
+edb_230782000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Buddhist Sum Heung Lam Memorial College,
+edb_511854000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Fung Kai No. 1 Secondary School,
+edb_519006000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Lions Clubs International Tseung Chui King College,
+edb_230839000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Shatin Pui Ying College,
+edb_170267000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Peter's Secondary School,
+edb_230456000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Shek Lei Catholic Secondary School,
+edb_190578000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Tung Wah Group of Hospitals Lo Kon Ting Memorial College,
+edb_230855000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Kwai Chung Methodist College,
+edb_190560000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Carmel Divine Grace Foundation Secondary School,
+edb_560499000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Cumberland Presbyterian Church Yao Dao Secondary School,
+edb_529761000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,神召會康樂中學,
+edb_133078000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Lock Tao Secondary School,
+edb_510580000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Pui Shing Catholic Secondary School,
+edb_283002000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,SKH Holy Carpenter Secondary School,
+edb_210129000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Kau Yan College,
+edb_514047000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Francis' Canossian College,
+edb_270091000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,寶血會上智英文書院,
+edb_322857000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,New Asia Middle School,
+edb_170437000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,東華三院呂潤財紀念中學,
+edb_210277000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Francis Xavier's College,
+edb_132209000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Tang King Po School,
+edb_214965000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Buddhist Yip Kei Nam Memorial College,
+edb_316377000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Pui Tak Canossian College,
+edb_537152000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Po Kok Secondary School,
+edb_230928000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ju Ching Chu Secondary School (Tuen Mun),
+edb_511030000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ying Wa Girls' School,
+edb_132756000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Concordia Lutheran School,
+edb_190055000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Salesians of Don Bosco Ng Siu Mui Secondary School,
+edb_214973000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Buddhist Hung Sean Chau Memorial College,
+edb_541168000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Shun Tak Fraternal Association Yung Yau College,
+edb_284955000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,香港中國婦女會中學,
+edb_310042000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Tak Nga Secondary School,
+edb_230910000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,天主教新民書院,
+edb_190519000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,可立中學（嗇色園主辦）,
+edb_170372000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Buddhist Tai Hung College,
+edb_133469000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Joan of Arc Secondary School,
+edb_170500000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Our Lady of The Rosary College,
+edb_135968000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Carmel Secondary School,
+edb_510890000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Methodist College,
+edb_171042000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Lingnan Secondary School,
+edb_511650000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,裘錦秋中學（葵涌）,
+edb_250740000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,路德會呂明才中學,
+edb_510203000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Sacred Heart Canossian College,
+edb_510831000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,香港中國婦女會馮堯敬紀念中學,
+edb_190098000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ho Fung College (Sponsored by Sik Sik Yuen),
+edb_260312000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Hong Kong Sea School,
+edb_510475000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,"Wah Yan College, Kowloon",
+edb_170763000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,聖馬可中學,
+edb_170445000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Sing Yin Secondary School,
+edb_170569000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Holy Family Canossian College,
+edb_530450000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,余振強紀念中學,
+edb_211265000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Raimondi College,
+edb_545201000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,東華三院李嘉誠中學,
+edb_170631000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,True Light Girls' College,
+edb_230472000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,The Methodist Lee Wai Lee College,
+edb_170488000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Paul's School (Lam Tin),
+edb_190330000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Po Leung Kuk Lee Shing Pik College,
+edb_135011000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,迦密聖道中學,
+edb_190071000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,S.K.H. St. Simon's Lui Ming Choi Secondary School,
+edb_190020000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,觀塘瑪利諾書院,
+edb_170925000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,聖若瑟英文中學,
+edb_132918000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,PAOC Ka Chi Secondary School,
+edb_522082000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Islamic Kasim Tuet Memorial College,
+edb_230120000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,東華三院馮黃鳳亭中學,
+edb_230421000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,葵涌蘇浙公學,
+edb_230766000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Lok Sin Tong Ku Chiu Man Secondary School,
+edb_270032000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Caritas Tuen Mun Marden Foundation Secondary School,
+edb_270121000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,張祝珊英文中學,
+edb_170046000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Choi Hung Estate Catholic Secondary School,
+edb_552917000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,HKFEW Wong Cho Bau Secondary School,
+edb_190837000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,沙田崇真中學,
+edb_190136000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Tung Wah Group of Hospitals Mrs. Wu York Yu Memorial College,
+edb_522074000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ho Yu College and Primary School (Sponsored by Sik Sik Yuen),
+edb_518417000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,樂善堂梁植偉紀念中學,
+edb_282758000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Caritas Chong Yuet Ming Secondary School,
+edb_214590000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Man Kiu College,
+edb_212431000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,田家炳中學,
+edb_170615000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,聖公會李炳中學,
+edb_230286000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ju Ching Chu Secondary School (Yuen Long),
+edb_511943000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Henrietta Secondary School,
+edb_190799000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ho Dao College (Sponsored by Sik Sik Yuen),
+edb_320609000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Stewards Pooi Tun Secondary School,
+edb_213764000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Kowloon Tong School (Secondary Section),
+edb_230057000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Shung Tak Catholic English College,
+edb_213292000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,聖公會陳融中學,
+edb_190462000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Liu Po Shan Memorial College,
+edb_170771000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Francis of Assisi's College,
+edb_151335000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,香港道教聯合會青松中學,
+edb_512281000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,中華基督教會馮梁結紀念中學,
+edb_510599000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Semple Memorial Secondary School,
+edb_170682000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Leung Shek Chee College,
+edb_190438000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Pentecostal Lam Hon Kwong School,
+edb_530034000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Fanling Rhenish Church Secondary School,
+edb_545147000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ling Liang Church E Wun Secondary School,
+edb_514020000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Clare's Girls' School,
+edb_518310000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Ma On Shan St. Joseph's Secondary School,
+edb_512710000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Lok Sin Tong Wong Chung Ming Secondary School,
+edb_170623000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,東華三院辛亥年總理中學,
+edb_190357000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Carmel Alison Lam Foundation Secondary School,
+edb_170321000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Catharine's School for Girls,
+edb_170380000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,The Y.W.C.A. Hioe Tjo Yoeng College,
+edb_190446000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,SALEM-Immanuel Lutheran College,
+edb_112810000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Wong Shiu Chi Secondary School,
+edb_170291000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Cheung Sha Wan Catholic Secondary School,
+edb_190101000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Buddhist Sin Tak College,
+edb_313076000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Nam Wah Catholic Secondary School,
+edb_190853000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,King Ling College,
+edb_210536000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Munsang College,
+edb_212636000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Notre Dame College,
+edb_514128000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Mary's Canossian College,
+edb_215040000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,伊利沙伯中學舊生會中學,
+edb_210390000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,宣道中學,
+edb_522090000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Shun Tak Fraternal Association Cheng Yu Tung Secondary School,
+edb_190667000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Kwok Tak Seng Catholic Secondary School,
+edb_512605000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Lai Chack Middle School,
+edb_260215000423,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,滙基書院,
+edb_514187000323,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Paul's Co-educational College Primary School,
+edb_567337000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Evangel College,
+edb_550477000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Ying Wa Primary School,
+edb_529796000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Po Leung Kuk Camões Tan Siu Lin Primary School,
+edb_571504000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Po Leung Kuk Lam Man Chan English Primary School,
+edb_540234000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,HKUGA Primary School,
+edb_543292000323,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,G.T. (Ellen Yeung) College,
+edb_151807000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Fanling Lutheran Secondary School,
+edb_513369000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Pui Kiu Middle School,
+edb_568287000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,HKFYG Lee Shau Kee College,
+edb_558567000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Stewards Pooi Kei College,
+edb_514209000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,保良局顏寶鈴書院,
+edb_558060000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Lam Tai Fai College,
+edb_133477000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Mu Kuang English School,
+edb_510777000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Diocesan Boys' School,
+edb_553700000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,地利亞修女紀念學校（協和二中）,
+edb_552844000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Man Kwan QualiEd College,
+edb_131318000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Wai Kiu College,
+edb_511536000333,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,香港兆基創意書院 (李兆基基金會贊助、香港當代文化中心主辦),
+edb_511960000533,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Heung To Middle School,
+edb_536563000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,HKMA David Li Kwok Po College,
+edb_511714000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Diocesan Girls' School,
+edb_510980000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Paul's Co-educational College,
+edb_170712000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,St. Stephen's College,
+edb_543292000233,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,G.T. (Ellen Yeung) College,
+edb_131385000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Academy of Innovation (Confucius Hall),
+edb_572403000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,South Yuen Long Government Primary School,
+edb_510254000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tai Po Government Primary School,
+edb_510157000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,North Point Government Primary School,
+edb_510360000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Yuen Long Government Primary School,
+edb_571180000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,North Point Government Primary School (Cloud View Road),
+edb_510874000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Li Cheng Uk Government Primary School,
+edb_510602000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,天水圍官立小學,
+edb_510696000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,李陞小學,
+edb_539180000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Kowloon Tong Government Primary School,
+edb_539171000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Ma Tau Chung Government Primary School (Hung Hom Bay),
+edb_510130000123,小學,CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,塘尾道官立小學,
+edb_510556000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,官立嘉道理爵士中學（西九龍）,
+edb_510483000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Yuen Long Public Secondary School,
+edb_510440000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Shau Kei Wan Government Secondary School,
+edb_510424000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Queen Elizabeth School,
+edb_510700000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary TC,exact_zh,1.000,屯門官立中學,
+edb_510262000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Tang Shiu Kin Victoria Government Secondary School,
+edb_510114000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Kwun Tong Kung Lok Government Secondary School,
+edb_510041000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Fanling Government Secondary School,
+edb_510491000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Chiu Lut Sau Memorial Secondary School,
+edb_510220000133,中學,ENGLISH|CANTONESE,HIGH,CHSC secondary EN,exact_en,1.000,Shau Kei Wan East Government Secondary School,
+edb_598062000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Zenith English Primary School,
+edb_607371000223,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,崇真小學暨幼稚園,
+edb_133566000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Francis of Assisi's English Primary School,
+edb_324477000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Pooi To Primary School,
+edb_606812000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,香港真光中學附屬小學暨幼稚園,
+edb_622079000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,Anchors Academy,
+edb_591904000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Louis School (Primary Section),
+edb_210021000123,小學,ENGLISH|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,St. Clare's Primary School,
+edb_324434000123,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Tak Nga Primary School,
+edb_517100000223,小學,CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Chan's Creative School,
+edb_590371000223,小學,ENGLISH|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,九龍真光中學（小學部）,
+edb_567485000123,小學,ENGLISH,HIGH,CHSC primary TC,exact_zh,1.000,聖保祿學校（小學部）,
+edb_581259000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary TC,exact_zh,1.000,國際基督教優質音樂中學暨小學,
+edb_513725000123,小學,ENGLISH,HIGH,CHSC primary TC,exact_zh,1.000,聖士提反書院附屬小學,
+edb_575240000123,小學,ENGLISH|PUTONGHUA|CANTONESE,HIGH,CHSC primary EN,exact_en,1.000,Raimondi College Primary Section,
+edb_211303000123,小學,ENGLISH,HIGH,CHSC primary EN,exact_en,1.000,St. Joseph's Anglo-Chinese Primary School,
+edb_250490000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,"HONG CHI MORNINGLIGHT SCHOOL, YUEN LONG (SECONDARY SECTION)",HK special education sector typically uses Cantonese
+edb_250368000133,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,CARITAS RESURRECTION SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_114448000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,SAM SHUI NATIVES ASSOCIATION LAU PUN CHEUNG SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_114227000233,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HKSYC&IA CHAN NAM CHONG MEMORIAL SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250309000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,ROTARY CLUB OF HONG KONG ISLAND WEST HONG CHI MORNINGHOPE SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250244000423,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG CHI PINEHILL SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_608491000133,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,CARITAS MOTHER TERESA SCHOOL,HK special education sector typically uses Cantonese
+edb_260215000733,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250473000323,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HAVEN OF HOPE SUNNYSIDE SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250732000223,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,"HONG CHI MORNINGHOPE SCHOOL, TUEN MUN (PRIMARY SECTION)",HK special education sector typically uses Cantonese
+edb_250546000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,TUNG WAH GROUP OF HOSPITALS KWAN FONG KAI CHI SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250228000233,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,PO LEUNG KUK ANITA L.L. CHAN (CENTENARY) SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250627000233,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,CARITAS LOK JUN SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250147000133,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,SAVIOUR LUTHERAN SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260150000123,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG CHI LIONS MORNINGHILL SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_618276000123,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,TWGHS CHI-LI PAO SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_260266000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,SAHK KO FOOK IU MEMORIAL SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250031000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS JOHN F. KENNEDY CENTRE (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250538000133,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,RHENISH CHURCH GRACE SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250341000123,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,EBENEZER NEW HOPE SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_260142000123,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS PRINCESS ALEXANDRA SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250236000123,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,THE CHURCH OF CHRIST IN CHINA KEI SHUN SPECIAL SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250619000233,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,PO LEUNG KUK LAW'S FOUNDATION SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250082000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,MARY ROSE SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250074000233,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS MARGARET TRENCH SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250503000123,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,TUNG WAH GROUP OF HOSPITALS TSUI TSIN TONG SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250406000233,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,PO LEUNG KUK MR. & MRS. CHAN PAK KEUNG TSING YI SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_112526000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,SHATIN PUBLIC SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250350000123,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,THE SALVATION ARMY SHEK WU SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250457000233,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,CARITAS LOK KAN SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250163000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,SOCIETY OF BOYS' CENTRES CHAK YAN CENTRE SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250112000123,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,"HONG CHI MORNINGHILL SCHOOL, TSUI LAM (PRIMARY SECTION)",HK special education sector typically uses Cantonese
+edb_260320000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,MARYCOVE SCHOOL (SECONDARY SECTION),Chinese-based with sign language supplement
+edb_250279000133,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG CHI WINIFRED MARY CHEUNG MORNINGHOPE SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260037000123,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,EBENEZER SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250600000333,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HHCKLA BUDDHIST PO KWONG SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250392000233,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,"THE CHURCH OF CHRIST IN CHINA, MONGKOK CHURCH KAI OI SCHOOL (SECONDARY SECTION)",HK special education sector typically uses Cantonese
+edb_250635000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,CARITAS LOK YI SCHOOL (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_250210000223,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,SOCIETY OF BOYS' CENTRES - HUI CHUNG SING MEMORIAL SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250414000323,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG CHI PINEHILL NO.3 SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_250600000323,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HHCKLA BUDDHIST PO KWONG SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_154105000223,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,TUNG WAN MOK LAW SHUI WAH SCHOOL (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_615471000133,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG CHI SHIU PONG MORNINGHOPE SCHOOL(SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260215001933,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260215000133,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260215001433,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260215000623,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_260215000823,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_260215000923,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_260215000233,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260215001323,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (PRIMARY SECTION),HK special education sector typically uses Cantonese
+edb_260215001633,中學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION),HK special education sector typically uses Cantonese
+edb_260215000433,小學,CANTONESE,LOW,special_education_sector_inference,special_education_import,1.000,HONG KONG RED CROSS HOSPITAL SCHOOLS (SECONDARY SECTION),HK special education sector typically uses Cantonese
