@@ -1,18 +1,18 @@
 /**
- * Generate Instruction Language Mapping V1 - CHSC CSV Only
+ * Generate Instruction Language Mapping V1.1 - Improved CHSC Matching
  *
  * STRICT: Only assigns instruction language from CHSC CSV fields.
  * NO inference from school type/category/group/name/tuition.
+ *
+ * Matching Strategy (in order):
+ * 1. Normalized exact name match (EN then ZH)
+ * 2. Controlled fuzzy matching with strict thresholds
  *
  * Sources:
  * - data/psp_2025_en.csv (Primary EN) -> medium_of_instruction
  * - data/psp_2025_tc.csv (Primary TC) -> 教學語言
  * - data/ssp_2025_2026_en.csv (Secondary EN) -> language_policy
  * - data/ssp_2025_2026_tc.csv (Secondary TC) -> 全校語文政策
- *
- * Matching strategy:
- * 1. Try English name + district match
- * 2. Try Chinese name match from TC CSV
  */
 
 const fs = require('fs');
@@ -25,6 +25,10 @@ const SECONDARY_TC_CSV = path.join(__dirname, '..', 'data', 'ssp_2025_2026_tc.cs
 const SCHOOLS_FILE = path.join(__dirname, '..', 'data', 'schools.ts');
 const OUTPUT_FILE = path.join(__dirname, '..', 'data', 'instruction_language_mapping_v1.csv');
 const NEEDS_REVIEW_FILE = path.join(__dirname, '..', 'data', 'instruction_language_needs_review_v1.csv');
+
+// Fuzzy matching thresholds
+const FUZZY_ACCEPT_THRESHOLD = 0.85;
+const FUZZY_GAP_THRESHOLD = 0.05;
 
 /**
  * Parse CSV with proper handling of quoted fields
@@ -77,27 +81,118 @@ function parseCSVLine(line) {
 }
 
 /**
- * Normalize school name for matching (English)
+ * Normalize English name for matching (strict rules)
+ * - uppercase
+ * - replace & with AND
+ * - remove punctuation: . , ' ' ( ) [ ] / \ -
+ * - remove common articles/filler words: THE, OF, A, AN
+ * - collapse multiple spaces
+ * - strip common suffix tokens at END only
  */
 function normalizeNameEn(name) {
-  return name
-    .toLowerCase()
-    .replace(/['']/g, "'")
-    .replace(/[""]/g, '"')
+  if (!name) return '';
+
+  let normalized = name
+    .toUpperCase()
+    .replace(/&/g, ' AND ')
+    .replace(/['']/g, ' ')
+    .replace(/[""]/g, ' ')
+    .replace(/[.,()[\]/\\-]/g, ' ')
     .replace(/\s+/g, ' ')
-    .replace(/[^\w\s'"-]/g, '')
+    .trim();
+
+  // Remove common articles/filler words (but keep meaningful ones)
+  normalized = normalized
+    .replace(/\bTHE\b/g, '')
+    .replace(/\bA\b/g, '')
+    .replace(/\bAN\b/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  // Strip common suffix tokens at END only (order matters - longest first)
+  const suffixes = [
+    'PRIMARY SCHOOL',
+    'SECONDARY SCHOOL',
+    'COLLEGE',
+    'SCHOOL'
+  ];
+
+  for (const suffix of suffixes) {
+    if (normalized.endsWith(' ' + suffix)) {
+      normalized = normalized.slice(0, -(suffix.length + 1)).trim();
+      break;
+    }
+    if (normalized === suffix) {
+      break;
+    }
+  }
+
+  return normalized;
+}
+
+/**
+ * Normalize Chinese name for matching (strict rules)
+ * - remove full-width/half-width punctuation and brackets
+ * - remove spaces
+ */
+function normalizeNameZh(name) {
+  if (!name) return '';
+
+  return name
+    .replace(/[\s\u3000]/g, '')  // spaces (including full-width)
+    .replace(/[（）()【】[\]「」『』《》〈〉﹝﹞]/g, '')  // brackets
+    .replace(/[，。、；：！？…—－·,.;:!?]/g, '')  // punctuation
+    .replace(/[""''""'']/g, '')  // quotes
     .trim();
 }
 
 /**
- * Normalize Chinese name for matching
+ * Get tokens from English name for fuzzy matching
  */
-function normalizeNameCn(name) {
-  return name
-    .replace(/\s+/g, '')
-    .replace(/（/g, '(')
-    .replace(/）/g, ')')
-    .trim();
+function getTokensEn(normalizedName) {
+  return normalizedName.split(/\s+/).filter(t => t.length > 0);
+}
+
+/**
+ * Get character bigrams from Chinese name for fuzzy matching
+ */
+function getBigramsZh(normalizedName) {
+  const bigrams = new Set();
+  for (let i = 0; i < normalizedName.length - 1; i++) {
+    bigrams.add(normalizedName.slice(i, i + 2));
+  }
+  return bigrams;
+}
+
+/**
+ * Jaccard similarity for sets
+ */
+function jaccardSimilarity(setA, setB) {
+  if (setA.size === 0 && setB.size === 0) return 1;
+  if (setA.size === 0 || setB.size === 0) return 0;
+
+  const intersection = new Set([...setA].filter(x => setB.has(x)));
+  const union = new Set([...setA, ...setB]);
+
+  return intersection.size / union.size;
+}
+
+/**
+ * Token-based Jaccard for English names
+ */
+function tokenJaccardEn(name1, name2) {
+  const tokens1 = new Set(getTokensEn(name1));
+  const tokens2 = new Set(getTokensEn(name2));
+  return jaccardSimilarity(tokens1, tokens2);
+}
+
+/**
+ * Bigram Jaccard for Chinese names
+ */
+function bigramJaccardZh(name1, name2) {
+  const bigrams1 = getBigramsZh(name1);
+  const bigrams2 = getBigramsZh(name2);
+  return jaccardSimilarity(bigrams1, bigrams2);
 }
 
 /**
@@ -138,89 +233,159 @@ function parsePrimaryMOI_TC(moi) {
 }
 
 /**
- * Parse language_policy from secondary school CSV (English)
+ * Parse MOI from secondary school CSV (English)
+ * Uses subject_offered_by columns as authoritative source
  */
-function parseSecondaryMOI_EN(policy) {
-  if (!policy) return [];
+function parseSecondaryMOI_EN(row) {
   const languages = [];
-  const policyLower = policy.toLowerCase();
 
-  const englishIndicators = [
-    'english is the official medium of instruction',
-    'english is the medium of instruction',
-    'english has been adopted as the medium of instruction',
-    'english is used as the medium of instruction',
-    'using english as the medium of instruction'
-  ];
+  // Check subject columns - these are authoritative
+  const englishSubjectsS1S3 = row['2025_2026_subject_offered_by_english_s1_to_s3'] || '';
+  const englishSubjectsS4S6 = row['2025_2026_subject_offered_by_english_s4_to_s6'] || '';
+  const chineseSubjectsS1S3 = row['2025_2026_subject_offered_by_chinese_s1_to_s3'] || '';
+  const chineseSubjectsS4S6 = row['2025_2026_subject_offered_by_chinese_s4_to_s6'] || '';
 
-  for (const indicator of englishIndicators) {
-    if (policyLower.includes(indicator)) {
+  // If subjects are listed in English column (excluding just Chinese/Chinese History)
+  const englishSubjects = (englishSubjectsS1S3 + ' ' + englishSubjectsS4S6).trim();
+  if (englishSubjects.length > 0) {
+    // Check if there are actual subjects (not just empty or only Chinese Language)
+    const subjectsLower = englishSubjects.toLowerCase();
+    // Exclude if only contains Chinese Language related subjects
+    const hasNonChineseSubjects = subjectsLower.replace(/chinese language/g, '')
+      .replace(/chinese history/g, '')
+      .replace(/putonghua/g, '')
+      .replace(/,/g, '').trim().length > 0;
+    if (hasNonChineseSubjects) {
       languages.push('ENGLISH');
-      break;
     }
   }
 
-  const chineseIndicators = [
-    'chinese is the medium of instruction',
-    'using chinese as the medium of instruction'
-  ];
-
-  for (const indicator of chineseIndicators) {
-    if (policyLower.includes(indicator)) {
+  // If subjects are listed in Chinese column
+  const chineseSubjects = (chineseSubjectsS1S3 + ' ' + chineseSubjectsS4S6).trim();
+  if (chineseSubjects.length > 0) {
+    // Check if there are actual subjects
+    const subjectsLower = chineseSubjects.toLowerCase();
+    // Even Chinese Language taught in Chinese counts as Cantonese medium
+    if (subjectsLower.length > 0) {
       languages.push('CANTONESE');
-      break;
     }
   }
 
-  if (policyLower.includes('putonghua') &&
-      (policyLower.includes('teaching') || policyLower.includes('instruction'))) {
-    languages.push('PUTONGHUA');
+  // Fallback to language_policy if subject columns are empty
+  if (languages.length === 0) {
+    const policy = row.language_policy || '';
+    if (policy) {
+      const policyLower = policy.toLowerCase();
+
+      const englishIndicators = [
+        'english is the official medium of instruction',
+        'english is the medium of instruction',
+        'english has been adopted as the medium of instruction',
+        'english is used as the medium of instruction',
+        'using english as the medium of instruction'
+      ];
+
+      for (const indicator of englishIndicators) {
+        if (policyLower.includes(indicator)) {
+          languages.push('ENGLISH');
+          break;
+        }
+      }
+
+      const chineseIndicators = [
+        'chinese is the medium of instruction',
+        'using chinese as the medium of instruction'
+      ];
+
+      for (const indicator of chineseIndicators) {
+        if (policyLower.includes(indicator)) {
+          languages.push('CANTONESE');
+          break;
+        }
+      }
+
+      if (policyLower.includes('putonghua') &&
+          (policyLower.includes('teaching') || policyLower.includes('instruction'))) {
+        languages.push('PUTONGHUA');
+      }
+    }
   }
 
   return [...new Set(languages)];
 }
 
 /**
- * Parse 全校語文政策 from secondary school CSV (TC)
+ * Parse MOI from secondary school CSV (TC)
+ * Uses subject columns as authoritative source
  */
-function parseSecondaryMOI_TC(policy) {
-  if (!policy) return [];
+function parseSecondaryMOI_TC(row) {
   const languages = [];
 
-  // Check for English medium indicators
-  const englishIndicators = [
-    '以英語授課',
-    '英語教學',
-    '英文為教學語言',
-    '以英文為教學語言',
-    '所有科目均以英語授課',
-    '英語為主要教學語言'
-  ];
+  // Check subject columns - these are authoritative
+  // TC column names: 2025_2026學年開設科目_以英文為教學語言_中一至中三
+  const englishSubjectsS1S3 = row['2025_2026學年開設科目_以英文為教學語言_中一至中三'] || '';
+  const englishSubjectsS4S6 = row['2025_2026學年開設科目_以英文為教學語言_中四至中六'] || '';
+  const chineseSubjectsS1S3 = row['2025_2026學年開設科目_以中文為教學語言_中一至中三'] || '';
+  const chineseSubjectsS4S6 = row['2025_2026學年開設科目_以中文為教學語言_中四至中六'] || '';
 
-  for (const indicator of englishIndicators) {
-    if (policy.includes(indicator)) {
+  // If subjects are listed in English column
+  const englishSubjects = (englishSubjectsS1S3 + ' ' + englishSubjectsS4S6).trim();
+  if (englishSubjects.length > 0) {
+    // Exclude if only contains Chinese Language related subjects
+    const hasNonChineseSubjects = englishSubjects
+      .replace(/中國語文/g, '')
+      .replace(/中國歷史/g, '')
+      .replace(/普通話/g, '')
+      .replace(/中史/g, '')
+      .replace(/[，、,]/g, '').trim().length > 0;
+    if (hasNonChineseSubjects) {
       languages.push('ENGLISH');
-      break;
     }
   }
 
-  // Check for Chinese medium indicators
-  const chineseIndicators = [
-    '以中文為教學語言',
-    '中文為教學語言',
-    '以母語教學'
-  ];
-
-  for (const indicator of chineseIndicators) {
-    if (policy.includes(indicator)) {
-      languages.push('CANTONESE');
-      break;
-    }
+  // If subjects are listed in Chinese column
+  const chineseSubjects = (chineseSubjectsS1S3 + ' ' + chineseSubjectsS4S6).trim();
+  if (chineseSubjects.length > 0) {
+    languages.push('CANTONESE');
   }
 
-  // Check for Putonghua
-  if (policy.includes('普通話') && (policy.includes('教授') || policy.includes('教學'))) {
-    languages.push('PUTONGHUA');
+  // Fallback to 全校語文政策 if subject columns are empty
+  if (languages.length === 0) {
+    const policy = row['全校語文政策'] || '';
+    if (policy) {
+      const englishIndicators = [
+        '以英語授課',
+        '英語教學',
+        '英文為教學語言',
+        '以英文為教學語言',
+        '所有科目均以英語授課',
+        '英語為主要教學語言'
+      ];
+
+      for (const indicator of englishIndicators) {
+        if (policy.includes(indicator)) {
+          languages.push('ENGLISH');
+          break;
+        }
+      }
+
+      const chineseIndicators = [
+        '以中文為教學語言',
+        '中文為教學語言',
+        '以母語教學'
+      ];
+
+      for (const indicator of chineseIndicators) {
+        if (policy.includes(indicator)) {
+          languages.push('CANTONESE');
+          break;
+        }
+      }
+
+      if (policy.includes('普通話') && (policy.includes('教授') || policy.includes('教學'))) {
+        languages.push('PUTONGHUA');
+      }
+    }
   }
 
   return [...new Set(languages)];
@@ -247,42 +412,223 @@ function extractSchools(content) {
 }
 
 /**
- * Map district18 to CHSC district names (English)
+ * Build CHSC lookup with all row data for matching
  */
-function mapDistrictToEn(district18) {
-  const mapping = {
-    '中西區': 'Central & Western',
-    '東區': 'Eastern',
-    '南區': 'Southern',
-    '灣仔區': 'Wan Chai',
-    '九龍城區': 'Kowloon City',
-    '觀塘區': 'Kwun Tong',
-    '深水埗區': 'Sham Shui Po',
-    '黃大仙區': 'Wong Tai Sin',
-    '油尖旺區': 'Yau Tsim Mong',
-    '離島區': 'Islands',
-    '葵青區': 'Kwai Tsing',
-    '北區': 'North',
-    '西貢區': 'Sai Kung',
-    '沙田區': 'Sha Tin',
-    '大埔區': 'Tai Po',
-    '荃灣區': 'Tsuen Wan',
-    '屯門區': 'Tuen Mun',
-    '元朗區': 'Yuen Long',
-  };
-  return mapping[district18] || '';
+function buildChscLookup(rows, nameEnCol, nameZhCol, districtCol, getMoi) {
+  const entries = [];
+
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i];
+    const nameEn = row[nameEnCol] || row['\ufeff' + nameEnCol] || '';
+    const nameZh = row[nameZhCol] || row['\ufeff' + nameZhCol] || '';
+    const district = row[districtCol] || row['\ufeff' + districtCol] || '';
+    const moi = getMoi(row);
+
+    if (nameEn || nameZh) {
+      entries.push({
+        rowIndex: i,
+        nameEn: nameEn.trim(),
+        nameZh: nameZh.trim(),
+        normalizedEn: normalizeNameEn(nameEn),
+        normalizedZh: normalizeNameZh(nameZh),
+        district: district.trim(),
+        moi,
+      });
+    }
+  }
+
+  return entries;
 }
 
 /**
- * Map district18 to CHSC district names (TC - without 區)
+ * Find best match from CHSC entries using multi-stage matching
+ * Returns { match, method, score, candidates }
  */
-function mapDistrictToTc(district18) {
-  // TC CSV uses district without 區 suffix
-  return district18.replace('區', '');
+function findBestMatch(schoolNameEn, schoolNameZh, schoolDistrict, chscEntries) {
+  const normalizedEn = normalizeNameEn(schoolNameEn);
+  const normalizedZh = normalizeNameZh(schoolNameZh);
+
+  // Stage 1: Exact normalized EN match
+  const exactEnMatches = chscEntries.filter(e => e.normalizedEn === normalizedEn && normalizedEn.length > 0);
+  if (exactEnMatches.length === 1) {
+    return {
+      match: exactEnMatches[0],
+      method: 'exact_en',
+      score: 1.0,
+      candidates: exactEnMatches.map(e => ({ ...e, score: 1.0 }))
+    };
+  }
+
+  // Stage 2: Exact normalized ZH match
+  const exactZhMatches = chscEntries.filter(e => e.normalizedZh === normalizedZh && normalizedZh.length > 0);
+  if (exactZhMatches.length === 1) {
+    return {
+      match: exactZhMatches[0],
+      method: 'exact_zh',
+      score: 1.0,
+      candidates: exactZhMatches.map(e => ({ ...e, score: 1.0 }))
+    };
+  }
+
+  // If multiple exact matches, check district as tie-breaker
+  if (exactEnMatches.length > 1) {
+    const districtMatches = exactEnMatches.filter(e =>
+      e.district.includes(schoolDistrict.replace('區', '')) ||
+      schoolDistrict.includes(e.district.replace('區', ''))
+    );
+    if (districtMatches.length === 1) {
+      return {
+        match: districtMatches[0],
+        method: 'exact_en_district',
+        score: 1.0,
+        candidates: exactEnMatches.map(e => ({ ...e, score: 1.0 }))
+      };
+    }
+    // Ambiguous
+    return {
+      match: null,
+      method: 'ambiguous_exact_en',
+      score: 1.0,
+      candidates: exactEnMatches.map(e => ({ ...e, score: 1.0 }))
+    };
+  }
+
+  if (exactZhMatches.length > 1) {
+    const districtMatches = exactZhMatches.filter(e =>
+      e.district.includes(schoolDistrict.replace('區', '')) ||
+      schoolDistrict.includes(e.district.replace('區', ''))
+    );
+    if (districtMatches.length === 1) {
+      return {
+        match: districtMatches[0],
+        method: 'exact_zh_district',
+        score: 1.0,
+        candidates: exactZhMatches.map(e => ({ ...e, score: 1.0 }))
+      };
+    }
+    return {
+      match: null,
+      method: 'ambiguous_exact_zh',
+      score: 1.0,
+      candidates: exactZhMatches.map(e => ({ ...e, score: 1.0 }))
+    };
+  }
+
+  // Stage 3: Fuzzy matching (EN token Jaccard)
+  let fuzzyScores = [];
+
+  if (normalizedEn.length > 0) {
+    for (const entry of chscEntries) {
+      if (entry.normalizedEn.length > 0) {
+        const score = tokenJaccardEn(normalizedEn, entry.normalizedEn);
+        fuzzyScores.push({ entry, score, method: 'fuzzy_en' });
+      }
+    }
+  }
+
+  // Stage 4: Fuzzy matching (ZH bigram Jaccard)
+  if (normalizedZh.length > 0) {
+    for (const entry of chscEntries) {
+      if (entry.normalizedZh.length > 0) {
+        const score = bigramJaccardZh(normalizedZh, entry.normalizedZh);
+        // Only add if better than existing score for this entry
+        const existing = fuzzyScores.find(f => f.entry.rowIndex === entry.rowIndex);
+        if (existing) {
+          if (score > existing.score) {
+            existing.score = score;
+            existing.method = 'fuzzy_zh';
+          }
+        } else {
+          fuzzyScores.push({ entry, score, method: 'fuzzy_zh' });
+        }
+      }
+    }
+  }
+
+  // Sort by score descending
+  fuzzyScores.sort((a, b) => b.score - a.score);
+
+  // Get top candidates
+  const topCandidates = fuzzyScores.slice(0, 5).map(f => ({
+    ...f.entry,
+    score: f.score,
+    method: f.method
+  }));
+
+  if (fuzzyScores.length === 0) {
+    return {
+      match: null,
+      method: 'no_candidates',
+      score: 0,
+      candidates: []
+    };
+  }
+
+  const best = fuzzyScores[0];
+  const secondBest = fuzzyScores[1];
+
+  // Check acceptance criteria
+  if (best.score >= FUZZY_ACCEPT_THRESHOLD) {
+    const gap = secondBest ? best.score - secondBest.score : 1.0;
+
+    if (gap >= FUZZY_GAP_THRESHOLD) {
+      return {
+        match: best.entry,
+        method: best.method,
+        score: best.score,
+        candidates: topCandidates
+      };
+    } else {
+      // District tie-breaker for close scores
+      const closeMatches = fuzzyScores.filter(f => best.score - f.score < FUZZY_GAP_THRESHOLD);
+      const districtMatches = closeMatches.filter(f =>
+        f.entry.district.includes(schoolDistrict.replace('區', '')) ||
+        schoolDistrict.includes(f.entry.district.replace('區', ''))
+      );
+
+      if (districtMatches.length === 1) {
+        return {
+          match: districtMatches[0].entry,
+          method: districtMatches[0].method + '_district',
+          score: districtMatches[0].score,
+          candidates: topCandidates
+        };
+      }
+
+      // Still ambiguous
+      return {
+        match: null,
+        method: 'ambiguous_fuzzy',
+        score: best.score,
+        candidates: topCandidates
+      };
+    }
+  }
+
+  // Below threshold
+  return {
+    match: null,
+    method: 'below_threshold',
+    score: best.score,
+    candidates: topCandidates
+  };
+}
+
+/**
+ * Format candidates for CSV output
+ */
+function formatCandidates(candidates) {
+  if (!candidates || candidates.length === 0) return '';
+
+  return candidates.slice(0, 3).map(c => {
+    const name = c.nameEn || c.nameZh;
+    return `${name}(${c.score.toFixed(3)})`;
+  }).join('; ');
 }
 
 function main() {
-  console.log('=== Generating Instruction Language Mapping V1 (CHSC CSV - EN + TC) ===\n');
+  console.log('=== Generating Instruction Language Mapping V1.1 (Improved CHSC Matching) ===\n');
+  console.log(`Fuzzy thresholds: accept >= ${FUZZY_ACCEPT_THRESHOLD}, gap >= ${FUZZY_GAP_THRESHOLD}\n`);
 
   // Check CSV files exist
   const csvFiles = [PRIMARY_EN_CSV, PRIMARY_TC_CSV, SECONDARY_EN_CSV, SECONDARY_TC_CSV];
@@ -304,53 +650,97 @@ function main() {
   console.log(`Secondary EN CSV: ${secondaryEnRows.length} rows`);
   console.log(`Secondary TC CSV: ${secondaryTcRows.length} rows`);
 
-  // Build lookup maps
-  // Primary EN: normalized(school_name)|district -> moi
-  const primaryEnMap = new Map();
-  for (const row of primaryEnRows) {
-    const name = normalizeNameEn(row.school_name || '');
-    const district = (row.district || '').toLowerCase();
-    const moi = parsePrimaryMOI_EN(row.medium_of_instruction || '');
-    if (name && moi.length > 0) {
-      primaryEnMap.set(`${name}|${district}`, { moi, source: 'CHSC primary EN' });
-    }
+  // Build CHSC lookup entries - keep EN and TC separate since they have different column names
+  // EN CSV has: district, school_name, medium_of_instruction/language_policy
+  // TC CSV has: 區域, 學校名稱, 教學語言/全校語文政策
+
+  const primaryEntries = [];
+
+  // Add EN entries with their English names
+  for (let i = 0; i < primaryEnRows.length; i++) {
+    const enRow = primaryEnRows[i];
+    const nameEn = enRow.school_name || '';
+    if (!nameEn) continue;
+
+    const moi = parsePrimaryMOI_EN(enRow.medium_of_instruction || '');
+
+    primaryEntries.push({
+      rowIndex: i,
+      nameEn: nameEn.trim(),
+      nameZh: '', // EN CSV doesn't have ZH name
+      normalizedEn: normalizeNameEn(nameEn),
+      normalizedZh: '',
+      district: (enRow.district || '').trim(),
+      moi,
+      source: 'CHSC primary EN'
+    });
   }
 
-  // Primary TC: normalized(學校名稱) -> moi
-  const primaryTcMap = new Map();
-  for (const row of primaryTcRows) {
-    const name = normalizeNameCn(row['學校名稱'] || row['\ufeff學校名稱'] || '');
-    const moi = parsePrimaryMOI_TC(row['教學語言'] || '');
-    if (name && moi.length > 0) {
-      primaryTcMap.set(name, { moi, source: 'CHSC primary TC' });
-    }
+  // Add TC entries with their Chinese names
+  for (let i = 0; i < primaryTcRows.length; i++) {
+    const tcRow = primaryTcRows[i];
+    const nameZh = tcRow['學校名稱'] || tcRow['\ufeff學校名稱'] || '';
+    if (!nameZh) continue;
+
+    const moi = parsePrimaryMOI_TC(tcRow['教學語言'] || '');
+    const district = tcRow['區域'] || tcRow['\ufeff區域'] || '';
+
+    primaryEntries.push({
+      rowIndex: primaryEnRows.length + i,
+      nameEn: '', // TC CSV doesn't have EN name
+      nameZh: nameZh.trim(),
+      normalizedEn: '',
+      normalizedZh: normalizeNameZh(nameZh),
+      district: district.trim(),
+      moi,
+      source: 'CHSC primary TC'
+    });
   }
 
-  // Secondary EN: normalized(school_name)|district -> moi
-  const secondaryEnMap = new Map();
-  for (const row of secondaryEnRows) {
-    const name = normalizeNameEn(row.school_name || '');
-    const district = (row.district || '').toLowerCase();
-    const moi = parseSecondaryMOI_EN(row.language_policy || '');
-    if (name) {
-      secondaryEnMap.set(`${name}|${district}`, { moi, source: 'CHSC secondary EN' });
-    }
+  // Same for secondary
+  const secondaryEntries = [];
+
+  for (let i = 0; i < secondaryEnRows.length; i++) {
+    const enRow = secondaryEnRows[i];
+    const nameEn = enRow.school_name || '';
+    if (!nameEn) continue;
+
+    const moi = parseSecondaryMOI_EN(enRow);
+
+    secondaryEntries.push({
+      rowIndex: i,
+      nameEn: nameEn.trim(),
+      nameZh: '',
+      normalizedEn: normalizeNameEn(nameEn),
+      normalizedZh: '',
+      district: (enRow.district || '').trim(),
+      moi,
+      source: 'CHSC secondary EN'
+    });
   }
 
-  // Secondary TC: normalized(學校名稱) -> moi
-  const secondaryTcMap = new Map();
-  for (const row of secondaryTcRows) {
-    const name = normalizeNameCn(row['學校名稱'] || row['\ufeff學校名稱'] || '');
-    const moi = parseSecondaryMOI_TC(row['全校語文政策'] || '');
-    if (name) {
-      secondaryTcMap.set(name, { moi, source: 'CHSC secondary TC' });
-    }
+  for (let i = 0; i < secondaryTcRows.length; i++) {
+    const tcRow = secondaryTcRows[i];
+    const nameZh = tcRow['學校名稱'] || tcRow['\ufeff學校名稱'] || '';
+    if (!nameZh) continue;
+
+    const moi = parseSecondaryMOI_TC(tcRow);
+    const district = tcRow['區域'] || tcRow['\ufeff區域'] || '';
+
+    secondaryEntries.push({
+      rowIndex: secondaryEnRows.length + i,
+      nameEn: '',
+      nameZh: nameZh.trim(),
+      normalizedEn: '',
+      normalizedZh: normalizeNameZh(nameZh),
+      district: district.trim(),
+      moi,
+      source: 'CHSC secondary TC'
+    });
   }
 
-  console.log(`\nPrimary EN map: ${primaryEnMap.size} with MOI`);
-  console.log(`Primary TC map: ${primaryTcMap.size} with MOI`);
-  console.log(`Secondary EN map: ${secondaryEnMap.size} entries`);
-  console.log(`Secondary TC map: ${secondaryTcMap.size} entries`);
+  console.log(`\nPrimary CHSC entries: ${primaryEntries.length}`);
+  console.log(`Secondary CHSC entries: ${secondaryEntries.length}`);
 
   // Read schools.ts
   const schoolsContent = fs.readFileSync(SCHOOLS_FILE, 'utf-8');
@@ -365,101 +755,106 @@ function main() {
   const needsReview = [];
   const processed = new Set();
 
+  // Stats for reporting
+  const matchStats = {
+    exact_en: 0,
+    exact_zh: 0,
+    exact_en_district: 0,
+    exact_zh_district: 0,
+    fuzzy_en: 0,
+    fuzzy_zh: 0,
+    fuzzy_en_district: 0,
+    fuzzy_zh_district: 0,
+    no_match: 0,
+    ambiguous: 0,
+    missing_moi: 0
+  };
+
   for (const school of eligibleSchools) {
     if (processed.has(school.id)) continue;
     processed.add(school.id);
 
-    const normalizedNameEn = normalizeNameEn(school.nameEn);
-    const normalizedNameCn = normalizeNameCn(school.name);
-    const mappedDistrictEn = mapDistrictToEn(school.district18);
-    const lookupKeyEn = `${normalizedNameEn}|${mappedDistrictEn.toLowerCase()}`;
+    const chscEntries = school.level === '小學' ? primaryEntries : secondaryEntries;
+    const result = findBestMatch(school.nameEn, school.name, school.district18, chscEntries);
 
-    let found = false;
-    let csvData = null;
-
-    if (school.level === '小學') {
-      // Try EN exact match
-      if (primaryEnMap.has(lookupKeyEn)) {
-        csvData = primaryEnMap.get(lookupKeyEn);
-        found = true;
-      }
-      // Try EN name-only match
-      if (!found) {
-        for (const [key, data] of primaryEnMap) {
-          if (key.startsWith(normalizedNameEn + '|')) {
-            csvData = data;
-            found = true;
-            break;
-          }
-        }
-      }
-      // Try TC name match
-      if (!found && primaryTcMap.has(normalizedNameCn)) {
-        csvData = primaryTcMap.get(normalizedNameCn);
-        found = true;
-      }
-    } else if (school.level === '中學') {
-      // Try EN exact match
-      if (secondaryEnMap.has(lookupKeyEn)) {
-        const data = secondaryEnMap.get(lookupKeyEn);
-        if (data.moi.length > 0) {
-          csvData = data;
-          found = true;
-        }
-      }
-      // Try EN name-only match
-      if (!found) {
-        for (const [key, data] of secondaryEnMap) {
-          if (key.startsWith(normalizedNameEn + '|') && data.moi.length > 0) {
-            csvData = data;
-            found = true;
-            break;
-          }
-        }
-      }
-      // Try TC name match
-      if (!found && secondaryTcMap.has(normalizedNameCn)) {
-        const data = secondaryTcMap.get(normalizedNameCn);
-        if (data.moi.length > 0) {
-          csvData = data;
-          found = true;
-        }
-      }
-    }
-
-    if (found && csvData && csvData.moi && csvData.moi.length > 0) {
+    if (result.match && result.match.moi && result.match.moi.length > 0) {
       mappings.push({
         school_id: school.id,
         stage: school.level,
-        instruction_languages: csvData.moi.join('|'),
+        instruction_languages: result.match.moi.join('|'),
         confidence: 'HIGH',
-        source: csvData.source,
+        source: result.match.source,
+        match_method: result.method,
+        match_score: result.score.toFixed(3),
+        chsc_name: result.match.nameEn || result.match.nameZh
       });
-    } else {
+
+      // Update stats
+      if (result.method.startsWith('exact')) {
+        matchStats[result.method] = (matchStats[result.method] || 0) + 1;
+      } else if (result.method.startsWith('fuzzy')) {
+        matchStats[result.method] = (matchStats[result.method] || 0) + 1;
+      }
+    } else if (result.match) {
+      // Match found but no MOI
+      matchStats.missing_moi++;
       needsReview.push({
         school_id: school.id,
         stage: school.level,
-        reason: found ? 'CHSC match but no MOI field parsed' : 'No CHSC match',
+        reason: 'Missing MOI field in CHSC',
         candidate_info: `${school.nameEn} | ${school.name} | ${school.district18}`,
+        top_candidates: formatCandidates(result.candidates)
+      });
+    } else if (result.method.includes('ambiguous')) {
+      matchStats.ambiguous++;
+      needsReview.push({
+        school_id: school.id,
+        stage: school.level,
+        reason: 'Ambiguous CHSC match',
+        candidate_info: `${school.nameEn} | ${school.name} | ${school.district18}`,
+        top_candidates: formatCandidates(result.candidates)
+      });
+    } else {
+      matchStats.no_match++;
+      needsReview.push({
+        school_id: school.id,
+        stage: school.level,
+        reason: 'No CHSC match',
+        candidate_info: `${school.nameEn} | ${school.name} | ${school.district18}`,
+        top_candidates: formatCandidates(result.candidates)
       });
     }
   }
 
-  console.log(`\nMappings generated (HIGH confidence): ${mappings.length}`);
+  console.log(`\n=== Results ===`);
+  console.log(`Mappings generated (HIGH confidence): ${mappings.length}`);
   console.log(`Needs review: ${needsReview.length}`);
 
+  console.log(`\n=== Match Statistics ===`);
+  console.log(`Exact EN matches: ${matchStats.exact_en}`);
+  console.log(`Exact ZH matches: ${matchStats.exact_zh}`);
+  console.log(`Exact EN+district matches: ${matchStats.exact_en_district}`);
+  console.log(`Exact ZH+district matches: ${matchStats.exact_zh_district}`);
+  console.log(`Fuzzy EN matches: ${matchStats.fuzzy_en}`);
+  console.log(`Fuzzy ZH matches: ${matchStats.fuzzy_zh}`);
+  console.log(`Fuzzy EN+district matches: ${matchStats.fuzzy_en_district || 0}`);
+  console.log(`Fuzzy ZH+district matches: ${matchStats.fuzzy_zh_district || 0}`);
+  console.log(`No match: ${matchStats.no_match}`);
+  console.log(`Ambiguous matches: ${matchStats.ambiguous}`);
+  console.log(`Missing MOI in CHSC: ${matchStats.missing_moi}`);
+
   // Write mapping CSV
-  const mappingHeader = 'school_id,stage,instruction_languages,confidence,source';
+  const mappingHeader = 'school_id,stage,instruction_languages,confidence,source,match_method,match_score,chsc_name';
   const mappingRows = mappings.map(m =>
-    `${m.school_id},${m.stage},${m.instruction_languages},${m.confidence},"${m.source}"`
+    `${m.school_id},${m.stage},${m.instruction_languages},${m.confidence},"${m.source}",${m.match_method},${m.match_score},"${(m.chsc_name || '').replace(/"/g, '""')}"`
   );
   fs.writeFileSync(OUTPUT_FILE, [mappingHeader, ...mappingRows].join('\n'), 'utf-8');
   console.log(`\nWritten mappings to: ${OUTPUT_FILE}`);
 
   // Write needs_review CSV
-  const reviewHeader = 'school_id,stage,reason,candidate_info';
+  const reviewHeader = 'school_id,stage,reason,candidate_info,top_candidates';
   const reviewRows = needsReview.map(r =>
-    `${r.school_id},${r.stage},"${r.reason.replace(/"/g, '""')}","${r.candidate_info.replace(/"/g, '""')}"`
+    `${r.school_id},${r.stage},"${r.reason.replace(/"/g, '""')}","${r.candidate_info.replace(/"/g, '""')}","${(r.top_candidates || '').replace(/"/g, '""')}"`
   );
   fs.writeFileSync(NEEDS_REVIEW_FILE, [reviewHeader, ...reviewRows].join('\n'), 'utf-8');
   console.log(`Written needs_review to: ${NEEDS_REVIEW_FILE}`);
@@ -475,14 +870,14 @@ function main() {
     console.log(`  ${langs}: ${count}`);
   }
 
-  // Summary by source
-  const sourceStats = {};
-  for (const m of mappings) {
-    sourceStats[m.source] = (sourceStats[m.source] || 0) + 1;
+  // Summary by needs_review reason
+  const reviewReasons = {};
+  for (const r of needsReview) {
+    reviewReasons[r.reason] = (reviewReasons[r.reason] || 0) + 1;
   }
-  console.log('\nBy source:');
-  for (const [src, count] of Object.entries(sourceStats).sort((a, b) => b[1] - a[1])) {
-    console.log(`  ${src}: ${count}`);
+  console.log('\nNeeds review by reason:');
+  for (const [reason, count] of Object.entries(reviewReasons).sort((a, b) => b[1] - a[1])) {
+    console.log(`  ${reason}: ${count}`);
   }
 }
 
