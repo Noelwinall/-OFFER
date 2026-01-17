@@ -8,8 +8,8 @@ import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage"
 import { isInternational } from "@/lib/international-schools";
 import { isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
-import type { School, CurriculumV2 } from "@/types/school";
-import { CURRICULUM_V2_LABELS } from "@/types/school";
+import type { School, CurriculumV2, SchoolGender } from "@/types/school";
+import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS } from "@/types/school";
 import type { SchoolFees } from "@/types/fees";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -37,6 +37,18 @@ function getCurriculumColor(curriculum: CurriculumV2): string {
     DUAL_TRACK: "#EC4899",  // pink
   };
   return colors[curriculum] || "#6B7280";
+}
+
+/**
+ * 根據學校性別返回對應顏色
+ */
+function getGenderColor(gender: SchoolGender): string {
+  const colors: Record<SchoolGender, string> = {
+    BOYS: "#3B82F6",    // blue
+    GIRLS: "#EC4899",   // pink
+    MIXED: "#6B7280",   // gray (not used in display)
+  };
+  return colors[gender] || "#6B7280";
 }
 
 /**
@@ -254,6 +266,14 @@ export default function SchoolDetailScreen() {
                     <Text style={styles.curriculumTagText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
                   </View>
                 ))}
+              </View>
+            )}
+            {/* 學校性別標籤（男校/女校，MIXED 不顯示） */}
+            {school.gender && school.gender !== "MIXED" && (
+              <View style={styles.genderTagRow}>
+                <View style={[styles.genderTag, { backgroundColor: getGenderColor(school.gender) }]}>
+                  <Text style={styles.genderTagText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
+                </View>
               </View>
             )}
           </View>
@@ -698,6 +718,23 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   curriculumTagText: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  genderTagRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginTop: 8,
+  },
+  genderTag: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  genderTagText: {
     fontSize: 12,
     fontWeight: "600",
     color: "#FFFFFF",

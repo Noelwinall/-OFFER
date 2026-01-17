@@ -39,7 +39,7 @@ const DISTRICT_OPTIONS: { label: string; value: District }[] = [
 ];
 
 // 4. Curriculum V2 options (data-driven from school_curriculums)
-import type { CurriculumV2, InstructionLanguage } from "@/types/school";
+import type { CurriculumV2, InstructionLanguage, SchoolGender } from "@/types/school";
 
 const CURRICULUM_V2_OPTIONS: { label: string; value: CurriculumV2 }[] = [
   { label: "本地課程（DSE）", value: "HK_LOCAL" },
@@ -62,6 +62,12 @@ const INSTRUCTION_LANGUAGE_OPTIONS: { label: string; value: InstructionLanguage 
   { label: "日文", value: "JAPANESE" },
   { label: "韓文", value: "KOREAN" },
   { label: "西班牙文", value: "SPANISH" },
+];
+
+// 6. School Gender options (only BOYS and GIRLS - MIXED is excluded from filter)
+const GENDER_OPTIONS: { label: string; value: SchoolGender }[] = [
+  { label: "男校", value: "BOYS" },
+  { label: "女校", value: "GIRLS" },
 ];
 
 export function FilterSheet({ visible, onClose }: FilterSheetProps) {
@@ -102,6 +108,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
     if (state.district18.length > 0) count++;
     if (state.curriculumV2.length > 0) count++;
     if (state.instructionLanguages.length > 0) count++;
+    if (state.gender.length > 0) count++;
     return count;
   };
 
@@ -373,6 +380,30 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                         onPress={() => {
                           triggerHaptic();
                           dispatch({ type: "TOGGLE_INSTRUCTION_LANGUAGE", payload: option.value });
+                        }}
+                      >
+                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                          {option.label}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              </View>
+
+              {/* 6. 學校性別 (School Gender) */}
+              <View style={styles.section}>
+                <Text style={styles.sectionTitle}>👫 學校性別</Text>
+                <View style={styles.chipContainer}>
+                  {GENDER_OPTIONS.map((option) => {
+                    const isSelected = state.gender.includes(option.value);
+                    return (
+                      <TouchableOpacity
+                        key={option.value}
+                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        onPress={() => {
+                          triggerHaptic();
+                          dispatch({ type: "TOGGLE_GENDER", payload: option.value });
                         }}
                       >
                         <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>

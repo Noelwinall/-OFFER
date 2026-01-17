@@ -39,6 +39,13 @@ export function matchesAdvancedFilters(
     if (!hasMatchingLanguage) return false;
   }
 
+  // 學校性別篩選（多選，任一匹配即可）
+  // Only BOYS and GIRLS are filterable - MIXED schools are excluded from results
+  if (filters.gender.length > 0) {
+    const matchesGender = filters.gender.includes(school.gender);
+    if (!matchesGender) return false;
+  }
+
   // 教學語言篩選（單選）- legacy filter
   if (filters.language && school.language !== filters.language) {
     return false;

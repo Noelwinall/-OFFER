@@ -69,6 +69,21 @@ export const INSTRUCTION_LANGUAGE_LABELS: Record<InstructionLanguage, string> = 
   SPANISH: "西班牙文",
 };
 
+/**
+ * School Gender - Student gender composition
+ * Source: CHSC profiles
+ */
+export type SchoolGender = "BOYS" | "GIRLS" | "MIXED";
+
+/**
+ * SchoolGender display labels
+ */
+export const SCHOOL_GENDER_LABELS: Record<SchoolGender, string> = {
+  BOYS: "男校",
+  GIRLS: "女校",
+  MIXED: "男女校",
+};
+
 export interface School {
   id: string;
   name: string;
@@ -83,6 +98,7 @@ export interface School {
   curriculum: Curriculum[];
   curriculumV2: CurriculumV2[]; // V2 課程分類（Primary/Secondary only）
   instructionLanguages: InstructionLanguage[]; // 授課語言（Primary/Secondary only）
+  gender: SchoolGender; // 學校性別（Primary/Secondary only）
   language: Language;
   highlights: string[]; // 亮點描述（2-3 條）
   address: string;

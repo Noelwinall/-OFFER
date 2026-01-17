@@ -5,8 +5,8 @@ import { useColors } from "@/hooks/use-colors";
 import { isInternational } from "@/lib/international-schools";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
-import type { School, CurriculumV2 } from "@/types/school";
-import { CURRICULUM_V2_LABELS } from "@/types/school";
+import type { School, CurriculumV2, SchoolGender } from "@/types/school";
+import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS } from "@/types/school";
 import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
@@ -140,6 +140,12 @@ export const SchoolCard = React.memo(function SchoolCard({
             <Text style={styles.curriculumText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
           </View>
         ))}
+        {/* 學校性別標籤（男校/女校，MIXED 不顯示） */}
+        {school.gender && school.gender !== "MIXED" && (
+          <View style={[styles.genderTag, { backgroundColor: getGenderColor(school.gender) }]}>
+            <Text style={styles.genderText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
+          </View>
+        )}
       </View>
 
       {/* 學費資訊 - R3-4 (DSS) + R3-5 (國際/私校) */}
@@ -192,6 +198,18 @@ function getCurriculumColor(curriculum: CurriculumV2): string {
     DUAL_TRACK: "#EC4899",  // pink
   };
   return colors[curriculum] || "#6B7280";
+}
+
+/**
+ * 根據學校性別返回對應顏色
+ */
+function getGenderColor(gender: SchoolGender): string {
+  const colors: Record<SchoolGender, string> = {
+    BOYS: "#3B82F6",    // blue
+    GIRLS: "#EC4899",   // pink
+    MIXED: "#6B7280",   // gray (not used in display)
+  };
+  return colors[gender] || "#6B7280";
 }
 
 /**
@@ -253,6 +271,16 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   curriculumText: {
+    fontSize: 10,
+    fontWeight: "600",
+    color: "#FFFFFF",
+  },
+  genderTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  genderText: {
     fontSize: 10,
     fontWeight: "600",
     color: "#FFFFFF",

@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, TouchableOpacity, Platform, StyleSheet } from "react-native";
 import { useFilter, getFilterLabels, hasActiveFilters } from "@/lib/filter-context";
-import type { District18, CurriculumV2, InstructionLanguage } from "@/types/school";
-import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
+import type { District18, CurriculumV2, InstructionLanguage, SchoolGender } from "@/types/school";
+import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS, SCHOOL_GENDER_LABELS } from "@/types/school";
 import * as Haptics from "expo-haptics";
 
 export function ActiveFilterTags() {
@@ -102,6 +102,18 @@ export function ActiveFilterTags() {
       onRemove: () => {
         triggerHaptic();
         dispatch({ type: "TOGGLE_INSTRUCTION_LANGUAGE", payload: lang as InstructionLanguage });
+      },
+    });
+  });
+
+  // 學校性別
+  state.gender.forEach((g) => {
+    tags.push({
+      key: `gender-${g}`,
+      label: SCHOOL_GENDER_LABELS[g],
+      onRemove: () => {
+        triggerHaptic();
+        dispatch({ type: "TOGGLE_GENDER", payload: g as SchoolGender });
       },
     });
   });
