@@ -1,0 +1,187 @@
+school_id,stage,instruction_languages,confidence,source,match_method,match_score,chsc_name,inference_reason,notes
+edb_170887000123,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Glenealy School,,ESF primary
+edb_171034000123,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Clearwater Bay School,,ESF primary
+edb_170860000123,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Peak School,,ESF primary
+edb_171034000223,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Clearwater Bay School,,ESF primary (branch)
+edb_250686000223,小學,ENGLISH,HIGH,Special Ed Reference,special_ed,1.000,Jockey Club Sarah Roe School,,Only EMI special school
+edb_170895000123,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Quarry Bay School,,ESF primary
+edb_170747000123,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Bradbury School,,ESF primary
+edb_170399000133,中學,ENGLISH,HIGH,ESF,esf_school,1.000,Island School,,ESF secondary
+edb_170836000133,中學,ENGLISH,HIGH,ESF,esf_school,1.000,South Island School,,ESF secondary
+edb_250686000233,中學,ENGLISH,HIGH,Special Ed Reference,special_ed,1.000,Jockey Club Sarah Roe School,,Only EMI special school
+edb_170917000133,中學,ENGLISH,HIGH,ESF,esf_school,1.000,King George V School,,ESF secondary
+edb_570370000423,小學,ENGLISH,HIGH,International School,intl_school,1.000,The Harbour School,,International school
+edb_215406000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Kellett School,,British international
+edb_603902000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,American School Hong Kong,,American curriculum
+edb_215406000433,中學,ENGLISH,HIGH,International School,intl_school,1.000,Kellett School,,British international
+edb_570370000333,中學,ENGLISH,HIGH,International School,intl_school,1.000,The Harbour School,,International school
+edb_603902000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,American School Hong Kong,,American curriculum
+edb_130060000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,St. Hilary's School,,Bilingual local private
+edb_603600000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,St. Hilary's Primary School,,Bilingual local private
+edb_626902000123,小學,ENGLISH,LOW,School Profile,inferred,0.800,Linden School,,International-style
+edb_615285000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Invictus School,,International school
+edb_607371000223,小學,ENGLISH,HIGH,International School,intl_school,1.000,Dalton School Hong Kong,,International school
+edb_589055000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,YMCA Christian Academy,,Bilingual
+edb_609781000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Limai School,,International school
+edb_112720000123,小學,CANTONESE,LOW,School Profile,inferred,0.800,Gaia School,,Waldorf/alternative
+edb_596140000123,小學,CANTONESE,LOW,School Profile,inferred,0.800,Forest House Waldorf School,,Waldorf school
+edb_620548000123,小學,CANTONESE,LOW,School Profile,inferred,0.800,Garden House Waldorf School,,Waldorf school
+edb_617334000223,小學,ENGLISH,HIGH,International School,intl_school,1.000,Oxbridge British School,,British curriculum
+edb_620785000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Anfield St. Bosco School,,Bilingual
+edb_606812000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Academy of Innovation,,Local private
+edb_571130000323,小學,CANTONESE,LOW,School Profile,inferred,0.800,Aoi Pui School,,Local private
+edb_619957000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,AP School,,Local private
+edb_609498000123,小學,SPANISH|ENGLISH|CANTONESE,HIGH,School Profile,intl_school,1.000,Spanish School of Hong Kong,,Trilingual
+edb_607290000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,HKCA Po Leung Kuk School,,Bilingual
+edb_608327000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Shema Academy,,Bilingual
+edb_611751000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Wycombe Abbey School HK,,British curriculum
+edb_587567000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Anfield School,,Bilingual
+edb_512516000123,小學,CANTONESE,LOW,School Profile,inferred,0.800,Kowloon Tong School,,Local private
+edb_590371000223,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Discovery Mind Primary School,,Bilingual
+edb_581259000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Grace Christian Academy,,Bilingual
+edb_592188000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,YMCA Christian School,,Bilingual
+edb_513725000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,HK Adventist Academy,,International school
+edb_289515000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,California School,,American curriculum
+edb_543560000433,中學,ENGLISH|CANTONESE,HIGH,School Profile,dss_school,1.000,PLK Choi Kai Yau School,,Through-train bilingual
+edb_607371000233,中學,ENGLISH,HIGH,International School,intl_school,1.000,Dalton School Hong Kong,,International school
+edb_609498000133,中學,SPANISH|ENGLISH|CANTONESE,HIGH,School Profile,intl_school,1.000,Spanish School of Hong Kong,,Trilingual
+edb_609781000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Limai School,,International school
+edb_627267000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Wycombe Abbey School HK (Kowloon),,British curriculum
+edb_609498000233,中學,SPANISH|ENGLISH|CANTONESE,HIGH,School Profile,intl_school,1.000,Spanish School of Hong Kong,,Trilingual
+edb_617334000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Oxbridge British School,,British curriculum
+edb_617334000233,中學,ENGLISH,HIGH,International School,intl_school,1.000,Oxbridge British School,,British curriculum
+edb_596140000233,中學,CANTONESE,LOW,School Profile,inferred,0.800,Forest House Waldorf School,,Waldorf school
+edb_616354000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Invictus Secondary School,,International school
+edb_611751000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Wycombe Abbey School HK,,British curriculum
+edb_542644000134,中學,CANTONESE,LOW,School Profile,inferred,0.800,HK Teachers' Assoc Evening School,,Evening school
+edb_608319000233,中學,CANTONESE,LOW,School Profile,inferred,0.800,Island Waldorf School,,Waldorf school
+edb_581259000133,中學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Grace Christian Academy,,Bilingual
+edb_517569000134,中學,CANTONESE,LOW,School Profile,inferred,0.800,Shatin Lutheran Evening School,,Evening school
+edb_289515000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,California School,,American curriculum
+edb_534579000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Sear Rogers International School,,International school
+edb_605557000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Christian Alliance International School,,International school
+edb_325147000223,小學,ENGLISH,HIGH,International School,intl_school,1.000,Yew Chung International School,,International school
+edb_214558000221,小學,ENGLISH|GERMAN,HIGH,International School,intl_school,1.000,German Swiss International School,,Bilingual stream
+edb_230987000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Discovery Bay International School,,International school
+edb_518620000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Lantau International School,,International school
+edb_590800000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Harrow International School HK,,British curriculum
+edb_287695000223,小學,ENGLISH,HIGH,International School,intl_school,1.000,American International School,,American curriculum
+edb_598356000223,小學,ENGLISH,HIGH,International School,intl_school,1.000,Nord Anglia International School,,International school
+edb_213772000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Hong Kong International School,,American curriculum
+edb_216127000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Christian Alliance P.C. Lau Memorial International School,,International school
+edb_214558000123,小學,ENGLISH|GERMAN,HIGH,International School,intl_school,1.000,German Swiss International School,,Bilingual stream
+edb_325147000623,小學,ENGLISH,HIGH,International School,intl_school,1.000,Yew Chung International School,,International school
+edb_522775000123,小學,JAPANESE,HIGH,International School,intl_school,1.000,Japanese International School,,Japanese curriculum
+edb_325147000423,小學,ENGLISH,HIGH,International School,intl_school,1.000,Yew Chung International School,,International school
+edb_216216000123,小學,ENGLISH|KOREAN,HIGH,International School,intl_school,1.000,Korean International School,,Bilingual
+edb_214949000523,小學,ENGLISH|FRENCH,HIGH,International School,intl_school,1.000,French International School,,Bilingual stream
+edb_541915000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Kingston International School,,International school
+edb_214558000121,小學,ENGLISH|GERMAN,HIGH,International School,intl_school,1.000,German Swiss International School,,Bilingual stream
+edb_518620000423,小學,ENGLISH,HIGH,International School,intl_school,1.000,Lantau International School,,International school
+edb_606766000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Malvern College Hong Kong,,British curriculum
+edb_214949000723,小學,ENGLISH|FRENCH,HIGH,International School,intl_school,1.000,French International School,,Bilingual stream
+edb_534579000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Sear Rogers International School,,International school
+edb_605557000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Christian Alliance International School,,International school
+edb_215791000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,DSC International School,,Canadian curriculum
+edb_216011000533,中學,ENGLISH,HIGH,International School,intl_school,1.000,Canadian International School,,Canadian curriculum
+edb_287695000233,中學,ENGLISH,HIGH,International School,intl_school,1.000,American International School,,American curriculum
+edb_215996000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Concordia International School,,International school
+edb_539155000333,中學,ENGLISH,HIGH,International School,intl_school,1.000,Hong Kong Academy,,International school
+edb_215589000133,中學,ENGLISH|PUTONGHUA,HIGH,International School,intl_school,1.000,Chinese International School,,Bilingual
+edb_216275000633,中學,ENGLISH,HIGH,International School,intl_school,1.000,Australian International School HK,,Australian curriculum
+edb_213772000233,中學,ENGLISH,HIGH,International School,intl_school,1.000,Hong Kong International School,,American curriculum
+edb_590800000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Harrow International School HK,,British curriculum
+edb_214949000433,中學,ENGLISH|FRENCH,HIGH,International School,intl_school,1.000,French International School,,Bilingual stream
+edb_578789000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,ICHK (New Territories),,International school
+edb_606766000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Malvern College Hong Kong,,British curriculum
+edb_214949000733,中學,ENGLISH|FRENCH,HIGH,International School,intl_school,1.000,French International School,,Bilingual stream
+edb_567450000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Yew Chung International School - Secondary,,International school
+edb_569836000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,International Christian School,,International school
+edb_216224000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,AOG St. Hilary's College,,Bilingual
+edb_607819000123,小學,ENGLISH|CANTONESE,HIGH,International School,intl_school,1.000,Han Academy,,Bilingual
+edb_617393000123,小學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Bloom KKCA Academy,,Bilingual
+edb_567485000123,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Renaissance College,,ESF through-train
+edb_569747000223,小學,ENGLISH,HIGH,ESF,esf_school,1.000,Discovery College,,ESF through-train
+edb_553190000323,小學,ENGLISH|PUTONGHUA,HIGH,International School,intl_school,1.000,ISF Academy,,Bilingual
+edb_212466000423,小學,ENGLISH,HIGH,International School,intl_school,1.000,St. Johannes College,,English medium
+edb_623067000133,中學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Saint Too Bloom Academy,,Bilingual
+edb_289094000232,中學,CANTONESE,LOW,School Profile,inferred,0.800,Beacon College,,Tutorial college
+edb_289094000231,中學,CANTONESE,LOW,School Profile,inferred,0.800,Beacon College,,Tutorial college
+edb_215287001234,中學,CANTONESE|ENGLISH,LOW,School Profile,inferred,0.800,Maria College (Waldorf),,Waldorf school
+edb_625264000133,中學,CANTONESE,LOW,School Profile,inferred,0.800,Excel London College,,Tutorial college
+edb_524867000131,中學,CANTONESE,LOW,School Profile,inferred,0.800,Beacon College (Mong Kok),,Tutorial college
+edb_524867000132,中學,CANTONESE,LOW,School Profile,inferred,0.800,Beacon College (Mong Kok),,Tutorial college
+edb_615137000133,中學,ENGLISH|CANTONESE,LOW,School Profile,inferred,0.800,Tai Kwong Hilary College,,Bilingual
+edb_215287001534,中學,CANTONESE|ENGLISH,LOW,School Profile,inferred,0.800,Maria College (Waldorf),,Waldorf school
+edb_215287001034,中學,CANTONESE|ENGLISH,LOW,School Profile,inferred,0.800,Maria College (Waldorf),,Waldorf school
+edb_531880000134,中學,CANTONESE,LOW,School Profile,inferred,0.800,Ma Chan Duen Hey Memorial Evening College,,Evening school
+edb_226564000234,中學,CANTONESE,LOW,School Profile,inferred,0.800,Gertrude Simon Lutheran Evening College,,Evening school
+edb_553190000333,中學,ENGLISH|PUTONGHUA,HIGH,International School,intl_school,1.000,ISF Academy,,Bilingual
+edb_569747000233,中學,ENGLISH,HIGH,ESF,esf_school,1.000,Discovery College,,ESF through-train
+edb_215287001434,中學,CANTONESE|ENGLISH,LOW,School Profile,inferred,0.800,Maria College (Waldorf),,Waldorf school
+edb_510777000123,小學,ENGLISH,HIGH,DSS Elite,dss_school,1.000,Diocesan Boys' School,,EMI elite school
+edb_512079000223,小學,ENGLISH|CANTONESE,HIGH,DSS,dss_school,1.000,Hon Wah College,,Bilingual
+edb_231622000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Li Po Chun United World College,,IB World School
+edb_605638000123,小學,ENGLISH,HIGH,International School,intl_school,1.000,Stamford American School HK,,American curriculum
+edb_626864000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Stamford American School HK (West Kowloon),,American curriculum
+edb_605638000133,中學,ENGLISH,HIGH,International School,intl_school,1.000,Stamford American School HK,,American curriculum
+edb_216186000423,小學,ENGLISH,HIGH,International School,intl_school,1.000,Carmel School,,Jewish school
+edb_216186000323,小學,ENGLISH,HIGH,International School,intl_school,1.000,Carmel School,,Jewish school
+edb_511072000133,中學,CANTONESE,LOW,School Profile,inferred,0.800,Arts & Technology Education Centre,,Vocational
+edb_317357000123,小學,JAPANESE,HIGH,International School,intl_school,1.000,Hong Kong Japanese School,,Japanese curriculum
+edb_560138000233,中學,ENGLISH|PUTONGHUA,HIGH,International School,intl_school,1.000,Victoria Shanghai Academy,,Bilingual
+edb_190543000123,小學,ENGLISH,HIGH,ESF/Docx,esf_school,1.000,Shatin Junior School,,ESF primary
+edb_170879000123,小學,ENGLISH,HIGH,ESF/Docx,esf_school,1.000,Kennedy School,,ESF primary
+edb_170348000123,小學,ENGLISH,HIGH,ESF/Docx,esf_school,1.000,Beacon Hill School,,ESF primary
+edb_170909000123,小學,ENGLISH,HIGH,ESF/Docx,esf_school,1.000,Kowloon Junior School,,ESF primary
+edb_548430000623,小學,ENGLISH|PUTONGHUA,HIGH,Docx,intl_school,1.000,International Montessori School,,Bilingual
+edb_215406000423,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Kellett School (Kowloon Bay),,British curriculum
+edb_215791000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,DSC International School,,Canadian curriculum
+edb_216011000523,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Canadian International School,,Canadian curriculum
+edb_527882000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,American International School,,American curriculum
+edb_518620000223,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Lantau International School,,International
+edb_216003000223,小學,ENGLISH|PUTONGHUA,HIGH,Docx,intl_school,1.000,Singapore International School,,Bilingual
+edb_215520000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Norwegian International School,,International
+edb_216275000623,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Australian International School HK,,Australian curriculum
+edb_539155000323,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Hong Kong Academy,,International
+edb_215589000123,小學,ENGLISH|PUTONGHUA,HIGH,Docx,intl_school,1.000,Chinese International School,,Bilingual
+edb_570370000323,小學,ENGLISH,HIGH,Docx,intl_school,1.000,The Harbour School,,International
+edb_214949000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,French International School,,French/English stream
+edb_607525000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Shrewsbury International School,,British curriculum
+edb_230979000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,ICHK Hong Lok Yuen,,International
+edb_543560000423,小學,ENGLISH|CANTONESE,HIGH,Docx,intl_school,1.000,PLK Choi Kai Yau School,,Bilingual through-train
+edb_609781000223,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Limai School,,International
+edb_617334000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,Oxbridge British School,,British curriculum
+edb_609498000223,小學,SPANISH|ENGLISH|CANTONESE,HIGH,Docx,intl_school,1.000,Spanish School of Hong Kong,,Trilingual
+edb_579009000123,小學,ENGLISH,LOW,Docx,intl_school,0.800,Silvermine Bay School,,Small international
+edb_608319000223,小學,ENGLISH|CANTONESE,LOW,Docx,inferred,0.800,Island Waldorf School,,Waldorf
+edb_569836000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,International Christian School,,International
+edb_560138000223,小學,ENGLISH|PUTONGHUA,HIGH,Docx,intl_school,1.000,Victoria Shanghai Academy,,Bilingual
+edb_216232000123,小學,ENGLISH,HIGH,Docx,intl_school,1.000,KLT Funful English Primary,,English medium
+edb_600814000123,小學,ENGLISH,LOW,Docx,inferred,0.800,Discovery Montessori Academy,,Montessori
+edb_190314000233,中學,ENGLISH,HIGH,ESF/Docx,esf_school,1.000,Shatin College,,ESF secondary
+edb_170992000133,中學,ENGLISH,HIGH,ESF/Docx,esf_school,1.000,West Island School,,ESF secondary
+edb_548430000633,中學,ENGLISH|PUTONGHUA,HIGH,Docx,intl_school,1.000,International Montessori School,,Bilingual
+edb_598356000333,中學,ENGLISH,HIGH,Docx,intl_school,1.000,Nord Anglia International School,,International
+edb_216003000433,中學,ENGLISH|PUTONGHUA,HIGH,Docx,intl_school,1.000,Singapore International School,,Bilingual
+edb_230987000233,中學,ENGLISH,HIGH,Docx,intl_school,1.000,Discovery Bay International School,,International
+edb_214558000133,中學,ENGLISH,HIGH,Docx,intl_school,1.000,German Swiss International School,,English stream
+edb_216216000133,中學,ENGLISH,HIGH,Docx,intl_school,1.000,Korean International School,,International section
+edb_230987000133,中學,ENGLISH,HIGH,Docx,intl_school,1.000,Discovery Bay International School,,International
+edb_317357000133,中學,JAPANESE,HIGH,Docx,intl_school,1.000,Hong Kong Japanese School,,Japanese stream
+edb_215287000933,中學,ENGLISH|CANTONESE,LOW,Docx,inferred,0.800,Maria College (Waldorf),,Waldorf
+edb_289094000233,中學,CANTONESE,LOW,Docx,inferred,0.800,Beacon College,,Tutorial college
+edb_240656000234,中學,CANTONESE,HIGH,Docx,evening_school,1.000,Lutheran Evening College,,Evening school
+edb_609781000233,中學,ENGLISH,HIGH,Docx,intl_school,1.000,Limai School,,International
+edb_215287001134,中學,ENGLISH|CANTONESE,LOW,Docx,inferred,0.800,Maria College (Waldorf),,Waldorf
+edb_315699000333,中學,CANTONESE,LOW,Docx,inferred,0.800,Wahhar College,,Local private
+edb_533343000134,中學,CANTONESE,HIGH,Docx,evening_school,1.000,PLK Sprouts Foundation,,Evening education
+edb_612820000133,中學,CANTONESE,LOW,Docx,inferred,0.800,Anantara College,,Tutorial college
+edb_621374000133,中學,ENGLISH,LOW,Docx,inferred,0.800,Hong Kong Bluebell College,,Alternative secondary
+edb_607819000133,中學,ENGLISH|CANTONESE,LOW,Docx,inferred,0.800,Han Academy,,Bilingual
+edb_215287001334,中學,ENGLISH|CANTONESE,LOW,Docx,inferred,0.800,Maria College (Waldorf),,Waldorf
+edb_608327000133,中學,ENGLISH|CANTONESE,LOW,Docx,inferred,0.800,Shema Academy,,Bilingual
+edb_567485000133,中學,ENGLISH,HIGH,ESF/Docx,esf_school,1.000,Renaissance College,,ESF through-train
+edb_553867000333,中學,ENGLISH|CANTONESE,HIGH,Docx,intl_school,1.000,ICQM School,,Bilingual
+edb_513725000133,中學,ENGLISH,LOW,Docx,inferred,0.800,HK Adventist Academy,,International-style
+edb_526720000134,中學,CANTONESE,HIGH,Docx,evening_school,1.000,Hebron Evening School,,Evening school
