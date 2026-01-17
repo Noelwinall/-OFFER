@@ -8,8 +8,8 @@ import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage"
 import { isInternational } from "@/lib/international-schools";
 import { isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
-import type { School, CurriculumV2, SchoolGender, SchoolRelationship } from "@/types/school";
-import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT } from "@/types/school";
+import type { School, CurriculumV2, SchoolGender, SchoolRelationship, InstructionLanguage } from "@/types/school";
+import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 
 /**
  * Tag color palette - harmonized colors (same as school-card)
@@ -86,16 +86,19 @@ function formatDistrictDisplay(school: School): string {
 }
 
 /**
- * R3-8: 獲取教學語言顯示值
- * 國際/私校數據不可信（EDB 默認為"以中文為主"），顯示兜底文案
+ * 獲取授課語言顯示值
+ * 使用 MOI 映射數據 (instructionLanguages)，與卡片/篩選器一致
+ * 若無數據則顯示兜底文案
  */
 function getLanguageDisplayValue(school: School): string {
-  // 國際學校或私立學校：語言數據不可信，顯示兜底
-  if (isInternational(school) || school.category === "私立") {
-    return SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE;
+  // 使用 instructionLanguages (MOI 映射)
+  if (school.instructionLanguages && school.instructionLanguages.length > 0) {
+    return school.instructionLanguages
+      .map((lang) => INSTRUCTION_LANGUAGE_LABELS[lang] || lang)
+      .join("、");
   }
-  // 其他學校：顯示原始數據
-  return school.language || SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE;
+  // 無 MOI 數據時顯示兜底
+  return SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE;
 }
 
 export default function SchoolDetailScreen() {
@@ -328,11 +331,11 @@ export default function SchoolDetailScreen() {
                 value={isKindergarten(school) ? getKGNatureLabel(getKGNature(school)!) : (isInternational(school) ? "國際" : school.category)}
               />
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
-              {/* R3-8: 教學語言顯示（國際/私校顯示兜底文案） */}
+              {/* 授課語言顯示（使用 MOI 映射數據） */}
               <InfoRow
                 label={SCHOOL_TEXT.LABEL_LANGUAGE}
                 value={getLanguageDisplayValue(school)}
-                isPending={isInternational(school) || school.category === "私立"}
+                isPending={!school.instructionLanguages || school.instructionLanguages.length === 0}
               />
               {/* 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示 */}
               {school.category === "直資" && (
@@ -350,6 +353,23 @@ export default function SchoolDetailScreen() {
               </Text>
             )}
           </View>
+
+          {/* 課程體系區塊（僅顯示有課程數據的學校） */}
+          {school.curriculumV2 && school.curriculumV2.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>課程體系</Text>
+              <View style={styles.curriculumContainer}>
+                {school.curriculumV2.map((curriculum) => (
+                  <View
+                    key={curriculum}
+                    style={[styles.curriculumBadge, { backgroundColor: getCurriculumColor(curriculum) }]}
+                  >
+                    <Text style={styles.curriculumBadgeText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
+                  </View>
+                ))}
+              </View>
+            </View>
+          )}
 
           {/* R3-5: 學費區塊（國際/私校） */}
           {(isInternational(school) || school.category === "私立") && (
@@ -823,6 +843,22 @@ const styles = StyleSheet.create({
   },
   infoGrid: {
     gap: 4,
+  },
+  curriculumContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+  },
+  curriculumBadge: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 8,
+  },
+  curriculumBadgeText: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
   },
   tuitionSourceNote: {
     fontSize: 11,

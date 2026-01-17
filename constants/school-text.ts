@@ -56,7 +56,7 @@ export const SCHOOL_TEXT = {
   LABEL_LEVEL: "學段",
   LABEL_CATEGORY: "類型",
   LABEL_DISTRICT: "地區",
-  LABEL_LANGUAGE: "教學語言",
+  LABEL_LANGUAGE: "授課語言",
   LABEL_WEBSITE: "網站",
   LABEL_TUITION: "學費",
   LABEL_OVERALL_TUITION: "總體學費",
