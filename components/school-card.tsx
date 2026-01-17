@@ -6,10 +6,27 @@ import { isInternational } from "@/lib/international-schools";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 import type { School, CurriculumV2, SchoolGender, SchoolRelationship } from "@/types/school";
-import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS } from "@/types/school";
+import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT } from "@/types/school";
 import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import * as Haptics from "expo-haptics";
+
+/**
+ * Tag color palette - harmonized colors
+ * Avoids repetition and ensures visual distinction
+ */
+const TAG_COLORS = {
+  // Level tag - neutral gray
+  level: "#6B7280",
+  // District tag - teal (distinct from gray level)
+  district: "#0D9488",
+  // School net - indigo
+  schoolNet: "#6366F1",
+  // Religion - purple
+  religion: "#8B5CF6",
+  // Special school - emerald
+  specialSchool: "#059669",
+} as const;
 
 interface SchoolCardProps {
   school: School;
@@ -94,9 +111,9 @@ export const SchoolCard = React.memo(function SchoolCard({
         </Pressable>
       </View>
 
-      {/* 學校類型標籤 - 幼稚園顯示 School Nature，其他顯示 category */}
+      {/* 學校標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 宗教 → 特殊學校 */}
       <View className="flex-row items-center flex-wrap gap-1">
-        {/* 類型標籤：KG 用 nature，其他用 category */}
+        {/* 1. 種類標籤：KG 用 nature，其他用 category */}
         {isKindergarten(school) ? (
           <View
             className="px-2 py-1 rounded"
@@ -116,12 +133,38 @@ export const SchoolCard = React.memo(function SchoolCard({
             </Text>
           </View>
         )}
-        <View className="px-2 py-1 rounded bg-gray-600/30">
-          <Text className="text-xs text-muted">{school.level}</Text>
+        {/* 2. 學段標籤 */}
+        <View style={[styles.levelTag, { backgroundColor: TAG_COLORS.level }]}>
+          <Text style={styles.levelText}>{school.level}</Text>
         </View>
-        <View className="px-2 py-1 rounded bg-gray-600/30">
-          <Text className="text-xs text-muted">{school.district}</Text>
+        {/* 3. 區域標籤 (18區格式: 九龍-油尖旺區) */}
+        <View style={[styles.districtTag, { backgroundColor: TAG_COLORS.district }]}>
+          <Text style={styles.districtText}>{formatDistrictDisplay(school)}</Text>
         </View>
+        {/* 4. 校網標籤（只在小學有校網時顯示） */}
+        {school.schoolNet && (
+          <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.schoolNet }]}>
+            <Text style={styles.metadataText}>校網：{school.schoolNet}</Text>
+          </View>
+        )}
+        {/* 5. 學校性別標籤（男校/女校，MIXED 不顯示） */}
+        {school.gender && school.gender !== "MIXED" && (
+          <View style={[styles.genderTag, { backgroundColor: getGenderColor(school.gender) }]}>
+            <Text style={styles.genderText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
+          </View>
+        )}
+        {/* 6. 宗教標籤（只在有宗教時顯示） */}
+        {school.religion && (
+          <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.religion }]}>
+            <Text style={styles.metadataText}>{school.religion}</Text>
+          </View>
+        )}
+        {/* 7. 特殊學校標籤 */}
+        {school.isSpecialSchool && (
+          <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.specialSchool }]}>
+            <Text style={styles.metadataText}>特殊學校</Text>
+          </View>
+        )}
         {/* 班別標籤（僅幼稚園顯示：上午班/下午班/全天；小學不顯示） */}
         {showSessions && sessions && sessions.length > 0 && sessions.map((session) => (
           <View
@@ -131,51 +174,14 @@ export const SchoolCard = React.memo(function SchoolCard({
             <Text style={styles.sessionText}>{SESSION_LABELS[session]}</Text>
           </View>
         ))}
-        {/* 課程標籤 V2（Primary/Secondary only） */}
-        {school.curriculumV2 && school.curriculumV2.length > 0 && school.curriculumV2.map((curriculum) => (
-          <View
-            key={curriculum}
-            style={[styles.curriculumTag, { backgroundColor: getCurriculumColor(curriculum) }]}
-          >
-            <Text style={styles.curriculumText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
-          </View>
-        ))}
-        {/* 學校性別標籤（男校/女校，MIXED 不顯示） */}
-        {school.gender && school.gender !== "MIXED" && (
-          <View style={[styles.genderTag, { backgroundColor: getGenderColor(school.gender) }]}>
-            <Text style={styles.genderText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
-          </View>
-        )}
-        {/* 宗教標籤（只在有宗教時顯示） */}
-        {school.religion && (
-          <View style={[styles.metadataTag, { backgroundColor: "#8B5CF6" }]}>
-            <Text style={styles.metadataText}>{school.religion}</Text>
-          </View>
-        )}
-        {/* 校網標籤（只在小學有校網時顯示） */}
-        {school.schoolNet && (
-          <View style={[styles.metadataTag, { backgroundColor: "#6366F1" }]}>
-            <Text style={styles.metadataText}>校網：{school.schoolNet}</Text>
-          </View>
-        )}
-        {/* 特殊學校標籤 */}
-        {school.isSpecialSchool && (
-          <View style={[styles.metadataTag, { backgroundColor: "#059669" }]}>
-            <Text style={styles.metadataText}>特殊學校</Text>
-          </View>
-        )}
-        {/* 結龍/直屬/聯繫學校標籤（小學） */}
-        {school.relationship && (
-          <View style={[styles.relationshipTag, { backgroundColor: getRelationshipColor(school.relationship) }]}>
-            <Text style={styles.relationshipText}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
-          </View>
-        )}
       </View>
 
-      {/* 學費資訊 - R3-4 (DSS) + R3-5 (國際/私校) */}
-      <Text className="text-xs text-muted mt-2">
-        {getTuitionDisplayText(school)}
-      </Text>
+      {/* 學費資訊 - 只在有數據時顯示，無數據不渲染 */}
+      {hasTuitionData(school) && (
+        <Text className="text-xs text-muted mt-2">
+          {getTuitionDisplayText(school)}
+        </Text>
+      )}
     </Pressable>
   );
 }, (prev, next) =>
@@ -190,6 +196,17 @@ export const SchoolCard = React.memo(function SchoolCard({
  */
 function getDisplayType(school: School): string {
   return isInternational(school) ? "國際" : school.category;
+}
+
+/**
+ * 格式化區域顯示 (18區格式)
+ * 例: "九龍-油尖旺區", "新界-沙田區", "港島-中西區"
+ */
+function formatDistrictDisplay(school: School): string {
+  if (school.district18) {
+    return `${school.district}-${school.district18}`;
+  }
+  return school.district;
 }
 
 /**
@@ -237,15 +254,24 @@ function getGenderColor(gender: SchoolGender): string {
 }
 
 /**
- * 根據學校關係類型返回對應顏色
+ * 檢查學校是否有有效學費數據
+ * 用於決定是否顯示學費行（無數據時不顯示，而非顯示佔位符）
  */
-function getRelationshipColor(relationship: SchoolRelationship): string {
-  const colors: Record<SchoolRelationship, string> = {
-    THROUGH_TRAIN: "#F59E0B",   // amber - 結龍學校
-    AFFILIATED: "#10B981",      // emerald - 直屬學校
-    LINKED: "#0EA5E9",          // sky blue - 聯繫學校
-  };
-  return colors[relationship] || "#6B7280";
+function hasTuitionData(school: School): boolean {
+  // 資助/公立學校：免學費，視為有數據
+  if (school.category === "資助" || school.category === "公立") {
+    return true;
+  }
+  // 直資學校：檢查是否有有效學費範圍
+  if (school.category === "直資") {
+    return school.tuitionMin > 0 || school.tuitionMax > 0;
+  }
+  // 國際/私校：檢查費用結構是否有有效數據
+  if (isInternational(school) || school.category === "私立") {
+    const fees = getSchoolFees(school.id);
+    return hasValidFeesData(fees);
+  }
+  return false;
 }
 
 /**
@@ -289,6 +315,26 @@ const styles = StyleSheet.create({
   },
   cardPressed: {
     opacity: 0.85,
+  },
+  levelTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  levelText: {
+    fontSize: 10,
+    fontWeight: "600",
+    color: "#FFFFFF",
+  },
+  districtTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  districtText: {
+    fontSize: 10,
+    fontWeight: "600",
+    color: "#FFFFFF",
   },
   sessionTag: {
     paddingHorizontal: 8,

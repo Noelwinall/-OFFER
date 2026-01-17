@@ -9,7 +9,18 @@ import { isInternational } from "@/lib/international-schools";
 import { isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import type { School, CurriculumV2, SchoolGender, SchoolRelationship } from "@/types/school";
-import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS } from "@/types/school";
+import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT } from "@/types/school";
+
+/**
+ * Tag color palette - harmonized colors (same as school-card)
+ */
+const TAG_COLORS = {
+  level: "#6B7280",
+  district: "#0D9488",
+  schoolNet: "#6366F1",
+  religion: "#8B5CF6",
+  specialSchool: "#059669",
+} as const;
 import type { SchoolFees } from "@/types/fees";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -61,6 +72,17 @@ function getRelationshipColor(relationship: SchoolRelationship): string {
     LINKED: "#0EA5E9",          // sky blue - 聯繫學校
   };
   return colors[relationship] || "#6B7280";
+}
+
+/**
+ * 格式化區域顯示 (18區格式)
+ * 例: "九龍-油尖旺區", "新界-沙田區", "港島-中西區"
+ */
+function formatDistrictDisplay(school: School): string {
+  if (school.district18) {
+    return `${school.district}-${school.district18}`;
+  }
+  return school.district;
 }
 
 /**
@@ -245,73 +267,52 @@ export default function SchoolDetailScreen() {
             {school.nameEn && (
               <Text style={styles.schoolNameEn}>{school.nameEn}</Text>
             )}
+            {/* 標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 宗教 → 特殊學校 */}
             <View style={styles.tagRow}>
-              {/* 類型標籤：KG 用 nature，其他用 category */}
+              {/* 1. 種類標籤：KG 用 nature，其他用 category */}
               {isKindergarten(school) ? (
-                <View style={[styles.tag, { backgroundColor: getKGNatureColor(getKGNature(school)!) }]}>
-                  <Text style={[styles.tagText, { color: "#FFFFFF" }]}>
+                <View style={[styles.categoryTag, { backgroundColor: getKGNatureColor(getKGNature(school)!) }]}>
+                  <Text style={styles.categoryTagText}>
                     {getKGNatureLabel(getKGNature(school)!)}
                   </Text>
                 </View>
               ) : (
-                <View style={[styles.tag, isInternational(school) && styles.internationalTag]}>
-                  <Text style={[styles.tagText, isInternational(school) && styles.internationalTagText]}>
+                <View style={[styles.categoryTag, isInternational(school) && styles.internationalTag]}>
+                  <Text style={[styles.categoryTagText, isInternational(school) && styles.internationalTagText]}>
                     {isInternational(school) ? "國際" : school.category}
                   </Text>
                 </View>
               )}
-              <View style={styles.tag}>
-                <Text style={styles.tagText}>{school.district}</Text>
+              {/* 2. 學段標籤 */}
+              <View style={[styles.levelTag, { backgroundColor: TAG_COLORS.level }]}>
+                <Text style={styles.levelTagText}>{school.level}</Text>
               </View>
-              <View style={styles.tag}>
-                <Text style={styles.tagText}>{school.level}</Text>
+              {/* 3. 區域標籤 (18區格式) */}
+              <View style={[styles.districtTag, { backgroundColor: TAG_COLORS.district }]}>
+                <Text style={styles.districtTagText}>{formatDistrictDisplay(school)}</Text>
               </View>
-            </View>
-            {/* 課程標籤 V2（Primary/Secondary only） */}
-            {school.curriculumV2 && school.curriculumV2.length > 0 && (
-              <View style={styles.curriculumTagRow}>
-                {school.curriculumV2.map((curriculum) => (
-                  <View
-                    key={curriculum}
-                    style={[styles.curriculumTag, { backgroundColor: getCurriculumColor(curriculum) }]}
-                  >
-                    <Text style={styles.curriculumTagText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
-                  </View>
-                ))}
-              </View>
-            )}
-            {/* 學校性別標籤（男校/女校，MIXED 不顯示） */}
-            {school.gender && school.gender !== "MIXED" && (
-              <View style={styles.genderTagRow}>
-                <View style={[styles.genderTag, { backgroundColor: getGenderColor(school.gender) }]}>
-                  <Text style={styles.genderTagText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
-                </View>
-              </View>
-            )}
-            {/* 新增元數據標籤行 (R4) */}
-            <View style={styles.metadataTagRow}>
-              {/* 宗教標籤（只在有宗教時顯示） */}
-              {school.religion && (
-                <View style={[styles.metadataTag, { backgroundColor: "#8B5CF6" }]}>
-                  <Text style={styles.metadataTagText}>{school.religion}</Text>
-                </View>
-              )}
-              {/* 校網標籤（只在小學有校網時顯示） */}
+              {/* 4. 校網標籤（只在小學有校網時顯示） */}
               {school.schoolNet && (
-                <View style={[styles.metadataTag, { backgroundColor: "#6366F1" }]}>
+                <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.schoolNet }]}>
                   <Text style={styles.metadataTagText}>校網：{school.schoolNet}</Text>
                 </View>
               )}
-              {/* 特殊學校標籤 */}
-              {school.isSpecialSchool && (
-                <View style={[styles.metadataTag, { backgroundColor: "#059669" }]}>
-                  <Text style={styles.metadataTagText}>特殊學校</Text>
+              {/* 5. 學校性別標籤（男校/女校，MIXED 不顯示） */}
+              {school.gender && school.gender !== "MIXED" && (
+                <View style={[styles.genderTag, { backgroundColor: getGenderColor(school.gender) }]}>
+                  <Text style={styles.genderTagText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
                 </View>
               )}
-              {/* 結龍/直屬/聯繫學校標籤（小學） */}
-              {school.relationship && (
-                <View style={[styles.metadataTag, { backgroundColor: getRelationshipColor(school.relationship) }]}>
-                  <Text style={styles.metadataTagText}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
+              {/* 6. 宗教標籤（只在有宗教時顯示） */}
+              {school.religion && (
+                <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.religion }]}>
+                  <Text style={styles.metadataTagText}>{school.religion}</Text>
+                </View>
+              )}
+              {/* 7. 特殊學校標籤 */}
+              {school.isSpecialSchool && (
+                <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.specialSchool }]}>
+                  <Text style={styles.metadataTagText}>特殊學校</Text>
                 </View>
               )}
             </View>
@@ -745,28 +746,45 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     gap: 8,
   },
-  curriculumTagRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 8,
-    marginTop: 8,
+  categoryTag: {
+    backgroundColor: "rgba(0, 217, 255, 0.15)",
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 8,
   },
-  curriculumTag: {
+  categoryTagText: {
+    fontSize: 13,
+    fontWeight: "600",
+    color: "#00D9FF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  internationalTag: {
+    backgroundColor: "#00D9FF",
+  },
+  internationalTagText: {
+    color: "#0F1629",
+  },
+  levelTag: {
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 8,
   },
-  curriculumTagText: {
+  levelTagText: {
     fontSize: 12,
     fontWeight: "600",
     color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Regular",
   },
-  genderTagRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 8,
-    marginTop: 8,
+  districtTag: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  districtTagText: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
   },
   genderTag: {
     paddingHorizontal: 10,
@@ -779,12 +797,6 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Regular",
   },
-  metadataTagRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 8,
-    marginTop: 8,
-  },
   metadataTag: {
     paddingHorizontal: 10,
     paddingVertical: 5,
@@ -795,24 +807,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Regular",
-  },
-  tag: {
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 8,
-  },
-  internationalTag: {
-    backgroundColor: "#00D9FF",
-  },
-  tagText: {
-    fontSize: 13,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  internationalTagText: {
-    color: "#0F1629",
-    fontWeight: "600",
   },
   section: {
     paddingHorizontal: 24,
@@ -854,15 +848,18 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: "rgba(255,255,255,0.1)",
     flexDirection: "row",
+    alignItems: "flex-start",
     gap: 12,
   },
   compareButton: {
     flex: 1,
+    height: 52,
     backgroundColor: "rgba(255,255,255,0.1)",
-    paddingVertical: 16,
     borderRadius: 16,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.2)",
+    justifyContent: "center",
+    alignItems: "center",
   },
   compareButtonText: {
     fontSize: 14,
@@ -873,13 +870,13 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   applyButton: {
-    flex: 1,
+    height: 52,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
     backgroundColor: "#00D9FF",
-    paddingVertical: 16,
+    paddingHorizontal: 16,
     borderRadius: 16,
     shadowColor: "#00D9FF",
     shadowOffset: { width: 0, height: 4 },
@@ -896,7 +893,6 @@ const styles = StyleSheet.create({
   },
   applyButtonContainer: {
     flex: 1,
-    alignItems: "center",
   },
   applyButtonDisabled: {
     backgroundColor: "rgba(142, 142, 147, 0.3)",
