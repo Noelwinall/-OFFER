@@ -52,7 +52,8 @@ export type InstructionLanguage =
   | "FRENCH"
   | "GERMAN"
   | "JAPANESE"
-  | "KOREAN";
+  | "KOREAN"
+  | "SPANISH";
 
 /**
  * InstructionLanguage display labels
@@ -65,6 +66,7 @@ export const INSTRUCTION_LANGUAGE_LABELS: Record<InstructionLanguage, string> = 
   GERMAN: "德文",
   JAPANESE: "日文",
   KOREAN: "韓文",
+  SPANISH: "西班牙文",
 };
 
 export interface School {

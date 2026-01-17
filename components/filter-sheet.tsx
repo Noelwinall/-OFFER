@@ -61,6 +61,7 @@ const INSTRUCTION_LANGUAGE_OPTIONS: { label: string; value: InstructionLanguage 
   { label: "德文", value: "GERMAN" },
   { label: "日文", value: "JAPANESE" },
   { label: "韓文", value: "KOREAN" },
+  { label: "西班牙文", value: "SPANISH" },
 ];
 
 export function FilterSheet({ visible, onClose }: FilterSheetProps) {
