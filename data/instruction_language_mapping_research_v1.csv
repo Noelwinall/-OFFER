@@ -1,0 +1,7 @@
+school_id,instruction_languages,confidence,source,notes
+edb_560553000123,English|Putonghua,HIGH,EDB / IMS,Bilingual (English & Chinese) medium
+edb_190543000123,English,HIGH,ESF Shatin Junior School,Explicitly English medium
+edb_579009000123,English,LOW,School profile,Presumed based on historical use
+edb_608319000223,English|Chinese,LOW,Institution profile,Waldorf bilingual setup
+edb_609781000233,English,HIGH,Renaissance College,Secondary section of ESF school
+edb_608327000133,Chinese|English,LOW,School website,Christian private secondary with mixed content
