@@ -101,6 +101,34 @@ function getLanguageDisplayValue(school: School): string {
   return SCHOOL_TEXT.REFER_TO_SCHOOL_WEBSITE;
 }
 
+/**
+ * 獲取相關學校資訊
+ * 根據 relatedSchoolIds 返回學校名稱和 ID
+ */
+function getRelatedSchools(school: School): { id: string; name: string; level: string }[] {
+  if (!school.relatedSchoolIds || school.relatedSchoolIds.length === 0) {
+    return [];
+  }
+  return school.relatedSchoolIds
+    .map((id) => {
+      const relatedSchool = schools.find((s) => s.id === id);
+      return relatedSchool ? { id: relatedSchool.id, name: relatedSchool.name, level: relatedSchool.level } : null;
+    })
+    .filter((s): s is { id: string; name: string; level: string } => s !== null);
+}
+
+/**
+ * 獲取關係類型標題
+ */
+function getRelationshipTitle(relationship: SchoolRelationship): string {
+  const titles: Record<SchoolRelationship, string> = {
+    THROUGH_TRAIN: "一條龍學校",
+    AFFILIATED: "直屬學校",
+    LINKED: "聯繫學校",
+  };
+  return titles[relationship] || "相關學校";
+}
+
 export default function SchoolDetailScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -270,7 +298,7 @@ export default function SchoolDetailScreen() {
             {school.nameEn && (
               <Text style={styles.schoolNameEn}>{school.nameEn}</Text>
             )}
-            {/* 標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 宗教 → 特殊學校 */}
+            {/* 標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 一條龍/直屬/聯繫 → 宗教 → 特殊學校 */}
             <View style={styles.tagRow}>
               {/* 1. 種類標籤：KG 用 nature，其他用 category */}
               {isKindergarten(school) ? (
@@ -306,13 +334,19 @@ export default function SchoolDetailScreen() {
                   <Text style={styles.genderTagText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
                 </View>
               )}
-              {/* 6. 宗教標籤（只在有宗教時顯示） */}
+              {/* 6. 學校關係標籤（一條龍/直屬/聯繫） */}
+              {school.relationship && (
+                <View style={[styles.relationshipTag, { backgroundColor: getRelationshipColor(school.relationship) }]}>
+                  <Text style={styles.relationshipTagText}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
+                </View>
+              )}
+              {/* 7. 宗教標籤（只在有宗教時顯示） */}
               {school.religion && (
                 <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.religion }]}>
                   <Text style={styles.metadataTagText}>{school.religion}</Text>
                 </View>
               )}
-              {/* 7. 特殊學校標籤 */}
+              {/* 8. 特殊學校標籤 */}
               {school.isSpecialSchool && (
                 <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.specialSchool }]}>
                   <Text style={styles.metadataTagText}>特殊學校</Text>
@@ -353,6 +387,34 @@ export default function SchoolDetailScreen() {
               </Text>
             )}
           </View>
+
+          {/* 相關學校區塊（一條龍/直屬/聯繫學校） */}
+          {school.relationship && school.relatedSchoolIds && school.relatedSchoolIds.length > 0 && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>{getRelationshipTitle(school.relationship)}</Text>
+              <View style={styles.relatedSchoolsContainer}>
+                {getRelatedSchools(school).map((relatedSchool) => (
+                  <TouchableOpacity
+                    key={relatedSchool.id}
+                    style={styles.relatedSchoolItem}
+                    onPress={() => {
+                      if (Platform.OS !== "web") {
+                        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                      }
+                      router.push(`/school/${relatedSchool.id}`);
+                    }}
+                    activeOpacity={0.7}
+                  >
+                    <View style={styles.relatedSchoolInfo}>
+                      <Text style={styles.relatedSchoolName}>{relatedSchool.name}</Text>
+                      <Text style={styles.relatedSchoolLevel}>{relatedSchool.level}</Text>
+                    </View>
+                    <IconSymbol name="chevron.right" size={16} color="rgba(255,255,255,0.4)" />
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
+          )}
 
           {/* 課程體系區塊（僅顯示有課程數據的學校） */}
           {school.curriculumV2 && school.curriculumV2.length > 0 && (
@@ -826,6 +888,46 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "600",
     color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  relationshipTag: {
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 8,
+  },
+  relationshipTagText: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  relatedSchoolsContainer: {
+    gap: 8,
+  },
+  relatedSchoolItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "rgba(0,217,255,0.08)",
+    borderRadius: 12,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: "rgba(0,217,255,0.15)",
+  },
+  relatedSchoolInfo: {
+    flex: 1,
+    marginRight: 8,
+  },
+  relatedSchoolName: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+    marginBottom: 2,
+  },
+  relatedSchoolLevel: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
   },
   section: {

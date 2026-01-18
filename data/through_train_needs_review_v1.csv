@@ -1,0 +1,13 @@
+school_id,stage,school_name_zh,school_name_en,relation_type,reason
+,PRIMARY,浸大附屬學校王錦輝中小學,,THROUGH_TRAIN,primary_not_found
+,SECONDARY,浸大附屬學校王錦輝中小學,,THROUGH_TRAIN,secondary_not_found
+edb_569909000123,PRIMARY,地利亞(閩僑)英文小學,,THROUGH_TRAIN,secondary_not_found
+,SECONDARY,地利亞修女紀念學校(百老匯),,THROUGH_TRAIN,secondary_not_found
+,PRIMARY,香島道官立小學,,LINKED,primary_not_found
+,PRIMARY,香島道官立小學,,LINKED,primary_not_found
+,PRIMARY,玫瑰崗學校(小學部),,LINKED,primary_not_found
+,SECONDARY,玫瑰崗學校,,LINKED,secondary_not_found
+edb_512273000223,PRIMARY,救恩學校,,LINKED,secondary_not_found
+,SECONDARY,匯基書院(東九龍),,LINKED,secondary_not_found
+,PRIMARY,神召第一小學暨幼稚園,,LINKED,primary_not_found
+,SECONDARY,匯基書院(東九龍),,LINKED,secondary_not_found

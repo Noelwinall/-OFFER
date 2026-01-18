@@ -129,6 +129,7 @@ export interface School {
   schoolNet?: string; // 校網 (e.g. "11", "34") - Primary schools only
   isSpecialSchool?: boolean; // 特殊學校 flag
   relationship?: SchoolRelationship; // 結龍/直屬/聯繫 - Primary schools only
+  relatedSchoolIds?: string[]; // 相關學校 IDs (through-train/affiliated/linked counterparts)
 }
 
 /**

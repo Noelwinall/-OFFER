@@ -20,6 +20,7 @@ import { instructionLanguageMap } from "./mappings/instruction-language-map";
 import { genderMap } from "./mappings/gender-map";
 import { curriculumMap } from "./mappings/curriculum-map";
 import { schoolMetadataMap } from "./mappings/school-metadata-map";
+import { relationshipMap } from "./mappings/relationship-map";
 
 /**
  * Default values for unmapped schools
@@ -34,6 +35,7 @@ const DEFAULT_CURRICULUM_V2: CurriculumV2[] = [];
 function mergeSchoolData(): School[] {
   return schoolsRaw.map((raw) => {
     const metadata = schoolMetadataMap[raw.id];
+    const relationshipEntry = relationshipMap[raw.id];
     return {
       ...raw,
       // Mapped fields
@@ -44,7 +46,9 @@ function mergeSchoolData(): School[] {
       religion: metadata?.religion,
       schoolNet: metadata?.schoolNet,
       isSpecialSchool: metadata?.isSpecialSchool,
-      relationship: metadata?.relationship as SchoolRelationship | undefined,
+      // Relationship fields - prefer relationshipMap over metadata
+      relationship: relationshipEntry?.relationType ?? metadata?.relationship as SchoolRelationship | undefined,
+      relatedSchoolIds: relationshipEntry?.relatedSchoolIds,
     };
   });
 }

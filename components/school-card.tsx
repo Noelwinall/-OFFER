@@ -111,7 +111,7 @@ export const SchoolCard = React.memo(function SchoolCard({
         </Pressable>
       </View>
 
-      {/* 學校標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 宗教 → 特殊學校 */}
+      {/* 學校標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 一條龍/直屬/聯繫 → 宗教 → 特殊學校 */}
       <View className="flex-row items-center flex-wrap gap-1">
         {/* 1. 種類標籤：KG 用 nature，其他用 category */}
         {isKindergarten(school) ? (
@@ -153,13 +153,19 @@ export const SchoolCard = React.memo(function SchoolCard({
             <Text style={styles.genderText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
           </View>
         )}
-        {/* 6. 宗教標籤（只在有宗教時顯示） */}
+        {/* 6. 學校關係標籤（一條龍/直屬/聯繫） */}
+        {school.relationship && (
+          <View style={[styles.relationshipTag, { backgroundColor: getRelationshipColor(school.relationship) }]}>
+            <Text style={styles.relationshipText}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
+          </View>
+        )}
+        {/* 7. 宗教標籤（只在有宗教時顯示） */}
         {school.religion && (
           <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.religion }]}>
             <Text style={styles.metadataText}>{school.religion}</Text>
           </View>
         )}
-        {/* 7. 特殊學校標籤 */}
+        {/* 8. 特殊學校標籤 */}
         {school.isSpecialSchool && (
           <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.specialSchool }]}>
             <Text style={styles.metadataText}>特殊學校</Text>
@@ -251,6 +257,18 @@ function getGenderColor(gender: SchoolGender): string {
     MIXED: "#6B7280",   // gray (not used in display)
   };
   return colors[gender] || "#6B7280";
+}
+
+/**
+ * 根據學校關係類型返回對應顏色
+ */
+function getRelationshipColor(relationship: SchoolRelationship): string {
+  const colors: Record<SchoolRelationship, string> = {
+    THROUGH_TRAIN: "#F97316", // orange - 一條龍
+    AFFILIATED: "#0EA5E9",    // sky blue - 直屬
+    LINKED: "#14B8A6",        // teal - 聯繫
+  };
+  return colors[relationship] || "#6B7280";
 }
 
 /**
