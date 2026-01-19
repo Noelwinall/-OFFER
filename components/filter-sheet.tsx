@@ -13,6 +13,7 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useFilter } from "@/lib/filter-context";
 import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18, type Level } from "@/types/school";
 import { NON_KG_CATEGORY_OPTIONS, KG_CATEGORY_OPTIONS } from "@/constants/kg-nature";
+import { InfoHelp } from "@/components/info-help";
 import * as Haptics from "expo-haptics";
 
 interface FilterSheetProps {
@@ -174,7 +175,10 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
 
               {/* 2. 學校類型 (School Type) */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>🏫 學校類型</Text>
+                <View style={styles.sectionTitleRow}>
+                  <Text style={styles.sectionTitle}>🏫 學校類型</Text>
+                  <InfoHelp topic="school_types" />
+                </View>
                 <View style={styles.chipContainer}>
                   {getCategoryOptions().map((option) => {
                     const isSelected = state.category.includes(option.value);
@@ -345,7 +349,10 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
 
               {/* 4. 課程體系 (Curriculum V2) */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>🎓 課程體系</Text>
+                <View style={styles.sectionTitleRow}>
+                  <Text style={styles.sectionTitle}>🎓 課程體系</Text>
+                  <InfoHelp topic="curriculum" />
+                </View>
                 <View style={styles.chipContainer}>
                   {CURRICULUM_V2_OPTIONS.map((option) => {
                     const isSelected = state.curriculumV2.includes(option.value);
@@ -596,5 +603,11 @@ const styles = StyleSheet.create({
     color: "rgba(255, 255, 255, 0.5)",
     marginBottom: 8,
     fontFamily: "NotoSerifSC-Regular",
+  },
+  sectionTitleRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    marginBottom: 14,
   },
 });

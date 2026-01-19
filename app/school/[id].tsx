@@ -11,6 +11,7 @@ import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-
 import type { School, CurriculumV2, SchoolGender, SchoolRelationship, InstructionLanguage } from "@/types/school";
 import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 import { getCHSCData, type CHSCSchoolData } from "@/data/chsc-data";
+import { InfoHelp } from "@/components/info-help";
 
 /**
  * Tag color palette - harmonized colors (same as school-card)
@@ -406,7 +407,7 @@ export default function SchoolDetailScreen() {
             </View>
           </View>
 
-          {/* 基本資訊 - 順序：類型 → 學段 → 地區 → 創校年份 → 校訓 → 授課語言 → 課程 → 學費 */}
+          {/* 基本資訊 - 順序：類型 → 學段 → 地區 → 校網 → 創校年份 → 校訓 → 授課語言 → 課程 → 學費 */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_BASIC_INFO}</Text>
             <View style={styles.infoGrid}>
@@ -414,30 +415,38 @@ export default function SchoolDetailScreen() {
               <InfoRow
                 label={SCHOOL_TEXT.LABEL_CATEGORY}
                 value={isKindergarten(school) ? getKGNatureLabel(getKGNature(school)!) : (isInternational(school) ? "國際" : school.category)}
+                helpTopic="school_types"
               />
               {/* 2. 學段 */}
               <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
               {/* 3. 地區 */}
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
-              {/* 4. 創校年份 - from CHSC data, only render if available */}
+              {/* 4. 校網 - only render if school has schoolNet data (primary schools only) */}
+              {school.schoolNet && (
+                <InfoRow label="校網" value={school.schoolNet} helpTopic="school_net" />
+              )}
+              {/* 5. 創校年份 - from CHSC data, only render if available */}
               {chscData?.yearEstablished && (
                 <InfoRow label="創校年份" value={chscData.yearEstablished} />
               )}
-              {/* 5. 校訓 - from CHSC data, only render if available */}
+              {/* 6. 校訓 - from CHSC data, only render if available */}
               {chscData?.schoolMotto && (
                 <InfoRow label="校訓" value={chscData.schoolMotto} />
               )}
-              {/* 6. 授課語言（使用 MOI 映射數據）- only render if has data */}
+              {/* 7. 授課語言（使用 MOI 映射數據）- only render if has data */}
               {school.instructionLanguages && school.instructionLanguages.length > 0 && (
                 <InfoRow
                   label={SCHOOL_TEXT.LABEL_LANGUAGE}
                   value={getLanguageDisplayValue(school)}
                 />
               )}
-              {/* 7. 課程體系 - moved from standalone section, only render if has data */}
+              {/* 8. 課程體系 - moved from standalone section, only render if has data */}
               {getCurriculumDisplay(school).length > 0 && (
                 <View style={infoStyles.row}>
-                  <Text style={infoStyles.label}>課程體系</Text>
+                  <View style={infoStyles.labelContainer}>
+                    <Text style={infoStyles.label}>課程體系</Text>
+                    <InfoHelp topic="curriculum" />
+                  </View>
                   <View style={styles.curriculumInlineContainer}>
                     {getCurriculumDisplay(school).map((curriculum) => (
                       <View
@@ -450,7 +459,7 @@ export default function SchoolDetailScreen() {
                   </View>
                 </View>
               )}
-              {/* 8. 學費 - 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示；Gov/Aided不顯示 */}
+              {/* 9. 學費 - 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示；Gov/Aided不顯示 */}
               {shouldShowTuition(school) && school.category === "直資" && school.tuitionMin > 0 && school.tuitionMax > 0 && (
                 <InfoRow
                   label={SCHOOL_TEXT.LABEL_TUITION}
@@ -469,7 +478,10 @@ export default function SchoolDetailScreen() {
           {/* 相關學校區塊（一條龍/直屬/聯繫學校） */}
           {school.relationship && school.relatedSchoolIds && school.relatedSchoolIds.length > 0 && (
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>{getRelationshipTitle(school.relationship)}</Text>
+              <View style={styles.sectionTitleWithHelp}>
+                <Text style={styles.sectionTitleInline}>{getRelationshipTitle(school.relationship)}</Text>
+                <InfoHelp topic="feeder_direct_linked" />
+              </View>
               <View style={styles.relatedSchoolsContainer}>
                 {getRelatedSchools(school).map((relatedSchool) => (
                   <TouchableOpacity
@@ -613,11 +625,14 @@ export default function SchoolDetailScreen() {
   );
 }
 
-function InfoRow({ label, value, isLink = false, isPending = false }: { label: string; value: string; isLink?: boolean; isPending?: boolean }) {
+function InfoRow({ label, value, isLink = false, isPending = false, helpTopic }: { label: string; value: string; isLink?: boolean; isPending?: boolean; helpTopic?: string }) {
   const displayValue = isPending ? SCHOOL_TEXT.PENDING : value;
   return (
     <View style={infoStyles.row}>
-      <Text style={infoStyles.label}>{label}</Text>
+      <View style={infoStyles.labelContainer}>
+        <Text style={infoStyles.label}>{label}</Text>
+        {helpTopic && <InfoHelp topic={helpTopic as any} />}
+      </View>
       <Text style={[infoStyles.value, isLink && infoStyles.link, isPending && infoStyles.pending]}>{displayValue}</Text>
     </View>
   );
@@ -828,8 +843,12 @@ const infoStyles = StyleSheet.create({
     flexDirection: "row",
     paddingVertical: 8,
   },
+  labelContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: 90,
+  },
   label: {
-    width: 80,
     color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
@@ -1027,6 +1046,17 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 12,
+  },
+  sectionTitleWithHelp: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  sectionTitleInline: {
+    fontSize: 18,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Bold",
   },
   infoGrid: {
     gap: 4,
