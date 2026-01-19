@@ -3037,6 +3037,534 @@ export const feesData202526: FeesDataMap = {
       },
     ],
   },
+
+  // ============================================
+  // ESF Primary Schools - Y1-Y6: $139,000
+  // Source: https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/
+  // ============================================
+  "edb_170348000123": { // Beacon Hill School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170747000123": { // Bradbury School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_171034000123": { // Clearwater Bay School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_171034000223": { // Clearwater Bay School (2nd entry)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170887000123": { // Glenealy School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170879000123": { // Kennedy School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170909000123": { // Kowloon Junior School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170860000123": { // Peak School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170895000123": { // Quarry Bay School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_190543000123": { // Shatin Junior School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 139000, amountMax: 139000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // ESF Secondary Schools - Y7-10: $181,100, Y11: $159,400, Y12-13: $167,600
+  // Source: https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/
+  // ============================================
+  "edb_170917000133": { // King George V School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7-Y10", amountMin: 181100, amountMax: 181100 },
+        { label: "Y11", amountMin: 159400, amountMax: 159400 },
+        { label: "Y12-Y13", amountMin: 167600, amountMax: 167600 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_190314000233": { // Shatin College
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7-Y10", amountMin: 181100, amountMax: 181100 },
+        { label: "Y11", amountMin: 159400, amountMax: 159400 },
+        { label: "Y12-Y13", amountMin: 167600, amountMax: 167600 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170836000133": { // South Island School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7-Y10", amountMin: 181100, amountMax: 181100 },
+        { label: "Y11", amountMin: 159400, amountMax: 159400 },
+        { label: "Y12-Y13", amountMin: 167600, amountMax: 167600 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_170992000133": { // West Island School
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7-Y10", amountMin: 181100, amountMax: 181100 },
+        { label: "Y11", amountMin: 159400, amountMax: 159400 },
+        { label: "Y12-Y13", amountMin: 167600, amountMax: 167600 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Fee Levels 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // ESF Private Schools (Discovery College, Renaissance College)
+  // ~5-6% higher than subvented ESF
+  // ============================================
+  "edb_569747000223": { // Discovery College - Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 147200, amountMax: 147200 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Discovery College Fees 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_569747000233": { // Discovery College - Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7-Y10", amountMin: 191800, amountMax: 191800 },
+        { label: "Y11-Y13", amountMin: 177500, amountMax: 177500 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Discovery College Fees 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_567485000123": { // Renaissance College - Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Y1-Y6", amountMin: 145800, amountMax: 145800 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Renaissance College Fees 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_567485000133": { // Renaissance College - Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7-Y10", amountMin: 189900, amountMax: 189900 },
+        { label: "Y11-Y13", amountMin: 175700, amountMax: 175700 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ESF Renaissance College Fees 2025/26", url: "https://www.esf.edu.hk/fee-levels-for-academic-year-2025-26-esf-schools/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // Victoria Shanghai Academy 滬江維多利亞學校
+  // Source: https://www.vsa.edu.hk/admissions/school-fees
+  // ============================================
+  "edb_560138000223": { // VSA Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y1-Y5", amountMin: 181200, amountMax: 181200 },
+        { label: "Y6", amountMin: 200700, amountMax: 200700 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "VSA School Fees 2025/26", url: "https://www.vsa.edu.hk/admissions/school-fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_560138000233": { // VSA Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7", amountMin: 203700, amountMax: 203700 },
+        { label: "Y8-Y10", amountMin: 205400, amountMax: 205400 },
+        { label: "Y11-Y12", amountMin: 255600, amountMax: 255600 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "VSA School Fees 2025/26", url: "https://www.vsa.edu.hk/admissions/school-fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // Stamford American School Hong Kong
+  // Source: https://www.international-schools-database.com
+  // ============================================
+  "edb_605638000123": { // Stamford Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "G1-G2", amountMin: 217100, amountMax: 217100 },
+        { label: "G3-G5", amountMin: 220500, amountMax: 220500 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy (One-off)", amountMin: 150000, amountMax: 150000, currency: "HKD", refundable: false, frequency: "ONE_OFF", note: "Or $30,000 annually" }],
+    sourceNotes: [{ title: "Stamford Fees 2025/26", url: "https://www.sais.edu.hk/admissions/fees/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_605638000133": { // Stamford Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "G6-G8", amountMin: 239900, amountMax: 239900 },
+        { label: "G9-G10", amountMin: 247300, amountMax: 247300 },
+        { label: "G11-G12", amountMin: 264000, amountMax: 264000 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy (One-off)", amountMin: 150000, amountMax: 150000, currency: "HKD", refundable: false, frequency: "ONE_OFF", note: "Or $30,000 annually" }],
+    sourceNotes: [{ title: "Stamford Fees 2025/26", url: "https://www.sais.edu.hk/admissions/fees/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_626864000133": { // Stamford West Kowloon Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "G6-G8", amountMin: 239900, amountMax: 239900 },
+        { label: "G9-G10", amountMin: 247300, amountMax: 247300 },
+        { label: "G11-G12", amountMin: 264000, amountMax: 264000 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy (One-off)", amountMin: 150000, amountMax: 150000, currency: "HKD", refundable: false, frequency: "ONE_OFF", note: "Or $30,000 annually" }],
+    sourceNotes: [{ title: "Stamford Fees 2025/26", url: "https://www.sais.edu.hk/admissions/fees/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // Singapore International School (Hong Kong) 新加坡國際學校
+  // Source: https://www.singapore.edu.hk/finance-matters/
+  // ============================================
+  "edb_216003000211": { // SIS Kindergarten
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "K1-K3", amountMin: 123000, amountMax: 123000 }],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy", amountMin: 20000, amountMax: 20000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "SIS Finance Matters 2025/26", url: "https://www.singapore.edu.hk/finance-matters/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_216003000212": { // SIS Kindergarten (2nd entry)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "K1-K3", amountMin: 123000, amountMax: 123000 }],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy", amountMin: 20000, amountMax: 20000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "SIS Finance Matters 2025/26", url: "https://www.singapore.edu.hk/finance-matters/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_216003000223": { // SIS Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "G1-G6", amountMin: 181100, amountMax: 181100 }],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy", amountMin: 20000, amountMax: 20000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "SIS Finance Matters 2025/26", url: "https://www.singapore.edu.hk/finance-matters/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_216003000433": { // SIS Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "G7-G10", amountMin: 228800, amountMax: 228800 },
+        { label: "G11-G12", amountMin: 274900, amountMax: 274900 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy", amountMin: 20000, amountMax: 20000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "SIS Finance Matters 2025/26", url: "https://www.singapore.edu.hk/finance-matters/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // Carmel School 迦密學校
+  // Source: https://www.carmel.edu.hk/admissions/tuition-fees
+  // ============================================
+  "edb_216186000211": { // Carmel KG
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Nursery 2", amountMin: 80500, amountMax: 80500 },
+        { label: "K1-K2", amountMin: 108650, amountMax: 108650 },
+        { label: "K3", amountMin: 193000, amountMax: 193000 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "Carmel School Fees 2025/26", url: "https://www.carmel.edu.hk/admissions/tuition-fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_216186000423": { // Carmel Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "G1-G5", amountMin: 193000, amountMax: 193000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "Carmel School Fees 2025/26", url: "https://www.carmel.edu.hk/admissions/tuition-fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_216186000323": { // Carmel Primary (2nd)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "G1-G5", amountMin: 193000, amountMax: 193000 }],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "Carmel School Fees 2025/26", url: "https://www.carmel.edu.hk/admissions/tuition-fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_216186000433": { // Carmel Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "G6-G12", amountMin: 226090, amountMax: 226090 }],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy", amountMin: 18520, amountMax: 18520, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "G6-G12 only" }],
+    sourceNotes: [{ title: "Carmel School Fees 2025/26", url: "https://www.carmel.edu.hk/admissions/tuition-fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // Spanish School of Hong Kong 香港西班牙學校
+  // Source: https://sshk.edu.hk/schoolfees/
+  // ============================================
+  "edb_609498000223": { // Spanish School Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "K2-G3", amountMin: 85000, amountMax: 115000 },
+        { label: "G4-G5", amountMin: 125000, amountMax: 125000 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy (Annual)", amountMin: 12000, amountMax: 12000, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "Or one-off $70,000" }],
+    sourceNotes: [{ title: "SSHK Fees 2025/26", url: "https://sshk.edu.hk/schoolfees/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_609498000123": { // Spanish School Primary (2nd)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "K2-G3", amountMin: 85000, amountMax: 115000 },
+        { label: "G4-G5", amountMin: 125000, amountMax: 125000 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy (Annual)", amountMin: 12000, amountMax: 12000, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "Or one-off $70,000" }],
+    sourceNotes: [{ title: "SSHK Fees 2025/26", url: "https://sshk.edu.hk/schoolfees/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_609498000133": { // Spanish School Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "G6-G8", amountMin: 128000, amountMax: 128000 },
+        { label: "G9-G12", amountMin: 138000, amountMax: 138000 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy (Annual)", amountMin: 12000, amountMax: 12000, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "Or one-off $70,000" }],
+    sourceNotes: [{ title: "SSHK Fees 2025/26", url: "https://sshk.edu.hk/schoolfees/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_609498000233": { // Spanish School Secondary (2nd)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "G6-G8", amountMin: 128000, amountMax: 128000 },
+        { label: "G9-G12", amountMin: 138000, amountMax: 138000 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Levy (Annual)", amountMin: 12000, amountMax: 12000, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "Or one-off $70,000" }],
+    sourceNotes: [{ title: "SSHK Fees 2025/26", url: "https://sshk.edu.hk/schoolfees/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // International Christian School 基督教國際學校 - KG
+  // Source: https://www.ics.edu.hk
+  // ============================================
+  "edb_542598000211": { // ICS KG
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "K1-K2", amountMin: 91000, amountMax: 91000 },
+        { label: "K3", amountMin: 148400, amountMax: 148400 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ICS Fees 2025/26", url: "https://www.ics.edu.hk", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_542598000212": { // ICS KG (2nd)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "K1-K2", amountMin: 91000, amountMax: 91000 },
+        { label: "K3", amountMin: 148400, amountMax: 148400 },
+      ],
+    },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "ICS Fees 2025/26", url: "https://www.ics.edu.hk", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // ICHK Hong Lok Yuen 國際學院 (Primary/KG)
+  // Source: https://ichkhly.edu.hk/admissions/dates-fees-more/
+  // ============================================
+  "edb_230944000111": { // ICHK HLY KG
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Pre-Nursery (3 afternoons)", amountMin: 25170, amountMax: 25170 },
+        { label: "Part-time Nursery", amountMin: 83500, amountMax: 83500 },
+        { label: "Full-time N-Y6", amountMin: 145110, amountMax: 145110 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "One-off Capital Levy", amountMin: 75000, amountMax: 75000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "ICHK HLY Fees 2025/26", url: "https://ichkhly.edu.hk/admissions/dates-fees-more/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_230944000112": { // ICHK HLY KG (2nd)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Pre-Nursery (3 afternoons)", amountMin: 25170, amountMax: 25170 },
+        { label: "Part-time Nursery", amountMin: 83500, amountMax: 83500 },
+        { label: "Full-time N-Y6", amountMin: 145110, amountMax: 145110 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "One-off Capital Levy", amountMin: 75000, amountMax: 75000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "ICHK HLY Fees 2025/26", url: "https://ichkhly.edu.hk/admissions/dates-fees-more/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_230944000113": { // ICHK HLY KG (3rd)
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Pre-Nursery (3 afternoons)", amountMin: 25170, amountMax: 25170 },
+        { label: "Part-time Nursery", amountMin: 83500, amountMax: 83500 },
+        { label: "Full-time N-Y6", amountMin: 145110, amountMax: 145110 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "One-off Capital Levy", amountMin: 75000, amountMax: 75000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "ICHK HLY Fees 2025/26", url: "https://ichkhly.edu.hk/admissions/dates-fees-more/", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // ICHK Secondary 國際學院 (New Territories)
+  // Source: https://www.ichk.edu.hk
+  // ============================================
+  "edb_578789000133": { // ICHK Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [
+        { label: "Y7-Y9", amountMin: 184500, amountMax: 184500 },
+        { label: "Y10-Y11", amountMin: 192500, amountMax: 192500 },
+        { label: "Y12-Y13", amountMin: 204900, amountMax: 204900 },
+      ],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Capital Debenture", amountMin: 100000, amountMax: 100000, currency: "HKD", refundable: false, frequency: "ONE_OFF", note: "Paid in 3 installments" }],
+    sourceNotes: [{ title: "ICHK Secondary Fees 2025/26", url: "https://www.ichk.edu.hk/join/admissions-info", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // ============================================
+  // Hongkong Japanese School 香港日本人學校
+  // Source: https://es.jis.edu.hk/index.php/admission/fees
+  // ============================================
+  "edb_317357000123": { // HK Japanese School Primary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Full Year", amountMin: 140460, amountMax: 140460 }],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 15960, amountMax: 15960, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "JIS Fees 2025/26", url: "https://es.jis.edu.hk/index.php/admission/fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
+  "edb_317357000133": { // HK Japanese School Secondary
+    schoolYear: "2025/26",
+    tuition: {
+      currency: "HKD",
+      bands: [{ label: "Full Year", amountMin: 140460, amountMax: 140460 }],
+    },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 15960, amountMax: 15960, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "JIS Fees 2025/26", url: "https://es.jis.edu.hk/index.php/admission/fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
+  },
 };
 
 /**
