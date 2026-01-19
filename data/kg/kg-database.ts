@@ -65,13 +65,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324922000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "inquiry_based",
-      "whole_language",
-      "child_centered",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -108,8 +108,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_603643000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -181,8 +181,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215937000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "inquiry_based"
+      "montessori",
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -217,11 +217,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567345000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -259,7 +259,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_607290000112"
     ],
     "pedagogyTags": [
-      "ib_pyp"
+      "montessori"
     ],
     "languageEnv": [
       "putonghua",
@@ -295,8 +295,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563641000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "mixed_age"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -331,11 +331,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563773000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -377,8 +377,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -418,7 +418,7 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -488,9 +488,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_133019000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -527,12 +527,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_315435000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -569,8 +569,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_314684000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "inquiry_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -646,10 +646,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325597000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -721,10 +721,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564648000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -763,7 +763,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_607592000213"
     ],
     "pedagogyTags": [
-      "inquiry_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -864,7 +864,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564133000113"
     ],
     "pedagogyTags": [
-      "whole_language"
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -899,8 +899,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564095000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "whole_language"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -935,10 +935,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_614920000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "whole_language",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -977,8 +977,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_528161000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "whole_language"
+      "language_dev",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -1013,10 +1013,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564184000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "whole_language",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -1123,8 +1123,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_605026000112"
     ],
     "pedagogyTags": [
-      "reggio_emilia",
-      "child_centered"
+      "montessori",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -1268,9 +1268,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563889000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -1309,10 +1309,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215538000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "whole_language",
-      "multiple_intelligences"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -1421,7 +1421,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325163000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -1458,7 +1458,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_600601000212"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -1499,11 +1499,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323969000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "picture_book",
-      "child_centered",
-      "stem_maker",
-      "small_group"
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -1542,10 +1542,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325570000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -1586,10 +1586,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215848000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -1626,9 +1626,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564850000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -1663,8 +1663,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564800000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -1701,12 +1701,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564583000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "multiple_intelligences",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -1741,7 +1741,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565849000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -1776,7 +1776,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565865000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -1883,8 +1883,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325996000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -1923,8 +1923,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_619841000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -1963,7 +1963,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325970000112"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -2002,14 +2002,14 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_311910000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "picture_book",
-      "whole_language",
-      "child_centered",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -2049,9 +2049,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_512273000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -2087,9 +2087,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -2125,9 +2125,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -2162,8 +2162,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323853000211"
     ],
     "pedagogyTags": [
-      "whole_language",
-      "constructivist"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -2202,9 +2202,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_569828000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "inquiry_based",
-      "stem_maker"
+      "montessori",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -2245,8 +2245,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_622699000113"
     ],
     "pedagogyTags": [
-      "whole_language",
-      "stem_maker"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -2322,16 +2322,16 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_513423000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "inquiry_based",
-      "whole_language",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist",
-      "sensory_learning",
-      "mixed_age"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -2371,9 +2371,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "thematic",
-      "picture_book"
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -2414,9 +2414,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_589144000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -2453,9 +2453,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_610534000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -2492,10 +2492,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565750000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "inquiry_based",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -2534,7 +2534,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536040000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -2571,8 +2571,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_316660000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -2609,10 +2609,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565830000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -2650,9 +2650,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215767000112"
     ],
     "pedagogyTags": [
-      "reggio_emilia",
-      "thematic",
-      "inquiry_based"
+      "montessori",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -2690,9 +2690,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "inquiry_based",
-      "sensory_learning",
-      "mixed_age"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -2731,9 +2731,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "inquiry_based",
-      "sensory_learning",
-      "mixed_age"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -2770,9 +2770,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "inquiry_based",
-      "sensory_learning",
-      "mixed_age"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -2811,9 +2811,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "inquiry_based",
-      "sensory_learning",
-      "mixed_age"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -2849,9 +2849,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565954000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -2888,9 +2888,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_322270000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -2926,10 +2926,10 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -2970,9 +2970,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566977000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "stem_maker"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -3013,9 +3013,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567329000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "stem_maker"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -3054,9 +3054,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_321087000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "stem_maker"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -3169,8 +3169,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_518247000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3209,11 +3209,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_560090000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3252,11 +3252,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215830000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3291,10 +3291,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565440000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "picture_book",
-      "multiple_intelligences"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3329,11 +3329,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563439000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "whole_language",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -3373,11 +3373,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324850000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3445,10 +3445,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566420000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3487,10 +3487,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_516910000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -3531,10 +3531,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543357000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3573,7 +3573,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_213632000213"
     ],
     "pedagogyTags": [
-      "character_ed"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3612,8 +3612,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215740000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -3683,7 +3683,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_214612000112"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -3720,8 +3720,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_131466000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "character_ed"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3760,8 +3760,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325457000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -3800,7 +3800,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_313637000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -3839,7 +3839,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_326003000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -3875,11 +3875,11 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "mixed_age"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -3919,10 +3919,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_131636000212"
     ],
     "pedagogyTags": [
-      "project_based",
-      "whole_language",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -3998,11 +3998,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_210021000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -4043,13 +4043,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_319813000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4086,10 +4086,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_132896000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book",
-      "child_centered",
-      "arts_integrated"
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4128,10 +4128,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_131440000113"
     ],
     "pedagogyTags": [
-      "highscope",
-      "project_based",
-      "inquiry_based",
-      "child_centered"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -4172,10 +4172,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215899000113"
     ],
     "pedagogyTags": [
-      "whole_language",
-      "multiple_intelligences",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4214,8 +4214,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216038000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -4250,10 +4250,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564354000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "picture_book",
-      "constructivist",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -4292,12 +4292,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564338000313"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "child_centered",
-      "multiple_intelligences",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -4333,8 +4333,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564346000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "whole_language"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -4374,9 +4374,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_132730000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -4492,8 +4492,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324094000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "character_ed"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4532,7 +4532,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_312134000213"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4569,12 +4569,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325368000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "child_centered",
-      "small_group",
-      "mixed_age"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4613,10 +4613,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566942000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4655,8 +4655,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325651000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "multiple_intelligences"
+      "montessori",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -4695,8 +4695,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324779000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "multiple_intelligences"
+      "montessori",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -4735,11 +4735,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542164000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "inquiry_based",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -4776,10 +4776,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566934000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4818,9 +4818,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216194000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -4899,10 +4899,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325481000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "play_based",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4941,12 +4941,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566284000113"
     ],
     "pedagogyTags": [
-      "reggio_emilia",
-      "project_based",
-      "activity_based",
-      "thematic",
-      "multiple_intelligences",
-      "small_group"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -4985,12 +4985,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_214248000113"
     ],
     "pedagogyTags": [
-      "reggio_emilia",
-      "project_based",
-      "activity_based",
-      "thematic",
-      "multiple_intelligences",
-      "small_group"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -5093,8 +5093,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564230000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -5129,10 +5129,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564222000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -5206,8 +5206,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565385000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -5242,9 +5242,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564435000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "inquiry_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -5281,10 +5281,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_133744000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "arts_integrated"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -5323,8 +5323,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324965000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "inquiry_based"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -5367,7 +5367,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_603724000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -5443,10 +5443,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563331000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -5481,10 +5481,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563714000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book",
-      "child_centered",
-      "character_ed"
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -5520,8 +5520,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563692000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -5560,11 +5560,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563447000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -5605,9 +5605,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536911000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -5644,7 +5644,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_132047000112"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -5679,11 +5679,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564745000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -5722,12 +5722,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_523089000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "inquiry_based",
-      "picture_book",
-      "whole_language",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -5768,8 +5768,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542199000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -5809,11 +5809,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325589000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -5891,9 +5891,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216135000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -5930,8 +5930,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_613681000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -5971,10 +5971,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325899000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "small_group",
-      "mixed_age"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -6009,8 +6009,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565644000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua"
@@ -6047,7 +6047,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_604585000112"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "putonghua",
@@ -6088,8 +6088,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_326011000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -6128,7 +6128,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215872000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -6240,7 +6240,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_620998000113"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -6280,7 +6280,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_590673000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "english",
@@ -6318,7 +6318,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325961000212"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [],
     "tuitionMin": 0,
@@ -6355,8 +6355,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566152000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "multiple_intelligences"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -6395,7 +6395,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_133280000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -6573,8 +6573,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -6612,8 +6612,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -6651,8 +6651,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -6690,8 +6690,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -6729,8 +6729,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -6768,8 +6768,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -6976,7 +6976,7 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "mixed_age"
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -7194,8 +7194,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_571490000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "inquiry_based"
+      "montessori",
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -7230,11 +7230,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566691000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7270,11 +7270,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563943000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7314,9 +7314,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_516309000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "inquiry_based",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -7352,11 +7352,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563790000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7396,7 +7396,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325821000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -7436,7 +7436,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_604259000113"
     ],
     "pedagogyTags": [
-      "character_ed"
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -7471,11 +7471,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563935000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7515,7 +7515,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325988000113"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -7550,11 +7550,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_596116000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7594,11 +7594,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563927000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7638,7 +7638,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_548723000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -7677,11 +7677,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563803000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7717,11 +7717,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563820000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7796,11 +7796,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563811000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7836,11 +7836,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563730000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7876,11 +7876,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563919000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7916,11 +7916,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563951000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -7956,10 +7956,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564044000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "inquiry_based",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -7994,7 +7994,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564036000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -8030,8 +8030,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "thematic",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -8066,10 +8066,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566683000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual",
@@ -8111,8 +8111,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536482000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -8151,11 +8151,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_514659000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book",
-      "constructivist",
-      "small_group",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -8197,9 +8197,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542601000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -8271,9 +8271,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_601985000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -8313,9 +8313,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324736000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -8385,9 +8385,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_133582000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -8426,8 +8426,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325511000212"
     ],
     "pedagogyTags": [
-      "thematic",
-      "whole_language"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -8540,7 +8540,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_316504000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -8575,8 +8575,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563536000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "whole_language"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -8611,8 +8611,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563552000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "whole_language"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -8651,9 +8651,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_605530000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual",
@@ -8695,10 +8695,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_517127000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "picture_book",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -8734,9 +8734,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563579000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "whole_language",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -8771,10 +8771,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564176000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "whole_language",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -8813,8 +8813,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_615315000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual",
@@ -8855,8 +8855,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325414000213"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -8966,9 +8966,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324787000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -9007,12 +9007,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_600890000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -9048,10 +9048,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565946000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -9090,9 +9090,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325678000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual"
@@ -9129,8 +9129,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323497000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -9169,7 +9169,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325090000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -9244,8 +9244,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565520000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -9285,8 +9285,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -9396,9 +9396,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324248000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -9437,7 +9437,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_319775000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -9476,11 +9476,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_613509000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -9517,8 +9517,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215120000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -9555,8 +9555,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215120000212"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -9663,12 +9663,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_616001000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "whole_language",
-      "constructivist",
-      "stem_maker"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -9708,11 +9708,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536024000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -9749,8 +9749,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565016000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -9785,11 +9785,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565369000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -9828,11 +9828,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323055000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -9937,8 +9937,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323268000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -9978,8 +9978,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_538132000113"
     ],
     "pedagogyTags": [
-      "highscope",
-      "picture_book"
+      "montessori",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -10014,8 +10014,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564656000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -10050,13 +10050,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564664000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based",
-      "inquiry_based",
-      "picture_book",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -10095,10 +10095,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_610291000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "constructivist",
-      "sensory_learning",
-      "mixed_age"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -10133,8 +10133,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566950000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -10173,8 +10173,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323080000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "bilingual"
@@ -10209,7 +10209,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563781000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -10246,7 +10246,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_613169000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -10282,7 +10282,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564060000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -10319,7 +10319,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563749000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -10389,8 +10389,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564567000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -10429,8 +10429,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325635000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "putonghua",
@@ -10466,8 +10466,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564575000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -10504,9 +10504,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_577987000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "picture_book",
-      "child_centered"
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -10545,8 +10545,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325244000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -10585,8 +10585,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_614114000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "small_group"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -10621,8 +10621,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565873000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -10661,8 +10661,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_549169000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -10699,11 +10699,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_315907000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -10745,11 +10745,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_595837000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -10787,7 +10787,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_210196000111"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -10929,8 +10929,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_531898000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -10969,8 +10969,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_575518000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -11009,8 +11009,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_531910000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -11049,8 +11049,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216054000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -11089,8 +11089,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565130000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -11198,8 +11198,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565563000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -11236,8 +11236,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_519863000312"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "inquiry_based"
+      "montessori",
+      "play_explore"
     ],
     "languageEnv": [
       "putonghua",
@@ -11276,12 +11276,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_550892000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -11321,9 +11321,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324078000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -11363,8 +11363,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324930000212"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -11403,13 +11403,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_138177000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -11444,12 +11444,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564524000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -11486,11 +11486,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324680000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -11527,8 +11527,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_607150000212"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "character_ed"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -11567,9 +11567,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11605,9 +11605,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11644,7 +11644,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325198000112"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -11680,9 +11680,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11718,9 +11718,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11756,9 +11756,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11795,7 +11795,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_523364000112"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -11834,10 +11834,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_615641000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "multiple_intelligences",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua"
@@ -11877,9 +11877,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11914,11 +11914,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565474000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "constructivist",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11957,9 +11957,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325791000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -11996,10 +11996,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_524034000212"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "arts_integrated"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -12038,9 +12038,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216267000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "whole_language",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -12117,9 +12117,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325929000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -12156,8 +12156,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_599263000112"
     ],
     "pedagogyTags": [
-      "whole_language",
-      "stem_maker"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -12198,11 +12198,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_623580000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -12242,13 +12242,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325317000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "inquiry_based",
-      "picture_book",
-      "constructivist",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -12287,10 +12287,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_546038000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -12361,7 +12361,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564397000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -12399,7 +12399,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564486000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -12438,9 +12438,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564400000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -12483,10 +12483,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_548278000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "picture_book",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -12521,7 +12521,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565695000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -12638,8 +12638,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325236000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -12679,9 +12679,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_523933000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -12720,7 +12720,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325732000113"
     ],
     "pedagogyTags": [
-      "inquiry_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -12759,9 +12759,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_610623000113"
     ],
     "pedagogyTags": [
-      "reggio_emilia",
-      "thematic",
-      "inquiry_based"
+      "montessori",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -12837,8 +12837,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565687000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -12877,8 +12877,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325040000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -12989,9 +12989,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_575410000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "inquiry_based",
-      "constructivist"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -13030,9 +13030,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_133787000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "multiple_intelligences"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -13068,9 +13068,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565962000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -13107,8 +13107,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566020000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -13143,9 +13143,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566004000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -13186,9 +13186,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_583421000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "stem_maker"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -13265,8 +13265,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "bilingual"
@@ -13377,11 +13377,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566071000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13420,11 +13420,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323926000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13463,11 +13463,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325864000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13506,10 +13506,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_616281000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book",
-      "stem_maker"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13544,8 +13544,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564249000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -13584,11 +13584,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567051000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "bilingual"
@@ -13623,10 +13623,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564869000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "multiple_intelligences",
-      "arts_integrated"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -13668,7 +13668,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325643000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13707,8 +13707,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_523429000113"
     ],
     "pedagogyTags": [
-      "whole_language",
-      "multiple_intelligences"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13747,12 +13747,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324426000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "multiple_intelligences",
-      "constructivist",
-      "stem_maker"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13791,10 +13791,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216070000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13833,8 +13833,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325830000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13873,8 +13873,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_317403000213"
     ],
     "pedagogyTags": [
-      "thematic",
-      "character_ed"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -13914,9 +13914,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -13953,9 +13953,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_532169000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -13996,8 +13996,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_319562000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "small_group"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -14036,8 +14036,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323357000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "multiple_intelligences"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -14076,12 +14076,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325546000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -14123,11 +14123,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325937000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -14168,10 +14168,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_607886000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -14212,8 +14212,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325252000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -14250,9 +14250,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325600000112"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "multiple_intelligences",
-      "small_group"
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -14363,9 +14363,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324647000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -14401,7 +14401,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564389000113"
     ],
     "pedagogyTags": [
-      "sensory_learning"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -14438,9 +14438,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564370000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -14541,8 +14541,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325180000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "small_group"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -14581,8 +14581,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_537349000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -14621,8 +14621,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543390000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -14661,8 +14661,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215678000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -14703,8 +14703,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_523526000213"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -14743,8 +14743,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_555436000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -14785,11 +14785,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325694000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -14828,7 +14828,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324833000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -14868,8 +14868,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325708000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "character_ed"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -14905,11 +14905,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563510000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -14947,8 +14947,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_516929000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -14987,9 +14987,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_610771000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -15028,11 +15028,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566900000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "inquiry_based",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -15072,11 +15072,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_618039000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "inquiry_based",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -15118,10 +15118,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_574708000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "constructivist",
-      "stem_maker"
+      "montessori",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -15229,11 +15229,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564290000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -15270,9 +15270,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564303000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -15682,7 +15682,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325856000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -15721,8 +15721,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325716000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "mixed_age"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -15760,9 +15760,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -15798,10 +15798,10 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -15836,8 +15836,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565423000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -15877,8 +15877,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -15914,9 +15914,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -15951,10 +15951,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566705000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -15989,10 +15989,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564451000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "inquiry_based",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -16032,7 +16032,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325953000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -16067,8 +16067,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564443000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "inquiry_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -16106,9 +16106,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565504000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "mixed_age",
-      "character_ed"
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -16143,9 +16143,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564516000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -16183,10 +16183,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_596787000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "arts_integrated"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -16223,10 +16223,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_601861000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "arts_integrated"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -16265,8 +16265,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_311650000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -16340,8 +16340,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324477000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "character_ed"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -16412,9 +16412,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563323000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -16454,9 +16454,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_594130000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "picture_book",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -16491,7 +16491,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564729000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -16530,11 +16530,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563463000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -16569,10 +16569,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563455000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -16607,9 +16607,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566160000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -16651,10 +16651,10 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "activity_based",
-      "picture_book",
-      "multiple_intelligences"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -16693,7 +16693,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_132870000112"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "putonghua",
@@ -16729,12 +16729,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566969000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "inquiry_based",
-      "child_centered",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -16775,7 +16775,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_599182000113"
     ],
     "pedagogyTags": [
-      "inquiry_based"
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -16810,9 +16810,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563617000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -16847,9 +16847,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563609000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -16886,10 +16886,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216259000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -16928,11 +16928,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_532800000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "whole_language",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -16972,8 +16972,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_523178000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -17048,8 +17048,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323683000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -17086,8 +17086,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_617474000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -17127,8 +17127,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_561207000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -17166,8 +17166,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_609528000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -17205,8 +17205,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_615250000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -17244,8 +17244,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325880000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "constructivist"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -17319,7 +17319,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_604470000112"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -17358,7 +17358,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325147000613"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "bilingual",
@@ -17398,7 +17398,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566128000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "bilingual",
@@ -17434,7 +17434,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566110000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "bilingual",
@@ -17474,7 +17474,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567140000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "bilingual",
@@ -17545,7 +17545,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_595144000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -17582,9 +17582,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565024000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -17623,8 +17623,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_133850000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -17663,10 +17663,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_528366000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -17705,9 +17705,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_581852000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "activity_based"
+      "montessori",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -17780,9 +17780,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_322822000212"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "activity_based"
+      "montessori",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -17853,8 +17853,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_620149000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "multiple_intelligences"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -17893,8 +17893,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_532550000213"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -17933,8 +17933,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_532550000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -17973,9 +17973,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_522910000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "multiple_intelligences"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -18049,7 +18049,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324809000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -18089,7 +18089,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324795000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -18129,7 +18129,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_319511000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -18169,8 +18169,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_547069000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual"
@@ -18207,11 +18207,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_132152000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -18248,12 +18248,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566560000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -18293,8 +18293,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_622869000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -18333,12 +18333,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_322580000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "constructivist",
-      "mixed_age",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -18376,10 +18376,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_530379000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "arts_integrated"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -18560,8 +18560,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_558346000312"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -18598,10 +18598,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_586625000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -18713,9 +18713,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_604615000113"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "activity_based"
+      "montessori",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -18827,9 +18827,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565199000213"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist",
-      "stem_maker"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -18868,8 +18868,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565199000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -18908,8 +18908,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_622060000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "stem_maker"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -18950,8 +18950,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536067000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -18990,7 +18990,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_582417000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -19065,7 +19065,7 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "putonghua",
@@ -19104,9 +19104,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_616443000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "stem_maker"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -19145,8 +19145,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_539872000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -19181,11 +19181,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563978000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -19225,9 +19225,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158453000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -19268,8 +19268,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159034000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -19308,7 +19308,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157449000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -19343,11 +19343,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563676000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -19385,8 +19385,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159204000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "mixed_age"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -19425,8 +19425,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158240000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -19464,12 +19464,12 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "thematic",
-      "play_based",
-      "inquiry_based",
-      "child_centered",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -19505,10 +19505,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563994000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -19546,13 +19546,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158623000212"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "inquiry_based",
-      "child_centered",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -19588,9 +19588,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564982000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english",
@@ -19630,11 +19630,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563722000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -19670,11 +19670,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566675000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -19710,11 +19710,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565318000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -19750,11 +19750,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563960000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "sensory_learning",
-      "small_group",
-      "arts_integrated"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -19794,10 +19794,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542768000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "constructivist",
-      "stem_maker"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -19834,9 +19834,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565326000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "child_centered",
-      "mixed_age"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -19873,10 +19873,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157813000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -19913,11 +19913,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157376000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "whole_language",
-      "multiple_intelligences",
-      "constructivist",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -19955,11 +19955,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156779000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "whole_language",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -20001,10 +20001,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_516384000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -20046,12 +20046,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158232000213"
     ],
     "pedagogyTags": [
-      "play_based",
-      "inquiry_based",
-      "child_centered",
-      "sensory_learning",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -20091,8 +20091,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_523445000213"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "character_ed"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -20131,8 +20131,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158488000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -20167,8 +20167,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563757000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "mixed_age"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -20207,8 +20207,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158780000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -20247,9 +20247,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231363000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -20323,10 +20323,10 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "play_based",
-      "child_centered",
-      "constructivist",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -20578,11 +20578,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158526000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "child_centered",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -20621,8 +20621,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_540579000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "whole_language"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -20698,7 +20698,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158470000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "english",
@@ -20772,10 +20772,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_151157000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -20814,12 +20814,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_544167000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "child_centered",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -20858,9 +20858,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159166000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered",
-      "character_ed"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -20899,7 +20899,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_150860000313"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -20940,7 +20940,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_150860000213"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -20981,7 +20981,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158828000113"
     ],
     "pedagogyTags": [
-      "picture_book"
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual",
@@ -21022,8 +21022,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158895000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -21097,7 +21097,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567116000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -21136,7 +21136,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567108000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -21175,7 +21175,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_530131000213"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -21215,7 +21215,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_530131000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -21288,7 +21288,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_602000000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -21325,9 +21325,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563560000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "whole_language"
+      "play_explore",
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -21362,7 +21362,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564150000113"
     ],
     "pedagogyTags": [
-      "whole_language"
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -21401,11 +21401,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156744000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book",
-      "small_group",
-      "arts_integrated"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -21442,8 +21442,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563544000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "whole_language"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -21482,10 +21482,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157309000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual",
@@ -21527,8 +21527,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158976000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -21563,7 +21563,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564125000113"
     ],
     "pedagogyTags": [
-      "whole_language"
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -21602,13 +21602,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158054000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -21649,10 +21649,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158984000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -21692,9 +21692,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156752000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -21733,10 +21733,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157511000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -21773,10 +21773,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_611093000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "arts_integrated"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -21818,8 +21818,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157384000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual",
@@ -21856,10 +21856,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564109000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "whole_language",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -21896,8 +21896,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "play_based",
-      "whole_language"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -21936,12 +21936,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542547000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "whole_language",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -21982,9 +21982,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325767000213"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -22025,10 +22025,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_559385000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "picture_book",
-      "multiple_intelligences",
-      "arts_integrated"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -22064,9 +22064,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564141000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "whole_language",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -22105,10 +22105,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158534000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "inquiry_based",
-      "picture_book",
-      "multiple_intelligences"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -22147,10 +22147,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542296000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -22189,9 +22189,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543004000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -22266,9 +22266,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156230000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -22308,8 +22308,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_153451000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -22420,7 +22420,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158364000112"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -22457,7 +22457,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_541427000112"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -22496,10 +22496,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157252000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -22538,8 +22538,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_517518000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "inquiry_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual"
@@ -22578,9 +22578,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_556220000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -22619,8 +22619,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_152498000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -22659,8 +22659,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158909000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "inquiry_based"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "english",
@@ -22700,8 +22700,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156272000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -22736,9 +22736,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563900000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -22777,10 +22777,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157597000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -22816,7 +22816,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564320000113"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -22855,7 +22855,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542830000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -22897,8 +22897,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_621986000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "whole_language"
+      "language_dev",
+      "language_dev"
     ],
     "languageEnv": [
       "bilingual"
@@ -22938,9 +22938,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "character_ed"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -22981,8 +22981,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_527211000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual"
@@ -23089,10 +23089,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_537594000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -23131,8 +23131,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_524441000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "picture_book"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -23169,8 +23169,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565431000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "putonghua",
@@ -23432,11 +23432,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_592080000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -23510,10 +23510,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_575640000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "whole_language",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -23553,10 +23553,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_598038000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "whole_language",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -23596,12 +23596,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_519499000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -23677,9 +23677,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_554901000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "small_group",
-      "character_ed"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -23717,8 +23717,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543861000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -23756,10 +23756,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563498000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "multiple_intelligences"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -23799,8 +23799,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_532835000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -23838,7 +23838,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564087000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -23879,7 +23879,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_609137000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -23916,9 +23916,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564559000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -23953,8 +23953,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564818000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -23994,11 +23994,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_533351000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -24034,9 +24034,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564842000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "inquiry_based"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -24073,10 +24073,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_151203000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -24111,9 +24111,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564826000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -24148,8 +24148,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565571000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -24262,8 +24262,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_522678000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -24301,7 +24301,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565806000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -24338,9 +24338,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_155233000213"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -24379,9 +24379,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156949000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -24416,7 +24416,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565857000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -24455,10 +24455,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_524328000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -24497,8 +24497,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158577000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -24533,7 +24533,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565814000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -24572,7 +24572,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159255000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -24610,9 +24610,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_524026000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -24651,8 +24651,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158763000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "small_group"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -24691,7 +24691,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_554251000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -24730,8 +24730,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_541222000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -24917,8 +24917,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_526010000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -24957,8 +24957,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_619787000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -24997,8 +24997,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_609641000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -25037,8 +25037,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_516376000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -25079,9 +25079,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536768000313"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -25120,9 +25120,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231886000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -25161,8 +25161,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231266000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences",
-      "character_ed"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -25199,9 +25199,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563285000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -25242,7 +25242,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157643000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -25277,11 +25277,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562874000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -25322,7 +25322,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_530417000113"
     ],
     "pedagogyTags": [
-      "picture_book"
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -25361,9 +25361,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158771000313"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -25402,10 +25402,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_524123000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "picture_book",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -25443,10 +25443,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156191000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "picture_book",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -25524,8 +25524,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_587524000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "sensory_learning"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -25564,12 +25564,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567892000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -25609,12 +25609,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_519812000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -25654,10 +25654,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_516627000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -25697,10 +25697,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158569000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "stem_maker",
-      "mixed_age"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -25738,9 +25738,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -25776,9 +25776,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -25816,7 +25816,7 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -25852,9 +25852,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -25890,9 +25890,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -25928,9 +25928,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -25966,9 +25966,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -26005,8 +26005,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159239000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "sensory_learning"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -26042,9 +26042,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -26080,9 +26080,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -26121,9 +26121,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_605620000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -26159,9 +26159,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -26198,7 +26198,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156973000112"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -26235,7 +26235,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158550000112"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua"
@@ -26271,9 +26271,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -26312,8 +26312,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_612936000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences",
-      "sensory_learning"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua"
@@ -26353,9 +26353,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -26394,11 +26394,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565113000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -26435,10 +26435,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231657000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -26475,10 +26475,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231614000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -26517,10 +26517,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_609919000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -26596,8 +26596,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_155560000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -26636,8 +26636,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_517828000312"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based"
+      "montessori",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -26674,8 +26674,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_151696000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based"
+      "montessori",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -26710,7 +26710,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563838000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -26745,8 +26745,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563846000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual"
@@ -26785,9 +26785,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158410000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "inquiry_based",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -26896,7 +26896,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_522953000112"
     ],
     "pedagogyTags": [
-      "character_ed"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -26935,9 +26935,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156205000113"
     ],
     "pedagogyTags": [
-      "constructivist",
-      "sensory_learning",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -26976,9 +26976,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543616000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "constructivist",
-      "small_group"
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -27017,7 +27017,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324884000213"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -27056,11 +27056,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157864000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "picture_book",
-      "multiple_intelligences",
-      "character_ed",
-      "arts_integrated"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -27102,9 +27102,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158836000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -27141,8 +27141,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564630000113"
     ],
     "pedagogyTags": [
-      "small_group",
-      "mixed_age"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -27181,7 +27181,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564508000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -27222,11 +27222,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_155705000212"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -27264,11 +27264,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_155705000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -27308,8 +27308,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156981000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "character_ed"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -27344,9 +27344,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_575011000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -27381,9 +27381,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566381000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -27418,7 +27418,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566390000113"
     ],
     "pedagogyTags": [
-      "picture_book"
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -27453,7 +27453,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566373000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -27490,8 +27490,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565741000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences",
-      "small_group"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -27530,9 +27530,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157856000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "inquiry_based"
+      "play_explore",
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -27569,8 +27569,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565784000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -27609,9 +27609,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158674000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "character_ed"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -27648,11 +27648,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565768000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "picture_book",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -27725,8 +27725,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565717000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -27765,11 +27765,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157074000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "constructivist",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -27804,7 +27804,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565709000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -27841,8 +27841,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565733000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -27880,9 +27880,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157716000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist",
-      "stem_maker"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -27995,10 +27995,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_520071000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "arts_integrated"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -28109,12 +28109,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_152579000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28188,8 +28188,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565679000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "small_group"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28265,13 +28265,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231185000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "stem_maker",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28347,9 +28347,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156612000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based"
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -28385,10 +28385,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565997000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -28423,10 +28423,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565989000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "constructivist",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -28461,9 +28461,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565970000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "whole_language",
-      "child_centered"
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -28502,9 +28502,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_320544000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -28539,9 +28539,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566047000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -28580,7 +28580,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_567027000113"
     ],
     "pedagogyTags": [
-      "small_group"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -28621,9 +28621,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231134000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -28661,11 +28661,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156698000112"
     ],
     "pedagogyTags": [
-      "highscope",
-      "activity_based",
-      "play_based",
-      "sensory_learning",
-      "small_group"
+      "montessori",
+      "play_explore",
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28702,9 +28702,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_613916000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language"
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -28743,9 +28743,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_622389000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language"
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -28785,8 +28785,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28826,8 +28826,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28867,7 +28867,7 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -28906,11 +28906,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_556246000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28949,10 +28949,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_537578000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -28991,11 +28991,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_552747000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29034,11 +29034,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_534226000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29077,11 +29077,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158852000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29120,10 +29120,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_627178000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "stem_maker",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29162,11 +29162,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536415000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -29207,9 +29207,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157236000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -29251,10 +29251,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_520144000213"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -29293,9 +29293,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_534153000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29371,11 +29371,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_540560000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "inquiry_based",
-      "constructivist",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -29414,9 +29414,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158070000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29453,11 +29453,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_152269000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "child_centered",
-      "small_group",
-      "mixed_age"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29496,7 +29496,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_549355000113"
     ],
     "pedagogyTags": [
-      "character_ed"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -29537,12 +29537,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158496000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "small_group",
-      "mixed_age",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29581,8 +29581,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_518077000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -29623,10 +29623,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158640000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -29665,7 +29665,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159026000113"
     ],
     "pedagogyTags": [
-      "character_ed"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -29704,8 +29704,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_153907000112"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered"
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29744,8 +29744,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_540811000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "character_ed"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -29782,9 +29782,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564265000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -29824,10 +29824,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159093000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -29864,7 +29864,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564273000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -29901,10 +29901,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564257000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -29945,11 +29945,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157031000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -29988,8 +29988,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157279000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "character_ed"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -30024,7 +30024,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564281000113"
     ],
     "pedagogyTags": [
-      "picture_book"
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -30065,7 +30065,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_618594000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -30101,9 +30101,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562890000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "multiple_intelligences"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30138,8 +30138,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563404000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -30174,9 +30174,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563382000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "stem_maker"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30211,7 +30211,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563420000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -30250,9 +30250,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543918000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -30288,7 +30288,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563374000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -30323,11 +30323,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563412000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -30369,7 +30369,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_539163000213"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -30404,13 +30404,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563390000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua"
@@ -30445,8 +30445,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563366000113"
     ],
     "pedagogyTags": [
-      "constructivist",
-      "character_ed"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -30486,8 +30486,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159050000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences",
-      "small_group"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30526,12 +30526,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_525758000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "inquiry_based",
-      "picture_book",
-      "child_centered",
-      "multiple_intelligences"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30566,10 +30566,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563862000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -30610,12 +30610,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_556122000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "multiple_intelligences",
-      "constructivist",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30652,8 +30652,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_582530000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -30692,7 +30692,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158208000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "putonghua",
@@ -30733,8 +30733,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157406000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -30775,11 +30775,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_150843000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "child_centered",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30818,9 +30818,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157791000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30859,9 +30859,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_519090000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "constructivist",
-      "small_group"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30898,9 +30898,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566012000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -30939,7 +30939,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231584000113"
     ],
     "pedagogyTags": [
-      "character_ed"
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -30978,8 +30978,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_526665000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -31018,8 +31018,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_153087000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -31058,10 +31058,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158119000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -31100,12 +31100,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156493000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -31145,10 +31145,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157473000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -31229,9 +31229,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159131000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -31269,8 +31269,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_568104000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -31305,9 +31305,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564710000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "small_group",
-      "character_ed"
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -31347,8 +31347,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_154601000112"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -31385,13 +31385,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156795000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "picture_book",
-      "multiple_intelligences",
-      "constructivist",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -31431,9 +31431,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "activity_based",
-      "play_based"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -31470,10 +31470,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156841000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua"
@@ -31512,7 +31512,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566187000113"
     ],
     "pedagogyTags": [
-      "picture_book"
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -31549,7 +31549,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231533000112"
     ],
     "pedagogyTags": [
-      "picture_book"
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -31588,10 +31588,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_534790000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist",
-      "small_group",
-      "mixed_age"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -31631,10 +31631,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565628000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist",
-      "small_group",
-      "mixed_age"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -31670,11 +31670,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565911000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "whole_language",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "language_dev",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -31715,11 +31715,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565903000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "whole_language",
-      "child_centered",
-      "multiple_intelligences"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -31754,7 +31754,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565890000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -31794,7 +31794,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158380000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -31833,10 +31833,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158160000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "whole_language",
-      "constructivist",
-      "character_ed"
+      "project_learn",
+      "language_dev",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -31878,9 +31878,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157090000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "character_ed"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -31987,11 +31987,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158593000113"
     ],
     "pedagogyTags": [
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "stem_maker",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -32031,8 +32031,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231347000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -32073,7 +32073,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_525731000113"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -32113,8 +32113,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231010000213"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -32153,8 +32153,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_555576000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -32193,9 +32193,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157732000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered",
-      "small_group"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -32234,12 +32234,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156515000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -32317,9 +32317,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_537950000113"
     ],
     "pedagogyTags": [
-      "child_centered",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -32358,9 +32358,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543489000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -32397,10 +32397,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158585000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "picture_book"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual",
@@ -32439,10 +32439,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159220000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "child_centered",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -32550,8 +32550,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_617849000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -32590,10 +32590,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_532533000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -32632,12 +32632,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_543012000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "child_centered",
-      "small_group",
-      "mixed_age"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -32676,8 +32676,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158747000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "english",
@@ -32716,9 +32716,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "reggio_emilia",
-      "child_centered",
-      "mixed_age"
+      "montessori",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -32755,10 +32755,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_619850000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "project_based",
-      "inquiry_based",
-      "stem_maker"
+      "montessori",
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -32800,9 +32800,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_153036000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "picture_book",
-      "character_ed"
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -32870,7 +32870,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565237000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -33074,13 +33074,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542326000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -33121,10 +33121,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157066000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "picture_book",
-      "child_centered",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -33165,10 +33165,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158062000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -33244,11 +33244,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_519634000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "whole_language",
-      "child_centered",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -33285,8 +33285,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_627550000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -33326,8 +33326,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -33362,9 +33362,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565377000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "picture_book"
+      "project_learn",
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "trilingual"
@@ -33399,13 +33399,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562904000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -33442,8 +33442,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563234000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "character_ed"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -33478,12 +33478,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_623598000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "constructivist",
-      "sensory_learning",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -33524,10 +33524,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_615080000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -33562,8 +33562,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563293000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "inquiry_based"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -33602,9 +33602,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_541613000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -33643,13 +33643,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_539554000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -33684,8 +33684,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564923000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -33724,11 +33724,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158739000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -33768,10 +33768,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_595969000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "whole_language",
-      "arts_integrated"
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -33810,9 +33810,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324957000213"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "multiple_intelligences"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -33851,9 +33851,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159212000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "multiple_intelligences"
+      "play_explore",
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -33888,8 +33888,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566926000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "small_group"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -33928,9 +33928,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159000000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "child_centered",
-      "multiple_intelligences"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -33965,9 +33965,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564893000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34002,9 +34002,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564907000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "constructivist",
-      "small_group"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34111,8 +34111,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563277000113"
     ],
     "pedagogyTags": [
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -34147,9 +34147,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563269000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34184,10 +34184,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564702000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "inquiry_based",
-      "whole_language",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34226,9 +34226,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_537098000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -34265,9 +34265,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_621366000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34302,11 +34302,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565458000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34345,10 +34345,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_569569000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -34422,7 +34422,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_560740000113"
     ],
     "pedagogyTags": [
-      "child_centered"
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -34460,8 +34460,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_600377000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "small_group"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -34500,12 +34500,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158887000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "child_centered",
-      "stem_maker",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -34545,8 +34545,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_587141000113"
     ],
     "pedagogyTags": [
-      "stem_maker",
-      "small_group"
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -34587,8 +34587,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158720000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34627,9 +34627,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_524204000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -34699,7 +34699,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_532355000112"
     ],
     "pedagogyTags": [
-      "inquiry_based"
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -34738,8 +34738,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_599999000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -34779,8 +34779,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "project_based",
-      "activity_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -34820,9 +34820,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_615170000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -34861,9 +34861,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_612189000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -34902,9 +34902,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_583340000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -34943,9 +34943,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_597716000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -34984,9 +34984,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_591777000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "child_centered"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -35023,7 +35023,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566314000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -35060,7 +35060,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566306000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -35101,10 +35101,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_530735000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "inquiry_based",
-      "constructivist"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -35141,7 +35141,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566330000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -35178,7 +35178,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566349000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -35215,7 +35215,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566322000113"
     ],
     "pedagogyTags": [
-      "project_based"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -35256,7 +35256,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158313000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "english"
@@ -35291,9 +35291,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563625000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -35328,9 +35328,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563633000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -35367,7 +35367,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159042000112"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -35404,8 +35404,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_534200000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -35443,8 +35443,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_612391000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -35482,8 +35482,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_604291000112"
     ],
     "pedagogyTags": [
-      "thematic",
-      "child_centered"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english",
@@ -35523,8 +35523,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_510726000113"
     ],
     "pedagogyTags": [
-      "highscope",
-      "constructivist"
+      "montessori",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -35559,9 +35559,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563854000113"
     ],
     "pedagogyTags": [
-      "inquiry_based",
-      "whole_language",
-      "small_group"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -35601,11 +35601,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_554383000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "child_centered",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -35642,8 +35642,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_598623000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -35682,11 +35682,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231592000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "child_centered",
-      "constructivist",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -35725,12 +35725,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_587869000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -35769,12 +35769,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_597295000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -35850,7 +35850,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_613517000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "bilingual",
@@ -35890,10 +35890,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158461000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -35932,8 +35932,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_524360000213"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "play_based"
+      "play_explore",
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -35972,8 +35972,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_600350000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "inquiry_based"
+      "montessori",
+      "play_explore"
     ],
     "languageEnv": [
       "english",
@@ -36081,8 +36081,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_549240000112"
     ],
     "pedagogyTags": [
-      "ib_pyp",
-      "inquiry_based"
+      "montessori",
+      "play_explore"
     ],
     "languageEnv": [
       "english",
@@ -36122,7 +36122,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_590614000113"
     ],
     "pedagogyTags": [
-      "thematic"
+      "project_learn"
     ],
     "languageEnv": [
       "cantonese"
@@ -36161,7 +36161,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_537225000113"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -36271,7 +36271,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_622265000113"
     ],
     "pedagogyTags": [
-      "activity_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -36378,9 +36378,9 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "thematic",
-      "child_centered",
-      "mixed_age"
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -36419,9 +36419,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_549304000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -36458,11 +36458,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159140000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "inquiry_based",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -36500,9 +36500,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159158000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -36541,9 +36541,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_159018000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "multiple_intelligences",
-      "arts_integrated"
+      "play_explore",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -36580,10 +36580,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_155624000112"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -36624,10 +36624,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_545333000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered",
-      "mixed_age"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -36666,7 +36666,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_152978000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "cantonese"
@@ -36705,12 +36705,12 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158860000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "character_ed"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -36786,11 +36786,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_541389000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "sensory_learning"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -36829,9 +36829,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_536709000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -36872,9 +36872,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564753000213"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual",
@@ -36913,9 +36913,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158259000112"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -36950,7 +36950,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563471000113"
     ],
     "pedagogyTags": [
-      "inquiry_based"
+      "play_explore"
     ],
     "languageEnv": [
       "trilingual",
@@ -36987,7 +36987,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563480000113"
     ],
     "pedagogyTags": [
-      "play_based"
+      "play_explore"
     ],
     "languageEnv": [
       "english"
@@ -37055,8 +37055,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563340000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "whole_language"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "english"
@@ -37091,8 +37091,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566411000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "mixed_age"
+      "play_explore",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -37129,8 +37129,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566403000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "whole_language"
+      "project_learn",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -37169,7 +37169,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_559962000113"
     ],
     "pedagogyTags": [
-      "constructivist"
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -37210,8 +37210,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157295000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based"
+      "play_explore",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual"
@@ -37250,8 +37250,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157490000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -37288,8 +37288,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566292000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences",
-      "constructivist"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -37367,13 +37367,13 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_528609000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic",
-      "play_based",
-      "picture_book",
-      "child_centered",
-      "constructivist",
-      "stem_maker"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "project_learn",
+      "language_dev",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -37412,8 +37412,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158500000113"
     ],
     "pedagogyTags": [
-      "play_based",
-      "picture_book"
+      "play_explore",
+      "language_dev"
     ],
     "languageEnv": [
       "cantonese"
@@ -37450,9 +37450,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_151629000112"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -37491,9 +37491,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_570885000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "picture_book",
-      "small_group"
+      "play_explore",
+      "language_dev",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -37528,11 +37528,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566250000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "activity_based",
-      "thematic",
-      "play_based",
-      "small_group"
+      "play_explore",
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -37571,10 +37571,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_151424000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "multiple_intelligences",
-      "small_group"
+      "play_explore",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "trilingual"
@@ -37613,8 +37613,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564680000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "thematic"
+      "project_learn",
+      "project_learn"
     ],
     "languageEnv": [
       "trilingual",
@@ -37654,9 +37654,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_575429000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "multiple_intelligences"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -37696,7 +37696,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_541230000113"
     ],
     "pedagogyTags": [
-      "multiple_intelligences"
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -37732,11 +37732,11 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566586000113"
     ],
     "pedagogyTags": [
-      "project_based",
-      "play_based",
-      "child_centered",
-      "multiple_intelligences",
-      "constructivist"
+      "play_explore",
+      "project_learn",
+      "project_learn",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "putonghua",
@@ -37772,8 +37772,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566578000113"
     ],
     "pedagogyTags": [
-      "highscope",
-      "picture_book"
+      "montessori",
+      "language_dev"
     ],
     "languageEnv": [
       "putonghua",
@@ -37814,10 +37814,10 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_540498000113"
     ],
     "pedagogyTags": [
-      "activity_based",
-      "child_centered",
-      "small_group",
-      "character_ed"
+      "play_explore",
+      "holistic",
+      "holistic",
+      "holistic"
     ],
     "languageEnv": [
       "cantonese"
@@ -37856,9 +37856,9 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231240000113"
     ],
     "pedagogyTags": [
-      "thematic",
-      "play_based",
-      "character_ed"
+      "play_explore",
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -38075,8 +38075,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -38114,8 +38114,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -38153,8 +38153,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [
       "montessori",
-      "constructivist",
-      "mixed_age"
+      "project_learn",
+      "holistic"
     ],
     "languageEnv": [
       "english"
@@ -38694,26 +38694,11 @@ export const kindergartenStats = {
     "montessori_intl": 8
   },
   "byPedagogy": {
-    "project_based": 282,
-    "play_based": 263,
-    "inquiry_based": 90,
-    "whole_language": 59,
-    "child_centered": 278,
-    "multiple_intelligences": 110,
-    "character_ed": 106,
-    "thematic": 211,
-    "ib_pyp": 23,
-    "activity_based": 190,
-    "sensory_learning": 78,
-    "small_group": 180,
-    "mixed_age": 40,
-    "montessori": 64,
-    "constructivist": 191,
-    "picture_book": 169,
-    "reggio_emilia": 6,
-    "stem_maker": 44,
-    "arts_integrated": 15,
-    "highscope": 5
+    "play_explore": 621,
+    "project_learn": 684,
+    "language_dev": 228,
+    "holistic": 773,
+    "montessori": 98
   },
   "byLanguage": {
     "cantonese": 407,

@@ -83,6 +83,15 @@ const SESSION_CODE_MAP: Record<string, KGSession> = {
 
 const KGP_FEE_CAP = 50000;
 
+// Pedagogy category labels (Traditional Chinese)
+const PEDAGOGY_LABELS: Record<string, string> = {
+  montessori: "蒙特梭利",
+  play_explore: "遊戲探索",
+  project_learn: "專題學習",
+  language_dev: "語言發展",
+  holistic: "全人發展",
+};
+
 // International school patterns
 const NON_GROUP_INTERNATIONAL_SCHOOLS: string[] = [
   "AMERICAN INTERNATIONAL SCHOOL",
@@ -143,29 +152,39 @@ const ESF_SCHOOLS = [
   "ESF WU KAI SHA INTERNATIONAL KINDERGARTEN",
 ];
 
-// Pedagogy extraction patterns
+// Pedagogy extraction patterns - consolidated into 5 categories
+// 1. montessori (蒙特梭利) - Named methodologies
+// 2. play_explore (遊戲探索) - Play & exploration based
+// 3. project_learn (專題學習) - Project & thematic learning
+// 4. language_dev (語言發展) - Language development focus
+// 5. holistic (全人發展) - Holistic child development
 const PEDAGOGY_PATTERNS: Array<{ pattern: RegExp; tag: string }> = [
+  // montessori (蒙特梭利) - Named methodologies
   { pattern: /蒙特梭利|蒙特索利|Montessori/i, tag: "montessori" },
-  { pattern: /瑞吉歐|Reggio/i, tag: "reggio_emilia" },
-  { pattern: /高瞻|HighScope|High\s*Scope/i, tag: "highscope" },
-  { pattern: /華德福|Waldorf/i, tag: "waldorf" },
-  { pattern: /IB|國際文憑/i, tag: "ib_pyp" },
-  { pattern: /專題研習|方案教學|Project/i, tag: "project_based" },
-  { pattern: /活動教學|活動學習/i, tag: "activity_based" },
-  { pattern: /主題教學|主題綜合/i, tag: "thematic" },
-  { pattern: /遊戲中學習|從遊戲中學習|遊戲學習|自由遊戲/i, tag: "play_based" },
-  { pattern: /探究式|探索式|探索學習|探究學習/i, tag: "inquiry_based" },
-  { pattern: /繪本教學|繪本/i, tag: "picture_book" },
-  { pattern: /全語文/i, tag: "whole_language" },
-  { pattern: /兒童為本|以兒童為中心|兒童為中心/i, tag: "child_centered" },
-  { pattern: /多元智能/i, tag: "multiple_intelligences" },
-  { pattern: /建構/i, tag: "constructivist" },
-  { pattern: /STEM|STEAM|創客|Maker/i, tag: "stem_maker" },
-  { pattern: /感官學習|感官探索|多感官/i, tag: "sensory_learning" },
-  { pattern: /小組學習|小組活動/i, tag: "small_group" },
-  { pattern: /混齡|跨級/i, tag: "mixed_age" },
-  { pattern: /品德教育|德育/i, tag: "character_ed" },
-  { pattern: /藝術綜合|藝術教育/i, tag: "arts_integrated" },
+  { pattern: /瑞吉歐|Reggio/i, tag: "montessori" },
+  { pattern: /高瞻|HighScope|High\s*Scope/i, tag: "montessori" },
+  { pattern: /華德福|Waldorf/i, tag: "montessori" },
+  { pattern: /IB|國際文憑/i, tag: "montessori" },
+  // play_explore (遊戲探索) - Play & exploration
+  { pattern: /遊戲中學習|從遊戲中學習|遊戲學習|自由遊戲/i, tag: "play_explore" },
+  { pattern: /活動教學|活動學習/i, tag: "play_explore" },
+  { pattern: /感官學習|感官探索|多感官/i, tag: "play_explore" },
+  { pattern: /探究式|探索式|探索學習|探究學習/i, tag: "play_explore" },
+  // project_learn (專題學習) - Project & thematic
+  { pattern: /專題研習|方案教學|Project/i, tag: "project_learn" },
+  { pattern: /主題教學|主題綜合/i, tag: "project_learn" },
+  { pattern: /建構/i, tag: "project_learn" },
+  // language_dev (語言發展) - Language development
+  { pattern: /繪本教學|繪本/i, tag: "language_dev" },
+  { pattern: /全語文/i, tag: "language_dev" },
+  // holistic (全人發展) - Holistic development
+  { pattern: /兒童為本|以兒童為中心|兒童為中心/i, tag: "holistic" },
+  { pattern: /品德教育|德育/i, tag: "holistic" },
+  { pattern: /多元智能/i, tag: "holistic" },
+  { pattern: /藝術綜合|藝術教育/i, tag: "holistic" },
+  { pattern: /小組學習|小組活動/i, tag: "holistic" },
+  { pattern: /混齡|跨級/i, tag: "holistic" },
+  { pattern: /STEM|STEAM|創客|Maker/i, tag: "holistic" },
 ];
 
 // Language extraction patterns

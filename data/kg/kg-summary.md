@@ -1,6 +1,6 @@
 # Consolidated Kindergarten Database
 
-Generated: 2026-01-19T13:35:40.724Z
+Generated: 2026-01-19T14:12:21.340Z
 
 ## Overview
 
@@ -34,21 +34,11 @@ Generated: 2026-01-19T13:35:40.724Z
 
 | Tag | Count | % |
 |-----|-------|---|
-| project_based | 282 | 28.7% |
-| child_centered | 278 | 28.3% |
-| play_based | 263 | 26.8% |
-| thematic | 211 | 21.5% |
-| constructivist | 191 | 19.4% |
-| activity_based | 190 | 19.3% |
-| small_group | 180 | 18.3% |
-| picture_book | 169 | 17.2% |
-| multiple_intelligences | 110 | 11.2% |
-| character_ed | 106 | 10.8% |
-| inquiry_based | 90 | 9.2% |
-| sensory_learning | 78 | 7.9% |
-| montessori | 64 | 6.5% |
-| whole_language | 59 | 6.0% |
-| stem_maker | 44 | 4.5% |
+| holistic | 773 | 78.6% |
+| project_learn | 684 | 69.6% |
+| play_explore | 621 | 63.2% |
+| language_dev | 228 | 23.2% |
+| montessori | 98 | 10.0% |
 
 ## Language Environment
 
