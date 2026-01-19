@@ -21,6 +21,17 @@ const TAG_COLORS = {
   religion: "#8B5CF6",
   specialSchool: "#059669",
 } as const;
+
+/**
+ * Category tag colors - matched to school-card getDisplayTypeColor
+ */
+const CATEGORY_COLORS: Record<string, string> = {
+  "國際": "#00D9FF",
+  "資助": "#6B5B95",
+  "直資": "#E8756F",
+  "私立": "#7C3AED",
+  "公立": "#3B82F6",
+};
 import type { SchoolFees } from "@/types/fees";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -127,6 +138,39 @@ function getRelationshipTitle(relationship: SchoolRelationship): string {
     LINKED: "聯繫學校",
   };
   return titles[relationship] || "相關學校";
+}
+
+/**
+ * 獲取學校類型標籤顏色（與卡片一致）
+ */
+function getCategoryTagColor(school: School): string {
+  if (isInternational(school)) return CATEGORY_COLORS["國際"];
+  return CATEGORY_COLORS[school.category] || CATEGORY_COLORS["私立"];
+}
+
+/**
+ * 判斷是否應顯示學費區塊
+ * 規則：Gov/Aided 不顯示學費，DSS/Private/International 才顯示
+ */
+function shouldShowTuition(school: School): boolean {
+  // Gov/Aided 不顯示學費
+  if (school.category === "公立" || school.category === "資助") {
+    return false;
+  }
+  return true;
+}
+
+/**
+ * 獲取課程體系顯示列表
+ * 規則：Gov/Aided 學校默認為 HK_LOCAL；其他學校使用 curriculumV2
+ */
+function getCurriculumDisplay(school: School): CurriculumV2[] {
+  // Gov/Aided 學校默認為本地課程
+  if (school.category === "公立" || school.category === "資助") {
+    return ["HK_LOCAL"];
+  }
+  // 其他學校使用 curriculumV2
+  return school.curriculumV2 || [];
 }
 
 export default function SchoolDetailScreen() {
@@ -300,16 +344,16 @@ export default function SchoolDetailScreen() {
             )}
             {/* 標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 一條龍/直屬/聯繫 → 宗教 → 特殊學校 */}
             <View style={styles.tagRow}>
-              {/* 1. 種類標籤：KG 用 nature，其他用 category */}
+              {/* 1. 種類標籤：KG 用 nature，其他用 category - 顏色與卡片一致 */}
               {isKindergarten(school) ? (
                 <View style={[styles.categoryTag, { backgroundColor: getKGNatureColor(getKGNature(school)!) }]}>
-                  <Text style={styles.categoryTagText}>
+                  <Text style={styles.categoryTagTextWhite}>
                     {getKGNatureLabel(getKGNature(school)!)}
                   </Text>
                 </View>
               ) : (
-                <View style={[styles.categoryTag, isInternational(school) && styles.internationalTag]}>
-                  <Text style={[styles.categoryTagText, isInternational(school) && styles.internationalTagText]}>
+                <View style={[styles.categoryTag, { backgroundColor: getCategoryTagColor(school) }]}>
+                  <Text style={styles.categoryTagTextWhite}>
                     {isInternational(school) ? "國際" : school.category}
                   </Text>
                 </View>
@@ -323,7 +367,7 @@ export default function SchoolDetailScreen() {
                 <Text style={styles.districtTagText}>{formatDistrictDisplay(school)}</Text>
               </View>
               {/* 4. 校網標籤（只在小學有校網時顯示） */}
-              {school.schoolNet && (
+              {school.level === "小學" && school.schoolNet && (
                 <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.schoolNet }]}>
                   <Text style={styles.metadataTagText}>校網：{school.schoolNet}</Text>
                 </View>
@@ -371,8 +415,8 @@ export default function SchoolDetailScreen() {
                 value={getLanguageDisplayValue(school)}
                 isPending={!school.instructionLanguages || school.instructionLanguages.length === 0}
               />
-              {/* 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示 */}
-              {school.category === "直資" && (
+              {/* 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示；Gov/Aided不顯示 */}
+              {shouldShowTuition(school) && school.category === "直資" && (
                 <InfoRow
                   label={SCHOOL_TEXT.LABEL_TUITION}
                   value={formatTuitionValue(school.category, school.tuitionMin, school.tuitionMax)}
@@ -381,7 +425,7 @@ export default function SchoolDetailScreen() {
               )}
             </View>
             {/* 直資學費來源說明 - R3-4 */}
-            {school.category === "直資" && (
+            {shouldShowTuition(school) && school.category === "直資" && (
               <Text style={styles.tuitionSourceNote}>
                 {getTuitionSourceNote(school.category, school.tuitionMin, school.tuitionMax)}
               </Text>
@@ -416,12 +460,12 @@ export default function SchoolDetailScreen() {
             </View>
           )}
 
-          {/* 課程體系區塊（僅顯示有課程數據的學校） */}
-          {school.curriculumV2 && school.curriculumV2.length > 0 && (
+          {/* 課程體系區塊（Gov/Aided 默認顯示 HK_LOCAL，其他顯示有課程數據的學校） */}
+          {getCurriculumDisplay(school).length > 0 && (
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>課程體系</Text>
               <View style={styles.curriculumContainer}>
-                {school.curriculumV2.map((curriculum) => (
+                {getCurriculumDisplay(school).map((curriculum) => (
                   <View
                     key={curriculum}
                     style={[styles.curriculumBadge, { backgroundColor: getCurriculumColor(curriculum) }]}
@@ -433,8 +477,8 @@ export default function SchoolDetailScreen() {
             </View>
           )}
 
-          {/* R3-5: 學費區塊（國際/私校） */}
-          {(isInternational(school) || school.category === "私立") && (
+          {/* R3-5: 學費區塊（國際/私校）- Gov/Aided不顯示 */}
+          {shouldShowTuition(school) && (isInternational(school) || school.category === "私立") && (
             <FeesSection fees={fees} />
           )}
 
@@ -829,15 +873,20 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   categoryTag: {
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
     borderRadius: 8,
   },
   categoryTagText: {
     fontSize: 13,
     fontWeight: "600",
     color: "#00D9FF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  categoryTagTextWhite: {
+    fontSize: 12,
+    fontWeight: "600",
+    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Regular",
   },
   internationalTag: {

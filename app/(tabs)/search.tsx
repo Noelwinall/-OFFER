@@ -9,7 +9,7 @@ import { SortSelector } from "@/components/sort-selector";
 import { useRouter } from "expo-router";
 import { schools } from "@/data/schools";
 import { FavoritesStorage } from "@/lib/storage";
-import { FilterContext } from "@/lib/filter-context";
+import { FilterContext, hasActiveFilters } from "@/lib/filter-context";
 import { filterSchools, sortSearchResults } from "@/lib/filter-logic";
 import type { School, Level } from "@/types/school";
 import * as Haptics from "expo-haptics";
@@ -69,6 +69,9 @@ export default function SearchScreen() {
   }
 
   const { state: filters } = filterContext;
+
+  // 判斷是否應顯示學校列表：有搜尋詞 OR 有活躍篩選條件
+  const shouldShowList = debouncedSearch.trim().length > 0 || hasActiveFilters(filters);
 
   useEffect(() => {
     loadFavorites();
@@ -231,39 +234,51 @@ export default function SearchScreen() {
         {/* 活躍篩選標籤 */}
         <ActiveFilterTags />
 
-        {/* 結果統計與排序 */}
-        <View style={styles.resultStats}>
-          <Text style={styles.resultText}>
-            找到 {displaySchools.length} 所學校
-          </Text>
-          <SortSelector />
-        </View>
+        {/* 結果統計與排序 - 僅在有搜尋/篩選時顯示 */}
+        {shouldShowList && (
+          <View style={styles.resultStats}>
+            <Text style={styles.resultText}>
+              找到 {displaySchools.length} 所學校
+            </Text>
+            <SortSelector />
+          </View>
+        )}
 
         {/* 篩選面板 */}
         <FilterSheet visible={showFilterSheet} onClose={() => setShowFilterSheet(false)} />
 
-        {/* 學校列表 */}
-        <FlatList
-          data={displaySchools}
-          keyExtractor={(item) => item.id}
-          renderItem={renderSchoolItem}
-          contentContainerStyle={{ paddingVertical: 8, paddingBottom: 100 }}
-          // Performance optimizations for 3510 schools
-          initialNumToRender={12}
-          maxToRenderPerBatch={15}
-          windowSize={5}
-          removeClippedSubviews={Platform.OS !== "web"}
-          ListEmptyComponent={
-            <View style={styles.emptyContainer}>
-              <Text style={styles.emptyText}>
-                {debouncedSearch ? SCHOOL_TEXT.NO_RESULTS : SCHOOL_TEXT.EMPTY_LIST}
-              </Text>
-              {debouncedSearch && (
-                <Text style={styles.emptyHint}>{SCHOOL_TEXT.NO_RESULTS_HINT}</Text>
-              )}
-            </View>
-          }
-        />
+        {/* 學校列表 - 僅在有搜尋/篩選時顯示 */}
+        {shouldShowList ? (
+          <FlatList
+            data={displaySchools}
+            keyExtractor={(item) => item.id}
+            renderItem={renderSchoolItem}
+            contentContainerStyle={{ paddingVertical: 8, paddingBottom: 100 }}
+            // Performance optimizations for 3510 schools
+            initialNumToRender={12}
+            maxToRenderPerBatch={15}
+            windowSize={5}
+            removeClippedSubviews={Platform.OS !== "web"}
+            ListEmptyComponent={
+              <View style={styles.emptyContainer}>
+                <Text style={styles.emptyText}>
+                  {debouncedSearch ? SCHOOL_TEXT.NO_RESULTS : SCHOOL_TEXT.EMPTY_LIST}
+                </Text>
+                {debouncedSearch && (
+                  <Text style={styles.emptyHint}>{SCHOOL_TEXT.NO_RESULTS_HINT}</Text>
+                )}
+              </View>
+            }
+          />
+        ) : (
+          <View style={styles.welcomeContainer}>
+            <Text style={styles.welcomeIcon}>🔍</Text>
+            <Text style={styles.welcomeTitle}>開始搜尋學校</Text>
+            <Text style={styles.welcomeText}>
+              輸入學校名稱，或使用上方篩選條件{"\n"}找到適合您的學校
+            </Text>
+          </View>
+        )}
 
         {/* 免責聲明 */}
         <View style={styles.disclaimerContainer}>
@@ -444,5 +459,31 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,0.35)",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
+  },
+  welcomeContainer: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 80,
+    paddingHorizontal: 40,
+  },
+  welcomeIcon: {
+    fontSize: 48,
+    marginBottom: 16,
+  },
+  welcomeTitle: {
+    fontSize: 20,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Bold",
+    marginBottom: 12,
+    textAlign: "center",
+  },
+  welcomeText: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.5)",
+    fontFamily: "NotoSerifSC-Regular",
+    textAlign: "center",
+    lineHeight: 22,
   },
 });

@@ -391,9 +391,9 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
               </View>
 
-              {/* 6. 學校性別 (School Gender) */}
+              {/* 6. 男/女校 (School Gender) */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>👫 學校性別</Text>
+                <Text style={styles.sectionTitle}>👫 男/女校</Text>
                 <View style={styles.chipContainer}>
                   {GENDER_OPTIONS.map((option) => {
                     const isSelected = state.gender.includes(option.value);

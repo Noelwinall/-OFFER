@@ -113,22 +113,20 @@ export const SchoolCard = React.memo(function SchoolCard({
 
       {/* 學校標籤 - 嚴格順序: 種類 → 學段 → 區域(18區) → 校網 → 男/女校 → 一條龍/直屬/聯繫 → 宗教 → 特殊學校 */}
       <View className="flex-row items-center flex-wrap gap-1">
-        {/* 1. 種類標籤：KG 用 nature，其他用 category */}
+        {/* 1. 種類標籤：KG 用 nature，其他用 category - 字體大小與其他標籤一致 */}
         {isKindergarten(school) ? (
           <View
-            className="px-2 py-1 rounded"
-            style={{ backgroundColor: getKGNatureColor(getKGNature(school)!) }}
+            style={[styles.categoryTag, { backgroundColor: getKGNatureColor(getKGNature(school)!) }]}
           >
-            <Text className="text-xs font-semibold text-white">
+            <Text style={styles.categoryText}>
               {getKGNatureLabel(getKGNature(school)!)}
             </Text>
           </View>
         ) : (
           <View
-            className="px-2 py-1 rounded"
-            style={{ backgroundColor: getDisplayTypeColor(school) }}
+            style={[styles.categoryTag, { backgroundColor: getDisplayTypeColor(school) }]}
           >
-            <Text className="text-xs font-semibold text-white">
+            <Text style={styles.categoryText}>
               {getDisplayType(school)}
             </Text>
           </View>
@@ -142,7 +140,7 @@ export const SchoolCard = React.memo(function SchoolCard({
           <Text style={styles.districtText}>{formatDistrictDisplay(school)}</Text>
         </View>
         {/* 4. 校網標籤（只在小學有校網時顯示） */}
-        {school.schoolNet && (
+        {school.level === "小學" && school.schoolNet && (
           <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.schoolNet }]}>
             <Text style={styles.metadataText}>校網：{school.schoolNet}</Text>
           </View>
@@ -274,11 +272,12 @@ function getRelationshipColor(relationship: SchoolRelationship): string {
 /**
  * 檢查學校是否有有效學費數據
  * 用於決定是否顯示學費行（無數據時不顯示，而非顯示佔位符）
+ * 規則：Gov/Aided 不顯示學費，DSS/Private/International 才顯示
  */
 function hasTuitionData(school: School): boolean {
-  // 資助/公立學校：免學費，視為有數據
+  // 資助/公立學校：不顯示學費（即使有數據）
   if (school.category === "資助" || school.category === "公立") {
-    return true;
+    return false;
   }
   // 直資學校：檢查是否有有效學費範圍
   if (school.category === "直資") {
@@ -333,6 +332,16 @@ const styles = StyleSheet.create({
   },
   cardPressed: {
     opacity: 0.85,
+  },
+  categoryTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  categoryText: {
+    fontSize: 10,
+    fontWeight: "600",
+    color: "#FFFFFF",
   },
   levelTag: {
     paddingHorizontal: 8,
