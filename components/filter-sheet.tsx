@@ -176,7 +176,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
               {/* 2. 學校類型 (School Type) */}
               <View style={styles.section}>
                 <View style={styles.sectionTitleRow}>
-                  <Text style={styles.sectionTitle}>🏫 學校類型</Text>
+                  <Text style={[styles.sectionTitle, styles.sectionTitleInline]}>🏫 學校類型</Text>
                   <InfoHelp topic="school_types" />
                 </View>
                 <View style={styles.chipContainer}>
@@ -350,7 +350,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
               {/* 4. 課程體系 (Curriculum V2) */}
               <View style={styles.section}>
                 <View style={styles.sectionTitleRow}>
-                  <Text style={styles.sectionTitle}>🎓 課程體系</Text>
+                  <Text style={[styles.sectionTitle, styles.sectionTitleInline]}>🎓 課程體系</Text>
                   <InfoHelp topic="curriculum" />
                 </View>
                 <View style={styles.chipContainer}>
@@ -609,5 +609,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 6,
     marginBottom: 14,
+  },
+  // Remove marginBottom when sectionTitle is inside sectionTitleRow
+  sectionTitleInline: {
+    marginBottom: 0,
   },
 });

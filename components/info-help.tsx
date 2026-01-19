@@ -10,9 +10,14 @@
  * App UX:
  * - Tap "?" => show short_intro with "全文" link
  * - Tap "全文" => open full modal with full_text
+ *
+ * Features:
+ * - Collision detection: popover stays within viewport
+ * - Solid background with proper visibility
+ * - Inline alignment with label text
  */
 
-import { useState, useRef } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import {
   View,
   Text,
@@ -22,6 +27,8 @@ import {
   StyleSheet,
   Platform,
   Pressable,
+  Dimensions,
+  useWindowDimensions,
 } from "react-native";
 import { INFO_TOPICS } from "@/constants/info-topics";
 
@@ -29,31 +36,137 @@ interface InfoHelpProps {
   topic: keyof typeof INFO_TOPICS;
 }
 
+const POPOVER_WIDTH = 260;
+const POPOVER_MARGIN = 12; // Safe margin from screen edges
+
+interface PopoverPosition {
+  top?: number;
+  bottom?: number;
+  left?: number;
+  right?: number;
+}
+
 export function InfoHelp({ topic }: InfoHelpProps) {
   const [showShort, setShowShort] = useState(false);
   const [showFull, setShowFull] = useState(false);
+  const [popoverPosition, setPopoverPosition] = useState<PopoverPosition>({ top: 24, left: 0 });
+  const iconRef = useRef<View>(null);
+  const { width: windowWidth, height: windowHeight } = useWindowDimensions();
 
   const topicData = INFO_TOPICS[topic];
   if (!topicData) return null;
 
   const isWeb = Platform.OS === "web";
 
-  // Web: hover shows short, click shows full
-  // App: tap shows short with "全文" link, tap "全文" shows full
+  // Calculate optimal popover position based on anchor location
+  const calculatePosition = useCallback(() => {
+    if (!iconRef.current) {
+      setPopoverPosition({ top: 24, left: 0 });
+      return;
+    }
+
+    if (isWeb) {
+      // Web: use getBoundingClientRect
+      const node = iconRef.current as unknown as HTMLElement;
+      if (node && node.getBoundingClientRect) {
+        const rect = node.getBoundingClientRect();
+        const iconCenterX = rect.left + rect.width / 2;
+        const iconBottom = rect.bottom;
+        const iconTop = rect.top;
+
+        // Calculate horizontal position
+        let left: number | undefined;
+        let right: number | undefined;
+
+        const spaceOnRight = windowWidth - iconCenterX;
+        const spaceOnLeft = iconCenterX;
+
+        if (spaceOnRight >= POPOVER_WIDTH + POPOVER_MARGIN) {
+          // Enough space on right - position to the right
+          left = 0;
+        } else if (spaceOnLeft >= POPOVER_WIDTH + POPOVER_MARGIN) {
+          // Enough space on left - position to the left
+          right = 0;
+        } else {
+          // Not enough space on either side - center and clamp
+          const idealLeft = -POPOVER_WIDTH / 2 + 8;
+          const actualLeft = Math.max(
+            POPOVER_MARGIN - rect.left,
+            Math.min(idealLeft, windowWidth - rect.left - POPOVER_WIDTH - POPOVER_MARGIN)
+          );
+          left = actualLeft;
+        }
+
+        // Calculate vertical position
+        const spaceBelow = windowHeight - iconBottom;
+        const estimatedPopoverHeight = 120; // Approximate height
+
+        let top: number | undefined;
+        let bottom: number | undefined;
+
+        if (spaceBelow >= estimatedPopoverHeight + POPOVER_MARGIN) {
+          // Enough space below
+          top = 24;
+        } else {
+          // Open above
+          bottom = 24;
+        }
+
+        setPopoverPosition({ top, bottom, left, right });
+      }
+    } else {
+      // React Native: use measureInWindow
+      iconRef.current.measureInWindow((x, y, width, height) => {
+        const iconCenterX = x + width / 2;
+        const iconBottom = y + height;
+
+        let left: number | undefined;
+        let right: number | undefined;
+
+        const spaceOnRight = windowWidth - iconCenterX;
+        const spaceOnLeft = iconCenterX;
+
+        if (spaceOnRight >= POPOVER_WIDTH + POPOVER_MARGIN) {
+          left = 0;
+        } else if (spaceOnLeft >= POPOVER_WIDTH + POPOVER_MARGIN) {
+          right = 0;
+        } else {
+          // Center as best we can
+          left = Math.max(-x + POPOVER_MARGIN, -(POPOVER_WIDTH / 2) + 8);
+        }
+
+        const spaceBelow = windowHeight - iconBottom;
+        const estimatedPopoverHeight = 150;
+
+        let top: number | undefined;
+        let bottom: number | undefined;
+
+        if (spaceBelow >= estimatedPopoverHeight + POPOVER_MARGIN) {
+          top = 24;
+        } else {
+          bottom = 24;
+        }
+
+        setPopoverPosition({ top, bottom, left, right });
+      });
+    }
+  }, [windowWidth, windowHeight, isWeb]);
 
   const handlePress = () => {
     if (isWeb) {
-      // Web: click opens full modal
       setShowFull(true);
       setShowShort(false);
     } else {
-      // App: tap toggles short intro
+      if (!showShort) {
+        calculatePosition();
+      }
       setShowShort(!showShort);
     }
   };
 
   const handleHoverIn = () => {
     if (isWeb) {
+      calculatePosition();
       setShowShort(true);
     }
   };
@@ -77,10 +190,30 @@ export function InfoHelp({ topic }: InfoHelpProps) {
     setShowShort(false);
   };
 
+  // Build popover position style
+  const popoverPositionStyle: any = {
+    position: "absolute" as const,
+    width: POPOVER_WIDTH,
+  };
+
+  if (popoverPosition.top !== undefined) {
+    popoverPositionStyle.top = popoverPosition.top;
+  }
+  if (popoverPosition.bottom !== undefined) {
+    popoverPositionStyle.bottom = popoverPosition.bottom;
+  }
+  if (popoverPosition.left !== undefined) {
+    popoverPositionStyle.left = popoverPosition.left;
+  }
+  if (popoverPosition.right !== undefined) {
+    popoverPositionStyle.right = popoverPosition.right;
+  }
+
   return (
     <View style={styles.container}>
       {/* "?" Icon Button */}
       <Pressable
+        ref={iconRef}
         onPress={handlePress}
         onHoverIn={handleHoverIn}
         onHoverOut={handleHoverOut}
@@ -94,7 +227,7 @@ export function InfoHelp({ topic }: InfoHelpProps) {
 
       {/* Short Intro Tooltip/Popover */}
       {showShort && (
-        <View style={styles.shortPopover}>
+        <View style={[styles.shortPopover, popoverPositionStyle]}>
           <Text style={styles.shortTitle}>{topicData.title}</Text>
           <Text style={styles.shortText}>{topicData.short_intro}</Text>
           {/* App only: show "全文" link */}
@@ -138,47 +271,57 @@ export function InfoHelp({ topic }: InfoHelpProps) {
 }
 
 const styles = StyleSheet.create({
+  // Container: inline-flex behavior for proper alignment with text
   container: {
     position: "relative",
-    marginLeft: 4,
+    marginLeft: 6,
+    // Ensure inline alignment - these help with vertical centering
+    justifyContent: "center",
+    alignItems: "center",
+    alignSelf: "center",
   },
+  // Icon button: centered, same height as typical text line
   iconButton: {
     justifyContent: "center",
     alignItems: "center",
+    height: 16,
+    width: 16,
   },
+  // Question mark circle
   questionMark: {
     width: 16,
     height: 16,
     borderRadius: 8,
-    backgroundColor: "rgba(255,255,255,0.15)",
+    backgroundColor: "rgba(255,255,255,0.2)",
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.3)",
+    borderColor: "rgba(255,255,255,0.4)",
   },
   questionMarkText: {
     fontSize: 10,
     fontWeight: "700",
-    color: "rgba(255,255,255,0.7)",
+    color: "rgba(255,255,255,0.8)",
     lineHeight: 12,
+    textAlign: "center",
   },
-  // Short popover styles - positioned below icon, extending to the right
+  // Short popover styles - solid background, visible shadow
   shortPopover: {
-    position: "absolute",
-    top: 24,
-    left: 0,
-    width: 260,
-    backgroundColor: "#1e293b",
+    backgroundColor: "#1a2744",
     borderRadius: 12,
     padding: 14,
+    // Strong shadow for visibility
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 12,
-    elevation: 8,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.15)",
-    zIndex: 1000,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.5,
+    shadowRadius: 16,
+    elevation: 12,
+    // Visible border
+    borderWidth: 1.5,
+    borderColor: "rgba(0, 217, 255, 0.3)",
+    zIndex: 9999,
+    // Ensure no transparency
+    opacity: 1,
   },
   shortTitle: {
     fontSize: 14,
@@ -190,7 +333,7 @@ const styles = StyleSheet.create({
   shortText: {
     fontSize: 13,
     lineHeight: 20,
-    color: "#e2e8f0",
+    color: "#f1f5f9",
     fontFamily: "NotoSerifSC-Regular",
   },
   fullLinkContainer: {
@@ -214,26 +357,32 @@ const styles = StyleSheet.create({
   },
   closeShortText: {
     fontSize: 16,
-    color: "rgba(255,255,255,0.5)",
+    color: "rgba(255,255,255,0.6)",
     fontWeight: "500",
   },
   // Full modal styles
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.7)",
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
     justifyContent: "center",
     alignItems: "center",
     padding: 24,
   },
   modalContent: {
-    backgroundColor: "#1e293b",
+    backgroundColor: "#1a2744",
     borderRadius: 16,
     maxWidth: 400,
     width: "100%",
     maxHeight: "80%",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "rgba(0, 217, 255, 0.2)",
     overflow: "hidden",
+    // Shadow for depth
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.5,
+    shadowRadius: 24,
+    elevation: 16,
   },
   modalHeader: {
     flexDirection: "row",
@@ -270,7 +419,7 @@ const styles = StyleSheet.create({
   modalText: {
     fontSize: 15,
     lineHeight: 24,
-    color: "rgba(255,255,255,0.9)",
+    color: "#f1f5f9",
     fontFamily: "NotoSerifSC-Regular",
   },
 });
