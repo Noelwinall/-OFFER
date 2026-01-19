@@ -10,6 +10,7 @@ import { isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
 import type { School, CurriculumV2, SchoolGender, SchoolRelationship, InstructionLanguage } from "@/types/school";
 import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
+import { getCHSCData, type CHSCSchoolData } from "@/data/chsc-data";
 
 /**
  * Tag color palette - harmonized colors (same as school-card)
@@ -179,6 +180,7 @@ export default function SchoolDetailScreen() {
   const params = useLocalSearchParams();
   const [school, setSchool] = useState<School | null>(null);
   const [fees, setFees] = useState<SchoolFees | undefined>(undefined);
+  const [chscData, setCHSCData] = useState<CHSCSchoolData | undefined>(undefined);
   const [isFavorite, setIsFavorite] = useState(false);
   const [isInCompare, setIsInCompare] = useState(false);
   const [reviewCount, setReviewCount] = useState(0);
@@ -195,6 +197,11 @@ export default function SchoolDetailScreen() {
   const loadSchool = () => {
     const found = schools.find((s) => s.id === params.id);
     setSchool(found || null);
+    // Load CHSC data by school name
+    if (found) {
+      const chsc = getCHSCData(found.name);
+      setCHSCData(chsc);
+    }
   };
 
   const loadFees = () => {
@@ -399,33 +406,60 @@ export default function SchoolDetailScreen() {
             </View>
           </View>
 
-          {/* 基本資訊 - 只显示 v0 字段 */}
+          {/* 基本資訊 - 順序：類型 → 學段 → 地區 → 創校年份 → 校訓 → 授課語言 → 課程 → 學費 */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_BASIC_INFO}</Text>
             <View style={styles.infoGrid}>
-              <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
+              {/* 1. 學校類型 */}
               <InfoRow
                 label={SCHOOL_TEXT.LABEL_CATEGORY}
                 value={isKindergarten(school) ? getKGNatureLabel(getKGNature(school)!) : (isInternational(school) ? "國際" : school.category)}
               />
+              {/* 2. 學段 */}
+              <InfoRow label={SCHOOL_TEXT.LABEL_LEVEL} value={school.level} />
+              {/* 3. 地區 */}
               <InfoRow label={SCHOOL_TEXT.LABEL_DISTRICT} value={school.district} />
-              {/* 授課語言顯示（使用 MOI 映射數據） */}
-              <InfoRow
-                label={SCHOOL_TEXT.LABEL_LANGUAGE}
-                value={getLanguageDisplayValue(school)}
-                isPending={!school.instructionLanguages || school.instructionLanguages.length === 0}
-              />
-              {/* 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示；Gov/Aided不顯示 */}
-              {shouldShowTuition(school) && school.category === "直資" && (
+              {/* 4. 創校年份 - from CHSC data, only render if available */}
+              {chscData?.yearEstablished && (
+                <InfoRow label="創校年份" value={chscData.yearEstablished} />
+              )}
+              {/* 5. 校訓 - from CHSC data, only render if available */}
+              {chscData?.schoolMotto && (
+                <InfoRow label="校訓" value={chscData.schoolMotto} />
+              )}
+              {/* 6. 授課語言（使用 MOI 映射數據）- only render if has data */}
+              {school.instructionLanguages && school.instructionLanguages.length > 0 && (
+                <InfoRow
+                  label={SCHOOL_TEXT.LABEL_LANGUAGE}
+                  value={getLanguageDisplayValue(school)}
+                />
+              )}
+              {/* 7. 課程體系 - moved from standalone section, only render if has data */}
+              {getCurriculumDisplay(school).length > 0 && (
+                <View style={infoStyles.row}>
+                  <Text style={infoStyles.label}>課程體系</Text>
+                  <View style={styles.curriculumInlineContainer}>
+                    {getCurriculumDisplay(school).map((curriculum) => (
+                      <View
+                        key={curriculum}
+                        style={[styles.curriculumInlineBadge, { backgroundColor: getCurriculumColor(curriculum) }]}
+                      >
+                        <Text style={styles.curriculumInlineBadgeText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
+                      </View>
+                    ))}
+                  </View>
+                </View>
+              )}
+              {/* 8. 學費 - 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示；Gov/Aided不顯示 */}
+              {shouldShowTuition(school) && school.category === "直資" && school.tuitionMin > 0 && school.tuitionMax > 0 && (
                 <InfoRow
                   label={SCHOOL_TEXT.LABEL_TUITION}
                   value={formatTuitionValue(school.category, school.tuitionMin, school.tuitionMax)}
-                  isPending={!(school.tuitionMin > 0 && school.tuitionMax > 0)}
                 />
               )}
             </View>
             {/* 直資學費來源說明 - R3-4 */}
-            {shouldShowTuition(school) && school.category === "直資" && (
+            {shouldShowTuition(school) && school.category === "直資" && school.tuitionMin > 0 && school.tuitionMax > 0 && (
               <Text style={styles.tuitionSourceNote}>
                 {getTuitionSourceNote(school.category, school.tuitionMin, school.tuitionMax)}
               </Text>
@@ -460,40 +494,42 @@ export default function SchoolDetailScreen() {
             </View>
           )}
 
-          {/* 課程體系區塊（Gov/Aided 默認顯示 HK_LOCAL，其他顯示有課程數據的學校） */}
-          {getCurriculumDisplay(school).length > 0 && (
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>課程體系</Text>
-              <View style={styles.curriculumContainer}>
-                {getCurriculumDisplay(school).map((curriculum) => (
-                  <View
-                    key={curriculum}
-                    style={[styles.curriculumBadge, { backgroundColor: getCurriculumColor(curriculum) }]}
-                  >
-                    <Text style={styles.curriculumBadgeText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
-                  </View>
-                ))}
-              </View>
-            </View>
-          )}
-
+          
           {/* R3-5: 學費區塊（國際/私校）- Gov/Aided不顯示 */}
           {shouldShowTuition(school) && (isInternational(school) || school.category === "私立") && (
             <FeesSection fees={fees} />
           )}
 
-          {/* 聯絡方式 - 只显示 website */}
+          {/* 聯絡方式 - 順序：電話 → 傳真 → 電郵 → 網站 */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_CONTACT}</Text>
             <View style={styles.infoGrid}>
-              <TouchableOpacity onPress={school.website ? handleOpenWebsite : undefined} disabled={!school.website}>
-                <InfoRow
-                  label={SCHOOL_TEXT.LABEL_WEBSITE}
-                  value={school.website || ""}
-                  isLink={!!school.website}
-                  isPending={!school.website}
-                />
-              </TouchableOpacity>
+              {/* 1. 電話 - from CHSC data, only render if available */}
+              {chscData?.phone && (
+                <TouchableOpacity onPress={() => Linking.openURL(`tel:${chscData.phone}`)}>
+                  <InfoRow label="電話" value={chscData.phone} isLink />
+                </TouchableOpacity>
+              )}
+              {/* 2. 傳真 - from CHSC data, only render if available */}
+              {chscData?.fax && (
+                <InfoRow label="傳真" value={chscData.fax} />
+              )}
+              {/* 3. 電郵 - from CHSC data, only render if available */}
+              {chscData?.email && (
+                <TouchableOpacity onPress={() => Linking.openURL(`mailto:${chscData.email}`)}>
+                  <InfoRow label="電郵" value={chscData.email} isLink />
+                </TouchableOpacity>
+              )}
+              {/* 4. 網站 - from schools data */}
+              {school.website && (
+                <TouchableOpacity onPress={handleOpenWebsite}>
+                  <InfoRow
+                    label={SCHOOL_TEXT.LABEL_WEBSITE}
+                    value={school.website}
+                    isLink
+                  />
+                </TouchableOpacity>
+              )}
             </View>
           </View>
 
@@ -1007,6 +1043,23 @@ const styles = StyleSheet.create({
   },
   curriculumBadgeText: {
     fontSize: 14,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  curriculumInlineContainer: {
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 6,
+  },
+  curriculumInlineBadge: {
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 6,
+  },
+  curriculumInlineBadgeText: {
+    fontSize: 12,
     fontWeight: "600",
     color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Regular",
