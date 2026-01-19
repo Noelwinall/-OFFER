@@ -8,6 +8,8 @@ import {
   matchesKGCategory,
   isNonInternationalKG,
 } from "@/constants/kg-nature";
+import { feesData202526 } from "@/data/fees-2025-26";
+import { calculateOverallTuition } from "@/types/fees";
 
 /**
  * 檢查學校是否符合進階篩選條件
@@ -209,6 +211,22 @@ export function calculateSearchRelevance(
 }
 
 /**
+ * 獲取學校的有效學費（優先使用 fees data，其次用 raw data）
+ */
+function getEffectiveTuition(school: School): { min: number; max: number } {
+  // 優先從 fees data 獲取
+  const fees = feesData202526[school.id];
+  if (fees) {
+    const overall = calculateOverallTuition(fees);
+    if (overall.isComplete && overall.min > 0) {
+      return { min: overall.min, max: overall.max };
+    }
+  }
+  // Fallback 到 raw data
+  return { min: school.tuitionMin, max: school.tuitionMax };
+}
+
+/**
  * 根據排序選項對學校列表進行排序
  */
 export function sortSchools(
@@ -229,18 +247,22 @@ export function sortSchools(
       });
 
     case "tuition_low":
-      // 學費由低到高
+      // 學費由低到高（無學費資料的排最後）
       return sorted.sort((a, b) => {
-        const avgA = (a.tuitionMin + a.tuitionMax) / 2;
-        const avgB = (b.tuitionMin + b.tuitionMax) / 2;
+        const tuitionA = getEffectiveTuition(a);
+        const tuitionB = getEffectiveTuition(b);
+        const avgA = tuitionA.min > 0 ? (tuitionA.min + tuitionA.max) / 2 : Infinity;
+        const avgB = tuitionB.min > 0 ? (tuitionB.min + tuitionB.max) / 2 : Infinity;
         return avgA - avgB;
       });
 
     case "tuition_high":
-      // 學費由高到低
+      // 學費由高到低（無學費資料的排最後）
       return sorted.sort((a, b) => {
-        const avgA = (a.tuitionMin + a.tuitionMax) / 2;
-        const avgB = (b.tuitionMin + b.tuitionMax) / 2;
+        const tuitionA = getEffectiveTuition(a);
+        const tuitionB = getEffectiveTuition(b);
+        const avgA = tuitionA.min > 0 ? (tuitionA.min + tuitionA.max) / 2 : -Infinity;
+        const avgB = tuitionB.min > 0 ? (tuitionB.min + tuitionB.max) / 2 : -Infinity;
         return avgB - avgA;
       });
 

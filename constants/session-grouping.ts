@@ -83,9 +83,13 @@ export const isKindergarten = (school: School): boolean =>
 export const isPrimary = (school: School): boolean =>
   String(school.level ?? "").includes("小學");
 
-/** 默認條件：對幼稚園和小學啟用合併 */
+/** 檢查是否為中學 */
+export const isSecondary = (school: School): boolean =>
+  String(school.level ?? "").includes("中學");
+
+/** 默認條件：對幼稚園、小學、中學啟用合併 */
 export const defaultPredicate: GroupPredicate = (school) =>
-  isKindergarten(school) || isPrimary(school);
+  isKindergarten(school) || isPrimary(school) || isSecondary(school);
 
 /**
  * 合併同校不同班別（通用函數）
@@ -196,7 +200,7 @@ function mergeVariants(variants: School[]): GroupedSchool {
     }
   }
 
-  // 幼稚園顯示標籤，小學不顯示
+  // 只有幼稚園顯示 session 標籤
   const showSessions = isKindergarten(representative);
 
   return {
