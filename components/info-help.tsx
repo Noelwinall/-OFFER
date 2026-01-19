@@ -162,12 +162,12 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,0.7)",
     lineHeight: 12,
   },
-  // Short popover styles
+  // Short popover styles - positioned below icon, extending to the right
   shortPopover: {
     position: "absolute",
     top: 24,
-    right: 0,
-    width: 280,
+    left: 0,
+    width: 260,
     backgroundColor: "#1e293b",
     borderRadius: 12,
     padding: 14,
