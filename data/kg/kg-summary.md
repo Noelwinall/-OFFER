@@ -1,6 +1,6 @@
 # Consolidated Kindergarten Database
 
-Generated: 2026-01-19T14:12:21.340Z
+Generated: 2026-01-19T14:20:47.384Z
 
 ## Overview
 
@@ -38,7 +38,7 @@ Generated: 2026-01-19T14:12:21.340Z
 | project_learn | 684 | 69.6% |
 | play_explore | 621 | 63.2% |
 | language_dev | 228 | 23.2% |
-| montessori | 98 | 10.0% |
+| special_curriculum | 98 | 10.0% |
 
 ## Language Environment
 

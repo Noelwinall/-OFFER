@@ -181,7 +181,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215937000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore"
     ],
     "languageEnv": [
@@ -259,7 +259,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_607290000112"
     ],
     "pedagogyTags": [
-      "montessori"
+      "special_curriculum"
     ],
     "languageEnv": [
       "putonghua",
@@ -376,7 +376,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_323896000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -417,7 +417,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566101000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn"
     ],
     "languageEnv": [
@@ -1123,7 +1123,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_605026000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "holistic"
     ],
     "languageEnv": [
@@ -1196,7 +1196,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_607223000112"
     ],
     "pedagogyTags": [
-      "montessori"
+      "special_curriculum"
     ],
     "languageEnv": [
       "putonghua",
@@ -2086,7 +2086,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563161000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -2124,7 +2124,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563145000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -2202,7 +2202,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_569828000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "holistic"
     ],
@@ -2370,7 +2370,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325619000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "language_dev"
@@ -2650,7 +2650,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_215767000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn"
     ],
@@ -2689,7 +2689,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_548430000611"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "play_explore",
       "holistic"
@@ -2730,7 +2730,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_548430000312"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "play_explore",
       "holistic"
@@ -2769,7 +2769,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_548430000711"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "play_explore",
       "holistic"
@@ -2810,7 +2810,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_548430000412"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "play_explore",
       "holistic"
@@ -2925,7 +2925,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566039000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "holistic",
@@ -3874,7 +3874,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_569712000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "language_dev",
@@ -4128,7 +4128,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_131440000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "holistic"
@@ -4613,7 +4613,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566942000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -4655,7 +4655,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325651000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "holistic"
     ],
     "languageEnv": [
@@ -4695,7 +4695,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_324779000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "holistic"
     ],
     "languageEnv": [
@@ -4735,7 +4735,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_542164000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn",
@@ -4776,7 +4776,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566934000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -4818,7 +4818,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_216194000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -4899,7 +4899,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_325481000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "holistic"
@@ -4941,7 +4941,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566284000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn",
@@ -4985,7 +4985,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_214248000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn",
@@ -6572,7 +6572,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_609285000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -6611,7 +6611,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_611484000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -6650,7 +6650,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_598089000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -6689,7 +6689,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564958000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -6728,7 +6728,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_594725000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -6767,7 +6767,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_602256000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -6975,7 +6975,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565466000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "holistic"
     ],
     "languageEnv": [
@@ -7194,7 +7194,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_571490000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore"
     ],
     "languageEnv": [
@@ -8029,7 +8029,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564001000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn"
     ],
@@ -9284,7 +9284,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_599700000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "holistic"
     ],
@@ -9978,7 +9978,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_538132000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "language_dev"
     ],
     "languageEnv": [
@@ -11162,7 +11162,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_214868000112"
     ],
     "pedagogyTags": [
-      "montessori"
+      "special_curriculum"
     ],
     "languageEnv": [
       "putonghua",
@@ -11236,7 +11236,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_519863000312"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore"
     ],
     "languageEnv": [
@@ -11566,7 +11566,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563170000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -11604,7 +11604,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566535000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -11679,7 +11679,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562939000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -11717,7 +11717,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563064000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -11755,7 +11755,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562955000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -11876,7 +11876,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_595365000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -12598,7 +12598,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_321192000113"
     ],
     "pedagogyTags": [
-      "montessori"
+      "special_curriculum"
     ],
     "languageEnv": [
       "putonghua",
@@ -12759,7 +12759,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_610623000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn"
     ],
@@ -13264,7 +13264,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_550663000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "holistic"
     ],
@@ -13913,7 +13913,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_133779000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn"
@@ -15028,7 +15028,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566900000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn",
@@ -15072,7 +15072,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_618039000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn",
@@ -15118,7 +15118,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_574708000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -15759,7 +15759,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565393000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "project_learn"
@@ -15797,7 +15797,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565415000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn",
@@ -15876,7 +15876,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_605662000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn"
     ],
@@ -15913,7 +15913,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_565407000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "project_learn"
@@ -16650,7 +16650,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_550035000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "language_dev",
@@ -17705,7 +17705,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_581852000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn"
     ],
@@ -17780,7 +17780,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_322822000212"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn"
     ],
@@ -18713,7 +18713,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_604615000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn"
     ],
@@ -19064,7 +19064,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_231690000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore"
     ],
     "languageEnv": [
@@ -19463,7 +19463,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_605735000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "play_explore",
       "project_learn",
@@ -20322,7 +20322,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_564028000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "holistic",
@@ -21895,7 +21895,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563595000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "language_dev"
     ],
@@ -22937,7 +22937,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158704000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic",
       "holistic"
@@ -25737,7 +25737,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563099000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -25775,7 +25775,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563102000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -25815,7 +25815,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_157678000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore"
     ],
     "languageEnv": [
@@ -25851,7 +25851,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563153000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -25889,7 +25889,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562866000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -25927,7 +25927,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562963000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -25965,7 +25965,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563072000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -26041,7 +26041,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563129000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -26079,7 +26079,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563080000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -26158,7 +26158,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_563110000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -26270,7 +26270,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_562947000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn",
       "holistic"
@@ -26352,7 +26352,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_576743000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "project_learn"
@@ -26636,7 +26636,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_517828000312"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn"
     ],
     "languageEnv": [
@@ -26674,7 +26674,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_151696000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn"
     ],
     "languageEnv": [
@@ -28661,7 +28661,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_156698000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "play_explore",
       "play_explore",
@@ -28784,7 +28784,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158429000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "holistic"
     ],
@@ -28825,7 +28825,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_546127000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "holistic"
     ],
@@ -28866,7 +28866,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_575666000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn"
     ],
     "languageEnv": [
@@ -31430,7 +31430,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_151009000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "play_explore",
       "project_learn"
@@ -32715,8 +32715,8 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_598054000112"
     ],
     "pedagogyTags": [
-      "montessori",
-      "montessori",
+      "special_curriculum",
+      "special_curriculum",
       "holistic",
       "holistic"
     ],
@@ -32755,7 +32755,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_619850000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn",
       "holistic"
@@ -33325,7 +33325,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_614106000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "project_learn"
     ],
@@ -34778,7 +34778,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_612561000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore",
       "project_learn"
     ],
@@ -35523,7 +35523,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_510726000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn"
     ],
     "languageEnv": [
@@ -35972,7 +35972,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_600350000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore"
     ],
     "languageEnv": [
@@ -36081,7 +36081,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_549240000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "play_explore"
     ],
     "languageEnv": [
@@ -36377,7 +36377,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_158321000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic",
       "holistic"
@@ -37772,7 +37772,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_566578000113"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "language_dev"
     ],
     "languageEnv": [
@@ -38074,7 +38074,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_583774000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -38113,7 +38113,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_609625000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -38152,7 +38152,7 @@ export const kindergartens: KindergartenEntry[] = [
       "edb_578630000112"
     ],
     "pedagogyTags": [
-      "montessori",
+      "special_curriculum",
       "project_learn",
       "holistic"
     ],
@@ -38698,7 +38698,7 @@ export const kindergartenStats = {
     "project_learn": 684,
     "language_dev": 228,
     "holistic": 773,
-    "montessori": 98
+    "special_curriculum": 98
   },
   "byLanguage": {
     "cantonese": 407,

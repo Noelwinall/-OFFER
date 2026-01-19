@@ -85,7 +85,7 @@ const KGP_FEE_CAP = 50000;
 
 // Pedagogy category labels (Traditional Chinese)
 const PEDAGOGY_LABELS: Record<string, string> = {
-  montessori: "蒙特梭利",
+  special_curriculum: "特色課程",
   play_explore: "遊戲探索",
   project_learn: "專題學習",
   language_dev: "語言發展",
@@ -153,18 +153,18 @@ const ESF_SCHOOLS = [
 ];
 
 // Pedagogy extraction patterns - consolidated into 5 categories
-// 1. montessori (蒙特梭利) - Named methodologies
+// 1. special_curriculum (特色課程) - Named methodologies (Montessori, Reggio, etc.)
 // 2. play_explore (遊戲探索) - Play & exploration based
 // 3. project_learn (專題學習) - Project & thematic learning
 // 4. language_dev (語言發展) - Language development focus
 // 5. holistic (全人發展) - Holistic child development
 const PEDAGOGY_PATTERNS: Array<{ pattern: RegExp; tag: string }> = [
-  // montessori (蒙特梭利) - Named methodologies
-  { pattern: /蒙特梭利|蒙特索利|Montessori/i, tag: "montessori" },
-  { pattern: /瑞吉歐|Reggio/i, tag: "montessori" },
-  { pattern: /高瞻|HighScope|High\s*Scope/i, tag: "montessori" },
-  { pattern: /華德福|Waldorf/i, tag: "montessori" },
-  { pattern: /IB|國際文憑/i, tag: "montessori" },
+  // special_curriculum (特色課程) - Named methodologies
+  { pattern: /蒙特梭利|蒙特索利|Montessori/i, tag: "special_curriculum" },
+  { pattern: /瑞吉歐|Reggio/i, tag: "special_curriculum" },
+  { pattern: /高瞻|HighScope|High\s*Scope/i, tag: "special_curriculum" },
+  { pattern: /華德福|Waldorf/i, tag: "special_curriculum" },
+  { pattern: /IB|國際文憑/i, tag: "special_curriculum" },
   // play_explore (遊戲探索) - Play & exploration
   { pattern: /遊戲中學習|從遊戲中學習|遊戲學習|自由遊戲/i, tag: "play_explore" },
   { pattern: /活動教學|活動學習/i, tag: "play_explore" },
