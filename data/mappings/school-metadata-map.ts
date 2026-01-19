@@ -2,7 +2,7 @@
 // Sources: psp_2025_tc.csv, ssp_2025_2026_tc.csv, through_train schools data
 // Generated: 2026-01-17
 // Total mappings: 742
-// Stats: 561 religions, 438 school nets, 0 special schools, 126 relationships
+// Stats: 561 religions, 438 school nets, 2 special schools, 126 relationships
 //
 // DO NOT EDIT - Run `npx tsx scripts/generate-school-metadata.ts` to regenerate
 
@@ -2624,5 +2624,12 @@ export const schoolMetadataMap: Record<string, SchoolMetadataEntry> = {
   },
   "edb_134333000133": {
     "religion": "基督教"
+  },
+  // Jockey Club Sarah Roe School (Special Education)
+  "edb_250686000223": {
+    "isSpecialSchool": true
+  },
+  "edb_250686000233": {
+    "isSpecialSchool": true
   }
 };
