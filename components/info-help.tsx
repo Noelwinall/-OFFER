@@ -166,18 +166,18 @@ const styles = StyleSheet.create({
   shortPopover: {
     position: "absolute",
     top: 24,
-    left: -120,
+    right: 0,
     width: 280,
-    backgroundColor: "rgba(30, 41, 59, 0.98)",
+    backgroundColor: "#1e293b",
     borderRadius: 12,
     padding: 14,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.4,
     shadowRadius: 12,
     elevation: 8,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "rgba(255,255,255,0.15)",
     zIndex: 1000,
   },
   shortTitle: {
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   shortText: {
     fontSize: 13,
     lineHeight: 20,
-    color: "rgba(255,255,255,0.85)",
+    color: "#e2e8f0",
     fontFamily: "NotoSerifSC-Regular",
   },
   fullLinkContainer: {
