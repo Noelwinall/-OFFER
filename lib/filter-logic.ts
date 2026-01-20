@@ -10,6 +10,25 @@ import {
 } from "@/constants/kg-nature";
 import { feesData202526 } from "@/data/fees-2025-26";
 import { calculateOverallTuition } from "@/types/fees";
+import { kindergartens, type KindergartenEntry } from "@/data/kg/kg-database";
+import { SUBTYPE_TO_CATEGORY, type KGCurriculumCategoryFilter, type KGCurriculumSubtypeFilter } from "@/constants/kg-curriculum";
+
+// Create lookup map for KG curriculum data by school ID (including variant IDs)
+const kgCurriculumMap = new Map<string, KindergartenEntry>();
+for (const kg of kindergartens) {
+  kgCurriculumMap.set(kg.id, kg);
+  // Also map variant IDs to the same entry
+  for (const variantId of kg.variantIds) {
+    kgCurriculumMap.set(variantId, kg);
+  }
+}
+
+/**
+ * Get KG curriculum data for a school by ID
+ */
+function getKGData(schoolId: string): KindergartenEntry | undefined {
+  return kgCurriculumMap.get(schoolId);
+}
 
 /**
  * 檢查學校是否符合進階篩選條件
@@ -92,6 +111,78 @@ export function matchesAdvancedFilters(
   // 18區篩選（多選，任一匹配即可）
   if (filters.district18.length > 0) {
     if (!filters.district18.includes(school.district18)) return false;
+  }
+
+  // KG-specific filters (only apply when stage = 幼稚園)
+  if (filters.stage === "幼稚園") {
+    const kgData = getKGData(school.id);
+
+    // KG Session filter
+    if (filters.kgSession.length > 0) {
+      if (!kgData || !kgData.sessions) return false;
+      const hasMatchingSession = filters.kgSession.some((s) => kgData.sessions.includes(s));
+      if (!hasMatchingSession) return false;
+    }
+
+    // KG Curriculum filter (2-level hierarchy)
+    if (filters.kgCurriculumCategory.length > 0 || filters.kgCurriculumType.length > 0) {
+      if (!kgData || !kgData.curriculumCategory) return false;
+
+      // Build matching logic:
+      // - If only Level-1 is selected: match any record with that category
+      // - If Level-2 is selected: match records with that specific subtype
+      let matchesCurriculum = false;
+
+      for (const category of filters.kgCurriculumCategory) {
+        // Check if any Level-2 subtypes are selected for this category
+        const selectedSubtypes = filters.kgCurriculumType.filter(
+          (t) => SUBTYPE_TO_CATEGORY[t as KGCurriculumSubtypeFilter] === category
+        );
+
+        if (selectedSubtypes.length > 0) {
+          // Level-2 selected: match only specific subtypes
+          if (selectedSubtypes.includes(kgData.curriculumType as KGCurriculumSubtypeFilter)) {
+            matchesCurriculum = true;
+            break;
+          }
+        } else {
+          // Only Level-1 selected: match any record with this category
+          if (kgData.curriculumCategory === category) {
+            matchesCurriculum = true;
+            break;
+          }
+        }
+      }
+
+      // Also check for subtypes selected without their parent category
+      // (in case user directly selects subtypes)
+      for (const subtype of filters.kgCurriculumType) {
+        const parentCategory = SUBTYPE_TO_CATEGORY[subtype as KGCurriculumSubtypeFilter];
+        if (!filters.kgCurriculumCategory.includes(parentCategory)) {
+          // Subtype selected without parent - match directly
+          if (kgData.curriculumType === subtype) {
+            matchesCurriculum = true;
+            break;
+          }
+        }
+      }
+
+      if (!matchesCurriculum) return false;
+    }
+
+    // KG Pedagogy filter (Teaching Features - OR logic)
+    if (filters.kgPedagogy.length > 0) {
+      if (!kgData || !kgData.pedagogyTags || kgData.pedagogyTags.length === 0) return false;
+      const hasMatchingPedagogy = filters.kgPedagogy.some((p) => kgData.pedagogyTags.includes(p));
+      if (!hasMatchingPedagogy) return false;
+    }
+
+    // KG Language Environment filter
+    if (filters.kgLanguageEnv.length > 0) {
+      if (!kgData || !kgData.languageEnv || kgData.languageEnv.length === 0) return false;
+      const hasMatchingLang = filters.kgLanguageEnv.some((l) => kgData.languageEnv.includes(l));
+      if (!hasMatchingLang) return false;
+    }
   }
 
   return true;

@@ -8,6 +8,8 @@ import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage"
 import { isInternational } from "@/lib/international-schools";
 import { isKindergarten } from "@/constants/session-grouping";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
+import { formatKGCurriculumDisplay, KG_CURRICULUM_CATEGORY_LABELS } from "@/constants/kg-curriculum";
+import { kindergartens, type KindergartenEntry } from "@/data/kg/kg-database";
 import type { School, CurriculumV2, SchoolGender, SchoolRelationship, InstructionLanguage } from "@/types/school";
 import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 import { getCHSCData, type CHSCSchoolData } from "@/data/chsc-data";
@@ -173,6 +175,32 @@ function getCurriculumDisplay(school: School): CurriculumV2[] {
   }
   // 其他學校使用 curriculumV2
   return school.curriculumV2 || [];
+}
+
+// KG curriculum lookup map
+const kgCurriculumMap = new Map<string, KindergartenEntry>();
+for (const kg of kindergartens) {
+  kgCurriculumMap.set(kg.id, kg);
+  for (const variantId of kg.variantIds) {
+    kgCurriculumMap.set(variantId, kg);
+  }
+}
+
+/**
+ * Get KG curriculum data for a school by ID
+ */
+function getKGData(schoolId: string): KindergartenEntry | undefined {
+  return kgCurriculumMap.get(schoolId);
+}
+
+/**
+ * Get KG curriculum color based on category
+ */
+function getKGCurriculumColor(category: string | null | undefined): string {
+  if (!category) return "#6B7280";
+  if (category === "local") return "#10B981"; // green - same as HK_LOCAL
+  if (category === "non_local") return "#F59E0B"; // amber - international feel
+  return "#6B7280";
 }
 
 export default function SchoolDetailScreen() {
@@ -440,24 +468,50 @@ export default function SchoolDetailScreen() {
                   value={getLanguageDisplayValue(school)}
                 />
               )}
-              {/* 8. 課程體系 - moved from standalone section, only render if has data */}
-              {getCurriculumDisplay(school).length > 0 && (
-                <View style={infoStyles.row}>
-                  <View style={infoStyles.labelContainer}>
-                    <Text style={infoStyles.label}>課程體系</Text>
-                    <InfoHelp topic="curriculum" />
-                  </View>
-                  <View style={styles.curriculumInlineContainer}>
-                    {getCurriculumDisplay(school).map((curriculum) => (
-                      <View
-                        key={curriculum}
-                        style={[styles.curriculumInlineBadge, { backgroundColor: getCurriculumColor(curriculum) }]}
-                      >
-                        <Text style={styles.curriculumInlineBadgeText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
+              {/* 8. 課程體系 - KG uses 2-level hierarchy, others use curriculumV2 */}
+              {isKindergarten(school) ? (
+                // KG curriculum display with 2-level hierarchy
+                (() => {
+                  const kgData = getKGData(school.id);
+                  const curriculumDisplay = kgData
+                    ? formatKGCurriculumDisplay(kgData.curriculumCategory, kgData.curriculumType)
+                    : null;
+                  return curriculumDisplay ? (
+                    <View style={infoStyles.row}>
+                      <View style={infoStyles.labelContainer}>
+                        <Text style={infoStyles.label}>課程體系</Text>
+                        <InfoHelp topic="curriculum" />
                       </View>
-                    ))}
+                      <View style={styles.curriculumInlineContainer}>
+                        <View
+                          style={[styles.curriculumInlineBadge, { backgroundColor: getKGCurriculumColor(kgData?.curriculumCategory) }]}
+                        >
+                          <Text style={styles.curriculumInlineBadgeText}>{curriculumDisplay}</Text>
+                        </View>
+                      </View>
+                    </View>
+                  ) : null;
+                })()
+              ) : (
+                // Non-KG curriculum display
+                getCurriculumDisplay(school).length > 0 && (
+                  <View style={infoStyles.row}>
+                    <View style={infoStyles.labelContainer}>
+                      <Text style={infoStyles.label}>課程體系</Text>
+                      <InfoHelp topic="curriculum" />
+                    </View>
+                    <View style={styles.curriculumInlineContainer}>
+                      {getCurriculumDisplay(school).map((curriculum) => (
+                        <View
+                          key={curriculum}
+                          style={[styles.curriculumInlineBadge, { backgroundColor: getCurriculumColor(curriculum) }]}
+                        >
+                          <Text style={styles.curriculumInlineBadgeText}>{CURRICULUM_V2_LABELS[curriculum]}</Text>
+                        </View>
+                      ))}
+                    </View>
                   </View>
-                </View>
+                )
               )}
               {/* 9. 學費 - 直資學校顯示原有學費；國際/私校在下方獨立區塊顯示；Gov/Aided不顯示 */}
               {shouldShowTuition(school) && school.category === "直資" && school.tuitionMin > 0 && school.tuitionMax > 0 && (

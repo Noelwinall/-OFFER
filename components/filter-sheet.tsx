@@ -14,6 +14,15 @@ import { useFilter } from "@/lib/filter-context";
 import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18, type Level } from "@/types/school";
 import { NON_KG_CATEGORY_OPTIONS, KG_CATEGORY_OPTIONS } from "@/constants/kg-nature";
 import { InfoHelp } from "@/components/info-help";
+import { TeachingFeaturesHelp } from "@/components/teaching-features-help";
+import {
+  KG_SESSION_OPTIONS,
+  KG_CURRICULUM_CATEGORY_OPTIONS,
+  KG_LOCAL_SUBTYPE_OPTIONS,
+  KG_NON_LOCAL_SUBTYPE_OPTIONS,
+  KG_PEDAGOGY_OPTIONS,
+  KG_LANGUAGE_ENV_OPTIONS,
+} from "@/constants/kg-filters";
 import * as Haptics from "expo-haptics";
 
 interface FilterSheetProps {
@@ -110,8 +119,16 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
     if (state.curriculumV2.length > 0) count++;
     if (state.instructionLanguages.length > 0) count++;
     if (state.gender.length > 0) count++;
+    // KG-specific filters
+    if (state.kgSession.length > 0) count++;
+    if (state.kgCurriculumCategory.length > 0 || state.kgCurriculumType.length > 0) count++;
+    if (state.kgPedagogy.length > 0) count++;
+    if (state.kgLanguageEnv.length > 0) count++;
     return count;
   };
+
+  // Check if we're in KG mode
+  const isKGMode = state.stage === "幼稚園";
 
   return (
     <Modal
@@ -347,80 +364,246 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                 </View>
               </View>
 
-              {/* 4. 課程體系 (Curriculum V2) */}
-              <View style={styles.section}>
-                <View style={styles.sectionTitleRow}>
-                  <Text style={[styles.sectionTitle, styles.sectionTitleInline]}>🎓 課程體系</Text>
-                  <InfoHelp topic="curriculum" />
-                </View>
-                <View style={styles.chipContainer}>
-                  {CURRICULUM_V2_OPTIONS.map((option) => {
-                    const isSelected = state.curriculumV2.includes(option.value);
-                    return (
-                      <TouchableOpacity
-                        key={option.value}
-                        style={[styles.chip, isSelected && styles.chipSelected]}
-                        onPress={() => {
-                          triggerHaptic();
-                          dispatch({ type: "TOGGLE_CURRICULUM_V2", payload: option.value });
-                        }}
-                      >
-                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
-                          {option.label}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  })}
-                </View>
-              </View>
+              {/* KG-specific filters (when stage = 幼稚園) */}
+              {isKGMode && (
+                <>
+                  {/* 3. 時段 (Session) - KG only */}
+                  <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>🕐 時段</Text>
+                    <View style={styles.chipContainer}>
+                      {KG_SESSION_OPTIONS.map((option) => {
+                        const isSelected = state.kgSession.includes(option.value);
+                        return (
+                          <TouchableOpacity
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              dispatch({ type: "TOGGLE_KG_SESSION", payload: option.value });
+                            }}
+                          >
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
 
-              {/* 5. 授課語言 (Instruction Language / Medium of Instruction) */}
-              <View style={styles.section}>
-                <Text style={styles.sectionTitle}>🌐 授課語言</Text>
-                <View style={styles.chipContainer}>
-                  {INSTRUCTION_LANGUAGE_OPTIONS.map((option) => {
-                    const isSelected = state.instructionLanguages.includes(option.value);
-                    return (
-                      <TouchableOpacity
-                        key={option.value}
-                        style={[styles.chip, isSelected && styles.chipSelected]}
-                        onPress={() => {
-                          triggerHaptic();
-                          dispatch({ type: "TOGGLE_INSTRUCTION_LANGUAGE", payload: option.value });
-                        }}
-                      >
-                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
-                          {option.label}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  })}
-                </View>
-              </View>
+                  {/* 4. 課程 (Curriculum - 2-level hierarchy) - KG only */}
+                  <View style={styles.section}>
+                    <View style={styles.sectionTitleRow}>
+                      <Text style={[styles.sectionTitle, styles.sectionTitleInline]}>🎓 課程</Text>
+                      <InfoHelp topic="curriculum" />
+                    </View>
 
-              {/* 6. 男/女校 (School Gender) */}
-              <View style={styles.section}>
-                <Text style={styles.sectionTitle}>👫 男/女校</Text>
-                <View style={styles.chipContainer}>
-                  {GENDER_OPTIONS.map((option) => {
-                    const isSelected = state.gender.includes(option.value);
-                    return (
-                      <TouchableOpacity
-                        key={option.value}
-                        style={[styles.chip, isSelected && styles.chipSelected]}
-                        onPress={() => {
-                          triggerHaptic();
-                          dispatch({ type: "TOGGLE_GENDER", payload: option.value });
-                        }}
-                      >
-                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
-                          {option.label}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  })}
-                </View>
-              </View>
+                    {/* Level 1: Category (local / non_local) */}
+                    <Text style={styles.subsectionTitle}>課程類別</Text>
+                    <View style={styles.chipContainer}>
+                      {KG_CURRICULUM_CATEGORY_OPTIONS.map((option) => {
+                        const isSelected = state.kgCurriculumCategory.includes(option.value);
+                        return (
+                          <TouchableOpacity
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              dispatch({ type: "TOGGLE_KG_CURRICULUM_CATEGORY", payload: option.value });
+                            }}
+                          >
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+
+                    {/* Level 2: Subtypes (shown when parent category is selected) */}
+                    {state.kgCurriculumCategory.includes("local") && (
+                      <View style={{ marginTop: 16 }}>
+                        <Text style={styles.subsectionTitle}>本地課程類型</Text>
+                        <View style={styles.chipContainer}>
+                          {KG_LOCAL_SUBTYPE_OPTIONS.map((option) => {
+                            const isSelected = state.kgCurriculumType.includes(option.value);
+                            return (
+                              <TouchableOpacity
+                                key={option.value}
+                                style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                                onPress={() => {
+                                  triggerHaptic();
+                                  dispatch({ type: "TOGGLE_KG_CURRICULUM_TYPE", payload: option.value });
+                                }}
+                              >
+                                <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                                  {option.label}
+                                </Text>
+                              </TouchableOpacity>
+                            );
+                          })}
+                        </View>
+                      </View>
+                    )}
+
+                    {state.kgCurriculumCategory.includes("non_local") && (
+                      <View style={{ marginTop: 16 }}>
+                        <Text style={styles.subsectionTitle}>非本地課程類型</Text>
+                        <View style={styles.chipContainer}>
+                          {KG_NON_LOCAL_SUBTYPE_OPTIONS.map((option) => {
+                            const isSelected = state.kgCurriculumType.includes(option.value);
+                            return (
+                              <TouchableOpacity
+                                key={option.value}
+                                style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                                onPress={() => {
+                                  triggerHaptic();
+                                  dispatch({ type: "TOGGLE_KG_CURRICULUM_TYPE", payload: option.value });
+                                }}
+                              >
+                                <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                                  {option.label}
+                                </Text>
+                              </TouchableOpacity>
+                            );
+                          })}
+                        </View>
+                      </View>
+                    )}
+                  </View>
+
+                  {/* 5. 教學特色 (Teaching Features - 5 groups) - KG only */}
+                  <View style={styles.section}>
+                    <View style={styles.sectionTitleRow}>
+                      <Text style={[styles.sectionTitle, styles.sectionTitleInline]}>📚 教學特色</Text>
+                      <TeachingFeaturesHelp />
+                    </View>
+                    <View style={styles.chipContainer}>
+                      {KG_PEDAGOGY_OPTIONS.map((option) => {
+                        const isSelected = state.kgPedagogy.includes(option.value);
+                        return (
+                          <TouchableOpacity
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              dispatch({ type: "TOGGLE_KG_PEDAGOGY", payload: option.value });
+                            }}
+                          >
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+
+                  {/* 6. 語言環境 (Teaching Language) - KG only */}
+                  <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>🌐 語言環境</Text>
+                    <View style={styles.chipContainer}>
+                      {KG_LANGUAGE_ENV_OPTIONS.map((option) => {
+                        const isSelected = state.kgLanguageEnv.includes(option.value);
+                        return (
+                          <TouchableOpacity
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              dispatch({ type: "TOGGLE_KG_LANGUAGE_ENV", payload: option.value });
+                            }}
+                          >
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+                </>
+              )}
+
+              {/* Primary/Secondary filters (when stage != 幼稚園) */}
+              {!isKGMode && (
+                <>
+                  {/* 4. 課程體系 (Curriculum V2) */}
+                  <View style={styles.section}>
+                    <View style={styles.sectionTitleRow}>
+                      <Text style={[styles.sectionTitle, styles.sectionTitleInline]}>🎓 課程體系</Text>
+                      <InfoHelp topic="curriculum" />
+                    </View>
+                    <View style={styles.chipContainer}>
+                      {CURRICULUM_V2_OPTIONS.map((option) => {
+                        const isSelected = state.curriculumV2.includes(option.value);
+                        return (
+                          <TouchableOpacity
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              dispatch({ type: "TOGGLE_CURRICULUM_V2", payload: option.value });
+                            }}
+                          >
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+
+                  {/* 5. 授課語言 (Instruction Language / Medium of Instruction) */}
+                  <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>🌐 授課語言</Text>
+                    <View style={styles.chipContainer}>
+                      {INSTRUCTION_LANGUAGE_OPTIONS.map((option) => {
+                        const isSelected = state.instructionLanguages.includes(option.value);
+                        return (
+                          <TouchableOpacity
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              dispatch({ type: "TOGGLE_INSTRUCTION_LANGUAGE", payload: option.value });
+                            }}
+                          >
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+
+                  {/* 6. 男/女校 (School Gender) */}
+                  <View style={styles.section}>
+                    <Text style={styles.sectionTitle}>👫 男/女校</Text>
+                    <View style={styles.chipContainer}>
+                      {GENDER_OPTIONS.map((option) => {
+                        const isSelected = state.gender.includes(option.value);
+                        return (
+                          <TouchableOpacity
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            onPress={() => {
+                              triggerHaptic();
+                              dispatch({ type: "TOGGLE_GENDER", payload: option.value });
+                            }}
+                          >
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
+                            </Text>
+                          </TouchableOpacity>
+                        );
+                      })}
+                    </View>
+                  </View>
+                </>
+              )}
 
               {/* 底部間距 */}
               <View style={{ height: 140 }} />

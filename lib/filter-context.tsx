@@ -2,6 +2,7 @@ import React, { createContext, useReducer, ReactNode } from "react";
 
 import type { Curriculum, CurriculumV2, InstructionLanguage, Language, SchoolCategory, District, District18, Level, SchoolGender } from "@/types/school";
 import type { ExtendedCategory } from "@/constants/kg-nature";
+import type { KGSession, KGCurriculumCategoryFilter, KGCurriculumSubtypeFilter, KGPedagogyTag, KGLanguageEnv } from "@/constants/kg-filters";
 
 // 排序選項類型
 export type SortOption = "relevance" | "tuition_low" | "tuition_high" | "name_asc" | "name_desc";
@@ -17,6 +18,12 @@ export interface FilterState {
   gender: SchoolGender[];  // 學校性別篩選（Primary/Secondary only, excludes MIXED）
   language: Language | null;
   sortBy: SortOption;
+  // KG-specific filters
+  kgSession: KGSession[];  // 時段篩選：AM/PM/WD
+  kgCurriculumCategory: KGCurriculumCategoryFilter[];  // 課程 Level 1：local/non_local
+  kgCurriculumType: KGCurriculumSubtypeFilter[];  // 課程 Level 2：kgp/non_kgp/ib/montessori/british/other
+  kgPedagogy: KGPedagogyTag[];  // 教學特色（5 groups）
+  kgLanguageEnv: KGLanguageEnv[];  // 語言環境
 }
 
 export type FilterAction =
@@ -33,7 +40,14 @@ export type FilterAction =
   | { type: "TOGGLE_DISTRICT18"; payload: District18 }
   | { type: "CLEAR_DISTRICT18" }
   | { type: "SET_SORT"; payload: SortOption }
-  | { type: "RESET_FILTERS" };
+  | { type: "RESET_FILTERS" }
+  // KG-specific actions
+  | { type: "TOGGLE_KG_SESSION"; payload: KGSession }
+  | { type: "TOGGLE_KG_CURRICULUM_CATEGORY"; payload: KGCurriculumCategoryFilter }
+  | { type: "TOGGLE_KG_CURRICULUM_TYPE"; payload: KGCurriculumSubtypeFilter }
+  | { type: "TOGGLE_KG_PEDAGOGY"; payload: KGPedagogyTag }
+  | { type: "TOGGLE_KG_LANGUAGE_ENV"; payload: KGLanguageEnv }
+  | { type: "CLEAR_KG_FILTERS" };
 
 const initialState: FilterState = {
   stage: null,
@@ -46,6 +60,12 @@ const initialState: FilterState = {
   gender: [],
   language: null,
   sortBy: "relevance",
+  // KG-specific filters
+  kgSession: [],
+  kgCurriculumCategory: [],
+  kgCurriculumType: [],
+  kgPedagogy: [],
+  kgLanguageEnv: [],
 };
 
 function filterReducer(state: FilterState, action: FilterAction): FilterState {
@@ -53,22 +73,58 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
     case "SET_STAGE": {
       // Toggle stage: click same stage again to deselect
       const newStage = state.stage === action.payload ? null : action.payload;
-      return {
-        ...state,
-        stage: newStage,
-        // Clear KG-specific categories when NOT in 幼稚園 (including when toggling off)
-        category: newStage !== "幼稚園"
-          ? state.category.filter((c) => c !== "私立幼稚園" && c !== "非牟利幼稚園")
-          : state.category,
-      };
+      const wasKG = state.stage === "幼稚園";
+      const isKG = newStage === "幼稚園";
+
+      // Clear filters based on stage transition
+      if (isKG && !wasKG) {
+        // Switching TO KG: clear non-KG filters
+        return {
+          ...state,
+          stage: newStage,
+          // Clear non-KG specific filters
+          curriculumV2: [],
+          instructionLanguages: [],
+          gender: [],
+          // Clear non-KG categories but keep 國際
+          category: state.category.filter((c) => c === "國際"),
+        };
+      } else if (!isKG && wasKG) {
+        // Switching FROM KG: clear KG-specific filters
+        return {
+          ...state,
+          stage: newStage,
+          // Clear KG-specific categories
+          category: state.category.filter((c) => c !== "私立幼稚園" && c !== "非牟利幼稚園"),
+          // Clear KG-specific filters
+          kgSession: [],
+          kgCurriculumCategory: [],
+          kgCurriculumType: [],
+          kgPedagogy: [],
+          kgLanguageEnv: [],
+        };
+      } else if (!isKG) {
+        // Not in KG mode: ensure KG categories are cleared
+        return {
+          ...state,
+          stage: newStage,
+          category: state.category.filter((c) => c !== "私立幼稚園" && c !== "非牟利幼稚園"),
+        };
+      }
+      return { ...state, stage: newStage };
     }
 
     case "CLEAR_STAGE":
       return {
         ...state,
         stage: null,
-        // Clear KG-specific categories when clearing stage
+        // Clear KG-specific categories and filters when clearing stage
         category: state.category.filter((c) => c !== "私立幼稚園" && c !== "非牟利幼稚園"),
+        kgSession: [],
+        kgCurriculumCategory: [],
+        kgCurriculumType: [],
+        kgPedagogy: [],
+        kgLanguageEnv: [],
       };
 
     case "TOGGLE_CURRICULUM": {
@@ -138,6 +194,62 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
     case "RESET_FILTERS":
       return initialState;
 
+    // KG-specific filter actions
+    case "TOGGLE_KG_SESSION": {
+      const updated = state.kgSession.includes(action.payload)
+        ? state.kgSession.filter((s) => s !== action.payload)
+        : [...state.kgSession, action.payload];
+      return { ...state, kgSession: updated };
+    }
+
+    case "TOGGLE_KG_CURRICULUM_CATEGORY": {
+      const updated = state.kgCurriculumCategory.includes(action.payload)
+        ? state.kgCurriculumCategory.filter((c) => c !== action.payload)
+        : [...state.kgCurriculumCategory, action.payload];
+      // When deselecting a category, also clear its subtypes
+      let newTypes = state.kgCurriculumType;
+      if (!updated.includes(action.payload)) {
+        // Removing category - clear its subtypes
+        if (action.payload === "local") {
+          newTypes = newTypes.filter((t) => t !== "kgp" && t !== "non_kgp");
+        } else if (action.payload === "non_local") {
+          newTypes = newTypes.filter((t) => t !== "ib" && t !== "montessori" && t !== "british" && t !== "other");
+        }
+      }
+      return { ...state, kgCurriculumCategory: updated, kgCurriculumType: newTypes };
+    }
+
+    case "TOGGLE_KG_CURRICULUM_TYPE": {
+      const updated = state.kgCurriculumType.includes(action.payload)
+        ? state.kgCurriculumType.filter((t) => t !== action.payload)
+        : [...state.kgCurriculumType, action.payload];
+      return { ...state, kgCurriculumType: updated };
+    }
+
+    case "TOGGLE_KG_PEDAGOGY": {
+      const updated = state.kgPedagogy.includes(action.payload)
+        ? state.kgPedagogy.filter((p) => p !== action.payload)
+        : [...state.kgPedagogy, action.payload];
+      return { ...state, kgPedagogy: updated };
+    }
+
+    case "TOGGLE_KG_LANGUAGE_ENV": {
+      const updated = state.kgLanguageEnv.includes(action.payload)
+        ? state.kgLanguageEnv.filter((l) => l !== action.payload)
+        : [...state.kgLanguageEnv, action.payload];
+      return { ...state, kgLanguageEnv: updated };
+    }
+
+    case "CLEAR_KG_FILTERS":
+      return {
+        ...state,
+        kgSession: [],
+        kgCurriculumCategory: [],
+        kgCurriculumType: [],
+        kgPedagogy: [],
+        kgLanguageEnv: [],
+      };
+
     default:
       return state;
   }
@@ -183,7 +295,13 @@ export function hasActiveFilters(state: FilterState): boolean {
     state.curriculumV2.length > 0 ||
     state.instructionLanguages.length > 0 ||
     state.gender.length > 0 ||
-    state.language !== null
+    state.language !== null ||
+    // KG-specific filters
+    state.kgSession.length > 0 ||
+    state.kgCurriculumCategory.length > 0 ||
+    state.kgCurriculumType.length > 0 ||
+    state.kgPedagogy.length > 0 ||
+    state.kgLanguageEnv.length > 0
   );
 }
 
@@ -229,6 +347,33 @@ export function getFilterLabels(state: FilterState): string[] {
 
   if (state.language) {
     labels.push(`語言: ${state.language}`);
+  }
+
+  // KG-specific filter labels
+  if (state.kgSession.length > 0) {
+    const { KG_SESSION_LABELS } = require("@/constants/kg-filters");
+    const sessionLabels = state.kgSession.map((s) => KG_SESSION_LABELS[s] || s);
+    labels.push(`時段: ${sessionLabels.join(", ")}`);
+  }
+
+  if (state.kgCurriculumCategory.length > 0 || state.kgCurriculumType.length > 0) {
+    const { KG_CURRICULUM_CATEGORY_LABELS, KG_CURRICULUM_SUBTYPE_LABELS } = require("@/constants/kg-filters");
+    const parts: string[] = [];
+    state.kgCurriculumCategory.forEach((c) => parts.push(KG_CURRICULUM_CATEGORY_LABELS[c] || c));
+    state.kgCurriculumType.forEach((t) => parts.push(KG_CURRICULUM_SUBTYPE_LABELS[t] || t));
+    labels.push(`課程: ${parts.join(", ")}`);
+  }
+
+  if (state.kgPedagogy.length > 0) {
+    const { KG_PEDAGOGY_LABELS } = require("@/constants/kg-filters");
+    const pedagogyLabels = state.kgPedagogy.map((p) => KG_PEDAGOGY_LABELS[p] || p);
+    labels.push(`教學特色: ${pedagogyLabels.join(", ")}`);
+  }
+
+  if (state.kgLanguageEnv.length > 0) {
+    const { KG_LANGUAGE_ENV_LABELS } = require("@/constants/kg-filters");
+    const langEnvLabels = state.kgLanguageEnv.map((l) => KG_LANGUAGE_ENV_LABELS[l] || l);
+    labels.push(`語言環境: ${langEnvLabels.join(", ")}`);
   }
 
   return labels;
