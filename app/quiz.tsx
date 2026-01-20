@@ -319,32 +319,26 @@ const KG_QUESTIONS: Record<KGQuestionId, {
     title: "地區偏好",
     question: "我們喜歡您的鬆弛感，那至少選個地區吧！",
     subtitle: "(您孩子大概在哪上學應該知道吧？)",
-    multiSelect: true,
-    options: [
-      // 港島
-      { label: "中西區", value: "中西區" },
-      { label: "東區", value: "東區" },
-      { label: "南區", value: "南區" },
-      { label: "灣仔區", value: "灣仔區" },
-      // 九龍
-      { label: "九龍城區", value: "九龍城區" },
-      { label: "觀塘區", value: "觀塘區" },
-      { label: "深水埗區", value: "深水埗區" },
-      { label: "黃大仙區", value: "黃大仙區" },
-      { label: "油尖旺區", value: "油尖旺區" },
-      // 新界
-      { label: "離島區", value: "離島區" },
-      { label: "葵青區", value: "葵青區" },
-      { label: "北區", value: "北區" },
-      { label: "西貢區", value: "西貢區" },
-      { label: "沙田區", value: "沙田區" },
-      { label: "大埔區", value: "大埔區" },
-      { label: "荃灣區", value: "荃灣區" },
-      { label: "屯門區", value: "屯門區" },
-      { label: "元朗區", value: "元朗區" },
-    ],
+    multiSelect: false,
+    options: [], // Districts rendered separately with grouping
   },
 };
+
+// District options grouped by region
+const DISTRICT_GROUPS = [
+  {
+    region: "港島",
+    districts: ["中西區", "東區", "南區", "灣仔區"] as District18[],
+  },
+  {
+    region: "九龍",
+    districts: ["九龍城區", "觀塘區", "深水埗區", "黃大仙區", "油尖旺區"] as District18[],
+  },
+  {
+    region: "新界",
+    districts: ["離島區", "葵青區", "北區", "西貢區", "沙田區", "大埔區", "荃灣區", "屯門區", "元朗區"] as District18[],
+  },
+];
 
 export default function QuizScreen() {
   const router = useRouter();
@@ -528,19 +522,6 @@ export default function QuizScreen() {
     setState({ ...state, kgPedagogy: newPedagogy });
   };
 
-  // Handle multi-select toggle for district
-  const handleDistrictToggle = (value: District18) => {
-    if (Platform.OS !== "web") {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    }
-
-    const newDistricts = state.kgDistricts.includes(value)
-      ? state.kgDistricts.filter((d) => d !== value)
-      : [...state.kgDistricts, value];
-
-    setState({ ...state, kgDistricts: newDistricts });
-  };
-
   // Complete KG flow and apply filters
   const completeKGFlow = (finalState: QAState) => {
     // Calculate fallback if needed for low/zero results
@@ -719,23 +700,68 @@ export default function QuizScreen() {
     </View>
   );
 
+  // Handle district selection (single-select, completes flow)
+  const handleDistrictSelect = (district: District18) => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+
+    const newState = { ...state, kgDistricts: [district] };
+    completeKGFlow(newState);
+  };
+
+  // Render district question with grouped UI
+  const renderDistrictQuestion = () => {
+    const question = KG_QUESTIONS.district;
+
+    return (
+      <View style={styles.questionContainer}>
+        <Text style={styles.questionTitle}>{question.title}</Text>
+        <Text style={styles.questionSubtitle}>{question.question}</Text>
+        {question.subtitle && (
+          <Text style={styles.questionHint}>{question.subtitle}</Text>
+        )}
+
+        {DISTRICT_GROUPS.map((group) => (
+          <View key={group.region} style={styles.districtGroup}>
+            <Text style={styles.districtGroupLabel}>{group.region}</Text>
+            <View style={styles.districtGrid}>
+              {group.districts.map((district) => (
+                <TouchableOpacity
+                  key={district}
+                  onPress={() => handleDistrictSelect(district)}
+                  style={styles.districtButton}
+                  activeOpacity={0.7}
+                >
+                  <Text style={styles.districtButtonText}>{district.replace("區", "")}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
+        ))}
+
+        {/* Show current result count hint */}
+        <View style={styles.resultHint}>
+          <Text style={styles.resultHintText}>
+            目前符合條件：{currentResultCount} 所學校
+          </Text>
+        </View>
+      </View>
+    );
+  };
+
   // Render KG question
   const renderKGQuestion = () => {
+    // Special rendering for district question
+    if (state.kgQuestionId === "district") {
+      return renderDistrictQuestion();
+    }
+
     const question = KG_QUESTIONS[state.kgQuestionId];
     const isMultiSelect = question.multiSelect;
 
-    // Get current selection for multi-select
-    const getMultiSelectValues = (): string[] => {
-      if (state.kgQuestionId === "pedagogy") {
-        return state.kgPedagogy;
-      }
-      if (state.kgQuestionId === "district") {
-        return state.kgDistricts;
-      }
-      return [];
-    };
-
-    const multiSelectValues = getMultiSelectValues();
+    // Get current selection for multi-select (pedagogy only now)
+    const multiSelectValues = state.kgQuestionId === "pedagogy" ? state.kgPedagogy : [];
 
     return (
       <View style={styles.questionContainer}>
@@ -747,20 +773,14 @@ export default function QuizScreen() {
 
         <View style={styles.optionsContainer}>
           {isMultiSelect ? (
-            // Multi-select for pedagogy and district
+            // Multi-select for pedagogy
             <>
               {question.options.map((option) => {
-                const isSelected = multiSelectValues.includes(option.value);
+                const isSelected = multiSelectValues.includes(option.value as KGPedagogyTag);
                 return (
                   <TouchableOpacity
                     key={option.value}
-                    onPress={() => {
-                      if (state.kgQuestionId === "pedagogy") {
-                        handlePedagogyToggle(option.value as KGPedagogyTag);
-                      } else if (state.kgQuestionId === "district") {
-                        handleDistrictToggle(option.value as District18);
-                      }
-                    }}
+                    onPress={() => handlePedagogyToggle(option.value as KGPedagogyTag)}
                     style={[
                       styles.optionButton,
                       isSelected && styles.optionButtonSelected,
@@ -1058,6 +1078,36 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     color: "#FFFFFF",
     textAlign: "center",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  // District selection styles
+  districtGroup: {
+    marginTop: 20,
+  },
+  districtGroupLabel: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.5)",
+    fontFamily: "NotoSerifSC-Regular",
+    marginBottom: 10,
+    letterSpacing: 1,
+  },
+  districtGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 10,
+  },
+  districtButton: {
+    backgroundColor: "rgba(255,255,255,0.08)",
+    paddingVertical: 12,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.15)",
+  },
+  districtButtonText: {
+    fontSize: 15,
+    fontWeight: "500",
+    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Regular",
   },
 });
