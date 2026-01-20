@@ -144,6 +144,8 @@ export default function SearchScreen() {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
     filterContext.dispatch({ type: "SET_STAGE", payload: stage });
+    // Open filter sheet after setting stage
+    setShowFilterSheet(true);
   };
 
   return (
@@ -210,27 +212,6 @@ export default function SearchScreen() {
           </View>
         </View>
 
-        {/* 階段快速篩選 */}
-        <View style={styles.stageFilterContainer}>
-          <Text style={styles.stageFilterLabel}>階段</Text>
-          <View style={styles.stageFilterChips}>
-            {STAGE_OPTIONS.map((option) => {
-              const isSelected = filters.stage === option.value;
-              return (
-                <TouchableOpacity
-                  key={option.value}
-                  style={[styles.stageChip, isSelected && styles.stageChipSelected]}
-                  onPress={() => handleStageSelect(option.value)}
-                >
-                  <Text style={[styles.stageChipText, isSelected && styles.stageChipTextSelected]}>
-                    {option.label}
-                  </Text>
-                </TouchableOpacity>
-              );
-            })}
-          </View>
-        </View>
-
         {/* 活躍篩選標籤 */}
         <ActiveFilterTags />
 
@@ -275,8 +256,21 @@ export default function SearchScreen() {
             <Text style={styles.welcomeIcon}>🔍</Text>
             <Text style={styles.welcomeTitle}>開始搜尋學校</Text>
             <Text style={styles.welcomeText}>
-              輸入學校名稱，或使用上方篩選條件{"\n"}找到適合您的學校
+              輸入學校名稱，或先選取您想了解的學段，{"\n"}找到適合您的學校
             </Text>
+            {/* 學段選擇按鈕 - 置中醒目 */}
+            <View style={styles.stageButtonsContainer}>
+              {STAGE_OPTIONS.map((option) => (
+                <TouchableOpacity
+                  key={option.value}
+                  style={styles.stageButton}
+                  onPress={() => handleStageSelect(option.value)}
+                  activeOpacity={0.7}
+                >
+                  <Text style={styles.stageButtonText}>{option.label}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
           </View>
         )}
 
@@ -378,43 +372,6 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1,
     borderLeftColor: "rgba(255,255,255,0.2)",
   },
-  stageFilterContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 24,
-    paddingVertical: 8,
-    gap: 12,
-  },
-  stageFilterLabel: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  stageFilterChips: {
-    flexDirection: "row",
-    gap: 8,
-  },
-  stageChip: {
-    paddingHorizontal: 14,
-    paddingVertical: 8,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.15)",
-  },
-  stageChipSelected: {
-    backgroundColor: "rgba(0, 217, 255, 0.2)",
-    borderColor: "#00D9FF",
-  },
-  stageChipText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.7)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  stageChipTextSelected: {
-    color: "#00D9FF",
-    fontWeight: "600",
-  },
   resultStats: {
     flexDirection: "row",
     alignItems: "center",
@@ -485,5 +442,26 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
     lineHeight: 22,
+  },
+  stageButtonsContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 24,
+    gap: 12,
+  },
+  stageButton: {
+    paddingHorizontal: 24,
+    paddingVertical: 14,
+    borderRadius: 20,
+    backgroundColor: "rgba(0, 217, 255, 0.15)",
+    borderWidth: 1.5,
+    borderColor: "rgba(0, 217, 255, 0.4)",
+  },
+  stageButtonText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#00D9FF",
+    fontFamily: "NotoSerifSC-Bold",
   },
 });
