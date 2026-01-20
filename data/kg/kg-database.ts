@@ -1,12 +1,18 @@
 // Consolidated Kindergarten Database
-// Generated: 2026-01-19
+// Generated: 2026-01-20
 // Total: 983 unique kindergartens
 // Sources: schools_raw.ts, EDB KGP Profile 2025
 //
 // DO NOT EDIT MANUALLY - Run "npx tsx scripts/generate-kg-consolidated.ts" to regenerate
 
 export type KGNature = "international" | "non_profit" | "private";
-export type KGCurriculum = "local" | "non_local" | "ib" | "montessori_intl" | "unknown";
+
+// Two-level curriculum structure
+export type KGCurriculumCategory = "local" | "non_local" | "unknown";
+export type KGLocalCurriculumType = "kgp" | "non_kgp";
+export type KGNonLocalCurriculumType = "ib" | "montessori" | "british" | "other";
+export type KGCurriculumType = KGLocalCurriculumType | KGNonLocalCurriculumType | null;
+
 export type KGSession = "AM" | "PM" | "WD";
 
 export interface KindergartenEntry {
@@ -19,7 +25,8 @@ export interface KindergartenEntry {
   district18: string;
   address: string;
   nature: KGNature;
-  curriculum: KGCurriculum;
+  curriculumCategory: KGCurriculumCategory;
+  curriculumType: KGCurriculumType;
   joinedKGP: boolean;
   sessions: KGSession[];
   variantIds: string[];
@@ -52,7 +59,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔愛群道36號地下 三樓、四樓及五樓活動室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -97,7 +105,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅尼地城卑路乍街４６Ａ號隆基大廈１樓及１樓平台",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -135,7 +144,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角孔雀路明園大廈２６－４８號地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -170,7 +180,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港大潭水塘道八十八號陽明山莊十八座地下(幼兒園專用部份除外)",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -208,7 +219,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌基利路１號鰂魚涌社區綜合大樓１樓Ａ",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -248,7 +260,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港天后廟道62號",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -286,7 +299,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港銅鑼灣禮頓道６６號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -322,7 +336,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港薄扶林華貴邨華貴社區中心４樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -363,7 +378,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港禮頓道６６號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -404,7 +420,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港太古城太古灣道星輝台平台Ｐ１０１２－Ｐ１０１６",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -444,7 +461,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港渣甸山春暉道9號春暉中心1樓連天台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -477,7 +495,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港跑馬地冬青道９號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -516,7 +535,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角炮台山道２３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -558,7 +578,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角長康街11號地下部分、一樓及二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -596,7 +617,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角英皇道１６５號公主大廈一樓１至１１號室",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -633,7 +655,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣翡翠道３０號１樓及４樓天台（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -675,7 +698,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣小西灣邨瑞富樓地下1-10號",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -712,7 +736,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港上環德輔道西３８號２字樓Ａ室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -750,7 +775,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔司徒拔道41B號地下部分及1樓部分",
     "nature": "international",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -789,7 +815,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港薄扶林薄扶林道１６２號",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -822,7 +849,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港跑馬地成和道８１號",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -855,7 +883,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港銅鑼灣福蔭道７號銅鑼灣社區中心地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -890,7 +919,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣道３３８號柴灣市政大廈３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -926,7 +956,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔謝斐道158—172號及菲林明道20號東基大廈地下至1樓A—C舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -964,7 +995,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港香港仔田灣邨田健樓地下１－１０室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1004,7 +1036,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港仔漁暉道１８號港暉中心高層地下１－２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -1042,7 +1075,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角寶馬山道４５號賽西湖商場地下低層６－１０號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1077,7 +1111,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港半山堅道５號寶林閣地下Ｂ號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1112,7 +1147,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港干諾道西185號至185號B德輔道西351至351號C及屈地街3-7號光前大廈地下8號舖及1樓全層(包括附設於1樓的部份平台)",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1150,7 +1186,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港天后廟道16號龍景花園地下低層C舖及地下高層B舖",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1185,7 +1222,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港天后廟道151-173號百福花園地下商業單位",
     "nature": "international",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1223,7 +1261,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣寶文街峻峰花園第６層平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -1259,7 +1298,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣環翠邨喜翠樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -1296,7 +1336,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角建華街３０號地下至２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1338,7 +1379,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌基利路柏蕙苑地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1373,7 +1415,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角寶馬山校園徑１號",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1408,7 +1451,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角雲景道４８號地下－２樓及３－４樓平台（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1447,7 +1491,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅尼地城卑路乍街97號地下G01號舖及1樓101號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1486,7 +1531,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角書局街２８號國賓大厦１字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1529,7 +1575,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲新市街３８號地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1573,7 +1620,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌康山道1號康怡廣場(北)1樓平台幼稚園(1號課室、2號課室及2號課室內的儲物室除外)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1617,7 +1665,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港高街２號西營盤社區綜合大樓３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -1654,7 +1703,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣興華一邨美華樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -1690,7 +1740,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣興民邨社區中心第3層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1732,7 +1783,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲怡南路海怡半島第４期２９座高層地面",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -1767,7 +1819,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲利東邨東興樓地下１０２－１１２室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -1802,7 +1855,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港香港仔南朗山道36號及加拿大國際學校第二期",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1837,7 +1891,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港黃竹坑香葉道11號THE SOUTHSIDE地下G21—24號舖",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -1872,7 +1927,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港小西灣小西灣道１８號富景花園地下部分及１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1912,7 +1968,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港中環堅道99號豐樂閣一樓前座",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1952,7 +2009,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港中環羅便臣道",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -1989,7 +2047,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港西灣河街１７５－１８１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2036,7 +2095,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港西營盤高街９７號Ａ１字樓禮堂及高街９７號Ｂ地下第二層至４字樓５字樓及６字樓及地下第一層遊戲場",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2077,7 +2137,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角健康中街６號健康邨平台２層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -2115,7 +2176,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港華富邨華生樓123-127及223-229室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -2153,7 +2215,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港天后永興街10-12號田華閣3樓B室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM"
@@ -2189,7 +2252,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌康怡花園康安街１８號２樓部份（包括幼兒中心共用範圍）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -2232,7 +2296,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣泰民街14號康翠臺第7座地下低層部分及平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -2274,7 +2339,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港北角天后廟道4號景香樓1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -2309,7 +2375,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港般咸道86號A來恩樓地下至四樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2357,7 +2424,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣翠灣邨翠壽樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2401,7 +2469,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港小西灣道23號富怡花園幼稚園大樓1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2442,7 +2511,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港小西灣道23號富怡花園幼稚園大樓地下104、105室(包括幼兒中心共用範圍)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2481,7 +2551,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲利東邨東茂樓地下１１３－１２３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2521,7 +2592,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣興華（一）邨卓華樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2560,7 +2632,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港英皇道２７５號３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2598,7 +2671,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣杏花邨盛泰道１００號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2639,7 +2713,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌康盛街16號康怡花園",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -2680,7 +2755,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港赤柱馬坑邨第三期",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -2719,7 +2795,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲海怡半島海怡路17-23A號第3期二層平台幼稚園校舍",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -2760,7 +2837,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港筲箕灣道１５５號譽‧東２樓６號舖",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -2799,7 +2877,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港上環普仁街17號東輝花園1樓1室及閣樓",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -2840,7 +2919,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港蒲飛路27號堅尼地城明愛服務中心A座2樓，B座1樓部份，M1樓部份及2樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -2877,7 +2957,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港薄扶林道５４號地下至２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -2916,7 +2997,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣小西灣道９號富欣花園停車場地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -2957,7 +3039,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角七姊妹道10-12號雅利閣地下及1樓 A及B室",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3000,7 +3083,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角七姊妹道５－１３號昌輝閣地下１號舖及１樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3043,7 +3127,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港七姊妹道２－８號二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3084,7 +3169,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣海寧街３號１樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3121,7 +3207,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣西灣河街９６號１樓及２樓Ａ、Ｂ、Ｄ室",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3158,7 +3245,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔愛群道４０號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3196,7 +3284,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲鴨脷洲徑３號深灣軒地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3239,7 +3328,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港杏花邨盛泰道１００號幼稚園Ｂ（幼兒中心專用範圍除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3282,7 +3372,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅尼地城海旁２６號龍翔花園地下Ａ舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -3320,7 +3411,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港西營盤高街９號地下上層（南）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -3360,7 +3452,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲邨利添樓地下21-40號室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3403,7 +3496,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港大坑勵德邨道2號勵德坊8座地下及低層地下2號舖",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3436,7 +3530,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣巴色道４號筲箕灣崇真堂２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -3474,7 +3569,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣南安街一零三號地下及一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3518,7 +3614,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣愛東邨愛旭樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3560,7 +3657,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港西環日富里7—13號富基大廈1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3599,7 +3697,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌太古城道８號觀海台東海閣２樓Ｐ９０１號舖及太榮路２號南海閣平台（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3639,7 +3738,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港銅鑼灣禮頓道140A號地下部份 3字樓 4字樓及6字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -3672,7 +3772,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港禮頓道１０１８地段地下至２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3709,7 +3810,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港己連拿利(鐵崗)聖保羅堂伍庭芳堂及活動室及約翰馬利樓地下至三樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3747,7 +3849,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣盛泰路100號杏花邨一座側幼稚園A(包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3787,7 +3890,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港赤柱東頭灣道1號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3826,7 +3930,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港赤柱馬坑邨健馬樓地下１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -3865,7 +3970,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔灣仔道３號３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -3908,7 +4014,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港銅鑼灣東院道7號 地下有蓋遊戲場 101-103室 201-203室 301-303室及4樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3950,7 +4057,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣阿公岩道２５號地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -3987,7 +4095,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港般咸道光景台3-6號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4030,7 +4139,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港荷李活道232-234號及新街29-31號地下、1樓及4樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4075,7 +4185,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港柏道３３號地下部份車庫及一樓全層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4115,7 +4226,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港般咸道71號及薄扶林道62號小學座(2樓 3樓303-305室及教員室除外)及教堂座地下地庫1樓及2樓及地庫3樓活動室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4159,7 +4271,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲利東邨第２期東昇樓地下及１樓３１７至３２４及４１７至４２４號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4201,7 +4314,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港奇力灣華貴邨第２期華賢樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4241,7 +4355,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港西環卑路乍街８號西寶城商場平台２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -4279,7 +4394,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔堅尼地道１００號３樓至６樓部份",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4324,7 +4440,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港銅鑼灣伊榮街７－１７號欣榮商業大廈地下３及８－１０號舖及１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -4361,7 +4478,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角清華街３０號（幼兒中心專用範圍除外）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4404,7 +4522,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港皇后大道西323號安達中心1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4442,7 +4561,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港西環卑路乍街56號嘉明大廈地下入口及1至3樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4479,7 +4599,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣道200號4樓及5樓部份範圍(包括521至525室)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4519,7 +4640,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港石排灣邨碧輝樓地下３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4558,7 +4680,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港跑馬地樂活道２號Ａ聖瑪加利大堂區中心３樓及４樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -4600,7 +4723,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角福蔭道1、3 ＆ 5 號海峰園高峰閣第1座1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4642,7 +4766,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港銅鑼灣興發街32-36號三樓及天台",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4682,7 +4807,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港銅鑼灣興發街32-36號地下及二樓",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4722,7 +4848,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港卑路乍街８號西寶城３樓（幼稚園）（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4765,7 +4892,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角福蔭道1，3＆5號海峰園高峰閣第1座2樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4805,7 +4933,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲海怡半島第２期平台（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4849,7 +4978,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌康怡花園康愉街１４號地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4886,7 +5016,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌康山康安街２－８號康怡花園Ｒ座地下及地下下層（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4928,7 +5059,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港中環堅道１２９－１３３號地下及１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -4972,7 +5104,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅道１２９－１３３號地庫１－３層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5016,7 +5149,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港士美菲路71-77號嘉輝花園低層地下入口及地下1號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5051,7 +5185,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港西營盤醫院道佐治五世紀念公園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5084,7 +5219,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角丹拿道５３號港運城２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5120,7 +5256,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣愛東邨愛平樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5160,7 +5297,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港上環文咸東街35-43號文華大廈3樓(課室3及遊戲場除外)",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5197,7 +5335,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔謝斐道３９１－４０７號新時代中心地下Ｂ舖及１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5233,7 +5372,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港中環皇后大道中９９號中環中心地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5270,7 +5410,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港銅鑼灣禮頓里６號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5310,7 +5451,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港北角渣華道５２－６０號胡曰皆大廈２樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5354,7 +5496,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港皇后大道西513-519號尼斯花園地下A舖及一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5397,7 +5540,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港干諾道西165—166號偉景閣地下C舖及一樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5434,7 +5578,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港西灣河西灣河街１２９號利基大廈地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5472,7 +5617,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲西邨利寧樓地下１－１２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5511,7 +5657,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港上環必列啫士街六十號地下、一樓及三樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5547,7 +5694,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港灣仔駱克道３號２樓及４樓（天台遊戲場）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5592,7 +5740,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅道７５號地下至二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5633,7 +5782,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港大坑道50號小學及幼稚園部，小學部和幼稚園操場、有蓋操場、游泳池、1座(6樓和7樓)、2座(G21-23及G23A室除外)、百齡堂 (小學課室)、福群道入口",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5670,7 +5820,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣耀東邨耀福樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -5709,7 +5860,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港香港仔水塘道十一號(擴建部份)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5755,7 +5907,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣愛禮街２號愛蝶灣第三座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5796,7 +5949,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣吉勝街新翠商場政府大樓第４層及第五層遊戲場（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5841,7 +5995,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港香港仔南朗山道23號(包括新增一層校舍及新增L7樓辦公室)",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5878,7 +6033,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港杏花邨盛泰路100號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -5919,7 +6075,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港英皇道856號君豪峰商業發展項目1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -5958,7 +6115,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣柴灣道１００號１樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -6000,7 +6158,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港香港仔田灣邨田康樓地下１－１０號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -6036,7 +6195,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港西灣河鯉景灣Ａ區太康街５５號地下ＧＡ１２Ｂ－１４號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6075,7 +6235,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港筲箕灣耀東邨耀富樓Ｂ翼及Ｃ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -6115,7 +6276,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港英皇道９５５－９５７號惠芳閣２－３樓Ａ及Ｂ室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -6154,7 +6316,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲海怡半島第1期第4座平台第1層",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6192,7 +6355,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港司徒拔道４３Ｂ號（三樓除外）",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6227,7 +6391,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅尼地城海傍路20號益豐花園地下1號舖及1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6267,7 +6432,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港卑路乍街１６－１８號再輝大廈地下高層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6307,7 +6473,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港鴨脷洲海怡半島第四期第２６－２８座地下上層部份幼稚園校舍",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6342,7 +6509,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣新翠花園政府合署２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -6382,7 +6550,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港春園街竹居台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -6421,7 +6590,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅尼地城西環邨東苑台地下及閣樓ＫＧ０１號舖",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6458,7 +6628,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港鰂魚涌英皇道１１２４號康山花園第８座及第９座地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6493,7 +6664,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港半山羅便臣道７０號雍景臺第一座地下兒童遊戲場及３樓至４樓（不包括幼兒中心）",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -6526,7 +6698,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港半山區波老道12號3樓東翼",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6561,7 +6734,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港柴灣小西灣道九號富欣花園地下幼稚園舖(儲物室除外)",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6600,7 +6774,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港西環皇后大道西554-560號百好大樓地下C號舖部份、1樓及2樓",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6639,7 +6814,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港薄扶林置富花園置富南區廣場101號舖(課室1除外)",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6678,7 +6854,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "灣仔區",
     "address": "香港跑馬地荷塘道2號地下",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6717,7 +6894,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅道110-118號安峰大廈1樓至2樓",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6756,7 +6934,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港淺水灣海灘道35號2樓A2-H舖",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6795,7 +6974,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港山頂道１００－１０４號牛奶公司商場Ｂ座２字樓６號舖（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6830,7 +7010,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "香港西灣河鯉景道５５號（內地段８８０２）",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -6863,7 +7044,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港中環威靈頓街56及58號威寧大厦3樓301及302室(逢星期一至星期五下午四時十五分至下午九時；逢星期六及星期日上午八時至下午九時；逢七月一日至八月三十一日星期一至星期日上午八時至下午九時除外)",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -6898,7 +7080,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "1 CHEUNG MAN ROAD CHAI WAN HONG KONG",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -6931,7 +7114,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "東區",
     "address": "28 TONG YIN STREET, TSEUNG KWAN O, NEW TERRITORIES (EXCLUDING THE SWIMMING POOL ON 2ND FLOOR)",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -6964,7 +7148,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港赤柱大潭村1033 錦鳳宛A",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -7002,7 +7187,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "南區",
     "address": "香港香港仔海傍道3號逸港居地下1及2號舖",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -7037,7 +7223,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港波老道１０號地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -7072,7 +7259,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "中西區",
     "address": "香港堅尼地城士美菲路85號寶德大廈地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -7107,7 +7295,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘金巴倫道5號A座地下 1樓通道及內置樓梯 B座地下及1樓",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -7144,7 +7333,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡海逸徑８號海逸豪園一期Ｌ２幼稚園",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -7181,7 +7371,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍柯士甸道西1號九龍站平台(包括幼兒中心共用範圍)",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -7221,7 +7412,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城馬頭圍道188-194號康年閣地下 1樓及2樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7261,7 +7453,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍慈雲山慈民邨民泰樓地下１－２及５－１２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7301,7 +7494,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍油塘高超道高俊苑C座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7343,7 +7537,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍坪石邨黃石樓１２５－１３２號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7383,7 +7578,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍鑽石山鳳德邨鳳鑽苑地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7423,7 +7619,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍順安邨安頌樓地下2號舖及商業大樓1座地下及1樓2號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7462,7 +7659,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘順利邨社區中心６字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7502,7 +7700,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡佛光街５號家盛樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7541,7 +7740,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗石硤尾邨美盛樓一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7581,7 +7781,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡家維邨家安樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7625,7 +7826,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍長沙灣富昌邨富潤樓(第十六座)平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7664,7 +7866,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田常盛街常樂邨常樂樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7708,7 +7911,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀鐵樹街４３號海康大廈第２座２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7748,7 +7952,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡黃埔花園第七期地下3B舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -7787,7 +7992,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙彩雲邨社區中心６字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7827,7 +8033,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘翠屏道翠屏邨翠桃樓21至34號平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7867,7 +8074,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍慈雲山慈樂邨樂安樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7907,7 +8115,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田德田邨德康樓１樓２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7947,7 +8156,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗元洲街１２３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -7985,7 +8195,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田廣田邨廣田商場２０４室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -8020,7 +8231,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡海逸豪園23座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -8057,7 +8269,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "觀塘翠屏北邨翠楣樓地下一號單位",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -8098,7 +8311,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍石硤尾白田邨盛田樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8138,7 +8352,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍大埔道58號東翼教學大樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8184,7 +8399,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍慈雲山慈正邨正明樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8227,7 +8443,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡寶其利街１２１號城中匯地下入口、１樓、２樓及２樓平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -8260,7 +8477,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍九龍灣德福花園平台三樓(K4課室除外)",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -8300,7 +8518,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘九龍灣德福花園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8341,7 +8560,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍扎山道３８１－３８３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -8374,7 +8594,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍柯士甸道103號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8415,7 +8636,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗福榮街168號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8453,7 +8675,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍美孚新邨百老匯街８４至８６號",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -8490,7 +8713,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍美孚新邨第８期１３８號舖",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -8527,7 +8751,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍彩虹邨金漢樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8566,7 +8791,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍秀茂坪（一）邨秀富樓地下２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -8602,7 +8828,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍龍翔道天馬苑商場２樓Ｆ１２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -8638,7 +8865,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘安達邨安達商場地下高層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8682,7 +8910,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘翠屏邨翠樂樓Ａ及Ｂ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8725,7 +8954,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田愛民邨保民樓地下425-434室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -8762,7 +8992,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙竹園南邨富園樓地下１２０－１２９號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -8800,7 +9031,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍長沙灣凱樂苑凱碧閣(A座)地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8842,7 +9074,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍啟鑽苑啟濤閣地下KG01室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8882,7 +9115,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘多實街１號１樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -8917,7 +9151,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍油塘草園街8號嘉賢居1樓及地下高層G5及G5A舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -8953,7 +9188,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍麗閣邨麗萱樓３樓平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -8994,7 +9230,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍承啟道２８號德朗邨幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9039,7 +9276,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘雲漢邨漢松樓地下３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -9077,7 +9315,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙下邨龍逸樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9118,7 +9357,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田康雅苑A及B座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9156,7 +9396,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙蒲崗村道１１號鍚安樓２及３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9198,7 +9439,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍梳士巴利道４１號香港基督教青年會２樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -9235,7 +9477,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城農圃道１１號帝庭豪園地下（部份）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -9271,7 +9514,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城沐虹街１２號啟晴邨賞晴樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9313,7 +9557,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍根德道９號地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -9348,7 +9593,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍多實街５－７號地下及１樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -9383,7 +9629,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍 觀塘 功樂道83號 地下(部份)及4樓至5樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9424,7 +9671,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "觀塘牛頭角道花園大廈玉蓮台第３座２－０７１室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9463,7 +9711,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘安泰邨景泰樓地下高層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9506,7 +9755,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘羅福道四及六號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -9544,7 +9794,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘雅息士道１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -9582,7 +9833,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘道55號地下G—05號舖及一樓L1—05，L1—06及L1—07號舖及二樓L2—03及L2—04號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -9615,7 +9867,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍長沙灣福榮街２２８號寓‧弍捌地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -9650,7 +9903,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田自由道2號九龍總商會大廈地下(部分)及一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9695,7 +9949,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田南村第五座適文樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9738,7 +9993,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田邨靜文樓地下１室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9776,7 +10032,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘牛頭角道２９７號花園大廈玉蓮台２座２樓３７室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -9815,7 +10072,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "坪石邨金石樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9858,7 +10116,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍尖沙咀廣東道188號港景滙商場1樓119—121號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9893,7 +10152,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀深旺道１號３座高層地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -9924,7 +10184,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍聯合道198號樂富邨樂謙樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -9965,7 +10226,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙上邨倡善樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10005,7 +10267,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田康雅苑停車場頂樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10041,7 +10304,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘翠屏道３號３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10082,7 +10346,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘安達邨謙達樓與正達樓之間地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10124,7 +10389,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘協和街１３０號基督教聯合醫院Ｊ座（陳國本大樓）１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10160,7 +10426,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍又一村瑰麗路３６號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10200,7 +10467,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡黃埔花園第５期青樺苑第９座平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10237,7 +10505,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗順寧道273號日輝商場1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10273,7 +10542,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍鑽石山鳳德邨鳳德社區中心５樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10310,7 +10580,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍油塘高怡邨高盛樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10347,7 +10618,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田啓田道７１號藍田（西區）社區中心６樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10380,7 +10652,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍馬頭圍邨夜合樓115， 117及118號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10416,7 +10689,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗南昌邨第一座昌頌樓及ＫＧ０１室户外活動場地",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10457,7 +10731,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍九龍灣啓業邨啓寧樓地下15-18及24-27號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10493,7 +10768,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍牛頭角彩盈邨盈樂樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10532,7 +10808,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍九龍灣宏光道８０號麗晶花園第２１－２２座地下Ｃ２號（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10572,7 +10849,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘安泰邨和泰樓地下高層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10612,7 +10890,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍蒲崗村道富山邨富信樓地庫１層１－６號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -10648,7 +10927,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍慈雲山慈康邨",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10688,7 +10968,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘窩打老道１０３號地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10732,7 +11013,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍油塘邨第五期三樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10778,7 +11060,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍塘志士達道5號二至四字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -10813,7 +11096,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田太平道2號太平花園地下部分及一樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -10846,7 +11130,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍美孚新邨萬事達廣場５號Ｂ平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10883,7 +11168,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗深旺道38號海達邨海榮樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10918,7 +11204,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角海庭道８號富榮花園１２座幼稚園地下及一樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10958,7 +11245,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡黃埔花園第十期部分商場平台地下(不包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -10998,7 +11286,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘金巴倫道９及１１號地下部分及１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11038,7 +11327,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘茶果嶺道麗港城第二期地下低層１樓（不包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11078,7 +11368,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘窩打老道１１１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11118,7 +11409,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘金巴倫道１３號地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -11151,7 +11443,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍金巴倫道５７號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -11189,7 +11482,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍長沙灣幸福街一號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11225,7 +11519,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘金巴倫道１２號地下及１樓",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -11265,7 +11560,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍利安道３２號順利紀律部隊宿舍２樓１５Ａ舖（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11308,7 +11604,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍亞皆老街２０６號三及四樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11352,7 +11649,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍土瓜灣九龍城道6號津匯地下A舖及九龍城道8號津匯1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11392,7 +11690,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍又一村石竹路２Ａ號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -11435,7 +11734,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城嘉林邊道1號4樓及5樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11475,7 +11775,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城嘉林邊道１號３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11516,7 +11817,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡黃埔花園第七期地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -11557,7 +11859,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗白雲街白田邨富田樓C翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11595,7 +11898,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍油麻地永星里11號救世軍總部2字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11633,7 +11937,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍油麻地永星里十一號救世軍總部地下及一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11670,7 +11975,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角海富苑海寧閣地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11708,7 +12014,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍土瓜灣樂民新邨H座2樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11746,7 +12053,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍荔枝角道150-174號1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11784,7 +12092,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田平田邨平誠樓地下(包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11821,7 +12130,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗蘇屋邨彩雀樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11863,7 +12173,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍油塘油麗邨停車場大廈四樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11905,7 +12216,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍油麻地東莞街１４號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -11944,7 +12256,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍德田邨康盈苑地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -11985,7 +12298,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘麗港城麗港街１２號Ａ區地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12025,7 +12339,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田茶果嶺道９９號麗港城第３期幼稚園校舍地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12067,7 +12382,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗深旺道28號V WALK地下G26室",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12104,7 +12420,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍橫頭磡邨宏偉樓地下１－９室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12145,7 +12462,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍窩打老道６５－６５Ｄ號年豐樓地下Ｂ２舖、一樓及二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12185,7 +12503,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗白田邨朗田樓1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12229,7 +12548,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "竹園南邨雅園樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12274,7 +12594,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍秀茂坪邨秀華樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12317,7 +12638,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍界限街６８號曉珀‧御地下及一樓全層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12352,7 +12674,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍橫頭磡邨宏祖樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -12390,7 +12713,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘順天邨天韻樓低座地下１９－３１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -12429,7 +12753,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍新蒲崗崇齡街33號新蒲崗廣場地下A23-A26 A36-42 A48-52 A53A-A56",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -12470,7 +12795,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘鯉魚門邨鯉興樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12512,7 +12838,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田忠孝街８９號包美達社區中心４樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -12550,7 +12877,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘秀茂坪曉麗苑曉安閣（Ｅ座）地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12585,7 +12913,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍睦鄰街１３號地下至二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12625,7 +12954,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍牛頭角樂華北邨勤華樓４樓４０５－４１５號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12666,7 +12996,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙慈雲山慈愛苑停車場頂層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12707,7 +13038,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "觀塘翠屏邨翠桉樓平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12746,7 +13078,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡黃埔花園7期地下3A舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12789,7 +13122,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘窩打老道117 119 121 123 125及129號",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12824,7 +13158,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍土瓜灣炮仗街１４６及１４６Ａ號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12864,7 +13199,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍土瓜灣炮仗街１４８及１４８Ａ號地下及炮仗街１４６－１５０號１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -12904,7 +13240,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍土瓜灣下鄉道89號地下A舖",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12941,7 +13278,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍土瓜灣下鄉道91號1樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -12978,7 +13316,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍東寶庭道8號A座地下至三樓，F座地下至三樓及F座新翼地下F102及二樓F202室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -13017,7 +13356,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍天光道14號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13059,7 +13399,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘鯉魚門邨鯉生樓地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -13098,7 +13439,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍東頭邨富東樓地下１－８號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -13134,7 +13476,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍油塘鯉魚門道６０號第２層平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -13173,7 +13516,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍運動場道１５號京華大廈地下６號舖及一樓１－５室",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -13216,7 +13560,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角西海富苑海韻閣地下０１－０９室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13251,7 +13596,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘牛頭角上邨第一期常滿樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13292,7 +13638,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍界限街71號舊翼",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -13329,7 +13676,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘牛津道2A號地下(遊戲場 幼稚園辦公室／接待處 遊戲／音樂室)1樓(課室101-109 茶房 女洗手間男洗手間 走廊)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -13364,7 +13712,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田茜發道匯景花園１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13407,7 +13756,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍律倫街６號地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -13450,7 +13800,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田匯景花園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13493,7 +13844,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀港灣豪庭廣場地下G65—70號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13535,7 +13887,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍尖沙咀柯士甸道西１號１樓１０４室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -13571,7 +13924,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗海麗邨海麗商場1樓114號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13614,7 +13968,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城九龍城道55號同興花園地下1A 1B 2A及2B舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -13655,7 +14010,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍竹園北邨第５期松園樓第８座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13694,7 +14050,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙慈雲山慈樂邨樂信樓地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13734,7 +14091,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "順安邨安逸樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13778,7 +14136,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀柳樹街１０號地下（部分）、一樓全層、二樓（部分）及三樓全層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13820,7 +14179,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍通州街200號一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13860,7 +14220,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗廣利道４號１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13900,7 +14261,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍亞皆老街123號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13942,7 +14304,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘油塘道１號１樓（不包括音樂室及禮堂）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -13983,7 +14346,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "瑞和街七十一號地下至三樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14023,7 +14387,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍石硤尾下邨第２４座１０１－１１６室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14063,7 +14428,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍竹園北邨桐園樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14110,7 +14476,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田康栢苑停車場大廈七樓一號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14155,7 +14522,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田碧雲道139號康栢苑停車場大廈7樓2號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14199,7 +14567,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍李鄭屋邨忠孝樓高座第１座",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14239,7 +14608,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍馬頭涌道１３５號地下至二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14279,7 +14649,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城獅子石道29-31號金倫樓地下及1樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -14314,7 +14685,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍界限街１０４號Ａ地下至２樓及界限街１０４號課室１－４、電腦室、體育用品儲存室、餐具室、活動室１－４、英文室及地下至１樓有蓋操場",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14350,7 +14722,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田石鼓街９號地下，２至４樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14392,7 +14765,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍秀茂坪邨秀裕樓地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -14429,7 +14803,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙正德街１０４號黃大仙社區中心５樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -14466,7 +14841,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙沙田㘭道１１３號及１１３－１１５號新翼大樓地下至四樓全層及五樓會議室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14501,7 +14877,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘窩打老道１０９號地下至一樓及１４３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -14532,7 +14909,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城馬頭涌道１３９號地下１樓及２樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -14568,7 +14946,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田冠熹苑地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14608,7 +14987,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍秀茂坪寶琳路寶達邨達峰樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14648,7 +15028,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍土瓜灣炮仗街１５２號寶峰大廈地下低層、地下及１樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14690,7 +15071,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍靠背壟道１５２號樂民新村Ｆ座一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14732,7 +15114,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀港灣豪庭廣場地下幼稚園範圍（九龍內地段１１１２７）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14772,7 +15155,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍牛頭角彩霞邨停車場平台四號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14815,7 +15199,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙彩雲邨甘霖樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14855,7 +15240,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "油塘嘉榮街八號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14896,7 +15282,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘馬蹄徑５號寶峰大廈２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -14936,7 +15323,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角亞皆老街五號地下至二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -14974,7 +15362,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡黃埔花園第七期地下Ｇ３Ｃ（２）號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15015,7 +15404,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田迦密村街９號君逸山１樓",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15061,7 +15451,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍何文田迦密村街9號君逸山地下",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15105,7 +15496,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍深旺道８號君匯港地下幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15147,7 +15539,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍海輝道8號浪澄灣廣場高層地下8號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15182,7 +15575,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘金巴倫道４３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15218,7 +15612,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍橫頭磡邨宏澤樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -15261,7 +15656,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍鑽石山龍蟠苑商場第５層１０９室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15298,7 +15694,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍南昌街1號南昌一號地下(樓梯及升降機)、1樓2號舖與1樓及2樓平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -15333,7 +15730,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘羅福道３Ａ號",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15370,7 +15768,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角砵蘭街３８７號６樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15403,7 +15802,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角砵蘭街３８７號４樓及頂樓（洗衣房）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15436,7 +15836,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍油麻地眾坊街梁顯利油麻地社區中心６字樓及天台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15469,7 +15870,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城馬頭涌道１０７號２樓及３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15502,7 +15904,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘茶果嶺道茜草灣鄰里社區中心３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15535,7 +15938,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡黃埔花園翠楊苑１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15568,7 +15972,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍長沙灣發祥街５５號長沙灣社區中心５字樓及天台操場",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15601,7 +16006,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀奧海城海輝道１１號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15634,7 +16040,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍樂富邨樂東樓地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -15669,7 +16076,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍慕禮道四號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -15708,7 +16116,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍東頭邨欣東樓９－１４號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -15750,7 +16159,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍大坑東棠蔭街大坑東社區中心４樓及天台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15788,7 +16198,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘翠屏道１７號觀塘社區中心５樓及天台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15827,7 +16238,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍上海街５５７號旺角綜合大樓３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15863,7 +16275,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍牛頭角下邨貴華樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -15904,7 +16317,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗李鄭屋邨信義樓平台３１６號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15942,7 +16356,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗窩仔街石硤尾邨第２３座１樓２０１－２１８號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -15980,7 +16395,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍彩雲邨銀河樓地下１０９－１１４號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16019,7 +16435,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗怡靖苑閒靜閣１－８號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16058,7 +16475,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍又一村海棠路６６號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16097,7 +16515,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙下邨龍康樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16134,7 +16553,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗元州邨元豐樓Ｂ及Ｃ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16172,7 +16592,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍荔枝角道８７３號一號．西九龍西九龍薈一樓６－８號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16212,7 +16633,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍荔枝角道873號一號．西九龍西九龍薈一樓2-3，5，9-13，15-19號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16252,7 +16674,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘馬蹄徑２號地下至一樓（不包括１３號課室及一樓樓梯旁辦公室）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16292,7 +16715,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍西九龍友翔道1號中港薈地下G09-G12號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -16329,7 +16753,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍馬頭涌福祥街3號(包括2號樓梯旁加建校舍及露天遊戲場內的加建校舍(地下至天台)九龍內段8638號及新教育大樓)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16368,7 +16793,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍窩打老道80號K座地庫2層至15樓及A座5樓至天台花園及培正道九龍內地段3056(不包括E座及G座)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -16403,7 +16829,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍油麻地渡船街28號寶時商業中心地下3號 8-13號及1樓1-10號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16441,7 +16868,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍牛頭角彩興路８號彩德邨彩誠樓地下１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16482,7 +16910,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗麗閣邨麗菊樓地下１０３－１１６及１１８室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16517,7 +16946,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍黃大仙上邨達善樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16560,7 +16990,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍九龍灣宏開道８號其士商業中心地下１１－１３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16598,7 +17029,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍秀茂坪寶達邨達欣樓地下Ｂ＆Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16637,7 +17069,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍彩雲邨紫霄樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16682,7 +17115,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍農圃道１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16720,7 +17154,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角海富苑海欣閣地下部分及１樓部分",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16762,7 +17197,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍界限街166-166A地下(9號課室除外)一樓及二樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -16801,7 +17237,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍慈雲山慈正邨正旭樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16838,7 +17275,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍牛頭角振華道樂華社區中心６樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -16875,7 +17313,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "G/F, WINGS B & C, ON YAN HOUSE, TSZ ON COURT, TSZ WAN SHAN, KOWLOON.",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16915,7 +17354,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗元州邨元盛樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -16959,7 +17399,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘秀茂坪曉麗苑Ａ座（曉天閣）地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17000,7 +17441,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍蘭開夏道２號一樓部份及二樓部份",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17035,7 +17477,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍美孚新邨第４期百老匯街７９號２樓部分（幼兒中心專用範圍除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17075,7 +17518,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀海帆道11號凱帆薈5樓1A號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17114,7 +17558,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍大角咀海帆道１１號凱帆薈５樓２號舖（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17155,7 +17600,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡漆咸道北３８８號昇御門地下Ｇ０６－Ｇ２６",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17194,7 +17640,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍長沙灣通州街500號星匯居商業發展項目1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17233,7 +17680,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍馬仔坑天宏苑停車場大廈二字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17271,7 +17719,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗順寧道１６號樂年花園地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17308,7 +17757,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍大埔道２２及２６號翠峰２８地下及１樓２號舖及地下１號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17345,7 +17795,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘森麻實道3及3號A地下及1樓及森麻實道22號地下至1樓",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17385,7 +17836,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘根德道２９號地下及１樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17425,7 +17877,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘窩打老道１５１－１５３號地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -17461,7 +17914,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘森麻實道２０號",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17501,7 +17955,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍城福佬村道18號1樓B舖(星期一至星期日上午八時至下午一時)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -17532,7 +17987,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍鑽石山龍蟠苑商場第ＯＴ／ＫＧ０１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17573,7 +18029,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍窩打老道５４號３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -17610,7 +18067,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍又一村壽菊路２號及新翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17650,7 +18108,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍藍田平田邨平善樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17694,7 +18153,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘金巴倫道五十一號（不包括天台）",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17734,7 +18194,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘雅息士道２號地下（有效日期至二零一九年七月三十一日，包括當天）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17769,7 +18230,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘九龍內地段744號金巴倫道49號地下及1樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17809,7 +18271,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍約道１４號地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -17844,7 +18307,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍長沙灣荔枝角道608號麗翠苑麗翠商場一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -17880,7 +18344,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗大南街２２１號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17920,7 +18385,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗南昌街72號兆昌大廈 地下A2及B舖、1樓AB及C舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -17960,7 +18426,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍秀茂坪第三座秀康樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18001,7 +18468,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘月華街３４號地下下層３樓４樓及５樓及地下下層１樓電腦室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18036,7 +18504,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍觀塘啓業邨啓寧樓地下G1-G14室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18076,7 +18545,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗麗閣邨麗蘿樓地下１１４－１２７號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18116,7 +18586,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍石硤尾窩仔街80號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18156,7 +18627,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍旺角弼街56號望覺基督教大樓地下及一樓(不包括課室1、5及6(逢星期六下午二時三十分至四時)及課室1、3、4、5、6及7(逢星期日上午十一時至下午十二時三十分))及三樓(不包括課室1、2及3(逢星期六下午二時三十分至四時及逢星期日上午九時三十分至下午十二時三十分))",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18196,7 +18668,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍西洋菜街231號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18239,7 +18712,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍深水埗南昌邨南昌社區中心５樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -18280,7 +18754,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍尖沙咀彌敦道136A號地下及一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18320,7 +18795,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "觀塘區",
     "address": "九龍坪石邨黃石樓地下１０４一１０５及１０９一１１６室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18365,7 +18841,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "黃大仙區",
     "address": "九龍鑽石山龍蟠街３號星河明居平台２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18405,7 +18882,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡海逸道8號海逸坊低層地下LG01A舖、高層地下UG45A、UG45B及UG45C舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18442,7 +18920,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "SHOP 1, G/F., SITE 10, WHAMPOA GARDEN, HUNGHOM, KOWLOON",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18479,7 +18958,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍嘉林邊道45—47號慈光樓地下及美光樓地庫部份(男及女洗手間)",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18514,7 +18994,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘聯合道３００號夾層及１樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18549,7 +19030,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "油尖旺區",
     "address": "九龍渡船街1-4號金霞閣地下E室 閣樓E室及一樓E室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18587,7 +19069,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍紅磡愛景街８號海濱南岸一樓幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18628,7 +19111,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘施他佛道14號地下(Yｏｒｋ Iｎｔｅｒｎａｔｉｏｎａｌ Pｒｅ—Sｃｈｏｏｌ地下(部份)户外遊戲場地除外)",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18665,7 +19149,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "九龍城區",
     "address": "九龍九龍塘施他佛道14號地下(部份)及1樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18700,7 +19185,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "深水埗區",
     "address": "九龍美孚新邨第一期百老匯街1-12、14-25、27、29及31號平台及地下",
     "nature": "international",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18742,7 +19228,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣怡樂街2-12號海濱花園D平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -18777,7 +19264,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗新田新圍村一號",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18814,7 +19302,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔紅林路１號滌濤山",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18855,7 +19344,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔翠樂街８號富萊花園Ｇ０７Ｂ舖部份地下及２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18895,7 +19385,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗錦田北高埔徑1號教學大樓2樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18937,7 +19428,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔翠樂街８號富來花園Ｇ０７Ｂ舖地下至二樓（幼兒中心專用部份除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -18977,7 +19469,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺聯捷街２－１０號榮輝中心１樓ＡＢ及２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -19016,7 +19509,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌華景山路9號華景商場地下21號舖及1樓1號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -19051,7 +19545,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界深井海韻花園第１座１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19093,7 +19588,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳康城路1號日出康城7期3樓幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -19134,7 +19630,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門青松觀道３３號澤豐花園地下及二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19172,7 +19669,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳彩明苑彩富閣地下Ｂ及Ｃ座",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19212,7 +19710,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣長安邨安潤樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19255,7 +19754,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天瑞邨瑞心樓第2座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19295,7 +19795,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔廣福邨廣義樓118–131號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19334,7 +19835,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣青山道九咪半麗城花園第１座高層地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19374,7 +19876,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳常寧路2號厚德邨TKO Gａｔｅｗａｙ東翼地下KG02號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19412,7 +19915,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山恆安邨恆月樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19452,7 +19956,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗洪福邨第五座洪塱樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19496,7 +20001,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌葵盛東邨盛逸樓平台Ｂ及Ｃ座",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19535,7 +20041,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門菁田邨菁喜樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19579,7 +20086,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗水車館街44號地下1-8號店",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19617,7 +20125,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔廣福邨廣禮樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19661,7 +20170,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌葵芳邨葵安樓地下１５－２２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19701,7 +20211,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門蝴蝶灣社區中心6樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19741,7 +20252,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門友愛邨第6座愛禮樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19781,7 +20293,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "九龍荔枝角華荔邨賞荔樓７字樓７０３室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19825,7 +20338,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田瀝源邨貴和樓2樓223至232室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -19862,7 +20376,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣島長康邨青盛苑Ｏ座地下第一層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19902,7 +20417,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門兆康苑商場三樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19944,7 +20460,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田穗禾苑商場38G",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -19988,7 +20505,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺皇后山邨皇順樓平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20033,7 +20551,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳雍明苑雍明商場1樓KG01號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20078,7 +20597,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山東涌富東廣場一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20118,7 +20638,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界荃灣大窩口邨富靜樓２０８－２１４號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20158,7 +20679,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界葵涌梨木樹邨第２座２字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -20194,7 +20716,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺華明邨耀明樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20234,7 +20757,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢將軍澳將軍澳地段６號康盛花園第５座地下（部分）及低層地下（部分）（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20276,7 +20800,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水石湖墟龍琛路２６－２８號地下至二樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20313,7 +20838,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗朗屏邨賀屏樓9座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -20353,7 +20879,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天瑞邨瑞滿樓B及C座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -20386,7 +20913,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界馬鞍山恆明街２號聽濤雅苑１期第１０座地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20421,7 +20949,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田火炭坳背灣街1號星凱．堤岸地下幼稚園",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20456,7 +20985,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田火炭銀禧薈平台３２７號",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20491,7 +21021,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳翠嶺路48號翠嶺峰商場地下2及3號舖及一樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20528,7 +21059,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "BLOCK 6, GR. FL. KWAI SHING WEST ESTATE, KWAI CHUNG, N.T.",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20565,7 +21097,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "將軍澳寶林邨寶德樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20608,7 +21141,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山錦泰苑錦泰商場1樓OT KG01室(包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20648,7 +21182,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田瀝源邨壽全樓地下７座",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20685,7 +21220,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳翠林邨雅林樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20726,7 +21262,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳銀澳路一號新寶城商場一樓１０８號舖（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -20761,7 +21298,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔鄉事會坊３２－３８號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20801,7 +21339,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天澤邨澤星樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20845,7 +21384,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔運頭塘邨運亨樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20886,7 +21426,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富蝶邨鳳蝶樓地下1號幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20927,7 +21468,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔汀角路7號地下及1-2字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -20968,7 +21510,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富亨邨第二座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21009,7 +21552,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富亨邨亨翠樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21049,7 +21593,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田大圍顯泰街瑞峰花園平台",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -21084,7 +21629,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐俊街１１號寶盈花園幼稚園大樓地下（部分）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -21123,7 +21669,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐明街１號富康花園幼稚園大樓地下（部分）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -21162,7 +21709,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐俊街１１號寶盈花園幼稚園大樓（幼兒中心專用部份除外）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -21202,7 +21750,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳富康花園幼稚園大樓（將軍澳地段５０號）（幼兒中心專用部份除外）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -21242,7 +21791,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山鞍駿街15號雅濤居1樓4-12號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -21275,7 +21825,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗元朗泰祥街14號盛發大廈地下(部份)及1樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -21316,7 +21867,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔墟鄉事會街大埔社區中心６樓及天台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -21353,7 +21905,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門田景邨田裕樓地下１－５號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -21388,7 +21941,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門友愛邨愛明樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21433,7 +21987,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺祥華邨祥和樓地下１０４－１０８及１１３－１１５號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -21469,7 +22024,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔大元邨泰德樓三樓309-316室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21514,7 +22070,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天耀邨耀康樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21554,7 +22111,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天悅邨服務設施大樓1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -21589,7 +22147,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門山景邨第三期景麗樓（第９座）地下Ａ及Ｂ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21636,7 +22195,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳浩明苑地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21679,7 +22239,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田禾輋邨美和樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21720,7 +22281,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田隆亨邨賞心樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21762,7 +22324,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門欣田邨逸田樓（第２座）地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21805,7 +22368,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田新翠邨新月樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21847,7 +22411,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山頌安邨頌和樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -21886,7 +22451,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門蝴蝶邨蝶翎樓2樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -21923,7 +22489,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌石籬（二）邨石富樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -21969,7 +22536,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺皇后山邨皇匯樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22012,7 +22580,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳健明邨明宙樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22055,7 +22624,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵盛西邨第10座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -22092,7 +22662,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水天平邨第六座天喜樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22134,7 +22705,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山東涌逸東邨２號停車場四樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22176,7 +22748,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山東涌逸東邨２號停車場２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22220,7 +22793,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗元龍街９號形點地下及閣樓Ｇ０１１號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -22255,7 +22829,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺沙頭角道３號（１０１課室及有蓋操場除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22297,7 +22872,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺馬會道３０１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22335,7 +22911,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐賢街29號藍塘傲地下7號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -22373,7 +22950,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳康城路1號日出康城領都L1樓幼稚園",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -22409,7 +22987,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水馬會道２１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22446,7 +23025,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天悅邨服務設施大樓三樓二號幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22483,7 +23063,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水彩園邨彩湖樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22525,7 +23106,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山大澳龍田邨第二期幼稚園座KG01室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22565,7 +23147,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山東涌逸東商場二樓五號幼稚園校舍",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22606,7 +23189,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣福來邨永康樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22646,7 +23230,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富亨邨亨泰樓第一座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22687,7 +23272,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌麗瑤邨富瑤樓地下南西及北翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22727,7 +23313,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田美林邨美楊樓１０１－１１６號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -22764,7 +23351,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田隆亨邨慧心樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22807,7 +23395,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田穗禾苑商場３７號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -22842,7 +23431,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳彩明苑彩耀閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22884,7 +23474,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田顯徑邨顯貴樓地下KG01及G01舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22924,7 +23515,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田廣林苑興林閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -22968,7 +23560,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "香港長洲長碩路33號碧濤軒商業樓地下(包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23008,7 +23601,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門青盈路３８號",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -23041,7 +23635,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣海濱花園Ｅ號平台４字樓Ｂ室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -23076,7 +23671,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天頌苑服務設施大樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23118,7 +23714,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山鞍誠街２６號（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23158,7 +23755,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山恒安邨恒星樓地下１－５號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23198,7 +23796,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山愉景灣海澄湖畔路92號102號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -23231,7 +23830,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌東涌海濱路８號海堤灣畔商場地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -23268,7 +23868,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青怡花園青怡廣場１樓２１－２５號",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -23305,7 +23906,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青富苑A座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23343,7 +23945,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青敬路７５號宏福花園４座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23381,7 +23984,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門藍地福亨村路８號豫豐花園地下幼稚園及幼兒園",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -23419,7 +24023,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢將軍澳富寧花園第一座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23462,7 +24067,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界坪洲志仁里８號Ｃ",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -23497,7 +24103,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣麗城花園第一期１座閣樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23540,7 +24147,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣青山公路６３３號灣景花園地庫二層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23583,7 +24191,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺景盛苑賢景閣地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23629,7 +24238,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山錦豐苑錦荷閣（Ｈ座）地下",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -23664,7 +24274,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳健明邨彩明商場1號平台1號幼稚園校舍",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23706,7 +24317,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田愉翠苑二期停車場及服務設施大樓一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23745,7 +24357,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳寶林邨寶泰樓地下Ａ翼及Ｂ翼１號及８號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23786,7 +24399,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天盛商場附翼１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23829,7 +24443,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富善邨〈明雅苑停車場側〉",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -23866,7 +24481,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田水泉澳邨修泉樓接鄰地下KG01號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -23907,7 +24523,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田顯和里顯徑鄰里社區中心3樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -23944,7 +24561,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳健明邨明星樓地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -23981,7 +24599,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐明苑唐富閣地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24025,7 +24644,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青衣邨宜居樓地下Ａ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -24062,7 +24682,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田大圍銅鑼灣山路１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24102,7 +24723,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界馬鞍山錦豐苑錦蘭閣地下Ａ及Ｂ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -24139,7 +24761,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌葵盛圍３６４號馮鎰社會服務大樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -24175,7 +24798,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺祥華邨祥裕樓地下１０２－１０７室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24212,7 +24836,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺祥華邨祥豐樓地下１０１－１０８及１１３－１１５室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24249,7 +24874,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界馬鞍山錦豐苑錦蕙閣地下(包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24292,7 +24918,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔寶湖道３號寶湖花園地下１０６號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -24327,7 +24954,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山大澳永安街８１、８３Ａ及８３Ｂ號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24366,7 +24994,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗錦繡花園市中心Ｄ及Ｅ座一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24407,7 +25036,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田沙角邨金鶯樓地下１－１３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -24442,7 +25072,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界馬鞍山錦豐苑錦萱閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24484,7 +25115,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔太和邨新和樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24524,7 +25156,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天頌苑服務設施大樓１字樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -24559,7 +25192,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢將軍澳裕明苑裕榮閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24599,7 +25233,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳貿泰路８號茵怡花園第七座平台１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24638,7 +25273,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺華明邨添明樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24678,7 +25314,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌逸東商場三樓六號幼稚園校舍",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24717,7 +25354,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天龍路９號嘉湖山莊美湖居Ｂ座（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24760,7 +25398,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門湖秀街2號悅湖山莊幼稚園2A號地下(幼稚園∕停車場大廈)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -24797,7 +25436,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門兆安苑定賢閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24832,7 +25472,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門建生邨裕生樓Ａ及Ｂ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24869,7 +25510,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天瑞邨第４期瑞林樓第十一座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24906,7 +25548,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣怡康街２－１２號海濱花園平台Ｂ（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24946,7 +25589,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳康城路1號日出康城第九期3樓幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -24986,7 +25630,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門景峰徑2號景峰花園第4座地下(部分)及第5座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25026,7 +25671,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣海盛路２８號祈德尊新邨商場一樓４號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25066,7 +25712,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門鄉事會路94—110號康利中心地下入口及一樓全層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25107,7 +25754,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗安寧路59號地下-3樓(地下-2樓 包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25148,7 +25796,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田第一城34，35及36座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -25190,7 +25839,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺嘉福邨福樂樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25229,7 +25879,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌新葵芳花園平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25268,7 +25919,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門建生邨泰生樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25309,7 +25961,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳尚德邨尚禮樓(第六座)四樓平台A、B及C翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25348,7 +26001,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢將軍澳煜明苑焜明閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25389,7 +26043,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山東涌富東邨富東廣場二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25432,7 +26087,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "D.D. 92 KAM TSIN SHEUNG SHUI NEW TERRITORIES",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25474,7 +26130,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天華邨服務設施大樓三樓二號幼稚園",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -25511,7 +26168,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門青海圍１８號置樂花園地下４７－５４號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -25551,7 +26209,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門青翠徑７號金邦商場高層地下５、１０－１１、１３－２０及２３－２４號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25596,7 +26255,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗洪水橋丹桂村路１號麗虹花園地下４、５、６、１０、１１及１２號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25641,7 +26301,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺嘉盛苑嘉耀閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25684,7 +26345,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田廣源邨廣榕樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25728,7 +26390,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界大窩口邨富強樓2樓215 217 219及221-232室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25766,7 +26429,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔大元邨泰寧樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25804,7 +26468,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界荃灣大窩口邨富強樓地下１２１－１４０室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -25842,7 +26507,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田禾輋邨德和樓地下１０１－１１４室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25880,7 +26546,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗錦田公路１０３號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25918,7 +26585,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣梨木樹(一)邨楊樹樓地下B及C翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25956,7 +26624,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳顯明苑B及C座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -25994,7 +26663,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳常寧路2號厚德邨TKO Gａｔｅｗａｙ西翼地下KG01號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26032,7 +26702,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣海盛路２２號祈德尊新邨１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -26070,7 +26741,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門三聖邨滿漁樓側地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -26108,7 +26780,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田水泉澳邨河泉樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26149,7 +26822,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水天平邨天賀樓Ｂ座１０６－１１０號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -26187,7 +26861,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田乙明邨街１５號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26224,7 +26899,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣祈德尊新邨",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26261,7 +26937,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田乙明邨乙明邨街１５號２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -26299,7 +26976,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌迎東邨迎悅樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26339,7 +27017,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田大圍美田邨美滿樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26381,7 +27060,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山馬鞍台富寶花園１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26424,7 +27104,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山馬鞍台富寶花園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26464,7 +27145,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青敬路７７號海悅花園商場２樓（部分）（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26504,7 +27186,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣細山路2-16號美景花園第11及12座商場L1及L2層",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26546,7 +27229,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌葵盛東邨盛國樓地下Ｇ１室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26583,7 +27267,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌大隴街１４２號地段地下至２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26625,7 +27310,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗和生圍加州花園商場中心地下Ｇ１舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26663,7 +27349,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗西菁街１５號",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "british",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26701,7 +27388,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田豐盛苑富盛閣Ｂ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -26736,7 +27424,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣沙咀道３２８號寶石大廈３座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -26772,7 +27461,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗朗屏邨鳳屏樓(第10座)地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26813,7 +27503,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山新港城廣場２樓幼稚園校舍（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26848,7 +27539,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐賢街29號藍塘傲地下1A、1B及2A舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26885,7 +27577,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田駿景道１號駿景園地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -26922,7 +27615,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌荔景邨樂景樓南面地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -26963,7 +27657,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門富泰邨服務設施大樓１字樓第２號幼稚園校舍",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27004,7 +27699,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田水泉澳邨映泉樓二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27043,7 +27739,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田美城苑暉誠閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27089,7 +27786,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門兆畦苑兆強閣地下１－５室及１１－１５室（Ａ及Ｂ翼）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27130,7 +27828,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌荔景邨第５座仰景樓２樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27172,7 +27871,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天耀邨天耀廣場1樓111室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -27211,7 +27911,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "G/F FLAT C AND D 72-74 RURAL COMMITTEE ROAD MUI WO NEW TERRITORIES",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27253,7 +27954,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山梅窩南便圍３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27295,7 +27997,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗安樂路明珠樓二樓５Ｂ、６、７、８及９號（元朗大馬路元朗市地段９５）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27335,7 +28038,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "大嶼山東涌健東路１號映灣園第１５座１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -27372,7 +28076,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "香港大嶼山東涌逸東邨２號停車場１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -27409,7 +28114,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺聯和墟和滿街８號帝庭軒商場１樓３７號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -27444,7 +28150,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗牡丹街２３號康德閣地下（入口）及１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -27479,7 +28186,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "香港長洲大菜園道１５０號Ａ地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27517,7 +28225,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌石籬一邨石秀樓地下１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27558,7 +28267,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門富泰邨愛泰樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27596,7 +28306,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門建生邨康生樓Ａ及Ｂ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27637,7 +28348,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳景林邨景林鄰里社區中心３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27678,7 +28390,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門良景邨良景邨社區中心５樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27714,7 +28427,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "香港長洲教堂路7號地下及1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27752,7 +28466,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門友愛邨愛廉樓高座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27795,7 +28510,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青敬路３３號青衣城地下部份",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -27830,7 +28546,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣長青邨青葵樓３樓３０９－３１４室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -27869,7 +28586,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣綠楊新邨綠楊坊平台２樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -27908,7 +28626,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳地段２３號南豐廣場幼稚園基座部份地下及平台一樓（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -27945,7 +28664,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳日出康城３期緻藍天幼稚園座",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -27984,7 +28704,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山頌安邨頌德樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28024,7 +28745,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺新運路33號粉嶺中心第1期A及B座地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -28061,7 +28783,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺馬適路綠悠軒商場1樓1-11號A舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -28098,7 +28821,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "荃灣海壩街滿樂大廈",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28140,7 +28864,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔科進路23號逸瓏灣1期商場地下部份及低層地下幼稚園校舍",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -28175,7 +28900,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門湖翠路２號美樂花園地下１８１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28215,7 +28941,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門湖翠路２號美樂花園地下１８０號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28252,7 +28979,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門景峰花園第１及２座地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28297,7 +29025,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田美林邨美桃樓地下１３２及１３４－１４４室",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -28334,7 +29063,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣荃景圍86號荃灣中心二期11—14座商場E5—E73內A—1舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28376,7 +29106,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳翠林邨碧林樓３０６－３１３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -28414,7 +29145,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺打鼓嶺坪輋路明愛打鼓嶺中心地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -28452,7 +29184,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田文禮路２３－２５號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -28491,7 +29224,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水寶石湖邨服務設施大樓二樓KG01室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28530,7 +29264,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺華明邨富明樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -28567,7 +29302,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔新興花園地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -28608,7 +29344,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔大埔市地段第２６號第１７區新興花園地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28650,7 +29387,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界坪洲永興街６７號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28691,7 +29429,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田大涌橋路52號富豪花園商場2期1樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -28730,7 +29469,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田安景街23號碧濤花園第二期平台幼稚園",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -28771,7 +29511,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田沙田正街１１－１７號偉華中心３樓Ａ幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28812,7 +29553,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣長宏邨宏正樓及宏毅樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28853,7 +29595,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天晴邨綜合大樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28893,7 +29636,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門掃管笏管青路２號愛琴海岸１樓平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28936,7 +29680,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田小瀝源路６９號帝堡城Ｌ５幼稚園校舍及Ｌ６入口大堂（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -28978,7 +29723,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界馬灣珀麗道８號（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29021,7 +29767,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣寮肚路３號曉峰園平台入口大堂及停車場第１層（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29064,7 +29811,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門河興街５Ａ大興花園２期地下（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29107,7 +29855,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山馬鞍山中心A1—A舖及2樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -29149,7 +29898,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺一鳴路２３號牽晴間購物廣場地下Ｇ２２–２４號（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29194,7 +29944,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門湖景邨低層地下湖光樓﹝第二座﹞",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29238,7 +29989,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌裕雅苑雅盛閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29280,7 +30032,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳和明苑Ａ座和逸閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29321,7 +30074,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌石蔭東邨蔭恆樓地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -29358,7 +30112,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天悅邨服務設施大樓３樓３號幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29401,7 +30156,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣島青華苑停車場大厦地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29442,7 +30198,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣大屋街二至四號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29483,7 +30240,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌石籬（二）邨石榮樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29524,7 +30282,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣青山道９９號地下及２樓（荃灣市地段２８４號）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29568,7 +30327,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界荃灣安蔭邨耀蔭樓地下Ｂ及Ｃ翼和德蔭樓地下Ｂ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29610,7 +30370,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "青衣牙鷹洲街三號青雅苑地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29652,7 +30413,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "葵涌葵興邨興樂樓地下一號室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29693,7 +30455,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣德華街３７－４１號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29731,7 +30494,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳彩明苑彩貴閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29773,7 +30537,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門啓民徑18號仁愛堂賽馬會社區及體育中心3樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -29811,7 +30576,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界荃灣大窩口邨富泰樓（第１５座）地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29855,7 +30621,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門兆康苑兆恒閣及兆順閣平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -29892,7 +30659,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天耀邨天耀社區中心５樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -29932,7 +30700,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門友愛邨愛義樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -29975,7 +30744,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門湖景邨湖畔樓低座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30015,7 +30785,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔運頭塘邨鄰里社區中心３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30052,7 +30823,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田火炭桂地街20號駿洋邨駿洋商場地下KG01號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30092,7 +30864,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣仁濟街18號仁濟醫院綜合服務大樓1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30129,7 +30902,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌石籬一邨石泰樓Ｂ及Ｃ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30165,7 +30939,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣長亨邨亨業樓地下Ｂ翼及Ａ翼部份",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30202,7 +30977,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天河路６號仁濟醫院第２４屆董事局社會服務中心地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30237,7 +31013,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天恒邨第一座恒健樓地下Ｂ及Ｃ翼幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30279,7 +31056,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌安蔭邨澤蔭樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30314,7 +31092,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門山景邨第一期社區會堂側",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30356,7 +31135,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門和田邨和麗樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30395,7 +31175,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水彩園邨彩玉樓地下107-120 122及124",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30436,7 +31217,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門友愛邨愛暉樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30473,7 +31255,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天瑞邨瑞勝樓（第五座）地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30513,7 +31296,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳廣明苑廣寧閣(F座)地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30557,7 +31341,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田廣源邨廣柏樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -30597,7 +31382,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌逸東邨逸東商場二期一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30641,7 +31427,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌荔景邨風景樓地下８號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30679,7 +31466,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水天平邨天祥樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30720,7 +31508,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水彩園邨彩華樓地下101-107及109-111號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30762,7 +31551,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水馬會道２３號（課室Ａ至Ｅ除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30805,7 +31595,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水彩蒲苑停車場大廈地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30846,7 +31637,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺景盛苑歡景閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30887,7 +31679,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天澤邨澤辰樓Ｂ及Ｃ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30926,7 +31719,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣青山公路625號麗城花園第三期第1座平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -30965,7 +31759,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌邨春葵樓地下四號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31005,7 +31800,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界荃灣德士古道６７－７３號地下至一樓及三樓至四樓部分",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31045,7 +31841,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔廣福邨廣仁樓２１０–２１９號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31087,7 +31884,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "118-129, SHUN WO HOUSE, WO CHE ESTATE, SHATIN NEW TERRITORIES",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31132,7 +31930,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門山景邨第一期景貴樓地下１至１１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31177,7 +31976,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門青雲路",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31216,7 +32016,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門兆麟苑商場地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31260,7 +32061,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌邨葵涌商場３樓平台１號單位",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -31296,7 +32098,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗水邊圍邨湖水樓１５－２０號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -31336,7 +32139,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗八鄉吳家村８３Ａ號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31374,7 +32178,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗媽廟路九號地下至二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31419,7 +32224,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田文禮路31-37號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31459,7 +32265,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "下葵涌榮芳路１４號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31499,7 +32306,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣麗城薈第二期第一座地下十二號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31538,7 +32346,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣青山公路荃灣段６２０號麗城薈二期地下１１號舖幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31575,7 +32384,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天華邨服務設施大樓三樓一號幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31618,7 +32428,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界葵涌梨木樹邨翠樹樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31661,7 +32472,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門龍門居停車場１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -31702,7 +32514,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣長康邨康安樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31745,7 +32558,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門兆禧苑商埸地下２號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -31781,7 +32595,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門良景邨良傑樓地下１－１０號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31820,7 +32635,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田顯徑邨顯德樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31865,7 +32681,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門安定邨定康樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -31906,7 +32723,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔逸雅苑逸榮閣地下Ａ翼及Ｂ翼",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -31941,7 +32759,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣沙咀道３２８號寶石大廈商場１０８號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -31974,7 +32793,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水太平邨平易樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32018,7 +32838,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "葵興新葵興花園平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32060,7 +32881,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢翠塘路１號翠塘花園１１座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32100,7 +32922,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗朗日路8號形點IIL3樓號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32142,7 +32965,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌海濱路１２號藍天海岸地下Ｋ０１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32182,7 +33006,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗元朗市地段第３７５號達輝徑華健大厦一樓Ｂ、Ｃ及Ｄ座",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32221,7 +33046,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門大興邨興盛樓地下及二樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32267,7 +33093,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門三聖邨滿漁樓地下１１－１６號",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -32304,7 +33131,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天龍路2號嘉湖山莊景湖居幼稚園校舍(包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32345,7 +33173,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天恆邨第三座恆富樓地下Ｂ及Ｃ翼幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32386,7 +33215,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔寶雅苑家和閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32428,7 +33258,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣柴灣角安賢街十一號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32468,7 +33299,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界南丫島第３約第１７０９地段",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32506,7 +33338,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢將軍澳常寧路第３７區",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32541,7 +33374,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔運頭街28號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -32577,7 +33411,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青綠街5號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32619,7 +33454,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天美街６號２樓及３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32663,7 +33499,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門兆邦苑地下單位１－１０號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32704,7 +33541,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田沙角街8-12號花園城第一期三樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -32744,7 +33582,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣西大河道100號海之戀商場地下G36—G37及地下幼稚園",
     "nature": "non_profit",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -32787,7 +33626,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "西貢西貢墟普通道１９Ｅ",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -32828,7 +33668,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門蝴蝶邨蝶舞樓１２４－１３０號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -32861,7 +33702,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富亨邨富亨鄰里社區中心3樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -32896,7 +33738,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田隆亨邨學心樓101-108號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -32929,7 +33772,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界青山公路３３號深井灣畔碧堤半島碧堤坊５樓５０１室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -32962,7 +33806,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺華心邨華冠樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -32995,7 +33840,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳廣明苑廣新閣B翼及C翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33028,7 +33874,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "九龍調景嶺澳景路８８號維景灣畔第三期ＬＧ２",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33061,7 +33908,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺皇后山邨皇澄樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33108,7 +33956,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣石圍角邨石桃樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33152,7 +34001,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富善邨善美樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33196,7 +34046,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "香港大嶼山愉景灣海澄湖畔路92號1樓101號舖及戶外遊戲場(5號課室除外)",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -33233,7 +34084,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳煜明苑熹明閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33276,7 +34128,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔富蝶邨鳳蝶樓地下2號幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -33312,7 +34165,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田碩門邨2期喜碩樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33353,7 +34207,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天恒邨恒貴樓地下Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33390,7 +34245,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門安定邨安定／友愛社區中心６樓及天台遊戲場",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33433,7 +34289,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田隆亨邨隆亨社區中心６樓及天台遊戲場",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33469,7 +34326,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣長青邨青荷樓平台1樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33511,7 +34369,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌滿東邨滿樂坊一樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33553,7 +34412,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣大河道雅麗珊社區中心５樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33589,7 +34449,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔露屏路１０號香港教育大學高級教職員宿舍地下Ｇ０２－Ｇ０５室（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -33630,7 +34491,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門寶田商場２樓２０２號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33675,7 +34537,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山利安邨利興樓地下Ｇ１",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33711,7 +34574,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "將軍澳景林邨景楠樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33757,7 +34621,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣海濱花園平台C(第九至十二座)P層幼稚園及海濱花園C平台P層128—129號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33797,7 +34662,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳彩明苑彩榮閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33838,7 +34704,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山利安邨利盛樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33879,7 +34746,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "大嶼山東涌富東邨富東廣場3樓301室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33915,7 +34783,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青綠街１號偉景花園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -33956,7 +34825,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌石蔭邨２期商場地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -33993,7 +34863,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌和宜合道２２號３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -34030,7 +34901,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門青雲路２２號Ｃ座１樓及地下（部份）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34069,7 +34941,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門大興邨第一期商場地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -34102,7 +34975,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門良景邨良智樓9-16號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -34138,7 +35012,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢頓場村DD215地段",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -34175,7 +35050,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天龍路４號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -34213,7 +35089,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺馬適路３號綠悠軒商場２樓１－１０號舖（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34254,7 +35131,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔逸雅苑逸欣閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34293,7 +35171,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐明苑唐煌閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -34332,7 +35211,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺欣盛苑商場ＫＧ０１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34376,7 +35256,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢惠民路３３號",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -34409,7 +35290,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天恩邨天恩商場頂層１號幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34449,7 +35331,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天靖街3號天盛苑服務設施大樓2樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34487,7 +35370,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山錦英苑",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34532,7 +35416,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺嘉盛苑嘉揚閣地下KG01號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34574,7 +35459,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "粉嶺華明邨禮明樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34614,7 +35500,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天慈邨慈心樓Ｂ及Ｃ翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34655,7 +35542,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山梅窩銀鑛灣路８號銀景中心地下１２及１３號舖",
     "nature": "international",
-    "curriculum": "montessori_intl",
+    "curriculumCategory": "non_local",
+    "curriculumType": "montessori",
     "joinedKGP": false,
     "sessions": [
       "AM"
@@ -34688,7 +35576,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "九龍清水灣香港科技大學１８座地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -34725,7 +35614,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門井財街１１Ａ號南光樓１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34767,7 +35657,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌葵芳邨葵德樓地下10—16號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -34809,7 +35700,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門河興街10A號大興花園第二期商場2樓2—3號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -34850,7 +35742,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗鳳群街2號年發大廈1樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -34891,7 +35784,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣荃景圍７６－８４號荃景花園１１－１２座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -34932,7 +35826,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣青山公路荃灣段６２０號麗城花園第二期麗城薈１樓１０１號－１１８號及部份地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -34973,7 +35868,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田火炭樂景街２－１８號銀禧薈７樓７０１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -35014,7 +35910,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田博康邨博安樓地下21-28號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35051,7 +35948,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺景盛苑俊景閣B及C翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35088,7 +35986,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳尚德邨尚明樓(第九座)四樓平台A，B及C翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35132,7 +36031,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水龍運街2號北區社區會堂6樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35169,7 +36069,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗體育路4號元朗大會堂4樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35206,7 +36107,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣長發邨長發社區中心5樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35243,7 +36145,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗西菁街興旺樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35282,7 +36185,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田沙角邨美雁樓２８－４０號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35319,7 +36223,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田新翠邨新偉樓地下１至８號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35356,7 +36261,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天耀邨耀昌樓地下Ａ及Ｂ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35393,7 +36299,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣牙鷹洲街８號灝景灣第１期商場第１層（包括幼兒中心）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -35432,7 +36339,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐俊街21號翩滙坊地下12、15及16號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -35471,7 +36379,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山落禾沙烏溪沙路８號迎海３期１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -35510,7 +36419,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界荃灣大窩口（Ｆ課室及幼兒中心專用範圍除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35550,7 +36460,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山耀安邨耀和樓２樓４－９號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -35588,7 +36499,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍俊宏軒幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35631,7 +36543,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗青山公路洪水橋段６００號尚城地下及１樓幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35669,7 +36582,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門屯門市地段３３８號第１６區翠寧花園（幼兒中心專用範圍除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35712,7 +36626,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺和睦路9號海聯廣場地下72、73、75、76、77及79號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35756,7 +36671,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水鳳南路９號翠麗花園商場地下２３及２４號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35800,7 +36716,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山耀安邨耀榮樓地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -35837,7 +36754,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳至善街3號Sａｖａｎｎａｈ Pｌａｃｅ地下G10—G13、1樓119—123及125號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -35877,7 +36795,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣島長安邨第２期安清樓１０８－１１４號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35919,7 +36838,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗大棠道崇正新村１５３號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -35961,7 +36881,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界東涌迎康街一號昇薈一樓",
     "nature": "international",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36000,7 +36921,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青敬路３３號地下及閣樓",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36035,7 +36957,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田馬鞍山西沙路５９９號Ｌ１",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36070,7 +36993,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢清水灣道孟公屋村",
     "nature": "international",
-    "curriculum": "ib",
+    "curriculumCategory": "non_local",
+    "curriculumType": "ib",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36109,7 +37033,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天麗苑Ａ座地下ＫＧ０１號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36148,7 +37073,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔翠樂街6號菁泉雅居地下入口大堂及1樓10號及11號舖(包括幼兒中心)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36188,7 +37114,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳至善街9號嘉悅地下7號舖部份及一樓部份",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36223,7 +37150,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田車公廟路溱岸８號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36258,7 +37186,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天水圍市地段第2號餘段嘉湖山莊賞湖居地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36298,7 +37227,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門欣寶路8號NOVO LAND NOVO WALK地下29號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36333,7 +37263,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天盛苑天盛商場附翼地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -36366,7 +37297,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗八鄉錦上路元崗村(丈量約份第106約地段)",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36406,7 +37338,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天恩邨天恩商場天台２號幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36447,7 +37380,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗天水圍天耀邨耀澤樓地下Ａ及Ｂ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36489,7 +37423,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗青山公路元朗段２６５－２６７號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36528,7 +37463,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天耀邨耀興樓地下Ａ及Ｂ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36569,7 +37505,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗安信街丈量約分第120約地段第3713及3714號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36611,7 +37548,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天逸邨停車場大樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36653,7 +37591,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界長洲東灣",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36692,7 +37631,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田安景街19-21號碧濤花園平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36738,7 +37678,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田沙角街7-11號翠華花園二樓(走廊段除外)",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -36773,7 +37714,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "香港屯門屯貴路９號富泰邨服務設施大樓１字樓１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36816,7 +37758,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界粉嶺雍盛苑商場１０９號舖",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36859,7 +37802,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田圍路９－１１號田園閣２樓平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36902,7 +37846,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田正街１１－１７號偉華中心三，四座三樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -36941,7 +37886,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔寶雅苑興和閣地下117-124室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -36978,7 +37924,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳厚德邨德裕樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37013,7 +37960,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天恩邨天恩商場1樓122號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37046,7 +37994,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳貿泰路8號茵怡花園第一座平台",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37082,7 +38031,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣石圍角邨石蓮樓地下3-16 18及20號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37118,7 +38068,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "荃灣區",
     "address": "新界荃灣石圍角邨石翠樓地下１４－１７號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37156,7 +38107,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌葵涌邨葵涌商場三樓平台４號單位",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37197,7 +38149,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "沙田區",
     "address": "新界沙田博康邨博文樓地下１４號，２０－３１號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37237,7 +38190,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門蝴蝶邨蝶舞樓第８座地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37279,7 +38233,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門井財街２９號地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37317,7 +38272,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門井財街２９號１樓",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -37354,7 +38310,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳廣明苑廣盈閣地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37399,7 +38356,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗朗屏邨喜屏樓地下",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37439,7 +38397,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗屏信街５－７號丈量約份第１２０約地段第４０１１及元朗市地段３１",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37478,7 +38437,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗屏信街９號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37519,7 +38479,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗屏信街５號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37558,7 +38519,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界長洲學校路１４號（幼兒中心專用範圍除外）",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37600,7 +38562,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌邨葵涌商場三樓平台３號",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37641,7 +38604,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "北區",
     "address": "新界上水清河邨清潤樓地下B翼及C翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37683,7 +38647,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍天悅邨服務設施大樓二樓幼稚園",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37723,7 +38688,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳尚德邨尚信樓４樓平台Ｂ及Ｃ翼",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37763,7 +38729,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔太和邨太和鄰里社區中心３樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "WD"
@@ -37801,7 +38768,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界葵涌石蔭邨石蔭商場平台Ｂ及Ｃ單位",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37843,7 +38811,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "葵青區",
     "address": "新界青衣青怡花園第１座地下及１樓",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -37884,7 +38853,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗丈量約份第１１５約地段第１０２號Ａ分段第１小分段地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -37919,7 +38889,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗丈量約份第１１５約南邊圍地段２３９號地下",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "local",
+    "curriculumType": "non_kgp",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -37954,7 +38925,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山愉景灣",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -37991,7 +38963,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山愉景灣北1座",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38028,7 +39001,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界清水灣銀線灣道７號銀線灣商場地下",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38063,7 +39037,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢清水灣銀岬路2號銀線灣廣場7樓",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38102,7 +39077,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山愉景灣海澄湖畔路92號1樓106號舖",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38141,7 +39117,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢匡湖居購物中心地下D1 D2號舖及後院和D號舖(不包括D1 D2號舖及後院)",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38180,7 +39157,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "5 HONG LOK YUEN TWENTIETH STREET TAI PO NEW TERRITORIES",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38217,7 +39195,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐俊街23號MONTEREY PLACE地下G27—G28號舖",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "WD"
@@ -38250,7 +39229,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "離島區",
     "address": "新界大嶼山愉景灣海澄湖畔路92號一座寫字樓地下低層5、6及8號舖",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38287,7 +39267,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢北潭涌村１１號",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38323,7 +39304,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳唐賢街33號Cａｐｒｉ Pｌａｃｅ地下G01號舖",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38358,7 +39340,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界西貢康健路285號地下及1樓",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38393,7 +39376,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "大埔區",
     "address": "新界大埔廣福道大埔平房及錦山路170號",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38431,7 +39415,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗青山公路１６２－１６８號聯昇樓２樓Ａ、Ｂ、Ｃ及Ｆ室",
     "nature": "non_profit",
-    "curriculum": "local",
+    "curriculumCategory": "local",
+    "curriculumType": "kgp",
     "joinedKGP": true,
     "sessions": [
       "AM",
@@ -38467,7 +39452,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "西貢輋徑篤村一百五十九號",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38502,7 +39488,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "屯門區",
     "address": "新界屯門掃管笏路99號上源幼稚園校舍",
     "nature": "non_profit",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38537,7 +39524,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界天水圍濕地公園路1號 WETLAND SEASONS BAY商場地下幼稚園",
     "nature": "non_profit",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38574,7 +39562,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "西貢區",
     "address": "新界將軍澳常寧路10號安寧花園幼稚園／商業大樓1樓及地下32A-32B號舖",
     "nature": "international",
-    "curriculum": "non_local",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38609,7 +39598,8 @@ export const kindergartens: KindergartenEntry[] = [
     "district18": "元朗區",
     "address": "新界元朗錦田青山公路潭尾段１８號峻巒商場地下幼稚園校舍",
     "nature": "international",
-    "curriculum": "unknown",
+    "curriculumCategory": "non_local",
+    "curriculumType": "other",
     "joinedKGP": false,
     "sessions": [
       "AM",
@@ -38656,10 +39646,17 @@ export function getKindergartensByNature(nature: KGNature): KindergartenEntry[] 
 }
 
 /**
- * Get kindergartens by curriculum
+ * Get kindergartens by curriculum category
  */
-export function getKindergartensByCurriculum(curriculum: KGCurriculum): KindergartenEntry[] {
-  return kindergartens.filter((k) => k.curriculum === curriculum);
+export function getKindergartensByCurriculumCategory(category: KGCurriculumCategory): KindergartenEntry[] {
+  return kindergartens.filter((k) => k.curriculumCategory === category);
+}
+
+/**
+ * Get kindergartens by curriculum type
+ */
+export function getKindergartensByCurriculumType(type: KGCurriculumType): KindergartenEntry[] {
+  return kindergartens.filter((k) => k.curriculumType === type);
 }
 
 /**
@@ -38686,12 +39683,17 @@ export const kindergartenStats = {
     "non_profit": 931,
     "private": 0
   },
-  "byCurriculum": {
-    "local": 796,
-    "non_local": 110,
+  "byCurriculumCategory": {
+    "local": 837,
+    "non_local": 146
+  },
+  "byCurriculumType": {
+    "kgp": 712,
+    "other": 118,
     "ib": 11,
-    "unknown": 58,
-    "montessori_intl": 8
+    "non_kgp": 125,
+    "montessori": 8,
+    "british": 9
   },
   "byPedagogy": {
     "play_explore": 621,

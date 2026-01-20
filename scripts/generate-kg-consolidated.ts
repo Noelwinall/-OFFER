@@ -22,7 +22,18 @@ import * as path from "path";
 // ============================================
 
 export type KGNature = "international" | "non_profit" | "private";
-export type KGCurriculum = "local" | "non_local" | "ib" | "montessori_intl" | "unknown";
+
+// Two-level curriculum structure
+// Level 1: Category (local vs non_local vs unknown)
+export type KGCurriculumCategory = "local" | "non_local" | "unknown";
+
+// Level 2: Specific type within each category
+// - local: kgp (joined KGP) | non_kgp (not joined KGP)
+// - non_local: ib | montessori | british | other (includes Japanese, etc.)
+export type KGLocalCurriculumType = "kgp" | "non_kgp";
+export type KGNonLocalCurriculumType = "ib" | "montessori" | "british" | "other";
+export type KGCurriculumType = KGLocalCurriculumType | KGNonLocalCurriculumType | null;
+
 export type KGSession = "AM" | "PM" | "WD";
 
 export interface KindergartenEntry {
@@ -40,7 +51,8 @@ export interface KindergartenEntry {
 
   // Classification
   nature: KGNature;
-  curriculum: KGCurriculum;
+  curriculumCategory: KGCurriculumCategory;
+  curriculumType: KGCurriculumType;
   joinedKGP: boolean;
 
   // Sessions (merged AM/PM/WD variants)
@@ -456,24 +468,54 @@ function main() {
       curriculumType
     );
 
-    // Determine curriculum
-    let curriculum: KGCurriculum = "unknown";
+    // Determine curriculum (two-level structure)
+    let curriculumCategory: KGCurriculumCategory = "unknown";
+    let curriculumTypeVal: KGCurriculumType = null;
     let curriculumConf: "high" | "medium" | "low" = "low";
 
     if (curriculumType === "本地") {
-      curriculum = "local";
+      curriculumCategory = "local";
+      curriculumTypeVal = joinedKGP ? "kgp" : "non_kgp";
       curriculumConf = "high";
     } else if (curriculumType === "非本地") {
-      curriculum = "non_local";
-      curriculumConf = joinedKGP ? "high" : "medium";
+      curriculumCategory = "non_local";
+      curriculumConf = "medium";
 
-      // Check for specific curricula
+      // Determine specific non-local curriculum type
       if (curriculumText.includes("國際文憑") || curriculumText.includes("IB")) {
-        curriculum = "ib";
+        curriculumTypeVal = "ib";
         curriculumConf = "high";
       } else if (kg.nameEn && (kg.nameEn.includes("Montessori") || kg.name?.includes("蒙特梭利"))) {
-        curriculum = "montessori_intl";
+        curriculumTypeVal = "montessori";
         curriculumConf = "high";
+      } else if (curriculumText.includes("英國") || kg.nameEn?.includes("British")) {
+        curriculumTypeVal = "british";
+        curriculumConf = "medium";
+      } else {
+        // Includes Japanese, German, American, etc.
+        curriculumTypeVal = "other";
+      }
+    } else {
+      // Unknown - infer from school name (no EDB profile data)
+      const nameEn = (kg.nameEn || "").toUpperCase();
+      const nameTc = kg.name || "";
+
+      // Check for international/non-local indicators in name
+      const isLikelyNonLocal =
+        nameEn.includes("INTERNATIONAL") ||
+        nameEn.includes("MONTESSORI") ||
+        nameTc.includes("國際") ||
+        nameTc.includes("蒙特梭利");
+
+      if (isLikelyNonLocal) {
+        curriculumCategory = "non_local";
+        curriculumTypeVal = "other";
+        curriculumConf = "low";
+      } else {
+        // Default to local non-KGP (private local schools)
+        curriculumCategory = "local";
+        curriculumTypeVal = "non_kgp";
+        curriculumConf = "low";
       }
     }
 
@@ -506,7 +548,8 @@ function main() {
         district18: kg.district18 || "",
         address: kg.address || "",
         nature,
-        curriculum,
+        curriculumCategory,
+        curriculumType: curriculumTypeVal,
         joinedKGP,
         sessions: session ? [session] : [],
         variantIds: [kg.id],
@@ -557,7 +600,8 @@ function main() {
       non_profit: kindergartens.filter((k) => k.nature === "non_profit").length,
       private: kindergartens.filter((k) => k.nature === "private").length,
     },
-    byCurriculum: {} as Record<string, number>,
+    byCurriculumCategory: {} as Record<string, number>,
+    byCurriculumType: {} as Record<string, number>,
     byPedagogy: {} as Record<string, number>,
     byLanguage: {} as Record<string, number>,
     joinedKGP: kindergartens.filter((k) => k.joinedKGP).length,
@@ -567,7 +611,10 @@ function main() {
   };
 
   for (const kg of kindergartens) {
-    stats.byCurriculum[kg.curriculum] = (stats.byCurriculum[kg.curriculum] || 0) + 1;
+    stats.byCurriculumCategory[kg.curriculumCategory] = (stats.byCurriculumCategory[kg.curriculumCategory] || 0) + 1;
+    if (kg.curriculumType) {
+      stats.byCurriculumType[kg.curriculumType] = (stats.byCurriculumType[kg.curriculumType] || 0) + 1;
+    }
     stats.byDistrict[kg.district18] = (stats.byDistrict[kg.district18] || 0) + 1;
 
     for (const tag of kg.pedagogyTags) {
@@ -591,7 +638,13 @@ function main() {
 // DO NOT EDIT MANUALLY - Run "npx tsx scripts/generate-kg-consolidated.ts" to regenerate
 
 export type KGNature = "international" | "non_profit" | "private";
-export type KGCurriculum = "local" | "non_local" | "ib" | "montessori_intl" | "unknown";
+
+// Two-level curriculum structure
+export type KGCurriculumCategory = "local" | "non_local" | "unknown";
+export type KGLocalCurriculumType = "kgp" | "non_kgp";
+export type KGNonLocalCurriculumType = "ib" | "montessori" | "british" | "other";
+export type KGCurriculumType = KGLocalCurriculumType | KGNonLocalCurriculumType | null;
+
 export type KGSession = "AM" | "PM" | "WD";
 
 export interface KindergartenEntry {
@@ -604,7 +657,8 @@ export interface KindergartenEntry {
   district18: string;
   address: string;
   nature: KGNature;
-  curriculum: KGCurriculum;
+  curriculumCategory: KGCurriculumCategory;
+  curriculumType: KGCurriculumType;
   joinedKGP: boolean;
   sessions: KGSession[];
   variantIds: string[];
@@ -650,10 +704,17 @@ export function getKindergartensByNature(nature: KGNature): KindergartenEntry[] 
 }
 
 /**
- * Get kindergartens by curriculum
+ * Get kindergartens by curriculum category
  */
-export function getKindergartensByCurriculum(curriculum: KGCurriculum): KindergartenEntry[] {
-  return kindergartens.filter((k) => k.curriculum === curriculum);
+export function getKindergartensByCurriculumCategory(category: KGCurriculumCategory): KindergartenEntry[] {
+  return kindergartens.filter((k) => k.curriculumCategory === category);
+}
+
+/**
+ * Get kindergartens by curriculum type
+ */
+export function getKindergartensByCurriculumType(type: KGCurriculumType): KindergartenEntry[] {
+  return kindergartens.filter((k) => k.curriculumType === type);
 }
 
 /**
@@ -684,7 +745,7 @@ export const kindergartenStats = ${JSON.stringify(stats, null, 2)};
   const csvHeaders = [
     "id", "school_code", "campus_code", "name", "name_en",
     "district", "district18", "address",
-    "nature", "curriculum", "joined_kgp",
+    "nature", "curriculum_category", "curriculum_type", "joined_kgp",
     "sessions", "variant_ids",
     "pedagogy_tags", "language_env",
     "tuition_min", "tuition_max",
@@ -702,7 +763,8 @@ export const kindergartenStats = ${JSON.stringify(stats, null, 2)};
     kg.district18,
     kg.address,
     kg.nature,
-    kg.curriculum,
+    kg.curriculumCategory,
+    kg.curriculumType || "",
     kg.joinedKGP ? "Y" : "N",
     kg.sessions.join("|"),
     kg.variantIds.join("|"),
@@ -747,11 +809,20 @@ Generated: ${new Date().toISOString()}
 | Non-profit (KGP) | ${stats.byNature.non_profit} | ${(stats.byNature.non_profit / stats.total * 100).toFixed(1)}% |
 | Private | ${stats.byNature.private} | ${(stats.byNature.private / stats.total * 100).toFixed(1)}% |
 
-## By Curriculum
+## By Curriculum Category
 
-| Curriculum | Count | % |
-|------------|-------|---|
-${Object.entries(stats.byCurriculum)
+| Category | Count | % |
+|----------|-------|---|
+${Object.entries(stats.byCurriculumCategory)
+  .sort((a, b) => b[1] - a[1])
+  .map(([k, v]) => `| ${k} | ${v} | ${(v / stats.total * 100).toFixed(1)}% |`)
+  .join("\n")}
+
+## By Curriculum Type
+
+| Type | Count | % |
+|------|-------|---|
+${Object.entries(stats.byCurriculumType)
   .sort((a, b) => b[1] - a[1])
   .map(([k, v]) => `| ${k} | ${v} | ${(v / stats.total * 100).toFixed(1)}% |`)
   .join("\n")}
@@ -826,8 +897,13 @@ Schools marked \`needs_review\` require manual verification.
   console.log(`  - Joined KGP: ${stats.joinedKGP}`);
   console.log(`  - Needs review: ${stats.needsReview}`);
 
-  console.log("\nCurriculum:");
-  for (const [k, v] of Object.entries(stats.byCurriculum).sort((a, b) => b[1] - a[1])) {
+  console.log("\nCurriculum Category:");
+  for (const [k, v] of Object.entries(stats.byCurriculumCategory).sort((a, b) => b[1] - a[1])) {
+    console.log(`  - ${k}: ${v}`);
+  }
+
+  console.log("\nCurriculum Type:");
+  for (const [k, v] of Object.entries(stats.byCurriculumType).sort((a, b) => b[1] - a[1])) {
     console.log(`  - ${k}: ${v}`);
   }
 

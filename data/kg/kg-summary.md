@@ -1,6 +1,6 @@
 # Consolidated Kindergarten Database
 
-Generated: 2026-01-19T14:20:47.384Z
+Generated: 2026-01-20T04:10:04.485Z
 
 ## Overview
 
@@ -20,15 +20,23 @@ Generated: 2026-01-19T14:20:47.384Z
 | Non-profit (KGP) | 931 | 94.7% |
 | Private | 0 | 0.0% |
 
-## By Curriculum
+## By Curriculum Category
 
-| Curriculum | Count | % |
-|------------|-------|---|
-| local | 796 | 81.0% |
-| non_local | 110 | 11.2% |
-| unknown | 58 | 5.9% |
+| Category | Count | % |
+|----------|-------|---|
+| local | 837 | 85.1% |
+| non_local | 146 | 14.9% |
+
+## By Curriculum Type
+
+| Type | Count | % |
+|------|-------|---|
+| kgp | 712 | 72.4% |
+| non_kgp | 125 | 12.7% |
+| other | 118 | 12.0% |
 | ib | 11 | 1.1% |
-| montessori_intl | 8 | 0.8% |
+| british | 9 | 0.9% |
+| montessori | 8 | 0.8% |
 
 ## Top Pedagogy Tags
 
