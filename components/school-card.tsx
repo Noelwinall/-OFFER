@@ -37,6 +37,10 @@ interface SchoolCardProps {
   sessions?: SessionType[];
   /** 是否顯示 session 標籤（幼稚園=true, 小學=false） */
   showSessions?: boolean;
+  /** 是否顯示 AI 深度分析按鈕 */
+  showAIAnalysis?: boolean;
+  /** 點擊 AI 深度分析按鈕的回調 */
+  onAIAnalysisPress?: (schoolId: string, schoolName: string) => void;
 }
 
 /**
@@ -51,6 +55,8 @@ export const SchoolCard = React.memo(function SchoolCard({
   onFavoritePress,
   sessions,
   showSessions = true,
+  showAIAnalysis = false,
+  onAIAnalysisPress,
 }: SchoolCardProps) {
   const colors = useColors();
 
@@ -66,6 +72,13 @@ export const SchoolCard = React.memo(function SchoolCard({
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
     onPress?.();
+  };
+
+  const handleAIAnalysisPress = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    onAIAnalysisPress?.(school.id, school.name);
   };
 
   return (
@@ -186,13 +199,33 @@ export const SchoolCard = React.memo(function SchoolCard({
           {getTuitionDisplayText(school)}
         </Text>
       )}
+
+      {/* AI 深度分析按鈕 */}
+      {showAIAnalysis && onAIAnalysisPress && (
+        <Pressable
+          onPress={handleAIAnalysisPress}
+          style={({ pressed }) => [
+            styles.aiAnalysisButton,
+            pressed && styles.aiAnalysisButtonPressed,
+          ]}
+        >
+          <View style={styles.aiAnalysisContent}>
+            <IconSymbol name="sparkles" size={14} color="#A78BFA" />
+            <Text style={styles.aiAnalysisText}>AI 深度分析</Text>
+          </View>
+          <View style={styles.aiAnalysisBadge}>
+            <Text style={styles.aiAnalysisBadgeText}>PRO</Text>
+          </View>
+        </Pressable>
+      )}
     </Pressable>
   );
 }, (prev, next) =>
   prev.school.id === next.school.id &&
   prev.isFavorite === next.isFavorite &&
   JSON.stringify(prev.sessions) === JSON.stringify(next.sessions) &&
-  prev.showSessions === next.showSessions
+  prev.showSessions === next.showSessions &&
+  prev.showAIAnalysis === next.showAIAnalysis
 );
 
 /**
@@ -413,5 +446,42 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: "600",
     color: "#FFFFFF",
+  },
+  // AI 深度分析按鈕
+  aiAnalysisButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginTop: 12,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    backgroundColor: "rgba(124, 58, 237, 0.1)",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "rgba(124, 58, 237, 0.2)",
+  },
+  aiAnalysisButtonPressed: {
+    opacity: 0.7,
+  },
+  aiAnalysisContent: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+  aiAnalysisText: {
+    fontSize: 13,
+    fontWeight: "500",
+    color: "#A78BFA",
+  },
+  aiAnalysisBadge: {
+    backgroundColor: "rgba(245, 158, 11, 0.2)",
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  aiAnalysisBadgeText: {
+    fontSize: 9,
+    fontWeight: "700",
+    color: "#F59E0B",
   },
 });
