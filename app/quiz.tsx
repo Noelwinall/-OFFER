@@ -1,17 +1,20 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useMemo } from "react";
 import { View, Text, TouchableOpacity, ScrollView, Platform, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { FilterContext } from "@/lib/filter-context";
-import type { Level } from "@/types/school";
+import type { Level, District18 } from "@/types/school";
+import { ALL_DISTRICT18, DISTRICT18_TO_DISTRICT } from "@/types/school";
 import type { KGSession, KGCurriculumCategoryFilter, KGCurriculumSubtypeFilter, KGPedagogyTag, KGLanguageEnv } from "@/constants/kg-filters";
 import { KG_PEDAGOGY_OPTIONS } from "@/constants/kg-pedagogy";
+import { schools } from "@/data/schools";
+import { kindergartens } from "@/data/kg/kg-database";
 import * as Haptics from "expo-haptics";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 
 /**
- * Q&A School Finder v1
+ * Q&A School Finder v1.1
  *
  * Stage Gate -> Kindergarten module (Primary/Secondary coming soon)
  *
@@ -20,37 +23,254 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
  * 2. 預算是否有限？
  * 3. 是否需要普通話環境教授中文？
  * 4. 喜歡什麼類型的課程？
- * 5. 喜歡什麼教學特色？(multi-select)
+ * 5. 喜歡什麼教學特色？(multi-select) - SKIP if IB/英國/蒙特梭利
+ * 6. 地區偏好？ - ONLY if results > 30
  */
+
+// Create KG lookup map
+const kgMap = new Map<string, typeof kindergartens[0]>();
+for (const kg of kindergartens) {
+  kgMap.set(kg.id, kg);
+  for (const variantId of kg.variantIds) {
+    kgMap.set(variantId, kg);
+  }
+}
+
+const kgSchools = schools.filter(s => s.level === "幼稚園");
+
+// Adjacent districts mapping for fallback searches
+const ADJACENT_DISTRICTS: Record<District18, District18[]> = {
+  // 港島
+  "中西區": ["灣仔區", "南區", "油尖旺區"],
+  "東區": ["灣仔區", "南區", "西貢區"],
+  "南區": ["中西區", "東區", "灣仔區", "離島區"],
+  "灣仔區": ["中西區", "東區", "南區", "九龍城區"],
+  // 九龍
+  "九龍城區": ["油尖旺區", "黃大仙區", "觀塘區", "灣仔區"],
+  "觀塘區": ["黃大仙區", "九龍城區", "西貢區"],
+  "深水埗區": ["油尖旺區", "九龍城區", "黃大仙區", "葵青區", "沙田區"],
+  "黃大仙區": ["九龍城區", "觀塘區", "深水埗區", "沙田區"],
+  "油尖旺區": ["深水埗區", "九龍城區", "中西區"],
+  // 新界
+  "離島區": ["南區", "荃灣區", "葵青區", "屯門區"],
+  "葵青區": ["深水埗區", "荃灣區", "離島區"],
+  "北區": ["大埔區", "元朗區", "沙田區"],
+  "西貢區": ["沙田區", "觀塘區", "東區"],
+  "沙田區": ["大埔區", "西貢區", "黃大仙區", "深水埗區", "北區"],
+  "大埔區": ["沙田區", "北區", "元朗區"],
+  "荃灣區": ["葵青區", "屯門區", "離島區", "元朗區"],
+  "屯門區": ["元朗區", "荃灣區", "離島區"],
+  "元朗區": ["屯門區", "北區", "大埔區", "荃灣區"],
+};
+
+// Minimum schools threshold for fallback
+const MIN_RESULTS_THRESHOLD = 5;
+
+interface FallbackResult {
+  districts: District18[];
+  pedagogy: KGPedagogyTag[];
+  hops: number;
+  relaxedPedagogy: boolean;
+  message: string;
+}
+
+// Get districts within N hops from starting district
+function getDistrictsWithinHops(district: District18, maxHops: number): District18[] {
+  const visited = new Set<District18>([district]);
+  let frontier = [district];
+
+  for (let hop = 0; hop < maxHops; hop++) {
+    const nextFrontier: District18[] = [];
+    for (const d of frontier) {
+      for (const neighbor of ADJACENT_DISTRICTS[d]) {
+        if (!visited.has(neighbor)) {
+          visited.add(neighbor);
+          nextFrontier.push(neighbor);
+        }
+      }
+    }
+    frontier = nextFrontier;
+    if (frontier.length === 0) break;
+  }
+
+  return Array.from(visited);
+}
+
+// Calculate fallback for low/zero result cases using iterative hop expansion
+function calculateFallback(
+  session: KGSession[] | null,
+  curriculumCategory: KGCurriculumCategoryFilter[] | null,
+  curriculumType: KGCurriculumSubtypeFilter[] | null,
+  languageEnv: KGLanguageEnv[] | null,
+  pedagogy: KGPedagogyTag[],
+  districts: District18[]
+): FallbackResult {
+  // If no district selected or multiple districts, no fallback needed
+  if (districts.length !== 1) {
+    return {
+      districts,
+      pedagogy,
+      hops: 0,
+      relaxedPedagogy: false,
+      message: "",
+    };
+  }
+
+  const district = districts[0];
+  const MAX_HOPS = 6;
+
+  // Try expanding hop by hop until we get enough results
+  for (let hops = 0; hops <= MAX_HOPS; hops++) {
+    const expandedDistricts = getDistrictsWithinHops(district, hops);
+    const count = calculateResultCount(session, curriculumCategory, curriculumType, languageEnv, pedagogy, expandedDistricts);
+
+    if (count >= MIN_RESULTS_THRESHOLD) {
+      return {
+        districts: expandedDistricts,
+        pedagogy,
+        hops,
+        relaxedPedagogy: false,
+        message: hops === 0 ? "" : "您所選的區域沒有足夠的匹配學校，我們為您選取了以下可能適合的學校",
+      };
+    }
+
+    if (expandedDistricts.length >= 18) break;
+  }
+
+  // Relax pedagogy filter (if pedagogy was specified)
+  if (pedagogy.length > 0) {
+    for (let hops = 0; hops <= MAX_HOPS; hops++) {
+      const expandedDistricts = getDistrictsWithinHops(district, hops);
+      const count = calculateResultCount(session, curriculumCategory, curriculumType, languageEnv, [], expandedDistricts);
+
+      if (count >= MIN_RESULTS_THRESHOLD) {
+        return {
+          districts: expandedDistricts,
+          pedagogy: [],
+          hops,
+          relaxedPedagogy: true,
+          message: "您所選的區域及教學特色沒有足夠的匹配學校，我們為您選取了以下可能適合的學校",
+        };
+      }
+
+      if (expandedDistricts.length >= 18) break;
+    }
+  }
+
+  // Last resort: return all districts with relaxed pedagogy
+  return {
+    districts: [],
+    pedagogy: [],
+    hops: -1,
+    relaxedPedagogy: true,
+    message: "您所選的條件沒有足夠的匹配學校，我們為您選取了以下可能適合的學校",
+  };
+}
+
+// Calculate expected result count based on current filters
+function calculateResultCount(
+  session: KGSession[] | null,
+  curriculumCategory: KGCurriculumCategoryFilter[] | null,
+  curriculumType: KGCurriculumSubtypeFilter[] | null,
+  languageEnv: KGLanguageEnv[] | null,
+  pedagogy: KGPedagogyTag[],
+  districts: District18[]
+): number {
+  return kgSchools.filter(school => {
+    const kgData = kgMap.get(school.id);
+    if (!kgData) return false;
+
+    // Session filter
+    if (session && session.length > 0) {
+      if (!session.some(s => kgData.sessions.includes(s))) return false;
+    }
+
+    // Curriculum category filter
+    if (curriculumCategory && curriculumCategory.length > 0) {
+      if (!curriculumCategory.includes(kgData.curriculumCategory as KGCurriculumCategoryFilter)) {
+        return false;
+      }
+    }
+
+    // Curriculum type filter
+    if (curriculumType && curriculumType.length > 0) {
+      if (!curriculumType.includes(kgData.curriculumType as KGCurriculumSubtypeFilter)) {
+        return false;
+      }
+    }
+
+    // Language environment filter (putonghua = exclude cantonese-only)
+    if (languageEnv && languageEnv.length > 0) {
+      const isPutonghuaFilter = languageEnv.includes("putonghua");
+      if (isPutonghuaFilter && languageEnv.length === 1) {
+        const isCantoneseOnly = kgData.languageEnv.length === 1 && kgData.languageEnv[0] === "cantonese";
+        if (isCantoneseOnly) return false;
+      } else {
+        if (!languageEnv.some(l => kgData.languageEnv.includes(l))) return false;
+      }
+    }
+
+    // Pedagogy filter
+    if (pedagogy.length > 0) {
+      if (!pedagogy.some(p => kgData.pedagogyTags.includes(p))) return false;
+    }
+
+    // District18 filter
+    if (districts.length > 0) {
+      if (!districts.includes(school.district18 as District18)) return false;
+    }
+
+    return true;
+  }).length;
+}
 
 // Q&A flow state
 type QAModule = "stage_gate" | "kg" | "primary_secondary_placeholder";
 
+// KG question IDs
+type KGQuestionId = "session" | "budget" | "putonghua" | "curriculum" | "pedagogy" | "district";
+
+// Curricula that should skip pedagogy question
+const SKIP_PEDAGOGY_CURRICULA: KGCurriculumSubtypeFilter[] = ["ib", "british", "montessori"];
+
+// Threshold for showing district question
+const DISTRICT_THRESHOLD = 30;
+
 interface QAState {
   module: QAModule;
-  kgStep: number;
+  kgQuestionId: KGQuestionId;
   // KG answers
   kgSession: KGSession[] | null;
   kgCurriculumCategory: KGCurriculumCategoryFilter[] | null;
   kgCurriculumType: KGCurriculumSubtypeFilter[] | null;
   kgLanguageEnv: KGLanguageEnv[] | null;
   kgPedagogy: KGPedagogyTag[];
+  kgDistricts: District18[];
 }
 
 const initialState: QAState = {
   module: "stage_gate",
-  kgStep: 0,
+  kgQuestionId: "session",
   kgSession: null,
   kgCurriculumCategory: null,
   kgCurriculumType: null,
   kgLanguageEnv: null,
   kgPedagogy: [],
+  kgDistricts: [],
 };
 
+// KG Question flow order
+const KG_QUESTION_ORDER: KGQuestionId[] = ["session", "budget", "putonghua", "curriculum", "pedagogy", "district"];
+
 // KG Question definitions
-const KG_QUESTIONS = [
-  {
-    id: "session",
+const KG_QUESTIONS: Record<KGQuestionId, {
+  title: string;
+  question: string;
+  subtitle?: string;
+  multiSelect?: boolean;
+  options: { label: string; value: string }[];
+}> = {
+  session: {
     title: "時段需求",
     question: "是否需要全日班？",
     options: [
@@ -58,8 +278,7 @@ const KG_QUESTIONS = [
       { label: "不一定", value: "no_preference" },
     ],
   },
-  {
-    id: "budget",
+  budget: {
     title: "學費預算",
     question: "預算是否有限？",
     options: [
@@ -67,8 +286,7 @@ const KG_QUESTIONS = [
       { label: "否", value: "flexible" },
     ],
   },
-  {
-    id: "putonghua",
+  putonghua: {
     title: "語言環境",
     question: "是否需要普通話環境教授中文？",
     options: [
@@ -76,8 +294,7 @@ const KG_QUESTIONS = [
       { label: "不一定", value: "no_preference" },
     ],
   },
-  {
-    id: "curriculum",
+  curriculum: {
     title: "課程偏好",
     question: "喜歡什麼類型的課程？",
     options: [
@@ -88,8 +305,7 @@ const KG_QUESTIONS = [
       { label: "其它國際課程", value: "other" },
     ],
   },
-  {
-    id: "pedagogy",
+  pedagogy: {
     title: "教學特色",
     question: "喜歡什麼教學特色？",
     subtitle: "可多選",
@@ -99,7 +315,36 @@ const KG_QUESTIONS = [
       value: opt.value,
     })),
   },
-];
+  district: {
+    title: "地區偏好",
+    question: "我們喜歡您的鬆弛感，那至少選個地區吧！",
+    subtitle: "(您孩子大概在哪上學應該知道吧？)",
+    multiSelect: true,
+    options: [
+      // 港島
+      { label: "中西區", value: "中西區" },
+      { label: "東區", value: "東區" },
+      { label: "南區", value: "南區" },
+      { label: "灣仔區", value: "灣仔區" },
+      // 九龍
+      { label: "九龍城區", value: "九龍城區" },
+      { label: "觀塘區", value: "觀塘區" },
+      { label: "深水埗區", value: "深水埗區" },
+      { label: "黃大仙區", value: "黃大仙區" },
+      { label: "油尖旺區", value: "油尖旺區" },
+      // 新界
+      { label: "離島區", value: "離島區" },
+      { label: "葵青區", value: "葵青區" },
+      { label: "北區", value: "北區" },
+      { label: "西貢區", value: "西貢區" },
+      { label: "沙田區", value: "沙田區" },
+      { label: "大埔區", value: "大埔區" },
+      { label: "荃灣區", value: "荃灣區" },
+      { label: "屯門區", value: "屯門區" },
+      { label: "元朗區", value: "元朗區" },
+    ],
+  },
+};
 
 export default function QuizScreen() {
   const router = useRouter();
@@ -113,20 +358,84 @@ export default function QuizScreen() {
 
   const { dispatch } = filterContext;
 
+  // Determine which questions to show based on answers
+  const getActiveQuestions = (): KGQuestionId[] => {
+    const questions: KGQuestionId[] = ["session", "budget", "putonghua", "curriculum"];
+
+    // Check if we should skip pedagogy
+    const shouldSkipPedagogy = state.kgCurriculumType &&
+      state.kgCurriculumType.some(t => SKIP_PEDAGOGY_CURRICULA.includes(t));
+
+    if (!shouldSkipPedagogy) {
+      questions.push("pedagogy");
+    }
+
+    // Check if we need district question (calculated after pedagogy or curriculum if skipped)
+    const resultCount = calculateResultCount(
+      state.kgSession,
+      state.kgCurriculumCategory,
+      state.kgCurriculumType,
+      state.kgLanguageEnv,
+      state.kgPedagogy,
+      []
+    );
+
+    if (resultCount > DISTRICT_THRESHOLD) {
+      questions.push("district");
+    }
+
+    return questions;
+  };
+
   // Calculate progress
-  const getTotalSteps = () => {
-    if (state.module === "stage_gate") return 1;
-    if (state.module === "kg") return 1 + KG_QUESTIONS.length;
-    return 1;
+  const activeQuestions = useMemo(() => {
+    if (state.module !== "kg") return [];
+    return getActiveQuestions();
+  }, [state.module, state.kgCurriculumType, state.kgPedagogy, state.kgSession, state.kgCurriculumCategory, state.kgLanguageEnv]);
+
+  const currentQuestionIndex = activeQuestions.indexOf(state.kgQuestionId);
+  const totalSteps = state.module === "kg" ? activeQuestions.length : 1;
+  const currentStep = state.module === "kg" ? currentQuestionIndex + 1 : 1;
+  const progress = state.module === "stage_gate" ? 0 : (currentStep / totalSteps) * 100;
+
+  // Get next question ID
+  const getNextQuestionId = (currentId: KGQuestionId, newState: QAState): KGQuestionId | null => {
+    // Recalculate active questions with new state
+    const shouldSkipPedagogy = newState.kgCurriculumType &&
+      newState.kgCurriculumType.some(t => SKIP_PEDAGOGY_CURRICULA.includes(t));
+
+    const resultCount = calculateResultCount(
+      newState.kgSession,
+      newState.kgCurriculumCategory,
+      newState.kgCurriculumType,
+      newState.kgLanguageEnv,
+      newState.kgPedagogy,
+      []
+    );
+
+    const questions: KGQuestionId[] = ["session", "budget", "putonghua", "curriculum"];
+    if (!shouldSkipPedagogy) {
+      questions.push("pedagogy");
+    }
+    if (resultCount > DISTRICT_THRESHOLD) {
+      questions.push("district");
+    }
+
+    const currentIndex = questions.indexOf(currentId);
+    if (currentIndex < questions.length - 1) {
+      return questions[currentIndex + 1];
+    }
+    return null;
   };
 
-  const getCurrentStep = () => {
-    if (state.module === "stage_gate") return 1;
-    if (state.module === "kg") return 1 + state.kgStep + 1;
-    return 1;
+  // Get previous question ID
+  const getPrevQuestionId = (currentId: KGQuestionId): KGQuestionId | null => {
+    const currentIndex = activeQuestions.indexOf(currentId);
+    if (currentIndex > 0) {
+      return activeQuestions[currentIndex - 1];
+    }
+    return null;
   };
-
-  const progress = (getCurrentStep() / getTotalSteps()) * 100;
 
   // Handle Stage Gate selection
   const handleStageSelect = (stage: Level) => {
@@ -136,7 +445,7 @@ export default function QuizScreen() {
 
     if (stage === "幼稚園") {
       // Enter KG module
-      setState({ ...state, module: "kg", kgStep: 0 });
+      setState({ ...state, module: "kg", kgQuestionId: "session" });
     } else {
       // Primary/Secondary - show placeholder
       setState({ ...state, module: "primary_secondary_placeholder" });
@@ -144,7 +453,7 @@ export default function QuizScreen() {
   };
 
   // Handle KG question answers
-  const handleKGAnswer = (questionId: string, value: string) => {
+  const handleKGAnswer = (questionId: KGQuestionId, value: string) => {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
@@ -194,12 +503,14 @@ export default function QuizScreen() {
         break;
     }
 
-    // Move to next question
-    if (state.kgStep < KG_QUESTIONS.length - 1) {
-      newState.kgStep = state.kgStep + 1;
+    // Determine next question
+    const nextQuestionId = getNextQuestionId(questionId, newState);
+
+    if (nextQuestionId) {
+      newState.kgQuestionId = nextQuestionId;
       setState(newState);
     } else {
-      // Last question (pedagogy) - complete the flow
+      // No more questions - complete the flow
       completeKGFlow(newState);
     }
   };
@@ -217,8 +528,31 @@ export default function QuizScreen() {
     setState({ ...state, kgPedagogy: newPedagogy });
   };
 
+  // Handle multi-select toggle for district
+  const handleDistrictToggle = (value: District18) => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+
+    const newDistricts = state.kgDistricts.includes(value)
+      ? state.kgDistricts.filter((d) => d !== value)
+      : [...state.kgDistricts, value];
+
+    setState({ ...state, kgDistricts: newDistricts });
+  };
+
   // Complete KG flow and apply filters
   const completeKGFlow = (finalState: QAState) => {
+    // Calculate fallback if needed for low/zero results
+    const fallback = calculateFallback(
+      finalState.kgSession,
+      finalState.kgCurriculumCategory,
+      finalState.kgCurriculumType,
+      finalState.kgLanguageEnv,
+      finalState.kgPedagogy,
+      finalState.kgDistricts
+    );
+
     // Reset all filters first
     dispatch({ type: "RESET_FILTERS" });
 
@@ -253,23 +587,43 @@ export default function QuizScreen() {
       });
     }
 
-    // Apply pedagogy tags
-    if (finalState.kgPedagogy.length > 0) {
-      finalState.kgPedagogy.forEach((tag) => {
+    // Apply pedagogy tags (use fallback pedagogy which may be relaxed)
+    if (fallback.pedagogy.length > 0) {
+      fallback.pedagogy.forEach((tag) => {
         dispatch({ type: "TOGGLE_KG_PEDAGOGY", payload: tag });
       });
     }
 
-    // Navigate to search (which will show filtered results)
-    router.replace("/(tabs)/search");
+    // Apply district18 filter (use fallback districts which may be expanded)
+    if (fallback.districts.length > 0) {
+      fallback.districts.forEach((district) => {
+        dispatch({ type: "TOGGLE_DISTRICT18", payload: district });
+      });
+    }
+
+    // Navigate to search with fallback message if applicable
+    if (fallback.message) {
+      router.replace({
+        pathname: "/(tabs)/search",
+        params: { fallbackMessage: fallback.message },
+      });
+    } else {
+      router.replace("/(tabs)/search");
+    }
   };
 
-  // Handle completing pedagogy (last question)
-  const handleCompletePedagogy = () => {
+  // Handle completing multi-select questions
+  const handleCompleteMultiSelect = () => {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
     }
-    completeKGFlow(state);
+
+    const nextQuestionId = getNextQuestionId(state.kgQuestionId, state);
+    if (nextQuestionId) {
+      setState({ ...state, kgQuestionId: nextQuestionId });
+    } else {
+      completeKGFlow(state);
+    }
   };
 
   // Handle back navigation
@@ -281,8 +635,9 @@ export default function QuizScreen() {
     if (state.module === "stage_gate") {
       router.back();
     } else if (state.module === "kg") {
-      if (state.kgStep > 0) {
-        setState({ ...state, kgStep: state.kgStep - 1 });
+      const prevQuestionId = getPrevQuestionId(state.kgQuestionId);
+      if (prevQuestionId) {
+        setState({ ...state, kgQuestionId: prevQuestionId });
       } else {
         // Go back to stage gate
         setState({ ...initialState });
@@ -299,6 +654,19 @@ export default function QuizScreen() {
     }
     setState({ ...initialState });
   };
+
+  // Calculate current result count for display
+  const currentResultCount = useMemo(() => {
+    if (state.module !== "kg") return 0;
+    return calculateResultCount(
+      state.kgSession,
+      state.kgCurriculumCategory,
+      state.kgCurriculumType,
+      state.kgLanguageEnv,
+      state.kgPedagogy,
+      state.kgDistricts
+    );
+  }, [state]);
 
   // Render Stage Gate
   const renderStageGate = () => (
@@ -353,8 +721,21 @@ export default function QuizScreen() {
 
   // Render KG question
   const renderKGQuestion = () => {
-    const question = KG_QUESTIONS[state.kgStep];
-    const isLastQuestion = state.kgStep === KG_QUESTIONS.length - 1;
+    const question = KG_QUESTIONS[state.kgQuestionId];
+    const isMultiSelect = question.multiSelect;
+
+    // Get current selection for multi-select
+    const getMultiSelectValues = (): string[] => {
+      if (state.kgQuestionId === "pedagogy") {
+        return state.kgPedagogy;
+      }
+      if (state.kgQuestionId === "district") {
+        return state.kgDistricts;
+      }
+      return [];
+    };
+
+    const multiSelectValues = getMultiSelectValues();
 
     return (
       <View style={styles.questionContainer}>
@@ -365,15 +746,21 @@ export default function QuizScreen() {
         )}
 
         <View style={styles.optionsContainer}>
-          {question.multiSelect ? (
-            // Multi-select for pedagogy
+          {isMultiSelect ? (
+            // Multi-select for pedagogy and district
             <>
               {question.options.map((option) => {
-                const isSelected = state.kgPedagogy.includes(option.value as KGPedagogyTag);
+                const isSelected = multiSelectValues.includes(option.value);
                 return (
                   <TouchableOpacity
                     key={option.value}
-                    onPress={() => handlePedagogyToggle(option.value as KGPedagogyTag)}
+                    onPress={() => {
+                      if (state.kgQuestionId === "pedagogy") {
+                        handlePedagogyToggle(option.value as KGPedagogyTag);
+                      } else if (state.kgQuestionId === "district") {
+                        handleDistrictToggle(option.value as District18);
+                      }
+                    }}
                     style={[
                       styles.optionButton,
                       isSelected && styles.optionButtonSelected,
@@ -399,7 +786,7 @@ export default function QuizScreen() {
             question.options.map((option) => (
               <TouchableOpacity
                 key={option.value}
-                onPress={() => handleKGAnswer(question.id, option.value)}
+                onPress={() => handleKGAnswer(state.kgQuestionId, option.value)}
                 style={styles.optionButton}
                 activeOpacity={0.7}
               >
@@ -409,17 +796,26 @@ export default function QuizScreen() {
           )}
         </View>
 
-        {/* Show complete button for multi-select (pedagogy) */}
-        {isLastQuestion && question.multiSelect && (
+        {/* Show complete button for multi-select questions */}
+        {isMultiSelect && (
           <TouchableOpacity
-            onPress={handleCompletePedagogy}
+            onPress={handleCompleteMultiSelect}
             style={styles.completeButton}
             activeOpacity={0.8}
           >
             <Text style={styles.completeButtonText}>
-              {state.kgPedagogy.length > 0 ? "完成選擇" : "跳過此題並完成"}
+              {multiSelectValues.length > 0 ? "完成選擇" : "跳過此題"}
             </Text>
           </TouchableOpacity>
+        )}
+
+        {/* Show current result count hint */}
+        {state.kgQuestionId !== "session" && (
+          <View style={styles.resultHint}>
+            <Text style={styles.resultHintText}>
+              目前符合條件：{currentResultCount} 所學校
+            </Text>
+          </View>
         )}
       </View>
     );
@@ -452,7 +848,7 @@ export default function QuizScreen() {
               <View style={[styles.progressFill, { width: `${progress}%` }]} />
             </View>
             <Text style={styles.progressText}>
-              問題 {state.kgStep + 1} / {KG_QUESTIONS.length}
+              問題 {currentStep} / {totalSteps}
             </Text>
           </View>
         )}
@@ -613,6 +1009,15 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "NotoSerifSC-Bold",
     letterSpacing: 1,
+  },
+  resultHint: {
+    marginTop: 24,
+    alignItems: "center",
+  },
+  resultHintText: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.4)",
+    fontFamily: "NotoSerifSC-Regular",
   },
   placeholderContainer: {
     flex: 1,
