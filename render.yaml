@@ -6,7 +6,7 @@ staticSites:
       pnpm install --frozen-lockfile
       rm -rf node_modules/.cache .expo/web/cache web-dist
       pnpm exec expo export --platform web --clear --output-dir web-dist
-    staticPublishPath: ./web-dist
+    publishPath: web-dist
     headers:
       - path: /*
         name: Cache-Control
