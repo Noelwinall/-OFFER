@@ -68,8 +68,11 @@ async function startServer() {
       hasForgeApiKey: !!process.env.BUILT_IN_FORGE_API_KEY,
       forgeApiKeyLength: process.env.BUILT_IN_FORGE_API_KEY?.length || 0,
       forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL || "not set",
+      hasGoogleClientId: !!process.env.GOOGLE_CLIENT_ID,
+      hasGoogleClientSecret: !!process.env.GOOGLE_CLIENT_SECRET,
+      frontendUrl: process.env.FRONTEND_URL || "not set",
       nodeEnv: process.env.NODE_ENV,
-      commit: "e08c637-debug2",
+      commit: "40dcd45-google-oauth",
     });
   });
 
