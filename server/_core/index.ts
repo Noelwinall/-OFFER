@@ -65,8 +65,11 @@ async function startServer() {
     res.json({
       hasAdminApiKey: !!process.env.ADMIN_API_KEY,
       adminApiKeyLength: process.env.ADMIN_API_KEY?.length || 0,
+      hasForgeApiKey: !!process.env.BUILT_IN_FORGE_API_KEY,
+      forgeApiKeyLength: process.env.BUILT_IN_FORGE_API_KEY?.length || 0,
+      forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL || "not set",
       nodeEnv: process.env.NODE_ENV,
-      commit: "bb616d5",
+      commit: "e08c637-debug2",
     });
   });
 
