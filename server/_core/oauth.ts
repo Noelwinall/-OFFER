@@ -184,11 +184,10 @@ export function registerOAuthRoutes(app: Express) {
       return;
     }
 
-    // Always use https for Railway (SSL terminated at proxy)
+    // Build redirect URI - always use https
     const host = req.get("host") || "";
-    const isRailway = host.includes("railway.app");
-    const protocol = isRailway ? "https" : (req.get("x-forwarded-proto") || req.protocol);
-    const redirectUri = `${protocol}://${host}/api/auth/google/callback`;
+    const redirectUri = `https://${host}/api/auth/google/callback`;
+    console.log("[Google OAuth] Redirect URI:", redirectUri);
     const state = Buffer.from(JSON.stringify({ redirectUri })).toString("base64");
 
     const params = new URLSearchParams({
@@ -222,11 +221,9 @@ export function registerOAuthRoutes(app: Express) {
     }
 
     try {
-      // Always use https for Railway (SSL terminated at proxy)
+      // Build redirect URI - always use https
       const host = req.get("host") || "";
-      const isRailway = host.includes("railway.app");
-      const protocol = isRailway ? "https" : (req.get("x-forwarded-proto") || req.protocol);
-      const redirectUri = `${protocol}://${host}/api/auth/google/callback`;
+      const redirectUri = `https://${host}/api/auth/google/callback`;
 
       // Exchange code for tokens
       const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {

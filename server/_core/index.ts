@@ -83,7 +83,7 @@ async function startServer() {
       hasGoogleClientSecret: !!process.env.GOOGLE_CLIENT_SECRET,
       frontendUrl: process.env.FRONTEND_URL || "not set",
       nodeEnv: process.env.NODE_ENV,
-      commit: "40dcd45-google-oauth",
+      commit: "efea3e2-https-fix",
     });
   });
 
