@@ -19,8 +19,9 @@ COPY . .
 ARG EXPO_PUBLIC_API_BASE_URL
 ENV EXPO_PUBLIC_API_BASE_URL=$EXPO_PUBLIC_API_BASE_URL
 
-# Build Expo web
-RUN pnpm exec expo export --platform web --output-dir web-dist
+# Clear caches and build Expo web
+RUN rm -rf node_modules/.cache .expo/web/cache node_modules/react-native-css-interop/.cache && \
+    pnpm exec expo export --platform web --clear --output-dir web-dist
 
 # Production stage - serve with nginx
 FROM nginx:alpine
