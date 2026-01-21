@@ -1,0 +1,42 @@
+# Frontend Dockerfile - Expo Web Static Site
+FROM node:20-slim AS builder
+
+WORKDIR /app
+
+# Install pnpm
+RUN corepack enable && corepack prepare pnpm@9.12.0 --activate
+
+# Copy package files
+COPY package.json pnpm-lock.yaml ./
+
+# Install dependencies
+RUN pnpm install --frozen-lockfile
+
+# Copy source code
+COPY . .
+
+# Set the API URL at build time
+ARG EXPO_PUBLIC_API_BASE_URL
+ENV EXPO_PUBLIC_API_BASE_URL=$EXPO_PUBLIC_API_BASE_URL
+
+# Build Expo web
+RUN pnpm exec expo export --platform web --output-dir web-dist
+
+# Production stage - serve with nginx
+FROM nginx:alpine
+
+# Copy built files
+COPY --from=builder /app/web-dist /usr/share/nginx/html
+
+# Copy nginx config for SPA routing
+RUN echo 'server { \
+    listen 80; \
+    location / { \
+        root /usr/share/nginx/html; \
+        try_files $uri $uri/ /index.html; \
+    } \
+}' > /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
