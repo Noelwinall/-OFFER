@@ -2,7 +2,7 @@ services:
   - type: web
     runtime: static
     name: hk-edu-app
-    buildCommand: corepack enable && corepack prepare pnpm@9.12.0 --activate && pnpm install --frozen-lockfile && rm -rf node_modules/.cache .expo/web/cache web-dist && pnpm exec expo export --platform web --clear --output-dir web-dist
+    buildCommand: corepack enable && corepack prepare pnpm@9.12.0 --activate && pnpm install --frozen-lockfile && rm -rf node_modules/.cache .expo/web/cache web-dist node_modules/react-native-css-interop/.cache && pnpm exec expo export --platform web --clear --output-dir web-dist
     staticPublishPath: ./web-dist
     envVars:
       - key: NODE_VERSION
