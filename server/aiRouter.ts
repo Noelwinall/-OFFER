@@ -29,7 +29,7 @@ import { createHash } from "crypto";
 // ============================================================================
 
 /** Model version - bump when switching LLM models */
-const MODEL_VERSION = "gemini-2.5-flash-v1";
+const MODEL_VERSION = "gpt-4o-mini-v1";
 
 /** Prompt version - bump when changing system/user prompts */
 const PROMPT_VERSION = "kg-enhanced-v1";
