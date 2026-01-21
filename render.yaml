@@ -6,8 +6,8 @@ services:
       corepack prepare pnpm@9.12.0 --activate
       pnpm install --frozen-lockfile
       rm -rf node_modules/.cache .expo/web/cache dist
-      pnpm exec expo export --platform web --clear
-    staticPublishPath: ./dist
+      pnpm exec expo export --platform web --clear --output-dir web-dist
+    staticPublishPath: ./web-dist
     headers:
       - path: /*
         name: Cache-Control
