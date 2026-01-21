@@ -60,6 +60,16 @@ async function startServer() {
     res.json({ ok: true, timestamp: Date.now() });
   });
 
+  // Debug endpoint to verify deployment (remove in production)
+  app.get("/api/debug/config", (_req, res) => {
+    res.json({
+      hasAdminApiKey: !!process.env.ADMIN_API_KEY,
+      adminApiKeyLength: process.env.ADMIN_API_KEY?.length || 0,
+      nodeEnv: process.env.NODE_ENV,
+      commit: "bb616d5",
+    });
+  });
+
   app.use(
     "/api/trpc",
     createExpressMiddleware({
