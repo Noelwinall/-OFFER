@@ -1,12 +1,22 @@
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Platform } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { useAuth } from "@/hooks/use-auth";
+import { getGoogleLoginUrl } from "@/constants/oauth";
 
 export default function ProfileScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const { user, isAuthenticated, loading, logout } = useAuth();
+
+  const handleLogin = () => {
+    if (Platform.OS === "web") {
+      // Redirect to Google OAuth
+      window.location.href = getGoogleLoginUrl();
+    }
+  };
 
   const menuItems = [
     { icon: "heart.fill", title: "我的收藏", subtitle: "查看已收藏的學校", onPress: () => router.push("/(tabs)/favorites") },
@@ -36,12 +46,31 @@ export default function ProfileScreen() {
               <IconSymbol name="person.fill" size={48} color="#00D9FF" />
             </View>
           </View>
-          <Text style={styles.guestText}>訪客用戶</Text>
-          <Text style={styles.guestSubtext}>登入後可同步收藏與瀏覽記錄</Text>
-          
-          <TouchableOpacity style={styles.loginButton} activeOpacity={0.8}>
-            <Text style={styles.loginButtonText}>登入 / 註冊</Text>
-          </TouchableOpacity>
+
+          {loading ? (
+            <>
+              <Text style={styles.guestText}>載入中...</Text>
+              <Text style={styles.guestSubtext}>正在檢查登入狀態</Text>
+            </>
+          ) : isAuthenticated && user ? (
+            <>
+              <Text style={styles.guestText}>{user.name || "用戶"}</Text>
+              <Text style={styles.guestSubtext}>{user.email || "已登入"}</Text>
+
+              <TouchableOpacity style={styles.logoutButton} activeOpacity={0.8} onPress={logout}>
+                <Text style={styles.logoutButtonText}>登出</Text>
+              </TouchableOpacity>
+            </>
+          ) : (
+            <>
+              <Text style={styles.guestText}>訪客用戶</Text>
+              <Text style={styles.guestSubtext}>登入後可同步收藏與瀏覽記錄</Text>
+
+              <TouchableOpacity style={styles.loginButton} activeOpacity={0.8} onPress={handleLogin}>
+                <Text style={styles.loginButtonText}>使用 Google 登入</Text>
+              </TouchableOpacity>
+            </>
+          )}
         </View>
 
         {/* 功能菜單 */}
@@ -87,7 +116,7 @@ export default function ProfileScreen() {
         </View>
 
         {/* 版本信息 */}
-        <Text style={styles.versionText}>HK Edu App v1.0.0</Text>
+        <Text style={styles.versionText}>有OFFER v1.0.0</Text>
       </ScrollView>
     </View>
   );
@@ -149,6 +178,21 @@ const styles = StyleSheet.create({
   },
   loginButtonText: {
     color: "#0F1629",
+    fontSize: 16,
+    fontWeight: "600",
+    fontFamily: "NotoSerifSC-Bold",
+    letterSpacing: 1,
+  },
+  logoutButton: {
+    backgroundColor: "rgba(255,255,255,0.1)",
+    paddingHorizontal: 40,
+    paddingVertical: 14,
+    borderRadius: 25,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.2)",
+  },
+  logoutButtonText: {
+    color: "#FFFFFF",
     fontSize: 16,
     fontWeight: "600",
     fontFamily: "NotoSerifSC-Bold",

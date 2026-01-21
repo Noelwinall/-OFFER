@@ -2,13 +2,8 @@
 import "./scripts/load-env.js";
 import type { ExpoConfig } from "expo/config";
 
-// Bundle ID format: space.manus.<project_name_dots>.<timestamp>
-// e.g., "my-app" created at 2024-01-15 10:30:45 -> "space.manus.my.app.t20240115103045"
-const bundleId = "space.manus.hk.edu.app.t20260108201726";
-// Extract timestamp from bundle ID and prefix with "manus" for deep link scheme
-// e.g., "space.manus.my.app.t20240115103045" -> "manus20240115103045"
-const timestamp = bundleId.split(".").pop()?.replace(/^t/, "") ?? "";
-const schemeFromBundleId = `manus${timestamp}`;
+// Bundle ID for youofferhk app
+const bundleId = "com.youofferhk.app";
 
 const env = {
   // App branding - update these values directly (do not use env vars)
@@ -17,7 +12,7 @@ const env = {
   // S3 URL of the app logo - set this to the URL returned by generate_image when creating custom logo
   // Leave empty to use the default icon from assets/images/icon.png
   logoUrl: "",
-  scheme: schemeFromBundleId,
+  scheme: "youofferhk",
   iosBundleId: bundleId,
   androidPackage: bundleId,
 };

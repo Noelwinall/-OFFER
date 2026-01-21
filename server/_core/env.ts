@@ -8,6 +8,13 @@ export const ENV = {
   forgeApiUrl: process.env.BUILT_IN_FORGE_API_URL ?? "",
   forgeApiKey: process.env.BUILT_IN_FORGE_API_KEY ?? "",
 
+  // Google OAuth credentials
+  googleClientId: process.env.GOOGLE_CLIENT_ID ?? "",
+  googleClientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
+
+  // Frontend URL for OAuth redirects
+  frontendUrl: process.env.FRONTEND_URL ?? "http://localhost:8081",
+
   // Pro user beta allowlist (comma-separated user IDs or emails)
   proUserIds: process.env.PRO_USER_IDS ?? "",
   proEmails: process.env.PRO_EMAILS ?? "",

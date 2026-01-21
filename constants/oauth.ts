@@ -1,12 +1,6 @@
 import * as Linking from "expo-linking";
 import * as ReactNative from "react-native";
 
-// Extract scheme from bundle ID (last segment timestamp, prefixed with "manus")
-// e.g., "space.manus.my.app.t20240115103045" -> "manus20240115103045"
-const bundleId = "space.manus.hk.edu.app.t20260108201726";
-const timestamp = bundleId.split(".").pop()?.replace(/^t/, "") ?? "";
-const schemeFromBundleId = `manus${timestamp}`;
-
 const env = {
   portal: process.env.EXPO_PUBLIC_OAUTH_PORTAL_URL ?? "",
   server: process.env.EXPO_PUBLIC_OAUTH_SERVER_URL ?? "",
@@ -14,7 +8,7 @@ const env = {
   ownerId: process.env.EXPO_PUBLIC_OWNER_OPEN_ID ?? "",
   ownerName: process.env.EXPO_PUBLIC_OWNER_NAME ?? "",
   apiBaseUrl: process.env.EXPO_PUBLIC_API_BASE_URL ?? "",
-  deepLinkScheme: schemeFromBundleId,
+  deepLinkScheme: "youofferhk",
 };
 
 export const OAUTH_PORTAL_URL = env.portal;
@@ -87,4 +81,12 @@ export const getLoginUrl = () => {
   url.searchParams.set("type", "signIn");
 
   return url.toString();
+};
+
+/**
+ * Get the Google OAuth login URL (web only).
+ * This redirects to the backend which initiates the Google OAuth flow.
+ */
+export const getGoogleLoginUrl = () => {
+  return `${getApiBaseUrl()}/api/auth/google`;
 };
