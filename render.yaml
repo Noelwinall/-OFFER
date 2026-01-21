@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: hk-edu-app
+    runtime: static
+    buildCommand: |
+      npm install -g pnpm
+      pnpm install
+      rm -rf node_modules/.cache .expo/web/cache dist
+      npx expo export --platform web --clear
+    staticPublishPath: ./dist
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+    envVars:
+      - key: NODE_VERSION
+        value: 20

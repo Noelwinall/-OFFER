@@ -6,6 +6,9 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { FilterSheet } from "@/components/filter-sheet";
 import { ActiveFilterTags } from "@/components/active-filter-tags";
 import { SortSelector } from "@/components/sort-selector";
+import { AIBriefSection } from "@/components/ai-brief-section";
+import { EnhancedBriefModal } from "@/components/enhanced-brief-modal";
+import { canGenerateEnhanced, type UserPlan } from "@/lib/services/briefs";
 import { useRouter } from "expo-router";
 import { schools } from "@/data/schools";
 import { FavoritesStorage } from "@/lib/storage";
@@ -70,6 +73,13 @@ export default function SearchScreen() {
 
   const { state: filters } = filterContext;
 
+  // AI 深度分析 Modal 狀態
+  const [aiModalVisible, setAiModalVisible] = useState(false);
+  const [selectedSchool, setSelectedSchool] = useState<{ id: string; name: string } | null>(null);
+
+  // TODO: Replace with real user plan from auth/subscription context
+  const userPlan: UserPlan = "free";
+
   // 判斷是否應顯示學校列表：有搜尋詞 OR 有活躍篩選條件
   const shouldShowList = debouncedSearch.trim().length > 0 || hasActiveFilters(filters);
 
@@ -96,6 +106,31 @@ export default function SearchScreen() {
     return favorites.includes(item.id);
   }, [favorites]);
 
+  // Handle AI 深度分析 button press
+  const handleAIAnalysisPress = useCallback((schoolId: string, schoolName: string) => {
+    // Check if user can access enhanced analysis
+    const quota = canGenerateEnhanced(userPlan);
+    if (!quota.allowed) {
+      // Free user -> navigate to paywall
+      router.push("/paywall" as any);
+      return;
+    }
+    // Pro user -> open modal
+    setSelectedSchool({ id: schoolId, name: schoolName });
+    setAiModalVisible(true);
+  }, [userPlan, router]);
+
+  // Close AI modal
+  const handleCloseAIModal = useCallback(() => {
+    setAiModalVisible(false);
+    setSelectedSchool(null);
+  }, []);
+
+  // Handle upgrade press from modal
+  const handleUpgradePress = useCallback(() => {
+    router.push("/paywall" as any);
+  }, [router]);
+
   // Stable renderItem callback（支援幼稚園班別標籤，小學不顯示）
   const renderSchoolItem = useCallback(({ item }: { item: GroupedSchool }) => (
     <SchoolCard
@@ -105,8 +140,10 @@ export default function SearchScreen() {
       onFavoritePress={() => handleFavoriteToggle(item.id)}
       sessions={item.__sessions}
       showSessions={item.__showSessions}
+      showAIAnalysis={filters.stage === "幼稚園"}
+      onAIAnalysisPress={handleAIAnalysisPress}
     />
-  ), [favorites, isSchoolFavorite]);
+  ), [favorites, isSchoolFavorite, filters.stage, handleAIAnalysisPress]);
 
   const loadFavorites = async () => {
     const favs = await FavoritesStorage.getAll();
@@ -240,6 +277,12 @@ export default function SearchScreen() {
             maxToRenderPerBatch={15}
             windowSize={5}
             removeClippedSubviews={Platform.OS !== "web"}
+            // AI Brief section for KG results
+            ListHeaderComponent={
+              filters.stage === "幼稚園" && displaySchools.length > 0 ? (
+                <AIBriefSection schools={displaySchools} />
+              ) : null
+            }
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
                 <Text style={styles.emptyText}>
@@ -280,6 +323,18 @@ export default function SearchScreen() {
           <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_DISCLAIMER}</Text>
         </View>
       </View>
+
+      {/* AI 深度分析 Modal */}
+      {selectedSchool && (
+        <EnhancedBriefModal
+          visible={aiModalVisible}
+          onClose={handleCloseAIModal}
+          schoolId={selectedSchool.id}
+          schoolName={selectedSchool.name}
+          userPlan={userPlan}
+          onUpgradePress={handleUpgradePress}
+        />
+      )}
     </View>
   );
 }
