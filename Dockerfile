@@ -14,8 +14,8 @@ RUN pnpm install --frozen-lockfile
 # Copy source code
 COPY . .
 
-# Build and record timestamp
-RUN pnpm build && echo "BUILD_TIME=$(date -u +%Y%m%d_%H%M%S)" > /app/build-info.txt && cat /app/build-info.txt
+# Clean and rebuild from scratch
+RUN rm -rf dist && pnpm build && echo "BUILD_TIME=$(date -u +%Y%m%d_%H%M%S)" > /app/build-info.txt && cat dist/index.js | head -c 500
 
 # Expose port
 EXPOSE 8080
