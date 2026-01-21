@@ -60,6 +60,17 @@ async function startServer() {
     res.json({ ok: true, timestamp: Date.now() });
   });
 
+  // Build info endpoint to debug deployments
+  app.get("/api/build-info", async (_req, res) => {
+    try {
+      const fs = await import("fs/promises");
+      const buildInfo = await fs.readFile("/app/build-info.txt", "utf-8");
+      res.json({ buildInfo: buildInfo.trim(), codeVersion: "v2-google-oauth" });
+    } catch (e) {
+      res.json({ buildInfo: "not found", codeVersion: "v2-google-oauth" });
+    }
+  });
+
   // Debug endpoint to verify deployment (remove in production)
   app.get("/api/debug/config", (_req, res) => {
     res.json({

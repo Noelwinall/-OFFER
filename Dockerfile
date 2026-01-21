@@ -11,11 +11,11 @@ COPY package.json pnpm-lock.yaml ./
 # Install dependencies
 RUN pnpm install --frozen-lockfile
 
-# Copy source code (cache bust: 726eea2)
+# Copy source code
 COPY . .
 
-# Build
-RUN pnpm build
+# Build and record timestamp
+RUN pnpm build && echo "BUILD_TIME=$(date -u +%Y%m%d_%H%M%S)" > /app/build-info.txt && cat /app/build-info.txt
 
 # Expose port
 EXPOSE 8080
