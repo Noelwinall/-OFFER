@@ -15,4 +15,7 @@ export const ENV = {
   // AI rate limiting (requests per window)
   aiRateLimitPerMinute: parseInt(process.env.AI_RATE_LIMIT_PER_MINUTE ?? "5", 10),
   aiRateLimitPerDay: parseInt(process.env.AI_RATE_LIMIT_PER_DAY ?? "50", 10),
+
+  // Admin API Key for testing/admin access (bypasses OAuth)
+  adminApiKey: process.env.ADMIN_API_KEY ?? "",
 };
