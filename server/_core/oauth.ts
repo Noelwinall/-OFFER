@@ -184,7 +184,9 @@ export function registerOAuthRoutes(app: Express) {
       return;
     }
 
-    const redirectUri = `${req.protocol}://${req.get("host")}/api/auth/google/callback`;
+    // Use x-forwarded-proto header for correct protocol behind proxy
+    const protocol = req.get("x-forwarded-proto") || req.protocol;
+    const redirectUri = `${protocol}://${req.get("host")}/api/auth/google/callback`;
     const state = Buffer.from(JSON.stringify({ redirectUri })).toString("base64");
 
     const params = new URLSearchParams({
@@ -218,7 +220,9 @@ export function registerOAuthRoutes(app: Express) {
     }
 
     try {
-      const redirectUri = `${req.protocol}://${req.get("host")}/api/auth/google/callback`;
+      // Use x-forwarded-proto header for correct protocol behind proxy
+      const protocol = req.get("x-forwarded-proto") || req.protocol;
+      const redirectUri = `${protocol}://${req.get("host")}/api/auth/google/callback`;
 
       // Exchange code for tokens
       const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
