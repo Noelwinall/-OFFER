@@ -9,19 +9,18 @@ RUN corepack enable && corepack prepare pnpm@9.12.0 --activate
 # Copy package files
 COPY package.json pnpm-lock.yaml ./
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# Install all dependencies (not frozen, to ensure peer deps are resolved)
+RUN pnpm install
 
 # Copy source code
 COPY . .
 
-# Set the API URL at build time
+# Set environment variables for build
 ARG EXPO_PUBLIC_API_BASE_URL
 ENV EXPO_PUBLIC_API_BASE_URL=$EXPO_PUBLIC_API_BASE_URL
 
-# Clear caches and build Expo web
-RUN rm -rf node_modules/.cache .expo/web/cache node_modules/react-native-css-interop/.cache && \
-    pnpm exec expo export --platform web --clear --output-dir web-dist
+# Build Expo web (matching Render's working build)
+RUN npx expo export --platform web --clear --output-dir web-dist
 
 # Production stage - serve with nginx
 FROM nginx:alpine
