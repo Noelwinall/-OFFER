@@ -1,0 +1,6 @@
+# Nixpacks configuration for Railway
+[phases.build]
+cmds = ["corepack enable", "corepack prepare pnpm@9.12.0 --activate", "pnpm install --frozen-lockfile", "pnpm build"]
+
+[start]
+cmd = "node dist/index.js"

@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+
+[build.nixpacks]
+# Don't require env vars at build time
+buildSecrets = []
+
+[deploy]
+startCommand = "node dist/index.js"
