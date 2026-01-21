@@ -11,7 +11,7 @@ COPY package.json pnpm-lock.yaml ./
 # Install dependencies
 RUN pnpm install --frozen-lockfile
 
-# Copy source code
+# Copy source code (cache bust: 726eea2)
 COPY . .
 
 # Build
