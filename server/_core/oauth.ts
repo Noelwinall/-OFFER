@@ -184,9 +184,11 @@ export function registerOAuthRoutes(app: Express) {
       return;
     }
 
-    // Always use https in production (Railway terminates SSL at proxy)
-    const protocol = ENV.isProduction ? "https" : (req.get("x-forwarded-proto") || req.protocol);
-    const redirectUri = `${protocol}://${req.get("host")}/api/auth/google/callback`;
+    // Always use https for Railway (SSL terminated at proxy)
+    const host = req.get("host") || "";
+    const isRailway = host.includes("railway.app");
+    const protocol = isRailway ? "https" : (req.get("x-forwarded-proto") || req.protocol);
+    const redirectUri = `${protocol}://${host}/api/auth/google/callback`;
     const state = Buffer.from(JSON.stringify({ redirectUri })).toString("base64");
 
     const params = new URLSearchParams({
@@ -220,9 +222,11 @@ export function registerOAuthRoutes(app: Express) {
     }
 
     try {
-      // Always use https in production (Railway terminates SSL at proxy)
-      const protocol = ENV.isProduction ? "https" : (req.get("x-forwarded-proto") || req.protocol);
-      const redirectUri = `${protocol}://${req.get("host")}/api/auth/google/callback`;
+      // Always use https for Railway (SSL terminated at proxy)
+      const host = req.get("host") || "";
+      const isRailway = host.includes("railway.app");
+      const protocol = isRailway ? "https" : (req.get("x-forwarded-proto") || req.protocol);
+      const redirectUri = `${protocol}://${host}/api/auth/google/callback`;
 
       // Exchange code for tokens
       const tokenResponse = await fetch("https://oauth2.googleapis.com/token", {
