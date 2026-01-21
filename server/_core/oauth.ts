@@ -184,8 +184,8 @@ export function registerOAuthRoutes(app: Express) {
       return;
     }
 
-    // Use x-forwarded-proto header for correct protocol behind proxy
-    const protocol = req.get("x-forwarded-proto") || req.protocol;
+    // Always use https in production (Railway terminates SSL at proxy)
+    const protocol = ENV.isProduction ? "https" : (req.get("x-forwarded-proto") || req.protocol);
     const redirectUri = `${protocol}://${req.get("host")}/api/auth/google/callback`;
     const state = Buffer.from(JSON.stringify({ redirectUri })).toString("base64");
 
@@ -220,8 +220,8 @@ export function registerOAuthRoutes(app: Express) {
     }
 
     try {
-      // Use x-forwarded-proto header for correct protocol behind proxy
-      const protocol = req.get("x-forwarded-proto") || req.protocol;
+      // Always use https in production (Railway terminates SSL at proxy)
+      const protocol = ENV.isProduction ? "https" : (req.get("x-forwarded-proto") || req.protocol);
       const redirectUri = `${protocol}://${req.get("host")}/api/auth/google/callback`;
 
       // Exchange code for tokens
