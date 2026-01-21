@@ -178,10 +178,23 @@ export function matchesAdvancedFilters(
     }
 
     // KG Language Environment filter
+    // Special logic for putonghua: exclude Cantonese-only schools, keep all others
+    // (English/international/Montessori schools should not be excluded)
     if (filters.kgLanguageEnv.length > 0) {
       if (!kgData || !kgData.languageEnv || kgData.languageEnv.length === 0) return false;
-      const hasMatchingLang = filters.kgLanguageEnv.some((l) => kgData.languageEnv.includes(l));
-      if (!hasMatchingLang) return false;
+
+      const isPutonghuaFilter = filters.kgLanguageEnv.includes("putonghua");
+
+      if (isPutonghuaFilter && filters.kgLanguageEnv.length === 1) {
+        // Putonghua-only filter: exclude Cantonese-only schools
+        // A school is Cantonese-only if it ONLY has "cantonese" in languageEnv
+        const isCantoneseOnly = kgData.languageEnv.length === 1 && kgData.languageEnv[0] === "cantonese";
+        if (isCantoneseOnly) return false;
+      } else {
+        // Standard OR logic for other language filters
+        const hasMatchingLang = filters.kgLanguageEnv.some((l) => kgData.languageEnv.includes(l));
+        if (!hasMatchingLang) return false;
+      }
     }
   }
 

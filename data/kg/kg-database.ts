@@ -512,7 +512,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -1945,7 +1946,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -1986,7 +1988,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -2401,7 +2404,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -3907,7 +3911,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -4371,7 +4376,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -4538,7 +4544,8 @@ export const kindergartens: KindergartenEntry[] = [
     "pedagogyTags": [],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -5759,7 +5766,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -5837,7 +5845,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -6409,7 +6418,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -7514,7 +7524,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -8172,7 +8183,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -9051,7 +9063,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -9334,7 +9347,8 @@ export const kindergartens: KindergartenEntry[] = [
       "language_dev"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -9771,7 +9785,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -9810,7 +9825,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -10049,7 +10065,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -10281,7 +10298,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -11222,7 +11240,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -11263,7 +11282,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -11304,7 +11324,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -11345,7 +11366,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -11386,7 +11408,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -11667,7 +11690,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -11711,7 +11735,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -12615,7 +12640,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -12973,7 +12999,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -13901,7 +13928,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -14626,7 +14654,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -14742,7 +14771,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -14923,7 +14953,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -15048,7 +15079,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "native_english"
+      "native_english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -15091,7 +15123,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "native_english"
+      "native_english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -15132,7 +15165,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "native_english"
+      "native_english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -18006,7 +18040,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -18171,7 +18206,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -18248,7 +18284,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -18645,7 +18682,8 @@ export const kindergartens: KindergartenEntry[] = [
       "project_learn"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -18772,7 +18810,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -19088,7 +19127,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -19205,7 +19245,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -19241,7 +19282,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "pedagogyTags": [],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -19978,7 +20020,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -20063,7 +20106,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -20437,7 +20481,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -20574,7 +20619,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -20777,7 +20823,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -20856,7 +20903,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -22428,7 +22476,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -22682,7 +22731,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -23124,7 +23174,8 @@ export const kindergartens: KindergartenEntry[] = [
       "project_learn"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -23451,7 +23502,8 @@ export const kindergartens: KindergartenEntry[] = [
       "trilingual",
       "english",
       "native_english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -23578,7 +23630,8 @@ export const kindergartens: KindergartenEntry[] = [
       "project_learn"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -24376,7 +24429,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -24700,7 +24754,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -25013,7 +25068,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -25566,7 +25622,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -25607,7 +25664,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -25648,7 +25706,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -25689,7 +25748,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -27081,7 +27141,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -27122,7 +27183,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -27163,7 +27225,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -27206,7 +27269,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -27438,7 +27502,8 @@ export const kindergartens: KindergartenEntry[] = [
       "project_learn"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -27592,7 +27657,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -27805,7 +27871,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -29364,7 +29431,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -30009,7 +30077,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -30390,7 +30459,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -30762,7 +30832,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -31861,7 +31932,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -32535,7 +32607,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -32858,7 +32931,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "native_english"
+      "native_english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -32899,7 +32973,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -32942,7 +33017,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "native_english"
+      "native_english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -32983,7 +33059,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "native_english"
+      "native_english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -34222,7 +34299,8 @@ export const kindergartens: KindergartenEntry[] = [
       "language_dev"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -34389,7 +34467,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -35108,7 +35187,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -35308,7 +35388,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "bilingual"
+      "bilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -36648,7 +36729,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -36693,7 +36775,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -37091,7 +37174,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -37204,7 +37288,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -37482,7 +37567,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -37735,7 +37821,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -37863,7 +37950,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -38045,7 +38133,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -38126,7 +38215,8 @@ export const kindergartens: KindergartenEntry[] = [
     "languageEnv": [
       "trilingual",
       "english",
-      "native_english"
+      "native_english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -38167,7 +38257,8 @@ export const kindergartens: KindergartenEntry[] = [
       "project_learn"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -38539,7 +38630,8 @@ export const kindergartens: KindergartenEntry[] = [
       "holistic"
     ],
     "languageEnv": [
-      "trilingual"
+      "trilingual",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -38581,7 +38673,8 @@ export const kindergartens: KindergartenEntry[] = [
     ],
     "languageEnv": [
       "trilingual",
-      "english"
+      "english",
+      "putonghua"
     ],
     "tuitionMin": 0,
     "tuitionMax": 0,
@@ -39706,7 +39799,7 @@ export const kindergartenStats = {
     "cantonese": 407,
     "english": 518,
     "native_english": 91,
-    "putonghua": 239,
+    "putonghua": 332,
     "trilingual": 202,
     "bilingual": 89
   },

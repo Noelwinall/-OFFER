@@ -1,6 +1,6 @@
 # Consolidated Kindergarten Database
 
-Generated: 2026-01-20T04:10:04.485Z
+Generated: 2026-01-20T07:38:57.694Z
 
 ## Overview
 
@@ -54,7 +54,7 @@ Generated: 2026-01-20T04:10:04.485Z
 |----------|-------|---|
 | english | 518 | 52.7% |
 | cantonese | 407 | 41.4% |
-| putonghua | 239 | 24.3% |
+| putonghua | 332 | 33.8% |
 | trilingual | 202 | 20.5% |
 | native_english | 91 | 9.3% |
 | bilingual | 89 | 9.1% |

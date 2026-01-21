@@ -352,6 +352,12 @@ function extractLanguageEnv(text: string, curriculumType: string): { langs: stri
     }
   }
 
+  // 兩文三語 (trilingual) includes putonghua by definition
+  // Add putonghua tag for schools with trilingual environment
+  if (langs.includes("trilingual") && !langs.includes("putonghua")) {
+    langs.push("putonghua");
+  }
+
   // Infer from curriculum type
   if (curriculumType === "非本地" && !langs.includes("english")) {
     langs.push("english");
