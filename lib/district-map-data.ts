@@ -4,6 +4,7 @@
  */
 
 import type { District18, SchoolCategory, Level, School } from "@/types/school";
+import { isInternational } from "@/lib/international-schools";
 
 /**
  * District center coordinates for map display
@@ -91,12 +92,17 @@ export function calculateDistrictStats(schools: School[], district18: District18
     else if (school.level === "小學") stats.primary++;
     else if (school.level === "中學") stats.secondary++;
 
-    // Count by category (exclude kindergartens from 私立 - only count primary/secondary)
-    if (stats.byCategory[school.category] !== undefined) {
-      if (school.category === "私立" && school.level === "幼稚園") {
-        // Skip kindergartens in private category count
-        return;
-      }
+    // Skip kindergartens for category breakdown (only count primary/secondary)
+    if (school.level === "幼稚園") return;
+
+    // Count by category - use isInternational() for 國際 (consistent with filter logic)
+    const schoolIsInternational = isInternational(school);
+
+    if (schoolIsInternational) {
+      // International schools count under 國際, not their original category
+      stats.byCategory["國際"]++;
+    } else if (stats.byCategory[school.category] !== undefined) {
+      // Non-international schools use their category field
       stats.byCategory[school.category]++;
     }
   });
