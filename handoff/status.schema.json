@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Handoff Status",
+  "description": "Machine-readable snapshot of project state for cross-AI collaboration",
+  "type": "object",
+  "required": ["meta", "navigation", "modules", "strings", "env", "backend", "frontend", "todo"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["generated_at_utc", "git", "app"],
+      "properties": {
+        "generated_at_utc": { "type": "string", "format": "date-time" },
+        "git": {
+          "type": "object",
+          "properties": {
+            "branch": { "type": "string" },
+            "commit": { "type": "string" }
+          }
+        },
+        "app": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "version": { "type": "string" }
+          }
+        }
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "properties": {
+        "tabs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "label_zh_hant": { "type": "string" },
+              "route": { "type": "string" }
+            }
+          }
+        },
+        "entry_points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "route": { "type": "string" },
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "modules": {
+      "type": "object",
+      "properties": {
+        "qa": { "$ref": "#/definitions/module" },
+        "filters": { "$ref": "#/definitions/module" },
+        "guides": { "$ref": "#/definitions/moduleGuides" },
+        "map": { "$ref": "#/definitions/moduleMap" },
+        "compare": { "$ref": "#/definitions/module" },
+        "timeline": { "$ref": "#/definitions/moduleTimeline" },
+        "membership": { "$ref": "#/definitions/moduleMembership" }
+      }
+    },
+    "strings": {
+      "type": "object",
+      "properties": {
+        "key_labels": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": { "type": "string" },
+              "zh_hant": { "type": "string" },
+              "location": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "env": {
+      "type": "object",
+      "properties": {
+        "required_names": { "type": "array", "items": { "type": "string" } },
+        "optional_names": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "backend": {
+      "type": "object",
+      "properties": {
+        "railway_url": { "type": "string" },
+        "oauth": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "base_url_env": { "type": "string" }
+          }
+        }
+      }
+    },
+    "frontend": {
+      "type": "object",
+      "properties": {
+        "web_preview": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "base_url": { "type": "string" }
+          }
+        },
+        "api_base_url_env": { "type": "string" }
+      }
+    },
+    "todo": {
+      "type": "object",
+      "properties": {
+        "p0": { "type": "array", "items": { "type": "string" } },
+        "p1": { "type": "array", "items": { "type": "string" } },
+        "p2": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "definitions": {
+    "module": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "moduleGuides": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "has_parent_letter_gate": { "type": "boolean" },
+        "parent_letter_button_text": { "type": "string" }
+      }
+    },
+    "moduleMap": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "uses_filters": { "type": "boolean" }
+      }
+    },
+    "moduleTimeline": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "is_generic_checklist_only": { "type": "boolean" }
+      }
+    },
+    "moduleMembership": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "notes": { "type": "string" },
+        "plan": { "type": "string", "enum": ["A-real-payments", "B-manual-pro", "none"] }
+      }
+    }
+  }
+}

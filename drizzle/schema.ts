@@ -17,6 +17,10 @@ export const users = mysqlTable("users", {
   email: varchar("email", { length: 320 }),
   loginMethod: varchar("loginMethod", { length: 64 }),
   role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
+  /** Membership tier: free or pro */
+  membershipTier: mysqlEnum("membershipTier", ["free", "pro"]).default("free").notNull(),
+  /** When the pro membership expires (null for free users) */
+  membershipExpiresAt: timestamp("membershipExpiresAt"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
@@ -75,3 +79,27 @@ export const aiRequestLog = mysqlTable("ai_request_log", {
 
 export type AiRequestLog = typeof aiRequestLog.$inferSelect;
 export type InsertAiRequestLog = typeof aiRequestLog.$inferInsert;
+
+// ============================================================================
+// AI Report Cache (for quiz-based reports)
+// ============================================================================
+
+/**
+ * Persistent cache for AI-generated quiz reports (simple and pro versions).
+ */
+export const aiReportCache = mysqlTable("ai_report_cache", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Cache key based on filters hash and report type */
+  cacheKey: varchar("cacheKey", { length: 255 }).notNull().unique(),
+  /** Report type: simple (free) or pro (paid) */
+  reportType: mysqlEnum("reportType", ["simple", "pro"]).notNull(),
+  /** The cached JSON report */
+  responseJson: text("responseJson").notNull(),
+  /** When this cache entry expires */
+  expiresAt: timestamp("expiresAt").notNull(),
+  /** When this entry was created */
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type AiReportCache = typeof aiReportCache.$inferSelect;
+export type InsertAiReportCache = typeof aiReportCache.$inferInsert;

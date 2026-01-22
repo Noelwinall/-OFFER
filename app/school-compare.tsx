@@ -212,7 +212,7 @@ export default function SchoolCompareScreen() {
         >
           <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>學校大PK</Text>
+        <Text style={styles.headerTitle}>心儀學校比一比</Text>
         <View style={styles.placeholder} />
       </View>
 

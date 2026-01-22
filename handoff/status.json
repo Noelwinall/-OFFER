@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "generated_at_utc": "2026-01-22T04:38:34.905Z",
+    "git": {
+      "branch": "tuition-ui-fix",
+      "commit": "52f8e3f"
+    },
+    "app": {
+      "name": "app-template",
+      "version": "1.0.0"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "id": "home",
+        "label_zh_hant": "首頁",
+        "route": "/"
+      },
+      {
+        "id": "search",
+        "label_zh_hant": "找學校",
+        "route": "/search"
+      },
+      {
+        "id": "explore",
+        "label_zh_hant": "探索",
+        "route": "/explore"
+      }
+    ],
+    "entry_points": [
+      {
+        "name": "Quiz",
+        "route": "/quiz",
+        "notes": "School recommendation quiz"
+      },
+      {
+        "name": "Recommendation",
+        "route": "/recommendation",
+        "notes": "Quiz results"
+      },
+      {
+        "name": "Report",
+        "route": "/report",
+        "notes": "Simple report (free)"
+      },
+      {
+        "name": "Pro Report",
+        "route": "/report-pro",
+        "notes": "AI pro report (paid)"
+      },
+      {
+        "name": "School Detail",
+        "route": "/school/[id]",
+        "notes": "School detail page"
+      },
+      {
+        "name": "School Map",
+        "route": "/school-map",
+        "notes": "Map view"
+      },
+      {
+        "name": "Compare",
+        "route": "/school-compare",
+        "notes": "School comparison"
+      },
+      {
+        "name": "Articles",
+        "route": "/articles",
+        "notes": "Guides and articles"
+      },
+      {
+        "name": "Deadlines",
+        "route": "/deadlines",
+        "notes": "Application deadlines"
+      }
+    ]
+  },
+  "modules": {
+    "qa": {
+      "enabled": true,
+      "notes": "Quiz flow for school recommendations"
+    },
+    "filters": {
+      "enabled": true,
+      "notes": "Filter sheet for school search"
+    },
+    "guides": {
+      "enabled": true,
+      "notes": "Educational articles and guides",
+      "has_parent_letter_gate": false,
+      "parent_letter_button_text": ""
+    },
+    "map": {
+      "enabled": true,
+      "notes": "School map view",
+      "uses_filters": true
+    },
+    "compare": {
+      "enabled": true,
+      "notes": "Compare up to 3 schools"
+    },
+    "timeline": {
+      "enabled": true,
+      "notes": "Application deadlines tracker",
+      "is_generic_checklist_only": false
+    },
+    "membership": {
+      "enabled": true,
+      "notes": "Pro membership with AI reports",
+      "plan": "B-manual-pro"
+    }
+  },
+  "strings": {
+    "key_labels": [
+      {
+        "key": "parent_guide",
+        "zh_hant": "家長攻略",
+        "location": "-OFFER/app/(tabs)/index.tsx:15"
+      },
+      {
+        "key": "find_school",
+        "zh_hant": "search.tsx",
+        "location": "scripts/handoff.js:200"
+      },
+      {
+        "key": "school_detail",
+        "zh_hant": "學校詳情",
+        "location": "-OFFER-1/constants/school-text.ts:46"
+      },
+      {
+        "key": "add_to_compare",
+        "zh_hant": "從對比中移除",
+        "location": "-OFFER/app/school/[id].tsx:271"
+      }
+    ]
+  },
+  "env": {
+    "required_names": [
+      "ADMIN_API_KEY",
+      "AI_RATE_LIMIT_PER_DAY",
+      "AI_RATE_LIMIT_PER_MINUTE",
+      "BUILT_IN_FORGE_API_KEY",
+      "BUILT_IN_FORGE_API_URL",
+      "DATABASE_URL",
+      "EXPO_OS",
+      "EXPO_PACKAGER_PROXY_URL",
+      "EXPO_PUBLIC_API_BASE_URL",
+      "EXPO_PUBLIC_APP_ID",
+      "EXPO_PUBLIC_OAUTH_PORTAL_URL",
+      "EXPO_PUBLIC_OAUTH_SERVER_URL",
+      "EXPO_PUBLIC_OWNER_NAME",
+      "EXPO_PUBLIC_OWNER_OPEN_ID",
+      "EXPO_WEB_PREVIEW_URL",
+      "FORGEAPIKEY",
+      "FRONTEND_URL",
+      "GOOGLE_CLIENT_ID",
+      "GOOGLE_CLIENT_SECRET",
+      "JWT_SECRET",
+      "OAUTH_SERVER_URL",
+      "OPENAI_API_KEY",
+      "OWNER_OPEN_ID",
+      "PORT",
+      "PRO_EMAILS",
+      "PRO_USER_IDS",
+      "VITE_APP_ID"
+    ],
+    "optional_names": [
+      "LLM_BASE_URL",
+      "LLM_MODEL",
+      "NODE_ENV"
+    ]
+  },
+  "backend": {
+    "railway_url": "https://<project>.up.railway.app",
+    "oauth": {
+      "provider": "manus",
+      "base_url_env": "OAUTH_SERVER_URL"
+    }
+  },
+  "frontend": {
+    "web_preview": {
+      "provider": "railway",
+      "base_url": "https://<project>.up.railway.app"
+    },
+    "api_base_url_env": "EXPO_PUBLIC_API_BASE_URL"
+  },
+  "todo": {
+    "p0": [
+      "Test AI Pro report generation end-to-end",
+      "Verify membership upgrade flow"
+    ],
+    "p1": [
+      "Implement actual payment integration",
+      "Add report sharing feature"
+    ],
+    "p2": [
+      "Analytics for report generation",
+      "Cache optimization"
+    ]
+  }
+}

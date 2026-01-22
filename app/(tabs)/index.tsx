@@ -2,41 +2,39 @@ import { View, Text, TouchableOpacity, Platform, ScrollView, StyleSheet, Dimensi
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image } from "expo-image";
 import * as Haptics from "expo-haptics";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
-const CARD_WIDTH = (SCREEN_WIDTH - 56 - 14) / 2; // 兩側 padding 28 + gap 14
 
-// 功能卡片數據
-const FEATURE_CARDS = [
-  {
-    id: "articles",
-    title: "家長攻略",
-    icon: "📚",
-    route: "/articles",
-    image: require("@/assets/images/feature-articles.png"),
-  },
-  {
-    id: "compare",
-    title: "學校大PK",
-    icon: "⚔️",
-    route: "/school-compare",
-    image: require("@/assets/images/feature-guide.png"),
-  },
+// 2x2 快捷功能卡片數據
+const QUICK_ACTION_CARDS = [
   {
     id: "map",
     title: "學校在哪裡",
-    icon: "📍",
+    subtitle: "一眼睇清分佈",
+    icon: "🗺️",
     route: "/school-map",
-    image: require("@/assets/images/feature-articles.png"),
+  },
+  {
+    id: "compare",
+    title: "心儀學校比一比",
+    subtitle: "選校更有底",
+    icon: "⚖️",
+    route: "/school-compare",
   },
   {
     id: "deadline",
-    title: "申請截止別錯過！",
-    icon: "⏰",
+    title: "申請截止別錯過",
+    subtitle: "關鍵日子唔好漏",
+    icon: "📅",
     route: "/deadlines",
-    image: require("@/assets/images/feature-guide.png"),
+  },
+  {
+    id: "articles",
+    title: "家長攻略",
+    subtitle: "少踩坑・更省心",
+    icon: "📚",
+    route: "/articles",
   },
 ];
 
@@ -143,43 +141,21 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
 
-          {/* 功能卡片區域 - 可左右滑動 */}
-          <View style={styles.featuresSection}>
-            <ScrollView
-              horizontal
-              showsHorizontalScrollIndicator={false}
-              contentContainerStyle={styles.featureScrollContent}
-              snapToInterval={CARD_WIDTH + 14}
-              decelerationRate="fast"
-            >
-              {FEATURE_CARDS.map((card, index) => (
+          {/* 快捷功能 2x2 格子 */}
+          <View style={styles.quickActionsSection}>
+            <View style={styles.quickActionsGrid}>
+              {QUICK_ACTION_CARDS.map((card) => (
                 <TouchableOpacity
                   key={card.id}
                   onPress={() => handleFeaturePress(card.route)}
-                  style={[
-                    styles.featureCard,
-                    index === FEATURE_CARDS.length - 1 && styles.lastFeatureCard,
-                  ]}
-                  activeOpacity={0.7}
+                  style={styles.quickActionCard}
+                  activeOpacity={0.8}
                 >
-                  <Image
-                    source={card.image}
-                    style={styles.featureImage}
-                    contentFit="cover"
-                  />
-                  <View style={styles.featureOverlay}>
-                    <View style={styles.featureLabelContainer}>
-                      <Text style={styles.featureLabelIcon}>{card.icon}</Text>
-                      <Text style={styles.featureText}>{card.title}</Text>
-                    </View>
-                  </View>
+                  <Text style={styles.quickActionIcon}>{card.icon}</Text>
+                  <Text style={styles.quickActionTitle}>{card.title}</Text>
+                  <Text style={styles.quickActionSubtitle}>{card.subtitle}</Text>
                 </TouchableOpacity>
               ))}
-            </ScrollView>
-            
-            {/* 滑動指示器 */}
-            <View style={styles.scrollIndicator}>
-              <Text style={styles.scrollIndicatorText}>← 左右滑動查看更多 →</Text>
             </View>
           </View>
 
@@ -345,57 +321,43 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
     fontFamily: "NotoSerifSC-Regular",
   },
-  featuresSection: {
+  quickActionsSection: {
     marginBottom: 32,
-  },
-  featureScrollContent: {
     paddingHorizontal: 28,
+  },
+  quickActionsGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
     gap: 14,
   },
-  featureCard: {
-    width: CARD_WIDTH,
-    height: 140,
-    borderRadius: 20,
-    overflow: "hidden",
+  quickActionCard: {
+    width: "48%",
+    backgroundColor: "rgba(255, 255, 255, 0.06)",
+    borderRadius: 16,
+    padding: 18,
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.1)",
+    minHeight: 120,
   },
-  lastFeatureCard: {
-    marginRight: 0,
+  quickActionIcon: {
+    fontSize: 28,
+    marginBottom: 12,
   },
-  featureImage: {
-    width: "100%",
-    height: "100%",
-  },
-  featureOverlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(15, 22, 41, 0.5)",
-    justifyContent: "flex-end",
-    padding: 14,
-  },
-  featureLabelContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  featureLabelIcon: {
-    fontSize: 16,
-  },
-  featureText: {
-    fontSize: 14,
-    fontWeight: "500",
+  quickActionTitle: {
+    fontSize: 15,
+    fontWeight: "600",
     color: "#FFFFFF",
     letterSpacing: 0.5,
-    fontFamily: "NotoSerifSC-Regular",
+    fontFamily: "NotoSerifSC-Bold",
+    marginBottom: 6,
   },
-  scrollIndicator: {
-    alignItems: "center",
-    marginTop: 12,
-  },
-  scrollIndicatorText: {
+  quickActionSubtitle: {
     fontSize: 12,
-    color: "rgba(255, 255, 255, 0.35)",
+    color: "rgba(255, 255, 255, 0.55)",
+    letterSpacing: 0.3,
     fontFamily: "NotoSerifSC-Regular",
+    lineHeight: 18,
   },
   disclaimerContainer: {
     marginTop: "auto",

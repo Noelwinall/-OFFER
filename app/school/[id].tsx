@@ -14,6 +14,7 @@ import type { School, CurriculumV2, SchoolGender, SchoolRelationship, Instructio
 import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 import { getCHSCData, type CHSCSchoolData } from "@/data/chsc-data";
 import { InfoHelp } from "@/components/info-help";
+import { UpgradeModal } from "@/components/upgrade-modal";
 
 /**
  * Tag color palette - harmonized colors (same as school-card)
@@ -214,6 +215,7 @@ export default function SchoolDetailScreen() {
   const [isInCompare, setIsInCompare] = useState(false);
   const [reviewCount, setReviewCount] = useState(0);
   const [averageRating, setAverageRating] = useState(0);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   useEffect(() => {
     loadSchool();
@@ -293,6 +295,21 @@ export default function SchoolDetailScreen() {
       await loadCompareStatus();
     } else {
       Alert.alert("提示", "對比列表已滿（最多 3 所學校）");
+    }
+  };
+
+  const handleProReport = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
+    // Navigate to pro report with this school
+    // Use the school's district and level as filters
+    if (school) {
+      const queryParams = new URLSearchParams({
+        level: school.level,
+        district: school.district,
+      });
+      router.push(`/report-pro?${queryParams.toString()}` as any);
     }
   };
 
@@ -636,45 +653,72 @@ export default function SchoolDetailScreen() {
 
         {/* 底部按鈕 */}
         <View style={[styles.bottomContainer, { paddingBottom: insets.bottom + 16 }]}>
+          {/* AI Pro Report Button */}
           <TouchableOpacity
-            onPress={handleAddToCompare}
-            style={styles.compareButton}
-            activeOpacity={0.8}
+            onPress={handleProReport}
+            style={styles.proReportButton}
+            activeOpacity={0.85}
           >
-            <Text style={styles.compareButtonText}>
-              {isInCompare ? "從對比中移除" : "加入對比"}
-            </Text>
-          </TouchableOpacity>
-          <View style={styles.applyButtonContainer}>
-            <TouchableOpacity
-              onPress={handleApplicationLink}
-              style={[
-                styles.applyButton,
-                getApplicationButtonState().disabled && styles.applyButtonDisabled
-              ]}
-              activeOpacity={0.8}
-              disabled={getApplicationButtonState().disabled}
+            <LinearGradient
+              colors={["#7C3AED", "#5B21B6"]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.proReportButtonGradient}
             >
-              <IconSymbol
-                name="safari"
-                size={18}
-                color={getApplicationButtonState().disabled ? "#8E8E93" : "#FFFFFF"}
-              />
-              <Text style={[
-                styles.applyButtonText,
-                getApplicationButtonState().disabled && styles.applyButtonTextDisabled
-              ]}>
-                申請連結
+              <IconSymbol name="sparkles" size={16} color="#FFFFFF" />
+              <Text style={styles.proReportButtonText}>深度报告和攻略</Text>
+              <View style={styles.proReportBadge}>
+                <Text style={styles.proReportBadgeText}>PRO</Text>
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
+
+          <View style={styles.bottomButtonsRow}>
+            <TouchableOpacity
+              onPress={handleAddToCompare}
+              style={styles.compareButton}
+              activeOpacity={0.8}
+            >
+              <Text style={styles.compareButtonText}>
+                {isInCompare ? "從對比中移除" : "加入對比"}
               </Text>
             </TouchableOpacity>
-            {getApplicationButtonState().hint && (
-              <Text style={styles.applyButtonHint}>
-                {getApplicationButtonState().hint}
-              </Text>
-            )}
+            <View style={styles.applyButtonContainer}>
+              <TouchableOpacity
+                onPress={handleApplicationLink}
+                style={[
+                  styles.applyButton,
+                  getApplicationButtonState().disabled && styles.applyButtonDisabled
+                ]}
+                activeOpacity={0.8}
+                disabled={getApplicationButtonState().disabled}
+              >
+                <IconSymbol
+                  name="safari"
+                  size={18}
+                  color={getApplicationButtonState().disabled ? "#8E8E93" : "#FFFFFF"}
+                />
+                <Text style={[
+                  styles.applyButtonText,
+                  getApplicationButtonState().disabled && styles.applyButtonTextDisabled
+                ]}>
+                  申請連結
+                </Text>
+              </TouchableOpacity>
+              {getApplicationButtonState().hint && (
+                <Text style={styles.applyButtonHint}>
+                  {getApplicationButtonState().hint}
+                </Text>
+              )}
+            </View>
           </View>
         </View>
       </View>
+
+      <UpgradeModal
+        visible={showUpgradeModal}
+        onClose={() => setShowUpgradeModal(false)}
+      />
     </View>
   );
 }
@@ -1171,6 +1215,42 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(15, 22, 41, 0.95)",
     borderTopWidth: 1,
     borderTopColor: "rgba(255,255,255,0.1)",
+  },
+  proReportButton: {
+    borderRadius: 14,
+    overflow: "hidden",
+    marginBottom: 12,
+    shadowColor: "#7C3AED",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.35,
+    shadowRadius: 10,
+    elevation: 6,
+  },
+  proReportButtonGradient: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 14,
+    gap: 8,
+  },
+  proReportButtonText: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  proReportBadge: {
+    backgroundColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 6,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  proReportBadgeText: {
+    fontSize: 9,
+    fontWeight: "700",
+    color: "#FFFFFF",
+  },
+  bottomButtonsRow: {
     flexDirection: "row",
     alignItems: "flex-start",
     gap: 12,

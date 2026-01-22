@@ -11,6 +11,7 @@ import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-g
 import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { UpgradeModal } from "@/components/upgrade-modal";
 
 export default function RecommendationScreen() {
   const router = useRouter();
@@ -20,6 +21,7 @@ export default function RecommendationScreen() {
   const [currentFilters, setCurrentFilters] = useState<QuizFilters>({});
   const [isRelaxedMatch, setIsRelaxedMatch] = useState(false);
   const [favorites, setFavorites] = useState<string[]>([]);
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   useEffect(() => {
     loadRecommendations();
@@ -96,6 +98,28 @@ export default function RecommendationScreen() {
     router.back();
   };
 
+  const handleViewReport = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    // Navigate to simple report page with same params
+    const queryString = Object.entries(params)
+      .map(([key, value]) => `${key}=${encodeURIComponent(String(value))}`)
+      .join("&");
+    router.push(`/report?${queryString}` as any);
+  };
+
+  const handleProReport = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
+    // Navigate to pro report page with same params
+    const queryString = Object.entries(params)
+      .map(([key, value]) => `${key}=${encodeURIComponent(String(value))}`)
+      .join("&");
+    router.push(`/report-pro?${queryString}` as any);
+  };
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
@@ -154,6 +178,26 @@ export default function RecommendationScreen() {
 
         {/* 底部按鈕 */}
         <View style={[styles.bottomContainer, { paddingBottom: insets.bottom + 16 }]}>
+          {/* Pro Report Button */}
+          <TouchableOpacity
+            onPress={handleProReport}
+            style={styles.proButton}
+            activeOpacity={0.85}
+          >
+            <LinearGradient
+              colors={["#7C3AED", "#5B21B6"]}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={styles.proButtonGradient}
+            >
+              <IconSymbol name="sparkles" size={18} color="#FFFFFF" />
+              <Text style={styles.proButtonText}>深度报告和攻略</Text>
+              <View style={styles.proBadge}>
+                <Text style={styles.proBadgeText}>PRO</Text>
+              </View>
+            </LinearGradient>
+          </TouchableOpacity>
+
           <TouchableOpacity
             onPress={handleRestart}
             style={styles.restartButton}
@@ -167,6 +211,11 @@ export default function RecommendationScreen() {
           </Text>
         </View>
       </View>
+
+      <UpgradeModal
+        visible={showUpgradeModal}
+        onClose={() => setShowUpgradeModal(false)}
+      />
     </View>
   );
 }
@@ -236,16 +285,51 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: "rgba(255,255,255,0.1)",
   },
+  proButton: {
+    borderRadius: 16,
+    overflow: "hidden",
+    marginBottom: 10,
+    shadowColor: "#7C3AED",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
+    elevation: 8,
+  },
+  proButtonGradient: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 16,
+    gap: 10,
+  },
+  proButtonText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#FFFFFF",
+    fontFamily: "NotoSerifSC-Regular",
+    letterSpacing: 0.5,
+  },
+  proBadge: {
+    backgroundColor: "rgba(255,255,255,0.25)",
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 4,
+  },
+  proBadgeText: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: "#FFFFFF",
+  },
   restartButton: {
     backgroundColor: "rgba(255,255,255,0.1)",
-    paddingVertical: 16,
+    paddingVertical: 14,
     borderRadius: 16,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.2)",
-    marginBottom: 12,
+    marginBottom: 10,
   },
   restartButtonText: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: "500",
     color: "#FFFFFF",
     textAlign: "center",
