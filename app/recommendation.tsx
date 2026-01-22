@@ -6,7 +6,7 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { getSortedRecommendations, calculateMatchScore, getMatchDescription } from "@/lib/recommendation";
-import { FavoritesStorage } from "@/lib/storage";
+import { FavoritesStorage, MapSetStorage } from "@/lib/storage";
 import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
 import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
@@ -27,6 +27,14 @@ export default function RecommendationScreen() {
     loadRecommendations();
     loadFavorites();
   }, [params]);
+
+  // Save Q&A results to storage for Map screen
+  useEffect(() => {
+    if (recommendations.length > 0) {
+      const schoolIds = recommendations.map((s) => s.id);
+      MapSetStorage.saveQAResult(schoolIds);
+    }
+  }, [recommendations]);
 
   const loadRecommendations = () => {
     const filters: QuizFilters = {};

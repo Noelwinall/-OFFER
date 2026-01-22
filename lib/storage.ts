@@ -16,6 +16,12 @@ const KEYS = {
   NOTIFICATIONS: "@hk_edu_app:notifications",
   NOTIFICATION_SETTINGS: "@hk_edu_app:notification_settings",
   REVIEWS: "@hk_edu_app:reviews",
+  // Map screen storage keys
+  MAP_FILTERS_IDS: "@hk_edu_app:map_filters_ids_v1",
+  MAP_FILTERS_UPDATED: "@hk_edu_app:map_filters_updated_v1",
+  MAP_QA_IDS: "@hk_edu_app:map_qa_ids_v1",
+  MAP_QA_UPDATED: "@hk_edu_app:map_qa_updated_v1",
+  MAP_SOURCE: "@hk_edu_app:map_source_v1",
 } as const;
 
 /**
@@ -566,5 +572,170 @@ export const SwipeStorage = {
   async getRemainingCount(limit: number = 30): Promise<number> {
     const count = await this.getCount();
     return Math.max(0, limit - count);
+  },
+};
+
+/**
+ * Map 來源類型
+ */
+export type MapSource = "filters" | "qa" | "favorites";
+
+/**
+ * Map 顯示集合類型
+ */
+export interface MapSet {
+  source: MapSource;
+  schoolIds: string[];
+  updatedAt: string | null;
+}
+
+/**
+ * Map 學校集合存儲
+ * 用於管理 Map 頁面顯示的學校來源
+ */
+export const MapSetStorage = {
+  /**
+   * 保存篩選結果
+   */
+  async saveFiltersResult(schoolIds: string[]): Promise<void> {
+    try {
+      await AsyncStorage.setItem(KEYS.MAP_FILTERS_IDS, JSON.stringify(schoolIds));
+      await AsyncStorage.setItem(KEYS.MAP_FILTERS_UPDATED, new Date().toISOString());
+    } catch (error) {
+      console.error("Failed to save filters result:", error);
+    }
+  },
+
+  /**
+   * 獲取篩選結果
+   */
+  async getFiltersResult(): Promise<{ ids: string[]; updatedAt: string | null }> {
+    try {
+      const ids = await AsyncStorage.getItem(KEYS.MAP_FILTERS_IDS);
+      const updatedAt = await AsyncStorage.getItem(KEYS.MAP_FILTERS_UPDATED);
+      return {
+        ids: ids ? JSON.parse(ids) : [],
+        updatedAt: updatedAt || null,
+      };
+    } catch (error) {
+      console.error("Failed to get filters result:", error);
+      return { ids: [], updatedAt: null };
+    }
+  },
+
+  /**
+   * 保存 Q&A 結果
+   */
+  async saveQAResult(schoolIds: string[]): Promise<void> {
+    try {
+      await AsyncStorage.setItem(KEYS.MAP_QA_IDS, JSON.stringify(schoolIds));
+      await AsyncStorage.setItem(KEYS.MAP_QA_UPDATED, new Date().toISOString());
+    } catch (error) {
+      console.error("Failed to save QA result:", error);
+    }
+  },
+
+  /**
+   * 獲取 Q&A 結果
+   */
+  async getQAResult(): Promise<{ ids: string[]; updatedAt: string | null }> {
+    try {
+      const ids = await AsyncStorage.getItem(KEYS.MAP_QA_IDS);
+      const updatedAt = await AsyncStorage.getItem(KEYS.MAP_QA_UPDATED);
+      return {
+        ids: ids ? JSON.parse(ids) : [],
+        updatedAt: updatedAt || null,
+      };
+    } catch (error) {
+      console.error("Failed to get QA result:", error);
+      return { ids: [], updatedAt: null };
+    }
+  },
+
+  /**
+   * 保存用戶選擇的 Map 來源
+   */
+  async saveMapSource(source: MapSource): Promise<void> {
+    try {
+      await AsyncStorage.setItem(KEYS.MAP_SOURCE, source);
+    } catch (error) {
+      console.error("Failed to save map source:", error);
+    }
+  },
+
+  /**
+   * 獲取用戶選擇的 Map 來源
+   */
+  async getMapSource(): Promise<MapSource | null> {
+    try {
+      const source = await AsyncStorage.getItem(KEYS.MAP_SOURCE);
+      return source as MapSource | null;
+    } catch (error) {
+      console.error("Failed to get map source:", error);
+      return null;
+    }
+  },
+
+  /**
+   * 按優先順序獲取當前應顯示的學校集合
+   * 優先順序: 用戶選擇的來源 > 最近篩選 > Q&A 結果 > 收藏
+   */
+  async getCurrentSet(): Promise<MapSet | null> {
+    try {
+      const savedSource = await this.getMapSource();
+      const filtersResult = await this.getFiltersResult();
+      const qaResult = await this.getQAResult();
+      const favorites = await FavoritesStorage.getAll();
+
+      // 檢查用戶之前選擇的來源是否仍有效
+      if (savedSource) {
+        if (savedSource === "filters" && filtersResult.ids.length > 0) {
+          return { source: "filters", schoolIds: filtersResult.ids, updatedAt: filtersResult.updatedAt };
+        }
+        if (savedSource === "qa" && qaResult.ids.length > 0) {
+          return { source: "qa", schoolIds: qaResult.ids, updatedAt: qaResult.updatedAt };
+        }
+        if (savedSource === "favorites" && favorites.length > 0) {
+          return { source: "favorites", schoolIds: favorites, updatedAt: null };
+        }
+      }
+
+      // 按優先順序選擇
+      if (filtersResult.ids.length > 0) {
+        return { source: "filters", schoolIds: filtersResult.ids, updatedAt: filtersResult.updatedAt };
+      }
+      if (qaResult.ids.length > 0) {
+        return { source: "qa", schoolIds: qaResult.ids, updatedAt: qaResult.updatedAt };
+      }
+      if (favorites.length > 0) {
+        return { source: "favorites", schoolIds: favorites, updatedAt: null };
+      }
+
+      return null;
+    } catch (error) {
+      console.error("Failed to get current map set:", error);
+      return null;
+    }
+  },
+
+  /**
+   * 獲取所有可用的來源（有數據的）
+   */
+  async getAvailableSources(): Promise<MapSource[]> {
+    try {
+      const sources: MapSource[] = [];
+      const filtersResult = await this.getFiltersResult();
+      const qaResult = await this.getQAResult();
+      const favorites = await FavoritesStorage.getAll();
+
+      if (filtersResult.ids.length > 0) sources.push("filters");
+      if (qaResult.ids.length > 0) sources.push("qa");
+      if (favorites.length > 0) sources.push("favorites");
+
+      return sources;
+    } catch (error) {
+      console.error("Failed to get available sources:", error);
+      return [];
+    }
   },
 };

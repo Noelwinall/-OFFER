@@ -11,7 +11,7 @@ import { EnhancedBriefModal } from "@/components/enhanced-brief-modal";
 import { canGenerateEnhanced, type UserPlan } from "@/lib/services/briefs";
 import { useRouter } from "expo-router";
 import { schools } from "@/data/schools";
-import { FavoritesStorage } from "@/lib/storage";
+import { FavoritesStorage, MapSetStorage } from "@/lib/storage";
 import { FilterContext, hasActiveFilters } from "@/lib/filter-context";
 import { filterSchools, sortSearchResults } from "@/lib/filter-logic";
 import type { School, Level } from "@/types/school";
@@ -86,6 +86,14 @@ export default function SearchScreen() {
   useEffect(() => {
     loadFavorites();
   }, []);
+
+  // Save filter results to storage for Map screen
+  useEffect(() => {
+    if (shouldShowList && displaySchools.length > 0) {
+      const schoolIds = displaySchools.map((s) => s.id);
+      MapSetStorage.saveFiltersResult(schoolIds);
+    }
+  }, [shouldShowList, displaySchools]);
 
   // 使用 useMemo 優化篩選邏輯 + 幼稚園/小學合併
   const displaySchools = useMemo(() => {
