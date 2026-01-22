@@ -371,15 +371,33 @@ export default function SchoolMapScreen() {
           <Text style={[styles.popoverTitle, { color: districtInfo.color }]}>
             {districtInfo.name}
           </Text>
-          <Text style={styles.popoverStat}>幼稚園：{hoveredStats.kindergarten}</Text>
-          <Text style={styles.popoverStat}>小學：{hoveredStats.primary}</Text>
-          <Text style={styles.popoverStat}>中學：{hoveredStats.secondary}</Text>
-          <View style={styles.popoverDivider} />
-          <Text style={styles.popoverStat}>公立：{hoveredStats.byCategory?.["公立"] || 0}</Text>
-          <Text style={styles.popoverStat}>資助：{hoveredStats.byCategory?.["資助"] || 0}</Text>
-          <Text style={styles.popoverStat}>直資：{hoveredStats.byCategory?.["直資"] || 0}</Text>
-          <Text style={styles.popoverStat}>私立：{hoveredStats.byCategory?.["私立"] || 0}</Text>
-          <Text style={styles.popoverStat}>國際：{hoveredStats.byCategory?.["國際"] || 0}</Text>
+
+          {/* Two column layout: KG (1/3) on left, Primary+Secondary (2/3) with breakdown on right */}
+          <View style={styles.popoverColumns}>
+            {/* Left: Kindergarten only (1/3) */}
+            <View style={styles.popoverColumnLeft}>
+              <Text style={styles.popoverLevelLabel}>幼稚園</Text>
+              <Text style={styles.popoverLevelValue}>{hoveredStats.kindergarten}</Text>
+            </View>
+
+            {/* Right: Primary + Secondary with category breakdown (2/3) */}
+            <View style={styles.popoverColumnRight}>
+              <View style={styles.popoverLevelRow}>
+                <View style={styles.popoverLevelItem}>
+                  <Text style={styles.popoverLevelLabel}>小學</Text>
+                  <Text style={styles.popoverLevelValue}>{hoveredStats.primary}</Text>
+                </View>
+                <View style={styles.popoverLevelItem}>
+                  <Text style={styles.popoverLevelLabel}>中學</Text>
+                  <Text style={styles.popoverLevelValue}>{hoveredStats.secondary}</Text>
+                </View>
+              </View>
+              <View style={styles.popoverDivider} />
+              <Text style={styles.popoverCategoryStat}>公立：{hoveredStats.byCategory?.["公立"] || 0}　資助：{hoveredStats.byCategory?.["資助"] || 0}　直資：{hoveredStats.byCategory?.["直資"] || 0}</Text>
+              <Text style={styles.popoverCategoryStat}>私立：{hoveredStats.byCategory?.["私立"] || 0}　國際：{hoveredStats.byCategory?.["國際"] || 0}</Text>
+            </View>
+          </View>
+
           <Text style={styles.popoverHint}>點擊以篩選</Text>
         </View>
       </View>
@@ -422,31 +440,39 @@ export default function SchoolMapScreen() {
               </View>
             </View>
 
-            <View style={styles.sheetStats}>
-              <View style={styles.sheetStatRow}>
-                <Text style={styles.sheetStatLabel}>幼稚園</Text>
-                <Text style={styles.sheetStatValue}>{selectedStats.kindergarten}</Text>
+            {/* Two column layout: KG (1/3) on left, Primary+Secondary (2/3) with breakdown on right */}
+            <View style={styles.sheetTwoColumns}>
+              {/* Left: Kindergarten only (1/3) */}
+              <View style={styles.sheetColumnLeft}>
+                <Text style={styles.sheetLevelLabel}>幼稚園</Text>
+                <Text style={styles.sheetLevelValue}>{selectedStats.kindergarten}</Text>
               </View>
-              <View style={styles.sheetStatRow}>
-                <Text style={styles.sheetStatLabel}>小學</Text>
-                <Text style={styles.sheetStatValue}>{selectedStats.primary}</Text>
-              </View>
-              <View style={styles.sheetStatRow}>
-                <Text style={styles.sheetStatLabel}>中學</Text>
-                <Text style={styles.sheetStatValue}>{selectedStats.secondary}</Text>
-              </View>
-            </View>
 
-            <View style={styles.sheetCategoryGrid}>
-              {CATEGORY_ORDER.map((cat) => (
-                <View key={cat.key} style={styles.sheetCategoryItem}>
-                  <View style={[styles.sheetCategoryDot, { backgroundColor: cat.color }]} />
-                  <Text style={styles.sheetCategoryLabel}>{cat.label}</Text>
-                  <Text style={styles.sheetCategoryCount}>
-                    {selectedStats.byCategory?.[cat.key as keyof typeof selectedStats.byCategory] || 0}
-                  </Text>
+              {/* Right: Primary + Secondary with category breakdown (2/3) */}
+              <View style={styles.sheetColumnRight}>
+                <View style={styles.sheetLevelRow}>
+                  <View style={styles.sheetLevelItem}>
+                    <Text style={styles.sheetLevelLabel}>小學</Text>
+                    <Text style={styles.sheetLevelValue}>{selectedStats.primary}</Text>
+                  </View>
+                  <View style={styles.sheetLevelItem}>
+                    <Text style={styles.sheetLevelLabel}>中學</Text>
+                    <Text style={styles.sheetLevelValue}>{selectedStats.secondary}</Text>
+                  </View>
                 </View>
-              ))}
+
+                <View style={styles.sheetCategoryGrid}>
+                  {CATEGORY_ORDER.map((cat) => (
+                    <View key={cat.key} style={styles.sheetCategoryItem}>
+                      <View style={[styles.sheetCategoryDot, { backgroundColor: cat.color }]} />
+                      <Text style={styles.sheetCategoryLabel}>{cat.label}</Text>
+                      <Text style={styles.sheetCategoryCount}>
+                        {selectedStats.byCategory?.[cat.key as keyof typeof selectedStats.byCategory] || 0}
+                      </Text>
+                    </View>
+                  ))}
+                </View>
+              </View>
             </View>
 
             <TouchableOpacity
@@ -705,10 +731,48 @@ const styles = StyleSheet.create({
     marginBottom: 6,
     fontWeight: "500",
   },
+  popoverColumns: {
+    flexDirection: "row",
+  },
+  popoverColumnLeft: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingRight: 12,
+    borderRightWidth: 1,
+    borderRightColor: "rgba(255,255,255,0.15)",
+  },
+  popoverColumnRight: {
+    flex: 2,
+    paddingLeft: 12,
+  },
+  popoverLevelRow: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  popoverLevelItem: {
+    alignItems: "center",
+  },
+  popoverLevelLabel: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.6)",
+    marginBottom: 2,
+  },
+  popoverLevelValue: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#FFFFFF",
+  },
+  popoverCategoryStat: {
+    fontSize: 11,
+    color: "rgba(255,255,255,0.5)",
+    marginBottom: 2,
+    textAlign: "center",
+  },
   popoverDivider: {
     height: 1,
     backgroundColor: "rgba(255,255,255,0.15)",
-    marginVertical: 10,
+    marginVertical: 6,
   },
   popoverHint: {
     fontSize: 12,
@@ -760,6 +824,40 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#0F1629",
   },
+  sheetTwoColumns: {
+    flexDirection: "row",
+    marginBottom: 20,
+  },
+  sheetColumnLeft: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingRight: 16,
+    borderRightWidth: 1,
+    borderRightColor: "rgba(255,255,255,0.15)",
+  },
+  sheetColumnRight: {
+    flex: 2,
+    paddingLeft: 16,
+  },
+  sheetLevelRow: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginBottom: 12,
+  },
+  sheetLevelItem: {
+    alignItems: "center",
+  },
+  sheetLevelLabel: {
+    fontSize: 13,
+    color: "rgba(255,255,255,0.6)",
+    marginBottom: 4,
+  },
+  sheetLevelValue: {
+    fontSize: 28,
+    fontWeight: "700",
+    color: "#FFFFFF",
+  },
   sheetStats: {
     flexDirection: "row",
     justifyContent: "space-around",
@@ -781,28 +879,28 @@ const styles = StyleSheet.create({
   sheetCategoryGrid: {
     flexDirection: "row",
     flexWrap: "wrap",
-    gap: 12,
-    marginBottom: 24,
+    gap: 6,
+    justifyContent: "center",
   },
   sheetCategoryItem: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 6,
-    width: "45%",
+    gap: 4,
+    paddingHorizontal: 6,
   },
   sheetCategoryDot: {
-    width: 10,
-    height: 10,
-    borderRadius: 5,
+    width: 8,
+    height: 8,
+    borderRadius: 4,
   },
   sheetCategoryLabel: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.7)",
+    fontSize: 12,
+    color: "rgba(255,255,255,0.6)",
   },
   sheetCategoryCount: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "rgba(255,255,255,0.8)",
   },
   sheetButton: {
     paddingVertical: 16,
