@@ -59,13 +59,6 @@ export default function HomeScreen() {
     router.push("/(tabs)/search");
   };
 
-  const handleExplore = () => {
-    if (Platform.OS !== "web") {
-      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    }
-    router.push("/swipe-explore");
-  };
-
   const handleFeaturePress = (route: string) => {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -111,33 +104,24 @@ export default function HomeScreen() {
 
           {/* 按鈕區域 */}
           <View style={styles.buttonContainer}>
-            {/* 主按鈕 - 我問你答選學校 */}
+            {/* 主按鈕 - 問答選校 */}
             <TouchableOpacity
               onPress={handleStartQuiz}
               style={styles.primaryButton}
               activeOpacity={0.85}
             >
-              <Text style={styles.primaryButtonText}>我問你答選學校</Text>
-              <Text style={styles.primaryButtonSubtext}>5個問題，篩選出你心儀的學校</Text>
+              <Text style={styles.primaryButtonText}>問答選校</Text>
+              <Text style={styles.primaryButtonSubtext}>先做幾題 MC，選校範圍睇清啲</Text>
             </TouchableOpacity>
 
-            {/* 次要按鈕 - 我是靠譜父母 */}
+            {/* 次要按鈕 - 條件篩選學校 */}
             <TouchableOpacity
               onPress={handleBrowseAll}
               style={styles.secondaryButton}
               activeOpacity={0.75}
             >
-              <Text style={styles.secondaryButtonText}>我是靠譜父母</Text>
-              <Text style={styles.secondaryButtonSubtext}>通過條件檢索學校</Text>
-            </TouchableOpacity>
-
-            {/* 第三按鈕 - 碰碰運氣劃一劃 */}
-            <TouchableOpacity
-              onPress={handleExplore}
-              style={styles.tertiaryButton}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.tertiaryButtonText}>碰碰運氣劃一劃</Text>
+              <Text style={styles.secondaryButtonText}>條件篩選學校</Text>
+              <Text style={styles.secondaryButtonSubtext}>你話篩乜就篩乜</Text>
             </TouchableOpacity>
           </View>
 
@@ -304,21 +288,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 3,
     letterSpacing: 0.5,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  tertiaryButton: {
-    backgroundColor: "rgba(255, 255, 255, 0.08)",
-    paddingVertical: 16,
-    borderRadius: 30,
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.15)",
-  },
-  tertiaryButtonText: {
-    fontSize: 16,
-    fontWeight: "500",
-    color: "#FFFFFF",
-    textAlign: "center",
-    letterSpacing: 1,
     fontFamily: "NotoSerifSC-Regular",
   },
   quickActionsSection: {
