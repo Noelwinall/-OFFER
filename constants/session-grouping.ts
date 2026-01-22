@@ -126,11 +126,14 @@ export function groupSchoolsBySession(
       continue;
     }
 
-    // 按 key 分組
-    if (!groups.has(groupKey)) {
-      groups.set(groupKey, []);
+    // 按 key + level 分組，避免合併不同級別（幼稚園/小學/中學）
+    // ID 結構：edb_XXXXXX YYYY ZZ（school_no + location_no + session_code）
+    // 但 ZZ 有時也表示級別（13=幼稚園, 23=小學, 33=中學），不只是 session
+    const fullGroupKey = `${groupKey}|${school.level}`;
+    if (!groups.has(fullGroupKey)) {
+      groups.set(fullGroupKey, []);
     }
-    groups.get(groupKey)!.push(school);
+    groups.get(fullGroupKey)!.push(school);
   }
 
   // 第一步：處理 ID 分組
@@ -140,7 +143,8 @@ export function groupSchoolsBySession(
     firstPassResults.push(grouped);
   }
 
-  // 第二步：按名稱合併不同 location 的同名學校（幼稚園+小學）
+  // 第二步：按名稱+級別合併不同 location 的同名學校（幼稚園+小學）
+  // 重要：不同級別（幼稚園/小學/中學）不應合併，即使名稱相同
   const nameGroups = new Map<string, GroupedSchool[]>();
   for (const school of firstPassResults) {
     // 只對符合條件的學校做名稱合併
@@ -148,7 +152,8 @@ export function groupSchoolsBySession(
       result.push(school);
       continue;
     }
-    const nameKey = school.name;
+    // 使用 name + level 作為 key，避免合併不同級別
+    const nameKey = `${school.name}|${school.level}`;
     if (!nameGroups.has(nameKey)) {
       nameGroups.set(nameKey, []);
     }

@@ -1,8 +1,8 @@
 // International School Database
 // Source: Generated from existing school data using isInternational() logic
-// Generated: 2026-01-19
-// Total: 144 schools (幼稚園: 46, 小學: 58, 中學: 40)
-// Unique: 60 schools (deduplicated by name)
+// Generated: 2026-01-22
+// Total: 386 schools (幼稚園: 279, 小學: 64, 中學: 43)
+// Unique: 158 schools (deduplicated by name)
 //
 // DO NOT EDIT MANUALLY - Run "npx tsx scripts/generate-intl-school-db.ts" to regenerate
 
@@ -42,6 +42,76 @@ export interface UniqueInternationalSchool {
  * Note: Same school may have multiple entries for different levels (KG/Primary/Secondary)
  */
 export const internationalSchools: InternationalSchoolEntry[] = [
+  {
+    "id": "edb_602329000111",
+    "name": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN",
+    "nameEn": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_602329000112",
+    "name": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN",
+    "nameEn": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_603864000211",
+    "name": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "nameEn": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_603864000212",
+    "name": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "nameEn": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_603864000213",
+    "name": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "nameEn": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
   {
     "id": "edb_287695000213",
     "name": "美國國際學校",
@@ -123,6 +193,318 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 152800,
     "tuitionMax": 152800
+  },
+  {
+    "id": "edb_603902000123",
+    "name": "AMERICAN SCHOOL HONG KONG",
+    "nameEn": "AMERICAN SCHOOL HONG KONG",
+    "level": "小學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [
+      "AMERICAN"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_603902000133",
+    "name": "AMERICAN SCHOOL HONG KONG",
+    "nameEn": "AMERICAN SCHOOL HONG KONG",
+    "level": "中學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [
+      "AMERICAN"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_622060000112",
+    "name": "安基司學校附屬國際幼稚園",
+    "nameEn": "ANCHORS ACADEMY AFFILIATED INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_622060000113",
+    "name": "安基司學校附屬國際幼稚園",
+    "nameEn": "ANCHORS ACADEMY AFFILIATED INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_622060000111",
+    "name": "安基司學校附屬國際幼稚園",
+    "nameEn": "ANCHORS ACADEMY AFFILIATED INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565199000212",
+    "name": "安基司國際幼兒園",
+    "nameEn": "ANCHORS INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565199000211",
+    "name": "安基司國際幼兒園",
+    "nameEn": "ANCHORS INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565199000213",
+    "name": "安基司國際幼兒園",
+    "nameEn": "ANCHORS INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565199000113",
+    "name": "安基司國際幼兒園",
+    "nameEn": "ANCHORS INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565199000111",
+    "name": "安基司國際幼兒園",
+    "nameEn": "ANCHORS INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565199000112",
+    "name": "安基司國際幼兒園",
+    "nameEn": "ANCHORS INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_535818000312",
+    "name": "安菲爾國際幼稚園",
+    "nameEn": "ANFIELD INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_535818000311",
+    "name": "安菲爾國際幼稚園",
+    "nameEn": "ANFIELD INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_535818000313",
+    "name": "安菲爾國際幼稚園",
+    "nameEn": "ANFIELD INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_535818000211",
+    "name": "安菲爾國際幼稚園",
+    "nameEn": "ANFIELD INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_535818000212",
+    "name": "安菲爾國際幼稚園",
+    "nameEn": "ANFIELD INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_535818000213",
+    "name": "安菲爾國際幼稚園",
+    "nameEn": "ANFIELD INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_587567000123",
+    "name": "安菲爾學校",
+    "nameEn": "ANFIELD SCHOOL",
+    "level": "小學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [
+      "HK_LOCAL"
+    ],
+    "instructionLanguages": [
+      "ENGLISH",
+      "CANTONESE"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_620785000123",
+    "name": "安菲爾聖鮑思高冠英學校",
+    "nameEn": "ANFIELD ST. BOSCO KOON YING SCHOOL",
+    "level": "小學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [
+      "HK_LOCAL"
+    ],
+    "instructionLanguages": [
+      "ENGLISH",
+      "CANTONESE"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604470000111",
+    "name": "雅士圖國際幼稚園",
+    "nameEn": "ARISTLE INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604470000112",
+    "name": "雅士圖國際幼稚園",
+    "nameEn": "ARISTLE INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_216275000612",
@@ -219,6 +601,132 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 139000,
     "tuitionMax": 139000
+  },
+  {
+    "id": "edb_559415000112",
+    "name": "博士山（香港）國際幼稚園",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
+  },
+  {
+    "id": "edb_559415000111",
+    "name": "博士山（香港）國際幼稚園",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
+  },
+  {
+    "id": "edb_581836000212",
+    "name": "博士山(香港)國際幼稚園-將軍澳",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN - TSEUNG KWAN O",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 74800,
+    "tuitionMax": 78100
+  },
+  {
+    "id": "edb_581836000213",
+    "name": "博士山(香港)國際幼稚園-將軍澳",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN - TSEUNG KWAN O",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 74800,
+    "tuitionMax": 78100
+  },
+  {
+    "id": "edb_581836000211",
+    "name": "博士山(香港)國際幼稚園-將軍澳",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN - TSEUNG KWAN O",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 74800,
+    "tuitionMax": 78100
+  },
+  {
+    "id": "edb_581739000212",
+    "name": "博士山(香港)國際幼稚園-火炭",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN-FO TAN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
+  },
+  {
+    "id": "edb_581739000211",
+    "name": "博士山(香港)國際幼稚園-火炭",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN-FO TAN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
+  },
+  {
+    "id": "edb_581739000112",
+    "name": "博士山（香港）國際幼稚園－火炭",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN-FO TAN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
+  },
+  {
+    "id": "edb_581739000111",
+    "name": "博士山（香港）國際幼稚園－火炭",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN-FO TAN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
   },
   {
     "id": "edb_170747000123",
@@ -400,6 +908,90 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 226090
   },
   {
+    "id": "edb_325651000113",
+    "name": "銅鑼灣維多利亞國際幼稚園",
+    "nameEn": "CAUSEWAY BAY VICTORIA INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_325651000112",
+    "name": "銅鑼灣維多利亞國際幼稚園",
+    "nameEn": "CAUSEWAY BAY VICTORIA INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_325651000111",
+    "name": "銅鑼灣維多利亞國際幼稚園",
+    "nameEn": "CAUSEWAY BAY VICTORIA INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 125430,
+    "tuitionMax": 137973
+  },
+  {
+    "id": "edb_599182000111",
+    "name": "新加坡卓薈國際幼稚園(界限街)",
+    "nameEn": "CHATSWORTH INTERNATIONAL KINDERGARTEN (BOUNDARY STREET)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_599182000112",
+    "name": "新加坡卓薈國際幼稚園(界限街)",
+    "nameEn": "CHATSWORTH INTERNATIONAL KINDERGARTEN (BOUNDARY STREET)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_599182000113",
+    "name": "新加坡卓薈國際幼稚園(界限街)",
+    "nameEn": "CHATSWORTH INTERNATIONAL KINDERGARTEN (BOUNDARY STREET)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_215589000112",
     "name": "漢基國際學校",
     "nameEn": "CHINESE INTERNATIONAL SCHOOL",
@@ -574,6 +1166,126 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 150950
   },
   {
+    "id": "edb_607371000223",
+    "name": "香港道爾頓學校",
+    "nameEn": "DALTON SCHOOL HONG KONG",
+    "level": "小學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [
+      "AMERICAN"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607371000233",
+    "name": "香港道爾頓學校",
+    "nameEn": "DALTON SCHOOL HONG KONG",
+    "level": "中學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [
+      "AMERICAN"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567116000112",
+    "name": "德寶國際幼兒學校（寶盈花園）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (BAUHINIA GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567116000113",
+    "name": "德寶國際幼兒學校（寶盈花園）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (BAUHINIA GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567116000111",
+    "name": "德寶國際幼兒學校（寶盈花園）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (BAUHINIA GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567108000112",
+    "name": "德寶國際幼兒學校（將軍澳）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567108000113",
+    "name": "德寶國際幼兒學校（將軍澳）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567108000111",
+    "name": "德寶國際幼兒學校（將軍澳）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_230987000113",
     "name": "DISCOVERY BAY INTERNATIONAL SCHOOL",
     "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
@@ -706,6 +1418,150 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 191800
   },
   {
+    "id": "edb_600814000111",
+    "name": "DISCOVERY MONTESSORI ACADEMY",
+    "nameEn": "DISCOVERY MONTESSORI ACADEMY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_600814000112",
+    "name": "DISCOVERY MONTESSORI ACADEMY",
+    "nameEn": "DISCOVERY MONTESSORI ACADEMY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_600814000113",
+    "name": "DISCOVERY MONTESSORI ACADEMY",
+    "nameEn": "DISCOVERY MONTESSORI ACADEMY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_600814000123",
+    "name": "DISCOVERY MONTESSORI ACADEMY",
+    "nameEn": "DISCOVERY MONTESSORI ACADEMY",
+    "level": "小學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [
+      "OTHER_INTL"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_584606000113",
+    "name": "香港國際蒙特梭利學校",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_584606000112",
+    "name": "香港國際蒙特梭利學校",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_584606000111",
+    "name": "香港國際蒙特梭利學校",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_588032000111",
+    "name": "香港國際蒙特梭利學校(中環)",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL (CENTRAL)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_588032000112",
+    "name": "香港國際蒙特梭利學校(中環)",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL (CENTRAL)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_588032000113",
+    "name": "香港國際蒙特梭利學校(中環)",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL (CENTRAL)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_215791000123",
     "name": "德思齊加拿大國際學校",
     "nameEn": "DSC INTERNATIONAL SCHOOL",
@@ -742,6 +1598,48 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 168100
   },
   {
+    "id": "edb_615633000113",
+    "name": "艾蒙特國際幼稚園",
+    "nameEn": "EIS INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_615633000111",
+    "name": "艾蒙特國際幼稚園",
+    "nameEn": "EIS INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_615633000112",
+    "name": "艾蒙特國際幼稚園",
+    "nameEn": "EIS INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_549240000112",
     "name": "英基雅柏國際幼稚園",
     "nameEn": "ESF ABACUS INTERNATIONAL KINDERGARTEN",
@@ -768,6 +1666,34 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [],
     "tuitionMin": 103000,
     "tuitionMax": 119700
+  },
+  {
+    "id": "edb_597031000112",
+    "name": "伽利利國際幼稚園",
+    "nameEn": "GALILEE INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_597031000111",
+    "name": "伽利利國際幼稚園",
+    "nameEn": "GALILEE INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_214558000211",
@@ -875,6 +1801,356 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 139000,
     "tuitionMax": 139000
+  },
+  {
+    "id": "edb_604585000112",
+    "name": "雅惠國際幼稚園（鯉景灣）",
+    "nameEn": "GRACE GARDEN INTERNATIONAL KINDERGARTEN (LEI KING WAN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604585000111",
+    "name": "雅惠國際幼稚園（鯉景灣）",
+    "nameEn": "GRACE GARDEN INTERNATIONAL KINDERGARTEN (LEI KING WAN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604372000112",
+    "name": "綠茵英文（國際）幼稚園（日出康城）",
+    "nameEn": "GREENFIELD ENGLISH (INTERNATIONAL) KINDERGARTEN (LOHAS PARK)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604372000111",
+    "name": "綠茵英文（國際）幼稚園（日出康城）",
+    "nameEn": "GREENFIELD ENGLISH (INTERNATIONAL) KINDERGARTEN (LOHAS PARK)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_523984000212",
+    "name": "綠茵英文（國際）幼稚園（將軍澳）",
+    "nameEn": "GREENFIELD ENGLISH (INTERNATIONAL) KINDERGARTEN (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_523984000211",
+    "name": "綠茵英文（國際）幼稚園（將軍澳）",
+    "nameEn": "GREENFIELD ENGLISH (INTERNATIONAL) KINDERGARTEN (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_523984000213",
+    "name": "綠茵英文（國際）幼稚園（將軍澳）",
+    "nameEn": "GREENFIELD ENGLISH (INTERNATIONAL) KINDERGARTEN (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_609285000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CHAI WAN)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CHAI WAN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_609285000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CHAI WAN)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CHAI WAN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_583774000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CLEARWATER BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CLEARWATER BAY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_583774000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CLEARWATER BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CLEARWATER BAY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_609625000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (DISCOVERY BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (DISCOVERY BAY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_609625000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (DISCOVERY BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (DISCOVERY BAY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_611484000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (KENNEDY TOWN)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (KENNEDY TOWN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_611484000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (KENNEDY TOWN)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (KENNEDY TOWN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_598089000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_598089000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_564958000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (HAPPY VALLEY HAWTHORN ROAD)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (HAPPY VALLEY HAWTHORN ROAD)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_564958000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (HAPPY VALLEY HAWTHORN ROAD)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (HAPPY VALLEY HAWTHORN ROAD)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_594725000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (MID-LEVELS)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (MID-LEVELS)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_594725000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (MID-LEVELS)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (MID-LEVELS)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_602256000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_602256000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_578630000111",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_578630000112",
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_590800000113",
@@ -1191,6 +2467,112 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 145110
   },
   {
+    "id": "edb_615366000113",
+    "name": "INVICTUS KINDERGARTEN",
+    "nameEn": "INVICTUS KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_615285000123",
+    "name": "INVICTUS SCHOOL",
+    "nameEn": "INVICTUS SCHOOL",
+    "level": "小學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [
+      "BRITISH"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_616354000133",
+    "name": "INVICTUS SECONDARY SCHOOL",
+    "nameEn": "INVICTUS SECONDARY SCHOOL",
+    "level": "中學",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [
+      "BRITISH"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_581119000111",
+    "name": "港島兒童蒙特梭利幼稚園",
+    "nameEn": "ISLAND CHILDREN'S MONTESSORI KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_581119000112",
+    "name": "港島兒童蒙特梭利幼稚園",
+    "nameEn": "ISLAND CHILDREN'S MONTESSORI KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607223000111",
+    "name": "港島蒙特梭利國際幼稚園",
+    "nameEn": "ISLAND MONTESSORI INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607223000112",
+    "name": "港島蒙特梭利國際幼稚園",
+    "nameEn": "ISLAND MONTESSORI INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_170399000133",
     "name": "ISLAND SCHOOL",
     "nameEn": "ISLAND SCHOOL",
@@ -1209,6 +2591,48 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 181100
   },
   {
+    "id": "edb_611646000111",
+    "name": "意大利國際幼稚園",
+    "nameEn": "ITALIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_611646000113",
+    "name": "意大利國際幼稚園",
+    "nameEn": "ITALIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_611646000112",
+    "name": "意大利國際幼稚園",
+    "nameEn": "ITALIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_522775000123",
     "name": "JAPANESE INTERNATIONAL SCHOOL",
     "nameEn": "JAPANESE INTERNATIONAL SCHOOL",
@@ -1225,6 +2649,48 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 140460,
     "tuitionMax": 140460
+  },
+  {
+    "id": "edb_587524000111",
+    "name": "晶晶國際幼稚園",
+    "nameEn": "JING JING INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_587524000112",
+    "name": "晶晶國際幼稚園",
+    "nameEn": "JING JING INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_587524000113",
+    "name": "晶晶國際幼稚園",
+    "nameEn": "JING JING INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_250686000223",
@@ -1259,6 +2725,62 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_615170000112",
+    "name": "心怡天地國際幼稚園(屯門)",
+    "nameEn": "JOYFUL WORLD INTERNATIONAL KINDERGARTEN (TUEN MUN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_615170000111",
+    "name": "心怡天地國際幼稚園(屯門)",
+    "nameEn": "JOYFUL WORLD INTERNATIONAL KINDERGARTEN (TUEN MUN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_612189000111",
+    "name": "心怡天地國際幼稚園(元朗)",
+    "nameEn": "JOYFUL WORLD INTERNATIONAL KINDERGARTEN (YUEN LONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_612189000112",
+    "name": "心怡天地國際幼稚園(元朗)",
+    "nameEn": "JOYFUL WORLD INTERNATIONAL KINDERGARTEN (YUEN LONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
     "tuitionMin": 0,
     "tuitionMax": 0
   },
@@ -1317,6 +2839,62 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 267100
   },
   {
+    "id": "edb_607703000111",
+    "name": "漢迪國際幼稚園",
+    "nameEn": "KENDALL INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607703000112",
+    "name": "漢迪國際幼稚園",
+    "nameEn": "KENDALL INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_325783000112",
+    "name": "漢廸國際幼稚園(港島東)",
+    "nameEn": "KENDALL INTERNATIONAL PRESCHOOL (ISLAND EAST)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_325783000111",
+    "name": "漢廸國際幼稚園(港島東)",
+    "nameEn": "KENDALL INTERNATIONAL PRESCHOOL (ISLAND EAST)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_170879000123",
     "name": "KENNEDY SCHOOL",
     "nameEn": "KENNEDY SCHOOL",
@@ -1351,6 +2929,34 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 159400,
     "tuitionMax": 181100
+  },
+  {
+    "id": "edb_519863000312",
+    "name": "京斯敦國際幼稚園",
+    "nameEn": "KINGSTON INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 63800,
+    "tuitionMax": 112200
+  },
+  {
+    "id": "edb_519863000311",
+    "name": "京斯敦國際幼稚園",
+    "nameEn": "KINGSTON INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 63800,
+    "tuitionMax": 112200
   },
   {
     "id": "edb_541915000123",
@@ -1494,6 +3100,118 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 0
   },
   {
+    "id": "edb_614904000112",
+    "name": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL",
+    "nameEn": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_614904000111",
+    "name": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL",
+    "nameEn": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_614998000111",
+    "name": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL (TSEUNG KWAN O)",
+    "nameEn": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_614998000112",
+    "name": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL (TSEUNG KWAN O)",
+    "nameEn": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607592000213",
+    "name": "道爾頓幼稚園",
+    "nameEn": "LITTLE DALTON KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607592000212",
+    "name": "道爾頓幼稚園",
+    "nameEn": "LITTLE DALTON KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607592000211",
+    "name": "道爾頓幼稚園",
+    "nameEn": "LITTLE DALTON KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_587877000111",
+    "name": "小大嶼山蒙特梭利幼稚園",
+    "nameEn": "LITTLE LANTAU MONTESSORI KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "離島區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_214949000513",
     "name": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
     "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
@@ -1616,6 +3334,118 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 0
   },
   {
+    "id": "edb_610623000111",
+    "name": "瑪歌瑞特國際幼稚園",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_610623000113",
+    "name": "瑪歌瑞特國際幼稚園",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_610623000112",
+    "name": "瑪歌瑞特國際幼稚園",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566241000113",
+    "name": "瑪歌瑞特國際幼稚園(粉嶺)",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN (FANLING)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "北區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566241000111",
+    "name": "瑪歌瑞特國際幼稚園(粉嶺)",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN (FANLING)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "北區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566241000112",
+    "name": "瑪歌瑞特國際幼稚園(粉嶺)",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN (FANLING)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "北區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_215767000111",
+    "name": "瑪歌瑞特國際幼稚園(康怡)",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN (KORNHILL)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_215767000112",
+    "name": "瑪歌瑞特國際幼稚園(康怡)",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN (KORNHILL)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_606766000123",
     "name": "香港墨爾文國際學校",
     "nameEn": "MALVERN COLLEGE HONG KONG",
@@ -1650,6 +3480,356 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 226210,
     "tuitionMax": 226210
+  },
+  {
+    "id": "edb_613665000111",
+    "name": "楓葉小熊加拿大國際幼稚園",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_613665000113",
+    "name": "楓葉小熊加拿大國際幼稚園",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_613665000112",
+    "name": "楓葉小熊加拿大國際幼稚園",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_616311000112",
+    "name": "楓葉小熊加拿大國際幼稚園(康城)",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN (LOHAS)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_616311000111",
+    "name": "楓葉小熊加拿大國際幼稚園(康城)",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN (LOHAS)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_593788000112",
+    "name": "楓葉小熊加拿大國際幼稚園(油塘)",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN (YAU TONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "觀塘區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_593788000111",
+    "name": "楓葉小熊加拿大國際幼稚園(油塘)",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN (YAU TONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "觀塘區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_600334000211",
+    "name": "善行國際幼稚園",
+    "nameEn": "MASS INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_600334000212",
+    "name": "善行國際幼稚園",
+    "nameEn": "MASS INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "灣仔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_603643000111",
+    "name": "奧恩國際幼稚園",
+    "nameEn": "MIGHTY OAKS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_603643000112",
+    "name": "奧恩國際幼稚園",
+    "nameEn": "MIGHTY OAKS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566977000111",
+    "name": "明慧國際幼稚園",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566977000112",
+    "name": "明慧國際幼稚園",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566977000113",
+    "name": "明慧國際幼稚園",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567329000112",
+    "name": "明慧國際幼稚園（北角分校）",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (NORTH POINT BRANCH)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567329000111",
+    "name": "明慧國際幼稚園（北角分校）",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (NORTH POINT BRANCH)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567329000113",
+    "name": "明慧國際幼稚園（北角分校）",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (NORTH POINT BRANCH)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_583421000112",
+    "name": "明慧國際幼稚園(太子分校)",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (PRINCE EDWARD BRANCH)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_583421000111",
+    "name": "明慧國際幼稚園(太子分校)",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (PRINCE EDWARD BRANCH)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_583421000113",
+    "name": "明慧國際幼稚園(太子分校)",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (PRINCE EDWARD BRANCH)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567027000111",
+    "name": "明雅國際幼兒學校",
+    "nameEn": "MINK INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567027000112",
+    "name": "明雅國際幼兒學校",
+    "nameEn": "MINK INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_567027000113",
+    "name": "明雅國際幼兒學校",
+    "nameEn": "MINK INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565466000111",
+    "name": "MONTESSORI FOR CHILDREN (NURSERY)",
+    "nameEn": "MONTESSORI FOR CHILDREN (NURSERY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_565466000112",
+    "name": "MONTESSORI FOR CHILDREN (NURSERY)",
+    "nameEn": "MONTESSORI FOR CHILDREN (NURSERY)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_601721000112",
@@ -1702,6 +3882,104 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "rawCategory": "私立",
     "district": "港島",
     "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_598054000111",
+    "name": "童樂天國際幼稚園",
+    "nameEn": "MULBERRY TREE INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_598054000112",
+    "name": "童樂天國際幼稚園",
+    "nameEn": "MULBERRY TREE INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_601250000111",
+    "name": "麥克萊國際幼稚園",
+    "nameEn": "MYNORS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "北區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_601250000112",
+    "name": "麥克萊國際幼稚園",
+    "nameEn": "MYNORS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "北區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_601250000113",
+    "name": "麥克萊國際幼稚園",
+    "nameEn": "MYNORS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "北區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_608475000112",
+    "name": "NORD ANGLIA INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "nameEn": "NORD ANGLIA INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_608475000111",
+    "name": "NORD ANGLIA INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "nameEn": "NORD ANGLIA INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
     "curriculumV2": [],
     "instructionLanguages": [],
     "tuitionMin": 0,
@@ -1804,6 +4082,76 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 133200
   },
   {
+    "id": "edb_215937000112",
+    "name": "栢基國際幼稚園",
+    "nameEn": "PARKVIEW INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_215937000111",
+    "name": "栢基國際幼稚園",
+    "nameEn": "PARKVIEW INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_571490000113",
+    "name": "栢基國際幼稚園(九龍)",
+    "nameEn": "PARKVIEW INTERNATIONAL PRE-SCHOOL (KOWLOON)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_571490000111",
+    "name": "栢基國際幼稚園(九龍)",
+    "nameEn": "PARKVIEW INTERNATIONAL PRE-SCHOOL (KOWLOON)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_571490000112",
+    "name": "栢基國際幼稚園(九龍)",
+    "nameEn": "PARKVIEW INTERNATIONAL PRE-SCHOOL (KOWLOON)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_170860000123",
     "name": "PEAK SCHOOL",
     "nameEn": "PEAK SCHOOL",
@@ -1820,6 +4168,76 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 139000,
     "tuitionMax": 139000
+  },
+  {
+    "id": "edb_613916000112",
+    "name": "培僑國際幼稚園",
+    "nameEn": "PUI KIU INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_613916000111",
+    "name": "培僑國際幼稚園",
+    "nameEn": "PUI KIU INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_622389000112",
+    "name": "培僑國際幼稚園(碧濤花園)",
+    "nameEn": "PUI KIU INTERNATIONAL KINDERGARTEN (PICTORIAL GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_622389000113",
+    "name": "培僑國際幼稚園(碧濤花園)",
+    "nameEn": "PUI KIU INTERNATIONAL KINDERGARTEN (PICTORIAL GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_622389000111",
+    "name": "培僑國際幼稚園(碧濤花園)",
+    "nameEn": "PUI KIU INTERNATIONAL KINDERGARTEN (PICTORIAL GARDEN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_170895000123",
@@ -1874,6 +4292,34 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 175700,
     "tuitionMax": 189900
+  },
+  {
+    "id": "edb_597538000211",
+    "name": "聖姬莉國際幼稚園",
+    "nameEn": "SAINT BRIGIT INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_597538000212",
+    "name": "聖姬莉國際幼稚園",
+    "nameEn": "SAINT BRIGIT INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_534579000123",
@@ -2112,6 +4558,62 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 138000
   },
   {
+    "id": "edb_215120000111",
+    "name": "國際英文幼稚園",
+    "nameEn": "ST. CATHERINE'S INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_215120000211",
+    "name": "國際英文幼稚園",
+    "nameEn": "ST. CATHERINE'S INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_215120000212",
+    "name": "國際英文幼稚園",
+    "nameEn": "ST. CATHERINE'S INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_215120000112",
+    "name": "國際英文幼稚園",
+    "nameEn": "ST. CATHERINE'S INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_605638000123",
     "name": "STAMFORD AMERICAN SCHOOL HONG KONG",
     "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG",
@@ -2306,6 +4808,426 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 181100
   },
   {
+    "id": "edb_216267000111",
+    "name": "朗思國際幼稚園",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "觀塘區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_216267000113",
+    "name": "朗思國際幼稚園",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "觀塘區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_216267000112",
+    "name": "朗思國際幼稚園",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "觀塘區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_533360000212",
+    "name": "朗思國際幼稚園（馬鞍山）",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (MA ON SHAN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_533360000211",
+    "name": "朗思國際幼稚園（馬鞍山）",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (MA ON SHAN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_533360000213",
+    "name": "朗思國際幼稚園（馬鞍山）",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (MA ON SHAN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "沙田區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_612782000113",
+    "name": "朗思國際幼稚園(南昌)",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (NAM CHEONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_612782000111",
+    "name": "朗思國際幼稚園(南昌)",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (NAM CHEONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_612782000112",
+    "name": "朗思國際幼稚園(南昌)",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (NAM CHEONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_602000000113",
+    "name": "德怡國際幼稚園(元朗)",
+    "nameEn": "TOPKIDS INTERNATIONAL KINDERGARTEN (YUEN LONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_602000000112",
+    "name": "德怡國際幼稚園（元朗）",
+    "nameEn": "TOPKIDS INTERNATIONAL KINDERGARTEN (YUEN LONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_602000000111",
+    "name": "德怡國際幼稚園（元朗）",
+    "nameEn": "TOPKIDS INTERNATIONAL KINDERGARTEN (YUEN LONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_575852000112",
+    "name": "多多寶馬山國際幼稚園",
+    "nameEn": "TUTOR TIME BRAEMAR HILL INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_575852000111",
+    "name": "多多寶馬山國際幼稚園",
+    "nameEn": "TUTOR TIME BRAEMAR HILL INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "東區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_542504000111",
+    "name": "多多國際幼稚園（九龍塘）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (KOWLOON TONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_542504000112",
+    "name": "多多國際幼稚園（九龍塘）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (KOWLOON TONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_593133000111",
+    "name": "多多國際幼稚園（半山）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (MID LEVELS)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_593133000112",
+    "name": "多多國際幼稚園（半山）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (MID LEVELS)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_605794000111",
+    "name": "多多國際幼稚園（形點）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (YOHO)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_605794000112",
+    "name": "多多國際幼稚園（形點）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (YOHO)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_618039000112",
+    "name": "維多利亞(何文田)國際幼稚園",
+    "nameEn": "VICTORIA (HOMANTIN) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 105280,
+    "tuitionMax": 206510
+  },
+  {
+    "id": "edb_618039000111",
+    "name": "維多利亞(何文田)國際幼稚園",
+    "nameEn": "VICTORIA (HOMANTIN) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 105280,
+    "tuitionMax": 206510
+  },
+  {
+    "id": "edb_566900000112",
+    "name": "維多利亞（何文田）國際幼兒園",
+    "nameEn": "VICTORIA (HOMANTIN) INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 105280,
+    "tuitionMax": 206510
+  },
+  {
+    "id": "edb_566900000113",
+    "name": "維多利亞（何文田）國際幼兒園",
+    "nameEn": "VICTORIA (HOMANTIN) INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 105280,
+    "tuitionMax": 206510
+  },
+  {
+    "id": "edb_566900000111",
+    "name": "維多利亞（何文田）國際幼兒園",
+    "nameEn": "VICTORIA (HOMANTIN) INTERNATIONAL NURSERY",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 105280,
+    "tuitionMax": 206510
+  },
+  {
+    "id": "edb_619850000111",
+    "name": "維多利亞(海之戀)國際幼稚園",
+    "nameEn": "VICTORIA (OCEAN PRIDE) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "荃灣區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 102400,
+    "tuitionMax": 127919
+  },
+  {
+    "id": "edb_619850000112",
+    "name": "維多利亞(海之戀)國際幼稚園",
+    "nameEn": "VICTORIA (OCEAN PRIDE) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "荃灣區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 102400,
+    "tuitionMax": 127919
+  },
+  {
+    "id": "edb_216194000111",
+    "name": "維多利亞（海怡）國際幼稚園",
+    "nameEn": "VICTORIA (SOUTH HORIZONS) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 110520,
+    "tuitionMax": 207140
+  },
+  {
+    "id": "edb_216194000113",
+    "name": "維多利亞（海怡）國際幼稚園",
+    "nameEn": "VICTORIA (SOUTH HORIZONS) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 110520,
+    "tuitionMax": 207140
+  },
+  {
+    "id": "edb_216194000112",
+    "name": "維多利亞（海怡）國際幼稚園",
+    "nameEn": "VICTORIA (SOUTH HORIZONS) INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "南區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 110520,
+    "tuitionMax": 207140
+  },
+  {
     "id": "edb_560138000223",
     "name": "滬江維多利亞學校",
     "nameEn": "VICTORIA SHANGHAI ACADEMY",
@@ -2344,6 +5266,48 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "tuitionMax": 255600
   },
   {
+    "id": "edb_590401000111",
+    "name": "宏廣國際幼稚園",
+    "nameEn": "WELLCOME INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_590401000113",
+    "name": "宏廣國際幼稚園",
+    "nameEn": "WELLCOME INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_590401000112",
+    "name": "宏廣國際幼稚園",
+    "nameEn": "WELLCOME INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "id": "edb_170992000133",
     "name": "WEST ISLAND SCHOOL",
     "nameEn": "WEST ISLAND SCHOOL",
@@ -2360,6 +5324,132 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 159400,
     "tuitionMax": 181100
+  },
+  {
+    "id": "edb_607215000111",
+    "name": "WILDERNESS INTERNATIONAL KINDERGARTEN",
+    "nameEn": "WILDERNESS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_607215000112",
+    "name": "WILDERNESS INTERNATIONAL KINDERGARTEN",
+    "nameEn": "WILDERNESS INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "港島",
+    "district18": "中西區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566128000111",
+    "name": "耀中國際幼稚園（根德道）",
+    "nameEn": "YEW CHUNG INTERNATIONAL CHILDREN'S HOUSE (KENT ROAD)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566128000113",
+    "name": "耀中國際幼稚園（根德道）",
+    "nameEn": "YEW CHUNG INTERNATIONAL CHILDREN'S HOUSE (KENT ROAD)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566128000112",
+    "name": "耀中國際幼稚園（根德道）",
+    "nameEn": "YEW CHUNG INTERNATIONAL CHILDREN'S HOUSE (KENT ROAD)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_566110000113",
+    "name": "耀中國際幼稚園（窩打老道）",
+    "nameEn": "YEW CHUNG INTERNATIONAL CHILDREN'S HOUSE (WATERLOO ROAD)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_613517000111",
+    "name": "耀中國際幼稚園(將軍澳)",
+    "nameEn": "YEW CHUNG INTERNATIONAL KINDERGARTEN (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_613517000112",
+    "name": "耀中國際幼稚園(將軍澳)",
+    "nameEn": "YEW CHUNG INTERNATIONAL KINDERGARTEN (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_613517000113",
+    "name": "耀中國際幼稚園(將軍澳)",
+    "nameEn": "YEW CHUNG INTERNATIONAL KINDERGARTEN (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "id": "edb_325147000611",
@@ -2474,6 +5564,342 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     ],
     "tuitionMin": 266040,
     "tuitionMax": 272140
+  },
+  {
+    "id": "edb_216178000111",
+    "name": "港青基信國際幼稚園",
+    "nameEn": "YMCA OF HONG KONG CHRISTIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 71220,
+    "tuitionMax": 125480
+  },
+  {
+    "id": "edb_216178000113",
+    "name": "港青基信國際幼稚園",
+    "nameEn": "YMCA OF HONG KONG CHRISTIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 71220,
+    "tuitionMax": 125480
+  },
+  {
+    "id": "edb_216178000112",
+    "name": "港青基信國際幼稚園",
+    "nameEn": "YMCA OF HONG KONG CHRISTIAN INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "油尖旺區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 71220,
+    "tuitionMax": 125480
+  },
+  {
+    "id": "edb_581852000111",
+    "name": "約克國際幼稚園",
+    "nameEn": "YORK INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_581852000112",
+    "name": "約克國際幼稚園",
+    "nameEn": "YORK INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_581852000311",
+    "name": "約克國際幼稚園",
+    "nameEn": "YORK INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_581852000312",
+    "name": "約克國際幼稚園",
+    "nameEn": "YORK INTERNATIONAL KINDERGARTEN",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_578479000111",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_578479000112",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "九龍城區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_616990000112",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_616990000113",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_616990000111",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "屯門區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_621480000112",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_621480000113",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_621480000111",
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604615000113",
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604615000112",
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_604615000111",
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "九龍",
+    "district18": "深水埗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_609749000112",
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_609749000111",
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "西貢區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_605441000112",
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (YUEN LONG)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (YUEN LONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_605441000111",
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (YUEN LONG)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (YUEN LONG)",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "元朗區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_573973000112",
+    "name": "思百德國際幼稚園",
+    "nameEn": "ZEBEDEE INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "id": "edb_573973000111",
+    "name": "思百德國際幼稚園",
+    "nameEn": "ZEBEDEE INTERNATIONAL PRESCHOOL",
+    "level": "幼稚園",
+    "category": "國際",
+    "rawCategory": "私立",
+    "district": "新界",
+    "district18": "大埔區",
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   }
 ];
 
@@ -2483,6 +5909,45 @@ export const internationalSchools: InternationalSchoolEntry[] = [
  * Each entry aggregates all levels and campuses for that school
  */
 export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
+  {
+    "name": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN",
+    "nameEn": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_602329000111",
+      "edb_602329000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "nameEn": "ABC PATHWAYS INTERNATIONAL KINDERGARTEN (WHAMPOA GARDEN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_603864000211",
+      "edb_603864000212",
+      "edb_603864000213"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
   {
     "name": "美國國際學校",
     "nameEn": "AMERICAN INTERNATIONAL SCHOOL",
@@ -2533,6 +5998,161 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 152800
   },
   {
+    "name": "AMERICAN SCHOOL HONG KONG",
+    "nameEn": "AMERICAN SCHOOL HONG KONG",
+    "levels": [
+      "小學",
+      "中學"
+    ],
+    "category": "國際",
+    "districts": [
+      "大埔區"
+    ],
+    "schoolIds": [
+      "edb_603902000123",
+      "edb_603902000133"
+    ],
+    "curriculumV2": [
+      "AMERICAN"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "安基司學校附屬國際幼稚園",
+    "nameEn": "ANCHORS ACADEMY AFFILIATED INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_622060000112",
+      "edb_622060000113",
+      "edb_622060000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "安基司國際幼兒園",
+    "nameEn": "ANCHORS INTERNATIONAL NURSERY",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "大埔區"
+    ],
+    "schoolIds": [
+      "edb_565199000212",
+      "edb_565199000211",
+      "edb_565199000213",
+      "edb_565199000113",
+      "edb_565199000111",
+      "edb_565199000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "安菲爾國際幼稚園",
+    "nameEn": "ANFIELD INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_535818000312",
+      "edb_535818000311",
+      "edb_535818000313",
+      "edb_535818000211",
+      "edb_535818000212",
+      "edb_535818000213"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "安菲爾學校",
+    "nameEn": "ANFIELD SCHOOL",
+    "levels": [
+      "小學"
+    ],
+    "category": "國際",
+    "districts": [
+      "沙田區"
+    ],
+    "schoolIds": [
+      "edb_587567000123"
+    ],
+    "curriculumV2": [
+      "HK_LOCAL"
+    ],
+    "instructionLanguages": [
+      "ENGLISH",
+      "CANTONESE"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "安菲爾聖鮑思高冠英學校",
+    "nameEn": "ANFIELD ST. BOSCO KOON YING SCHOOL",
+    "levels": [
+      "小學"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_620785000123"
+    ],
+    "curriculumV2": [
+      "HK_LOCAL"
+    ],
+    "instructionLanguages": [
+      "ENGLISH",
+      "CANTONESE"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "雅士圖國際幼稚園",
+    "nameEn": "ARISTLE INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "深水埗區"
+    ],
+    "schoolIds": [
+      "edb_604470000111",
+      "edb_604470000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "香港澳洲國際學校",
     "nameEn": "AUSTRALIAN INTERNATIONAL SCHOOL HONG KONG",
     "levels": [
@@ -2581,6 +6201,66 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 139000,
     "tuitionMax": 139000
+  },
+  {
+    "name": "博士山（香港）國際幼稚園",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "沙田區"
+    ],
+    "schoolIds": [
+      "edb_559415000112",
+      "edb_559415000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
+  },
+  {
+    "name": "博士山(香港)國際幼稚園-將軍澳",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN - TSEUNG KWAN O",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_581836000212",
+      "edb_581836000213",
+      "edb_581836000211"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 74800,
+    "tuitionMax": 78100
+  },
+  {
+    "name": "博士山(香港)國際幼稚園-火炭",
+    "nameEn": "BOX HILL (HK) INTERNATIONAL KINDERGARTEN-FO TAN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "沙田區"
+    ],
+    "schoolIds": [
+      "edb_581739000212",
+      "edb_581739000211",
+      "edb_581739000112",
+      "edb_581739000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 77000,
+    "tuitionMax": 79200
   },
   {
     "name": "白普理小學",
@@ -2660,6 +6340,46 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 80500,
     "tuitionMax": 226090
+  },
+  {
+    "name": "銅鑼灣維多利亞國際幼稚園",
+    "nameEn": "CAUSEWAY BAY VICTORIA INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "灣仔區"
+    ],
+    "schoolIds": [
+      "edb_325651000113",
+      "edb_325651000112",
+      "edb_325651000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 125430,
+    "tuitionMax": 137973
+  },
+  {
+    "name": "新加坡卓薈國際幼稚園(界限街)",
+    "nameEn": "CHATSWORTH INTERNATIONAL KINDERGARTEN (BOUNDARY STREET)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_599182000111",
+      "edb_599182000112",
+      "edb_599182000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "漢基國際學校",
@@ -2781,6 +6501,70 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 150950
   },
   {
+    "name": "香港道爾頓學校",
+    "nameEn": "DALTON SCHOOL HONG KONG",
+    "levels": [
+      "小學",
+      "中學"
+    ],
+    "category": "國際",
+    "districts": [
+      "灣仔區"
+    ],
+    "schoolIds": [
+      "edb_607371000223",
+      "edb_607371000233"
+    ],
+    "curriculumV2": [
+      "AMERICAN"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "德寶國際幼兒學校（寶盈花園）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (BAUHINIA GARDEN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_567116000112",
+      "edb_567116000113",
+      "edb_567116000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "德寶國際幼兒學校（將軍澳）",
+    "nameEn": "DEBORAH INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_567108000112",
+      "edb_567108000113",
+      "edb_567108000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "DISCOVERY BAY INTERNATIONAL SCHOOL",
     "nameEn": "DISCOVERY BAY INTERNATIONAL SCHOOL",
     "levels": [
@@ -2834,6 +6618,72 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 191800
   },
   {
+    "name": "DISCOVERY MONTESSORI ACADEMY",
+    "nameEn": "DISCOVERY MONTESSORI ACADEMY",
+    "levels": [
+      "幼稚園",
+      "小學"
+    ],
+    "category": "國際",
+    "districts": [
+      "離島區"
+    ],
+    "schoolIds": [
+      "edb_600814000111",
+      "edb_600814000112",
+      "edb_600814000113",
+      "edb_600814000123"
+    ],
+    "curriculumV2": [
+      "OTHER_INTL"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "香港國際蒙特梭利學校",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "離島區"
+    ],
+    "schoolIds": [
+      "edb_584606000113",
+      "edb_584606000112",
+      "edb_584606000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "香港國際蒙特梭利學校(中環)",
+    "nameEn": "DISCOVERY MONTESSORI SCHOOL (CENTRAL)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "中西區"
+    ],
+    "schoolIds": [
+      "edb_588032000111",
+      "edb_588032000112",
+      "edb_588032000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "德思齊加拿大國際學校",
     "nameEn": "DSC INTERNATIONAL SCHOOL",
     "levels": [
@@ -2858,6 +6708,26 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 168100
   },
   {
+    "name": "艾蒙特國際幼稚園",
+    "nameEn": "EIS INTERNATIONAL PRE-SCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_615633000113",
+      "edb_615633000111",
+      "edb_615633000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "英基雅柏國際幼稚園",
     "nameEn": "ESF ABACUS INTERNATIONAL KINDERGARTEN",
     "levels": [
@@ -2875,6 +6745,25 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [],
     "tuitionMin": 103000,
     "tuitionMax": 119700
+  },
+  {
+    "name": "伽利利國際幼稚園",
+    "nameEn": "GALILEE INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_597031000112",
+      "edb_597031000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "德瑞國際學校",
@@ -2926,6 +6815,235 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 139000,
     "tuitionMax": 139000
+  },
+  {
+    "name": "雅惠國際幼稚園（鯉景灣）",
+    "nameEn": "GRACE GARDEN INTERNATIONAL KINDERGARTEN (LEI KING WAN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_604585000112",
+      "edb_604585000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "綠茵英文（國際）幼稚園（日出康城）",
+    "nameEn": "GREENFIELD ENGLISH (INTERNATIONAL) KINDERGARTEN (LOHAS PARK)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_604372000112",
+      "edb_604372000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "綠茵英文（國際）幼稚園（將軍澳）",
+    "nameEn": "GREENFIELD ENGLISH (INTERNATIONAL) KINDERGARTEN (TSEUNG KWAN O)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_523984000212",
+      "edb_523984000211",
+      "edb_523984000213"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CHAI WAN)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CHAI WAN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_609285000111",
+      "edb_609285000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CLEARWATER BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (CLEARWATER BAY)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_583774000111",
+      "edb_583774000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (DISCOVERY BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (DISCOVERY BAY)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "離島區"
+    ],
+    "schoolIds": [
+      "edb_609625000112",
+      "edb_609625000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (KENNEDY TOWN)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (KENNEDY TOWN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "中西區"
+    ],
+    "schoolIds": [
+      "edb_611484000112",
+      "edb_611484000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL KINDERGARTEN (POK FU LAM)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "南區"
+    ],
+    "schoolIds": [
+      "edb_598089000112",
+      "edb_598089000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (HAPPY VALLEY HAWTHORN ROAD)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (HAPPY VALLEY HAWTHORN ROAD)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "灣仔區"
+    ],
+    "schoolIds": [
+      "edb_564958000111",
+      "edb_564958000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (MID-LEVELS)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (MID-LEVELS)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "中西區"
+    ],
+    "schoolIds": [
+      "edb_594725000111",
+      "edb_594725000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (REPULSE BAY)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "南區"
+    ],
+    "schoolIds": [
+      "edb_602256000112",
+      "edb_602256000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "nameEn": "GUIDEPOST MONTESSORI INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_578630000111",
+      "edb_578630000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "哈羅香港國際學校",
@@ -3135,6 +7253,106 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 145110
   },
   {
+    "name": "INVICTUS KINDERGARTEN",
+    "nameEn": "INVICTUS KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_615366000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "INVICTUS SCHOOL",
+    "nameEn": "INVICTUS SCHOOL",
+    "levels": [
+      "小學"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_615285000123"
+    ],
+    "curriculumV2": [
+      "BRITISH"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "INVICTUS SECONDARY SCHOOL",
+    "nameEn": "INVICTUS SECONDARY SCHOOL",
+    "levels": [
+      "中學"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_616354000133"
+    ],
+    "curriculumV2": [
+      "BRITISH"
+    ],
+    "instructionLanguages": [
+      "ENGLISH"
+    ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "港島兒童蒙特梭利幼稚園",
+    "nameEn": "ISLAND CHILDREN'S MONTESSORI KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "灣仔區"
+    ],
+    "schoolIds": [
+      "edb_581119000111",
+      "edb_581119000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "港島蒙特梭利國際幼稚園",
+    "nameEn": "ISLAND MONTESSORI INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_607223000111",
+      "edb_607223000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "ISLAND SCHOOL",
     "nameEn": "ISLAND SCHOOL",
     "levels": [
@@ -3155,6 +7373,26 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 159400,
     "tuitionMax": 181100
+  },
+  {
+    "name": "意大利國際幼稚園",
+    "nameEn": "ITALIAN INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "南區"
+    ],
+    "schoolIds": [
+      "edb_611646000111",
+      "edb_611646000113",
+      "edb_611646000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "JAPANESE INTERNATIONAL SCHOOL",
@@ -3179,6 +7417,26 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 140460
   },
   {
+    "name": "晶晶國際幼稚園",
+    "nameEn": "JING JING INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "屯門區"
+    ],
+    "schoolIds": [
+      "edb_587524000111",
+      "edb_587524000112",
+      "edb_587524000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "賽馬會善樂學校",
     "nameEn": "JOCKEY CLUB SARAH ROE SCHOOL",
     "levels": [
@@ -3199,6 +7457,44 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "心怡天地國際幼稚園(屯門)",
+    "nameEn": "JOYFUL WORLD INTERNATIONAL KINDERGARTEN (TUEN MUN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "屯門區"
+    ],
+    "schoolIds": [
+      "edb_615170000112",
+      "edb_615170000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "心怡天地國際幼稚園(元朗)",
+    "nameEn": "JOYFUL WORLD INTERNATIONAL KINDERGARTEN (YUEN LONG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_612189000111",
+      "edb_612189000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
     "tuitionMin": 0,
     "tuitionMax": 0
   },
@@ -3226,6 +7522,44 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 208800,
     "tuitionMax": 267100
+  },
+  {
+    "name": "漢迪國際幼稚園",
+    "nameEn": "KENDALL INTERNATIONAL PRESCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "深水埗區"
+    ],
+    "schoolIds": [
+      "edb_607703000111",
+      "edb_607703000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "漢廸國際幼稚園(港島東)",
+    "nameEn": "KENDALL INTERNATIONAL PRESCHOOL (ISLAND EAST)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_325783000112",
+      "edb_325783000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "KENNEDY SCHOOL",
@@ -3270,6 +7604,25 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 159400,
     "tuitionMax": 181100
+  },
+  {
+    "name": "京斯敦國際幼稚園",
+    "nameEn": "KINGSTON INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_519863000312",
+      "edb_519863000311"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 63800,
+    "tuitionMax": 112200
   },
   {
     "name": "京斯敦國際學校",
@@ -3367,6 +7720,82 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 103000
   },
   {
+    "name": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL",
+    "nameEn": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "中西區"
+    ],
+    "schoolIds": [
+      "edb_614904000112",
+      "edb_614904000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL (TSEUNG KWAN O)",
+    "nameEn": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL (TSEUNG KWAN O)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_614998000111",
+      "edb_614998000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "道爾頓幼稚園",
+    "nameEn": "LITTLE DALTON KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "灣仔區"
+    ],
+    "schoolIds": [
+      "edb_607592000213",
+      "edb_607592000212",
+      "edb_607592000211"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "小大嶼山蒙特梭利幼稚園",
+    "nameEn": "LITTLE LANTAU MONTESSORI KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "離島區"
+    ],
+    "schoolIds": [
+      "edb_587877000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
     "nameEn": "LYC'EE FRANCAIS INTERNATIONAL (FRENCH INTERNATIONAL SCHOOL)",
     "levels": [
@@ -3398,6 +7827,65 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 217599
   },
   {
+    "name": "瑪歌瑞特國際幼稚園",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_610623000111",
+      "edb_610623000113",
+      "edb_610623000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "瑪歌瑞特國際幼稚園(粉嶺)",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN (FANLING)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "北區"
+    ],
+    "schoolIds": [
+      "edb_566241000113",
+      "edb_566241000111",
+      "edb_566241000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "瑪歌瑞特國際幼稚園(康怡)",
+    "nameEn": "MAGART INTERNATIONAL KINDERGARTEN (KORNHILL)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_215767000111",
+      "edb_215767000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "香港墨爾文國際學校",
     "nameEn": "MALVERN COLLEGE HONG KONG",
     "levels": [
@@ -3420,6 +7908,201 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 198860,
     "tuitionMax": 226210
+  },
+  {
+    "name": "楓葉小熊加拿大國際幼稚園",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_613665000111",
+      "edb_613665000113",
+      "edb_613665000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "楓葉小熊加拿大國際幼稚園(康城)",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN (LOHAS)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_616311000112",
+      "edb_616311000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "楓葉小熊加拿大國際幼稚園(油塘)",
+    "nameEn": "MAPLE BEAR CANADIAN INTERNATIONAL KINDERGARTEN (YAU TONG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "觀塘區"
+    ],
+    "schoolIds": [
+      "edb_593788000112",
+      "edb_593788000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "善行國際幼稚園",
+    "nameEn": "MASS INTERNATIONAL PRESCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "灣仔區"
+    ],
+    "schoolIds": [
+      "edb_600334000211",
+      "edb_600334000212"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "奧恩國際幼稚園",
+    "nameEn": "MIGHTY OAKS INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "中西區"
+    ],
+    "schoolIds": [
+      "edb_603643000111",
+      "edb_603643000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "明慧國際幼稚園",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_566977000111",
+      "edb_566977000112",
+      "edb_566977000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "明慧國際幼稚園（北角分校）",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (NORTH POINT BRANCH)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_567329000112",
+      "edb_567329000111",
+      "edb_567329000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "明慧國際幼稚園(太子分校)",
+    "nameEn": "MING WAI INTERNATIONAL KINDERGARTEN (PRINCE EDWARD BRANCH)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "油尖旺區"
+    ],
+    "schoolIds": [
+      "edb_583421000112",
+      "edb_583421000111",
+      "edb_583421000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "明雅國際幼兒學校",
+    "nameEn": "MINK INTERNATIONAL PRE-SCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "大埔區"
+    ],
+    "schoolIds": [
+      "edb_567027000111",
+      "edb_567027000112",
+      "edb_567027000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "MONTESSORI FOR CHILDREN (NURSERY)",
+    "nameEn": "MONTESSORI FOR CHILDREN (NURSERY)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "南區"
+    ],
+    "schoolIds": [
+      "edb_565466000111",
+      "edb_565466000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "懋柏禮國際幼稚園",
@@ -3453,6 +8136,64 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "schoolIds": [
       "edb_578053000112",
       "edb_578053000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "童樂天國際幼稚園",
+    "nameEn": "MULBERRY TREE INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "沙田區"
+    ],
+    "schoolIds": [
+      "edb_598054000111",
+      "edb_598054000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "麥克萊國際幼稚園",
+    "nameEn": "MYNORS INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "北區"
+    ],
+    "schoolIds": [
+      "edb_601250000111",
+      "edb_601250000112",
+      "edb_601250000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "NORD ANGLIA INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "nameEn": "NORD ANGLIA INTERNATIONAL PRE-SCHOOL (SAI KUNG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_608475000112",
+      "edb_608475000111"
     ],
     "curriculumV2": [],
     "instructionLanguages": [],
@@ -3510,6 +8251,45 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 133200
   },
   {
+    "name": "栢基國際幼稚園",
+    "nameEn": "PARKVIEW INTERNATIONAL PRE-SCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "南區"
+    ],
+    "schoolIds": [
+      "edb_215937000112",
+      "edb_215937000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "栢基國際幼稚園(九龍)",
+    "nameEn": "PARKVIEW INTERNATIONAL PRE-SCHOOL (KOWLOON)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "油尖旺區"
+    ],
+    "schoolIds": [
+      "edb_571490000113",
+      "edb_571490000111",
+      "edb_571490000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "PEAK SCHOOL",
     "nameEn": "PEAK SCHOOL",
     "levels": [
@@ -3530,6 +8310,45 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 139000,
     "tuitionMax": 139000
+  },
+  {
+    "name": "培僑國際幼稚園",
+    "nameEn": "PUI KIU INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "沙田區"
+    ],
+    "schoolIds": [
+      "edb_613916000112",
+      "edb_613916000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "培僑國際幼稚園(碧濤花園)",
+    "nameEn": "PUI KIU INTERNATIONAL KINDERGARTEN (PICTORIAL GARDEN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "沙田區"
+    ],
+    "schoolIds": [
+      "edb_622389000112",
+      "edb_622389000113",
+      "edb_622389000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "鰂魚涌小學",
@@ -3576,6 +8395,25 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 145800,
     "tuitionMax": 189900
+  },
+  {
+    "name": "聖姬莉國際幼稚園",
+    "nameEn": "SAINT BRIGIT INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_597538000211",
+      "edb_597538000212"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "弘爵國際學校",
@@ -3724,6 +8562,27 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 138000
   },
   {
+    "name": "國際英文幼稚園",
+    "nameEn": "ST. CATHERINE'S INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_215120000111",
+      "edb_215120000211",
+      "edb_215120000212",
+      "edb_215120000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "STAMFORD AMERICAN SCHOOL HONG KONG",
     "nameEn": "STAMFORD AMERICAN SCHOOL HONG KONG",
     "levels": [
@@ -3824,6 +8683,240 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 181100
   },
   {
+    "name": "朗思國際幼稚園",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "觀塘區"
+    ],
+    "schoolIds": [
+      "edb_216267000111",
+      "edb_216267000113",
+      "edb_216267000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "朗思國際幼稚園（馬鞍山）",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (MA ON SHAN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "沙田區"
+    ],
+    "schoolIds": [
+      "edb_533360000212",
+      "edb_533360000211",
+      "edb_533360000213"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "朗思國際幼稚園(南昌)",
+    "nameEn": "THINK INTERNATIONAL KINDERGARTEN (NAM CHEONG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "深水埗區"
+    ],
+    "schoolIds": [
+      "edb_612782000113",
+      "edb_612782000111",
+      "edb_612782000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "德怡國際幼稚園(元朗)",
+    "nameEn": "TOPKIDS INTERNATIONAL KINDERGARTEN (YUEN LONG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_602000000113",
+      "edb_602000000112",
+      "edb_602000000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "多多寶馬山國際幼稚園",
+    "nameEn": "TUTOR TIME BRAEMAR HILL INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "東區"
+    ],
+    "schoolIds": [
+      "edb_575852000112",
+      "edb_575852000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "多多國際幼稚園（九龍塘）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (KOWLOON TONG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_542504000111",
+      "edb_542504000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "多多國際幼稚園（半山）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (MID LEVELS)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "中西區"
+    ],
+    "schoolIds": [
+      "edb_593133000111",
+      "edb_593133000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "多多國際幼稚園（形點）",
+    "nameEn": "TUTOR TIME INTERNATIONAL KINDERGARTEN (YOHO)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_605794000111",
+      "edb_605794000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "維多利亞(何文田)國際幼稚園",
+    "nameEn": "VICTORIA (HOMANTIN) INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_618039000112",
+      "edb_618039000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 105280,
+    "tuitionMax": 206510
+  },
+  {
+    "name": "維多利亞（何文田）國際幼兒園",
+    "nameEn": "VICTORIA (HOMANTIN) INTERNATIONAL NURSERY",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_566900000112",
+      "edb_566900000113",
+      "edb_566900000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 105280,
+    "tuitionMax": 206510
+  },
+  {
+    "name": "維多利亞(海之戀)國際幼稚園",
+    "nameEn": "VICTORIA (OCEAN PRIDE) INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "荃灣區"
+    ],
+    "schoolIds": [
+      "edb_619850000111",
+      "edb_619850000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 102400,
+    "tuitionMax": 127919
+  },
+  {
+    "name": "維多利亞（海怡）國際幼稚園",
+    "nameEn": "VICTORIA (SOUTH HORIZONS) INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "南區"
+    ],
+    "schoolIds": [
+      "edb_216194000111",
+      "edb_216194000113",
+      "edb_216194000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 110520,
+    "tuitionMax": 207140
+  },
+  {
     "name": "滬江維多利亞學校",
     "nameEn": "VICTORIA SHANGHAI ACADEMY",
     "levels": [
@@ -3849,6 +8942,26 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "tuitionMax": 255600
   },
   {
+    "name": "宏廣國際幼稚園",
+    "nameEn": "WELLCOME INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "屯門區"
+    ],
+    "schoolIds": [
+      "edb_590401000111",
+      "edb_590401000113",
+      "edb_590401000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
     "name": "WEST ISLAND SCHOOL",
     "nameEn": "WEST ISLAND SCHOOL",
     "levels": [
@@ -3869,6 +8982,83 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 159400,
     "tuitionMax": 181100
+  },
+  {
+    "name": "WILDERNESS INTERNATIONAL KINDERGARTEN",
+    "nameEn": "WILDERNESS INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "中西區"
+    ],
+    "schoolIds": [
+      "edb_607215000111",
+      "edb_607215000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "耀中國際幼稚園（根德道）",
+    "nameEn": "YEW CHUNG INTERNATIONAL CHILDREN'S HOUSE (KENT ROAD)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_566128000111",
+      "edb_566128000113",
+      "edb_566128000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "耀中國際幼稚園（窩打老道）",
+    "nameEn": "YEW CHUNG INTERNATIONAL CHILDREN'S HOUSE (WATERLOO ROAD)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_566110000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "耀中國際幼稚園(將軍澳)",
+    "nameEn": "YEW CHUNG INTERNATIONAL KINDERGARTEN (TSEUNG KWAN O)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_613517000111",
+      "edb_613517000112",
+      "edb_613517000113"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   },
   {
     "name": "耀中國際學校",
@@ -3919,6 +9109,183 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     ],
     "tuitionMin": 266040,
     "tuitionMax": 272140
+  },
+  {
+    "name": "港青基信國際幼稚園",
+    "nameEn": "YMCA OF HONG KONG CHRISTIAN INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "油尖旺區"
+    ],
+    "schoolIds": [
+      "edb_216178000111",
+      "edb_216178000113",
+      "edb_216178000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 71220,
+    "tuitionMax": 125480
+  },
+  {
+    "name": "約克國際幼稚園",
+    "nameEn": "YORK INTERNATIONAL KINDERGARTEN",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_581852000111",
+      "edb_581852000112",
+      "edb_581852000311",
+      "edb_581852000312"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "YORK INTERNATIONAL PRE-SCHOOL",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "九龍城區"
+    ],
+    "schoolIds": [
+      "edb_578479000111",
+      "edb_578479000112"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (TUEN MUN)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "屯門區"
+    ],
+    "schoolIds": [
+      "edb_616990000112",
+      "edb_616990000113",
+      "edb_616990000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "nameEn": "YORK INTERNATIONAL PRE-SCHOOL (WETLAND)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_621480000112",
+      "edb_621480000113",
+      "edb_621480000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (MEI FOO)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "深水埗區"
+    ],
+    "schoolIds": [
+      "edb_604615000113",
+      "edb_604615000112",
+      "edb_604615000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (TSEUNG KWAN O)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "西貢區"
+    ],
+    "schoolIds": [
+      "edb_609749000112",
+      "edb_609749000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (YUEN LONG)",
+    "nameEn": "YORK MONTESSORI INTERNATIONAL PRE-SCHOOL (YUEN LONG)",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "元朗區"
+    ],
+    "schoolIds": [
+      "edb_605441000112",
+      "edb_605441000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
+  },
+  {
+    "name": "思百德國際幼稚園",
+    "nameEn": "ZEBEDEE INTERNATIONAL PRESCHOOL",
+    "levels": [
+      "幼稚園"
+    ],
+    "category": "國際",
+    "districts": [
+      "大埔區"
+    ],
+    "schoolIds": [
+      "edb_573973000112",
+      "edb_573973000111"
+    ],
+    "curriculumV2": [],
+    "instructionLanguages": [],
+    "tuitionMin": 0,
+    "tuitionMax": 0
   }
 ];
 
