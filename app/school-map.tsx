@@ -1,5 +1,4 @@
 import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Modal, Platform, Pressable, ScrollView } from "react-native";
-import { WebView } from "react-native-webview";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -11,6 +10,12 @@ import { DISTRICT_MAP_DATA, calculateAllDistrictStats, REGION_COLORS, type Distr
 import { DISTRICT_POLYGONS } from "@/lib/district-polygons";
 import { MapSetStorage } from "@/lib/storage";
 import { FilterContext } from "@/lib/filter-context";
+
+// Conditionally import WebView only for native platforms
+let WebView: any = null;
+if (Platform.OS !== "web") {
+  WebView = require("react-native-webview").WebView;
+}
 
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 const isWeb = Platform.OS === "web";
@@ -135,13 +140,23 @@ function generateMapHTML(
 
       L.marker(center, { icon: label, interactive: false }).addTo(map);
 
+      // Helper to post message to parent (works for both iframe and WebView)
+      function postToParent(data) {
+        const msg = JSON.stringify(data);
+        if (window.ReactNativeWebView) {
+          window.ReactNativeWebView.postMessage(msg);
+        } else {
+          window.parent.postMessage(msg, '*');
+        }
+      }
+
       // Mouse events
       polygon.on('mouseover', function() {
         if (selectedDistrict !== district.id) {
           this.setStyle({ fillOpacity: 0.45, weight: 3 });
         }
         hoveredDistrict = district.id;
-        window.ReactNativeWebView?.postMessage(JSON.stringify({
+        postToParent({
           type: 'hover',
           district: district.id,
           stats: {
@@ -151,7 +166,7 @@ function generateMapHTML(
             secondary: district.secondary,
             byCategory: district.byCategory,
           }
-        }));
+        });
       });
 
       polygon.on('mouseout', function() {
@@ -159,7 +174,7 @@ function generateMapHTML(
           this.setStyle({ fillOpacity: 0.25, weight: 2 });
         }
         hoveredDistrict = null;
-        window.ReactNativeWebView?.postMessage(JSON.stringify({ type: 'hoverEnd' }));
+        postToParent({ type: 'hoverEnd' });
       });
 
       polygon.on('click', function() {
@@ -170,16 +185,16 @@ function generateMapHTML(
 
         if (selectedDistrict === district.id) {
           // Second tap - open filters
-          window.ReactNativeWebView?.postMessage(JSON.stringify({
+          postToParent({
             type: 'select',
             district: district.id
-          }));
+          });
           selectedDistrict = null;
         } else {
           // First tap - highlight
           selectedDistrict = district.id;
           this.setStyle({ fillOpacity: 0.5, weight: 4 });
-          window.ReactNativeWebView?.postMessage(JSON.stringify({
+          postToParent({
             type: 'tap',
             district: district.id,
             stats: {
@@ -189,7 +204,7 @@ function generateMapHTML(
               secondary: district.secondary,
               byCategory: district.byCategory,
             }
-          }));
+          });
         }
       });
     });
@@ -203,7 +218,8 @@ export default function SchoolMapScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const filterContext = useContext(FilterContext);
-  const webViewRef = useRef<WebView>(null);
+  const webViewRef = useRef<any>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   // Selected district state (for mobile tap interaction)
   const [selectedDistrict, setSelectedDistrict] = useState<District18 | null>(null);
@@ -227,6 +243,22 @@ export default function SchoolMapScreen() {
     () => generateMapHTML(DISTRICT_POLYGONS, DISTRICT_MAP_DATA, districtStats),
     [districtStats]
   );
+
+  // Generate blob URL for iframe on web
+  const mapBlobUrl = useMemo(() => {
+    if (!isWeb) return null;
+    const blob = new Blob([mapHTML], { type: "text/html" });
+    return URL.createObjectURL(blob);
+  }, [mapHTML]);
+
+  // Cleanup blob URL on unmount
+  useEffect(() => {
+    return () => {
+      if (mapBlobUrl) {
+        URL.revokeObjectURL(mapBlobUrl);
+      }
+    };
+  }, [mapBlobUrl]);
 
   // Load last results on mount
   useEffect(() => {
@@ -254,30 +286,53 @@ export default function SchoolMapScreen() {
   const lastQASchools = useMemo(() => getSchoolsFromIds(lastQAIds, 5), [lastQAIds, getSchoolsFromIds]);
   const lastFilterSchools = useMemo(() => getSchoolsFromIds(lastFilterIds, 5), [lastFilterIds, getSchoolsFromIds]);
 
-  // Handle WebView messages
+  // Handle map messages (shared logic for both WebView and iframe)
+  const handleMapMessage = useCallback((data: any) => {
+    if (data.type === "hover") {
+      setHoveredDistrict(data.district);
+      setHoveredStats(data.stats);
+    } else if (data.type === "hoverEnd") {
+      setHoveredDistrict(null);
+      setHoveredStats(null);
+    } else if (data.type === "tap") {
+      // Mobile: first tap shows sheet
+      setSelectedDistrict(data.district);
+      setSelectedStats(data.stats);
+      setShowMobileSheet(true);
+    } else if (data.type === "select") {
+      // Web: direct click or Mobile: second tap
+      openFiltersWithDistrict(data.district);
+    }
+  }, []);
+
+  // Handle WebView messages (native)
   const handleWebViewMessage = (event: any) => {
     try {
       const data = JSON.parse(event.nativeEvent.data);
-
-      if (data.type === "hover") {
-        setHoveredDistrict(data.district);
-        setHoveredStats(data.stats);
-      } else if (data.type === "hoverEnd") {
-        setHoveredDistrict(null);
-        setHoveredStats(null);
-      } else if (data.type === "tap") {
-        // Mobile: first tap shows sheet
-        setSelectedDistrict(data.district);
-        setSelectedStats(data.stats);
-        setShowMobileSheet(true);
-      } else if (data.type === "select") {
-        // Web: direct click or Mobile: second tap
-        openFiltersWithDistrict(data.district);
-      }
+      handleMapMessage(data);
     } catch (e) {
       // Ignore parse errors
     }
   };
+
+  // Listen for iframe messages on web
+  useEffect(() => {
+    if (!isWeb) return;
+
+    const handleWindowMessage = (event: MessageEvent) => {
+      try {
+        const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
+        if (data.type) {
+          handleMapMessage(data);
+        }
+      } catch (e) {
+        // Ignore parse errors
+      }
+    };
+
+    window.addEventListener("message", handleWindowMessage);
+    return () => window.removeEventListener("message", handleWindowMessage);
+  }, [handleMapMessage]);
 
   // Open filters with district pre-selected
   const openFiltersWithDistrict = (district: District18) => {
@@ -524,21 +579,40 @@ export default function SchoolMapScreen() {
         </Text>
       </View>
 
-      {/* Map WebView */}
+      {/* Map - iframe for web, WebView for native */}
       <View style={styles.mapContainer}>
-        <WebView
-          ref={webViewRef}
-          source={{ html: mapHTML }}
-          style={styles.webView}
-          onMessage={handleWebViewMessage}
-          scrollEnabled={false}
-          bounces={false}
-          showsHorizontalScrollIndicator={false}
-          showsVerticalScrollIndicator={false}
-          originWhitelist={["*"]}
-          javaScriptEnabled={true}
-          domStorageEnabled={true}
-        />
+        {isWeb ? (
+          <iframe
+            ref={iframeRef as any}
+            src={mapBlobUrl || undefined}
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "none",
+              backgroundColor: "#0F1629",
+            }}
+          />
+        ) : WebView ? (
+          <WebView
+            ref={webViewRef}
+            source={{ html: mapHTML }}
+            style={styles.webView}
+            onMessage={handleWebViewMessage}
+            scrollEnabled={false}
+            bounces={false}
+            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
+            originWhitelist={["*"]}
+            javaScriptEnabled={true}
+            domStorageEnabled={true}
+          />
+        ) : (
+          <View style={styles.webView}>
+            <Text style={{ color: "#FFFFFF", textAlign: "center", marginTop: 100 }}>
+              地圖載入中...
+            </Text>
+          </View>
+        )}
       </View>
 
       {/* Web hover popover */}
