@@ -5,6 +5,7 @@
 
 import type { District18, SchoolCategory, Level, School } from "@/types/school";
 import { isInternational } from "@/lib/international-schools";
+import { groupSchoolsBySession } from "@/constants/session-grouping";
 
 /**
  * District center coordinates for map display
@@ -68,12 +69,17 @@ export interface DistrictStats {
 
 /**
  * Calculate stats for a specific district
+ * Uses groupSchoolsBySession to merge AM/PM/WD variants (consistent with filter display)
  */
 export function calculateDistrictStats(schools: School[], district18: District18): DistrictStats {
+  // First filter by district
   const districtSchools = schools.filter((s) => s.district18 === district18);
 
+  // Then group by session to merge AM/PM/WD variants (consistent with filter logic)
+  const groupedSchools = groupSchoolsBySession(districtSchools);
+
   const stats: DistrictStats = {
-    total: districtSchools.length,
+    total: groupedSchools.length,
     kindergarten: 0,
     primary: 0,
     secondary: 0,
@@ -86,7 +92,7 @@ export function calculateDistrictStats(schools: School[], district18: District18
     },
   };
 
-  districtSchools.forEach((school) => {
+  groupedSchools.forEach((school) => {
     // Count by level
     if (school.level === "幼稚園") stats.kindergarten++;
     else if (school.level === "小學") stats.primary++;
