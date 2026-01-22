@@ -7,7 +7,7 @@ import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { getSortedRecommendations, calculateMatchScore, getMatchDescription } from "@/lib/recommendation";
 import { FavoritesStorage, MapSetStorage } from "@/lib/storage";
-import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
+import { groupSchoolsBySession, type GroupedSchool } from "@/lib/school-classification";
 import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";

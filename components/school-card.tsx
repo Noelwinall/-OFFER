@@ -2,13 +2,13 @@ import React from "react";
 import { View, Text, Pressable, StyleSheet, Platform } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColors } from "@/hooks/use-colors";
-import { isInternational } from "@/lib/international-schools";
+import { isInternational } from "@/lib/school-classification";
 import { SCHOOL_TEXT, formatTuitionDisplay, formatOverallTuition, hasValidFeesData } from "@/constants/school-text";
 import { getSchoolFees } from "@/data/fees-2025-26";
 import type { School, CurriculumV2, SchoolGender, SchoolRelationship } from "@/types/school";
 import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS, DISTRICT18_TO_DISTRICT } from "@/types/school";
-import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/constants/session-grouping";
-import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/constants/kg-nature";
+import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/lib/school-classification";
+import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/lib/school-classification";
 import * as Haptics from "expo-haptics";
 
 /**

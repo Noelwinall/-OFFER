@@ -18,7 +18,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Platform, Animated } from "re
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { getKgSafeBatchSummary, toSchoolForBrief } from "@/lib/services/briefs";
 import type { SafeBatchSummary, KGBriefPreferences, KGSchoolForBrief } from "@/lib/services/briefs";
-import type { GroupedSchool } from "@/constants/session-grouping";
+import type { GroupedSchool } from "@/lib/school-classification";
 import { FilterContext } from "@/lib/filter-context";
 import { kindergartens } from "@/data/kg/kg-database";
 import type { KGSession } from "@/constants/kg-filters";

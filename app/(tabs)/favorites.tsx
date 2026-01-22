@@ -5,7 +5,7 @@ import { SchoolCard } from "@/components/school-card";
 import { useRouter } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, FavoriteGroupsStorage, DEFAULT_GROUPS, type FavoriteGroup } from "@/lib/storage";
-import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
+import { groupSchoolsBySession, type GroupedSchool } from "@/lib/school-classification";
 import type { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useFocusEffect } from "@react-navigation/native";

@@ -19,7 +19,7 @@ import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SCHOOL_TEXT } from "@/constants/school-text";
-import { groupSchoolsBySession, type GroupedSchool } from "@/constants/session-grouping";
+import { groupSchoolsBySession, type GroupedSchool } from "@/lib/school-classification";
 
 // Stage filter options for quick filter bar
 const STAGE_OPTIONS: { label: string; value: Level }[] = [

@@ -1,13 +1,13 @@
 import type { School } from "@/types/school";
 import type { FilterState, SortOption } from "@/lib/filter-context";
-import { isInternational } from "@/lib/international-schools";
+import { isInternational } from "@/lib/school-classification";
 import { getGroupSearchId, matchesGroupSearch, expandSearchQuery } from "@/constants/search-aliases";
 import {
   KG_CATEGORY_PRIVATE,
   KG_CATEGORY_NONPROFIT,
   matchesKGCategory,
   isNonInternationalKG,
-} from "@/constants/kg-nature";
+} from "@/lib/school-classification";
 import { feesData202526 } from "@/data/fees-2025-26";
 import { calculateOverallTuition } from "@/types/fees";
 import { kindergartens, type KindergartenEntry } from "@/data/kg/kg-database";

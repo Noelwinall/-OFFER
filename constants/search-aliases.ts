@@ -10,7 +10,7 @@
  * - Regular text searches still work normally
  */
 
-import { isEsfSchool, ESF_CANONICAL_LIST, SCHOOL_GROUPS } from "@/constants/school-groups";
+import { isEsfSchool, ESF_CANONICAL_LIST, SCHOOL_GROUPS } from "@/lib/school-classification";
 import type { School } from "@/types/school";
 
 /**

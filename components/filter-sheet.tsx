@@ -12,7 +12,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useFilter } from "@/lib/filter-context";
 import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18, type Level } from "@/types/school";
-import { NON_KG_CATEGORY_OPTIONS, KG_CATEGORY_OPTIONS } from "@/constants/kg-nature";
+import { NON_KG_CATEGORY_OPTIONS, KG_CATEGORY_OPTIONS } from "@/lib/school-classification";
 import { InfoHelp } from "@/components/info-help";
 import { TeachingFeaturesHelp } from "@/components/teaching-features-help";
 import {

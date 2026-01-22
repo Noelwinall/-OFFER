@@ -1,7 +1,7 @@
 import React, { createContext, useReducer, ReactNode } from "react";
 
 import type { Curriculum, CurriculumV2, InstructionLanguage, Language, SchoolCategory, District, District18, Level, SchoolGender } from "@/types/school";
-import type { ExtendedCategory } from "@/constants/kg-nature";
+import type { ExtendedCategory } from "@/lib/school-classification";
 import type { KGSession, KGCurriculumCategoryFilter, KGCurriculumSubtypeFilter, KGPedagogyTag, KGLanguageEnv } from "@/constants/kg-filters";
 
 // 排序選項類型

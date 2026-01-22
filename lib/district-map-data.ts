@@ -4,9 +4,9 @@
  */
 
 import type { District18, SchoolCategory, Level, School } from "@/types/school";
-import { isInternational } from "@/lib/international-schools";
-import { groupSchoolsBySession } from "@/constants/session-grouping";
-import { isNonInternationalKG } from "@/constants/kg-nature";
+import { isInternational } from "@/lib/school-classification";
+import { groupSchoolsBySession } from "@/lib/school-classification";
+import { isNonInternationalKG } from "@/lib/school-classification";
 
 /**
  * District center coordinates for map display
