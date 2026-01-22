@@ -91,8 +91,12 @@ export function calculateDistrictStats(schools: School[], district18: District18
     else if (school.level === "小學") stats.primary++;
     else if (school.level === "中學") stats.secondary++;
 
-    // Count by category
+    // Count by category (exclude kindergartens from 私立 - only count primary/secondary)
     if (stats.byCategory[school.category] !== undefined) {
+      if (school.category === "私立" && school.level === "幼稚園") {
+        // Skip kindergartens in private category count
+        return;
+      }
       stats.byCategory[school.category]++;
     }
   });
