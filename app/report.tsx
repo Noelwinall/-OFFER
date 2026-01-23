@@ -19,6 +19,7 @@ import {
 } from "@/lib/recommendation";
 import { FavoritesStorage } from "@/lib/storage";
 import type { QuizFilters, School } from "@/types/school";
+import { CURRICULUM_V2_LABELS } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { trpc } from "@/lib/trpc";
@@ -72,9 +73,9 @@ function ReportSchoolCard({
         <View style={[styles.tag, { backgroundColor: "#0D9488" }]}>
           <Text style={styles.tagText}>{school.district}</Text>
         </View>
-        {school.curriculum[0] && (
+        {school.curriculumV2?.[0] && (
           <View style={[styles.tag, { backgroundColor: "#6366F1" }]}>
-            <Text style={styles.tagText}>{school.curriculum[0]}</Text>
+            <Text style={styles.tagText}>{CURRICULUM_V2_LABELS[school.curriculumV2[0]] || school.curriculumV2[0]}</Text>
           </View>
         )}
       </View>

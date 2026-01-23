@@ -111,11 +111,13 @@ export interface School {
   level: Level;
   tuitionMin: number; // 學費下限（港幣/年）
   tuitionMax: number; // 學費上限（港幣/年）
-  curriculum: Curriculum[];
-  curriculumV2: CurriculumV2[]; // V2 課程分類（Primary/Secondary only）
-  instructionLanguages: InstructionLanguage[]; // 授課語言（Primary/Secondary only）
-  gender: SchoolGender; // 學校性別（Primary/Secondary only）
-  language: Language;
+  curriculumV2: CurriculumV2[]; // 課程分類（使用 CURRICULUM_V2_LABELS 顯示）
+  instructionLanguages: InstructionLanguage[]; // 授課語言（使用 INSTRUCTION_LANGUAGE_LABELS 顯示）
+  // Legacy fields - derived from curriculumV2/instructionLanguages for backward compatibility
+  // DO NOT use these for new UI code - use curriculumV2 and instructionLanguages instead
+  curriculum: Curriculum[]; // @deprecated - use curriculumV2
+  language: Language; // @deprecated - use instructionLanguages
+  gender: SchoolGender; // 學校性別
   highlights: string[]; // 亮點描述（2-3 條）
   address: string;
   phone: string;
@@ -124,7 +126,7 @@ export interface School {
   applicationLink: string; // 申請連結
   latitude: number; // 緯度
   longitude: number; // 經度
-  // New metadata fields (R4)
+  // Metadata fields
   religion?: string; // 宗教 (e.g. "天主教", "基督教", "佛教") - empty/無 means no religion
   schoolNet?: string; // 校網 (e.g. "11", "34") - Primary schools only
   isSpecialSchool?: boolean; // 特殊學校 flag

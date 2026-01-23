@@ -7,6 +7,7 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { SCHOOLS } from "@/data/schools";
 import { FavoritesStorage } from "@/lib/storage";
 import type { School } from "@/types/school";
+import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -44,6 +45,22 @@ const formatFee = (min: number, max: number): string => {
     return `HK$${min.toLocaleString()}/年`;
   }
   return `HK$${(min / 10000).toFixed(1)}-${(max / 10000).toFixed(1)}萬/年`;
+};
+
+// Format curriculum for display
+const formatCurriculum = (school: School): string => {
+  if (school.curriculumV2 && school.curriculumV2.length > 0) {
+    return school.curriculumV2.map(c => CURRICULUM_V2_LABELS[c] || c).join(" / ");
+  }
+  return "—";
+};
+
+// Format instruction languages for display
+const formatLanguages = (school: School): string => {
+  if (school.instructionLanguages && school.instructionLanguages.length > 0) {
+    return school.instructionLanguages.map(l => INSTRUCTION_LANGUAGE_LABELS[l] || l).join(" / ");
+  }
+  return "—";
 };
 
 // 學校類型標籤顏色
@@ -178,11 +195,11 @@ function SwipeCard({ school, index, totalCards, onSwipeLeft, onSwipeRight, isTop
             </View>
             <View style={styles.infoRow}>
               <Text style={styles.infoIcon}>📚</Text>
-              <Text style={styles.infoText}>{school.curriculum.join(" / ")}</Text>
+              <Text style={styles.infoText}>{formatCurriculum(school)}</Text>
             </View>
             <View style={styles.infoRow}>
               <Text style={styles.infoIcon}>🗣️</Text>
-              <Text style={styles.infoText}>{school.language}</Text>
+              <Text style={styles.infoText}>{formatLanguages(school)}</Text>
             </View>
           </View>
 

@@ -4,8 +4,24 @@ import { ScreenContainer } from "@/components/screen-container";
 import { useRouter } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
 import { CompareStorage } from "@/lib/storage";
-import { formatTuitionRange } from "@/types/school";
+import { formatTuitionRange, CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 import type { School } from "@/types/school";
+
+// Format curriculum for display
+const formatCurriculum = (school: School): string => {
+  if (school.curriculumV2 && school.curriculumV2.length > 0) {
+    return school.curriculumV2.map(c => CURRICULUM_V2_LABELS[c] || c).join(", ");
+  }
+  return "—";
+};
+
+// Format instruction languages for display
+const formatLanguages = (school: School): string => {
+  if (school.instructionLanguages && school.instructionLanguages.length > 0) {
+    return school.instructionLanguages.map(l => INSTRUCTION_LANGUAGE_LABELS[l] || l).join(", ");
+  }
+  return "—";
+};
 import * as Haptics from "expo-haptics";
 import {
   type FeaturedCategory,
@@ -145,7 +161,7 @@ export default function CompareScreen() {
           <CompareRow label="課程體系">
             {compareSchools.map((school) => (
               <Text key={school.id} className="text-foreground">
-                {school.curriculum.join(", ")}
+                {formatCurriculum(school)}
               </Text>
             ))}
           </CompareRow>
@@ -154,7 +170,7 @@ export default function CompareScreen() {
           <CompareRow label="教學語言">
             {compareSchools.map((school) => (
               <Text key={school.id} className="text-foreground">
-                {school.language}
+                {formatLanguages(school)}
               </Text>
             ))}
           </CompareRow>
@@ -354,7 +370,7 @@ function FeaturedCompareView({
         <CompareRow label="課程體系">
           {featuredSchools.map((school) => (
             <Text key={school.id} className="text-foreground">
-              {school.curriculum.join(", ")}
+              {formatCurriculum(school)}
             </Text>
           ))}
         </CompareRow>
@@ -363,7 +379,7 @@ function FeaturedCompareView({
         <CompareRow label="教學語言">
           {featuredSchools.map((school) => (
             <Text key={school.id} className="text-foreground">
-              {school.language}
+              {formatLanguages(school)}
             </Text>
           ))}
         </CompareRow>
