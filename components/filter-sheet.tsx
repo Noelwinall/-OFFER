@@ -28,6 +28,10 @@ import * as Haptics from "expo-haptics";
 interface FilterSheetProps {
   visible: boolean;
   onClose: () => void;
+  /** District to pre-select and lock (from Map navigation) */
+  lockedDistrict?: District18 | null;
+  /** Callback when filters are applied (used by Map to handle results internally) */
+  onApply?: () => void;
 }
 
 // 1. Stage (階段) options
@@ -80,7 +84,7 @@ const GENDER_OPTIONS: { label: string; value: SchoolGender }[] = [
   { label: "女校", value: "GIRLS" },
 ];
 
-export function FilterSheet({ visible, onClose }: FilterSheetProps) {
+export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: FilterSheetProps) {
   const { state, dispatch } = useFilter();
 
   const triggerHaptic = () => {
@@ -91,8 +95,15 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
 
   const handleApplyFilters = () => {
     triggerHaptic();
-    onClose();
+    if (onApply) {
+      onApply();
+    } else {
+      onClose();
+    }
   };
+
+  // Check if district is locked (from Map navigation)
+  const isDistrictLocked = !!lockedDistrict;
 
   const handleResetFilters = () => {
     triggerHaptic();
@@ -221,7 +232,7 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
               <View style={styles.section}>
                 <View style={styles.sectionHeader}>
                   <Text style={[styles.sectionTitle, { marginBottom: 0 }]}>📍 地區</Text>
-                  {(state.district.length > 0 || state.district18.length > 0) && (
+                  {!isDistrictLocked && (state.district.length > 0 || state.district18.length > 0) && (
                     <TouchableOpacity
                       onPress={() => {
                         triggerHaptic();
@@ -234,134 +245,153 @@ export function FilterSheet({ visible, onClose }: FilterSheetProps) {
                   )}
                 </View>
 
-                {/* 三大區 */}
-                <Text style={styles.subsectionTitle}>選擇大區</Text>
-                <View style={styles.chipContainer}>
-                  {DISTRICT_OPTIONS.map((option) => {
-                    const isSelected = state.district.includes(option.value);
-                    return (
-                      <TouchableOpacity
-                        key={option.value}
-                        style={[styles.chip, isSelected && styles.chipSelected]}
-                        onPress={() => {
-                          triggerHaptic();
-                          dispatch({ type: "TOGGLE_DISTRICT", payload: option.value });
-                        }}
-                      >
-                        <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
-                          {option.label}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  })}
-                </View>
-
-                {/* 18區 */}
-                <View style={{ marginTop: 20 }}>
-                  <View style={styles.sectionHeader}>
-                    <Text style={styles.subsectionTitle}>
-                      選擇分區（18區）{state.district18.length > 0 && ` - 已選 ${state.district18.length}`}
+                {/* Locked district indicator (from Map navigation) */}
+                {isDistrictLocked ? (
+                  <View style={styles.lockedDistrictContainer}>
+                    <View style={styles.lockedDistrictBadge}>
+                      <IconSymbol name="mappin.circle.fill" size={18} color="#00D9FF" />
+                      <Text style={styles.lockedDistrictText}>{lockedDistrict}</Text>
+                      <View style={styles.lockedLabel}>
+                        <IconSymbol name="lock.fill" size={12} color="rgba(255,255,255,0.6)" />
+                        <Text style={styles.lockedLabelText}>已鎖定</Text>
+                      </View>
+                    </View>
+                    <Text style={styles.lockedHintText}>
+                      從地圖選擇的地區，可調整其他篩選條件
                     </Text>
-                    {state.district18.length > 0 && (
-                      <TouchableOpacity
-                        onPress={() => {
-                          triggerHaptic();
-                          dispatch({ type: "CLEAR_DISTRICT18" });
-                        }}
-                      >
-                        <Text style={styles.clearText}>清除已選分區</Text>
-                      </TouchableOpacity>
-                    )}
                   </View>
-
-                  {/* 港島區 */}
-                  <View style={styles.district18Group}>
-                    <Text style={styles.district18GroupLabel}>港島區</Text>
+                ) : (
+                  <>
+                    {/* 三大區 */}
+                    <Text style={styles.subsectionTitle}>選擇大區</Text>
                     <View style={styles.chipContainer}>
-                      {(["中西區", "東區", "南區", "灣仔區"] as District18[]).map((d18) => {
-                        const isSelected = state.district18.includes(d18);
+                      {DISTRICT_OPTIONS.map((option) => {
+                        const isSelected = state.district.includes(option.value);
                         return (
                           <TouchableOpacity
-                            key={d18}
-                            style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                            key={option.value}
+                            style={[styles.chip, isSelected && styles.chipSelected]}
                             onPress={() => {
                               triggerHaptic();
-                              const parentRegion = DISTRICT18_TO_DISTRICT[d18];
-                              if (!state.district.includes(parentRegion)) {
-                                dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
-                              }
-                              dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                              dispatch({ type: "TOGGLE_DISTRICT", payload: option.value });
                             }}
                           >
-                            <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
-                              {d18}
+                            <Text style={[styles.chipText, isSelected && styles.chipTextSelected]}>
+                              {option.label}
                             </Text>
                           </TouchableOpacity>
                         );
                       })}
                     </View>
-                  </View>
 
-                  {/* 九龍區 */}
-                  <View style={styles.district18Group}>
-                    <Text style={styles.district18GroupLabel}>九龍區</Text>
-                    <View style={styles.chipContainer}>
-                      {(["九龍城區", "觀塘區", "深水埗區", "黃大仙區", "油尖旺區"] as District18[]).map((d18) => {
-                        const isSelected = state.district18.includes(d18);
-                        return (
+                    {/* 18區 */}
+                    <View style={{ marginTop: 20 }}>
+                      <View style={styles.sectionHeader}>
+                        <Text style={styles.subsectionTitle}>
+                          選擇分區（18區）{state.district18.length > 0 && ` - 已選 ${state.district18.length}`}
+                        </Text>
+                        {state.district18.length > 0 && (
                           <TouchableOpacity
-                            key={d18}
-                            style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
                             onPress={() => {
                               triggerHaptic();
-                              const parentRegion = DISTRICT18_TO_DISTRICT[d18];
-                              if (!state.district.includes(parentRegion)) {
-                                dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
-                              }
-                              dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                              dispatch({ type: "CLEAR_DISTRICT18" });
                             }}
                           >
-                            <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
-                              {d18}
-                            </Text>
+                            <Text style={styles.clearText}>清除已選分區</Text>
                           </TouchableOpacity>
-                        );
-                      })}
-                    </View>
-                  </View>
+                        )}
+                      </View>
 
-                  {/* 新界區 */}
-                  <View style={styles.district18Group}>
-                    <Text style={styles.district18GroupLabel}>新界區</Text>
-                    <View style={styles.chipContainer}>
-                      {(["離島區", "葵青區", "北區", "西貢區", "沙田區", "大埔區", "荃灣區", "屯門區", "元朗區"] as District18[]).map((d18) => {
-                        const isSelected = state.district18.includes(d18);
-                        return (
-                          <TouchableOpacity
-                            key={d18}
-                            style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
-                            onPress={() => {
-                              triggerHaptic();
-                              const parentRegion = DISTRICT18_TO_DISTRICT[d18];
-                              if (!state.district.includes(parentRegion)) {
-                                dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
-                              }
-                              dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
-                            }}
-                          >
-                            <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
-                              {d18}
-                            </Text>
-                          </TouchableOpacity>
-                        );
-                      })}
-                    </View>
-                  </View>
+                      {/* 港島區 */}
+                      <View style={styles.district18Group}>
+                        <Text style={styles.district18GroupLabel}>港島區</Text>
+                        <View style={styles.chipContainer}>
+                          {(["中西區", "東區", "南區", "灣仔區"] as District18[]).map((d18) => {
+                            const isSelected = state.district18.includes(d18);
+                            return (
+                              <TouchableOpacity
+                                key={d18}
+                                style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                                onPress={() => {
+                                  triggerHaptic();
+                                  const parentRegion = DISTRICT18_TO_DISTRICT[d18];
+                                  if (!state.district.includes(parentRegion)) {
+                                    dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
+                                  }
+                                  dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                                }}
+                              >
+                                <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                                  {d18}
+                                </Text>
+                              </TouchableOpacity>
+                            );
+                          })}
+                        </View>
+                      </View>
 
-                  <Text style={styles.hintText}>
-                    可直接選擇任意分區（多選），系統自動推斷所屬大區
-                  </Text>
-                </View>
+                      {/* 九龍區 */}
+                      <View style={styles.district18Group}>
+                        <Text style={styles.district18GroupLabel}>九龍區</Text>
+                        <View style={styles.chipContainer}>
+                          {(["九龍城區", "觀塘區", "深水埗區", "黃大仙區", "油尖旺區"] as District18[]).map((d18) => {
+                            const isSelected = state.district18.includes(d18);
+                            return (
+                              <TouchableOpacity
+                                key={d18}
+                                style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                                onPress={() => {
+                                  triggerHaptic();
+                                  const parentRegion = DISTRICT18_TO_DISTRICT[d18];
+                                  if (!state.district.includes(parentRegion)) {
+                                    dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
+                                  }
+                                  dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                                }}
+                              >
+                                <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                                  {d18}
+                                </Text>
+                              </TouchableOpacity>
+                            );
+                          })}
+                        </View>
+                      </View>
+
+                      {/* 新界區 */}
+                      <View style={styles.district18Group}>
+                        <Text style={styles.district18GroupLabel}>新界區</Text>
+                        <View style={styles.chipContainer}>
+                          {(["離島區", "葵青區", "北區", "西貢區", "沙田區", "大埔區", "荃灣區", "屯門區", "元朗區"] as District18[]).map((d18) => {
+                            const isSelected = state.district18.includes(d18);
+                            return (
+                              <TouchableOpacity
+                                key={d18}
+                                style={[styles.chip, styles.chipSmall, isSelected && styles.chipSelected]}
+                                onPress={() => {
+                                  triggerHaptic();
+                                  const parentRegion = DISTRICT18_TO_DISTRICT[d18];
+                                  if (!state.district.includes(parentRegion)) {
+                                    dispatch({ type: "TOGGLE_DISTRICT", payload: parentRegion });
+                                  }
+                                  dispatch({ type: "TOGGLE_DISTRICT18", payload: d18 });
+                                }}
+                              >
+                                <Text style={[styles.chipText, styles.chipTextSmall, isSelected && styles.chipTextSelected]}>
+                                  {d18}
+                                </Text>
+                              </TouchableOpacity>
+                            );
+                          })}
+                        </View>
+                      </View>
+
+                      <Text style={styles.hintText}>
+                        可直接選擇任意分區（多選），系統自動推斷所屬大區
+                      </Text>
+                    </View>
+                  </>
+                )}
               </View>
 
               {/* KG-specific filters (when stage = 幼稚園) */}
@@ -796,5 +826,47 @@ const styles = StyleSheet.create({
   // Remove marginBottom when sectionTitle is inside sectionTitleRow
   sectionTitleInline: {
     marginBottom: 0,
+  },
+  // Locked district styles (from Map navigation)
+  lockedDistrictContainer: {
+    marginTop: 8,
+  },
+  lockedDistrictBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    backgroundColor: "rgba(0, 217, 255, 0.15)",
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "rgba(0, 217, 255, 0.3)",
+  },
+  lockedDistrictText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#00D9FF",
+    flex: 1,
+    fontFamily: "NotoSerifSC-Bold",
+  },
+  lockedLabel: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    borderRadius: 8,
+  },
+  lockedLabelText: {
+    fontSize: 11,
+    color: "rgba(255, 255, 255, 0.6)",
+    fontFamily: "NotoSerifSC-Regular",
+  },
+  lockedHintText: {
+    fontSize: 12,
+    color: "rgba(255, 255, 255, 0.4)",
+    marginTop: 8,
+    fontFamily: "NotoSerifSC-Regular",
   },
 });

@@ -9,12 +9,12 @@ import { SortSelector } from "@/components/sort-selector";
 import { AIBriefSection } from "@/components/ai-brief-section";
 import { EnhancedBriefModal } from "@/components/enhanced-brief-modal";
 import { canGenerateEnhanced, type UserPlan } from "@/lib/services/briefs";
-import { useRouter } from "expo-router";
+import { useRouter, useLocalSearchParams } from "expo-router";
 import { schools } from "@/data/schools";
 import { FavoritesStorage, MapSetStorage } from "@/lib/storage";
 import { FilterContext, hasActiveFilters } from "@/lib/filter-context";
 import { filterSchools, sortSearchResults } from "@/lib/filter-logic";
-import type { School, Level } from "@/types/school";
+import type { School, Level, District18 } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
@@ -60,9 +60,12 @@ export default function SearchScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const filterContext = useContext(FilterContext);
+  const params = useLocalSearchParams<{ openFilter?: string; lockedDistrict?: string }>();
   const [searchInput, setSearchInput] = useState("");
   const [showFilterSheet, setShowFilterSheet] = useState(false);
   const [favorites, setFavorites] = useState<string[]>([]);
+  // Track locked district from Map navigation
+  const [lockedDistrict, setLockedDistrict] = useState<District18 | null>(null);
 
   // Debounce search input (300ms)
   const debouncedSearch = useDebounce(searchInput, 300);
@@ -83,9 +86,26 @@ export default function SearchScreen() {
   // 判斷是否應顯示學校列表：有搜尋詞 OR 有活躍篩選條件
   const shouldShowList = debouncedSearch.trim().length > 0 || hasActiveFilters(filters);
 
+  // 使用 useMemo 優化篩選邏輯 + 幼稚園/小學合併
+  const displaySchools = useMemo(() => {
+    const results = filterSchools(schools, debouncedSearch, filters);
+    const sorted = sortSearchResults(results, debouncedSearch, filters);
+    // 合併幼稚園/小學同校不同班別（AM/PM/WD）
+    return groupSchoolsBySession(sorted);
+  }, [debouncedSearch, filters]);
+
   useEffect(() => {
     loadFavorites();
   }, []);
+
+  // Handle navigation from Map: auto-open filter sheet with locked district
+  useEffect(() => {
+    if (params.openFilter === "true" && params.lockedDistrict) {
+      const district = params.lockedDistrict as District18;
+      setLockedDistrict(district);
+      setShowFilterSheet(true);
+    }
+  }, [params.openFilter, params.lockedDistrict]);
 
   // Save filter results to storage for Map screen
   useEffect(() => {
@@ -94,14 +114,6 @@ export default function SearchScreen() {
       MapSetStorage.saveFiltersResult(schoolIds);
     }
   }, [shouldShowList, displaySchools]);
-
-  // 使用 useMemo 優化篩選邏輯 + 幼稚園/小學合併
-  const displaySchools = useMemo(() => {
-    const results = filterSchools(schools, debouncedSearch, filters);
-    const sorted = sortSearchResults(results, debouncedSearch, filters);
-    // 合併幼稚園/小學同校不同班別（AM/PM/WD）
-    return groupSchoolsBySession(sorted);
-  }, [debouncedSearch, filters]);
 
   /**
    * 檢查合併後的學校是否被收藏
@@ -271,7 +283,17 @@ export default function SearchScreen() {
         )}
 
         {/* 篩選面板 */}
-        <FilterSheet visible={showFilterSheet} onClose={() => setShowFilterSheet(false)} />
+        <FilterSheet
+          visible={showFilterSheet}
+          onClose={() => {
+            setShowFilterSheet(false);
+            // Clear locked district when closing
+            if (lockedDistrict) {
+              setLockedDistrict(null);
+            }
+          }}
+          lockedDistrict={lockedDistrict}
+        />
 
         {/* 學校列表 - 僅在有搜尋/篩選時顯示 */}
         {shouldShowList ? (

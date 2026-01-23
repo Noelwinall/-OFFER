@@ -1,15 +1,21 @@
-import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Modal, Platform, Pressable, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Modal, Platform, Pressable, ScrollView, Animated } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { FilterSheet } from "@/components/filter-sheet";
+import { SchoolCard } from "@/components/school-card";
 import { useState, useMemo, useEffect, useCallback, useContext, useRef } from "react";
 import { SCHOOLS } from "@/data/schools";
 import type { School, District18 } from "@/types/school";
-import { DISTRICT_MAP_DATA, calculateAllDistrictStats, REGION_COLORS, type DistrictStats, type DistrictMapInfo } from "@/lib/district-map-data";
+import { DISTRICT_MAP_DATA, calculateAllDistrictStats, type DistrictStats } from "@/lib/district-map-data";
 import { DISTRICT_POLYGONS } from "@/lib/district-polygons";
-import { MapSetStorage } from "@/lib/storage";
-import { FilterContext } from "@/lib/filter-context";
+import { FavoritesStorage } from "@/lib/storage";
+import { FilterContext, hasActiveFilters } from "@/lib/filter-context";
+import { filterSchools } from "@/lib/filter-logic";
+import { schools as allSchools } from "@/data/schools";
+import { groupSchoolsBySession, type GroupedSchool } from "@/lib/school-classification";
+import * as Haptics from "expo-haptics";
 
 // Conditionally import WebView only for native platforms
 let WebView: any = null;
@@ -20,28 +26,30 @@ if (Platform.OS !== "web") {
 const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 const isWeb = Platform.OS === "web";
 
-// Category display order and colors
-const CATEGORY_ORDER: Array<{ key: string; label: string; color: string }> = [
-  { key: "公立", label: "公立", color: "#6B7280" },
-  { key: "資助", label: "資助", color: "#22C55E" },
-  { key: "直資", label: "直資", color: "#F59E0B" },
-  { key: "私立", label: "私立", color: "#8B5CF6" },
-  { key: "國際", label: "國際", color: "#00D9FF" },
-];
+// View modes for the map
+type MapViewMode = "districts" | "filtered" | "favorites";
 
-// Generate Leaflet HTML for the map
+// Category colors for pins
+const CATEGORY_COLORS: Record<string, string> = {
+  "公立": "#6B7280",
+  "資助": "#22C55E",
+  "直資": "#F59E0B",
+  "私立": "#8B5CF6",
+  "國際": "#00D9FF",
+};
+
+// Generate Leaflet HTML for the map with dynamic pin support
 function generateMapHTML(
   districtPolygons: typeof DISTRICT_POLYGONS,
   districtMapData: typeof DISTRICT_MAP_DATA,
   districtStats: Map<District18, DistrictStats>
 ): string {
-  // Build polygon data with colors and stats
   const polygonData = districtPolygons.map((polygon) => {
     const info = districtMapData.find((d) => d.id === polygon.id);
     const stats = districtStats.get(polygon.id);
     return {
       id: polygon.id,
-      coordinates: polygon.coordinates.map(([lng, lat]) => [lat, lng]), // Leaflet uses [lat, lng]
+      coordinates: polygon.coordinates.map(([lng, lat]) => [lat, lng]),
       color: info?.color || "#00D9FF",
       total: stats?.total || 0,
       kindergarten: stats?.kindergarten || 0,
@@ -85,34 +93,57 @@ function generateMapHTML(
       font-weight: 600;
       margin-left: 4px;
     }
+    .school-pin {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: bold;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div id="map"></div>
   <script>
     const polygonData = ${JSON.stringify(polygonData)};
+    let currentMode = 'districts';
+    let schoolMarkers = [];
+    let highlightedDistricts = new Set();
 
-    // Initialize map centered on Hong Kong
     const map = L.map('map', {
       center: [22.35, 114.15],
       zoom: 11,
       zoomControl: false,
       attributionControl: false,
       minZoom: 10,
-      maxZoom: 14,
+      maxZoom: 16,
     });
 
-    // Add dark tile layer
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
       maxZoom: 19,
     }).addTo(map);
 
-    // Track selected/hovered district
     let selectedDistrict = null;
-    let hoveredDistrict = null;
     const polygonLayers = {};
+    const labelLayers = {};
 
-    // Create polygon for each district
+    function postToParent(data) {
+      const msg = JSON.stringify(data);
+      if (window.ReactNativeWebView) {
+        window.ReactNativeWebView.postMessage(msg);
+      } else {
+        window.parent.postMessage(msg, '*');
+      }
+    }
+
+    // Create polygons
     polygonData.forEach(district => {
       const polygon = L.polygon(district.coordinates, {
         color: district.color,
@@ -124,7 +155,6 @@ function generateMapHTML(
 
       polygonLayers[district.id] = polygon;
 
-      // Add label at center
       const bounds = polygon.getBounds();
       const center = bounds.getCenter();
 
@@ -138,24 +168,13 @@ function generateMapHTML(
         iconSize: null,
       });
 
-      L.marker(center, { icon: label, interactive: false }).addTo(map);
+      const labelMarker = L.marker(center, { icon: label, interactive: false }).addTo(map);
+      labelLayers[district.id] = labelMarker;
 
-      // Helper to post message to parent (works for both iframe and WebView)
-      function postToParent(data) {
-        const msg = JSON.stringify(data);
-        if (window.ReactNativeWebView) {
-          window.ReactNativeWebView.postMessage(msg);
-        } else {
-          window.parent.postMessage(msg, '*');
-        }
-      }
-
-      // Mouse events
       polygon.on('mouseover', function() {
-        if (selectedDistrict !== district.id) {
+        if (currentMode === 'districts' && selectedDistrict !== district.id) {
           this.setStyle({ fillOpacity: 0.45, weight: 3 });
         }
-        hoveredDistrict = district.id;
         postToParent({
           type: 'hover',
           district: district.id,
@@ -170,28 +189,24 @@ function generateMapHTML(
       });
 
       polygon.on('mouseout', function() {
-        if (selectedDistrict !== district.id) {
+        if (currentMode === 'districts' && selectedDistrict !== district.id) {
           this.setStyle({ fillOpacity: 0.25, weight: 2 });
         }
-        hoveredDistrict = null;
         postToParent({ type: 'hoverEnd' });
       });
 
       polygon.on('click', function() {
-        // Reset previous selection
+        if (currentMode !== 'districts') return;
+
         if (selectedDistrict && polygonLayers[selectedDistrict]) {
           polygonLayers[selectedDistrict].setStyle({ fillOpacity: 0.25, weight: 2 });
         }
 
         if (selectedDistrict === district.id) {
-          // Second tap - open filters
-          postToParent({
-            type: 'select',
-            district: district.id
-          });
+          // Second click on same district - just deselect
+          postToParent({ type: 'deselect', district: district.id });
           selectedDistrict = null;
         } else {
-          // First tap - highlight
           selectedDistrict = district.id;
           this.setStyle({ fillOpacity: 0.5, weight: 4 });
           postToParent({
@@ -208,6 +223,87 @@ function generateMapHTML(
         }
       });
     });
+
+    // API to update map from React
+    window.updateMapMode = function(mode, schools, districts) {
+      currentMode = mode;
+      highlightedDistricts = new Set(districts || []);
+
+      // Clear existing school markers
+      schoolMarkers.forEach(m => map.removeLayer(m));
+      schoolMarkers = [];
+
+      if (mode === 'districts') {
+        // Show all districts normally
+        Object.keys(polygonLayers).forEach(id => {
+          const info = polygonData.find(d => d.id === id);
+          polygonLayers[id].setStyle({
+            fillOpacity: 0.25,
+            weight: 2,
+            opacity: 0.8,
+          });
+          if (labelLayers[id]) labelLayers[id].setOpacity(1);
+        });
+      } else {
+        // Filtered or favorites mode: dim non-highlighted districts
+        Object.keys(polygonLayers).forEach(id => {
+          if (highlightedDistricts.has(id)) {
+            polygonLayers[id].setStyle({
+              fillOpacity: 0.4,
+              weight: 3,
+              opacity: 1,
+            });
+            if (labelLayers[id]) labelLayers[id].setOpacity(1);
+          } else {
+            polygonLayers[id].setStyle({
+              fillOpacity: 0.08,
+              weight: 1,
+              opacity: 0.3,
+            });
+            if (labelLayers[id]) labelLayers[id].setOpacity(0.3);
+          }
+        });
+
+        // Add school pins
+        if (schools && schools.length > 0) {
+          schools.forEach(school => {
+            if (school.lat && school.lng) {
+              const color = school.color || '#00D9FF';
+              const pinIcon = L.divIcon({
+                className: '',
+                html: '<div class="school-pin" style="background-color:' + color + '"></div>',
+                iconSize: [24, 24],
+                iconAnchor: [12, 12],
+              });
+
+              const marker = L.marker([school.lat, school.lng], { icon: pinIcon })
+                .addTo(map)
+                .on('click', function() {
+                  postToParent({ type: 'schoolClick', schoolId: school.id });
+                });
+
+              schoolMarkers.push(marker);
+            }
+          });
+        }
+      }
+    };
+
+    window.resetToDistricts = function() {
+      window.updateMapMode('districts', [], []);
+      selectedDistrict = null;
+    };
+
+    // Listen for commands from React (for iframe)
+    window.addEventListener('message', function(event) {
+      if (event.data && event.data.type === 'eval' && event.data.script) {
+        try {
+          eval(event.data.script);
+        } catch (e) {
+          console.error('Map eval error:', e);
+        }
+      }
+    });
   </script>
 </body>
 </html>
@@ -221,21 +317,33 @@ export default function SchoolMapScreen() {
   const webViewRef = useRef<any>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  // Selected district state (for mobile tap interaction)
+  // View mode
+  const [viewMode, setViewMode] = useState<MapViewMode>("districts");
+
+  // District selection state
   const [selectedDistrict, setSelectedDistrict] = useState<District18 | null>(null);
   const [selectedStats, setSelectedStats] = useState<DistrictStats | null>(null);
-  // Hovered district (for web hover interaction)
   const [hoveredDistrict, setHoveredDistrict] = useState<District18 | null>(null);
   const [hoveredStats, setHoveredStats] = useState<DistrictStats | null>(null);
-  // Mobile bottom sheet visibility
-  const [showMobileSheet, setShowMobileSheet] = useState(false);
-  // Last results for bottom panel
-  const [lastQAIds, setLastQAIds] = useState<string[]>([]);
-  const [lastFilterIds, setLastFilterIds] = useState<string[]>([]);
-  // Show bottom panel
-  const [showBottomPanel, setShowBottomPanel] = useState(false);
 
-  // Calculate all district stats on mount
+  // Filter sheet state
+  const [showFilterSheet, setShowFilterSheet] = useState(false);
+  const [lockedDistrict, setLockedDistrict] = useState<District18 | null>(null);
+
+  // Mobile sheet for district tap
+  const [showMobileSheet, setShowMobileSheet] = useState(false);
+
+  // Filtered schools
+  const [filteredSchools, setFilteredSchools] = useState<GroupedSchool[]>([]);
+
+  // Favorites
+  const [favorites, setFavorites] = useState<string[]>([]);
+  const [selectedFavorites, setSelectedFavorites] = useState<string[]>([]);
+
+  // Bottom sheet expanded state
+  const [bottomSheetExpanded, setBottomSheetExpanded] = useState(false);
+
+  // Calculate district stats
   const districtStats = useMemo(() => calculateAllDistrictStats(SCHOOLS), []);
 
   // Generate map HTML
@@ -244,49 +352,84 @@ export default function SchoolMapScreen() {
     [districtStats]
   );
 
-  // Generate blob URL for iframe on web
+  // Blob URL for web iframe
   const mapBlobUrl = useMemo(() => {
     if (!isWeb) return null;
     const blob = new Blob([mapHTML], { type: "text/html" });
     return URL.createObjectURL(blob);
   }, [mapHTML]);
 
-  // Cleanup blob URL on unmount
   useEffect(() => {
     return () => {
-      if (mapBlobUrl) {
-        URL.revokeObjectURL(mapBlobUrl);
-      }
+      if (mapBlobUrl) URL.revokeObjectURL(mapBlobUrl);
     };
   }, [mapBlobUrl]);
 
-  // Load last results on mount
+  // Load favorites on mount
   useEffect(() => {
-    loadLastResults();
+    loadFavorites();
   }, []);
 
-  const loadLastResults = async () => {
-    const [qaResult, filterResult] = await Promise.all([
-      MapSetStorage.getQAResult(),
-      MapSetStorage.getFiltersResult(),
-    ]);
-    setLastQAIds(qaResult.ids);
-    setLastFilterIds(filterResult.ids);
+  const loadFavorites = async () => {
+    const favs = await FavoritesStorage.getAll();
+    setFavorites(favs);
   };
 
-  // Get schools from IDs
-  const getSchoolsFromIds = useCallback((ids: string[], limit: number = 5): School[] => {
+  // Get favorite schools with details
+  const favoriteSchools = useMemo(() => {
     const schoolMap = new Map(SCHOOLS.map((s) => [s.id, s]));
-    return ids
+    return favorites
       .map((id) => schoolMap.get(id))
-      .filter((s): s is School => s !== undefined)
-      .slice(0, limit);
-  }, []);
+      .filter((s): s is School => s !== undefined);
+  }, [favorites]);
 
-  const lastQASchools = useMemo(() => getSchoolsFromIds(lastQAIds, 5), [lastQAIds, getSchoolsFromIds]);
-  const lastFilterSchools = useMemo(() => getSchoolsFromIds(lastFilterIds, 5), [lastFilterIds, getSchoolsFromIds]);
+  // Schools to display (filtered or selected favorites)
+  const displaySchools = useMemo(() => {
+    if (viewMode === "filtered") return filteredSchools;
+    if (viewMode === "favorites" && selectedFavorites.length > 0) {
+      const schoolMap = new Map(SCHOOLS.map((s) => [s.id, s]));
+      return selectedFavorites
+        .map((id) => schoolMap.get(id))
+        .filter((s): s is School => s !== undefined) as GroupedSchool[];
+    }
+    return [];
+  }, [viewMode, filteredSchools, selectedFavorites]);
 
-  // Handle map messages (shared logic for both WebView and iframe)
+  // Get districts that contain display schools
+  const highlightedDistricts = useMemo(() => {
+    const districts = new Set<District18>();
+    displaySchools.forEach((school) => {
+      if (school.district18) districts.add(school.district18);
+    });
+    return Array.from(districts);
+  }, [displaySchools]);
+
+  // Update map when view mode or schools change
+  useEffect(() => {
+    if (viewMode === "districts") {
+      sendMapCommand("resetToDistricts");
+    } else {
+      const schoolsForMap = displaySchools.map((s) => ({
+        id: s.id,
+        lat: s.latitude,
+        lng: s.longitude,
+        color: CATEGORY_COLORS[s.category] || "#00D9FF",
+      }));
+      sendMapCommand("updateMapMode", viewMode, schoolsForMap, highlightedDistricts);
+    }
+  }, [viewMode, displaySchools, highlightedDistricts]);
+
+  // Send command to map
+  const sendMapCommand = (command: string, ...args: any[]) => {
+    const script = `window.${command}(${args.map((a) => JSON.stringify(a)).join(",")})`;
+    if (isWeb && iframeRef.current?.contentWindow) {
+      iframeRef.current.contentWindow.postMessage({ type: "eval", script }, "*");
+    } else if (webViewRef.current) {
+      webViewRef.current.injectJavaScript(script + "; true;");
+    }
+  };
+
+  // Handle map messages
   const handleMapMessage = useCallback((data: any) => {
     if (data.type === "hover") {
       setHoveredDistrict(data.district);
@@ -295,72 +438,127 @@ export default function SchoolMapScreen() {
       setHoveredDistrict(null);
       setHoveredStats(null);
     } else if (data.type === "tap") {
-      // Mobile: first tap shows sheet
       setSelectedDistrict(data.district);
       setSelectedStats(data.stats);
       setShowMobileSheet(true);
-    } else if (data.type === "select") {
-      // Web: direct click or Mobile: second tap
-      openFiltersWithDistrict(data.district);
+    } else if (data.type === "deselect") {
+      // Second click on same district - close the popup
+      setShowMobileSheet(false);
+      setSelectedDistrict(null);
+      setSelectedStats(null);
+    } else if (data.type === "schoolClick") {
+      router.push(`/school/${data.schoolId}` as any);
     }
   }, []);
 
-  // Handle WebView messages (native)
   const handleWebViewMessage = (event: any) => {
     try {
       const data = JSON.parse(event.nativeEvent.data);
       handleMapMessage(data);
-    } catch (e) {
-      // Ignore parse errors
-    }
+    } catch (e) {}
   };
 
-  // Listen for iframe messages on web
   useEffect(() => {
     if (!isWeb) return;
-
     const handleWindowMessage = (event: MessageEvent) => {
       try {
         const data = typeof event.data === "string" ? JSON.parse(event.data) : event.data;
-        if (data.type) {
-          handleMapMessage(data);
-        }
-      } catch (e) {
-        // Ignore parse errors
-      }
+        if (data.type) handleMapMessage(data);
+      } catch (e) {}
     };
-
     window.addEventListener("message", handleWindowMessage);
     return () => window.removeEventListener("message", handleWindowMessage);
   }, [handleMapMessage]);
 
-  // Open filters with district pre-selected
+  // Open filter sheet with district locked
   const openFiltersWithDistrict = (district: District18) => {
-    // Set district in filter context
     if (filterContext) {
       filterContext.dispatch({ type: "CLEAR_DISTRICT18" });
       filterContext.dispatch({ type: "TOGGLE_DISTRICT18", payload: district });
     }
-    // Navigate to search with filter sheet
-    router.push({
-      pathname: "/(tabs)/search",
-      params: { openFilter: "true", lockedDistrict: district },
-    } as any);
+    setLockedDistrict(district);
+    setShowFilterSheet(true);
+    setShowMobileSheet(false);
   };
 
-  // Navigate to Q&A
-  const handleGoToQA = () => {
-    router.push("/quiz" as any);
+  // Handle filter apply
+  const handleFilterApply = () => {
+    if (!filterContext) return;
+
+    // Get filtered results using the filter logic
+    const results = filterSchools(allSchools, "", filterContext.state);
+    const grouped = groupSchoolsBySession(results);
+
+    setFilteredSchools(grouped);
+    setViewMode("filtered");
+    setShowFilterSheet(false);
+    setLockedDistrict(null);
+    setBottomSheetExpanded(true);
+
+    if (Platform.OS !== "web") {
+      Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
+    }
   };
 
-  // Navigate to filters
-  const handleGoToFilters = () => {
-    router.push("/(tabs)/search" as any);
+  // Handle filter close (cancel)
+  const handleFilterClose = () => {
+    setShowFilterSheet(false);
+    setLockedDistrict(null);
+  };
+
+  // Toggle favorite selection for map display
+  const toggleFavoriteSelection = (schoolId: string) => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+
+    setSelectedFavorites((prev) => {
+      const newSelection = prev.includes(schoolId)
+        ? prev.filter((id) => id !== schoolId)
+        : [...prev, schoolId];
+
+      if (newSelection.length > 0) {
+        setViewMode("favorites");
+        setBottomSheetExpanded(true);
+      } else {
+        setViewMode("districts");
+      }
+
+      return newSelection;
+    });
+  };
+
+  // Go back to districts view
+  const handleGoBack = () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
+    setViewMode("districts");
+    setFilteredSchools([]);
+    setSelectedFavorites([]);
+    setBottomSheetExpanded(false);
+    if (filterContext) {
+      filterContext.dispatch({ type: "RESET_FILTERS" });
+    }
+  };
+
+  // Handle school card press
+  const handleSchoolPress = (schoolId: string) => {
+    router.push(`/school/${schoolId}` as any);
+  };
+
+  // Handle favorite toggle from card
+  const handleFavoriteToggle = async (schoolId: string) => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+    await FavoritesStorage.toggle(schoolId);
+    await loadFavorites();
   };
 
   // Render stats popover (web hover)
   const renderStatsPopover = () => {
-    if (!hoveredDistrict || !hoveredStats) return null;
+    if (viewMode !== "districts" || !hoveredDistrict || !hoveredStats) return null;
 
     const districtInfo = DISTRICT_MAP_DATA.find((d) => d.id === hoveredDistrict);
     if (!districtInfo) return null;
@@ -371,16 +569,13 @@ export default function SchoolMapScreen() {
           <Text style={[styles.popoverTitle, { color: districtInfo.color }]}>
             {districtInfo.name}
           </Text>
-
-          {/* Two column layout: KG (1/3) on left, Primary+Secondary (2/3) with breakdown on right */}
           <View style={styles.popoverColumns}>
-            {/* Left: Kindergarten only (1/3) */}
+            {/* KG - 1/3 */}
             <View style={styles.popoverColumnLeft}>
               <Text style={styles.popoverLevelLabel}>幼稚園</Text>
               <Text style={styles.popoverLevelValue}>{hoveredStats.kindergarten}</Text>
             </View>
-
-            {/* Right: Primary + Secondary with category breakdown (2/3) */}
+            {/* Pri+Sec - 2/3 */}
             <View style={styles.popoverColumnRight}>
               <View style={styles.popoverLevelRow}>
                 <View style={styles.popoverLevelItem}>
@@ -392,19 +587,27 @@ export default function SchoolMapScreen() {
                   <Text style={styles.popoverLevelValue}>{hoveredStats.secondary}</Text>
                 </View>
               </View>
-              <View style={styles.popoverDivider} />
-              <Text style={styles.popoverCategoryStat}>公立：{hoveredStats.byCategory?.["公立"] || 0}　資助：{hoveredStats.byCategory?.["資助"] || 0}　直資：{hoveredStats.byCategory?.["直資"] || 0}</Text>
-              <Text style={styles.popoverCategoryStat}>私立：{hoveredStats.byCategory?.["私立"] || 0}　國際：{hoveredStats.byCategory?.["國際"] || 0}</Text>
+              {/* Category breakdown under Pri+Sec */}
+              {hoveredStats.byCategory && Object.keys(hoveredStats.byCategory).length > 0 && (
+                <View style={styles.popoverCategoryRow}>
+                  {Object.entries(hoveredStats.byCategory)
+                    .filter(([_, count]) => count > 0)
+                    .map(([cat, count]) => (
+                      <Text key={cat} style={styles.popoverCategoryText}>
+                        {cat}: {count}
+                      </Text>
+                    ))}
+                </View>
+              )}
             </View>
           </View>
-
           <Text style={styles.popoverHint}>點擊以篩選</Text>
         </View>
       </View>
     );
   };
 
-  // Render mobile bottom sheet
+  // Render mobile district sheet
   const renderMobileSheet = () => {
     if (!showMobileSheet || !selectedDistrict || !selectedStats) return null;
 
@@ -416,21 +619,11 @@ export default function SchoolMapScreen() {
         visible={showMobileSheet}
         transparent
         animationType="slide"
-        onRequestClose={() => {
-          setShowMobileSheet(false);
-          setSelectedDistrict(null);
-        }}
+        onRequestClose={() => setShowMobileSheet(false)}
       >
-        <Pressable
-          style={styles.sheetOverlay}
-          onPress={() => {
-            setShowMobileSheet(false);
-            setSelectedDistrict(null);
-          }}
-        >
+        <Pressable style={styles.sheetOverlay} onPress={() => setShowMobileSheet(false)}>
           <View style={styles.mobileSheet}>
             <View style={styles.sheetHandle} />
-
             <View style={[styles.sheetHeader, { borderBottomColor: districtInfo.color }]}>
               <Text style={[styles.sheetTitle, { color: districtInfo.color }]}>
                 {districtInfo.name}
@@ -440,47 +633,40 @@ export default function SchoolMapScreen() {
               </View>
             </View>
 
-            {/* Two column layout: KG (1/3) on left, Primary+Secondary (2/3) with breakdown on right */}
-            <View style={styles.sheetTwoColumns}>
-              {/* Left: Kindergarten only (1/3) */}
-              <View style={styles.sheetColumnLeft}>
-                <Text style={styles.sheetLevelLabel}>幼稚園</Text>
-                <Text style={styles.sheetLevelValue}>{selectedStats.kindergarten}</Text>
+            <View style={styles.sheetStatsColumns}>
+              {/* KG - 1/3 */}
+              <View style={styles.sheetStatsKG}>
+                <Text style={styles.sheetStatLabel}>幼稚園</Text>
+                <Text style={styles.sheetStatValue}>{selectedStats.kindergarten}</Text>
               </View>
-
-              {/* Right: Primary + Secondary with category breakdown (2/3) */}
-              <View style={styles.sheetColumnRight}>
-                <View style={styles.sheetLevelRow}>
-                  <View style={styles.sheetLevelItem}>
-                    <Text style={styles.sheetLevelLabel}>小學</Text>
-                    <Text style={styles.sheetLevelValue}>{selectedStats.primary}</Text>
+              {/* Pri+Sec - 2/3 */}
+              <View style={styles.sheetStatsPriSec}>
+                <View style={styles.sheetStatsRow}>
+                  <View style={styles.sheetStatItem}>
+                    <Text style={styles.sheetStatLabel}>小學</Text>
+                    <Text style={styles.sheetStatValue}>{selectedStats.primary}</Text>
                   </View>
-                  <View style={styles.sheetLevelItem}>
-                    <Text style={styles.sheetLevelLabel}>中學</Text>
-                    <Text style={styles.sheetLevelValue}>{selectedStats.secondary}</Text>
+                  <View style={styles.sheetStatItem}>
+                    <Text style={styles.sheetStatLabel}>中學</Text>
+                    <Text style={styles.sheetStatValue}>{selectedStats.secondary}</Text>
                   </View>
                 </View>
-
-                <View style={styles.sheetCategoryGrid}>
-                  {CATEGORY_ORDER.map((cat) => (
-                    <View key={cat.key} style={styles.sheetCategoryItem}>
-                      <View style={[styles.sheetCategoryDot, { backgroundColor: cat.color }]} />
-                      <Text style={styles.sheetCategoryLabel}>{cat.label}</Text>
-                      <Text style={styles.sheetCategoryCount}>
-                        {selectedStats.byCategory?.[cat.key as keyof typeof selectedStats.byCategory] || 0}
-                      </Text>
-                    </View>
-                  ))}
-                </View>
+                {/* Category breakdown under Pri+Sec */}
+                {selectedStats.byCategory && Object.keys(selectedStats.byCategory).length > 0 && (
+                  <View style={styles.sheetCategoryRow}>
+                    {Object.entries(selectedStats.byCategory)
+                      .filter(([_, count]) => count > 0)
+                      .map(([cat, count]) => (
+                        <Text key={cat} style={styles.sheetCategoryText}>{cat}: {count}</Text>
+                      ))}
+                  </View>
+                )}
               </View>
             </View>
 
             <TouchableOpacity
               style={[styles.sheetButton, { backgroundColor: districtInfo.color }]}
-              onPress={() => {
-                setShowMobileSheet(false);
-                openFiltersWithDistrict(selectedDistrict);
-              }}
+              onPress={() => openFiltersWithDistrict(selectedDistrict)}
               activeOpacity={0.85}
             >
               <Text style={styles.sheetButtonText}>篩選此區學校</Text>
@@ -491,132 +677,161 @@ export default function SchoolMapScreen() {
     );
   };
 
-  // Render bottom split panel
-  const renderBottomPanel = () => (
-    <View style={[styles.bottomPanel, { paddingBottom: insets.bottom + 12 }]}>
-      <TouchableOpacity
-        style={styles.bottomPanelHeader}
-        onPress={() => setShowBottomPanel(!showBottomPanel)}
-        activeOpacity={0.7}
-      >
-        <Text style={styles.bottomPanelTitle}>上次結果</Text>
-        <IconSymbol
-          name={showBottomPanel ? "chevron.down" : "chevron.up"}
-          size={18}
-          color="rgba(255,255,255,0.6)"
-        />
-      </TouchableOpacity>
+  // Render bottom sheet with school cards or favorites
+  const renderBottomSheet = () => {
+    const hasResults = displaySchools.length > 0;
+    const sheetHeight = bottomSheetExpanded ? SCREEN_HEIGHT * 0.45 : 160;
 
-      {showBottomPanel && (
-        <View style={styles.bottomPanelContent}>
-          {/* Left column: Q&A results */}
-          <View style={styles.bottomPanelColumn}>
-            <Text style={styles.columnTitle}>上次 Q&A 結果</Text>
-            {lastQASchools.length > 0 ? (
+    return (
+      <View style={[styles.bottomSheet, { height: sheetHeight, paddingBottom: insets.bottom }]}>
+        {/* Header */}
+        <TouchableOpacity
+          style={styles.bottomSheetHeader}
+          onPress={() => setBottomSheetExpanded(!bottomSheetExpanded)}
+          activeOpacity={0.8}
+        >
+          <View style={styles.bottomSheetHandle} />
+          <View style={styles.bottomSheetTitleRow}>
+            {viewMode === "filtered" && (
               <>
-                {lastQASchools.map((school) => (
-                  <TouchableOpacity
-                    key={school.id}
-                    style={styles.miniSchoolItem}
-                    onPress={() => router.push(`/school/${school.id}` as any)}
-                  >
-                    <Text style={styles.miniSchoolName} numberOfLines={1}>
-                      {school.name}
-                    </Text>
-                  </TouchableOpacity>
-                ))}
-                {lastQAIds.length > 5 && (
-                  <TouchableOpacity
-                    style={styles.viewAllButton}
-                    onPress={() => router.push("/recommendation" as any)}
-                  >
-                    <Text style={styles.viewAllText}>查看全部 {lastQAIds.length} 所 →</Text>
-                  </TouchableOpacity>
-                )}
+                <IconSymbol name="line.3.horizontal.decrease.circle.fill" size={18} color="#00D9FF" />
+                <Text style={styles.bottomSheetTitle}>
+                  篩選結果（{displaySchools.length}）
+                </Text>
               </>
-            ) : (
-              <View style={styles.emptyColumn}>
-                <Text style={styles.emptyText}>未有結果</Text>
-                <TouchableOpacity style={styles.columnCTA} onPress={handleGoToQA}>
-                  <Text style={styles.columnCTAText}>去問答選校</Text>
-                </TouchableOpacity>
-              </View>
             )}
+            {viewMode === "favorites" && (
+              <>
+                <IconSymbol name="heart.fill" size={18} color="#EF4444" />
+                <Text style={styles.bottomSheetTitle}>
+                  已選收藏（{selectedFavorites.length}）
+                </Text>
+              </>
+            )}
+            {viewMode === "districts" && (
+              <>
+                <IconSymbol name="heart" size={18} color="#00D9FF" />
+                <Text style={styles.bottomSheetTitle}>收藏列表</Text>
+              </>
+            )}
+            <IconSymbol
+              name={bottomSheetExpanded ? "chevron.down" : "chevron.up"}
+              size={16}
+              color="rgba(255,255,255,0.5)"
+            />
           </View>
+        </TouchableOpacity>
 
-          {/* Right column: Filters results */}
-          <View style={styles.bottomPanelColumn}>
-            <Text style={styles.columnTitle}>上次篩選結果</Text>
-            {lastFilterSchools.length > 0 ? (
-              <>
-                {lastFilterSchools.map((school) => (
-                  <TouchableOpacity
-                    key={school.id}
-                    style={styles.miniSchoolItem}
-                    onPress={() => router.push(`/school/${school.id}` as any)}
-                  >
-                    <Text style={styles.miniSchoolName} numberOfLines={1}>
-                      {school.name}
-                    </Text>
-                  </TouchableOpacity>
-                ))}
-                {lastFilterIds.length > 5 && (
-                  <TouchableOpacity
-                    style={styles.viewAllButton}
-                    onPress={handleGoToFilters}
-                  >
-                    <Text style={styles.viewAllText}>查看全部 {lastFilterIds.length} 所 →</Text>
-                  </TouchableOpacity>
-                )}
-              </>
-            ) : (
-              <View style={styles.emptyColumn}>
-                <Text style={styles.emptyText}>未有結果</Text>
-                <TouchableOpacity style={styles.columnCTA} onPress={handleGoToFilters}>
-                  <Text style={styles.columnCTAText}>去條件篩選學校</Text>
-                </TouchableOpacity>
-              </View>
-            )}
-          </View>
-        </View>
-      )}
-    </View>
-  );
+        {/* Content */}
+        <ScrollView
+          style={styles.bottomSheetContent}
+          contentContainerStyle={{ paddingBottom: 16 }}
+          showsVerticalScrollIndicator={false}
+        >
+          {/* Show school cards when filtered/favorites mode */}
+          {(viewMode === "filtered" || viewMode === "favorites") && hasResults && (
+            <View style={styles.schoolCardsContainer}>
+              {displaySchools.slice(0, bottomSheetExpanded ? 20 : 3).map((school) => (
+                <SchoolCard
+                  key={school.id}
+                  school={school}
+                  isFavorite={favorites.includes(school.id)}
+                  onPress={() => handleSchoolPress(school.id)}
+                  onFavoritePress={() => handleFavoriteToggle(school.id)}
+                  sessions={(school as any).sessions}
+                  showSessions={school.level === "幼稚園"}
+                />
+              ))}
+              {!bottomSheetExpanded && displaySchools.length > 3 && (
+                <Text style={styles.moreText}>還有 {displaySchools.length - 3} 所學校...</Text>
+              )}
+            </View>
+          )}
+
+          {/* Favorites section (when in districts mode) */}
+          {viewMode === "districts" && (
+            <View style={[styles.favoritesSection, { paddingHorizontal: 16 }]}>
+              {favoriteSchools.length > 0 ? (
+                <>
+                  <Text style={styles.favoritesHint}>選擇收藏的學校以在地圖上顯示</Text>
+                  {favoriteSchools.map((school) => {
+                    const isSelected = selectedFavorites.includes(school.id);
+                    return (
+                      <TouchableOpacity
+                        key={school.id}
+                        style={[styles.favoriteItem, isSelected && styles.favoriteItemSelected]}
+                        onPress={() => toggleFavoriteSelection(school.id)}
+                        activeOpacity={0.7}
+                      >
+                        <View style={[styles.favoriteCheckbox, isSelected && styles.favoriteCheckboxSelected]}>
+                          {isSelected && <IconSymbol name="checkmark" size={12} color="#0F1629" />}
+                        </View>
+                        <View style={styles.favoriteInfo}>
+                          <Text style={styles.favoriteName} numberOfLines={1}>{school.name}</Text>
+                          <Text style={styles.favoriteMeta}>{school.district18}</Text>
+                        </View>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </>
+              ) : (
+                <View style={styles.emptyFavorites}>
+                  <IconSymbol name="heart" size={32} color="rgba(255,255,255,0.2)" />
+                  <Text style={styles.emptyFavoritesText}>收藏列表裡尚未有學校</Text>
+                  <Text style={styles.emptyFavoritesHint}>瀏覽學校詳情時點擊愛心即可收藏</Text>
+                </View>
+              )}
+            </View>
+          )}
+        </ScrollView>
+      </View>
+    );
+  };
 
   return (
     <View style={{ flex: 1, backgroundColor: "#0F1629" }}>
       {/* Header */}
       <View style={[styles.header, { paddingTop: insets.top }]}>
-        <TouchableOpacity
-          onPress={() => router.back()}
-          style={styles.backButton}
-          activeOpacity={0.7}
-        >
-          <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton} activeOpacity={0.7}>
+          <IconSymbol name="chevron.left" size={24} color="#FFFFFF" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>選擇地區</Text>
-        <View style={{ width: 40 }} />
+        <Text style={styles.headerTitle}>
+          {viewMode === "districts" ? "選擇地區" : viewMode === "filtered" ? "篩選結果" : "收藏學校"}
+        </Text>
+        {viewMode !== "districts" ? (
+          <TouchableOpacity onPress={handleGoBack} style={styles.resetButton} activeOpacity={0.7}>
+            <IconSymbol name="arrow.counterclockwise" size={20} color="#00D9FF" />
+          </TouchableOpacity>
+        ) : (
+          <View style={{ width: 40 }} />
+        )}
       </View>
 
       {/* Instruction */}
-      <View style={styles.instruction}>
-        <Text style={styles.instructionText}>
-          {isWeb ? "懸停查看統計，點擊進入篩選" : "點擊地區查看詳情，再點一次進入篩選"}
-        </Text>
-      </View>
+      {viewMode === "districts" && (
+        <View style={styles.instruction}>
+          <Text style={styles.instructionText}>
+            {isWeb ? "懸停查看統計，點擊進入篩選" : "點擊地區查看詳情，再點一次進入篩選"}
+          </Text>
+        </View>
+      )}
 
-      {/* Map - iframe for web, WebView for native */}
-      <View style={styles.mapContainer}>
+      {/* Mode indicator */}
+      {viewMode !== "districts" && (
+        <View style={styles.modeIndicator}>
+          <Text style={styles.modeIndicatorText}>
+            顯示 {displaySchools.length} 所學校於 {highlightedDistricts.length} 個地區
+          </Text>
+        </View>
+      )}
+
+      {/* Map */}
+      <View style={[styles.mapContainer, { flex: viewMode === "districts" ? 1 : 0.55 }]}>
         {isWeb ? (
           <iframe
             ref={iframeRef as any}
             src={mapBlobUrl || undefined}
-            style={{
-              width: "100%",
-              height: "100%",
-              border: "none",
-              backgroundColor: "#0F1629",
-            }}
+            style={{ width: "100%", height: "100%", border: "none", backgroundColor: "#0F1629" }}
           />
         ) : WebView ? (
           <WebView
@@ -644,11 +859,19 @@ export default function SchoolMapScreen() {
       {/* Web hover popover */}
       {renderStatsPopover()}
 
-      {/* Mobile bottom sheet */}
+      {/* Mobile district sheet */}
       {renderMobileSheet()}
 
-      {/* Bottom panel */}
-      {renderBottomPanel()}
+      {/* Bottom sheet */}
+      {renderBottomSheet()}
+
+      {/* Filter sheet modal */}
+      <FilterSheet
+        visible={showFilterSheet}
+        onClose={handleFilterClose}
+        lockedDistrict={lockedDistrict}
+        onApply={handleFilterApply}
+      />
     </View>
   );
 }
@@ -671,29 +894,50 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  resetButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "rgba(0,217,255,0.15)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   headerTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "700",
     color: "#FFFFFF",
-    letterSpacing: 1,
   },
   instruction: {
     backgroundColor: "rgba(0,217,255,0.1)",
     marginHorizontal: 16,
     borderRadius: 12,
-    padding: 12,
-    marginBottom: 12,
+    padding: 10,
+    marginBottom: 8,
     borderWidth: 1,
     borderColor: "rgba(0,217,255,0.2)",
   },
   instructionText: {
-    fontSize: 13,
+    fontSize: 12,
+    color: "#00D9FF",
+    textAlign: "center",
+    fontWeight: "500",
+  },
+  modeIndicator: {
+    backgroundColor: "rgba(0,217,255,0.1)",
+    marginHorizontal: 16,
+    borderRadius: 12,
+    padding: 10,
+    marginBottom: 8,
+    borderWidth: 1,
+    borderColor: "rgba(0,217,255,0.2)",
+  },
+  modeIndicatorText: {
+    fontSize: 12,
     color: "#00D9FF",
     textAlign: "center",
     fontWeight: "500",
   },
   mapContainer: {
-    flex: 1,
     marginHorizontal: 0,
     overflow: "hidden",
   },
@@ -701,35 +945,24 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#0F1629",
   },
-  // Popover styles (web)
+  // Popover
   popoverContainer: {
     position: "absolute",
-    top: 140,
-    right: 20,
+    top: 120,
+    right: 16,
     zIndex: 1000,
   },
   popover: {
     backgroundColor: "rgba(15, 22, 41, 0.95)",
     borderRadius: 16,
-    padding: 16,
-    minWidth: 180,
+    padding: 14,
+    minWidth: 160,
     borderWidth: 2,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.5,
-    shadowRadius: 16,
-    elevation: 10,
   },
   popoverTitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "700",
-    marginBottom: 12,
-  },
-  popoverStat: {
-    fontSize: 14,
-    color: "#FFFFFF",
-    marginBottom: 6,
-    fontWeight: "500",
+    marginBottom: 10,
   },
   popoverColumns: {
     flexDirection: "row",
@@ -737,14 +970,13 @@ const styles = StyleSheet.create({
   popoverColumnLeft: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
-    paddingRight: 12,
+    paddingRight: 10,
     borderRightWidth: 1,
     borderRightColor: "rgba(255,255,255,0.15)",
   },
   popoverColumnRight: {
     flex: 2,
-    paddingLeft: 12,
+    paddingLeft: 10,
   },
   popoverLevelRow: {
     flexDirection: "row",
@@ -754,33 +986,35 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   popoverLevelLabel: {
-    fontSize: 12,
+    fontSize: 11,
     color: "rgba(255,255,255,0.6)",
     marginBottom: 2,
   },
   popoverLevelValue: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "700",
     color: "#FFFFFF",
   },
-  popoverCategoryStat: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.5)",
-    marginBottom: 2,
-    textAlign: "center",
+  popoverCategoryRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginTop: 10,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255,255,255,0.1)",
   },
-  popoverDivider: {
-    height: 1,
-    backgroundColor: "rgba(255,255,255,0.15)",
-    marginVertical: 6,
+  popoverCategoryText: {
+    fontSize: 11,
+    color: "rgba(255,255,255,0.6)",
   },
   popoverHint: {
-    fontSize: 12,
+    fontSize: 11,
     color: "rgba(255,255,255,0.4)",
-    marginTop: 12,
+    marginTop: 10,
     textAlign: "center",
   },
-  // Mobile sheet styles
+  // Mobile sheet
   sheetOverlay: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.6)",
@@ -792,7 +1026,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 24,
     paddingHorizontal: 24,
     paddingTop: 12,
-    paddingBottom: 40,
+    paddingBottom: 32,
   },
   sheetHandle: {
     width: 40,
@@ -806,68 +1040,62 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingBottom: 16,
+    paddingBottom: 12,
     borderBottomWidth: 2,
     marginBottom: 16,
   },
   sheetTitle: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: "700",
   },
   sheetBadge: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 12,
   },
   sheetBadgeText: {
-    fontSize: 13,
+    fontSize: 12,
     fontWeight: "600",
     color: "#0F1629",
   },
-  sheetTwoColumns: {
+  sheetStatsColumns: {
     flexDirection: "row",
     marginBottom: 20,
   },
-  sheetColumnLeft: {
+  sheetStatsKG: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    paddingRight: 16,
     borderRightWidth: 1,
     borderRightColor: "rgba(255,255,255,0.15)",
+    paddingRight: 16,
   },
-  sheetColumnRight: {
+  sheetStatsPriSec: {
     flex: 2,
     paddingLeft: 16,
   },
-  sheetLevelRow: {
+  sheetStatsRow: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginBottom: 12,
   },
-  sheetLevelItem: {
-    alignItems: "center",
+  sheetCategoryRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginTop: 10,
+    paddingTop: 10,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255,255,255,0.1)",
   },
-  sheetLevelLabel: {
-    fontSize: 13,
+  sheetCategoryText: {
+    fontSize: 11,
     color: "rgba(255,255,255,0.6)",
-    marginBottom: 4,
   },
-  sheetLevelValue: {
-    fontSize: 28,
-    fontWeight: "700",
-    color: "#FFFFFF",
-  },
-  sheetStats: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginBottom: 20,
-  },
-  sheetStatRow: {
+  sheetStatItem: {
     alignItems: "center",
   },
   sheetStatLabel: {
-    fontSize: 13,
+    fontSize: 12,
     color: "rgba(255,255,255,0.6)",
     marginBottom: 4,
   },
@@ -876,115 +1104,122 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#FFFFFF",
   },
-  sheetCategoryGrid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 6,
-    justifyContent: "center",
-  },
-  sheetCategoryItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 4,
-    paddingHorizontal: 6,
-  },
-  sheetCategoryDot: {
-    width: 8,
-    height: 8,
-    borderRadius: 4,
-  },
-  sheetCategoryLabel: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.6)",
-  },
-  sheetCategoryCount: {
-    fontSize: 12,
-    fontWeight: "600",
-    color: "rgba(255,255,255,0.8)",
-  },
   sheetButton: {
-    paddingVertical: 16,
-    borderRadius: 25,
+    paddingVertical: 14,
+    borderRadius: 22,
     alignItems: "center",
   },
   sheetButtonText: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: "600",
     color: "#0F1629",
   },
-  // Bottom panel styles
-  bottomPanel: {
-    backgroundColor: "rgba(15, 22, 41, 0.95)",
+  // Bottom sheet
+  bottomSheet: {
+    backgroundColor: "rgba(15, 22, 41, 0.98)",
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
     borderTopWidth: 1,
     borderTopColor: "rgba(255,255,255,0.1)",
-    paddingHorizontal: 16,
-    paddingTop: 12,
   },
-  bottomPanelHeader: {
+  bottomSheetHeader: {
+    paddingTop: 8,
+    paddingBottom: 12,
+    paddingHorizontal: 16,
+  },
+  bottomSheetHandle: {
+    width: 36,
+    height: 4,
+    backgroundColor: "rgba(255,255,255,0.2)",
+    borderRadius: 2,
+    alignSelf: "center",
+    marginBottom: 12,
+  },
+  bottomSheetTitleRow: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    paddingBottom: 8,
+    gap: 8,
   },
-  bottomPanelTitle: {
+  bottomSheetTitle: {
+    flex: 1,
     fontSize: 15,
     fontWeight: "600",
     color: "#FFFFFF",
   },
-  bottomPanelContent: {
-    flexDirection: "row",
-    gap: 12,
-    paddingTop: 8,
-  },
-  bottomPanelColumn: {
+  bottomSheetContent: {
     flex: 1,
+  },
+  schoolCardsContainer: {
+    gap: 0,
+  },
+  moreText: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.4)",
+    textAlign: "center",
+    marginTop: 8,
+    marginHorizontal: 16,
+  },
+  // Favorites
+  favoritesSection: {
+    gap: 8,
+  },
+  favoritesHint: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.5)",
+    marginBottom: 8,
+  },
+  favoriteItem: {
+    flexDirection: "row",
+    alignItems: "center",
     backgroundColor: "rgba(255,255,255,0.03)",
     borderRadius: 12,
     padding: 12,
-  },
-  columnTitle: {
-    fontSize: 12,
-    fontWeight: "600",
-    color: "rgba(255,255,255,0.6)",
-    marginBottom: 10,
-  },
-  miniSchoolItem: {
-    paddingVertical: 8,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.05)",
-  },
-  miniSchoolName: {
-    fontSize: 13,
-    color: "#FFFFFF",
-  },
-  viewAllButton: {
-    paddingTop: 10,
-  },
-  viewAllText: {
-    fontSize: 12,
-    color: "#00D9FF",
-    fontWeight: "500",
-  },
-  emptyColumn: {
-    alignItems: "center",
-    paddingVertical: 16,
-  },
-  emptyText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.4)",
-    marginBottom: 12,
-  },
-  columnCTA: {
-    backgroundColor: "rgba(0,217,255,0.15)",
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderRadius: 20,
+    gap: 12,
     borderWidth: 1,
+    borderColor: "transparent",
+  },
+  favoriteItemSelected: {
+    backgroundColor: "rgba(0,217,255,0.1)",
     borderColor: "rgba(0,217,255,0.3)",
   },
-  columnCTAText: {
-    fontSize: 13,
-    color: "#00D9FF",
-    fontWeight: "600",
+  favoriteCheckbox: {
+    width: 22,
+    height: 22,
+    borderRadius: 6,
+    borderWidth: 2,
+    borderColor: "rgba(255,255,255,0.3)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  favoriteCheckboxSelected: {
+    backgroundColor: "#00D9FF",
+    borderColor: "#00D9FF",
+  },
+  favoriteInfo: {
+    flex: 1,
+  },
+  favoriteName: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "#FFFFFF",
+  },
+  favoriteMeta: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.5)",
+    marginTop: 2,
+  },
+  emptyFavorites: {
+    alignItems: "center",
+    paddingVertical: 32,
+  },
+  emptyFavoritesText: {
+    fontSize: 14,
+    color: "rgba(255,255,255,0.5)",
+    marginTop: 12,
+  },
+  emptyFavoritesHint: {
+    fontSize: 12,
+    color: "rgba(255,255,255,0.3)",
+    marginTop: 4,
   },
 });

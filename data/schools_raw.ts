@@ -31152,10 +31152,12 @@ export const schoolsRaw: SchoolRaw[] = [
   },
   {
     "id": "edb_513350000112",
-    "name": "香港培正小學",
-    "nameEn": "PUI CHING PRIMARY SCHOOL",
+    "name": "香港培正小學（幼稚園）",
+    "nameEn": "PUI CHING PRIMARY SCHOOL (KINDERGARTEN)",
     "searchKeywords": [
+      "香港培正小學（幼稚園）",
       "香港培正小學",
+      "PUI CHING PRIMARY SCHOOL (KINDERGARTEN)",
       "PUI CHING PRIMARY SCHOOL",
       "PCPS"
     ],
@@ -31178,10 +31180,12 @@ export const schoolsRaw: SchoolRaw[] = [
   },
   {
     "id": "edb_513350000111",
-    "name": "香港培正小學",
-    "nameEn": "PUI CHING PRIMARY SCHOOL",
+    "name": "香港培正小學（幼稚園）",
+    "nameEn": "PUI CHING PRIMARY SCHOOL (KINDERGARTEN)",
     "searchKeywords": [
+      "香港培正小學（幼稚園）",
       "香港培正小學",
+      "PUI CHING PRIMARY SCHOOL (KINDERGARTEN)",
       "PUI CHING PRIMARY SCHOOL",
       "PCPS"
     ],
