@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at_utc": "2026-01-22T04:38:34.905Z",
+    "generated_at_utc": "2026-01-25T00:00:00.000Z",
     "git": {
       "branch": "tuition-ui-fix",
-      "commit": "52f8e3f"
+      "commit": "80f906e"
     },
     "app": {
       "name": "app-template",
@@ -13,19 +13,28 @@
   "navigation": {
     "tabs": [
       {
-        "id": "home",
+        "id": "index",
         "label_zh_hant": "首頁",
-        "route": "/"
+        "route": "/",
+        "icon": "house.fill"
       },
       {
         "id": "search",
-        "label_zh_hant": "找學校",
-        "route": "/search"
+        "label_zh_hant": "搜尋",
+        "route": "/search",
+        "icon": "magnifyingglass"
+      },
+      {
+        "id": "favorites",
+        "label_zh_hant": "收藏",
+        "route": "/favorites",
+        "icon": "heart.fill"
       },
       {
         "id": "explore",
-        "label_zh_hant": "探索",
-        "route": "/explore"
+        "label_zh_hant": "我的",
+        "route": "/explore",
+        "icon": "person.fill"
       }
     ],
     "entry_points": [
@@ -55,6 +64,11 @@
         "notes": "School detail page"
       },
       {
+        "name": "School Reviews",
+        "route": "/school/[id]/reviews",
+        "notes": "School reviews page"
+      },
+      {
         "name": "School Map",
         "route": "/school-map",
         "notes": "Map view"
@@ -65,14 +79,39 @@
         "notes": "School comparison"
       },
       {
+        "name": "Compare (alt)",
+        "route": "/compare",
+        "notes": "Alternative compare route"
+      },
+      {
+        "name": "Swipe Explore",
+        "route": "/swipe-explore",
+        "notes": "Swipe-based school exploration"
+      },
+      {
         "name": "Articles",
         "route": "/articles",
         "notes": "Guides and articles"
       },
       {
+        "name": "Article Detail",
+        "route": "/articles/[id]",
+        "notes": "Single article view"
+      },
+      {
         "name": "Deadlines",
         "route": "/deadlines",
         "notes": "Application deadlines"
+      },
+      {
+        "name": "Notifications",
+        "route": "/notifications",
+        "notes": "User notifications"
+      },
+      {
+        "name": "Theme Lab",
+        "route": "/dev/theme-lab",
+        "notes": "Dev tool for theme testing"
       }
     ]
   },
