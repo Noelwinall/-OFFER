@@ -1,12 +1,13 @@
 import { View, Text, TouchableOpacity, StyleSheet, Platform, ScrollView, Modal, TextInput, FlatList, Pressable } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useState, useCallback, useEffect, useMemo } from "react";
 import { SCHOOLS } from "@/data/schools";
 import { School, type Level, type District } from "@/types/school";
 import * as Haptics from "expo-haptics";
+import { useColors } from "@/hooks/use-colors";
 import { FavoritesStorage } from "@/lib/storage";
 import {
   type FeaturedCategory,
@@ -51,6 +52,7 @@ const COMPARE_DIMENSIONS = [
 export default function SchoolCompareScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
 
   // Compare slots state
   const [compareSlots, setCompareSlots] = useState<(School | null)[]>(() => {
@@ -332,7 +334,7 @@ export default function SchoolCompareScreen() {
   const renderFeaturedSection = () => (
     <View style={styles.featuredSection}>
       <View style={styles.featuredHeader}>
-        <Text style={styles.sectionTitle}>精選對比</Text>
+        <Text style={[styles.sectionTitle, { color: colors.foreground }]}>精選對比</Text>
         {!IS_PRO_USER && activeCategory && (
           <TouchableOpacity onPress={handleRefreshFeatured} style={styles.refreshButton}>
             <Text style={styles.refreshButtonText}>換一組</Text>
@@ -424,7 +426,7 @@ export default function SchoolCompareScreen() {
 
     return (
       <View style={styles.comparisonSection}>
-        <Text style={styles.sectionTitle}>詳細對比</Text>
+        <Text style={[styles.sectionTitle, { color: colors.foreground }]}>詳細對比</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View style={styles.compareTableWrapper}>
             {/* Main table with real data */}
@@ -432,11 +434,11 @@ export default function SchoolCompareScreen() {
               {/* School names row */}
               <View style={styles.compareRow}>
                 <View style={styles.dimensionCell}>
-                  <Text style={styles.dimensionLabel}>學校</Text>
+                  <Text style={[styles.dimensionLabel, { color: colors.primary }]}>學校</Text>
                 </View>
                 {filledSlots.map((school) => (
                   <View key={school.id} style={styles.schoolCell}>
-                    <Text style={styles.schoolName} numberOfLines={2}>{school.name}</Text>
+                    <Text style={[styles.schoolName, { color: colors.foreground }]} numberOfLines={2}>{school.name}</Text>
                   </View>
                 ))}
               </View>
@@ -446,11 +448,11 @@ export default function SchoolCompareScreen() {
                 <View key={dim.id} style={styles.compareRow}>
                   <View style={styles.dimensionCell}>
                     <Text style={styles.dimensionIcon}>{dim.icon}</Text>
-                    <Text style={styles.dimensionLabel}>{dim.label}</Text>
+                    <Text style={[styles.dimensionLabel, { color: colors.primary }]}>{dim.label}</Text>
                   </View>
                   {filledSlots.map((school) => (
                     <View key={school.id} style={styles.valueCell}>
-                      <Text style={styles.valueText}>
+                      <Text style={[styles.valueText, { color: colors.foreground }]}>
                         {dim.id === "fee" && formatFee(school.tuitionMin, school.tuitionMax)}
                         {dim.id === "curriculum" && formatCurriculum(school)}
                         {dim.id === "language" && formatLanguages(school)}
@@ -466,12 +468,12 @@ export default function SchoolCompareScreen() {
               <View style={styles.compareRow}>
                 <View style={styles.dimensionCell}>
                   <Text style={styles.dimensionIcon}>✨</Text>
-                  <Text style={styles.dimensionLabel}>亮點</Text>
+                  <Text style={[styles.dimensionLabel, { color: colors.primary }]}>亮點</Text>
                 </View>
                 {filledSlots.map((school) => (
                   <View key={school.id} style={styles.highlightCell}>
                     {school.highlights.slice(0, 2).map((h, i) => (
-                      <Text key={i} style={styles.highlightText}>• {h}</Text>
+                      <Text key={i} style={[styles.highlightText, { color: colors.muted }]}>• {h}</Text>
                     ))}
                   </View>
                 ))}
@@ -483,7 +485,7 @@ export default function SchoolCompareScreen() {
           </View>
         </ScrollView>
 
-        <Text style={styles.disclaimer}>
+        <Text style={[styles.disclaimer, { color: colors.muted, opacity: 0.6 }]}>
           資訊基於公開資料整理，僅供參考，以學校官方為準
         </Text>
       </View>
@@ -504,8 +506,8 @@ export default function SchoolCompareScreen() {
           activeOpacity={0.8}
         >
           <Text style={styles.slotPaywallLock}>🔒</Text>
-          <Text style={styles.slotPaywallTitle}>解鎖更多</Text>
-          <Text style={styles.slotPaywallSubtitle}>升級會員</Text>
+          <Text style={[styles.slotPaywallTitle, { color: colors.primary }]}>解鎖更多</Text>
+          <Text style={[styles.slotPaywallSubtitle, { color: colors.muted }]}>升級會員</Text>
         </TouchableOpacity>
       );
     }
@@ -519,9 +521,9 @@ export default function SchoolCompareScreen() {
           onPress={() => handleEmptySlotClick(index)}
           activeOpacity={0.7}
         >
-          <Text style={styles.slotLabel}>{slotLabel}</Text>
-          <Text style={styles.slotEmptyIcon}>+</Text>
-          <Text style={styles.slotEmptyText}>點擊添加</Text>
+          <Text style={[styles.slotLabel, { color: colors.muted }]}>{slotLabel}</Text>
+          <Text style={[styles.slotEmptyIcon, { color: colors.muted }]}>+</Text>
+          <Text style={[styles.slotEmptyText, { color: colors.muted }]}>點擊添加</Text>
         </TouchableOpacity>
       );
     }
@@ -535,9 +537,9 @@ export default function SchoolCompareScreen() {
         >
           <Text style={styles.slotRemoveText}>×</Text>
         </TouchableOpacity>
-        <Text style={styles.slotLabel}>{slotLabel}</Text>
-        <Text style={styles.slotSchoolName} numberOfLines={2}>{school.name}</Text>
-        <Text style={styles.slotSchoolInfo}>{school.category}</Text>
+        <Text style={[styles.slotLabel, { color: colors.muted }]}>{slotLabel}</Text>
+        <Text style={[styles.slotSchoolName, { color: colors.foreground }]} numberOfLines={2}>{school.name}</Text>
+        <Text style={[styles.slotSchoolInfo, { color: colors.muted }]}>{school.category}</Text>
       </View>
     );
   };
@@ -548,7 +550,7 @@ export default function SchoolCompareScreen() {
 
     return (
       <View style={styles.slotsSection}>
-        <Text style={styles.sectionTitle}>對比欄位</Text>
+        <Text style={[styles.sectionTitle, { color: colors.foreground }]}>對比欄位</Text>
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -576,11 +578,11 @@ export default function SchoolCompareScreen() {
         activeOpacity={0.8}
       >
         <View style={styles.favoriteCardContent}>
-          <Text style={styles.favoriteSchoolName} numberOfLines={1}>{school.name}</Text>
-          <Text style={styles.favoriteSchoolInfo}>{school.category} · {school.district}</Text>
+          <Text style={[styles.favoriteSchoolName, { color: colors.foreground }]} numberOfLines={1}>{school.name}</Text>
+          <Text style={[styles.favoriteSchoolInfo, { color: colors.muted }]}>{school.category} · {school.district}</Text>
           {alreadyInCompare && (
             <View style={styles.inCompareBadge}>
-              <Text style={styles.inCompareBadgeText}>已加入對比</Text>
+              <Text style={[styles.inCompareBadgeText, { color: colors.primary }]}>已加入對比</Text>
             </View>
           )}
         </View>
@@ -619,7 +621,7 @@ export default function SchoolCompareScreen() {
   // Render favorites section (BOTTOM section)
   const renderFavoritesSection = () => (
     <View style={styles.favoritesSection}>
-      <Text style={styles.sectionTitle}>我的收藏 ({favorites.length})</Text>
+      <Text style={[styles.sectionTitle, { color: colors.foreground }]}>我的收藏 ({favorites.length})</Text>
       {favorites.length === 0 ? (
         <View style={styles.emptyFavorites}>
           <Text style={styles.emptyFavoritesText}>尚無收藏學校</Text>
@@ -787,14 +789,19 @@ export default function SchoolCompareScreen() {
                       {alreadyInCompare ? (
                         <Text style={styles.searchResultBadge}>已加入</Text>
                       ) : (
-                        <Text style={styles.searchResultAdd}>+</Text>
+                        <View style={styles.searchResultAddButton}>
+                          <Text style={styles.searchResultAddText}>加入此欄位</Text>
+                        </View>
                       )}
                     </TouchableOpacity>
                   );
                 }}
                 style={styles.searchResultsList}
                 ListEmptyComponent={
-                  <Text style={styles.searchNoResults}>沒有找到相關學校</Text>
+                  <View style={styles.searchEmptyContainer}>
+                    <Text style={styles.searchNoResults}>找不到符合條件的學校</Text>
+                    <Text style={styles.searchNoResultsHint}>試試放寬條件</Text>
+                  </View>
                 }
                 ListHeaderComponent={
                   <Text style={styles.searchResultsCount}>
@@ -913,41 +920,37 @@ export default function SchoolCompareScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
-        style={StyleSheet.absoluteFill}
-      />
+      <MaxWidthWrapper>
+        <View style={[styles.header, { paddingTop: insets.top }]}>
+          <TouchableOpacity
+            onPress={() => router.back()}
+            style={[styles.backButton, { backgroundColor: `${colors.foreground}1A` }]}
+            activeOpacity={0.7}
+          >
+            <IconSymbol name="chevron.right" size={24} color={colors.foreground} style={{ transform: [{ rotate: "180deg" }] }} />
+          </TouchableOpacity>
+          <Text style={[styles.headerTitle, { color: colors.foreground }]}>心儀學校比一比</Text>
+          <View style={styles.placeholder} />
+        </View>
 
-      <View style={[styles.header, { paddingTop: insets.top }]}>
-        <TouchableOpacity
-          onPress={() => router.back()}
-          style={styles.backButton}
-          activeOpacity={0.7}
+        <ScrollView
+          style={{ flex: 1 }}
+          contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + 24 }]}
+          showsVerticalScrollIndicator={false}
         >
-          <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>心儀學校比一比</Text>
-        <View style={styles.placeholder} />
-      </View>
+          {/* Featured categories at top */}
+          {renderFeaturedSection()}
 
-      <ScrollView
-        style={{ flex: 1 }}
-        contentContainerStyle={[styles.content, { paddingBottom: insets.bottom + 24 }]}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Featured categories at top */}
-        {renderFeaturedSection()}
+          {/* TOP: Comparison table */}
+          {renderComparisonTable()}
 
-        {/* TOP: Comparison table */}
-        {renderComparisonTable()}
+          {/* MIDDLE: Compare slots */}
+          {renderCompareSlots()}
 
-        {/* MIDDLE: Compare slots */}
-        {renderCompareSlots()}
-
-        {/* BOTTOM: Favorites section */}
-        {renderFavoritesSection()}
-      </ScrollView>
+          {/* BOTTOM: Favorites section */}
+          {renderFavoritesSection()}
+        </ScrollView>
+      </MaxWidthWrapper>
 
       {renderSearchModal()}
       {renderSlotPicker()}
@@ -969,14 +972,12 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
     justifyContent: "center",
     alignItems: "center",
   },
   headerTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     letterSpacing: 1,
   },
@@ -991,7 +992,6 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 12,
   },
@@ -1072,21 +1072,21 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   compareContainer: {
-    backgroundColor: "rgba(255,255,255,0.05)",
+    backgroundColor: "rgba(255,255,255,0.6)",
     borderRadius: 16,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "rgba(0,0,0,0.08)",
   },
   compareRow: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.08)",
+    borderBottomColor: "rgba(0,0,0,0.06)",
   },
   dimensionCell: {
     width: 70,
     padding: 10,
-    backgroundColor: "rgba(0,217,255,0.1)",
+    backgroundColor: "rgba(30, 58, 95, 0.1)",
     justifyContent: "center",
     alignItems: "center",
     gap: 2,
@@ -1096,7 +1096,6 @@ const styles = StyleSheet.create({
   },
   dimensionLabel: {
     fontSize: 11,
-    color: "#00D9FF",
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
   },
@@ -1109,7 +1108,6 @@ const styles = StyleSheet.create({
   schoolName: {
     fontSize: 12,
     fontWeight: "600",
-    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     textAlign: "center",
   },
@@ -1121,7 +1119,6 @@ const styles = StyleSheet.create({
   },
   valueText: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.8)",
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
   },
@@ -1133,12 +1130,10 @@ const styles = StyleSheet.create({
   },
   highlightText: {
     fontSize: 10,
-    color: "rgba(255,255,255,0.7)",
     fontFamily: "NotoSerifSC-Regular",
   },
   disclaimer: {
     fontSize: 10,
-    color: "rgba(255,255,255,0.4)",
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
     marginTop: 12,
@@ -1244,21 +1239,21 @@ const styles = StyleSheet.create({
   slotFilled: {
     width: 120,
     height: 120,
-    backgroundColor: "rgba(0,217,255,0.15)",
+    backgroundColor: "rgba(30, 58, 95, 0.1)",
     borderRadius: 16,
     padding: 12,
     borderWidth: 1,
-    borderColor: "rgba(0,217,255,0.3)",
+    borderColor: "rgba(30, 58, 95, 0.2)",
     position: "relative",
   },
   slotEmpty: {
     width: 120,
     height: 120,
-    backgroundColor: "rgba(255,255,255,0.05)",
+    backgroundColor: "rgba(255,255,255,0.6)",
     borderRadius: 16,
     padding: 12,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.15)",
+    borderColor: "rgba(0,0,0,0.1)",
     borderStyle: "dashed",
     justifyContent: "center",
     alignItems: "center",
@@ -1267,9 +1262,9 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 16,
-    backgroundColor: "rgba(0,217,255,0.06)",
+    backgroundColor: "rgba(30, 58, 95, 0.05)",
     borderWidth: 1,
-    borderColor: "rgba(0,217,255,0.2)",
+    borderColor: "rgba(30, 58, 95, 0.15)",
     justifyContent: "center",
     alignItems: "center",
     padding: 12,
@@ -1280,44 +1275,37 @@ const styles = StyleSheet.create({
   },
   slotPaywallTitle: {
     fontSize: 13,
-    color: "#00D9FF",
     fontWeight: "600",
     fontFamily: "NotoSerifSC-Bold",
     textAlign: "center",
   },
   slotPaywallSubtitle: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
     marginTop: 2,
   },
   slotLabel: {
     fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
     marginBottom: 4,
   },
   slotSchoolName: {
     fontSize: 13,
     fontWeight: "600",
-    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 4,
   },
   slotSchoolInfo: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.6)",
     fontFamily: "NotoSerifSC-Regular",
   },
   slotEmptyIcon: {
     fontSize: 24,
-    color: "rgba(255,255,255,0.4)",
     marginBottom: 4,
   },
   slotEmptyText: {
     fontSize: 12,
-    color: "rgba(255,255,255,0.4)",
     fontFamily: "NotoSerifSC-Regular",
   },
   slotRemoveButton: {
@@ -1327,14 +1315,13 @@ const styles = StyleSheet.create({
     width: 22,
     height: 22,
     borderRadius: 11,
-    backgroundColor: "rgba(255,255,255,0.2)",
+    backgroundColor: "rgba(0,0,0,0.1)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 1,
   },
   slotRemoveText: {
     fontSize: 14,
-    color: "#FFFFFF",
     fontWeight: "600",
   },
 
@@ -1349,15 +1336,15 @@ const styles = StyleSheet.create({
   },
   favoriteCard: {
     width: 160,
-    backgroundColor: "rgba(255,255,255,0.08)",
+    backgroundColor: "rgba(255,255,255,0.6)",
     borderRadius: 12,
     padding: 12,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.12)",
+    borderColor: "rgba(0,0,0,0.08)",
   },
   favoriteCardExpanded: {
-    backgroundColor: "rgba(255,255,255,0.12)",
-    borderColor: "rgba(0,217,255,0.3)",
+    backgroundColor: "rgba(255,255,255,0.8)",
+    borderColor: "rgba(30, 58, 95, 0.2)",
   },
   favoriteCardContent: {
     marginBottom: 0,
@@ -1365,17 +1352,15 @@ const styles = StyleSheet.create({
   favoriteSchoolName: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 4,
   },
   favoriteSchoolInfo: {
     fontSize: 12,
-    color: "rgba(255,255,255,0.6)",
     fontFamily: "NotoSerifSC-Regular",
   },
   inCompareBadge: {
-    backgroundColor: "rgba(0,217,255,0.2)",
+    backgroundColor: "rgba(30, 58, 95, 0.15)",
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 8,
@@ -1384,7 +1369,6 @@ const styles = StyleSheet.create({
   },
   inCompareBadgeText: {
     fontSize: 10,
-    color: "#00D9FF",
     fontWeight: "500",
   },
   favoriteActions: {
@@ -1506,11 +1490,20 @@ const styles = StyleSheet.create({
     color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
   },
-  searchResultAdd: {
-    fontSize: 24,
+  searchResultAddButton: {
+    backgroundColor: "rgba(0,217,255,0.2)",
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: "#00D9FF",
+    marginLeft: 12,
+  },
+  searchResultAddText: {
+    fontSize: 12,
     color: "#00D9FF",
     fontWeight: "600",
-    marginLeft: 12,
+    fontFamily: "NotoSerifSC-Regular",
   },
   searchResultBadge: {
     fontSize: 12,
@@ -1518,12 +1511,22 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
     marginLeft: 12,
   },
+  searchEmptyContainer: {
+    alignItems: "center",
+    paddingVertical: 40,
+  },
   searchNoResults: {
     textAlign: "center",
+    color: "rgba(255,255,255,0.6)",
+    fontSize: 16,
+    fontFamily: "NotoSerifSC-Bold",
+    marginBottom: 8,
+  },
+  searchNoResultsHint: {
+    textAlign: "center",
     color: "rgba(255,255,255,0.4)",
-    fontSize: 14,
+    fontSize: 13,
     fontFamily: "NotoSerifSC-Regular",
-    paddingVertical: 40,
   },
   searchHintContainer: {
     flex: 1,
