@@ -3,12 +3,20 @@ import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
-import { useState, useCallback, useEffect, useMemo } from "react";
+import { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { SCHOOLS } from "@/data/schools";
-import { School, type Level, type District } from "@/types/school";
+import { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useColors } from "@/hooks/use-colors";
 import { FavoritesStorage } from "@/lib/storage";
+import { Gesture, GestureDetector, GestureHandlerRootView } from "react-native-gesture-handler";
+import Animated, {
+  useSharedValue,
+  useAnimatedStyle,
+  withSpring,
+  runOnJS,
+  withTiming,
+} from "react-native-reanimated";
 import {
   type FeaturedCategory,
   FEATURED_CATEGORY_INFO,
@@ -16,21 +24,7 @@ import {
   getFeaturedSchoolsForPro,
   getNewRandomPair,
 } from "@/lib/featured-compare";
-import { NON_KG_CATEGORY_OPTIONS, KG_CATEGORY_OPTIONS } from "@/lib/school-classification";
-import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS, type InstructionLanguage } from "@/types/school";
-
-// Filter options for search modal
-const STAGE_OPTIONS: { label: string; value: Level }[] = [
-  { label: "幼稚園", value: "幼稚園" },
-  { label: "小學", value: "小學" },
-  { label: "中學", value: "中學" },
-];
-
-const DISTRICT_OPTIONS: { label: string; value: District }[] = [
-  { label: "港島區", value: "港島" },
-  { label: "九龍區", value: "九龍" },
-  { label: "新界區", value: "新界" },
-];
+import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
 
 // TODO: Replace with actual user auth state
 const IS_PRO_USER = false;
@@ -39,6 +33,10 @@ const IS_PRO_USER = false;
 const FREE_MAX_SLOTS = 2;
 const PRO_DEFAULT_SLOTS = 5;
 const PRO_MAX_SLOTS = 10;
+
+// Slot dimensions for drag calculation
+const SLOT_WIDTH = 120;
+const SLOT_GAP = 12;
 
 // Compare dimensions
 const COMPARE_DIMENSIONS = [
@@ -79,10 +77,8 @@ export default function SchoolCompareScreen() {
   const [targetSlotIndex, setTargetSlotIndex] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // Filter state for search modal
-  const [filterStage, setFilterStage] = useState<Level | null>(null);
-  const [filterDistrict, setFilterDistrict] = useState<District | null>(null);
-  const [filterCategory, setFilterCategory] = useState<string | null>(null);
+  // Drag state
+  const [draggingIndex, setDraggingIndex] = useState<number | null>(null);
 
   const maxSlots = IS_PRO_USER ? PRO_MAX_SLOTS : FREE_MAX_SLOTS;
 
@@ -99,47 +95,22 @@ export default function SchoolCompareScreen() {
     setFavorites(favoriteSchools);
   };
 
-  // Filtered search results (with filters applied)
+  // Simple name search results - only show if query matches
   const searchResults = useMemo(() => {
-    let results = SCHOOLS;
-
-    // Apply filters first
-    if (filterStage) {
-      results = results.filter(s => s.level === filterStage);
-    }
-    if (filterDistrict) {
-      results = results.filter(s => s.district === filterDistrict);
-    }
-    if (filterCategory) {
-      results = results.filter(s => s.category === filterCategory);
-    }
-
-    // Then apply search query
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      results = results.filter(s =>
-        s.name.toLowerCase().includes(query) ||
-        s.nameEn?.toLowerCase().includes(query) ||
-        s.district.includes(query) ||
-        s.category.includes(query)
-      );
-    }
-
-    // If no query but has filters, show results
-    if (!searchQuery.trim() && !filterStage && !filterDistrict && !filterCategory) {
+    // If nothing typed, show nothing
+    if (!searchQuery.trim()) {
       return [];
     }
 
-    return results.slice(0, 30);
-  }, [searchQuery, filterStage, filterDistrict, filterCategory]);
+    const query = searchQuery.toLowerCase();
+    const results = SCHOOLS.filter(s =>
+      s.name.toLowerCase().includes(query) ||
+      s.nameEn?.toLowerCase().includes(query)
+    );
 
-  // Get category options based on selected stage
-  const getFilterCategoryOptions = () => {
-    if (filterStage === "幼稚園") {
-      return KG_CATEGORY_OPTIONS;
-    }
-    return NON_KG_CATEGORY_OPTIONS;
-  };
+    return results.slice(0, 20);
+  }, [searchQuery]);
+
 
   // Format curriculum for display
   const formatCurriculum = (school: School) => {
@@ -211,10 +182,6 @@ export default function SchoolCompareScreen() {
     }
     setTargetSlotIndex(slotIndex);
     setSearchQuery("");
-    // Reset filters when opening modal
-    setFilterStage(null);
-    setFilterDistrict(null);
-    setFilterCategory(null);
     setShowSearchModal(true);
   }, []);
 
@@ -328,6 +295,20 @@ export default function SchoolCompareScreen() {
     return `HK$${(min / 1000).toFixed(0)}K - ${(max / 1000).toFixed(0)}K`;
   };
 
+  // Swap two slots
+  const handleSwapSlots = useCallback((fromIndex: number, toIndex: number) => {
+    if (fromIndex === toIndex) return;
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    }
+    const newSlots = [...compareSlots];
+    const temp = newSlots[fromIndex];
+    newSlots[fromIndex] = newSlots[toIndex];
+    newSlots[toIndex] = temp;
+    setCompareSlots(newSlots);
+    setActiveCategory(null);
+  }, [compareSlots]);
+
   const categories: FeaturedCategory[] = ["KG", "INTERNATIONAL", "DSS"];
 
   // Render featured categories (compact horizontal pills)
@@ -336,8 +317,8 @@ export default function SchoolCompareScreen() {
       <View style={styles.featuredHeader}>
         <Text style={[styles.sectionTitle, { color: colors.foreground }]}>精選對比</Text>
         {!IS_PRO_USER && activeCategory && (
-          <TouchableOpacity onPress={handleRefreshFeatured} style={styles.refreshButton}>
-            <Text style={styles.refreshButtonText}>換一組</Text>
+          <TouchableOpacity onPress={handleRefreshFeatured} style={[styles.refreshButton, { backgroundColor: colors.primary + "26" }]}>
+            <Text style={[styles.refreshButtonText, { color: colors.primary }]}>換一組</Text>
           </TouchableOpacity>
         )}
       </View>
@@ -352,11 +333,14 @@ export default function SchoolCompareScreen() {
           return (
             <TouchableOpacity
               key={category}
-              style={[styles.featuredPill, isActive && styles.featuredPillActive]}
+              style={[
+                styles.featuredPill,
+                isActive && [styles.featuredPillActive, { backgroundColor: colors.primary + "33", borderColor: colors.primary }]
+              ]}
               onPress={() => handleSelectFeatured(category)}
               activeOpacity={0.7}
             >
-              <Text style={[styles.featuredPillText, isActive && styles.featuredPillTextActive]}>
+              <Text style={[styles.featuredPillText, isActive && [styles.featuredPillTextActive, { color: colors.primary }]]}>
                 {info.label}
               </Text>
             </TouchableOpacity>
@@ -395,10 +379,10 @@ export default function SchoolCompareScreen() {
 
         {/* CTA Block */}
         <View style={styles.lockedColumnCTA}>
-          <Text style={styles.lockedColumnCTATitle}>解鎖更多對比</Text>
+          <Text style={[styles.lockedColumnCTATitle, { color: colors.primary }]}>解鎖更多對比</Text>
           <Text style={styles.lockedColumnCTASubtitle}>升級會員可比較最多 10 間</Text>
-          <View style={styles.lockedColumnCTAButton}>
-            <Text style={styles.lockedColumnCTAButtonText}>查看會員方案</Text>
+          <View style={[styles.lockedColumnCTAButton, { backgroundColor: colors.primary + "33", borderColor: colors.primary + "66" }]}>
+            <Text style={[styles.lockedColumnCTAButtonText, { color: colors.primary }]}>查看會員方案</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -492,28 +476,66 @@ export default function SchoolCompareScreen() {
     );
   };
 
-  // Render a single compare slot
-  const renderCompareSlot = (school: School | null, index: number, isBlurred: boolean = false) => {
+  // Draggable slot component
+  const DraggableSlot = ({ school, index, totalSlots }: { school: School | null; index: number; totalSlots: number }) => {
     const slotLabel = IS_PRO_USER ? `${index + 1}` : (index === 0 ? "A" : "B");
+    const translateX = useSharedValue(0);
+    const translateY = useSharedValue(0);
+    const scale = useSharedValue(1);
+    const zIndex = useSharedValue(0);
+    const isDragging = useSharedValue(false);
 
-    if (isBlurred) {
-      // Clean paywall slot for Free users - no "???"
-      return (
-        <TouchableOpacity
-          key="blurred-slot"
-          style={styles.slotPaywall}
-          onPress={handleOpenPaywall}
-          activeOpacity={0.8}
-        >
-          <Text style={styles.slotPaywallLock}>🔒</Text>
-          <Text style={[styles.slotPaywallTitle, { color: colors.primary }]}>解鎖更多</Text>
-          <Text style={[styles.slotPaywallSubtitle, { color: colors.muted }]}>升級會員</Text>
-        </TouchableOpacity>
-      );
-    }
+    const panGesture = Gesture.Pan()
+      .enabled(school !== null) // Only enable drag for filled slots
+      .onStart(() => {
+        isDragging.value = true;
+        scale.value = withSpring(1.05);
+        zIndex.value = 100;
+        runOnJS(setDraggingIndex)(index);
+        if (Platform.OS !== "web") {
+          runOnJS(Haptics.impactAsync)(Haptics.ImpactFeedbackStyle.Light);
+        }
+      })
+      .onUpdate((event) => {
+        translateX.value = event.translationX;
+        translateY.value = event.translationY;
+      })
+      .onEnd((event) => {
+        // Calculate target slot based on horizontal movement
+        const slotOffset = Math.round(event.translationX / (SLOT_WIDTH + SLOT_GAP));
+        const targetIndex = Math.max(0, Math.min(totalSlots - 1, index + slotOffset));
+
+        if (targetIndex !== index) {
+          runOnJS(handleSwapSlots)(index, targetIndex);
+        }
+
+        translateX.value = withSpring(0);
+        translateY.value = withSpring(0);
+        scale.value = withSpring(1);
+        zIndex.value = 0;
+        isDragging.value = false;
+        runOnJS(setDraggingIndex)(null);
+      });
+
+    const animatedStyle = useAnimatedStyle(() => ({
+      transform: [
+        { translateX: translateX.value },
+        { translateY: translateY.value },
+        { scale: scale.value },
+      ],
+      zIndex: zIndex.value,
+      opacity: isDragging.value ? 0.9 : 1,
+    }));
+
+    // Highlight style when another slot is being dragged over this one
+    const highlightStyle = useAnimatedStyle(() => {
+      return {
+        borderColor: draggingIndex !== null && draggingIndex !== index ? "rgba(0,217,255,0.5)" : "rgba(30, 58, 95, 0.2)",
+      };
+    });
 
     if (!school) {
-      // Empty slot - clickable to open search
+      // Empty slot - clickable to open search (not draggable)
       return (
         <TouchableOpacity
           key={`empty-${index}`}
@@ -528,21 +550,40 @@ export default function SchoolCompareScreen() {
       );
     }
 
-    // Filled slot
+    // Filled slot - draggable
     return (
-      <View key={school.id} style={styles.slotFilled}>
-        <TouchableOpacity
-          style={styles.slotRemoveButton}
-          onPress={() => handleRemoveFromSlot(index)}
-        >
-          <Text style={styles.slotRemoveText}>×</Text>
-        </TouchableOpacity>
-        <Text style={[styles.slotLabel, { color: colors.muted }]}>{slotLabel}</Text>
-        <Text style={[styles.slotSchoolName, { color: colors.foreground }]} numberOfLines={2}>{school.name}</Text>
-        <Text style={[styles.slotSchoolInfo, { color: colors.muted }]}>{school.category}</Text>
-      </View>
+      <GestureDetector gesture={panGesture}>
+        <Animated.View style={[styles.slotFilled, animatedStyle, highlightStyle]}>
+          <TouchableOpacity
+            style={styles.slotRemoveButton}
+            onPress={() => handleRemoveFromSlot(index)}
+          >
+            <Text style={styles.slotRemoveText}>×</Text>
+          </TouchableOpacity>
+          <View style={styles.slotDragHandle}>
+            <Text style={styles.slotDragIcon}>⋮⋮</Text>
+          </View>
+          <Text style={[styles.slotLabel, { color: colors.muted }]}>{slotLabel}</Text>
+          <Text style={[styles.slotSchoolName, { color: colors.foreground }]} numberOfLines={2}>{school.name}</Text>
+          <Text style={[styles.slotSchoolInfo, { color: colors.muted }]}>{school.category}</Text>
+        </Animated.View>
+      </GestureDetector>
     );
   };
+
+  // Render paywall slot (not draggable)
+  const renderPaywallSlot = () => (
+    <TouchableOpacity
+      key="blurred-slot"
+      style={styles.slotPaywall}
+      onPress={handleOpenPaywall}
+      activeOpacity={0.8}
+    >
+      <Text style={styles.slotPaywallLock}>🔒</Text>
+      <Text style={[styles.slotPaywallTitle, { color: colors.primary }]}>解鎖更多</Text>
+      <Text style={[styles.slotPaywallSubtitle, { color: colors.muted }]}>升級會員</Text>
+    </TouchableOpacity>
+  );
 
   // Render compare slots row (MIDDLE section)
   const renderCompareSlots = () => {
@@ -551,16 +592,22 @@ export default function SchoolCompareScreen() {
     return (
       <View style={styles.slotsSection}>
         <Text style={[styles.sectionTitle, { color: colors.foreground }]}>對比欄位</Text>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.slotsRow}
-        >
-          {displaySlots.map((school, index) => renderCompareSlot(school, index))}
+        <Text style={[styles.slotHint, { color: colors.muted }]}>長按拖動可調換位置</Text>
+        <GestureHandlerRootView style={styles.slotsContainer}>
+          <View style={styles.slotsRow}>
+            {displaySlots.map((school, index) => (
+              <DraggableSlot
+                key={school?.id || `empty-${index}`}
+                school={school}
+                index={index}
+                totalSlots={displaySlots.length}
+              />
+            ))}
 
-          {/* Blurred paywall slot for Free users */}
-          {!IS_PRO_USER && renderCompareSlot(null, 2, true)}
-        </ScrollView>
+            {/* Blurred paywall slot for Free users */}
+            {!IS_PRO_USER && renderPaywallSlot()}
+          </View>
+        </GestureHandlerRootView>
       </View>
     );
   };
@@ -599,15 +646,15 @@ export default function SchoolCompareScreen() {
               style={[
                 styles.favoriteActionButton,
                 styles.favoriteActionPrimary,
-                alreadyInCompare && styles.favoriteActionDisabled
+                { backgroundColor: colors.primary },
+                alreadyInCompare && [styles.favoriteActionDisabled, { backgroundColor: colors.muted + "33" }]
               ]}
               onPress={() => !alreadyInCompare && handleAddToCompare(school)}
               disabled={alreadyInCompare}
             >
               <Text style={[
                 styles.favoriteActionText,
-                styles.favoriteActionPrimaryText,
-                alreadyInCompare && styles.favoriteActionDisabledText
+                alreadyInCompare ? [styles.favoriteActionDisabledText, { color: colors.muted }] : styles.favoriteActionPrimaryText
               ]}>
                 {alreadyInCompare ? "已在對比中" : "加入對比"}
               </Text>
@@ -639,15 +686,15 @@ export default function SchoolCompareScreen() {
     </View>
   );
 
-  // Render search modal (for empty slot click)
+  // Render simple name search modal
   const renderSearchModal = () => {
-    const hasFiltersOrQuery = searchQuery.trim() || filterStage || filterDistrict || filterCategory;
+    const hasQuery = searchQuery.trim().length > 0;
 
     return (
       <Modal
         visible={showSearchModal}
         transparent
-        animationType="slide"
+        animationType="fade"
         onRequestClose={() => setShowSearchModal(false)}
       >
         <View style={styles.searchModalOverlay}>
@@ -657,16 +704,9 @@ export default function SchoolCompareScreen() {
             onPress={() => setShowSearchModal(false)}
           />
 
-          <View style={[styles.searchModalContainer, { paddingBottom: insets.bottom + 16 }]}>
-            {/* Handle bar */}
-            <View style={styles.searchModalHandle}>
-              <View style={styles.searchModalHandleBar} />
-            </View>
-
-            <View style={styles.searchModalHeader}>
-              <Text style={styles.searchModalTitle}>
-                添加學校到位置 {IS_PRO_USER ? (targetSlotIndex! + 1) : (targetSlotIndex === 0 ? "A" : "B")}
-              </Text>
+          <View style={[styles.searchPopupContainer, { paddingBottom: insets.bottom + 16 }]}>
+            <View style={styles.searchPopupHeader}>
+              <Text style={styles.searchPopupTitle}>搜尋學校</Text>
               <TouchableOpacity onPress={() => setShowSearchModal(false)}>
                 <Text style={styles.searchModalClose}>×</Text>
               </TouchableOpacity>
@@ -675,7 +715,7 @@ export default function SchoolCompareScreen() {
             <View style={styles.searchInputContainer}>
               <TextInput
                 style={styles.searchInput}
-                placeholder="搜尋學校名稱..."
+                placeholder="輸入學校名稱..."
                 placeholderTextColor="rgba(255,255,255,0.4)"
                 value={searchQuery}
                 onChangeText={setSearchQuery}
@@ -683,135 +723,43 @@ export default function SchoolCompareScreen() {
               />
             </View>
 
-            {/* Filter section - 篩選條件 */}
-            <View style={styles.filterSection}>
-              <Text style={styles.filterSectionTitle}>篩選條件</Text>
-
-              {/* Stage filter */}
-              <View style={styles.filterRow}>
-                <Text style={styles.filterLabel}>階段</Text>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filterChips}>
-                  {STAGE_OPTIONS.map((option) => {
-                    const isSelected = filterStage === option.value;
+            {hasQuery ? (
+              searchResults.length > 0 ? (
+                <FlatList
+                  data={searchResults}
+                  keyExtractor={(item) => item.id}
+                  renderItem={({ item }) => {
+                    const alreadyInCompare = isInCompare(item.id);
                     return (
                       <TouchableOpacity
-                        key={option.value}
-                        style={[styles.filterChip, isSelected && styles.filterChipSelected]}
-                        onPress={() => {
-                          if (Platform.OS !== "web") {
-                            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                          }
-                          setFilterStage(isSelected ? null : option.value);
-                          // Clear category when stage changes
-                          if (!isSelected) setFilterCategory(null);
-                        }}
+                        style={[styles.searchResultItem, alreadyInCompare && styles.searchResultItemDisabled]}
+                        onPress={() => !alreadyInCompare && handleAddToSlot(item, targetSlotIndex!)}
+                        disabled={alreadyInCompare}
                       >
-                        <Text style={[styles.filterChipText, isSelected && styles.filterChipTextSelected]}>
-                          {option.label}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  })}
-                </ScrollView>
-              </View>
-
-              {/* District filter */}
-              <View style={styles.filterRow}>
-                <Text style={styles.filterLabel}>地區</Text>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filterChips}>
-                  {DISTRICT_OPTIONS.map((option) => {
-                    const isSelected = filterDistrict === option.value;
-                    return (
-                      <TouchableOpacity
-                        key={option.value}
-                        style={[styles.filterChip, isSelected && styles.filterChipSelected]}
-                        onPress={() => {
-                          if (Platform.OS !== "web") {
-                            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                          }
-                          setFilterDistrict(isSelected ? null : option.value);
-                        }}
-                      >
-                        <Text style={[styles.filterChipText, isSelected && styles.filterChipTextSelected]}>
-                          {option.label}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  })}
-                </ScrollView>
-              </View>
-
-              {/* Category filter */}
-              <View style={styles.filterRow}>
-                <Text style={styles.filterLabel}>類型</Text>
-                <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filterChips}>
-                  {getFilterCategoryOptions().map((option) => {
-                    const isSelected = filterCategory === option.value;
-                    return (
-                      <TouchableOpacity
-                        key={option.value}
-                        style={[styles.filterChip, isSelected && styles.filterChipSelected]}
-                        onPress={() => {
-                          if (Platform.OS !== "web") {
-                            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                          }
-                          setFilterCategory(isSelected ? null : option.value);
-                        }}
-                      >
-                        <Text style={[styles.filterChipText, isSelected && styles.filterChipTextSelected]}>
-                          {option.label}
-                        </Text>
-                      </TouchableOpacity>
-                    );
-                  })}
-                </ScrollView>
-              </View>
-            </View>
-
-            {hasFiltersOrQuery ? (
-              <FlatList
-                data={searchResults}
-                keyExtractor={(item) => item.id}
-                renderItem={({ item }) => {
-                  const alreadyInCompare = isInCompare(item.id);
-                  return (
-                    <TouchableOpacity
-                      style={[styles.searchResultItem, alreadyInCompare && styles.searchResultItemDisabled]}
-                      onPress={() => !alreadyInCompare && handleAddToSlot(item, targetSlotIndex!)}
-                      disabled={alreadyInCompare}
-                    >
-                      <View style={styles.searchResultInfo}>
-                        <Text style={styles.searchResultName}>{item.name}</Text>
-                        <Text style={styles.searchResultMeta}>
-                          {item.category} · {item.district} · {item.level}
-                        </Text>
-                      </View>
-                      {alreadyInCompare ? (
-                        <Text style={styles.searchResultBadge}>已加入</Text>
-                      ) : (
-                        <View style={styles.searchResultAddButton}>
-                          <Text style={styles.searchResultAddText}>加入此欄位</Text>
+                        <View style={styles.searchResultInfo}>
+                          <Text style={styles.searchResultName}>{item.name}</Text>
+                          <Text style={styles.searchResultMeta}>
+                            {item.category} · {item.district}
+                          </Text>
                         </View>
-                      )}
-                    </TouchableOpacity>
-                  );
-                }}
-                style={styles.searchResultsList}
-                ListEmptyComponent={
-                  <View style={styles.searchEmptyContainer}>
-                    <Text style={styles.searchNoResults}>找不到符合條件的學校</Text>
-                    <Text style={styles.searchNoResultsHint}>試試放寬條件</Text>
-                  </View>
-                }
-                ListHeaderComponent={
-                  <Text style={styles.searchResultsCount}>
-                    找到 {searchResults.length} 間學校
-                  </Text>
-                }
-              />
+                        {alreadyInCompare ? (
+                          <Text style={styles.searchResultBadge}>已加入</Text>
+                        ) : (
+                          <Text style={styles.searchResultAddIcon}>+</Text>
+                        )}
+                      </TouchableOpacity>
+                    );
+                  }}
+                  style={styles.searchResultsList}
+                />
+              ) : (
+                <View style={styles.searchEmptyContainer}>
+                  <Text style={styles.searchNoResults}>找不到相關學校</Text>
+                </View>
+              )
             ) : (
               <View style={styles.searchHintContainer}>
-                <Text style={styles.searchHint}>輸入關鍵字或選擇篩選條件</Text>
+                <Text style={styles.searchHint}>輸入學校名稱開始搜尋</Text>
               </View>
             )}
           </View>
@@ -842,7 +790,7 @@ export default function SchoolCompareScreen() {
                 style={styles.slotPickerOption}
                 onPress={() => handleReplaceSlot(index)}
               >
-                <Text style={styles.slotPickerOptionLabel}>
+                <Text style={[styles.slotPickerOptionLabel, { color: colors.primary }]}>
                   {IS_PRO_USER ? `位置 ${index + 1}` : (index === 0 ? "位置 A" : "位置 B")}
                 </Text>
                 <Text style={styles.slotPickerOptionSchool} numberOfLines={1}>
@@ -876,7 +824,7 @@ export default function SchoolCompareScreen() {
     >
       <View style={styles.modalOverlay}>
         <View style={styles.paywallModalContainer}>
-          <Text style={styles.paywallModalTitle}>升級會員</Text>
+          <Text style={[styles.paywallModalTitle, { color: colors.primary }]}>升級會員</Text>
           <Text style={styles.paywallModalText}>
             升級 Pro 會員可解鎖更多功能：
           </Text>
@@ -887,7 +835,7 @@ export default function SchoolCompareScreen() {
           </View>
 
           <TouchableOpacity
-            style={styles.paywallModalButton}
+            style={[styles.paywallModalButton, { backgroundColor: colors.primary }]}
             onPress={() => {
               setShowPaywallModal(false);
               // TODO: Navigate to membership page
@@ -994,21 +942,25 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 12,
+    textAlign: "center",
   },
 
   // Featured section
   featuredSection: {
     marginBottom: 20,
+    alignItems: "center",
   },
   featuredHeader: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
     marginBottom: 12,
+    gap: 16,
   },
   featuredRow: {
     flexDirection: "row",
     gap: 10,
+    justifyContent: "center",
   },
   featuredPill: {
     paddingHorizontal: 16,
@@ -1019,8 +971,7 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.12)",
   },
   featuredPillActive: {
-    backgroundColor: "rgba(0,217,255,0.2)",
-    borderColor: "#00D9FF",
+    // backgroundColor and borderColor will be set dynamically
   },
   featuredPillText: {
     fontSize: 14,
@@ -1028,19 +979,19 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
   },
   featuredPillTextActive: {
-    color: "#00D9FF",
     fontWeight: "600",
+    // color will be set dynamically
   },
   refreshButton: {
     paddingHorizontal: 12,
     paddingVertical: 6,
-    backgroundColor: "rgba(0,217,255,0.15)",
     borderRadius: 12,
+    // backgroundColor will be set dynamically
   },
   refreshButtonText: {
     fontSize: 12,
-    color: "#00D9FF",
     fontWeight: "500",
+    // color will be set dynamically
   },
 
   // Empty compare state
@@ -1070,6 +1021,7 @@ const styles = StyleSheet.create({
   // Comparison table
   comparisonSection: {
     marginBottom: 24,
+    alignItems: "center",
   },
   compareContainer: {
     backgroundColor: "rgba(255,255,255,0.6)",
@@ -1200,10 +1152,10 @@ const styles = StyleSheet.create({
   lockedColumnCTATitle: {
     fontSize: 12,
     fontWeight: "600",
-    color: "#00D9FF",
     fontFamily: "NotoSerifSC-Bold",
     textAlign: "center",
     marginBottom: 4,
+    // color will be set dynamically
   },
   lockedColumnCTASubtitle: {
     fontSize: 9,
@@ -1213,28 +1165,37 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   lockedColumnCTAButton: {
-    backgroundColor: "rgba(0,217,255,0.2)",
     paddingVertical: 8,
     paddingHorizontal: 12,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "rgba(0,217,255,0.4)",
+    // backgroundColor and borderColor will be set dynamically
   },
   lockedColumnCTAButtonText: {
     fontSize: 10,
-    color: "#00D9FF",
     fontWeight: "600",
     fontFamily: "NotoSerifSC-Regular",
+    // color will be set dynamically
   },
 
   // Compare slots
   slotsSection: {
     marginBottom: 24,
+    alignItems: "center",
+  },
+  slotHint: {
+    fontSize: 11,
+    fontFamily: "NotoSerifSC-Regular",
+    marginBottom: 12,
+    opacity: 0.6,
+  },
+  slotsContainer: {
+    width: "100%",
   },
   slotsRow: {
     flexDirection: "row",
     gap: 12,
-    paddingRight: 16,
+    justifyContent: "center",
   },
   slotFilled: {
     width: 120,
@@ -1324,15 +1285,27 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
   },
+  slotDragHandle: {
+    position: "absolute",
+    bottom: 6,
+    right: 6,
+    opacity: 0.4,
+  },
+  slotDragIcon: {
+    fontSize: 12,
+    color: "#666",
+    letterSpacing: -2,
+  },
 
   // Favorites
   favoritesSection: {
     marginBottom: 24,
+    alignItems: "center",
   },
   favoritesRow: {
     flexDirection: "row",
     gap: 12,
-    paddingRight: 16,
+    justifyContent: "center",
   },
   favoriteCard: {
     width: 160,
@@ -1383,10 +1356,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   favoriteActionPrimary: {
-    backgroundColor: "#00D9FF",
+    // backgroundColor will be set dynamically
   },
   favoriteActionDisabled: {
-    backgroundColor: "rgba(255,255,255,0.05)",
+    // backgroundColor will be set dynamically using colors.muted
   },
   favoriteActionText: {
     fontSize: 12,
@@ -1397,7 +1370,7 @@ const styles = StyleSheet.create({
     color: "#0F1629",
   },
   favoriteActionDisabledText: {
-    color: "rgba(255,255,255,0.4)",
+    color: colors.muted, // 使用 muted 颜色，确保在浅色背景下可见
   },
   emptyFavorites: {
     paddingVertical: 24,
@@ -1416,28 +1389,38 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 
-  // Search modal
+  // Search popup (simplified)
   searchModalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    justifyContent: "flex-end",
+    backgroundColor: "rgba(0,0,0,0.6)",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 24,
   },
-  searchModalContainer: {
+  searchModalBackdrop: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
+  searchPopupContainer: {
     backgroundColor: "#1a2744",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    maxHeight: "80%",
-    minHeight: "50%",
+    borderRadius: 20,
+    width: "100%",
+    maxWidth: 360,
+    maxHeight: "70%",
+    overflow: "hidden",
   },
-  searchModalHeader: {
+  searchPopupHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
+    paddingHorizontal: 20,
+    paddingTop: 20,
+    paddingBottom: 12,
   },
-  searchModalTitle: {
+  searchPopupTitle: {
     fontSize: 18,
     fontWeight: "600",
     color: "#FFFFFF",
@@ -1449,7 +1432,7 @@ const styles = StyleSheet.create({
   },
   searchInputContainer: {
     paddingHorizontal: 20,
-    paddingVertical: 12,
+    paddingBottom: 12,
   },
   searchInput: {
     backgroundColor: "rgba(255,255,255,0.1)",
@@ -1461,14 +1444,14 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
   },
   searchResultsList: {
-    flex: 1,
+    maxHeight: 300,
   },
   searchResultItem: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     paddingHorizontal: 20,
-    paddingVertical: 14,
+    paddingVertical: 12,
     borderBottomWidth: 1,
     borderBottomColor: "rgba(255,255,255,0.05)",
   },
@@ -1479,31 +1462,22 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   searchResultName: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: "500",
     color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 2,
   },
   searchResultMeta: {
-    fontSize: 12,
+    fontSize: 11,
     color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
   },
-  searchResultAddButton: {
-    backgroundColor: "rgba(0,217,255,0.2)",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "#00D9FF",
-    marginLeft: 12,
-  },
-  searchResultAddText: {
-    fontSize: 12,
+  searchResultAddIcon: {
+    fontSize: 24,
     color: "#00D9FF",
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Regular",
+    fontWeight: "300",
+    marginLeft: 12,
   },
   searchResultBadge: {
     fontSize: 12,
@@ -1513,104 +1487,22 @@ const styles = StyleSheet.create({
   },
   searchEmptyContainer: {
     alignItems: "center",
-    paddingVertical: 40,
+    paddingVertical: 32,
   },
   searchNoResults: {
     textAlign: "center",
-    color: "rgba(255,255,255,0.6)",
-    fontSize: 16,
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 8,
-  },
-  searchNoResultsHint: {
-    textAlign: "center",
-    color: "rgba(255,255,255,0.4)",
-    fontSize: 13,
+    color: "rgba(255,255,255,0.5)",
+    fontSize: 14,
     fontFamily: "NotoSerifSC-Regular",
   },
   searchHintContainer: {
-    flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    paddingBottom: 40,
+    paddingVertical: 32,
   },
   searchHint: {
     fontSize: 14,
     color: "rgba(255,255,255,0.4)",
     fontFamily: "NotoSerifSC-Regular",
-  },
-  searchModalBackdrop: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-  },
-  searchModalHandle: {
-    alignItems: "center",
-    paddingTop: 12,
-    paddingBottom: 4,
-  },
-  searchModalHandleBar: {
-    width: 40,
-    height: 4,
-    backgroundColor: "rgba(255,255,255,0.3)",
-    borderRadius: 2,
-  },
-  searchResultsCount: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    paddingHorizontal: 20,
-    paddingVertical: 8,
-  },
-  // Filter section in search modal
-  filterSection: {
-    paddingHorizontal: 20,
-    paddingBottom: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.08)",
-  },
-  filterSectionTitle: {
-    fontSize: 13,
-    fontWeight: "600",
-    color: "rgba(255,255,255,0.7)",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 12,
-  },
-  filterRow: {
-    marginBottom: 10,
-  },
-  filterLabel: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 6,
-  },
-  filterChips: {
-    flexDirection: "row",
-    gap: 8,
-  },
-  filterChip: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 14,
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.12)",
-  },
-  filterChipSelected: {
-    backgroundColor: "rgba(0,217,255,0.2)",
-    borderColor: "#00D9FF",
-  },
-  filterChipText: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  filterChipTextSelected: {
-    color: "#00D9FF",
-    fontWeight: "500",
   },
 
   // Slot picker modal
@@ -1655,9 +1547,9 @@ const styles = StyleSheet.create({
   },
   slotPickerOptionLabel: {
     fontSize: 12,
-    color: "#00D9FF",
     fontWeight: "500",
     marginBottom: 4,
+    // color will be set dynamically
   },
   slotPickerOptionSchool: {
     fontSize: 14,
@@ -1687,9 +1579,9 @@ const styles = StyleSheet.create({
   paywallModalTitle: {
     fontSize: 22,
     fontWeight: "700",
-    color: "#00D9FF",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 12,
+    // color will be set dynamically
   },
   paywallModalText: {
     fontSize: 14,
@@ -1709,7 +1601,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   paywallModalButton: {
-    backgroundColor: "#00D9FF",
+    // backgroundColor will be set dynamically
     paddingVertical: 14,
     paddingHorizontal: 32,
     borderRadius: 25,
