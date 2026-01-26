@@ -1,9 +1,11 @@
 import { useState, useContext, useMemo } from "react";
 import { View, Text, TouchableOpacity, ScrollView, Platform, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { FilterContext } from "@/lib/filter-context";
+import { useColors } from "@/hooks/use-colors";
 import type { Level, District18 } from "@/types/school";
 import { ALL_DISTRICT18, DISTRICT18_TO_DISTRICT } from "@/types/school";
 import type { KGSession, KGCurriculumCategoryFilter, KGCurriculumSubtypeFilter, KGPedagogyTag, KGLanguageEnv } from "@/constants/kg-filters";
@@ -12,6 +14,10 @@ import { schools } from "@/data/schools";
 import { kindergartens } from "@/data/kg/kg-database";
 import * as Haptics from "expo-haptics";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { Typography } from "@/components/ui/typography";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 /**
  * Q&A School Finder v1.1
@@ -343,6 +349,7 @@ const DISTRICT_GROUPS = [
 export default function QuizScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const filterContext = useContext(FilterContext);
   const [state, setState] = useState<QAState>(initialState);
 
@@ -351,6 +358,226 @@ export default function QuizScreen() {
   }
 
   const { dispatch } = filterContext;
+
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.md,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      letterSpacing: 1,
+    },
+    restartIconButton: {
+      width: 40,
+      height: 40,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    progressContainer: {
+      paddingHorizontal: Spacing.xl,
+      paddingTop: Spacing.sm,
+      paddingBottom: Spacing.lg,
+    },
+    progressBar: {
+      height: 4,
+      backgroundColor: colors.border,
+      borderRadius: BorderRadius.xs,
+      overflow: "hidden",
+    },
+    progressFill: {
+      height: "100%",
+      borderRadius: BorderRadius.xs,
+      // backgroundColor will be set dynamically
+    },
+    progressText: {
+      ...TypographyStyles.small,
+      color: colors.muted,
+      textAlign: "center",
+      marginTop: Spacing.sm,
+    },
+    scrollView: {
+      flex: 1,
+      paddingHorizontal: Spacing.xl,
+    },
+    questionContainer: {
+      paddingVertical: Spacing.xl,
+    },
+    questionTitle: {
+      ...TypographyStyles.caption,
+      letterSpacing: 2,
+      marginBottom: Spacing.sm,
+      // color will be set dynamically
+    },
+    questionSubtitle: {
+      ...TypographyStyles.title,
+      fontSize: 26,
+      color: colors.foreground,
+      lineHeight: 36,
+      marginBottom: Spacing.sm,
+    },
+    questionHint: {
+      ...TypographyStyles.caption,
+      color: colors.muted,
+      marginBottom: Spacing.xl,
+    },
+    optionsContainer: {
+      gap: Spacing.md,
+      marginTop: Spacing.lg,
+    },
+    optionButton: {
+      backgroundColor: colors.surface,
+      paddingVertical: Spacing.xl,
+      paddingHorizontal: Spacing.xl,
+      borderRadius: BorderRadiusPresets.card,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    optionButtonSelected: {
+      // backgroundColor and borderColor will be set dynamically
+    },
+    optionText: {
+      ...TypographyStyles.body,
+      fontSize: 17,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      textAlign: "center",
+      letterSpacing: 0.5,
+    },
+    optionTextSelected: {
+      // color will be set dynamically
+    },
+    checkboxRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 12,
+    },
+    checkbox: {
+      width: 24,
+      height: 24,
+      borderRadius: BorderRadius.sm,
+      borderWidth: 2,
+      borderColor: colors.border,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    checkboxSelected: {
+      // backgroundColor and borderColor will be set dynamically
+    },
+    completeButton: {
+      marginTop: Spacing["2xl"],
+      paddingVertical: Spacing.lg,
+      borderRadius: BorderRadiusPresets.card,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 12,
+      elevation: 8,
+      // backgroundColor and shadowColor will be set dynamically
+    },
+    completeButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 17,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: "#FAF8F5",
+      textAlign: "center",
+      letterSpacing: 1,
+    },
+    resultHint: {
+      marginTop: 24,
+      alignItems: "center",
+    },
+    resultHintText: {
+      ...TypographyStyles.caption,
+      color: colors.muted,
+    },
+    placeholderContainer: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: 80,
+      paddingHorizontal: 24,
+    },
+    placeholderIcon: {
+      fontSize: 64,
+      marginBottom: 24,
+    },
+    placeholderTitle: {
+      fontSize: 24,
+      fontWeight: "700",
+      color: colors.foreground,
+      fontFamily: "NotoSerifSC-Bold",
+      marginBottom: 12,
+    },
+    placeholderText: {
+      fontSize: 16,
+      color: colors.muted,
+      fontFamily: "NotoSerifSC-Regular",
+      textAlign: "center",
+      lineHeight: 26,
+      marginBottom: 32,
+    },
+    restartButton: {
+      backgroundColor: colors.surface,
+      paddingVertical: 16,
+      paddingHorizontal: 32,
+      borderRadius: BorderRadius.lg,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    restartButtonText: {
+      fontSize: 16,
+      fontWeight: "500",
+      color: colors.foreground,
+      textAlign: "center",
+      fontFamily: "NotoSerifSC-Regular",
+    },
+    // District selection styles
+    districtGroup: {
+      marginTop: 20,
+    },
+    districtGroupLabel: {
+      fontSize: 13,
+      color: colors.muted,
+      fontFamily: "NotoSerifSC-Regular",
+      marginBottom: Spacing.sm,
+      letterSpacing: 1,
+    },
+    districtGrid: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: Spacing.sm,
+    },
+    districtButton: {
+      backgroundColor: colors.surface,
+      paddingVertical: Spacing.md,
+      paddingHorizontal: Spacing.lg,
+      borderRadius: BorderRadius.md,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    districtButtonText: {
+      fontSize: 15,
+      fontWeight: "500",
+      color: colors.foreground,
+      fontFamily: "NotoSerifSC-Regular",
+    },
+  });
 
   // Determine which questions to show based on answers
   const getActiveQuestions = (): KGQuestionId[] => {
@@ -652,7 +879,7 @@ export default function QuizScreen() {
   // Render Stage Gate
   const renderStageGate = () => (
     <View style={styles.questionContainer}>
-      <Text style={styles.questionTitle}>學段選擇</Text>
+      <Text style={[styles.questionTitle, { color: colors.primary }]}>學段選擇</Text>
       <Text style={styles.questionSubtitle}>您孩子目標就讀哪個學段？</Text>
 
       <View style={styles.optionsContainer}>
@@ -716,7 +943,7 @@ export default function QuizScreen() {
 
     return (
       <View style={styles.questionContainer}>
-        <Text style={styles.questionTitle}>{question.title}</Text>
+        <Text style={[styles.questionTitle, { color: colors.primary }]}>{question.title}</Text>
         <Text style={styles.questionSubtitle}>{question.question}</Text>
         {question.subtitle && (
           <Text style={styles.questionHint}>{question.subtitle}</Text>
@@ -765,7 +992,7 @@ export default function QuizScreen() {
 
     return (
       <View style={styles.questionContainer}>
-        <Text style={styles.questionTitle}>{question.title}</Text>
+        <Text style={[styles.questionTitle, { color: colors.primary }]}>{question.title}</Text>
         <Text style={styles.questionSubtitle}>{question.question}</Text>
         {question.subtitle && (
           <Text style={styles.questionHint}>{question.subtitle}</Text>
@@ -782,18 +1009,18 @@ export default function QuizScreen() {
                     key={option.value}
                     onPress={() => handlePedagogyToggle(option.value as KGPedagogyTag)}
                     style={[
-                      styles.optionButton,
-                      isSelected && styles.optionButtonSelected,
-                    ]}
+                    styles.optionButton,
+                    isSelected && [styles.optionButtonSelected, { backgroundColor: colors.primary + "26", borderColor: colors.primary }],
+                  ]}
                     activeOpacity={0.7}
                   >
                     <View style={styles.checkboxRow}>
-                      <View style={[styles.checkbox, isSelected && styles.checkboxSelected]}>
+                      <View style={[styles.checkbox, isSelected && [styles.checkboxSelected, { backgroundColor: colors.primary, borderColor: colors.primary }]]}>
                         {isSelected && (
-                          <IconSymbol name="checkmark" size={14} color="#0F1629" />
+                          <IconSymbol name="checkmark" size={14} color={colors.foreground} />
                         )}
                       </View>
-                      <Text style={[styles.optionText, isSelected && styles.optionTextSelected]}>
+                      <Text style={[styles.optionText, isSelected && [styles.optionTextSelected, { color: colors.primary }]]}>
                         {option.label}
                       </Text>
                     </View>
@@ -802,7 +1029,7 @@ export default function QuizScreen() {
               })}
             </>
           ) : (
-            // Single-select for other questions
+            // Single-select for other questions (auto-advances, no selection state needed)
             question.options.map((option) => (
               <TouchableOpacity
                 key={option.value}
@@ -820,7 +1047,7 @@ export default function QuizScreen() {
         {isMultiSelect && (
           <TouchableOpacity
             onPress={handleCompleteMultiSelect}
-            style={styles.completeButton}
+            style={[styles.completeButton, { backgroundColor: colors.primary, shadowColor: colors.primary }]}
             activeOpacity={0.8}
           >
             <Text style={styles.completeButtonText}>
@@ -844,20 +1071,21 @@ export default function QuizScreen() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
 
-      <View style={[styles.container, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.container, { paddingTop: insets.top }]}>
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-            <IconSymbol name="chevron.left" size={24} color="#FFFFFF" />
+            <IconSymbol name="chevron.left" size={24} color={colors.foreground} />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>選校問答</Text>
           <TouchableOpacity onPress={handleRestart} style={styles.restartIconButton}>
-            <IconSymbol name="arrow.counterclockwise" size={20} color="rgba(255,255,255,0.6)" />
+            <IconSymbol name="arrow.counterclockwise" size={20} color={colors.muted + "99"} />
           </TouchableOpacity>
         </View>
 
@@ -865,7 +1093,7 @@ export default function QuizScreen() {
         {state.module === "kg" && (
           <View style={styles.progressContainer}>
             <View style={styles.progressBar}>
-              <View style={[styles.progressFill, { width: `${progress}%` }]} />
+              <View style={[styles.progressFill, { width: `${progress}%`, backgroundColor: colors.primary }]} />
             </View>
             <Text style={styles.progressText}>
               問題 {currentStep} / {totalSteps}
@@ -879,235 +1107,8 @@ export default function QuizScreen() {
           {state.module === "kg" && renderKGQuestion()}
           {state.module === "primary_secondary_placeholder" && renderPlaceholder()}
         </ScrollView>
-      </View>
+        </View>
+      </MaxWidthWrapper>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 1,
-  },
-  restartIconButton: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  progressContainer: {
-    paddingHorizontal: 24,
-    paddingTop: 8,
-    paddingBottom: 16,
-  },
-  progressBar: {
-    height: 4,
-    backgroundColor: "rgba(255,255,255,0.15)",
-    borderRadius: 2,
-    overflow: "hidden",
-  },
-  progressFill: {
-    height: "100%",
-    backgroundColor: "#00D9FF",
-    borderRadius: 2,
-  },
-  progressText: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    textAlign: "center",
-    marginTop: 8,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  scrollView: {
-    flex: 1,
-    paddingHorizontal: 24,
-  },
-  questionContainer: {
-    paddingVertical: 24,
-  },
-  questionTitle: {
-    fontSize: 14,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 2,
-    marginBottom: 8,
-  },
-  questionSubtitle: {
-    fontSize: 26,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    lineHeight: 36,
-    marginBottom: 8,
-  },
-  questionHint: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 24,
-  },
-  optionsContainer: {
-    gap: 12,
-    marginTop: 16,
-  },
-  optionButton: {
-    backgroundColor: "rgba(255,255,255,0.08)",
-    paddingVertical: 18,
-    paddingHorizontal: 20,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.15)",
-  },
-  optionButtonSelected: {
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    borderColor: "#00D9FF",
-  },
-  optionText: {
-    fontSize: 17,
-    fontWeight: "500",
-    color: "#FFFFFF",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 0.5,
-  },
-  optionTextSelected: {
-    color: "#00D9FF",
-  },
-  checkboxRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 12,
-  },
-  checkbox: {
-    width: 24,
-    height: 24,
-    borderRadius: 6,
-    borderWidth: 2,
-    borderColor: "rgba(255,255,255,0.3)",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  checkboxSelected: {
-    backgroundColor: "#00D9FF",
-    borderColor: "#00D9FF",
-  },
-  completeButton: {
-    marginTop: 32,
-    backgroundColor: "#00D9FF",
-    paddingVertical: 16,
-    borderRadius: 16,
-    shadowColor: "#00D9FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  completeButtonText: {
-    fontSize: 17,
-    fontWeight: "600",
-    color: "#0F1629",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-  resultHint: {
-    marginTop: 24,
-    alignItems: "center",
-  },
-  resultHintText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  placeholderContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 80,
-    paddingHorizontal: 24,
-  },
-  placeholderIcon: {
-    fontSize: 64,
-    marginBottom: 24,
-  },
-  placeholderTitle: {
-    fontSize: 24,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 12,
-  },
-  placeholderText: {
-    fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    textAlign: "center",
-    lineHeight: 26,
-    marginBottom: 32,
-  },
-  restartButton: {
-    backgroundColor: "rgba(255,255,255,0.1)",
-    paddingVertical: 16,
-    paddingHorizontal: 32,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
-  },
-  restartButtonText: {
-    fontSize: 16,
-    fontWeight: "500",
-    color: "#FFFFFF",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  // District selection styles
-  districtGroup: {
-    marginTop: 20,
-  },
-  districtGroupLabel: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 10,
-    letterSpacing: 1,
-  },
-  districtGrid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 10,
-  },
-  districtButton: {
-    backgroundColor: "rgba(255,255,255,0.08)",
-    paddingVertical: 12,
-    paddingHorizontal: 16,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.15)",
-  },
-  districtButtonText: {
-    fontSize: 15,
-    fontWeight: "500",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-});

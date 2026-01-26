@@ -209,8 +209,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 189600,
+    "tuitionMax": 234500
   },
   {
     "id": "edb_603902000133",
@@ -227,8 +227,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 189600,
+    "tuitionMax": 234500
   },
   {
     "id": "edb_622060000112",
@@ -456,8 +456,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "CANTONESE"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 165000,
+    "tuitionMax": 165000
   },
   {
     "id": "edb_620785000123",
@@ -475,8 +475,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "CANTONESE"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 304500,
+    "tuitionMax": 304500
   },
   {
     "id": "edb_604470000111",
@@ -1180,8 +1180,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 205480,
+    "tuitionMax": 207680
   },
   {
     "id": "edb_607371000233",
@@ -1198,8 +1198,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 205480,
+    "tuitionMax": 207680
   },
   {
     "id": "edb_567116000112",
@@ -1296,8 +1296,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "離島區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 143700,
+    "tuitionMax": 196900
   },
   {
     "id": "edb_230987000112",
@@ -1310,8 +1310,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "離島區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 143700,
+    "tuitionMax": 196900
   },
   {
     "id": "edb_230987000111",
@@ -1324,8 +1324,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "離島區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 143700,
+    "tuitionMax": 196900
   },
   {
     "id": "edb_230987000123",
@@ -1343,7 +1343,7 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH"
     ],
     "tuitionMin": 143700,
-    "tuitionMax": 143700
+    "tuitionMax": 196900
   },
   {
     "id": "edb_230987000233",
@@ -1360,7 +1360,7 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 190700,
+    "tuitionMin": 143700,
     "tuitionMax": 196900
   },
   {
@@ -1378,8 +1378,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 143700,
+    "tuitionMax": 196900
   },
   {
     "id": "edb_569747000223",
@@ -1428,8 +1428,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "離島區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 99500,
+    "tuitionMax": 205500
   },
   {
     "id": "edb_600814000112",
@@ -1442,8 +1442,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "離島區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 99500,
+    "tuitionMax": 205500
   },
   {
     "id": "edb_600814000113",
@@ -1456,8 +1456,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "離島區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 99500,
+    "tuitionMax": 205500
   },
   {
     "id": "edb_600814000123",
@@ -1474,8 +1474,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 99500,
+    "tuitionMax": 205500
   },
   {
     "id": "edb_584606000113",
@@ -1706,8 +1706,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "南區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 203700,
+    "tuitionMax": 203700
   },
   {
     "id": "edb_214558000221",
@@ -1725,8 +1725,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "GERMAN"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 203700,
+    "tuitionMax": 203700
   },
   {
     "id": "edb_214558000123",
@@ -1763,8 +1763,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "GERMAN"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 203700,
+    "tuitionMax": 203700
   },
   {
     "id": "edb_214558000133",
@@ -1781,8 +1781,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 203700,
+    "tuitionMax": 203700
   },
   {
     "id": "edb_170887000123",
@@ -2495,8 +2495,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 114700,
+    "tuitionMax": 114700
   },
   {
     "id": "edb_616354000133",
@@ -2513,8 +2513,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 139000,
+    "tuitionMax": 141700
   },
   {
     "id": "edb_581119000111",
@@ -2707,8 +2707,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 139000,
+    "tuitionMax": 181100
   },
   {
     "id": "edb_250686000233",
@@ -2725,8 +2725,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 139000,
+    "tuitionMax": 181100
   },
   {
     "id": "edb_615170000112",
@@ -2799,8 +2799,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 214200,
+    "tuitionMax": 214200
   },
   {
     "id": "edb_215406000123",
@@ -2817,7 +2817,7 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 208800,
+    "tuitionMin": 214200,
     "tuitionMax": 214200
   },
   {
@@ -2835,8 +2835,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 251400,
-    "tuitionMax": 267100
+    "tuitionMin": 214200,
+    "tuitionMax": 214200
   },
   {
     "id": "edb_607703000111",
@@ -3060,8 +3060,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 79100,
-    "tuitionMax": 103000
+    "tuitionMin": 127450,
+    "tuitionMax": 214340
   },
   {
     "id": "edb_518620000223",
@@ -3078,8 +3078,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 127450,
+    "tuitionMax": 214340
   },
   {
     "id": "edb_518620000423",
@@ -3096,8 +3096,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 127450,
+    "tuitionMax": 214340
   },
   {
     "id": "edb_614904000112",
@@ -3222,8 +3222,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "東區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 146093,
-    "tuitionMax": 151218
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "id": "edb_214949000713",
@@ -3236,8 +3236,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "district18": "東區",
     "curriculumV2": [],
     "instructionLanguages": [],
-    "tuitionMin": 146093,
-    "tuitionMax": 151984
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "id": "edb_214949000523",
@@ -3255,8 +3255,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "FRENCH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "id": "edb_214949000123",
@@ -3273,8 +3273,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 151984,
-    "tuitionMax": 161373
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "id": "edb_214949000723",
@@ -3292,8 +3292,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "FRENCH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "id": "edb_214949000433",
@@ -3311,8 +3311,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "FRENCH"
     ],
-    "tuitionMin": 202000,
-    "tuitionMax": 217599
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "id": "edb_214949000733",
@@ -3330,8 +3330,8 @@ export const internationalSchools: InternationalSchoolEntry[] = [
       "ENGLISH",
       "FRENCH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "id": "edb_610623000111",
@@ -6018,8 +6018,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 189600,
+    "tuitionMax": 234500
   },
   {
     "name": "安基司學校附屬國際幼稚園",
@@ -6107,8 +6107,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
       "ENGLISH",
       "CANTONESE"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 165000,
+    "tuitionMax": 165000
   },
   {
     "name": "安菲爾聖鮑思高冠英學校",
@@ -6130,8 +6130,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
       "ENGLISH",
       "CANTONESE"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 304500,
+    "tuitionMax": 304500
   },
   {
     "name": "雅士圖國際幼稚園",
@@ -6521,8 +6521,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 205480,
+    "tuitionMax": 207680
   },
   {
     "name": "德寶國際幼兒學校（寶盈花園）",
@@ -6640,8 +6640,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 99500,
+    "tuitionMax": 205500
   },
   {
     "name": "香港國際蒙特梭利學校",
@@ -7289,8 +7289,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 114700,
+    "tuitionMax": 114700
   },
   {
     "name": "INVICTUS SECONDARY SCHOOL",
@@ -7311,8 +7311,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 139000,
+    "tuitionMax": 141700
   },
   {
     "name": "港島兒童蒙特梭利幼稚園",
@@ -7457,8 +7457,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 0,
-    "tuitionMax": 0
+    "tuitionMin": 139000,
+    "tuitionMax": 181100
   },
   {
     "name": "心怡天地國際幼稚園(屯門)",
@@ -7520,8 +7520,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 208800,
-    "tuitionMax": 267100
+    "tuitionMin": 214200,
+    "tuitionMax": 214200
   },
   {
     "name": "漢迪國際幼稚園",
@@ -7716,8 +7716,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
     "instructionLanguages": [
       "ENGLISH"
     ],
-    "tuitionMin": 79100,
-    "tuitionMax": 103000
+    "tuitionMin": 127450,
+    "tuitionMax": 214340
   },
   {
     "name": "LES PETITS LASCARS FRENCH INTERNATIONAL PRESCHOOL",
@@ -7823,8 +7823,8 @@ export const uniqueInternationalSchools: UniqueInternationalSchool[] = [
       "ENGLISH",
       "FRENCH"
     ],
-    "tuitionMin": 146093,
-    "tuitionMax": 217599
+    "tuitionMin": 152239,
+    "tuitionMax": 209230
   },
   {
     "name": "瑪歌瑞特國際幼稚園",

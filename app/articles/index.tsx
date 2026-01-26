@@ -1,10 +1,15 @@
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Image } from "expo-image";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { useColors } from "@/hooks/use-colors";
 import { useState } from "react";
+import { Spacing } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 // 文章分類
 const CATEGORIES = ["全部", "選校攻略", "面試技巧", "申請準備"];
@@ -88,7 +93,145 @@ const ARTICLES = [
 export default function ArticlesScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const [selectedCategory, setSelectedCategory] = useState("全部");
+
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingBottom: Spacing.lg,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.surface,
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 20,
+      color: colors.foreground,
+      letterSpacing: 1,
+    },
+    placeholder: {
+      width: 40,
+    },
+    categoryContainer: {
+      flexDirection: "row",
+      paddingHorizontal: Spacing.lg,
+      paddingBottom: Spacing.md,
+      gap: Spacing.sm,
+    },
+    categoryTab: {
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.sm,
+      borderRadius: BorderRadiusPresets.buttonPill,
+      backgroundColor: colors.surface,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    categoryTabActive: {
+      backgroundColor: colors.primary + "26",
+      borderColor: colors.primary,
+    },
+    categoryTabText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+    },
+    categoryTabTextActive: {
+      fontWeight: "600",
+      color: colors.primary,
+    },
+    statsContainer: {
+      paddingHorizontal: Spacing.xl,
+      paddingBottom: Spacing.sm,
+    },
+    statsText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+    },
+    listContent: {
+      paddingHorizontal: Spacing.xl,
+      gap: Spacing.lg,
+    },
+    firstCard: {
+      marginTop: Spacing.sm,
+    },
+    articleCard: {
+      backgroundColor: colors.surface,
+      borderRadius: BorderRadiusPresets.card,
+      overflow: "hidden",
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    imageContainer: {
+      position: "relative",
+    },
+    articleImage: {
+      width: "100%",
+      height: 160,
+    },
+    newBadge: {
+      position: "absolute",
+      top: Spacing.md,
+      right: Spacing.md,
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.md,
+      backgroundColor: colors.primary,
+    },
+    newBadgeText: {
+      ...TypographyStyles.tiny,
+      fontSize: 10,
+      fontWeight: "700",
+      color: colors.background,
+      letterSpacing: 0.5,
+    },
+    articleContent: {
+      padding: Spacing.lg,
+      gap: Spacing.sm,
+    },
+    categoryBadge: {
+      alignSelf: "flex-start",
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.md,
+      borderWidth: 1,
+      backgroundColor: colors.primary + "26",
+      borderColor: colors.primary + "40",
+    },
+    categoryText: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.primary,
+    },
+    articleTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      lineHeight: 26,
+    },
+    articleSubtitle: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.muted,
+      lineHeight: 20,
+    },
+    readTime: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.muted,
+      marginTop: Spacing.xs,
+    },
+  });
 
   const filteredArticles = selectedCategory === "全部"
     ? ARTICLES
@@ -143,18 +286,19 @@ export default function ArticlesScreen() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
 
-      <View style={[styles.header, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.header, { paddingTop: insets.top }]}>
         <TouchableOpacity
           onPress={() => router.back()}
           style={styles.backButton}
           activeOpacity={0.7}
         >
-          <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
+          <IconSymbol name="chevron.right" size={24} color={colors.foreground} style={{ transform: [{ rotate: "180deg" }] }} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>家長攻略</Text>
         <View style={styles.placeholder} />
@@ -179,141 +323,8 @@ export default function ArticlesScreen() {
         contentContainerStyle={[styles.listContent, { paddingBottom: insets.bottom + 24 }]}
         showsVerticalScrollIndicator={false}
       />
+      </MaxWidthWrapper>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  headerTitle: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-  placeholder: {
-    width: 40,
-  },
-  categoryContainer: {
-    flexDirection: "row",
-    paddingHorizontal: 16,
-    paddingBottom: 12,
-    gap: 8,
-  },
-  categoryTab: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
-  },
-  categoryTabActive: {
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    borderColor: "#00D9FF",
-  },
-  categoryTabText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  categoryTabTextActive: {
-    color: "#00D9FF",
-    fontWeight: "600",
-  },
-  statsContainer: {
-    paddingHorizontal: 20,
-    paddingBottom: 8,
-  },
-  statsText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  listContent: {
-    paddingHorizontal: 20,
-    gap: 16,
-  },
-  firstCard: {
-    marginTop: 8,
-  },
-  articleCard: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 20,
-    overflow: "hidden",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-  },
-  imageContainer: {
-    position: "relative",
-  },
-  articleImage: {
-    width: "100%",
-    height: 160,
-  },
-  newBadge: {
-    position: "absolute",
-    top: 12,
-    right: 12,
-    backgroundColor: "#00D9FF",
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 10,
-  },
-  newBadgeText: {
-    fontSize: 10,
-    fontWeight: "700",
-    color: "#0F1629",
-    letterSpacing: 0.5,
-  },
-  articleContent: {
-    padding: 16,
-    gap: 8,
-  },
-  categoryBadge: {
-    alignSelf: "flex-start",
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 12,
-  },
-  categoryText: {
-    fontSize: 12,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  articleTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    lineHeight: 26,
-  },
-  articleSubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 20,
-  },
-  readTime: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 4,
-  },
-});

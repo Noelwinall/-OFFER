@@ -177,7 +177,7 @@ export function EnhancedBriefModal({
               style={styles.closeButton}
               hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             >
-              <IconSymbol name="xmark" size={20} color="rgba(255,255,255,0.6)" />
+              <IconSymbol name="xmark" size={20} color="#706B5E" />
             </TouchableOpacity>
           </View>
 
@@ -327,14 +327,14 @@ export function EnhancedBriefModal({
                 {/* Cache indicator */}
                 {brief.fromCache && (
                   <View style={styles.cacheIndicator}>
-                    <IconSymbol name="clock.arrow.circlepath" size={10} color="rgba(255,255,255,0.3)" />
+                    <IconSymbol name="clock.arrow.circlepath" size={10} color="#8B7355" />
                     <Text style={styles.cacheText}>已緩存</Text>
                   </View>
                 )}
 
                 {/* Disclaimer */}
                 <View style={styles.disclaimer}>
-                  <IconSymbol name="info.circle" size={12} color="rgba(255,255,255,0.3)" />
+                  <IconSymbol name="info.circle" size={12} color="#8B7355" />
                   <Text style={styles.disclaimerText}>
                     以上分析由 AI 根據學校公開資料生成，僅供參考。
                   </Text>
@@ -358,7 +358,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0,0,0,0.6)",
   },
   container: {
-    backgroundColor: "#1a2744",
+    backgroundColor: "#FFF9F0",
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     maxHeight: SCREEN_HEIGHT * 0.85,
@@ -370,7 +370,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
+    borderBottomColor: "#E8E2D5",
   },
   headerLeft: {
     flexDirection: "row",
@@ -394,7 +394,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 17,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
   },
   closeButton: {
@@ -415,14 +415,14 @@ const styles = StyleSheet.create({
   briefTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 8,
     lineHeight: 28,
   },
   oneLiner: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     marginBottom: 20,
     lineHeight: 20,
@@ -477,14 +477,14 @@ const styles = StyleSheet.create({
   bulletText: {
     flex: 1,
     fontSize: 14,
-    color: "rgba(255,255,255,0.85)",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     lineHeight: 22,
   },
   bulletTextWarning: {
     flex: 1,
     fontSize: 14,
-    color: "rgba(255,255,255,0.7)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     lineHeight: 22,
   },
@@ -497,7 +497,7 @@ const styles = StyleSheet.create({
   bulletTextVerify: {
     flex: 1,
     fontSize: 14,
-    color: "rgba(255,255,255,0.75)",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     lineHeight: 22,
   },
@@ -505,17 +505,17 @@ const styles = StyleSheet.create({
     marginTop: 16,
     paddingTop: 16,
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
+    borderTopColor: "#E8E2D5",
   },
   citationsTitle: {
     fontSize: 12,
     fontWeight: "600",
-    color: "rgba(255,255,255,0.5)",
+    color: "#706B5E",
     marginBottom: 8,
   },
   citationText: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
+    color: "#8B7355",
     lineHeight: 16,
     marginBottom: 4,
   },
@@ -528,7 +528,7 @@ const styles = StyleSheet.create({
   },
   cacheText: {
     fontSize: 10,
-    color: "rgba(255,255,255,0.3)",
+    color: "#8B7355",
   },
   disclaimer: {
     flexDirection: "row",
@@ -537,12 +537,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingTop: 16,
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
+    borderTopColor: "#E8E2D5",
   },
   disclaimerText: {
     flex: 1,
     fontSize: 11,
-    color: "rgba(255,255,255,0.35)",
+    color: "#8B7355",
     fontFamily: "NotoSerifSC-Regular",
   },
   // Skeleton styles
@@ -551,7 +551,7 @@ const styles = StyleSheet.create({
   },
   skeletonTitle: {
     height: 24,
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#E8E2D5",
     borderRadius: 6,
     marginBottom: 20,
     width: "70%",
@@ -561,7 +561,7 @@ const styles = StyleSheet.create({
   },
   skeletonLine: {
     height: 14,
-    backgroundColor: "rgba(255,255,255,0.08)",
+    backgroundColor: "#E8E2D5",
     borderRadius: 4,
     marginBottom: 10,
   },
@@ -588,13 +588,13 @@ const styles = StyleSheet.create({
   upgradeTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 8,
   },
   upgradeText: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
     lineHeight: 22,
@@ -619,13 +619,13 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     marginTop: 12,
     marginBottom: 20,
   },
   retryButton: {
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#E8E2D5",
     paddingHorizontal: 24,
     paddingVertical: 12,
     borderRadius: 10,
@@ -633,7 +633,7 @@ const styles = StyleSheet.create({
   retryButtonText: {
     fontSize: 14,
     fontWeight: "500",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
   },
 });

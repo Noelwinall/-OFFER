@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   shortPopover: {
-    backgroundColor: "#1a2744",
+    backgroundColor: "#FFF9F0",
     borderRadius: 12,
     padding: 14,
     shadowColor: "#000",
@@ -328,7 +328,7 @@ const styles = StyleSheet.create({
   },
   closeShortText: {
     fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontWeight: "500",
   },
   modalOverlay: {
@@ -339,7 +339,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   modalContent: {
-    backgroundColor: "#1a2744",
+    backgroundColor: "#FFF9F0",
     borderRadius: 16,
     maxWidth: 420,
     width: "100%",
@@ -359,7 +359,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
+    borderBottomColor: "#E8E2D5",
   },
   modalTitle: {
     fontSize: 18,
@@ -374,11 +374,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#E8E2D5",
   },
   closeButtonText: {
     fontSize: 20,
-    color: "rgba(255,255,255,0.7)",
+    color: "#2D2013",
     fontWeight: "500",
     lineHeight: 22,
   },
@@ -390,7 +390,7 @@ const styles = StyleSheet.create({
   },
   groupSeparator: {
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
+    borderTopColor: "#E8E2D5",
   },
   groupLabel: {
     fontSize: 16,
@@ -401,7 +401,7 @@ const styles = StyleSheet.create({
   },
   groupDescription: {
     fontSize: 13,
-    color: "rgba(255,255,255,0.7)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     marginBottom: 10,
   },
@@ -415,7 +415,7 @@ const styles = StyleSheet.create({
   },
   subcategoryBullet: {
     fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
+    color: "#706B5E",
     marginRight: 8,
     marginTop: 2,
   },

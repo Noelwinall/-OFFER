@@ -31,6 +31,7 @@ import {
   useWindowDimensions,
 } from "react-native";
 import { INFO_TOPICS } from "@/constants/info-topics";
+import { useColors } from "@/hooks/use-colors";
 
 interface InfoHelpProps {
   topic: keyof typeof INFO_TOPICS;
@@ -47,6 +48,7 @@ interface PopoverPosition {
 }
 
 export function InfoHelp({ topic }: InfoHelpProps) {
+  const colors = useColors();
   const [showShort, setShowShort] = useState(false);
   const [showFull, setShowFull] = useState(false);
   const [popoverPosition, setPopoverPosition] = useState<PopoverPosition>({ top: 24, left: 0 });
@@ -228,12 +230,12 @@ export function InfoHelp({ topic }: InfoHelpProps) {
       {/* Short Intro Tooltip/Popover */}
       {showShort && (
         <View style={[styles.shortPopover, popoverPositionStyle]}>
-          <Text style={styles.shortTitle}>{topicData.title}</Text>
+          <Text style={[styles.shortTitle, { color: colors.primary }]}>{topicData.title}</Text>
           <Text style={styles.shortText}>{topicData.short_intro}</Text>
           {/* App only: show "全文" link */}
           {!isWeb && (
             <TouchableOpacity onPress={handleShowFull} style={styles.fullLinkContainer}>
-              <Text style={styles.fullLink}>全文</Text>
+              <Text style={[styles.fullLink, { color: colors.primary }]}>全文</Text>
             </TouchableOpacity>
           )}
           {/* Close button for app */}
@@ -307,7 +309,7 @@ const styles = StyleSheet.create({
   },
   // Short popover styles - solid background, visible shadow
   shortPopover: {
-    backgroundColor: "#1a2744",
+    backgroundColor: "#FFF9F0",
     borderRadius: 12,
     padding: 14,
     // Strong shadow for visibility
@@ -326,9 +328,9 @@ const styles = StyleSheet.create({
   shortTitle: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#00D9FF",
     marginBottom: 8,
     fontFamily: "NotoSerifSC-Regular",
+    // color will be set dynamically
   },
   shortText: {
     fontSize: 13,
@@ -342,9 +344,9 @@ const styles = StyleSheet.create({
   },
   fullLink: {
     fontSize: 13,
-    color: "#00D9FF",
     textDecorationLine: "underline",
     fontFamily: "NotoSerifSC-Regular",
+    // color will be set dynamically
   },
   closeShortButton: {
     position: "absolute",
@@ -357,7 +359,7 @@ const styles = StyleSheet.create({
   },
   closeShortText: {
     fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontWeight: "500",
   },
   // Full modal styles
@@ -369,7 +371,7 @@ const styles = StyleSheet.create({
     padding: 24,
   },
   modalContent: {
-    backgroundColor: "#1a2744",
+    backgroundColor: "#FFF9F0",
     borderRadius: 16,
     maxWidth: 400,
     width: "100%",
@@ -390,7 +392,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
+    borderBottomColor: "#E8E2D5",
   },
   modalTitle: {
     fontSize: 18,
@@ -405,11 +407,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#E8E2D5",
   },
   closeButtonText: {
     fontSize: 20,
-    color: "rgba(255,255,255,0.7)",
+    color: "#2D2013",
     fontWeight: "500",
     lineHeight: 22,
   },

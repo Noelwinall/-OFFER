@@ -9,6 +9,8 @@ import { Platform, View, ActivityIndicator } from "react-native";
 import "@/lib/_core/nativewind-pressable";
 import { ThemeProvider } from "@/lib/theme-provider";
 import { FilterProvider } from "@/lib/filter-context";
+import { LayoutProvider } from "@/lib/layout-context";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import {
   SafeAreaFrameContext,
   SafeAreaInsetsContext,
@@ -100,8 +102,8 @@ export default function RootLayout() {
   // Show loading while fonts are loading
   if (!fontsLoaded) {
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#1a2744" }}>
-        <ActivityIndicator size="large" color="#00D9FF" />
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#FAF8F5" }}>
+        <ActivityIndicator size="large" color="#0a7ea4" />
       </View>
     );
   }
@@ -110,15 +112,17 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <trpc.Provider client={trpcClient} queryClient={queryClient}>
         <QueryClientProvider client={queryClient}>
-          <FilterProvider>
-            {/* Default to hiding native headers so raw route segments don't appear (e.g. "(tabs)", "products/[id]"). */}
-            {/* If a screen needs the native header, explicitly enable it and set a human title via Stack.Screen options. */}
-            <Stack screenOptions={{ headerShown: false }}>
-              <Stack.Screen name="(tabs)" />
-              <Stack.Screen name="oauth/callback" />
-            </Stack>
-            <StatusBar style="auto" />
-          </FilterProvider>
+          <LayoutProvider>
+            <FilterProvider>
+              {/* Default to hiding native headers so raw route segments don't appear (e.g. "(tabs)", "products/[id]"). */}
+              {/* If a screen needs the native header, explicitly enable it and set a human title via Stack.Screen options. */}
+              <Stack screenOptions={{ headerShown: false }}>
+                <Stack.Screen name="(tabs)" />
+                <Stack.Screen name="oauth/callback" />
+              </Stack>
+              <StatusBar style="auto" />
+            </FilterProvider>
+          </LayoutProvider>
         </QueryClientProvider>
       </trpc.Provider>
     </GestureHandlerRootView>

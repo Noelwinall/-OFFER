@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
@@ -23,12 +24,18 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { trpc } from "@/lib/trpc";
 import { UpgradeModal } from "@/components/upgrade-modal";
 import { BlurredProPreview } from "@/components/blurred-pro-preview";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 // Pro report school analysis component
 function ProSchoolAnalysis({
   school,
   matchScore,
   analysis,
+  colors,
+  styles,
 }: {
   school: School;
   matchScore: number;
@@ -38,6 +45,8 @@ function ProSchoolAnalysis({
     considerations: string[];
     applicationTips: string;
   };
+  colors: ReturnType<typeof useColors>;
+  styles: ReturnType<typeof StyleSheet.create>;
 }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -59,7 +68,7 @@ function ProSchoolAnalysis({
           <IconSymbol
             name={expanded ? "chevron.up" : "chevron.down"}
             size={20}
-            color="rgba(255,255,255,0.6)"
+            color={colors.muted}
           />
         </View>
       </TouchableOpacity>
@@ -69,7 +78,7 @@ function ProSchoolAnalysis({
           {/* Personalized Analysis */}
           <View style={styles.analysisSection}>
             <View style={styles.sectionHeader}>
-              <IconSymbol name="person.fill" size={16} color="#00D9FF" />
+              <IconSymbol name="person.fill" size={16} color={colors.primary} />
               <Text style={styles.sectionTitle}>個人化分析</Text>
             </View>
             <Text style={styles.analysisText}>{analysis.personalizedAnalysis}</Text>
@@ -78,7 +87,7 @@ function ProSchoolAnalysis({
           {/* Strengths */}
           <View style={styles.analysisSection}>
             <View style={styles.sectionHeader}>
-              <IconSymbol name="checkmark.circle.fill" size={16} color="#10B981" />
+              <IconSymbol name="checkmark.circle.fill" size={16} color={colors.success} />
               <Text style={styles.sectionTitle}>優勢</Text>
             </View>
             {analysis.strengths.map((strength, index) => (
@@ -92,7 +101,7 @@ function ProSchoolAnalysis({
           {/* Considerations */}
           <View style={styles.analysisSection}>
             <View style={styles.sectionHeader}>
-              <IconSymbol name="exclamationmark.triangle.fill" size={16} color="#F59E0B" />
+              <IconSymbol name="exclamationmark.triangle.fill" size={16} color={colors.warning} />
               <Text style={styles.sectionTitle}>需要考慮</Text>
             </View>
             {analysis.considerations.map((consideration, index) => (
@@ -120,6 +129,7 @@ function ProSchoolAnalysis({
 export default function ReportProScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const params = useLocalSearchParams();
   const [recommendations, setRecommendations] = useState<School[]>([]);
   const [currentFilters, setCurrentFilters] = useState<QuizFilters>({});
@@ -197,6 +207,249 @@ export default function ReportProScreen() {
   const reportData = generateProMutation.data;
   const isLoading = generateProMutation.isPending || proPreviewQuery.isLoading;
 
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.md,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    headerCenter: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.sm,
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      letterSpacing: 1,
+    },
+    proBadgeHeader: {
+      backgroundColor: "#7C3AED",
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: 2,
+      borderRadius: BorderRadius.xs,
+    },
+    proBadgeHeaderText: {
+      ...TypographyStyles.tiny,
+      fontSize: 10,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+    },
+    loadingContainer: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+      paddingHorizontal: Spacing["2xl"],
+    },
+    loadingText: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      marginTop: Spacing.xl,
+    },
+    loadingSubtext: {
+      ...TypographyStyles.small,
+      fontSize: 14,
+      color: colors.muted,
+      marginTop: Spacing.sm,
+    },
+    summarySection: {
+      marginHorizontal: Spacing.lg,
+      marginTop: Spacing.lg,
+      marginBottom: Spacing.sm,
+      backgroundColor: colors.primary + "14",
+      borderRadius: BorderRadiusPresets.card,
+      padding: Spacing.xl,
+      borderWidth: 1,
+      borderColor: colors.primary + "33",
+    },
+    summaryText: {
+      ...TypographyStyles.body,
+      fontSize: 15,
+      color: colors.foreground + "E6",
+      lineHeight: 24,
+    },
+    section: {
+      marginHorizontal: Spacing.lg,
+      marginTop: Spacing.xl,
+    },
+    sectionHeaderLarge: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.sm,
+      marginBottom: Spacing.lg,
+    },
+    sectionTitleLarge: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+    },
+    analysisCard: {
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadius.md,
+      marginBottom: Spacing.md,
+      borderWidth: 1,
+      borderColor: colors.border + "80",
+      overflow: "hidden",
+    },
+    analysisHeader: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      padding: Spacing.lg,
+    },
+    analysisHeaderLeft: {
+      flexDirection: "row",
+      alignItems: "center",
+      flex: 1,
+      gap: Spacing.md,
+    },
+    matchBadge: {
+      backgroundColor: colors.primary + "26",
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.md,
+    },
+    matchScore: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.primary,
+    },
+    schoolName: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      flex: 1,
+    },
+    analysisContent: {
+      padding: Spacing.lg,
+      paddingTop: 0,
+      borderTopWidth: 1,
+      borderTopColor: colors.border + "14",
+    },
+    analysisSection: {
+      marginTop: Spacing.lg,
+    },
+    sectionHeader: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.sm,
+      marginBottom: Spacing.sm,
+    },
+    sectionTitle: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground + "E6",
+    },
+    analysisText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.foreground + "BF",
+      lineHeight: 22,
+    },
+    bulletPoint: {
+      flexDirection: "row",
+      marginVertical: 3,
+    },
+    bullet: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.muted,
+      marginRight: Spacing.sm,
+      width: 12,
+    },
+    bulletText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.foreground + "BF",
+      flex: 1,
+      lineHeight: 20,
+    },
+    strategyCard: {
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadius.md,
+      padding: Spacing.lg,
+      marginBottom: Spacing.md,
+      borderWidth: 1,
+      borderColor: colors.border + "14",
+    },
+    strategyLabel: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.success,
+      marginBottom: Spacing.sm,
+    },
+    strategyText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.foreground + "D9",
+      lineHeight: 22,
+    },
+    actionItem: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadius.md,
+      padding: Spacing.md,
+      marginBottom: Spacing.sm,
+      gap: Spacing.md,
+    },
+    actionStep: {
+      width: 28,
+      height: 28,
+      borderRadius: BorderRadius.full,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    actionStepText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+    },
+    actionContent: {
+      flex: 1,
+    },
+    actionText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.foreground + "D9",
+      lineHeight: 20,
+    },
+    actionPriority: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      marginTop: Spacing.xs,
+    },
+    disclaimer: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.muted + "66",
+      textAlign: "center",
+      marginHorizontal: Spacing.xl,
+      marginTop: Spacing["2xl"],
+      marginBottom: Spacing.xl,
+      lineHeight: 18,
+    },
+  });
+
   // Show blurred preview for non-Pro users
   if (!isProMember && !isLoading) {
     return (
@@ -218,16 +471,17 @@ export default function ReportProScreen() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
 
-      <View style={[styles.container, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.container, { paddingTop: insets.top }]}>
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-            <IconSymbol name="chevron.left" size={24} color="#FFFFFF" />
+            <IconSymbol name="chevron.left" size={24} color={colors.foreground} />
           </TouchableOpacity>
           <View style={styles.headerCenter}>
             <Text style={styles.headerTitle}>深度报告</Text>
@@ -252,7 +506,7 @@ export default function ReportProScreen() {
             {/* Executive Summary */}
             <View style={styles.summarySection}>
               <View style={styles.sectionHeaderLarge}>
-                <IconSymbol name="doc.text.fill" size={20} color="#00D9FF" />
+                <IconSymbol name="doc.text.fill" size={20} color={colors.primary} />
                 <Text style={styles.sectionTitleLarge}>總體建議</Text>
               </View>
               <Text style={styles.summaryText}>{reportData.summary}</Text>
@@ -278,6 +532,8 @@ export default function ReportProScreen() {
                       considerations: schoolData.considerations,
                       applicationTips: schoolData.applicationTips,
                     }}
+                    colors={colors}
+                    styles={styles}
                   />
                 );
               })}
@@ -286,7 +542,7 @@ export default function ReportProScreen() {
             {/* Strategy Section */}
             <View style={styles.section}>
               <View style={styles.sectionHeaderLarge}>
-                <IconSymbol name="flag.fill" size={20} color="#10B981" />
+                <IconSymbol name="flag.fill" size={20} color={colors.success} />
                 <Text style={styles.sectionTitleLarge}>申請策略</Text>
               </View>
 
@@ -325,7 +581,7 @@ export default function ReportProScreen() {
             {/* Action Plan */}
             <View style={styles.section}>
               <View style={styles.sectionHeaderLarge}>
-                <IconSymbol name="checklist" size={20} color="#F59E0B" />
+                <IconSymbol name="checklist" size={20} color={colors.warning} />
                 <Text style={styles.sectionTitleLarge}>行動計劃</Text>
               </View>
 
@@ -337,10 +593,10 @@ export default function ReportProScreen() {
                       {
                         backgroundColor:
                           action.priority === "high"
-                            ? "#EF4444"
+                            ? colors.error
                             : action.priority === "medium"
-                            ? "#F59E0B"
-                            : "#10B981",
+                            ? colors.warning
+                            : colors.success,
                       },
                     ]}
                   >
@@ -354,10 +610,10 @@ export default function ReportProScreen() {
                         {
                           color:
                             action.priority === "high"
-                              ? "#EF4444"
+                              ? colors.error
                               : action.priority === "medium"
-                              ? "#F59E0B"
-                              : "#10B981",
+                              ? colors.warning
+                              : colors.success,
                         },
                       ]}
                     >
@@ -378,7 +634,8 @@ export default function ReportProScreen() {
             </Text>
           </ScrollView>
         ) : null}
-      </View>
+        </View>
+      </MaxWidthWrapper>
 
       <UpgradeModal
         visible={showUpgradeModal}
@@ -387,244 +644,3 @@ export default function ReportProScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  headerCenter: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 1,
-  },
-  proBadgeHeader: {
-    backgroundColor: "#7C3AED",
-    paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  proBadgeHeaderText: {
-    fontSize: 10,
-    fontWeight: "700",
-    color: "#FFFFFF",
-  },
-  loadingContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    paddingHorizontal: 40,
-  },
-  loadingText: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    marginTop: 20,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  loadingSubtext: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
-    marginTop: 8,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  summarySection: {
-    marginHorizontal: 16,
-    marginTop: 16,
-    marginBottom: 8,
-    backgroundColor: "rgba(0,217,255,0.08)",
-    borderRadius: 16,
-    padding: 20,
-    borderWidth: 1,
-    borderColor: "rgba(0,217,255,0.2)",
-  },
-  summaryText: {
-    fontSize: 15,
-    color: "rgba(255,255,255,0.9)",
-    lineHeight: 24,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  section: {
-    marginHorizontal: 16,
-    marginTop: 24,
-  },
-  sectionHeaderLarge: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-    marginBottom: 16,
-  },
-  sectionTitleLarge: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  analysisCard: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 14,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
-    overflow: "hidden",
-  },
-  analysisHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: 16,
-  },
-  analysisHeaderLeft: {
-    flexDirection: "row",
-    alignItems: "center",
-    flex: 1,
-    gap: 12,
-  },
-  matchBadge: {
-    backgroundColor: "rgba(0,217,255,0.15)",
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 12,
-  },
-  matchScore: {
-    fontSize: 14,
-    fontWeight: "700",
-    color: "#00D9FF",
-  },
-  schoolName: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    flex: 1,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  analysisContent: {
-    padding: 16,
-    paddingTop: 0,
-    borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.08)",
-  },
-  analysisSection: {
-    marginTop: 16,
-  },
-  sectionHeader: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-    marginBottom: 8,
-  },
-  sectionTitle: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "rgba(255,255,255,0.9)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  analysisText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.75)",
-    lineHeight: 22,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  bulletPoint: {
-    flexDirection: "row",
-    marginVertical: 3,
-  },
-  bullet: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
-    marginRight: 8,
-    width: 12,
-  },
-  bulletText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.75)",
-    flex: 1,
-    lineHeight: 20,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  strategyCard: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-  },
-  strategyLabel: {
-    fontSize: 13,
-    fontWeight: "600",
-    color: "#10B981",
-    marginBottom: 8,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  strategyText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.85)",
-    lineHeight: 22,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  actionItem: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 12,
-    padding: 14,
-    marginBottom: 10,
-    gap: 14,
-  },
-  actionStep: {
-    width: 28,
-    height: 28,
-    borderRadius: 14,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  actionStepText: {
-    fontSize: 14,
-    fontWeight: "700",
-    color: "#FFFFFF",
-  },
-  actionContent: {
-    flex: 1,
-  },
-  actionText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.85)",
-    lineHeight: 20,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  actionPriority: {
-    fontSize: 12,
-    marginTop: 4,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  disclaimer: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.4)",
-    textAlign: "center",
-    marginHorizontal: 24,
-    marginTop: 32,
-    marginBottom: 20,
-    lineHeight: 18,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-});

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet, Modal, TextInput, ScrollView } from "react-native";
+import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet, Modal, TextInput, ScrollView, Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { SchoolCard } from "@/components/school-card";
 import { useRouter } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
@@ -11,13 +12,20 @@ import * as Haptics from "expo-haptics";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { useColors } from "@/hooks/use-colors";
+import { Typography } from "@/components/ui/typography";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 // 分組顏色選項
-const GROUP_COLORS = ["#EF4444", "#F59E0B", "#10B981", "#3B82F6", "#8B5CF6", "#EC4899", "#00D9FF"];
+// Note: GROUP_COLORS includes primary color as fallback, but we'll use colors.primary dynamically
+const GROUP_COLORS = ["#EF4444", "#F59E0B", "#10B981", "#3B82F6", "#8B5CF6", "#EC4899"];
 
 export default function FavoritesScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const [favorites, setFavorites] = useState<string[]>([]);
   const [favoriteSchools, setFavoriteSchools] = useState<School[]>([]);
   const [compareList, setCompareList] = useState<string[]>([]);
@@ -151,12 +159,13 @@ export default function FavoritesScreen() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
-      
-      <View style={[styles.container, { paddingTop: insets.top }]}>
+
+      <MaxWidthWrapper>
+        <View style={[styles.container, { paddingTop: insets.top }]}>
         {/* 頁面標題 */}
         <View style={styles.header}>
           <View style={styles.headerRow}>
@@ -166,7 +175,7 @@ export default function FavoritesScreen() {
               style={styles.addGroupButton}
               activeOpacity={0.7}
             >
-              <IconSymbol name="plus.circle.fill" size={24} color="#00D9FF" />
+              <IconSymbol name="plus.circle.fill" size={24} color={colors.primary} />
             </TouchableOpacity>
           </View>
           <Text style={styles.headerSubtitle}>
@@ -230,11 +239,11 @@ export default function FavoritesScreen() {
                     ? groups.find((g) => g.id === schoolGroupMappings[item.id])?.name || "未分組"
                     : "未分組"}
                 </Text>
-                <IconSymbol name="chevron.right" size={12} color="rgba(255,255,255,0.5)" />
+                <IconSymbol name="chevron.right" size={12} color={colors.muted + "80"} />
               </TouchableOpacity>
             </View>
           )}
-          contentContainerStyle={{ paddingVertical: 8, paddingBottom: compareList.length > 0 ? 160 : 100 }}
+          contentContainerStyle={{ paddingVertical: 8, paddingBottom: compareList.length > 0 ? 160 : 120 }}
           ListEmptyComponent={
             <View style={styles.emptyContainer}>
               <Text style={styles.emptyTitle}>
@@ -247,13 +256,20 @@ export default function FavoritesScreen() {
               </Text>
             </View>
           }
+          ListFooterComponent={
+            <View style={styles.listFooterDisclaimer}>
+              <Text style={styles.disclaimerText}>
+                資訊基於公開資料整理，僅供參考，以學校官方為準
+              </Text>
+            </View>
+          }
         />
 
         {compareList.length > 0 && (
           <View style={styles.compareContainer}>
             <TouchableOpacity
               onPress={handleCompare}
-              style={styles.compareButton}
+              style={[styles.compareButton, { backgroundColor: colors.primary, shadowColor: colors.primary }]}
               activeOpacity={0.8}
             >
               <Text style={styles.compareButtonText}>
@@ -262,13 +278,8 @@ export default function FavoritesScreen() {
             </TouchableOpacity>
           </View>
         )}
-
-        <View style={styles.disclaimerContainer}>
-          <Text style={styles.disclaimerText}>
-            資訊基於公開資料整理，僅供參考，以學校官方為準
-          </Text>
         </View>
-      </View>
+      </MaxWidthWrapper>
 
       {/* 新增分組彈窗 */}
       <Modal
@@ -277,14 +288,14 @@ export default function FavoritesScreen() {
         animationType="fade"
         onRequestClose={() => setShowAddGroupModal(false)}
       >
-        <View style={styles.modalOverlay}>
-          <View style={styles.modalContent}>
+        <Pressable style={styles.modalOverlay} onPress={() => setShowAddGroupModal(false)}>
+          <Pressable style={styles.modalContent} onPress={(e) => e.stopPropagation()}>
             <Text style={styles.modalTitle}>新增分組</Text>
             
             <TextInput
               style={styles.modalInput}
               placeholder="輸入分組名稱"
-              placeholderTextColor="rgba(255,255,255,0.4)"
+              placeholderTextColor={colors.muted + "66"}
               value={newGroupName}
               onChangeText={setNewGroupName}
               maxLength={10}
@@ -313,15 +324,19 @@ export default function FavoritesScreen() {
                 <Text style={styles.modalCancelText}>取消</Text>
               </TouchableOpacity>
               <TouchableOpacity
-                style={[styles.modalConfirmButton, !newGroupName.trim() && styles.modalButtonDisabled]}
+                style={[
+                  styles.modalConfirmButton,
+                  { backgroundColor: colors.primary },
+                  !newGroupName.trim() && styles.modalButtonDisabled
+                ]}
                 onPress={handleAddGroup}
                 disabled={!newGroupName.trim()}
               >
                 <Text style={styles.modalConfirmText}>確定</Text>
               </TouchableOpacity>
             </View>
-          </View>
-        </View>
+          </Pressable>
+        </Pressable>
       </Modal>
 
       {/* 移動到分組彈窗 */}
@@ -331,8 +346,8 @@ export default function FavoritesScreen() {
         animationType="slide"
         onRequestClose={() => setShowMoveModal(false)}
       >
-        <View style={styles.modalOverlay}>
-          <View style={styles.moveModalContent}>
+        <Pressable style={styles.modalOverlay} onPress={() => setShowMoveModal(false)}>
+          <Pressable style={styles.moveModalContent} onPress={(e) => e.stopPropagation()}>
             <Text style={styles.modalTitle}>移動到分組</Text>
             
             <ScrollView style={styles.groupList}>
@@ -358,8 +373,8 @@ export default function FavoritesScreen() {
             >
               <Text style={styles.moveModalCancelText}>取消</Text>
             </TouchableOpacity>
-          </View>
-        </View>
+          </Pressable>
+        </Pressable>
       </Modal>
     </View>
   );
@@ -380,25 +395,23 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   headerTitle: {
+    ...TypographyStyles.title,
     fontSize: 28,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
+    color: "#2D2013",
     letterSpacing: 1,
   },
   addGroupButton: {
     padding: 4,
   },
   headerSubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 4,
+    ...TypographyStyles.caption,
+    color: "#706B5E",
+    marginTop: Spacing.xs,
   },
   groupTabsContainer: {
     maxHeight: 50,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
+    borderBottomColor: "#E8E2D5",
   },
   groupTabsContent: {
     paddingHorizontal: 20,
@@ -411,13 +424,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.05)",
+    backgroundColor: "#FFF9F0",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "#E8E2D5",
     marginRight: 8,
   },
   groupTabActive: {
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#F5F1E8",
   },
   groupDot: {
     width: 8,
@@ -427,12 +440,12 @@ const styles = StyleSheet.create({
   },
   groupTabText: {
     fontSize: 13,
-    color: "rgba(255,255,255,0.7)",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
   },
   groupCount: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
+    color: "#706B5E",
     marginLeft: 6,
   },
   schoolGroupTag: {
@@ -444,12 +457,12 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     paddingHorizontal: 12,
     paddingVertical: 4,
-    backgroundColor: "rgba(255,255,255,0.08)",
+    backgroundColor: "#FFF9F0",
     borderRadius: 12,
   },
   schoolGroupTagText: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     marginRight: 4,
   },
   emptyContainer: {
@@ -458,14 +471,14 @@ const styles = StyleSheet.create({
     paddingVertical: 80,
   },
   emptyTitle: {
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 16,
     marginBottom: 8,
   },
   emptySubtitle: {
-    color: "rgba(255,255,255,0.4)",
+    color: "#8B8578",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 13,
@@ -478,40 +491,34 @@ const styles = StyleSheet.create({
     right: 0,
     paddingHorizontal: 24,
     paddingVertical: 16,
-    backgroundColor: "rgba(15, 22, 41, 0.95)",
+    backgroundColor: "rgba(250, 248, 245, 0.98)",
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
+    borderTopColor: "#E8E2D5",
   },
   compareButton: {
-    backgroundColor: "#00D9FF",
-    paddingVertical: 16,
-    borderRadius: 16,
-    shadowColor: "#00D9FF",
+    // backgroundColor and shadowColor will be set dynamically
+    paddingVertical: Spacing.lg,
+    borderRadius: BorderRadiusPresets.card,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 12,
     elevation: 8,
   },
   compareButtonText: {
-    color: "#0F1629",
-    fontSize: 16,
-    fontWeight: "600",
+    color: "#FAF8F5",
+    ...TypographyStyles.body,
+    fontWeight: TypographyStyles.heading.fontWeight,
     textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
     letterSpacing: 1,
   },
-  disclaimerContainer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
+  listFooterDisclaimer: {
     paddingHorizontal: 24,
-    paddingVertical: 12,
-    backgroundColor: "rgba(15, 22, 41, 0.9)",
+    paddingVertical: 20,
+    marginTop: 16,
   },
   disclaimerText: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.35)",
+    color: "#8B8578",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
   },
@@ -524,34 +531,34 @@ const styles = StyleSheet.create({
   },
   modalContent: {
     width: "85%",
-    backgroundColor: "#1a2744",
+    backgroundColor: "#FFF9F0",
     borderRadius: 20,
     padding: 24,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "#E8E2D5",
   },
   modalTitle: {
     fontSize: 20,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#2D2013",
     textAlign: "center",
     marginBottom: 20,
     fontFamily: "NotoSerifSC-Bold",
   },
   modalInput: {
-    backgroundColor: "rgba(255,255,255,0.08)",
+    backgroundColor: "#FAF8F5",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 14,
     fontSize: 16,
-    color: "#FFFFFF",
+    color: "#2D2013",
     marginBottom: 20,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "#E8E2D5",
   },
   modalLabel: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     marginBottom: 12,
   },
   colorOptions: {
@@ -567,7 +574,7 @@ const styles = StyleSheet.create({
     borderColor: "transparent",
   },
   colorOptionSelected: {
-    borderColor: "#FFFFFF",
+    borderColor: "#2D2013",
   },
   modalButtons: {
     flexDirection: "row",
@@ -577,25 +584,25 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingVertical: 14,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#E8E2D5",
   },
   modalCancelText: {
-    color: "rgba(255,255,255,0.7)",
+    color: "#706B5E",
     fontSize: 16,
     textAlign: "center",
     fontWeight: "500",
   },
   modalConfirmButton: {
     flex: 1,
-    paddingVertical: 14,
-    borderRadius: 12,
-    backgroundColor: "#00D9FF",
+    paddingVertical: SpacingPresets.buttonPaddingVertical,
+    borderRadius: BorderRadiusPresets.button,
+    // backgroundColor will be set dynamically
   },
   modalButtonDisabled: {
     opacity: 0.5,
   },
   modalConfirmText: {
-    color: "#0F1629",
+    color: "#FAF8F5",
     fontSize: 16,
     textAlign: "center",
     fontWeight: "600",
@@ -603,7 +610,7 @@ const styles = StyleSheet.create({
   // Move modal styles
   moveModalContent: {
     width: "100%",
-    backgroundColor: "#1a2744",
+    backgroundColor: "#FFF9F0",
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     padding: 24,
@@ -611,7 +618,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "#E8E2D5",
   },
   groupList: {
     maxHeight: 300,
@@ -622,7 +629,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.08)",
+    borderBottomColor: "#E8E2D5",
   },
   groupListDot: {
     width: 12,
@@ -633,16 +640,16 @@ const styles = StyleSheet.create({
   groupListText: {
     flex: 1,
     fontSize: 16,
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
   },
   moveModalCancel: {
     paddingVertical: 16,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#E8E2D5",
   },
   moveModalCancelText: {
-    color: "rgba(255,255,255,0.7)",
+    color: "#706B5E",
     fontSize: 16,
     textAlign: "center",
     fontWeight: "500",

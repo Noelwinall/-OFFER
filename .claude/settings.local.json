@@ -116,7 +116,13 @@
       "Bash(iconv:*)",
       "WebFetch(domain:offer-s6ub.onrender.com)",
       "WebFetch(domain:render.com)",
-      "WebFetch(domain:offer-production-ed8a.up.railway.app)"
+      "WebFetch(domain:offer-production-ed8a.up.railway.app)",
+      "Bash(tail:*)",
+      "Bash(pnpm dev)",
+      "Bash(npx tsx:*)",
+      "WebFetch(domain:www.schooland.hk)",
+      "WebFetch(domain:whichschooladvisor.com)",
+      "WebFetch(domain:topick.hket.com)"
     ]
   }
 }

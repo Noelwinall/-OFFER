@@ -1,14 +1,20 @@
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Platform } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useAuth } from "@/hooks/use-auth";
 import { getGoogleLoginUrl } from "@/constants/oauth";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 export default function ProfileScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const { user, isAuthenticated, loading, logout } = useAuth();
 
   const handleLogin = () => {
@@ -24,15 +30,172 @@ export default function ProfileScreen() {
     { icon: "magnifyingglass", title: "瀏覽記錄", subtitle: "最近瀏覽的學校", onPress: () => {} },
   ];
 
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    container: {
+      paddingHorizontal: Spacing.xl,
+      paddingBottom: Spacing["3xl"],
+    },
+    pageTitle: {
+      ...TypographyStyles.title,
+      fontSize: 32,
+      color: colors.foreground,
+      marginBottom: Spacing["2xl"],
+      letterSpacing: 1,
+    },
+    profileSection: {
+      alignItems: "center",
+      marginBottom: Spacing["2xl"],
+    },
+    avatarContainer: {
+      marginBottom: Spacing.lg,
+    },
+    avatar: {
+      width: 100,
+      height: 100,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.primary + "1A",
+      borderWidth: 2,
+      borderColor: colors.primary + "4D",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    guestText: {
+      ...TypographyStyles.heading,
+      fontSize: 20,
+      color: colors.foreground,
+      marginBottom: Spacing.xs,
+    },
+    guestSubtext: {
+      ...TypographyStyles.small,
+      fontSize: 14,
+      color: colors.muted,
+      marginBottom: Spacing.xl,
+    },
+    loginButton: {
+      backgroundColor: colors.primary,
+      paddingHorizontal: Spacing["2xl"],
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadiusPresets.button,
+      shadowColor: colors.primary,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 12,
+      elevation: 8,
+    },
+    loginButtonText: {
+      color: colors.background,
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      letterSpacing: 1,
+    },
+    logoutButton: {
+      backgroundColor: colors.surface + "1A",
+      paddingHorizontal: Spacing["2xl"],
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadiusPresets.button,
+      borderWidth: 1,
+      borderColor: colors.border + "33",
+    },
+    logoutButtonText: {
+      color: colors.foreground,
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      letterSpacing: 1,
+    },
+    menuSection: {
+      gap: Spacing.md,
+      marginBottom: Spacing["2xl"],
+    },
+    menuItem: {
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadiusPresets.card,
+      padding: Spacing.lg,
+      borderWidth: 1,
+      borderColor: colors.border + "14",
+    },
+    menuIconContainer: {
+      width: 44,
+      height: 44,
+      borderRadius: BorderRadius.md,
+      backgroundColor: colors.primary + "1A",
+      justifyContent: "center",
+      alignItems: "center",
+      marginRight: Spacing.md,
+    },
+    menuTextContainer: {
+      flex: 1,
+    },
+    menuTitle: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      marginBottom: 2,
+    },
+    menuSubtitle: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+    },
+    settingsSection: {
+      marginBottom: Spacing["2xl"],
+    },
+    sectionTitle: {
+      ...TypographyStyles.caption,
+      fontSize: 14,
+      fontWeight: "500",
+      color: colors.muted,
+      marginBottom: Spacing.md,
+      marginLeft: Spacing.xs,
+      letterSpacing: 1,
+    },
+    settingsCard: {
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadiusPresets.card,
+      borderWidth: 1,
+      borderColor: colors.border + "14",
+      overflow: "hidden",
+    },
+    settingItem: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.md + 2,
+    },
+    settingText: {
+      ...TypographyStyles.body,
+      fontSize: 15,
+      color: colors.foreground,
+    },
+    settingDivider: {
+      height: 1,
+      backgroundColor: colors.border + "0F",
+      marginHorizontal: Spacing.md + 2,
+    },
+    versionText: {
+      ...TypographyStyles.tiny,
+      fontSize: 12,
+      color: colors.muted + "4D",
+      textAlign: "center",
+    },
+  });
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
-      
-      <ScrollView 
+
+      <MaxWidthWrapper>
+        <ScrollView 
         style={{ flex: 1 }}
         contentContainerStyle={[styles.container, { paddingTop: insets.top + 20 }]}
       >
@@ -43,7 +206,7 @@ export default function ProfileScreen() {
         <View style={styles.profileSection}>
           <View style={styles.avatarContainer}>
             <View style={styles.avatar}>
-              <IconSymbol name="person.fill" size={48} color="#00D9FF" />
+              <IconSymbol name="person.fill" size={48} color={colors.primary} />
             </View>
           </View>
 
@@ -83,13 +246,13 @@ export default function ProfileScreen() {
               onPress={item.onPress}
             >
               <View style={styles.menuIconContainer}>
-                <IconSymbol name={item.icon as any} size={22} color="#00D9FF" />
+                <IconSymbol name={item.icon as any} size={22} color={colors.primary} />
               </View>
               <View style={styles.menuTextContainer}>
                 <Text style={styles.menuTitle}>{item.title}</Text>
                 <Text style={styles.menuSubtitle}>{item.subtitle}</Text>
               </View>
-              <IconSymbol name="chevron.right" size={20} color="rgba(255,255,255,0.3)" />
+              <IconSymbol name="chevron.right" size={20} color={colors.muted + "4D"} />
             </TouchableOpacity>
           ))}
         </View>
@@ -117,164 +280,8 @@ export default function ProfileScreen() {
 
         {/* 版本信息 */}
         <Text style={styles.versionText}>有OFFER v1.0.0</Text>
-      </ScrollView>
+        </ScrollView>
+      </MaxWidthWrapper>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    paddingHorizontal: 24,
-    paddingBottom: 120,
-  },
-  pageTitle: {
-    fontSize: 32,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    marginBottom: 32,
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-  profileSection: {
-    alignItems: "center",
-    marginBottom: 40,
-  },
-  avatarContainer: {
-    marginBottom: 16,
-  },
-  avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    backgroundColor: "rgba(0, 217, 255, 0.1)",
-    borderWidth: 2,
-    borderColor: "rgba(0, 217, 255, 0.3)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  guestText: {
-    fontSize: 20,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    marginBottom: 4,
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  guestSubtext: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
-    marginBottom: 20,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  loginButton: {
-    backgroundColor: "#00D9FF",
-    paddingHorizontal: 40,
-    paddingVertical: 14,
-    borderRadius: 25,
-    shadowColor: "#00D9FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  loginButtonText: {
-    color: "#0F1629",
-    fontSize: 16,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-  logoutButton: {
-    backgroundColor: "rgba(255,255,255,0.1)",
-    paddingHorizontal: 40,
-    paddingVertical: 14,
-    borderRadius: 25,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
-  },
-  logoutButtonText: {
-    color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-  menuSection: {
-    gap: 12,
-    marginBottom: 40,
-  },
-  menuItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-  },
-  menuIconContainer: {
-    width: 44,
-    height: 44,
-    borderRadius: 12,
-    backgroundColor: "rgba(0, 217, 255, 0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 14,
-  },
-  menuTextContainer: {
-    flex: 1,
-  },
-  menuTitle: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    marginBottom: 2,
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  menuSubtitle: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  settingsSection: {
-    marginBottom: 32,
-  },
-  sectionTitle: {
-    fontSize: 14,
-    fontWeight: "500",
-    color: "rgba(255,255,255,0.5)",
-    marginBottom: 12,
-    marginLeft: 4,
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 1,
-  },
-  settingsCard: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-    overflow: "hidden",
-  },
-  settingItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingVertical: 16,
-    paddingHorizontal: 18,
-  },
-  settingText: {
-    fontSize: 15,
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  settingDivider: {
-    height: 1,
-    backgroundColor: "rgba(255,255,255,0.06)",
-    marginHorizontal: 18,
-  },
-  versionText: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.3)",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-});

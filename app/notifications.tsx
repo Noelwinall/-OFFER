@@ -1,16 +1,22 @@
 import { useState, useEffect, useCallback } from "react";
 import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet, Switch } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
 import * as Haptics from "expo-haptics";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { NotificationsStorage, type Notification, type NotificationSettings } from "@/lib/storage";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 export default function NotificationsScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [settings, setSettings] = useState<NotificationSettings>({
     enabled: true,
@@ -85,17 +91,174 @@ export default function NotificationsScreen() {
   const getNotificationIcon = (type: Notification["type"]) => {
     switch (type) {
       case "deadline_1d":
-        return { icon: "bell.badge.fill" as const, color: "#EF4444" };
+        return { icon: "bell.badge.fill" as const, color: colors.error };
       case "deadline_3d":
-        return { icon: "bell.fill" as const, color: "#F59E0B" };
+        return { icon: "bell.fill" as const, color: colors.warning };
       case "deadline_7d":
-        return { icon: "bell.fill" as const, color: "#10B981" };
+        return { icon: "bell.fill" as const, color: colors.success };
       default:
-        return { icon: "bell.fill" as const, color: "#00D9FF" };
+        return { icon: "bell.fill" as const, color: colors.primary };
     }
   };
 
   const unreadCount = notifications.filter((n) => !n.isRead).length;
+
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingBottom: Spacing.lg,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.surface + "1A",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 20,
+      color: colors.foreground,
+      letterSpacing: 1,
+    },
+    settingsButton: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.surface + "1A",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    statsBar: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      paddingHorizontal: Spacing.xl,
+      paddingVertical: Spacing.md,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border + "80",
+    },
+    statsText: {
+      ...TypographyStyles.small,
+      color: colors.muted,
+    },
+    markAllText: {
+      ...TypographyStyles.small,
+      color: colors.primary,
+    },
+    listContent: {
+      paddingHorizontal: Spacing.xl,
+      paddingTop: Spacing.md,
+      gap: Spacing.md,
+    },
+    notificationCard: {
+      flexDirection: "row",
+      alignItems: "flex-start",
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadiusPresets.card,
+      padding: Spacing.lg,
+      borderWidth: 1,
+      borderColor: colors.border + "14",
+    },
+    notificationUnread: {
+      backgroundColor: colors.primary + "14",
+      borderColor: colors.primary + "33",
+    },
+    notificationIcon: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      justifyContent: "center",
+      alignItems: "center",
+      marginRight: Spacing.md,
+    },
+    notificationContent: {
+      flex: 1,
+    },
+    notificationTitle: {
+      ...TypographyStyles.body,
+      fontSize: 15,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      marginBottom: Spacing.xs,
+    },
+    notificationBody: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+      lineHeight: 18,
+      marginBottom: Spacing.xs,
+    },
+    notificationTime: {
+      ...TypographyStyles.tiny,
+      fontSize: 11,
+      color: colors.muted + "66",
+    },
+    deleteButton: {
+      padding: Spacing.xs,
+    },
+    emptyContainer: {
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: Spacing["3xl"],
+    },
+    emptyTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.muted,
+      marginTop: Spacing.lg,
+      marginBottom: Spacing.sm,
+    },
+    emptySubtitle: {
+      ...TypographyStyles.small,
+      color: colors.muted + "66",
+      textAlign: "center",
+      paddingHorizontal: Spacing["2xl"],
+    },
+    // Settings styles
+    settingsContainer: {
+      flex: 1,
+      paddingHorizontal: Spacing.xl,
+      paddingTop: Spacing.md,
+    },
+    settingsTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      marginBottom: Spacing.xl,
+    },
+    settingItem: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingVertical: Spacing.lg,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border + "14",
+    },
+    settingDisabled: {
+      opacity: 0.5,
+    },
+    settingInfo: {
+      flex: 1,
+      marginRight: Spacing.lg,
+    },
+    settingLabel: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      color: colors.foreground,
+    },
+    settingDesc: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.muted,
+      marginTop: Spacing.xs,
+    },
+  });
 
   const renderNotification = ({ item }: { item: Notification }) => {
     const { icon, color } = getNotificationIcon(item.type);
@@ -119,7 +282,7 @@ export default function NotificationsScreen() {
           onPress={() => handleDelete(item.id)}
           hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
         >
-          <IconSymbol name="xmark" size={16} color="rgba(255,255,255,0.4)" />
+          <IconSymbol name="xmark" size={16} color={colors.muted + "99"} />
         </TouchableOpacity>
       </TouchableOpacity>
     );
@@ -128,18 +291,19 @@ export default function NotificationsScreen() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
 
-      <View style={[styles.header, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.header, { paddingTop: insets.top }]}>
         <TouchableOpacity
           onPress={() => router.back()}
           style={styles.backButton}
           activeOpacity={0.7}
         >
-          <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
+          <IconSymbol name="chevron.right" size={24} color={colors.foreground} style={{ transform: [{ rotate: "180deg" }] }} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>通知中心</Text>
         <TouchableOpacity
@@ -147,7 +311,7 @@ export default function NotificationsScreen() {
           style={styles.settingsButton}
           activeOpacity={0.7}
         >
-          <IconSymbol name="slider.horizontal.3" size={22} color="#FFFFFF" />
+          <IconSymbol name="slider.horizontal.3" size={22} color={colors.foreground} />
         </TouchableOpacity>
       </View>
 
@@ -163,8 +327,8 @@ export default function NotificationsScreen() {
             <Switch
               value={settings.enabled}
               onValueChange={(value) => handleSettingChange("enabled", value)}
-              trackColor={{ false: "rgba(255,255,255,0.2)", true: "#00D9FF" }}
-              thumbColor="#FFFFFF"
+              trackColor={{ false: colors.border + "80", true: colors.primary }}
+              thumbColor={colors.foreground}
             />
           </View>
 
@@ -175,8 +339,8 @@ export default function NotificationsScreen() {
             <Switch
               value={settings.remind7Days}
               onValueChange={(value) => handleSettingChange("remind7Days", value)}
-              trackColor={{ false: "rgba(255,255,255,0.2)", true: "#10B981" }}
-              thumbColor="#FFFFFF"
+              trackColor={{ false: colors.border + "80", true: colors.success }}
+              thumbColor={colors.foreground}
               disabled={!settings.enabled}
             />
           </View>
@@ -188,8 +352,8 @@ export default function NotificationsScreen() {
             <Switch
               value={settings.remind3Days}
               onValueChange={(value) => handleSettingChange("remind3Days", value)}
-              trackColor={{ false: "rgba(255,255,255,0.2)", true: "#F59E0B" }}
-              thumbColor="#FFFFFF"
+              trackColor={{ false: colors.border + "80", true: colors.warning }}
+              thumbColor={colors.foreground}
               disabled={!settings.enabled}
             />
           </View>
@@ -202,8 +366,8 @@ export default function NotificationsScreen() {
             <Switch
               value={settings.remind1Day}
               onValueChange={(value) => handleSettingChange("remind1Day", value)}
-              trackColor={{ false: "rgba(255,255,255,0.2)", true: "#EF4444" }}
-              thumbColor="#FFFFFF"
+              trackColor={{ false: colors.border + "80", true: colors.error }}
+              thumbColor={colors.foreground}
               disabled={!settings.enabled}
             />
           </View>
@@ -229,7 +393,7 @@ export default function NotificationsScreen() {
             contentContainerStyle={[styles.listContent, { paddingBottom: insets.bottom + 24 }]}
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
-                <IconSymbol name="bell.fill" size={48} color="rgba(255,255,255,0.2)" />
+                <IconSymbol name="bell.fill" size={48} color={colors.muted + "33"} />
                 <Text style={styles.emptyTitle}>暫無通知</Text>
                 <Text style={styles.emptySubtitle}>
                   收藏學校後，我們會在申請截止前提醒您
@@ -239,167 +403,7 @@ export default function NotificationsScreen() {
           />
         </>
       )}
+      </MaxWidthWrapper>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  headerTitle: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-  settingsButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  statsBar: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
-  },
-  statsText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  markAllText: {
-    fontSize: 14,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  listContent: {
-    paddingHorizontal: 20,
-    paddingTop: 12,
-    gap: 12,
-  },
-  notificationCard: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
-  },
-  notificationUnread: {
-    backgroundColor: "rgba(0, 217, 255, 0.08)",
-    borderColor: "rgba(0, 217, 255, 0.2)",
-  },
-  notificationIcon: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 12,
-  },
-  notificationContent: {
-    flex: 1,
-  },
-  notificationTitle: {
-    fontSize: 15,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 4,
-  },
-  notificationBody: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 18,
-    marginBottom: 6,
-  },
-  notificationTime: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
-  },
-  deleteButton: {
-    padding: 4,
-  },
-  emptyContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 80,
-  },
-  emptyTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "rgba(255,255,255,0.6)",
-    marginTop: 16,
-    marginBottom: 8,
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  emptySubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.4)",
-    textAlign: "center",
-    paddingHorizontal: 40,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  // Settings styles
-  settingsContainer: {
-    flex: 1,
-    paddingHorizontal: 20,
-    paddingTop: 12,
-  },
-  settingsTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    marginBottom: 20,
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  settingItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingVertical: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.08)",
-  },
-  settingDisabled: {
-    opacity: 0.5,
-  },
-  settingInfo: {
-    flex: 1,
-    marginRight: 16,
-  },
-  settingLabel: {
-    fontSize: 16,
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  settingDesc: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    marginTop: 4,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-});

@@ -15,6 +15,20 @@
       "when": 1769051767321,
       "tag": "0001_true_polaris",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1769472000000,
+      "tag": "0002_deadline_tracker",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1769395570809,
+      "tag": "0003_worthless_mother_askani",
+      "breakpoints": true
     }
   ]
 }

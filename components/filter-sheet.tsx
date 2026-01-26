@@ -11,6 +11,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useFilter } from "@/lib/filter-context";
+import { useColors } from "@/hooks/use-colors";
 import { DISTRICT_TO_DISTRICT18, DISTRICT18_TO_DISTRICT, type District, type District18, type Level } from "@/types/school";
 import { NON_KG_CATEGORY_OPTIONS, KG_CATEGORY_OPTIONS } from "@/lib/school-classification";
 import { InfoHelp } from "@/components/info-help";
@@ -24,6 +25,10 @@ import {
   KG_LANGUAGE_ENV_OPTIONS,
 } from "@/constants/kg-filters";
 import * as Haptics from "expo-haptics";
+import { Typography } from "@/components/ui/typography";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 interface FilterSheetProps {
   visible: boolean;
@@ -86,6 +91,215 @@ const GENDER_OPTIONS: { label: string; value: SchoolGender }[] = [
 
 export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: FilterSheetProps) {
   const { state, dispatch } = useFilter();
+  const colors = useColors();
+
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    overlay: {
+      flex: 1,
+      justifyContent: "flex-end",
+    },
+    backdrop: {
+      ...StyleSheet.absoluteFillObject,
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+    },
+    sheetContainer: {
+      maxHeight: "85%",
+      borderTopLeftRadius: BorderRadius.xl,
+      borderTopRightRadius: BorderRadius.xl,
+      overflow: "hidden",
+    },
+    sheet: {
+      flex: 1,
+      borderTopLeftRadius: BorderRadius.xl,
+      borderTopRightRadius: BorderRadius.xl,
+      minHeight: 500,
+    },
+    handleContainer: {
+      alignItems: "center",
+      paddingTop: Spacing.md,
+      paddingBottom: Spacing.sm,
+    },
+    handle: {
+      width: 40,
+      height: 4,
+      backgroundColor: colors.border + "4D",
+      borderRadius: BorderRadius.xs,
+    },
+    header: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      paddingHorizontal: Spacing.xl,
+      paddingBottom: Spacing.lg,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border + "1A",
+    },
+    title: {
+      ...TypographyStyles.title,
+      color: colors.foreground,
+    },
+    resetText: {
+      ...TypographyStyles.caption,
+      color: colors.primary,
+    },
+    content: {
+      flex: 1,
+    },
+    contentContainer: {
+      paddingHorizontal: Spacing.xl,
+      paddingTop: Spacing.xl,
+      paddingBottom: Spacing.xl,
+    },
+    section: {
+      marginBottom: Spacing["2xl"],
+    },
+    sectionTitle: {
+      ...TypographyStyles.heading,
+      color: colors.foreground,
+      marginBottom: SpacingPresets.buttonPaddingVertical,
+    },
+    chipContainer: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: Spacing.md,
+    },
+    chip: {
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadiusPresets.buttonPill,
+      backgroundColor: colors.surface + "14",
+      borderWidth: 1,
+      borderColor: colors.border + "26",
+    },
+    chipSelected: {
+      backgroundColor: colors.primary + "33",
+      borderColor: colors.primary,
+    },
+    chipText: {
+      ...TypographyStyles.caption,
+      color: colors.muted,
+    },
+    chipTextSelected: {
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.primary,
+    },
+    footer: {
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      padding: Spacing.xl,
+      paddingBottom: Spacing["3xl"],
+      backgroundColor: colors.surface,
+      borderTopWidth: 1,
+      borderTopColor: colors.border,
+    },
+    applyButton: {
+      paddingVertical: Spacing.lg,
+      borderRadius: BorderRadiusPresets.button,
+      alignItems: "center",
+      backgroundColor: colors.primary,
+      shadowColor: colors.primary,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 8,
+      elevation: 4,
+    },
+    applyButtonText: {
+      ...TypographyStyles.body,
+      fontWeight: TypographyStyles.title.fontWeight,
+      color: colors.background,
+    },
+    sectionHeader: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: 14,
+    },
+    clearText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.primary,
+    },
+    subsectionTitle: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+      marginBottom: Spacing.md,
+    },
+    chipSmall: {
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.sm,
+    },
+    chipTextSmall: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+    },
+    hintText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted + "66",
+      marginTop: Spacing.sm,
+    },
+    district18Group: {
+      marginBottom: 12,
+    },
+    district18GroupLabel: {
+      ...TypographyStyles.small,
+      color: colors.muted + "80",
+      marginBottom: Spacing.sm,
+    },
+    sectionTitleRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+      marginBottom: 14,
+    },
+    sectionTitleInline: {
+      marginBottom: 0,
+    },
+    lockedDistrictContainer: {
+      marginTop: 8,
+    },
+    lockedDistrictBadge: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.sm,
+      backgroundColor: colors.primary + "26",
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadiusPresets.button,
+      borderWidth: 1,
+      borderColor: colors.primary + "4D",
+    },
+    lockedDistrictText: {
+      ...TypographyStyles.body,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.primary,
+      flex: 1,
+    },
+    lockedLabel: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.xs,
+      backgroundColor: colors.surface + "1A",
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.sm,
+    },
+    lockedLabelText: {
+      ...TypographyStyles.tiny,
+      fontSize: 11,
+      color: colors.muted,
+    },
+    lockedHintText: {
+      ...TypographyStyles.small,
+      color: colors.muted + "66",
+      marginTop: Spacing.sm,
+      fontFamily: "NotoSerifSC-Regular",
+    },
+  });
 
   const triggerHaptic = () => {
     if (Platform.OS !== "web") {
@@ -152,7 +366,7 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
         <Pressable style={styles.backdrop} onPress={onClose} />
         <View style={styles.sheetContainer}>
           <LinearGradient
-            colors={["#1A2744", "#0F1629", "#0A0F1C"]}
+            colors={[colors.surface, colors.background]}
             style={styles.sheet}
           >
             {/* 頂部把手 */}
@@ -186,7 +400,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                     return (
                       <TouchableOpacity
                         key={option.value}
-                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                         onPress={() => {
                           triggerHaptic();
                           dispatch({ type: "SET_STAGE", payload: option.value });
@@ -213,7 +430,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                     return (
                       <TouchableOpacity
                         key={option.value}
-                        style={[styles.chip, isSelected && styles.chipSelected]}
+                        style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                         onPress={() => {
                           triggerHaptic();
                           dispatch({ type: "TOGGLE_CATEGORY", payload: option.value });
@@ -249,10 +469,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                 {isDistrictLocked ? (
                   <View style={styles.lockedDistrictContainer}>
                     <View style={styles.lockedDistrictBadge}>
-                      <IconSymbol name="mappin.circle.fill" size={18} color="#00D9FF" />
+                      <IconSymbol name="mappin.circle.fill" size={18} color={colors.primary} />
                       <Text style={styles.lockedDistrictText}>{lockedDistrict}</Text>
                       <View style={styles.lockedLabel}>
-                        <IconSymbol name="lock.fill" size={12} color="rgba(255,255,255,0.6)" />
+                        <IconSymbol name="lock.fill" size={12} color={colors.muted + "99"} />
                         <Text style={styles.lockedLabelText}>已鎖定</Text>
                       </View>
                     </View>
@@ -270,7 +490,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_DISTRICT", payload: option.value });
@@ -406,7 +629,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_KG_SESSION", payload: option.value });
@@ -436,7 +662,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_KG_CURRICULUM_CATEGORY", payload: option.value });
@@ -514,7 +743,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_KG_PEDAGOGY", payload: option.value });
@@ -538,7 +770,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_KG_LANGUAGE_ENV", payload: option.value });
@@ -570,7 +805,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_CURRICULUM_V2", payload: option.value });
@@ -594,7 +832,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_INSTRUCTION_LANGUAGE", payload: option.value });
@@ -618,7 +859,10 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
                         return (
                           <TouchableOpacity
                             key={option.value}
-                            style={[styles.chip, isSelected && styles.chipSelected]}
+                            style={[
+                          styles.chip,
+                          isSelected && styles.chipSelected
+                        ]}
                             onPress={() => {
                               triggerHaptic();
                               dispatch({ type: "TOGGLE_GENDER", payload: option.value });
@@ -654,219 +898,3 @@ export function FilterSheet({ visible, onClose, lockedDistrict, onApply }: Filte
   );
 }
 
-const styles = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
-  backdrop: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-  },
-  sheetContainer: {
-    maxHeight: "85%",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    overflow: "hidden",
-  },
-  sheet: {
-    flex: 1,
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    minHeight: 500,
-  },
-  handleContainer: {
-    alignItems: "center",
-    paddingTop: 12,
-    paddingBottom: 8,
-  },
-  handle: {
-    width: 40,
-    height: 4,
-    backgroundColor: "rgba(255, 255, 255, 0.3)",
-    borderRadius: 2,
-  },
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: 24,
-    paddingBottom: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255, 255, 255, 0.1)",
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  resetText: {
-    fontSize: 14,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  content: {
-    flex: 1,
-  },
-  contentContainer: {
-    paddingHorizontal: 24,
-    paddingTop: 20,
-    paddingBottom: 20,
-  },
-  section: {
-    marginBottom: 28,
-  },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    marginBottom: 14,
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  chipContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 10,
-  },
-  chip: {
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderRadius: 20,
-    backgroundColor: "rgba(255, 255, 255, 0.08)",
-    borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.15)",
-  },
-  chipSelected: {
-    backgroundColor: "rgba(0, 217, 255, 0.2)",
-    borderColor: "#00D9FF",
-  },
-  chipText: {
-    fontSize: 14,
-    color: "rgba(255, 255, 255, 0.7)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  chipTextSelected: {
-    color: "#00D9FF",
-    fontWeight: "600",
-  },
-  footer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    padding: 24,
-    paddingBottom: 40,
-    backgroundColor: "rgba(15, 22, 41, 0.98)",
-    borderTopWidth: 1,
-    borderTopColor: "rgba(255, 255, 255, 0.1)",
-  },
-  applyButton: {
-    backgroundColor: "#00D9FF",
-    paddingVertical: 16,
-    borderRadius: 14,
-    alignItems: "center",
-    shadowColor: "#00D9FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 4,
-  },
-  applyButtonText: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: "#0F1629",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  sectionHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 14,
-  },
-  clearText: {
-    fontSize: 13,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  subsectionTitle: {
-    fontSize: 13,
-    color: "rgba(255, 255, 255, 0.6)",
-    marginBottom: 10,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  chipSmall: {
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  chipTextSmall: {
-    fontSize: 13,
-  },
-  hintText: {
-    fontSize: 13,
-    color: "rgba(255, 255, 255, 0.4)",
-    marginTop: 8,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  district18Group: {
-    marginBottom: 12,
-  },
-  district18GroupLabel: {
-    fontSize: 12,
-    color: "rgba(255, 255, 255, 0.5)",
-    marginBottom: 8,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  sectionTitleRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-    marginBottom: 14,
-  },
-  // Remove marginBottom when sectionTitle is inside sectionTitleRow
-  sectionTitleInline: {
-    marginBottom: 0,
-  },
-  // Locked district styles (from Map navigation)
-  lockedDistrictContainer: {
-    marginTop: 8,
-  },
-  lockedDistrictBadge: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "rgba(0, 217, 255, 0.3)",
-  },
-  lockedDistrictText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#00D9FF",
-    flex: 1,
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  lockedLabel: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 4,
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 8,
-  },
-  lockedLabelText: {
-    fontSize: 11,
-    color: "rgba(255, 255, 255, 0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  lockedHintText: {
-    fontSize: 12,
-    color: "rgba(255, 255, 255, 0.4)",
-    marginTop: 8,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-});

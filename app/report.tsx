@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { SCHOOLS } from "@/data/schools";
@@ -23,6 +24,10 @@ import { CURRICULUM_V2_LABELS } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { trpc } from "@/lib/trpc";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 // Report school card component
 function ReportSchoolCard({
@@ -33,6 +38,8 @@ function ReportSchoolCard({
   onPress,
   onFavoritePress,
   isLoading,
+  colors,
+  styles,
 }: {
   school: School;
   matchScore: number;
@@ -41,6 +48,8 @@ function ReportSchoolCard({
   onPress: () => void;
   onFavoritePress: () => void;
   isLoading: boolean;
+  colors: ReturnType<typeof useColors>;
+  styles: ReturnType<typeof StyleSheet.create>;
 }) {
   const matchDescription = getMatchDescription(matchScore);
 
@@ -59,7 +68,7 @@ function ReportSchoolCard({
           <IconSymbol
             name={isFavorite ? "heart.fill" : "heart"}
             size={22}
-            color={isFavorite ? "#EF4444" : "rgba(255,255,255,0.5)"}
+            color={isFavorite ? colors.error : colors.muted}
           />
         </TouchableOpacity>
       </View>
@@ -67,7 +76,7 @@ function ReportSchoolCard({
       <Text style={styles.schoolName}>{school.name}</Text>
 
       <View style={styles.tagsRow}>
-        <View style={[styles.tag, { backgroundColor: getCategoryColor(school.category) }]}>
+        <View style={[styles.tag, { backgroundColor: getCategoryColor(school.category, colors) }]}>
           <Text style={styles.tagText}>{school.category}</Text>
         </View>
         <View style={[styles.tag, { backgroundColor: "#0D9488" }]}>
@@ -83,7 +92,7 @@ function ReportSchoolCard({
       <View style={styles.summaryContainer}>
         {isLoading ? (
           <View style={styles.loadingContainer}>
-            <ActivityIndicator size="small" color="#00D9FF" />
+            <ActivityIndicator size="small" color={colors.primary} />
             <Text style={styles.loadingText}>正在生成分析...</Text>
           </View>
         ) : matchSummary ? (
@@ -96,20 +105,10 @@ function ReportSchoolCard({
   );
 }
 
-function getCategoryColor(category: string): string {
-  const colors: Record<string, string> = {
-    "國際": "#00D9FF",
-    "資助": "#6B5B95",
-    "直資": "#E8756F",
-    "私立": "#7C3AED",
-    "公立": "#3B82F6",
-  };
-  return colors[category] || "#6B7280";
-}
-
 export default function ReportScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const params = useLocalSearchParams();
   const [recommendations, setRecommendations] = useState<School[]>([]);
   const [currentFilters, setCurrentFilters] = useState<QuizFilters>({});
@@ -200,19 +199,233 @@ export default function ReportScreen() {
     router.push(`/report-pro?${queryString}` as any);
   };
 
+  // Get category color (some colors not in theme, keep as is)
+  const getCategoryColor = (category: string, themeColors: ReturnType<typeof useColors>): string => {
+    const categoryColors: Record<string, string> = {
+      "國際": themeColors.primary,
+      "資助": "#6B5B95", // Keep custom color
+      "直資": "#E8756F", // Keep custom color
+      "私立": "#7C3AED", // Keep custom color
+      "公立": "#3B82F6", // Keep custom color
+    };
+    return categoryColors[category] || themeColors.muted;
+  };
+
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.md,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      letterSpacing: 1,
+    },
+    titleSection: {
+      paddingHorizontal: Spacing.xl,
+      paddingVertical: Spacing.xl,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border + "80",
+    },
+    reportTitle: {
+      ...TypographyStyles.title,
+      fontSize: 26,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      letterSpacing: 0.5,
+    },
+    reportSubtitle: {
+      ...TypographyStyles.small,
+      fontSize: 14,
+      color: colors.muted,
+      marginTop: Spacing.sm,
+    },
+    schoolCard: {
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadiusPresets.card,
+      padding: Spacing.lg,
+      marginVertical: Spacing.sm,
+      borderWidth: 1,
+      borderColor: colors.border + "80",
+    },
+    cardHeader: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "flex-start",
+      marginBottom: Spacing.md,
+    },
+    matchBadge: {
+      flexDirection: "row",
+      alignItems: "center",
+      backgroundColor: colors.primary + "26",
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.full,
+    },
+    matchScore: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.primary,
+      marginRight: Spacing.xs,
+    },
+    matchLabel: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.primary,
+    },
+    schoolName: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      marginBottom: Spacing.sm,
+    },
+    tagsRow: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: Spacing.xs,
+      marginBottom: Spacing.md,
+    },
+    tag: {
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.sm,
+    },
+    tagText: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.foreground,
+      fontWeight: "500",
+    },
+    summaryContainer: {
+      backgroundColor: colors.surface + "08",
+      borderRadius: BorderRadius.md,
+      padding: Spacing.md,
+      minHeight: 60,
+    },
+    summaryText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.foreground + "D9",
+      lineHeight: 22,
+    },
+    summaryPlaceholder: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.muted + "66",
+    },
+    loadingContainer: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.sm,
+    },
+    loadingText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.muted,
+    },
+    emptyContainer: {
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: Spacing["3xl"],
+    },
+    emptyText: {
+      ...TypographyStyles.body,
+      color: colors.muted,
+      textAlign: "center",
+      fontSize: 16,
+    },
+    bottomContainer: {
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      paddingHorizontal: Spacing.xl,
+      paddingTop: Spacing.lg,
+      backgroundColor: colors.background + "FA",
+      borderTopWidth: 1,
+      borderTopColor: colors.border + "80",
+    },
+    proButton: {
+      borderRadius: BorderRadiusPresets.card,
+      overflow: "hidden",
+      shadowColor: "#7C3AED",
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.4,
+      shadowRadius: 12,
+      elevation: 8,
+    },
+    proButtonGradient: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: Spacing.lg,
+      gap: Spacing.sm,
+    },
+    proButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 17,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      letterSpacing: 0.5,
+    },
+    proBadge: {
+      backgroundColor: colors.foreground + "40",
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: 2,
+      borderRadius: BorderRadius.xs,
+    },
+    proBadgeText: {
+      ...TypographyStyles.tiny,
+      fontSize: 10,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+    },
+    proHint: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.muted,
+      textAlign: "center",
+      marginTop: Spacing.sm,
+    },
+    disclaimerText: {
+      ...TypographyStyles.tiny,
+      fontSize: 11,
+      color: colors.muted + "59",
+      textAlign: "center",
+      fontFamily: "NotoSerifSC-Regular",
+      marginTop: Spacing.sm,
+    },
+  });
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
 
-      <View style={[styles.container, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.container, { paddingTop: insets.top }]}>
         {/* Header */}
         <View style={styles.header}>
           <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-            <IconSymbol name="chevron.left" size={24} color="#FFFFFF" />
+            <IconSymbol name="chevron.left" size={24} color={colors.foreground} />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>推薦報告</Text>
           <View style={{ width: 40 }} />
@@ -239,6 +452,8 @@ export default function ReportScreen() {
               onPress={() => handleSchoolPress(item.id)}
               onFavoritePress={() => handleFavoriteToggle(item.id)}
               isLoading={generateReportMutation.isPending && !summaries[item.id]}
+              colors={colors}
+              styles={styles}
             />
           )}
           contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 220 }}
@@ -262,7 +477,7 @@ export default function ReportScreen() {
               end={{ x: 1, y: 0 }}
               style={styles.proButtonGradient}
             >
-              <IconSymbol name="sparkles" size={20} color="#FFFFFF" />
+              <IconSymbol name="sparkles" size={20} color={colors.foreground} />
               <Text style={styles.proButtonText}>深度报告和攻略</Text>
               <View style={styles.proBadge}>
                 <Text style={styles.proBadgeText}>PRO</Text>
@@ -278,205 +493,8 @@ export default function ReportScreen() {
             資訊基於公開資料整理，僅供參考，以學校官方為準
           </Text>
         </View>
-      </View>
+        </View>
+      </MaxWidthWrapper>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 1,
-  },
-  titleSection: {
-    paddingHorizontal: 24,
-    paddingVertical: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
-  },
-  reportTitle: {
-    fontSize: 26,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 0.5,
-  },
-  reportSubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 8,
-  },
-  schoolCard: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    padding: 16,
-    marginVertical: 8,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
-  },
-  cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    marginBottom: 12,
-  },
-  matchBadge: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: "rgba(0,217,255,0.15)",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 20,
-  },
-  matchScore: {
-    fontSize: 16,
-    fontWeight: "700",
-    color: "#00D9FF",
-    marginRight: 6,
-  },
-  matchLabel: {
-    fontSize: 12,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  schoolName: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 10,
-  },
-  tagsRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 6,
-    marginBottom: 12,
-  },
-  tag: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-    borderRadius: 6,
-  },
-  tagText: {
-    fontSize: 12,
-    color: "#FFFFFF",
-    fontWeight: "500",
-  },
-  summaryContainer: {
-    backgroundColor: "rgba(255,255,255,0.03)",
-    borderRadius: 10,
-    padding: 12,
-    minHeight: 60,
-  },
-  summaryText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.85)",
-    lineHeight: 22,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  summaryPlaceholder: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  loadingContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 8,
-  },
-  loadingText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  emptyContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 80,
-  },
-  emptyText: {
-    color: "rgba(255,255,255,0.5)",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-    fontSize: 16,
-  },
-  bottomContainer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    paddingHorizontal: 24,
-    paddingTop: 16,
-    backgroundColor: "rgba(15, 22, 41, 0.98)",
-    borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
-  },
-  proButton: {
-    borderRadius: 16,
-    overflow: "hidden",
-    shadowColor: "#7C3AED",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  proButtonGradient: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 16,
-    gap: 10,
-  },
-  proButtonText: {
-    fontSize: 17,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 0.5,
-  },
-  proBadge: {
-    backgroundColor: "rgba(255,255,255,0.25)",
-    paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  proBadgeText: {
-    fontSize: 10,
-    fontWeight: "700",
-    color: "#FFFFFF",
-  },
-  proHint: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    textAlign: "center",
-    marginTop: 10,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  disclaimerText: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.35)",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 8,
-  },
-});

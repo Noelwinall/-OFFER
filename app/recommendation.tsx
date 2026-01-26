@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { SchoolCard } from "@/components/school-card";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
@@ -12,10 +13,15 @@ import type { QuizFilters, School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { UpgradeModal } from "@/components/upgrade-modal";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 export default function RecommendationScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const params = useLocalSearchParams();
   const [recommendations, setRecommendations] = useState<School[]>([]);
   const [currentFilters, setCurrentFilters] = useState<QuizFilters>({});
@@ -128,19 +134,145 @@ export default function RecommendationScreen() {
     router.push(`/report-pro?${queryString}` as any);
   };
 
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.md,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      letterSpacing: 1,
+    },
+    statsContainer: {
+      paddingHorizontal: Spacing.xl,
+      paddingVertical: Spacing.lg,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border + "80",
+    },
+    statsTitle: {
+      ...TypographyStyles.title,
+      fontSize: 24,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      letterSpacing: 0.5,
+    },
+    statsSubtitle: {
+      ...TypographyStyles.small,
+      fontSize: 14,
+      color: colors.muted,
+      marginTop: Spacing.sm,
+    },
+    emptyContainer: {
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: Spacing["3xl"],
+    },
+    emptyText: {
+      ...TypographyStyles.body,
+      color: colors.muted,
+      textAlign: "center",
+      fontSize: 16,
+    },
+    bottomContainer: {
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      right: 0,
+      paddingHorizontal: Spacing.xl,
+      paddingTop: Spacing.lg,
+      backgroundColor: colors.background + "F2",
+      borderTopWidth: 1,
+      borderTopColor: colors.border + "80",
+    },
+    proButton: {
+      borderRadius: BorderRadiusPresets.card,
+      overflow: "hidden",
+      marginBottom: Spacing.sm,
+      shadowColor: "#7C3AED",
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.4,
+      shadowRadius: 12,
+      elevation: 8,
+    },
+    proButtonGradient: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: Spacing.lg,
+      gap: Spacing.sm,
+    },
+    proButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      letterSpacing: 0.5,
+    },
+    proBadge: {
+      backgroundColor: colors.foreground + "40",
+      paddingHorizontal: Spacing.sm,
+      paddingVertical: 2,
+      borderRadius: BorderRadius.xs,
+    },
+    proBadgeText: {
+      ...TypographyStyles.tiny,
+      fontSize: 10,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+    },
+    restartButton: {
+      backgroundColor: colors.surface + "1A",
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadiusPresets.card,
+      borderWidth: 1,
+      borderColor: colors.border + "33",
+      marginBottom: Spacing.sm,
+    },
+    restartButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 15,
+      fontWeight: "500",
+      color: colors.foreground,
+      textAlign: "center",
+      letterSpacing: 1,
+    },
+    disclaimerText: {
+      ...TypographyStyles.tiny,
+      fontSize: 11,
+      color: colors.muted + "59",
+      textAlign: "center",
+    },
+  });
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
-      
-      <View style={[styles.container, { paddingTop: insets.top }]}>
+
+      <MaxWidthWrapper>
+        <View style={[styles.container, { paddingTop: insets.top }]}>
         {/* 頂部導航 */}
         <View style={styles.header}>
           <TouchableOpacity onPress={handleBack} style={styles.backButton}>
-            <IconSymbol name="chevron.left" size={24} color="#FFFFFF" />
+            <IconSymbol name="chevron.left" size={24} color={colors.foreground} />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>推薦結果</Text>
           <View style={{ width: 40 }} />
@@ -198,7 +330,7 @@ export default function RecommendationScreen() {
               end={{ x: 1, y: 0 }}
               style={styles.proButtonGradient}
             >
-              <IconSymbol name="sparkles" size={18} color="#FFFFFF" />
+              <IconSymbol name="sparkles" size={18} color={colors.foreground} />
               <Text style={styles.proButtonText}>深度报告和攻略</Text>
               <View style={styles.proBadge}>
                 <Text style={styles.proBadgeText}>PRO</Text>
@@ -218,7 +350,8 @@ export default function RecommendationScreen() {
             資訊基於公開資料整理，僅供參考，以學校官方為準
           </Text>
         </View>
-      </View>
+        </View>
+      </MaxWidthWrapper>
 
       <UpgradeModal
         visible={showUpgradeModal}
@@ -227,127 +360,3 @@ export default function RecommendationScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 1,
-  },
-  statsContainer: {
-    paddingHorizontal: 24,
-    paddingVertical: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
-  },
-  statsTitle: {
-    fontSize: 24,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 0.5,
-  },
-  statsSubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 8,
-  },
-  emptyContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 80,
-  },
-  emptyText: {
-    color: "rgba(255,255,255,0.5)",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-    fontSize: 16,
-  },
-  bottomContainer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    paddingHorizontal: 24,
-    paddingTop: 16,
-    backgroundColor: "rgba(15, 22, 41, 0.95)",
-    borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
-  },
-  proButton: {
-    borderRadius: 16,
-    overflow: "hidden",
-    marginBottom: 10,
-    shadowColor: "#7C3AED",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  proButtonGradient: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 16,
-    gap: 10,
-  },
-  proButtonText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 0.5,
-  },
-  proBadge: {
-    backgroundColor: "rgba(255,255,255,0.25)",
-    paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  proBadgeText: {
-    fontSize: 10,
-    fontWeight: "700",
-    color: "#FFFFFF",
-  },
-  restartButton: {
-    backgroundColor: "rgba(255,255,255,0.1)",
-    paddingVertical: 14,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
-    marginBottom: 10,
-  },
-  restartButtonText: {
-    fontSize: 15,
-    fontWeight: "500",
-    color: "#FFFFFF",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-    letterSpacing: 1,
-  },
-  disclaimerText: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.35)",
-    textAlign: "center",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-});

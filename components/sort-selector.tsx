@@ -3,10 +3,15 @@ import { View, Text, TouchableOpacity, Modal, StyleSheet, Platform } from "react
 import { FilterContext, SORT_OPTIONS, type SortOption } from "@/lib/filter-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import * as Haptics from "expo-haptics";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 export function SortSelector() {
   const filterContext = useContext(FilterContext);
   const [showModal, setShowModal] = useState(false);
+  const colors = useColors();
 
   if (!filterContext) {
     return null;
@@ -38,9 +43,9 @@ export function SortSelector() {
         onPress={handleOpen}
         activeOpacity={0.7}
       >
-        <IconSymbol name="arrow.up.arrow.down" size={16} color="#00D9FF" />
+        <IconSymbol name="arrow.up.arrow.down" size={16} color={colors.primary} />
         <Text style={styles.sortButtonText}>{currentSort?.label || "排序"}</Text>
-        <IconSymbol name="chevron.right" size={14} color="rgba(255,255,255,0.5)" style={{ transform: [{ rotate: "90deg" }] }} />
+        <IconSymbol name="chevron.right" size={14} color={colors.muted + "80"} style={{ transform: [{ rotate: "90deg" }] }} />
       </TouchableOpacity>
 
       {/* 排序選項彈窗 */}
@@ -62,7 +67,7 @@ export function SortSelector() {
                 onPress={() => setShowModal(false)}
                 style={styles.closeButton}
               >
-                <IconSymbol name="xmark" size={20} color="rgba(255,255,255,0.6)" />
+                <IconSymbol name="xmark" size={20} color={colors.muted + "99"} />
               </TouchableOpacity>
             </View>
 
@@ -72,7 +77,7 @@ export function SortSelector() {
                   key={option.value}
                   style={[
                     styles.optionItem,
-                    state.sortBy === option.value && styles.optionItemActive,
+                    state.sortBy === option.value && [styles.optionItemActive, { backgroundColor: colors.primary + "1A" }],
                   ]}
                   onPress={() => handleSelect(option.value)}
                   activeOpacity={0.7}
@@ -80,13 +85,13 @@ export function SortSelector() {
                   <Text
                     style={[
                       styles.optionText,
-                      state.sortBy === option.value && styles.optionTextActive,
+                      state.sortBy === option.value && [styles.optionTextActive, { color: colors.primary }],
                     ]}
                   >
                     {option.label}
                   </Text>
-                  {state.sortBy === option.value && (
-                    <IconSymbol name="checkmark" size={18} color="#00D9FF" />
+                    {state.sortBy === option.value && (
+                    <IconSymbol name="checkmark" size={18} color={colors.primary} />
                   )}
                 </TouchableOpacity>
               ))}
@@ -103,79 +108,78 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "rgba(255,255,255,0.08)",
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 20,
-    gap: 6,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
+    borderRadius: BorderRadiusPresets.buttonPill,
+    gap: Spacing.sm,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.1)",
   },
   sortButtonText: {
+    ...TypographyStyles.caption,
     fontSize: 13,
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
+    color: "#2D2013",
   },
   modalOverlay: {
     flex: 1,
     backgroundColor: "rgba(0, 0, 0, 0.6)",
     justifyContent: "center",
     alignItems: "center",
-    padding: 24,
+    padding: Spacing.xl,
   },
   modalContent: {
     width: "100%",
     maxWidth: 320,
-    backgroundColor: "#1a2744",
-    borderRadius: 20,
+    backgroundColor: "#FFF9F0",
+    borderRadius: BorderRadiusPresets.modal,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
+    borderColor: "#E8E2D5",
   },
   modalHeader: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 20,
-    paddingVertical: 16,
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.lg,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.08)",
+    borderBottomColor: "#E8E2D5",
   },
   modalTitle: {
+    ...TypographyStyles.body,
     fontSize: 17,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
+    fontWeight: TypographyStyles.heading.fontWeight,
+    color: "#2D2013",
   },
   closeButton: {
     width: 32,
     height: 32,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.08)",
+    borderRadius: BorderRadius.full,
+    backgroundColor: "#E8E2D5",
     justifyContent: "center",
     alignItems: "center",
   },
   optionsList: {
-    padding: 8,
+    padding: Spacing.sm,
   },
   optionItem: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    borderRadius: 12,
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: SpacingPresets.buttonPaddingVertical,
+    borderRadius: BorderRadiusPresets.button,
   },
   optionItemActive: {
-    backgroundColor: "rgba(0, 217, 255, 0.1)",
+    // backgroundColor will be set dynamically
   },
   optionText: {
+    ...TypographyStyles.body,
     fontSize: 15,
-    color: "rgba(255,255,255,0.8)",
-    fontFamily: "NotoSerifSC-Regular",
+    color: "#2D2013",
   },
   optionTextActive: {
-    color: "#00D9FF",
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
+    // color will be set dynamically
+    fontWeight: TypographyStyles.heading.fontWeight,
   },
 });

@@ -5,6 +5,7 @@ import { HapticTab } from "@/components/haptic-tab";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { Platform } from "react-native";
 import { useColors } from "@/hooks/use-colors";
+import { EducationalBackground } from "@/components/educational-background";
 
 export default function TabLayout() {
   const colors = useColors();
@@ -13,21 +14,22 @@ export default function TabLayout() {
   const tabBarHeight = 56 + bottomPadding;
 
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: colors.primary,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarStyle: {
-          paddingTop: 8,
-          paddingBottom: bottomPadding,
-          height: tabBarHeight,
-          backgroundColor: colors.background,
-          borderTopColor: colors.border,
-          borderTopWidth: 0.5,
-        },
-      }}
-    >
+    <EducationalBackground pattern="dots">
+      <Tabs
+        screenOptions={{
+          tabBarActiveTintColor: colors.primary,
+          headerShown: false,
+          tabBarButton: HapticTab,
+          tabBarStyle: {
+            paddingTop: 8,
+            paddingBottom: bottomPadding,
+            height: tabBarHeight,
+            backgroundColor: colors.background,
+            borderTopColor: colors.border,
+            borderTopWidth: 0.5,
+          },
+        }}
+      >
       <Tabs.Screen
         name="index"
         options={{
@@ -57,5 +59,6 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+    </EducationalBackground>
   );
 }

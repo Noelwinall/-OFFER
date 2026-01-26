@@ -118,7 +118,7 @@ export function SchoolMap({ schools, selectedDistrict = "all", onSchoolSelect, h
       padding: 10px;
       margin-top: 10px;
       background: #00D9FF;
-      color: #0F1629;
+      color: #2D2013;
       border: none;
       border-radius: 8px;
       font-size: 13px;

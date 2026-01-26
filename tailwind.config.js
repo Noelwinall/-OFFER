@@ -22,6 +22,17 @@ module.exports = {
   theme: {
     extend: {
       colors: tailwindColors,
+      // 🎨 Soft Minimalist Design System (from UI Place image)
+      borderRadius: {
+        'card': '24px',        // rounded-3xl equivalent
+        'tag': '12px',         // rounded-xl equivalent
+        'button': '20px',      // rounded-2xl+ equivalent
+      },
+      boxShadow: {
+        'soft': '0 8px 24px rgba(0, 0, 0, 0.06)',      // Soft diffused shadow
+        'soft-lg': '0 12px 32px rgba(0, 0, 0, 0.08)',  // Larger soft shadow
+        'soft-sm': '0 4px 16px rgba(0, 0, 0, 0.04)',   // Small soft shadow
+      },
     },
   },
   plugins: [

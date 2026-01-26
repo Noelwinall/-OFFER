@@ -1,9 +1,14 @@
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Image } from "expo-image";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 // 文章詳情數據
 const ARTICLE_DETAILS: Record<string, {
@@ -502,6 +507,7 @@ export default function ArticleDetailScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
 
   const article = ARTICLE_DETAILS[id || ""] || DEFAULT_ARTICLE;
 
@@ -548,21 +554,178 @@ export default function ArticleDetailScreen() {
     );
   };
 
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingBottom: Spacing.md,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.surface + "1A",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    headerTitle: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      flex: 1,
+      textAlign: "center",
+      marginHorizontal: Spacing.lg,
+    },
+    placeholder: {
+      width: 40,
+    },
+    scrollContent: {
+      paddingHorizontal: 0,
+    },
+    heroImage: {
+      width: "100%",
+      height: 220,
+    },
+    articleHeader: {
+      padding: Spacing.xl,
+      gap: Spacing.md,
+    },
+    categoryBadge: {
+      alignSelf: "flex-start",
+      backgroundColor: colors.primary + "26",
+      paddingHorizontal: Spacing.md + 2,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.md + 2,
+    },
+    categoryText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.primary,
+    },
+    title: {
+      ...TypographyStyles.title,
+      fontSize: 26,
+      color: colors.foreground,
+      lineHeight: 36,
+    },
+    subtitle: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      color: colors.muted,
+      lineHeight: 24,
+    },
+    meta: {
+      flexDirection: "row",
+      alignItems: "center",
+      marginTop: Spacing.sm,
+    },
+    metaText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted + "66",
+    },
+    metaDot: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted + "4D",
+      marginHorizontal: Spacing.sm,
+    },
+    contentContainer: {
+      paddingHorizontal: Spacing.xl,
+      gap: Spacing.lg,
+    },
+    paragraph: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      color: colors.foreground + "D9",
+      lineHeight: 28,
+    },
+    heading: {
+      ...TypographyStyles.heading,
+      fontSize: 20,
+      color: colors.foreground,
+      marginTop: Spacing.lg,
+      marginBottom: Spacing.xs,
+    },
+    bold: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.primary,
+      lineHeight: 26,
+    },
+    bullet: {
+      ...TypographyStyles.body,
+      fontSize: 15,
+      color: colors.foreground + "BF",
+      lineHeight: 26,
+      paddingLeft: Spacing.sm,
+    },
+    question: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+      lineHeight: 26,
+      marginTop: Spacing.sm,
+    },
+    answer: {
+      ...TypographyStyles.body,
+      fontSize: 15,
+      color: colors.foreground + "BF",
+      lineHeight: 26,
+      marginBottom: Spacing.sm,
+    },
+    footer: {
+      alignItems: "center",
+      paddingVertical: Spacing["2xl"],
+      gap: Spacing.xl,
+    },
+    footerText: {
+      ...TypographyStyles.caption,
+      fontSize: 14,
+      color: colors.muted + "4D",
+    },
+    moreButton: {
+      backgroundColor: colors.primary,
+      paddingHorizontal: Spacing["2xl"],
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadiusPresets.button,
+      shadowColor: colors.primary,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 12,
+      elevation: 8,
+    },
+    moreButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 15,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.background,
+      letterSpacing: 1,
+    },
+  });
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
 
-      <View style={[styles.header, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.header, { paddingTop: insets.top }]}>
         <TouchableOpacity
           onPress={() => router.back()}
           style={styles.backButton}
           activeOpacity={0.7}
         >
-          <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
+          <IconSymbol name="chevron.right" size={24} color={colors.foreground} style={{ transform: [{ rotate: "180deg" }] }} />
         </TouchableOpacity>
         <Text style={styles.headerTitle} numberOfLines={1}>{article.category}</Text>
         <View style={styles.placeholder} />
@@ -604,163 +767,8 @@ export default function ArticleDetailScreen() {
             <Text style={styles.moreButtonText}>查看更多攻略</Text>
           </TouchableOpacity>
         </View>
-      </ScrollView>
+        </ScrollView>
+      </MaxWidthWrapper>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingBottom: 12,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  headerTitle: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    flex: 1,
-    textAlign: "center",
-    marginHorizontal: 16,
-  },
-  placeholder: {
-    width: 40,
-  },
-  scrollContent: {
-    paddingHorizontal: 0,
-  },
-  heroImage: {
-    width: "100%",
-    height: 220,
-  },
-  articleHeader: {
-    padding: 24,
-    gap: 12,
-  },
-  categoryBadge: {
-    alignSelf: "flex-start",
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    paddingHorizontal: 14,
-    paddingVertical: 6,
-    borderRadius: 14,
-  },
-  categoryText: {
-    fontSize: 13,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  title: {
-    fontSize: 26,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    lineHeight: 36,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 24,
-  },
-  meta: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 8,
-  },
-  metaText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  metaDot: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.3)",
-    marginHorizontal: 8,
-  },
-  contentContainer: {
-    paddingHorizontal: 24,
-    gap: 16,
-  },
-  paragraph: {
-    fontSize: 16,
-    color: "rgba(255,255,255,0.85)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 28,
-  },
-  heading: {
-    fontSize: 20,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginTop: 16,
-    marginBottom: 4,
-  },
-  bold: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Bold",
-    lineHeight: 26,
-  },
-  bullet: {
-    fontSize: 15,
-    color: "rgba(255,255,255,0.75)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 26,
-    paddingLeft: 8,
-  },
-  question: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    lineHeight: 26,
-    marginTop: 8,
-  },
-  answer: {
-    fontSize: 15,
-    color: "rgba(255,255,255,0.75)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 26,
-    marginBottom: 8,
-  },
-  footer: {
-    alignItems: "center",
-    paddingVertical: 40,
-    gap: 20,
-  },
-  footerText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.3)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  moreButton: {
-    backgroundColor: "#00D9FF",
-    paddingHorizontal: 32,
-    paddingVertical: 14,
-    borderRadius: 25,
-    shadowColor: "#00D9FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  moreButtonText: {
-    fontSize: 15,
-    fontWeight: "600",
-    color: "#0F1629",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-});

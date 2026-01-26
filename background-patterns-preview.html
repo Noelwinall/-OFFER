@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有Offer - Educational Background Patterns (Ivy League Theme)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f0f0f0;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1E3A5F;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #706B5E;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: #1E3A5F;
+            color: white;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .patterns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .pattern-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .pattern-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+        }
+
+        .pattern-preview {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pattern-info {
+            padding: 24px;
+        }
+
+        .pattern-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2D2013;
+            margin-bottom: 8px;
+        }
+
+        .pattern-description {
+            font-size: 14px;
+            color: #706B5E;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .pattern-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .feature-tag {
+            padding: 4px 10px;
+            background: #FFF9F0;
+            border: 1px solid #E8E2D5;
+            border-radius: 8px;
+            font-size: 11px;
+            color: #8B7355;
+            font-weight: 600;
+        }
+
+        .recommended {
+            color: #1E3A5F;
+            background: #E8F0FF;
+            border-color: #1E3A5F;
+        }
+
+        .school-card-demo {
+            background: #FFF9F0;
+            border: 1px solid #E8E2D5;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            margin-top: 12px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            flex: 1;
+        }
+
+        .school-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2D2013;
+            margin-bottom: 4px;
+        }
+
+        .school-name-en {
+            font-size: 11px;
+            color: #706B5E;
+        }
+
+        .favorite-btn {
+            width: 36px;
+            height: 36px;
+            background: #FAF8F5;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .tag-primary { background: #1E3A5F; }
+        .tag-secondary { background: #706B5E; opacity: 0.8; }
+
+        /* Pattern backgrounds */
+        .pattern-books {
+            background: #FAF8F5;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(232, 226, 213, 0.15) 100px, rgba(232, 226, 213, 0.15) 102px),
+                repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(212, 184, 150, 0.1) 100px, rgba(212, 184, 150, 0.1) 102px);
+        }
+
+        .pattern-books::before {
+            content: "📚";
+            position: absolute;
+            font-size: 80px;
+            opacity: 0.08;
+            top: 50px;
+            right: 50px;
+            transform: rotate(-15deg);
+        }
+
+        .pattern-books::after {
+            content: "📖";
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.06;
+            bottom: 80px;
+            left: 60px;
+            transform: rotate(10deg);
+        }
+
+        .pattern-geometric {
+            background: #FAF8F5;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(232, 226, 213, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(212, 184, 150, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(139, 115, 85, 0.05) 0%, transparent 60%);
+        }
+
+        .pattern-geometric::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid rgba(232, 226, 213, 0.2);
+            border-radius: 50%;
+            top: 40px;
+            left: 30px;
+        }
+
+        .pattern-geometric::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid rgba(212, 184, 150, 0.15);
+            border-radius: 50%;
+            bottom: 60px;
+            right: 50px;
+        }
+
+        .pattern-dots {
+            background: #FAF8F5;
+            background-image: radial-gradient(circle, rgba(212, 184, 150, 0.15) 1.5px, transparent 1.5px);
+            background-size: 40px 40px;
+        }
+
+        .pattern-minimal {
+            background: #FAF8F5;
+            background-image: 
+                linear-gradient(rgba(232, 226, 213, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(232, 226, 213, 0.08) 1px, transparent 1px);
+            background-size: 100px 100px;
+        }
+
+        .pattern-campus {
+            background: #FAF8F5;
+            background-image: 
+                linear-gradient(135deg, transparent 0%, transparent 70%, rgba(232, 226, 213, 0.1) 70%, rgba(232, 226, 213, 0.1) 100%);
+        }
+
+        .pattern-campus::before {
+            content: "🎓";
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.06;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .comparison-table {
+            max-width: 1000px;
+            margin: 60px auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table h2 {
+            text-align: center;
+            color: #1E3A5F;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #E8E2D5;
+        }
+
+        th {
+            background: #FFF9F0;
+            color: #2D2013;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #FAF8F5;
+        }
+
+        .best-choice {
+            background: #E8F0FF;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .patterns-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎓 Educational Background Patterns</h1>
+        <p>Ivy League Theme - 优雅教育主题背景方案</p>
+        <span class="badge">Option A: Ivy League 配色</span>
+    </div>
+
+    <div class="patterns-grid">
+        <!-- Pattern 1: Books -->
+        <div class="pattern-card">
+            <div class="pattern-preview pattern-books">
+                <div class="school-card-demo">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="school-name">拔萃女書院</div>
+                            <div class="school-name-en">Diocesan Girls' School</div>
+                        </div>
+                        <div class="favorite-btn">❤️</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag tag-primary">直資</span>
+                        <span class="tag tag-secondary">中學</span>
+                        <span class="tag tag-secondary">油尖旺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-info">
+                <div class="pattern-title">📚 Pattern 1: Books (書本)</div>
+                <div class="pattern-description">
+                    经典的书本图案散布在背景中，象征知识与学习。适合传统教育理念。
+                </div>
+                <div class="pattern-features">
+                    <span class="feature-tag">传统感</span>
+                    <span class="feature-tag">文化氛围</span>
+                    <span class="feature-tag">适中视觉密度</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pattern 2: Geometric (Recommended) -->
+        <div class="pattern-card">
+            <div class="pattern-preview pattern-geometric">
+                <div class="school-card-demo">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="school-name">拔萃女書院</div>
+                            <div class="school-name-en">Diocesan Girls' School</div>
+                        </div>
+                        <div class="favorite-btn">❤️</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag tag-primary">直資</span>
+                        <span class="tag tag-secondary">中學</span>
+                        <span class="tag tag-secondary">油尖旺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-info">
+                <div class="pattern-title">⭕ Pattern 2: Geometric (几何) ⭐</div>
+                <div class="pattern-description">
+                    <strong>【推荐】</strong>优雅的几何图形，圆形象征全面发展，三角形象征知识金字塔。现代而不失经典。
+                </div>
+                <div class="pattern-features">
+                    <span class="feature-tag recommended">✨ 强烈推荐</span>
+                    <span class="feature-tag">现代优雅</span>
+                    <span class="feature-tag">视觉平衡好</span>
+                    <span class="feature-tag">不干扰内容</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pattern 3: Dots -->
+        <div class="pattern-card">
+            <div class="pattern-preview pattern-dots">
+                <div class="school-card-demo">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="school-name">拔萃女書院</div>
+                            <div class="school-name-en">Diocesan Girls' School</div>
+                        </div>
+                        <div class="favorite-btn">❤️</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag tag-primary">直資</span>
+                        <span class="tag tag-secondary">中學</span>
+                        <span class="tag tag-secondary">油尖旺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-info">
+                <div class="pattern-title">• Pattern 3: Dots (点阵)</div>
+                <div class="pattern-description">
+                    极简主义点阵网格，象征学习网络与连接。最不干扰内容的选择。
+                </div>
+                <div class="pattern-features">
+                    <span class="feature-tag">极简主义</span>
+                    <span class="feature-tag">最低视觉干扰</span>
+                    <span class="feature-tag">现代简约</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pattern 4: Minimal -->
+        <div class="pattern-card">
+            <div class="pattern-preview pattern-minimal">
+                <div class="school-card-demo">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="school-name">拔萃女書院</div>
+                            <div class="school-name-en">Diocesan Girls' School</div>
+                        </div>
+                        <div class="favorite-btn">❤️</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag tag-primary">直資</span>
+                        <span class="tag tag-secondary">中學</span>
+                        <span class="tag tag-secondary">油尖旺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-info">
+                <div class="pattern-title">═ Pattern 4: Minimal (极简线条)</div>
+                <div class="pattern-description">
+                    细腻的网格线条，提供微妙的结构感，适合喜欢极简风格的用户。
+                </div>
+                <div class="pattern-features">
+                    <span class="feature-tag">超级简约</span>
+                    <span class="feature-tag">结构感</span>
+                    <span class="feature-tag">专业感</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pattern 5: Campus -->
+        <div class="pattern-card">
+            <div class="pattern-preview pattern-campus">
+                <div class="school-card-demo">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <div class="school-name">拔萃女書院</div>
+                            <div class="school-name-en">Diocesan Girls' School</div>
+                        </div>
+                        <div class="favorite-btn">❤️</div>
+                    </div>
+                    <div class="tags">
+                        <span class="tag tag-primary">直資</span>
+                        <span class="tag tag-secondary">中學</span>
+                        <span class="tag tag-secondary">油尖旺</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pattern-info">
+                <div class="pattern-title">🏛️ Pattern 5: Campus (校园)</div>
+                <div class="pattern-description">
+                    抽象的校园建筑与学士帽图案，直接传达教育主题，适合强化品牌联想。
+                </div>
+                <div class="pattern-features">
+                    <span class="feature-tag">教育主题明确</span>
+                    <span class="feature-tag">品牌感强</span>
+                    <span class="feature-tag">情感连接</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparison-table">
+        <h2>📊 Pattern Comparison</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pattern</th>
+                    <th>视觉密度</th>
+                    <th>教育主题性</th>
+                    <th>现代感</th>
+                    <th>适用场景</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>📚 Books</strong></td>
+                    <td>中等</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐</td>
+                    <td>传统教育机构</td>
+                </tr>
+                <tr class="best-choice">
+                    <td><strong>⭕ Geometric ✨</strong></td>
+                    <td>低</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>全场景推荐</td>
+                </tr>
+                <tr>
+                    <td><strong>• Dots</strong></td>
+                    <td>最低</td>
+                    <td>⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>极简主义偏好</td>
+                </tr>
+                <tr>
+                    <td><strong>═ Minimal</strong></td>
+                    <td>最低</td>
+                    <td>⭐⭐</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>专业/企业风格</td>
+                </tr>
+                <tr>
+                    <td><strong>🏛️ Campus</strong></td>
+                    <td>中等</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>品牌强化</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="text-align: center; padding: 40px; background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%); color: white; border-radius: 20px; max-width: 800px; margin: 40px auto;">
+        <h2 style="margin-bottom: 16px; font-size: 24px;">💡 我的推荐</h2>
+        <p style="font-size: 16px; line-height: 1.6; opacity: 0.95;">
+            <strong>Pattern 2: Geometric (几何)</strong> 是最佳选择！<br>
+            它在保持优雅 Ivy League 风格的同时，提供了现代感和专业性。<br>
+            几何图形不会干扰内容阅读，又能让背景不单调。<br>
+            <br>
+            <em style="opacity: 0.8; font-size: 14px;">如果你更喜欢极简风格，可以选择 Pattern 3: Dots</em>
+        </p>
+    </div>
+</body>
+</html>
