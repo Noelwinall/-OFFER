@@ -3565,6 +3565,667 @@ export const feesData202526: FeesDataMap = {
     mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 15960, amountMax: 15960, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
     sourceNotes: [{ title: "JIS Fees 2025/26", url: "https://es.jis.edu.hk/index.php/admission/fees", retrievedAt: "2026-01-19", evidenceLevel: "SCHOOL_SITE" }],
   },
+
+  // ============================================
+  // 2024/25 學年私立學校學費數據
+  // 注意：此部分數據為 2024/25 學年，需在 UI 顯示提示
+  // ============================================
+
+  // 拔萃女小學
+  "edb_210706000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 86000, amountMax: 86000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "拔萃女小學學費", url: "https://www.dgjs.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖保祿學校（小學部）
+  "edb_212326000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 55000, amountMax: 55000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖保祿學校學費", url: "https://www.spcs.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港培正小學
+  "edb_513350000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 66400, amountMax: 66400 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香港培正小學學費", url: "https://www.puiching.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 九龍塘學校（小學）
+  "edb_512516000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 69000, amountMax: 69000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "九龍塘學校學費", url: "https://www.ktsps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 民生書院小學
+  "edb_575399000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 63000, amountMax: 63000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "民生書院小學學費", url: "https://www.msspri.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖士提反書院附屬小學
+  "edb_517372000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 92500, amountMax: 92500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖士提反書院附屬小學學費", url: "https://www.sscps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 高主教書院小學部
+  "edb_575240000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 57500, amountMax: 57500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "高主教書院小學部學費", url: "https://www.rcps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖類斯中學(小學部)
+  "edb_591904000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 55000, amountMax: 55000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖類斯中學小學部學費", url: "https://www.stlouis.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 嘉諾撒聖心學校私立部
+  "edb_210315000121": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 53680, amountMax: 53680 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "嘉諾撒聖心學校私立部學費", url: "https://www.shcsps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 九龍禮賢學校
+  "edb_138177000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 57800, amountMax: 59900 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "九龍禮賢學校學費", url: "https://www.krs.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 激活英文小學
+  "edb_534285000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 116600, amountMax: 121000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "激活英文小學學費", url: "https://www.gigamind.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 蘇浙小學校
+  "edb_132730000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 43500, amountMax: 43500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "蘇浙小學校學費", url: "https://www.kiangsu.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 崇真小學暨幼稚園（英文部）
+  "edb_514659000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "英文小學部", amountMin: 59420, amountMax: 66000 }, { label: "國際小學部", amountMin: 85840, amountMax: 92840 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "崇真小學暨幼稚園學費", url: "https://www.ttpskg.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖若望英文書院（小學部）
+  "edb_212466000423": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小二", amountMin: 78000, amountMax: 78000 }, { label: "小三至小四", amountMin: 79000, amountMax: 79000 }, { label: "小五", amountMin: 80000, amountMax: 80000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖若望英文書院學費", url: "https://st-johannes.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖嘉勒小學
+  "edb_210021000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 51000, amountMax: 51000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖嘉勒小學學費", url: "https://www.scps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖方濟各英文小學
+  "edb_133566000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 54900, amountMax: 54900 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖方濟各英文小學學費", url: "https://www.sfaeps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖三一堂小學
+  "edb_131350000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 55000, amountMax: 55000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖三一堂小學學費", url: "https://www.htps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖母小學
+  "edb_528617000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 44000, amountMax: 44000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖母小學學費", url: "https://www.olps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 德望小學暨幼稚園
+  "edb_588130000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小三", amountMin: 47500, amountMax: 47500 }, { label: "小四至小六", amountMin: 48500, amountMax: 48500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "德望小學暨幼稚園學費", url: "https://www.ghs.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 九龍塘宣道小學
+  "edb_133442000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 62350, amountMax: 62350 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "九龍塘宣道小學學費", url: "https://www.apskt.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 救恩學校
+  "edb_512273000223": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 67200, amountMax: 67200 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "救恩學校學費", url: "https://www.kauyan.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 九龍真光中學（小學部）
+  "edb_594792000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 63740, amountMax: 65650 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "九龍真光中學小學部學費", url: "https://www.ktlsps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港培道小學
+  "edb_324477000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 62200, amountMax: 62200 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香港培道小學學費", url: "https://www.ptps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖若瑟英文小學
+  "edb_211303000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 53200, amountMax: 53200 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖若瑟英文小學學費", url: "https://www.sjacps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港復臨學校（小學）
+  "edb_513725000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 117500, amountMax: 117500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香港復臨學校學費", url: "https://www.hkaa.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港復臨學校（中學）
+  "edb_513725000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 139000, amountMax: 139000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香港復臨學校學費", url: "https://www.hkaa.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 基督教香港信義會啟信學校
+  "edb_151262000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 73000, amountMax: 73000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "基督教香港信義會啟信學校學費", url: "https://www.elchkls.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 德萃小學
+  "edb_603600000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 100309, amountMax: 100309 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "德萃小學學費", url: "https://www.sthilarys.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 漢師德萃學校
+  "edb_130060000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 100309, amountMax: 100309 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "漢師德萃學校學費", url: "https://www.vnsaash.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 弘立書院（小學）
+  "edb_553190000323": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 221130, amountMax: 240320 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "弘立書院學費", url: "https://academy.isf.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 弘立書院（中學）
+  "edb_553190000333": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 257400, amountMax: 268470 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "弘立書院學費", url: "https://academy.isf.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 保良局蔡繼有學校（小學）
+  "edb_543560000423": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "Year 1-5", amountMin: 99825, amountMax: 99825 }, { label: "Year 6-8", amountMin: 129789, amountMax: 129789 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "保良局蔡繼有學校學費", url: "https://cky.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 保良局蔡繼有學校（中學）
+  "edb_543560000433": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "Year 9-10", amountMin: 145453, amountMax: 145453 }, { label: "Year 11-12", amountMin: 146927, amountMax: 146927 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "保良局蔡繼有學校學費", url: "https://cky.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 港灣學校（小學）
+  "edb_570370000423": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 223700, amountMax: 223700 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 33000, amountMax: 33000, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "債券持有人可豁免" }],
+    sourceNotes: [{ title: "港灣學校學費", url: "https://www.ths.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 港灣學校（小學）- 另一校舍
+  "edb_570370000323": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 223700, amountMax: 223700 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 33000, amountMax: 33000, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "債券持有人可豁免" }],
+    sourceNotes: [{ title: "港灣學校學費", url: "https://www.ths.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 港灣學校（中學）
+  "edb_570370000333": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 223700, amountMax: 223700 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 33000, amountMax: 33000, currency: "HKD", refundable: false, frequency: "ANNUAL", note: "債券持有人可豁免" }],
+    sourceNotes: [{ title: "港灣學校學費", url: "https://www.ths.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 漢鼎書院（小學）
+  "edb_607819000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 198000, amountMax: 198000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "漢鼎書院學費", url: "https://www.hanacademy.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 漢鼎書院（中學）
+  "edb_607819000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 208000, amountMax: 218000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "漢鼎書院學費", url: "https://www.hanacademy.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港威雅學校（小學）
+  "edb_611751000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 188000, amountMax: 188000 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 35000, amountMax: 35000, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "香港威雅學校學費", url: "https://was.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港威雅學校（中學）
+  "edb_611751000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 198000, amountMax: 198000 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "Annual Capital Levy", amountMin: 35000, amountMax: 35000, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "香港威雅學校學費", url: "https://was.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 英藝英文小學
+  "edb_598062000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 85800, amountMax: 85800 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "英藝英文小學學費", url: "https://www.zenith.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港真光中學附屬小學暨幼稚園
+  "edb_132047000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 60000, amountMax: 63650 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香港真光中學附屬小學學費", url: "https://www.tlmshkps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 啓思小學
+  "edb_325279000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小三", amountMin: 140360, amountMax: 140360 }, { label: "小四至小六", amountMin: 143660, amountMax: 143660 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "啓思小學學費", url: "https://www.creativeprisch.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 國際基督教優質音樂中學暨小學（小學）
+  "edb_553867000323": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 63000, amountMax: 63000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "國際基督教優質音樂中學暨小學學費", url: "https://www.icqm.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 國際基督教優質音樂中學暨小學（中學）
+  "edb_553867000333": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 70000, amountMax: 70000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "國際基督教優質音樂中學暨小學學費", url: "https://www.icqm.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 大光德萃書院
+  "edb_615137000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "G7-G10", amountMin: 146443, amountMax: 154935 }, { label: "G11-G12 (A-Level/IB)", amountMin: 174911, amountMax: 181643 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "大光德萃書院學費", url: "https://tkhc.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 地利亞英文小學暨幼稚園
+  "edb_216208000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 35500, amountMax: 37000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "地利亞英文小學暨幼稚園學費", url: "https://www.deliakg.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 九龍塘方方樂趣英文小學
+  "edb_216232000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 104500, amountMax: 104500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "九龍塘方方樂趣英文小學學費", url: "https://sris.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 啓基學校
+  "edb_517100000223": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 72520, amountMax: 72520 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "啓基學校學費", url: "https://www.ccshki.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 新會商會港青基信學校
+  "edb_592188000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 105000, amountMax: 137400 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "新會商會港青基信學校學費", url: "https://www.swcscs.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 培生學校（小學）
+  "edb_581259000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 135000, amountMax: 135000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "培生學校學費", url: "https://gca.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 培生學校（中學）
+  "edb_581259000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 135000, amountMax: 135000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "培生學校學費", url: "https://gca.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 神召會德萃書院（小學部）
+  "edb_216224000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 94985, amountMax: 94985 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "神召會德萃書院學費", url: "https://www.aogsthilarys.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 德雅小學
+  "edb_324434000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小三", amountMin: 44000, amountMax: 44000 }, { label: "小四至小六", amountMin: 46000, amountMax: 46000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "德雅小學學費", url: "https://www.tnps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 鄉師自然學校
+  "edb_112720000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 60000, amountMax: 75000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "鄉師自然學校學費", url: "https://www.gaiaschool.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 保良局建造商會學校
+  "edb_607290000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 115600, amountMax: 119100 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "保良局建造商會學校學費", url: "https://www.plkis.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 中華基督教青年會基雋小學 YMCA Christian Academy
+  "edb_589055000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 144470, amountMax: 144470 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "校園發展費 Capital Development Contribution", amountMin: 6515, amountMax: 6515, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "YMCA Christian Academy學費", url: "https://yca.edu.hk/tuition-and-other-fees/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 樹宏學校 Forest House Waldorf School（小學）
+  "edb_596140000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 138000, amountMax: 147500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "Forest House Waldorf School學費", url: "https://www.foresthouse.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 樹宏學校 Forest House Waldorf School（中學）
+  "edb_596140000233": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中三", amountMin: 138000, amountMax: 147500 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "Forest House Waldorf School學費", url: "https://www.foresthouse.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 劍津英國學校 Oxbridge British School（小學）
+  "edb_617334000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 141120, amountMax: 141120 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "年度資本徵費 Capital Levy", amountMin: 25000, amountMax: 25000, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "Oxbridge British School學費", url: "https://www.oxbridgeschool.hk/admissions/fees/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 劍津英國學校 Oxbridge British School（小學第二校舍）
+  "edb_617334000223": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 141120, amountMax: 141120 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "年度資本徵費 Capital Levy", amountMin: 25000, amountMax: 25000, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "Oxbridge British School學費", url: "https://www.oxbridgeschool.hk/admissions/fees/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 劍津英國學校 Oxbridge British School（中學）
+  "edb_617334000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中三", amountMin: 141120, amountMax: 141120 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "年度資本徵費 Capital Levy", amountMin: 25000, amountMax: 25000, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "Oxbridge British School學費", url: "https://www.oxbridgeschool.hk/admissions/fees/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 劍津英國學校 Oxbridge British School（中學第二校舍）
+  "edb_617334000233": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中三", amountMin: 141120, amountMax: 141120 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "年度資本徵費 Capital Levy", amountMin: 25000, amountMax: 25000, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "Oxbridge British School學費", url: "https://www.oxbridgeschool.hk/admissions/fees/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 安基司學校 Anchors Academy
+  "edb_622079000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 146800, amountMax: 146800 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "安基司學校學費", url: "https://www.anchorsacademy.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 百卉九江書院 Bloom KKCA Academy
+  "edb_617393000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 191510, amountMax: 191510 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "百卉九江書院學費", url: "https://bloom.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 聖道百卉書院 Saint Too Bloom Academy
+  "edb_623067000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "G7-G8", amountMin: 202620, amountMax: 202620 }, { label: "G9-G10", amountMin: 210760, amountMax: 210760 }, { label: "G11-G12", amountMin: 216920, amountMax: 216920 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "聖道百卉書院學費", url: "https://secondary.bloom.edu.hk/en/admissions/tuition-financial-aid", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香島華德福學校 Island Waldorf School（小學）
+  "edb_608319000223": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "Class 1至8", amountMin: 141000, amountMax: 141000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香島華德福學校學費", url: "https://iws.edu.hk/admissions/tuition-fees/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香島華德福學校 Island Waldorf School（中學）
+  "edb_608319000233": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "Class 1至8", amountMin: 141000, amountMax: 141000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香島華德福學校學費", url: "https://iws.edu.hk/admissions/tuition-fees/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 銀礦灣學校 Silvermine Bay School
+  "edb_579009000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "Reception", amountMin: 89920, amountMax: 89920 }, { label: "Year 1-6", amountMin: 97060, amountMax: 97060 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "銀礦灣學校學費", url: "https://silverminebayschool.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 愛培學校 Aoi Pui School（自閉症專門學校）
+  "edb_571130000323": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 305460, amountMax: 306000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "愛培學校學費", url: "https://aoipuischool.hk/enrolment-tuition/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE", note: "自閉症專門學校，$25,455-25,500/月 x 12期" }],
+  },
+
+  // 弘志學校 Discovery Mind Primary School
+  "edb_590371000223": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 124190, amountMax: 124190 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "弘志學校學費", url: "https://discoverymind.edu.hk/primary/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 示昕學校 Shema Academy（小學）
+  "edb_608327000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 68750, amountMax: 68750 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "示昕學校學費", url: "https://shema.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 示昕學校 Shema Academy（中學）
+  "edb_608327000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 71280, amountMax: 71280 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "示昕學校學費", url: "https://shema.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 奧柏學校 AP School（自閉症專門學校）
+  "edb_619957000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 336000, amountMax: 336000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "奧柏學校學費", url: "https://www.apschoolhk.edu.hk/en/tuition-fee", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE", note: "自閉症專門學校，$28,000/月 x 12期" }],
+  },
+
+  // 花園華德福學校 Garden House Waldorf School
+  "edb_620548000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "Class 1至6", amountMin: 143000, amountMax: 143000 }] },
+    mandatoryCharges: [{ type: "OTHER_MANDATORY", label: "註冊費 Registration Fee", amountMin: 1000, amountMax: 1000, currency: "HKD", refundable: false, frequency: "ONE_OFF" }],
+    sourceNotes: [{ title: "花園華德福學校學費", url: "https://www.gardenhouse.edu.hk/zh/tuitions", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 泰來書院 Anantara College
+  "edb_612820000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "中一至中六", amountMin: 29940, amountMax: 29940 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "泰來書院學費", url: "https://anantara.hk/college/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港紫荊書院 Hong Kong Bluebell College
+  "edb_621374000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "G6-G13", amountMin: 148000, amountMax: 168000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "香港紫荊書院學費", url: "https://www.hkbc.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 香港威雅學校（九龍）Wycombe Abbey School Hong Kong (Kowloon)
+  "edb_627267000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "Y9-Y13", amountMin: 198000, amountMax: 233000 }] },
+    mandatoryCharges: [{ type: "CAPITAL_LEVY", label: "建校費 Capital Levy", amountMin: 35000, amountMax: 35000, currency: "HKD", refundable: false, frequency: "ANNUAL" }],
+    sourceNotes: [{ title: "香港威雅學校九龍學費", url: "https://was.edu.hk/tuition-fees-school-calendar/", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // California School（小學）
+  "edb_289515000123": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "P1-P6", amountMin: 17600, amountMax: 35000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "California School學費", url: "https://www.californiaschool.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // California School（中學）
+  "edb_289515000133": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "F1-F7", amountMin: 35000, amountMax: 47850 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "California School學費", url: "https://www.californiaschool.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 蘇浙小學校（北角分校）
+  "edb_132730000223": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 43500, amountMax: 54000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "蘇浙小學校學費", url: "https://www.kcps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
+
+  // 蘇浙小學校（另一校舍）
+  "edb_132730000121": {
+    schoolYear: "2024/25",
+    tuition: { currency: "HKD", bands: [{ label: "小一至小六", amountMin: 43500, amountMax: 54000 }] },
+    mandatoryCharges: [],
+    sourceNotes: [{ title: "蘇浙小學校學費", url: "https://www.kcps.edu.hk", retrievedAt: "2026-01-26", evidenceLevel: "SCHOOL_SITE" }],
+  },
 };
 
 /**

@@ -92,7 +92,7 @@ export interface TuitionStructure {
  */
 export interface SchoolFees {
   /** 學年 */
-  schoolYear: "2025/26";
+  schoolYear: "2024/25" | "2025/26";
   /** 學費結構 */
   tuition: TuitionStructure;
   /** 強制性費用列表 */
