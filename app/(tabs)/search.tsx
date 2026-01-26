@@ -1,14 +1,15 @@
 import { useState, useEffect, useMemo, useContext, useCallback } from "react";
 import { View, Text, TextInput, FlatList, TouchableOpacity, Platform, StyleSheet, ScrollView } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { SchoolCard } from "@/components/school-card";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { FilterSheet } from "@/components/filter-sheet";
 import { ActiveFilterTags } from "@/components/active-filter-tags";
 import { SortSelector } from "@/components/sort-selector";
 import { AIBriefSection } from "@/components/ai-brief-section";
 import { EnhancedBriefModal } from "@/components/enhanced-brief-modal";
 import { canGenerateEnhanced, type UserPlan } from "@/lib/services/briefs";
+import { UpgradeModal } from "@/components/upgrade-modal";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { schools } from "@/data/schools";
 import { FavoritesStorage, MapSetStorage } from "@/lib/storage";
@@ -20,6 +21,10 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useDebounce } from "@/hooks/use-debounce";
 import { SCHOOL_TEXT } from "@/constants/school-text";
 import { groupSchoolsBySession, type GroupedSchool } from "@/lib/school-classification";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 // Stage filter options for quick filter bar
 const STAGE_OPTIONS: { label: string; value: Level }[] = [
@@ -35,7 +40,7 @@ const QUICK_ACTIONS = [
     title: "心儀學校比一比",
     subtitle: "選校更有底",
     icon: "⚖️",
-    route: "/compare-guide",
+    route: "/school-compare",
     color: "#7C3AED",
   },
   {
@@ -59,6 +64,7 @@ const QUICK_ACTIONS = [
 export default function SearchScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const filterContext = useContext(FilterContext);
   const params = useLocalSearchParams<{ openFilter?: string; lockedDistrict?: string }>();
   const [searchInput, setSearchInput] = useState("");
@@ -79,6 +85,9 @@ export default function SearchScreen() {
   // AI 深度分析 Modal 狀態
   const [aiModalVisible, setAiModalVisible] = useState(false);
   const [selectedSchool, setSelectedSchool] = useState<{ id: string; name: string } | null>(null);
+  
+  // Upgrade Modal 狀態
+  const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   // TODO: Replace with real user plan from auth/subscription context
   const userPlan: UserPlan = "free";
@@ -131,14 +140,14 @@ export default function SearchScreen() {
     // Check if user can access enhanced analysis
     const quota = canGenerateEnhanced(userPlan);
     if (!quota.allowed) {
-      // Free user -> navigate to paywall
-      router.push("/paywall" as any);
+      // Free user -> show upgrade modal
+      setShowUpgradeModal(true);
       return;
     }
     // Pro user -> open modal
     setSelectedSchool({ id: schoolId, name: schoolName });
     setAiModalVisible(true);
-  }, [userPlan, router]);
+  }, [userPlan]);
 
   // Close AI modal
   const handleCloseAIModal = useCallback(() => {
@@ -148,8 +157,8 @@ export default function SearchScreen() {
 
   // Handle upgrade press from modal
   const handleUpgradePress = useCallback(() => {
-    router.push("/paywall" as any);
-  }, [router]);
+    setShowUpgradeModal(true);
+  }, []);
 
   // Stable renderItem callback（支援幼稚園班別標籤，小學不顯示）
   const renderSchoolItem = useCallback(({ item }: { item: GroupedSchool }) => (
@@ -207,56 +216,54 @@ export default function SearchScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-      
-      <View style={[styles.container, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.container, { paddingTop: insets.top }]}>
         {/* 頁面標題 */}
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>搜尋學校</Text>
-          <Text style={styles.headerSubtitle}>探索香港優質學校</Text>
+          <Text style={[styles.headerTitle, { color: colors.foreground }]}>搜尋學校</Text>
+          <Text style={[styles.headerSubtitle, { color: colors.muted }]}>探索香港優質學校</Text>
         </View>
 
-        {/* 快捷功能入口 */}
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.quickActionsContainer}
-        >
-          {QUICK_ACTIONS.map((action) => (
-            <TouchableOpacity
-              key={action.id}
-              style={styles.quickActionCard}
-              onPress={() => handleQuickAction(action.route)}
-              activeOpacity={0.7}
-            >
-              <View style={[styles.quickActionIconContainer, { backgroundColor: `${action.color}20` }]}>
-                <Text style={styles.quickActionIcon}>{action.icon}</Text>
-              </View>
-              <Text style={styles.quickActionTitle}>{action.title}</Text>
-              <Text style={styles.quickActionSubtitle}>{action.subtitle}</Text>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
+        {/* 快捷功能入口 - 僅在無搜尋結果時顯示 */}
+        {!shouldShowList && (
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.quickActionsContainer}
+            style={{ maxHeight: 130 }}
+          >
+            {QUICK_ACTIONS.map((action) => (
+              <TouchableOpacity
+                key={action.id}
+                style={styles.quickActionCard}
+                onPress={() => handleQuickAction(action.route)}
+                activeOpacity={0.7}
+              >
+                <View style={[styles.quickActionIconContainer, { backgroundColor: `${action.color}20` }]}>
+                  <Text style={styles.quickActionIcon}>{action.icon}</Text>
+                </View>
+                <Text style={styles.quickActionTitle}>{action.title}</Text>
+                <Text style={styles.quickActionSubtitle}>{action.subtitle}</Text>
+              </TouchableOpacity>
+            ))}
+          </ScrollView>
+        )}
 
         {/* 搜尋框 */}
         <View style={styles.searchContainer}>
-          <View style={styles.searchBox}>
-            <IconSymbol name="magnifyingglass" size={20} color="rgba(255,255,255,0.5)" />
+          <View style={[styles.searchBox, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+            <IconSymbol name="magnifyingglass" size={20} color={colors.muted} />
             <TextInput
-              style={styles.searchInput}
+              style={[styles.searchInput, { color: colors.foreground }]}
               placeholder={SCHOOL_TEXT.SEARCH_PLACEHOLDER}
-              placeholderTextColor="rgba(255,255,255,0.4)"
+              placeholderTextColor={colors.muted}
               value={searchInput}
               onChangeText={setSearchInput}
               returnKeyType="search"
             />
             {searchInput.length > 0 && (
               <TouchableOpacity onPress={() => setSearchInput("")}>
-                <IconSymbol name="xmark" size={18} color="rgba(255,255,255,0.5)" />
+                <IconSymbol name="xmark" size={18} color={colors.muted} />
               </TouchableOpacity>
             )}
             <TouchableOpacity
@@ -264,7 +271,7 @@ export default function SearchScreen() {
               style={styles.filterButton}
               hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
             >
-              <IconSymbol name="slider.horizontal.3" size={20} color="#00D9FF" />
+              <IconSymbol name="slider.horizontal.3" size={20} color={colors.primary} />
             </TouchableOpacity>
           </View>
         </View>
@@ -275,7 +282,7 @@ export default function SearchScreen() {
         {/* 結果統計與排序 - 僅在有搜尋/篩選時顯示 */}
         {shouldShowList && (
           <View style={styles.resultStats}>
-            <Text style={styles.resultText}>
+            <Text style={[styles.resultText, { color: colors.muted }]}>
               找到 {displaySchools.length} 所學校
             </Text>
             <SortSelector />
@@ -301,7 +308,7 @@ export default function SearchScreen() {
             data={displaySchools}
             keyExtractor={(item) => item.id}
             renderItem={renderSchoolItem}
-            contentContainerStyle={{ paddingVertical: 8, paddingBottom: 100 }}
+            contentContainerStyle={{ paddingVertical: 8, paddingBottom: 120 }}
             // Performance optimizations for 3510 schools
             initialNumToRender={12}
             maxToRenderPerBatch={15}
@@ -315,20 +322,26 @@ export default function SearchScreen() {
             }
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
-                <Text style={styles.emptyText}>
+                <Text style={[styles.emptyText, { color: colors.muted }]}>
                   {debouncedSearch ? SCHOOL_TEXT.NO_RESULTS : SCHOOL_TEXT.EMPTY_LIST}
                 </Text>
                 {debouncedSearch && (
-                  <Text style={styles.emptyHint}>{SCHOOL_TEXT.NO_RESULTS_HINT}</Text>
+                  <Text style={[styles.emptyHint, { color: colors.muted, opacity: 0.7 }]}>{SCHOOL_TEXT.NO_RESULTS_HINT}</Text>
                 )}
+              </View>
+            }
+            ListFooterComponent={
+              <View style={styles.listFooterDisclaimer}>
+                <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_SOURCE}</Text>
+                <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_DISCLAIMER}</Text>
               </View>
             }
           />
         ) : (
           <View style={styles.welcomeContainer}>
             <Text style={styles.welcomeIcon}>🔍</Text>
-            <Text style={styles.welcomeTitle}>開始搜尋學校</Text>
-            <Text style={styles.welcomeText}>
+            <Text style={[styles.welcomeTitle, { color: colors.foreground }]}>開始搜尋學校</Text>
+            <Text style={[styles.welcomeText, { color: colors.muted }]}>
               輸入學校名稱，或先選取您想了解的學段，{"\n"}找到適合您的學校
             </Text>
             {/* 學段選擇按鈕 - 置中醒目 */}
@@ -336,23 +349,23 @@ export default function SearchScreen() {
               {STAGE_OPTIONS.map((option) => (
                 <TouchableOpacity
                   key={option.value}
-                  style={styles.stageButton}
+                  style={[styles.stageButton, { backgroundColor: `${colors.primary}26`, borderColor: `${colors.primary}66` }]}
                   onPress={() => handleStageSelect(option.value)}
                   activeOpacity={0.7}
                 >
-                  <Text style={styles.stageButtonText}>{option.label}</Text>
+                  <Text style={[styles.stageButtonText, { color: colors.primary }]}>{option.label}</Text>
                 </TouchableOpacity>
               ))}
             </View>
+            {/* 免責聲明 - 歡迎頁面底部 */}
+            <View style={styles.welcomeDisclaimer}>
+              <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_SOURCE}</Text>
+              <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_DISCLAIMER}</Text>
+            </View>
           </View>
         )}
-
-        {/* 免責聲明 */}
-        <View style={styles.disclaimerContainer}>
-          <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_SOURCE}</Text>
-          <Text style={styles.disclaimerText}>{SCHOOL_TEXT.DATA_DISCLAIMER}</Text>
         </View>
-      </View>
+      </MaxWidthWrapper>
 
       {/* AI 深度分析 Modal */}
       {selectedSchool && (
@@ -365,6 +378,12 @@ export default function SearchScreen() {
           onUpgradePress={handleUpgradePress}
         />
       )}
+
+      {/* 升級 Modal */}
+      <UpgradeModal
+        visible={showUpgradeModal}
+        onClose={() => setShowUpgradeModal(false)}
+      />
     </View>
   );
 }
@@ -374,88 +393,83 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    paddingHorizontal: 24,
-    paddingTop: 16,
-    paddingBottom: 8,
+    paddingHorizontal: Spacing.xl,
+    paddingTop: Spacing.md,
+    paddingBottom: Spacing.xs,
   },
   headerTitle: {
+    ...TypographyStyles.title,
     fontSize: 28,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
     letterSpacing: 1,
   },
   headerSubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 4,
+    ...TypographyStyles.caption,
+    marginTop: Spacing.xs,
   },
   quickActionsContainer: {
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    gap: 12,
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    gap: 6,
   },
   quickActionCard: {
-    width: 100,
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    padding: 12,
+    width: 90,
+    height: 110,
+    backgroundColor: "rgba(255,255,255,0.6)",
+    borderRadius: BorderRadiusPresets.card,
+    paddingVertical: 10,
+    paddingHorizontal: 8,
     alignItems: "center",
-    marginRight: 12,
+    justifyContent: "flex-start",
+    marginRight: 8,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
+    borderColor: "rgba(0,0,0,0.08)",
   },
   quickActionIconContainer: {
-    width: 44,
-    height: 44,
-    borderRadius: 22,
+    width: 36,
+    height: 36,
+    borderRadius: 18,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 8,
+    marginBottom: 6,
   },
   quickActionIcon: {
-    fontSize: 20,
+    fontSize: 16,
   },
   quickActionTitle: {
-    fontSize: 13,
+    fontSize: 11,
     fontWeight: "600",
-    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     textAlign: "center",
     marginBottom: 2,
+    lineHeight: 14,
   },
   quickActionSubtitle: {
-    fontSize: 10,
-    color: "rgba(255,255,255,0.5)",
+    fontSize: 9,
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
+    lineHeight: 12,
   },
   searchContainer: {
     paddingHorizontal: 24,
-    paddingVertical: 12,
+    paddingVertical: 8,
   },
   searchBox: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.1)",
-    borderRadius: 16,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
+    borderRadius: BorderRadiusPresets.card,
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: SpacingPresets.buttonPaddingVertical,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.15)",
-    gap: 12,
+    gap: Spacing.md,
   },
   searchInput: {
     flex: 1,
-    color: "#FFFFFF",
     fontSize: 16,
     fontFamily: "NotoSerifSC-Regular",
   },
   filterButton: {
     paddingLeft: 12,
     borderLeftWidth: 1,
-    borderLeftColor: "rgba(255,255,255,0.2)",
   },
   resultStats: {
     flexDirection: "row",
@@ -466,7 +480,6 @@ const styles = StyleSheet.create({
   },
   resultText: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
     fontFamily: "NotoSerifSC-Regular",
   },
   emptyContainer: {
@@ -475,32 +488,32 @@ const styles = StyleSheet.create({
     paddingVertical: 80,
   },
   emptyText: {
-    color: "rgba(255,255,255,0.5)",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 16,
   },
   emptyHint: {
-    color: "rgba(255,255,255,0.35)",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 13,
     marginTop: 8,
   },
-  disclaimerContainer: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
+  listFooterDisclaimer: {
     paddingHorizontal: 24,
-    paddingVertical: 12,
-    backgroundColor: "rgba(15, 22, 41, 0.9)",
+    paddingVertical: 20,
+    marginTop: 16,
+  },
+  welcomeDisclaimer: {
+    paddingHorizontal: 24,
+    paddingVertical: 20,
+    marginTop: 40,
   },
   disclaimerText: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.35)",
+    color: "#706B5E",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
+    lineHeight: 16,
   },
   welcomeContainer: {
     flex: 1,
@@ -516,14 +529,12 @@ const styles = StyleSheet.create({
   welcomeTitle: {
     fontSize: 20,
     fontWeight: "600",
-    color: "#FFFFFF",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 12,
     textAlign: "center",
   },
   welcomeText: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
     fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
     lineHeight: 22,
@@ -539,14 +550,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 14,
     borderRadius: 20,
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
     borderWidth: 1.5,
-    borderColor: "rgba(0, 217, 255, 0.4)",
   },
   stageButtonText: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#00D9FF",
     fontFamily: "NotoSerifSC-Bold",
   },
 });

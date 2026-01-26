@@ -4,10 +4,15 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { SCHOOLS } from "@/data/schools";
 import { FavoritesStorage } from "@/lib/storage";
 import type { School } from "@/types/school";
 import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS } from "@/types/school";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 import Animated, {
   useSharedValue,
   useAnimatedStyle,
@@ -63,16 +68,16 @@ const formatLanguages = (school: School): string => {
   return "—";
 };
 
-// 學校類型標籤顏色
-const getTypeColor = (category: string): string => {
-  const colors: Record<string, string> = {
-    "國際": "#7C3AED",
-    "直資": "#10B981",
-    "私立": "#F59E0B",
-    "資助": "#3B82F6",
-    "公立": "#6B7280",
+// 學校類型標籤顏色（部分顏色不在主题中，保留）
+const getTypeColor = (category: string, themeColors: ReturnType<typeof useColors>): string => {
+  const categoryColors: Record<string, string> = {
+    "國際": "#7C3AED", // Keep custom color
+    "直資": themeColors.success,
+    "私立": themeColors.warning,
+    "資助": "#3B82F6", // Keep custom color
+    "公立": "#6B7280", // Keep custom color
   };
-  return colors[category] || "#6B7280";
+  return categoryColors[category] || themeColors.muted;
 };
 
 interface SwipeCardProps {
@@ -82,9 +87,11 @@ interface SwipeCardProps {
   onSwipeLeft: () => void;
   onSwipeRight: () => void;
   isTop: boolean;
+  colors: ReturnType<typeof useColors>;
+  styles: ReturnType<typeof StyleSheet.create>;
 }
 
-function SwipeCard({ school, index, totalCards, onSwipeLeft, onSwipeRight, isTop }: SwipeCardProps) {
+function SwipeCard({ school, index, totalCards, onSwipeLeft, onSwipeRight, isTop, colors, styles }: SwipeCardProps) {
   const translateX = useSharedValue(0);
   const translateY = useSharedValue(0);
   const rotation = useSharedValue(0);
@@ -159,7 +166,7 @@ function SwipeCard({ school, index, totalCards, onSwipeLeft, onSwipeRight, isTop
     <GestureDetector gesture={gesture}>
       <Animated.View style={[styles.card, cardStyle]}>
         <LinearGradient
-          colors={["#1e3a5f", "#1a2744", "#0F1629"]}
+          colors={[colors.surface, colors.background]}
           style={styles.cardGradient}
         >
           {/* 收藏標籤 */}
@@ -173,8 +180,8 @@ function SwipeCard({ school, index, totalCards, onSwipeLeft, onSwipeRight, isTop
           </Animated.View>
 
           {/* 學校類型標籤 */}
-          <View style={[styles.typeTag, { backgroundColor: `${getTypeColor(school.category)}20` }]}>
-            <Text style={[styles.typeTagText, { color: getTypeColor(school.category) }]}>
+          <View style={[styles.typeTag, { backgroundColor: `${getTypeColor(school.category, colors)}33` }]}>
+            <Text style={[styles.typeTagText, { color: getTypeColor(school.category, colors) }]}>
               {school.category}學校
             </Text>
           </View>
@@ -224,6 +231,7 @@ function SwipeCard({ school, index, totalCards, onSwipeLeft, onSwipeRight, isTop
 export default function SwipeExploreScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const [schools, setSchools] = useState<School[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [skippedCount, setSkippedCount] = useState(0);
@@ -276,45 +284,332 @@ export default function SwipeExploreScreen() {
   const remainingCards = schools.length - currentIndex;
   const isFinished = currentIndex >= schools.length;
 
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingBottom: Spacing.md,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.surface + "1A",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+      letterSpacing: 1,
+    },
+    placeholder: {
+      width: 40,
+    },
+    statsContainer: {
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      paddingVertical: Spacing.md,
+      marginHorizontal: Spacing.xl,
+      backgroundColor: colors.surface + "0D",
+      borderRadius: BorderRadiusPresets.card,
+      marginBottom: Spacing.lg,
+    },
+    statItem: {
+      alignItems: "center",
+      paddingHorizontal: Spacing.xl,
+    },
+    statNumber: {
+      ...TypographyStyles.title,
+      fontSize: 24,
+      color: colors.foreground,
+    },
+    statLabel: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.muted,
+      marginTop: 2,
+    },
+    statDivider: {
+      width: 1,
+      height: 32,
+      backgroundColor: colors.border + "80",
+    },
+    cardsContainer: {
+      flex: 1,
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    card: {
+      position: "absolute",
+      width: CARD_WIDTH,
+      height: CARD_HEIGHT,
+      borderRadius: BorderRadius.xl,
+      overflow: "hidden",
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 8 },
+      shadowOpacity: 0.3,
+      shadowRadius: 16,
+      elevation: 10,
+    },
+    cardGradient: {
+      flex: 1,
+      padding: Spacing.xl,
+      borderWidth: 1,
+      borderColor: colors.border + "80",
+      borderRadius: BorderRadius.xl,
+    },
+    likeLabel: {
+      position: "absolute",
+      top: Spacing.xl,
+      right: Spacing.xl,
+      backgroundColor: colors.primary + "33",
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.sm,
+      borderRadius: BorderRadius.sm,
+      borderWidth: 2,
+      borderColor: colors.primary,
+      transform: [{ rotate: "15deg" }],
+    },
+    likeLabelText: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.primary,
+    },
+    nopeLabel: {
+      position: "absolute",
+      top: Spacing.xl,
+      left: Spacing.xl,
+      backgroundColor: colors.error + "33",
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.sm,
+      borderRadius: BorderRadius.sm,
+      borderWidth: 2,
+      borderColor: colors.error,
+      transform: [{ rotate: "-15deg" }],
+    },
+    nopeLabelText: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.error,
+    },
+    typeTag: {
+      alignSelf: "flex-start",
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.sm,
+      marginBottom: Spacing.lg,
+    },
+    typeTagText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      fontWeight: TypographyStyles.heading.fontWeight,
+    },
+    schoolName: {
+      ...TypographyStyles.title,
+      fontSize: 24,
+      color: colors.foreground,
+      marginBottom: Spacing.xs,
+    },
+    schoolLevel: {
+      ...TypographyStyles.small,
+      fontSize: 14,
+      color: colors.muted,
+      marginBottom: Spacing.xl,
+    },
+    infoSection: {
+      gap: Spacing.sm,
+      marginBottom: Spacing.xl,
+    },
+    infoRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.sm,
+    },
+    infoIcon: {
+      fontSize: 16,
+    },
+    infoText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.foreground + "CC",
+      flex: 1,
+    },
+    highlightsSection: {
+      flex: 1,
+    },
+    highlightsTitle: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.primary,
+      marginBottom: Spacing.sm,
+    },
+    highlightsText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      color: colors.foreground + "B3",
+      lineHeight: 22,
+    },
+    swipeHint: {
+      alignItems: "center",
+      paddingTop: Spacing.lg,
+      borderTopWidth: 1,
+      borderTopColor: colors.border + "80",
+    },
+    swipeHintText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted + "66",
+    },
+    actionsContainer: {
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+      paddingHorizontal: Spacing.xl,
+      gap: Spacing.xl,
+    },
+    actionButton: {
+      width: 64,
+      height: 64,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.surface + "1A",
+      justifyContent: "center",
+      alignItems: "center",
+      borderWidth: 1,
+      borderColor: colors.border + "33",
+    },
+    likeButton: {
+      backgroundColor: colors.primary + "1A",
+      borderColor: colors.primary + "4D",
+    },
+    actionIcon: {
+      fontSize: 24,
+      color: colors.foreground,
+    },
+    actionLabel: {
+      ...TypographyStyles.tiny,
+      fontSize: 10,
+      color: colors.muted,
+      marginTop: 2,
+    },
+    detailButton: {
+      paddingHorizontal: Spacing.xl,
+      paddingVertical: Spacing.md,
+      backgroundColor: colors.surface + "1A",
+      borderRadius: BorderRadius.xl,
+      borderWidth: 1,
+      borderColor: colors.border + "33",
+    },
+    detailButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground,
+    },
+    finishedContainer: {
+      alignItems: "center",
+      padding: Spacing["2xl"],
+    },
+    finishedEmoji: {
+      fontSize: 64,
+      marginBottom: Spacing.lg,
+    },
+    finishedTitle: {
+      ...TypographyStyles.title,
+      fontSize: 28,
+      color: colors.foreground,
+      marginBottom: Spacing.md,
+    },
+    finishedText: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      color: colors.muted,
+      textAlign: "center",
+      lineHeight: 24,
+      marginBottom: Spacing["2xl"],
+    },
+    restartButton: {
+      backgroundColor: colors.primary,
+      paddingHorizontal: Spacing["2xl"],
+      paddingVertical: Spacing.lg,
+      borderRadius: BorderRadiusPresets.button,
+      marginBottom: Spacing.lg,
+      shadowColor: colors.primary,
+      shadowOffset: { width: 0, height: 4 },
+      shadowOpacity: 0.3,
+      shadowRadius: 12,
+      elevation: 8,
+    },
+    restartButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.background,
+    },
+    viewFavoritesButton: {
+      paddingHorizontal: Spacing["2xl"],
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadius.xl,
+      borderWidth: 1,
+      borderColor: colors.border + "4D",
+    },
+    viewFavoritesButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: "500",
+      color: colors.foreground,
+    },
+  });
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
         <LinearGradient
-          colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
+          colors={[colors.background, colors.surface, colors.surface, colors.surface]}
           locations={[0, 0.3, 0.7, 1]}
           style={StyleSheet.absoluteFill}
         />
 
-        {/* 頂部導航 */}
-        <View style={[styles.header, { paddingTop: insets.top }]}>
-          <TouchableOpacity
-            onPress={() => router.back()}
-            style={styles.backButton}
-            activeOpacity={0.7}
-          >
-            <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
-          </TouchableOpacity>
-          <Text style={styles.headerTitle}>碰碰運氣劃一劃</Text>
-          <View style={styles.placeholder} />
-        </View>
+        <MaxWidthWrapper>
+          {/* 頂部導航 */}
+          <View style={[styles.header, { paddingTop: insets.top }]}>
+            <TouchableOpacity
+              onPress={() => router.back()}
+              style={styles.backButton}
+              activeOpacity={0.7}
+            >
+              <IconSymbol name="chevron.right" size={24} color={colors.foreground} style={{ transform: [{ rotate: "180deg" }] }} />
+            </TouchableOpacity>
+            <Text style={styles.headerTitle}>碰碰運氣劃一劃</Text>
+            <View style={styles.placeholder} />
+          </View>
+        </MaxWidthWrapper>
 
-        {/* 統計信息 */}
-        <View style={styles.statsContainer}>
-          <View style={styles.statItem}>
-            <Text style={styles.statNumber}>{skippedCount}</Text>
-            <Text style={styles.statLabel}>已跳過</Text>
+        <MaxWidthWrapper>
+          {/* 統計信息 */}
+          <View style={styles.statsContainer}>
+            <View style={styles.statItem}>
+              <Text style={styles.statNumber}>{skippedCount}</Text>
+              <Text style={styles.statLabel}>已跳過</Text>
+            </View>
+            <View style={styles.statDivider} />
+            <View style={styles.statItem}>
+              <Text style={styles.statNumber}>{remainingCards}</Text>
+              <Text style={styles.statLabel}>剩餘</Text>
+            </View>
+            <View style={styles.statDivider} />
+            <View style={styles.statItem}>
+              <Text style={[styles.statNumber, { color: colors.primary }]}>{savedCount}</Text>
+              <Text style={styles.statLabel}>已收藏</Text>
+            </View>
           </View>
-          <View style={styles.statDivider} />
-          <View style={styles.statItem}>
-            <Text style={styles.statNumber}>{remainingCards}</Text>
-            <Text style={styles.statLabel}>剩餘</Text>
-          </View>
-          <View style={styles.statDivider} />
-          <View style={styles.statItem}>
-            <Text style={[styles.statNumber, { color: "#00D9FF" }]}>{savedCount}</Text>
-            <Text style={styles.statLabel}>已收藏</Text>
-          </View>
-        </View>
+        </MaxWidthWrapper>
 
         {/* 卡片區域 */}
         <View style={styles.cardsContainer}>
@@ -354,6 +649,8 @@ export default function SwipeExploreScreen() {
                   onSwipeLeft={handleSwipeLeft}
                   onSwipeRight={handleSwipeRight}
                   isTop={index === arr.length - 1}
+                  colors={colors}
+                  styles={styles}
                 />
               ))
           )}
@@ -385,7 +682,7 @@ export default function SwipeExploreScreen() {
               activeOpacity={0.7}
             >
               <Text style={styles.actionIcon}>♥</Text>
-              <Text style={[styles.actionLabel, { color: "#00D9FF" }]}>收藏</Text>
+              <Text style={[styles.actionLabel, { color: colors.primary }]}>收藏</Text>
             </TouchableOpacity>
           </View>
         )}
@@ -393,291 +690,3 @@ export default function SwipeExploreScreen() {
     </GestureHandlerRootView>
   );
 }
-
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingBottom: 12,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
-  },
-  placeholder: {
-    width: 40,
-  },
-  statsContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: 12,
-    marginHorizontal: 24,
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    marginBottom: 16,
-  },
-  statItem: {
-    alignItems: "center",
-    paddingHorizontal: 24,
-  },
-  statNumber: {
-    fontSize: 24,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  statLabel: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 2,
-  },
-  statDivider: {
-    width: 1,
-    height: 32,
-    backgroundColor: "rgba(255,255,255,0.1)",
-  },
-  cardsContainer: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  card: {
-    position: "absolute",
-    width: CARD_WIDTH,
-    height: CARD_HEIGHT,
-    borderRadius: 24,
-    overflow: "hidden",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.3,
-    shadowRadius: 16,
-    elevation: 10,
-  },
-  cardGradient: {
-    flex: 1,
-    padding: 24,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
-    borderRadius: 24,
-  },
-  likeLabel: {
-    position: "absolute",
-    top: 24,
-    right: 24,
-    backgroundColor: "rgba(0, 217, 255, 0.2)",
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 8,
-    borderWidth: 2,
-    borderColor: "#00D9FF",
-    transform: [{ rotate: "15deg" }],
-  },
-  likeLabelText: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  nopeLabel: {
-    position: "absolute",
-    top: 24,
-    left: 24,
-    backgroundColor: "rgba(239, 68, 68, 0.2)",
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    borderRadius: 8,
-    borderWidth: 2,
-    borderColor: "#EF4444",
-    transform: [{ rotate: "-15deg" }],
-  },
-  nopeLabelText: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#EF4444",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  typeTag: {
-    alignSelf: "flex-start",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 8,
-    marginBottom: 16,
-  },
-  typeTagText: {
-    fontSize: 13,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  schoolName: {
-    fontSize: 24,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 4,
-  },
-  schoolLevel: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 20,
-  },
-  infoSection: {
-    gap: 10,
-    marginBottom: 20,
-  },
-  infoRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 10,
-  },
-  infoIcon: {
-    fontSize: 16,
-  },
-  infoText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.8)",
-    fontFamily: "NotoSerifSC-Regular",
-    flex: 1,
-  },
-  highlightsSection: {
-    flex: 1,
-  },
-  highlightsTitle: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 8,
-  },
-  highlightsText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.7)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 22,
-  },
-  swipeHint: {
-    alignItems: "center",
-    paddingTop: 16,
-    borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
-  },
-  swipeHintText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  actionsContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingHorizontal: 24,
-    gap: 20,
-  },
-  actionButton: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
-  },
-  likeButton: {
-    backgroundColor: "rgba(0, 217, 255, 0.1)",
-    borderColor: "rgba(0, 217, 255, 0.3)",
-  },
-  actionIcon: {
-    fontSize: 24,
-    color: "#FFFFFF",
-  },
-  actionLabel: {
-    fontSize: 10,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginTop: 2,
-  },
-  detailButton: {
-    paddingHorizontal: 24,
-    paddingVertical: 14,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    borderRadius: 24,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
-  },
-  detailButtonText: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  finishedContainer: {
-    alignItems: "center",
-    padding: 32,
-  },
-  finishedEmoji: {
-    fontSize: 64,
-    marginBottom: 16,
-  },
-  finishedTitle: {
-    fontSize: 28,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 12,
-  },
-  finishedText: {
-    fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    textAlign: "center",
-    lineHeight: 24,
-    marginBottom: 32,
-  },
-  restartButton: {
-    backgroundColor: "#00D9FF",
-    paddingHorizontal: 40,
-    paddingVertical: 16,
-    borderRadius: 28,
-    marginBottom: 16,
-    shadowColor: "#00D9FF",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 12,
-    elevation: 8,
-  },
-  restartButtonText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#0F1629",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  viewFavoritesButton: {
-    paddingHorizontal: 32,
-    paddingVertical: 14,
-    borderRadius: 24,
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.3)",
-  },
-  viewFavoritesButtonText: {
-    fontSize: 14,
-    fontWeight: "500",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-});

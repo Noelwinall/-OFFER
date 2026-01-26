@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统一底色方案 - 首页设计图对比</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #D4B896 0%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .concept-box {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%);
+            border-radius: 20px;
+            border: 2px solid rgba(212, 184, 150, 0.3);
+        }
+
+        .concept-box h2 {
+            font-size: 24px;
+            color: #D4B896;
+            margin-bottom: 16px;
+        }
+
+        .concept-box p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto 60px;
+        }
+
+        .screen-card {
+            background: #1a1a1a;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .screen-header {
+            padding: 20px;
+            background: #111;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .screen-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #D4B896;
+            margin-bottom: 8px;
+        }
+
+        .screen-desc {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .screen-preview {
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 统一底色 */
+        .unified-bg {
+            background: #FAF8F5;
+            position: relative;
+        }
+
+        /* 首页 - 带深色渐变蒙层 + 设计图 */
+        .home-screen {
+            background: #FAF8F5;
+            position: relative;
+        }
+
+        .home-screen::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(15, 22, 41, 0.92) 0%,
+                rgba(30, 58, 95, 0.85) 30%,
+                rgba(44, 74, 110, 0.7) 50%,
+                rgba(30, 58, 95, 0.4) 75%,
+                rgba(250, 248, 245, 0) 100%
+            );
+        }
+
+        /* 设计图元素 */
+        .design-graphic {
+            position: absolute;
+            opacity: 0.12;
+        }
+
+        /* 阶梯 */
+        .stairs {
+            position: absolute;
+            right: 10%;
+            bottom: 20%;
+        }
+
+        .stair {
+            background: #D4B896;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .stair1 { width: 120px; height: 8px; }
+        .stair2 { width: 100px; height: 8px; margin-left: 20px; }
+        .stair3 { width: 80px; height: 8px; margin-left: 40px; }
+        .stair4 { width: 60px; height: 8px; margin-left: 60px; }
+
+        /* 柱子 */
+        .columns {
+            position: absolute;
+            left: 40px;
+            bottom: 15%;
+            display: flex;
+            gap: 30px;
+            opacity: 0.08;
+        }
+
+        .column {
+            width: 6px;
+            background: #8B7355;
+            border-radius: 3px;
+        }
+
+        .column1 { height: 180px; }
+        .column2 { height: 210px; }
+        .column3 { height: 180px; }
+
+        .column-top {
+            width: 90px;
+            height: 4px;
+            background: #D4B896;
+            border-radius: 2px;
+            position: absolute;
+            top: -10px;
+        }
+
+        /* 书本 */
+        .books {
+            position: absolute;
+            right: 60px;
+            bottom: 10%;
+            opacity: 0.1;
+        }
+
+        .book {
+            background: #D4B896;
+            border-radius: 3px;
+            margin-bottom: 8px;
+        }
+
+        .book1 { width: 140px; height: 18px; background: #D4B896; }
+        .book2 { width: 130px; height: 16px; background: #8B7355; }
+        .book3 { width: 120px; height: 14px; background: #D4B896; }
+
+        /* 星星 */
+        .stars {
+            position: absolute;
+            right: 15%;
+            top: 12%;
+            opacity: 0.15;
+        }
+
+        .star {
+            width: 30px;
+            height: 30px;
+            background: #D4B896;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .small-stars {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .small-star {
+            width: 4px;
+            height: 4px;
+            background: #D4B896;
+            border-radius: 50%;
+        }
+
+        /* 其他页面 - 只有 dots */
+        .other-screen {
+            background: #FAF8F5;
+            background-image: radial-gradient(circle, rgba(212, 184, 150, 0.15) 1.5px, transparent 1.5px);
+            background-size: 40px 40px;
+        }
+
+        /* 内容模拟 */
+        .screen-content {
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+        }
+
+        .home-content {
+            text-align: center;
+        }
+
+        .home-logo {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+        }
+
+        .home-title {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            color: white;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .home-subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 40px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 14px 36px;
+            background: rgba(212, 184, 150, 0.9);
+            color: #1E3A5F;
+            border-radius: 14px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .other-content {
+            padding-top: 20px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2D2013;
+            margin-bottom: 20px;
+        }
+
+        .mock-card {
+            background: #FFF9F0;
+            border: 1px solid #E8E2D5;
+            border-radius: 24px;
+            padding: 20px;
+            margin-bottom: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2D2013;
+            margin-bottom: 8px;
+        }
+
+        .card-tags {
+            display: flex;
+            gap: 6px;
+        }
+
+        .card-tag {
+            padding: 4px 10px;
+            background: #1E3A5F;
+            color: white;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(212, 184, 150, 0.1) 0%, rgba(30, 58, 95, 0.1) 100%);
+            border-radius: 24px;
+            border: 2px solid rgba(212, 184, 150, 0.3);
+        }
+
+        .highlight-box h3 {
+            font-size: 28px;
+            color: #D4B896;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            font-size: 16px;
+            line-height: 2;
+            color: #ccc;
+        }
+
+        .highlight-box li {
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .highlight-box li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #D4B896;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎨 统一底色设计方案</h1>
+        <p>首页用设计图区分，其他页面保持简洁</p>
+    </div>
+
+    <div class="concept-box">
+        <h2>💡 设计理念</h2>
+        <p>
+            <strong>统一底色</strong>：所有页面都使用 Ivy League 奶油白 (#FAF8F5)，确保视觉一致性。<br><br>
+            <strong>首页差异化</strong>：通过深色渐变蒙层 + 大气设计图（阶梯、柱子、书本、星星）营造仪式感和品牌印象。<br><br>
+            <strong>其他页面</strong>：保持极简 dots 图案，专注内容，不干扰阅读。
+        </p>
+    </div>
+
+    <div class="comparison-grid">
+        <!-- 首页 -->
+        <div class="screen-card">
+            <div class="screen-header">
+                <div class="screen-title">首页 (Home)</div>
+                <div class="screen-desc">深色蒙层 + 大气设计图</div>
+            </div>
+            <div class="screen-preview home-screen">
+                <!-- 设计图元素 -->
+                <div class="stairs design-graphic">
+                    <div class="stair stair1"></div>
+                    <div class="stair stair2"></div>
+                    <div class="stair stair3"></div>
+                    <div class="stair stair4"></div>
+                </div>
+
+                <div class="columns design-graphic">
+                    <div class="column-top"></div>
+                    <div class="column column1"></div>
+                    <div class="column column2"></div>
+                    <div class="column column3"></div>
+                </div>
+
+                <div class="books design-graphic">
+                    <div class="book book1"></div>
+                    <div class="book book2"></div>
+                    <div class="book book3"></div>
+                </div>
+
+                <div class="stars design-graphic">
+                    <div class="star"></div>
+                    <div class="small-stars">
+                        <div class="small-star"></div>
+                        <div class="small-star"></div>
+                        <div class="small-star"></div>
+                    </div>
+                </div>
+
+                <!-- 内容 -->
+                <div class="screen-content home-content">
+                    <div class="home-logo">
+                        <span style="color: #D4B896;">有</span>OFFER
+                    </div>
+                    <div class="home-title">
+                        孩子香港上學<br>不發愁
+                    </div>
+                    <div class="home-subtitle">
+                        一站式香港申校APP
+                    </div>
+                    <div class="home-button">
+                        問答選校
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 其他页面 -->
+        <div class="screen-card">
+            <div class="screen-header">
+                <div class="screen-title">其他页面 (Search / Favorites)</div>
+                <div class="screen-desc">奶油白底色 + 极简 dots</div>
+            </div>
+            <div class="screen-preview other-screen">
+                <div class="screen-content other-content">
+                    <div class="page-title">搜尋學校</div>
+                    
+                    <div class="mock-card">
+                        <div class="card-title">拔萃女書院</div>
+                        <div style="font-size: 11px; color: #706B5E; margin-bottom: 8px;">
+                            Diocesan Girls' School
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">直資</span>
+                            <span class="card-tag">中學</span>
+                            <span class="card-tag">油尖旺</span>
+                        </div>
+                    </div>
+
+                    <div class="mock-card">
+                        <div class="card-title">聖保羅男女中學</div>
+                        <div style="font-size: 11px; color: #706B5E; margin-bottom: 8px;">
+                            St. Paul's Co-educational College
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">直資</span>
+                            <span class="card-tag">中學</span>
+                            <span class="card-tag">中西區</span>
+                        </div>
+                    </div>
+
+                    <div class="mock-card">
+                        <div class="card-title">哈羅香港國際學校</div>
+                        <div style="font-size: 11px; color: #706B5E; margin-bottom: 8px;">
+                            Harrow International School Hong Kong
+                        </div>
+                        <div class="card-tags">
+                            <span class="card-tag">國際</span>
+                            <span class="card-tag">中學</span>
+                            <span class="card-tag">屯門</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h3>✨ 方案优势</h3>
+        <ul>
+            <li><strong>视觉统一</strong>：所有页面底色一致 (#FAF8F5)，不会有"跳跃感"</li>
+            <li><strong>首页仪式感</strong>：深色蒙层 + 大气设计图营造品牌印象</li>
+            <li><strong>内容聚焦</strong>：其他页面保持简洁，让用户专注学校信息</li>
+            <li><strong>大气专业</strong>：设计图包含阶梯（成长）、柱子（学术殿堂）、书本（知识）、星星（成就）</li>
+            <li><strong>不儿童化</strong>：抽象几何风格，避免卡通简笔画感觉</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%); border-radius: 30px; max-width: 900px; margin: 60px auto; border: 2px solid rgba(212, 184, 150, 0.3);">
+        <h2 style="font-size: 32px; color: #D4B896; margin-bottom: 20px;">
+            🎯 这就是你想要的效果！
+        </h2>
+        <p style="font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.9);">
+            首页通过<strong style="color: #D4B896;">设计图</strong>（阶梯、柱子、书本、星星）<br>
+            营造大气专业的第一印象。<br><br>
+            其他页面保持统一的奶油白底色 + dots，<br>
+            让用户专注于浏览学校信息。<br><br>
+            <strong style="color: #D4B896;">底色统一，设计图区分，完美平衡！</strong>
+        </p>
+    </div>
+</body>
+</html>

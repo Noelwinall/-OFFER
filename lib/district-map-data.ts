@@ -25,29 +25,29 @@ export interface DistrictMapInfo {
  * 18 Districts of Hong Kong with coordinates and colors
  */
 export const DISTRICT_MAP_DATA: DistrictMapInfo[] = [
-  // 港島 (Hong Kong Island) - 4 districts
-  { id: "中西區", name: "中西區", region: "港島", lat: 22.2869, lng: 114.1504, color: "#00D9FF" },
-  { id: "東區", name: "東區", region: "港島", lat: 22.2842, lng: 114.2246, color: "#00B8D9" },
-  { id: "南區", name: "南區", region: "港島", lat: 22.2429, lng: 114.1559, color: "#00A3BF" },
-  { id: "灣仔區", name: "灣仔區", region: "港島", lat: 22.2783, lng: 114.1747, color: "#0090A6" },
+  // 港島 (Hong Kong Island) - 4 districts - 统一使用深蓝色
+  { id: "中西區", name: "中西區", region: "港島", lat: 22.2869, lng: 114.1504, color: "#2E86AB" },
+  { id: "東區", name: "東區", region: "港島", lat: 22.2842, lng: 114.2246, color: "#2E86AB" },
+  { id: "南區", name: "南區", region: "港島", lat: 22.2429, lng: 114.1559, color: "#2E86AB" },
+  { id: "灣仔區", name: "灣仔區", region: "港島", lat: 22.2783, lng: 114.1747, color: "#2E86AB" },
 
-  // 九龍 (Kowloon) - 5 districts
-  { id: "九龍城區", name: "九龍城區", region: "九龍", lat: 22.3282, lng: 114.1916, color: "#7C3AED" },
-  { id: "觀塘區", name: "觀塘區", region: "九龍", lat: 22.3119, lng: 114.2262, color: "#6D28D9" },
-  { id: "深水埗區", name: "深水埗區", region: "九龍", lat: 22.3308, lng: 114.1624, color: "#5B21B6" },
-  { id: "黃大仙區", name: "黃大仙區", region: "九龍", lat: 22.3427, lng: 114.1932, color: "#4C1D95" },
-  { id: "油尖旺區", name: "油尖旺區", region: "九龍", lat: 22.3117, lng: 114.1694, color: "#8B5CF6" },
+  // 九龍 (Kowloon) - 5 districts - 统一使用深紫色
+  { id: "九龍城區", name: "九龍城區", region: "九龍", lat: 22.3282, lng: 114.1916, color: "#8B5A8B" },
+  { id: "觀塘區", name: "觀塘區", region: "九龍", lat: 22.3119, lng: 114.2262, color: "#8B5A8B" },
+  { id: "深水埗區", name: "深水埗區", region: "九龍", lat: 22.3308, lng: 114.1624, color: "#8B5A8B" },
+  { id: "黃大仙區", name: "黃大仙區", region: "九龍", lat: 22.3427, lng: 114.1932, color: "#8B5A8B" },
+  { id: "油尖旺區", name: "油尖旺區", region: "九龍", lat: 22.3117, lng: 114.1694, color: "#8B5A8B" },
 
-  // 新界 (New Territories) - 9 districts
-  { id: "離島區", name: "離島區", region: "新界", lat: 22.2617, lng: 113.9456, color: "#10B981" },
-  { id: "葵青區", name: "葵青區", region: "新界", lat: 22.3547, lng: 114.1269, color: "#059669" },
-  { id: "北區", name: "北區", region: "新界", lat: 22.4941, lng: 114.1386, color: "#047857" },
-  { id: "西貢區", name: "西貢區", region: "新界", lat: 22.3829, lng: 114.2701, color: "#065F46" },
-  { id: "沙田區", name: "沙田區", region: "新界", lat: 22.3823, lng: 114.1951, color: "#34D399" },
-  { id: "大埔區", name: "大埔區", region: "新界", lat: 22.4513, lng: 114.1686, color: "#6EE7B7" },
-  { id: "荃灣區", name: "荃灣區", region: "新界", lat: 22.3707, lng: 114.1138, color: "#A7F3D0" },
-  { id: "屯門區", name: "屯門區", region: "新界", lat: 22.3908, lng: 113.9727, color: "#D1FAE5" },
-  { id: "元朗區", name: "元朗區", region: "新界", lat: 22.4445, lng: 114.0222, color: "#ECFDF5" },
+  // 新界 (New Territories) - 9 districts - 统一使用深绿色以提高可读性
+  { id: "離島區", name: "離島區", region: "新界", lat: 22.2617, lng: 113.9456, color: "#2D6A4F" },
+  { id: "葵青區", name: "葵青區", region: "新界", lat: 22.3547, lng: 114.1269, color: "#2D6A4F" },
+  { id: "北區", name: "北區", region: "新界", lat: 22.4941, lng: 114.1386, color: "#2D6A4F" },
+  { id: "西貢區", name: "西貢區", region: "新界", lat: 22.3829, lng: 114.2701, color: "#2D6A4F" },
+  { id: "沙田區", name: "沙田區", region: "新界", lat: 22.3823, lng: 114.1951, color: "#2D6A4F" },
+  { id: "大埔區", name: "大埔區", region: "新界", lat: 22.4513, lng: 114.1686, color: "#2D6A4F" },
+  { id: "荃灣區", name: "荃灣區", region: "新界", lat: 22.3707, lng: 114.1138, color: "#2D6A4F" },
+  { id: "屯門區", name: "屯門區", region: "新界", lat: 22.3908, lng: 113.9727, color: "#2D6A4F" },
+  { id: "元朗區", name: "元朗區", region: "新界", lat: 22.4445, lng: 114.0222, color: "#2D6A4F" },
 ];
 
 /**

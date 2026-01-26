@@ -3,9 +3,14 @@ import { useFilter, getFilterLabels, hasActiveFilters } from "@/lib/filter-conte
 import type { District18, CurriculumV2, InstructionLanguage, SchoolGender } from "@/types/school";
 import { CURRICULUM_V2_LABELS, INSTRUCTION_LANGUAGE_LABELS, SCHOOL_GENDER_LABELS } from "@/types/school";
 import * as Haptics from "expo-haptics";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 export function ActiveFilterTags() {
   const { state, dispatch } = useFilter();
+  const colors = useColors();
 
   if (!hasActiveFilters(state)) {
     return null;
@@ -128,16 +133,16 @@ export function ActiveFilterTags() {
         {tags.map((tag) => (
           <TouchableOpacity
             key={tag.key}
-            style={styles.tag}
+            style={[styles.tag, { backgroundColor: colors.primary + "26", borderColor: colors.primary + "4D" }]}
             onPress={tag.onRemove}
           >
-            <Text style={styles.tagText}>{tag.label}</Text>
-            <Text style={styles.tagClose}>×</Text>
+            <Text style={[styles.tagText, { color: colors.primary }]}>{tag.label}</Text>
+            <Text style={[styles.tagClose, { color: colors.primary }]}>×</Text>
           </TouchableOpacity>
         ))}
         {tags.length > 1 && (
           <TouchableOpacity style={styles.clearAll} onPress={handleClearAll}>
-            <Text style={styles.clearAllText}>清除全部</Text>
+            <Text style={[styles.clearAllText, { color: colors.muted + "80" }]}>清除全部</Text>
           </TouchableOpacity>
         )}
       </ScrollView>
@@ -147,45 +152,44 @@ export function ActiveFilterTags() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 24,
-    paddingVertical: 8,
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.sm,
   },
   scrollContent: {
-    gap: 8,
-    paddingRight: 24,
+    gap: Spacing.sm,
+    paddingRight: Spacing.xl,
   },
   tag: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(0, 217, 255, 0.15)",
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
+    // backgroundColor and borderColor will be set dynamically
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
+    borderRadius: BorderRadiusPresets.card,
     borderWidth: 1,
-    borderColor: "rgba(0, 217, 255, 0.3)",
   },
   tagText: {
+    ...TypographyStyles.caption,
     fontSize: 13,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
+    // color will be set dynamically
   },
   tagClose: {
-    fontSize: 16,
-    color: "#00D9FF",
-    marginLeft: 6,
-    fontWeight: "600",
+    fontSize: TypographyStyles.body.fontSize,
+    marginLeft: Spacing.sm,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    // color will be set dynamically
   },
   clearAll: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 16,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
+    borderRadius: BorderRadiusPresets.card,
     backgroundColor: "rgba(255, 255, 255, 0.08)",
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.15)",
   },
   clearAllText: {
+    ...TypographyStyles.caption,
     fontSize: 13,
-    color: "rgba(255, 255, 255, 0.5)",
-    fontFamily: "NotoSerifSC-Regular",
+    // color will be set dynamically
   },
 });

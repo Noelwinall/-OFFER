@@ -10,6 +10,10 @@ import { CURRICULUM_V2_LABELS, SCHOOL_GENDER_LABELS, SCHOOL_RELATIONSHIP_LABELS,
 import { type SessionType, SESSION_LABELS, SESSION_COLORS, isKindergarten } from "@/lib/school-classification";
 import { getKGNature, getKGNatureLabel, getKGNatureColor } from "@/lib/school-classification";
 import * as Haptics from "expo-haptics";
+import { getContrastColor } from "@/utils/style-helpers";
+import { Spacing } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 /**
  * Tag color palette - harmonized colors
@@ -131,7 +135,7 @@ export const SchoolCard = React.memo(function SchoolCard({
           <View
             style={[styles.categoryTag, { backgroundColor: getKGNatureColor(getKGNature(school)!) }]}
           >
-            <Text style={styles.categoryText}>
+            <Text style={[styles.categoryText, { color: getContrastColor(getKGNatureColor(getKGNature(school)!)) }]}>
               {getKGNatureLabel(getKGNature(school)!)}
             </Text>
           </View>
@@ -139,47 +143,47 @@ export const SchoolCard = React.memo(function SchoolCard({
           <View
             style={[styles.categoryTag, { backgroundColor: getDisplayTypeColor(school) }]}
           >
-            <Text style={styles.categoryText}>
+            <Text style={[styles.categoryText, { color: getContrastColor(getDisplayTypeColor(school)) }]}>
               {getDisplayType(school)}
             </Text>
           </View>
         )}
         {/* 2. 學段標籤 */}
         <View style={[styles.levelTag, { backgroundColor: TAG_COLORS.level }]}>
-          <Text style={styles.levelText}>{school.level}</Text>
+          <Text style={[styles.levelText, { color: getContrastColor(TAG_COLORS.level) }]}>{school.level}</Text>
         </View>
         {/* 3. 區域標籤 (18區格式: 九龍-油尖旺區) */}
         <View style={[styles.districtTag, { backgroundColor: TAG_COLORS.district }]}>
-          <Text style={styles.districtText}>{formatDistrictDisplay(school)}</Text>
+          <Text style={[styles.districtText, { color: getContrastColor(TAG_COLORS.district) }]}>{formatDistrictDisplay(school)}</Text>
         </View>
         {/* 4. 校網標籤（只在小學有校網時顯示） */}
         {school.level === "小學" && school.schoolNet && (
           <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.schoolNet }]}>
-            <Text style={styles.metadataText}>校網：{school.schoolNet}</Text>
+            <Text style={[styles.metadataText, { color: getContrastColor(TAG_COLORS.schoolNet) }]}>校網：{school.schoolNet}</Text>
           </View>
         )}
         {/* 5. 學校性別標籤（男校/女校，MIXED 不顯示） */}
         {school.gender && school.gender !== "MIXED" && (
           <View style={[styles.genderTag, { backgroundColor: getGenderColor(school.gender) }]}>
-            <Text style={styles.genderText}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
+            <Text style={[styles.genderText, { color: getContrastColor(getGenderColor(school.gender)) }]}>{SCHOOL_GENDER_LABELS[school.gender]}</Text>
           </View>
         )}
         {/* 6. 學校關係標籤（一條龍/直屬/聯繫） */}
         {school.relationship && (
           <View style={[styles.relationshipTag, { backgroundColor: getRelationshipColor(school.relationship) }]}>
-            <Text style={styles.relationshipText}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
+            <Text style={[styles.relationshipText, { color: getContrastColor(getRelationshipColor(school.relationship)) }]}>{SCHOOL_RELATIONSHIP_LABELS[school.relationship]}</Text>
           </View>
         )}
         {/* 7. 宗教標籤（只在有宗教時顯示） */}
         {school.religion && (
           <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.religion }]}>
-            <Text style={styles.metadataText}>{school.religion}</Text>
+            <Text style={[styles.metadataText, { color: getContrastColor(TAG_COLORS.religion) }]}>{school.religion}</Text>
           </View>
         )}
         {/* 8. 特殊學校標籤 */}
         {school.isSpecialSchool && (
           <View style={[styles.metadataTag, { backgroundColor: TAG_COLORS.specialSchool }]}>
-            <Text style={styles.metadataText}>特殊學校</Text>
+            <Text style={[styles.metadataText, { color: getContrastColor(TAG_COLORS.specialSchool) }]}>特殊學校</Text>
           </View>
         )}
         {/* 班別標籤（僅幼稚園顯示：上午班/下午班/全天；小學不顯示） */}
@@ -188,7 +192,7 @@ export const SchoolCard = React.memo(function SchoolCard({
             key={session}
             style={[styles.sessionTag, { backgroundColor: SESSION_COLORS[session] }]}
           >
-            <Text style={styles.sessionText}>{SESSION_LABELS[session]}</Text>
+            <Text style={[styles.sessionText, { color: getContrastColor(SESSION_COLORS[session]) }]}>{SESSION_LABELS[session]}</Text>
           </View>
         ))}
       </View>
@@ -352,19 +356,21 @@ function getTuitionDisplayText(school: School): string {
 
 const styles = StyleSheet.create({
   card: {
-    borderRadius: 16,
-    padding: 16,
+    borderRadius: 24,              // 🎨 rounded-3xl (Soft Minimalist)
+    padding: 20,                   // More generous padding
     marginHorizontal: 16,
-    marginVertical: 8,
+    marginVertical: 10,
     borderWidth: 1,
+    // 🎨 Soft shadow (from UI Place image analysis)
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 3,
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.06,          // Very subtle
+    shadowRadius: 24,             // Large blur = soft
+    elevation: 4,
   },
   cardPressed: {
-    opacity: 0.85,
+    opacity: 0.92,
+    transform: [{ scale: 0.98 }], // Subtle scale down
   },
   categoryTag: {
     paddingHorizontal: 8,
@@ -397,55 +403,56 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   sessionTag: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: Spacing.xs,
+    borderRadius: BorderRadius.sm,
   },
   sessionText: {
+    ...TypographyStyles.tiny,
     fontSize: 11,
-    fontWeight: "700",
-    color: "#FFFFFF",
+    fontWeight: TypographyStyles.title.fontWeight,
     letterSpacing: 0.5,
+    // color will be set dynamically
   },
   curriculumTag: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: Spacing.xs,
+    borderRadius: BorderRadius.sm,
   },
   curriculumText: {
-    fontSize: 10,
-    fontWeight: "600",
-    color: "#FFFFFF",
+    ...TypographyStyles.tiny,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    // color will be set dynamically
   },
   genderTag: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: Spacing.xs,
+    borderRadius: BorderRadius.sm,
   },
   genderText: {
-    fontSize: 10,
-    fontWeight: "600",
-    color: "#FFFFFF",
+    ...TypographyStyles.tiny,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    // color will be set dynamically
   },
   metadataTag: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: Spacing.xs,
+    borderRadius: BorderRadius.sm,
   },
   metadataText: {
-    fontSize: 10,
-    fontWeight: "600",
-    color: "#FFFFFF",
+    ...TypographyStyles.tiny,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    // color will be set dynamically
   },
   relationshipTag: {
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 6,
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: Spacing.xs,
+    borderRadius: BorderRadius.sm,
   },
   relationshipText: {
-    fontSize: 10,
-    fontWeight: "600",
-    color: "#FFFFFF",
+    ...TypographyStyles.tiny,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    // color will be set dynamically
   },
   // AI 深度分析按鈕
   aiAnalysisButton: {

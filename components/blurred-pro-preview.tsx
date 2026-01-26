@@ -45,7 +45,7 @@ export function BlurredProPreview({
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
+        colors={["#FAF8F5", "#FFF9F0", "#E8E2D5", "#FFF9F0"]}
         locations={[0, 0.3, 0.7, 1]}
         style={StyleSheet.absoluteFill}
       />

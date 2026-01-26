@@ -1,0 +1,167 @@
+# 🎨 UI Theme Rules - 有OFFER App
+
+## 主题颜色系统 (Theme Color System)
+
+本项目使用统一的 Ivy League 书院风格主题配色。**所有 UI 代码必须使用主题颜色，禁止硬编码颜色值。**
+
+### 如何使用主题颜色
+
+```tsx
+import { useColors } from "@/hooks/use-colors";
+
+function MyComponent() {
+  const colors = useColors();
+  
+  return (
+    <View style={{ backgroundColor: colors.background }}>
+      <Text style={{ color: colors.foreground }}>Hello</Text>
+    </View>
+  );
+}
+```
+
+### 可用的颜色变量
+
+| 变量名 | 用途 | Light Mode | Dark Mode |
+|--------|------|------------|-----------|
+| `colors.primary` | 主色调、按钮、链接 | #0a7ea4 | #0a7ea4 |
+| `colors.secondary` | 次要强调色 | #D4B896 | #C9A779 |
+| `colors.accent` | 装饰色 | #8B7355 | #9A8169 |
+| `colors.background` | 页面背景 | #FAF8F5 | #1A1614 |
+| `colors.surface` | 卡片/容器背景 | #FFF9F0 | #2A2420 |
+| `colors.foreground` | 主要文字 | #2D2013 | #F5F1E8 |
+| `colors.muted` | 次要文字、placeholder | #706B5E | #B5AFA0 |
+| `colors.border` | 边框、分割线 | #E8E2D5 | #3A3630 |
+| `colors.success` | 成功状态 | #4ADE80 | #22C55E |
+| `colors.warning` | 警告状态 | #F59E0B | #FBBF24 |
+| `colors.error` | 错误状态 | #EF4444 | #F87171 |
+
+### 设计系统常量
+
+```tsx
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
+```
+
+### ⚠️ 重要规则
+
+1. **禁止硬编码颜色**
+   ```tsx
+   // ❌ 错误
+   <View style={{ backgroundColor: "#1a2744" }} />
+   <Text style={{ color: "#FFFFFF" }} />
+   
+   // ✅ 正确
+   <View style={{ backgroundColor: colors.surface }} />
+   <Text style={{ color: colors.foreground }} />
+   ```
+
+2. **StyleSheet.create 必须在组件内部定义**（如果需要使用 colors）
+   ```tsx
+   // ❌ 错误 - colors 在组件外部不可用
+   const styles = StyleSheet.create({
+     container: { backgroundColor: colors.surface } // Error!
+   });
+   
+   // ✅ 正确 - 在组件内部定义
+   function MyComponent() {
+     const colors = useColors();
+     const styles = StyleSheet.create({
+       container: { backgroundColor: colors.surface }
+     });
+   }
+   ```
+
+3. **如果 StyleSheet 必须在组件外部**，使用内联样式处理动态颜色
+   ```tsx
+   const styles = StyleSheet.create({
+     container: { padding: 16 } // 静态样式
+   });
+   
+   function MyComponent() {
+     const colors = useColors();
+     return (
+       <View style={[styles.container, { backgroundColor: colors.surface }]} />
+     );
+   }
+   ```
+
+4. **LinearGradient 使用主题颜色**
+   ```tsx
+   // ✅ 正确
+   <LinearGradient
+     colors={[colors.background, colors.surface, colors.background]}
+     style={StyleSheet.absoluteFill}
+   />
+   ```
+
+5. **使用设计系统间距和圆角**
+   ```tsx
+   // ✅ 正确
+   <View style={{
+     padding: Spacing.md,
+     borderRadius: BorderRadius.lg,
+     gap: Spacing.sm,
+   }} />
+   ```
+
+### 字体规范
+
+- 标题字体: `NotoSerifSC-Bold`
+- 正文字体: `NotoSerifSC-Regular`
+- 使用 `TypographyStyles` 预设
+
+### 组件示例
+
+```tsx
+import { useColors } from "@/hooks/use-colors";
+import { Spacing } from "@/constants/spacing";
+import { BorderRadius } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
+
+function ExampleCard() {
+  const colors = useColors();
+  
+  const styles = StyleSheet.create({
+    card: {
+      backgroundColor: colors.surface,
+      borderRadius: BorderRadius.lg,
+      padding: Spacing.lg,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    title: {
+      ...TypographyStyles.heading,
+      color: colors.foreground,
+    },
+    subtitle: {
+      ...TypographyStyles.caption,
+      color: colors.muted,
+    },
+  });
+
+  return (
+    <View style={styles.card}>
+      <Text style={styles.title}>标题</Text>
+      <Text style={styles.subtitle}>副标题</Text>
+    </View>
+  );
+}
+```
+
+---
+
+## 文件结构参考
+
+- `theme.config.js` - 主题颜色定义
+- `hooks/use-colors.ts` - useColors hook
+- `constants/spacing.ts` - 间距常量
+- `constants/border-radius.ts` - 圆角常量
+- `constants/typography.ts` - 字体样式
+
+## 相关文档
+
+如有疑问，参考以下文件了解主题系统实现：
+- `lib/theme-provider.tsx`
+- `tailwind.config.js`

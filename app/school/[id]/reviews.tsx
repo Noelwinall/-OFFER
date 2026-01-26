@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { View, Text, FlatList, TouchableOpacity, Platform, StyleSheet, Modal, TextInput, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useRouter, useLocalSearchParams } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useFocusEffect } from "@react-navigation/native";
@@ -9,6 +10,10 @@ import { IconSymbol } from "@/components/ui/icon-symbol";
 import { ReviewCard } from "@/components/review-card";
 import { ReviewsStorage, type Review } from "@/lib/storage";
 import { SCHOOLS } from "@/data/schools";
+import { useColors } from "@/hooks/use-colors";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 
 // 評論標籤選項
 const REVIEW_TAGS = ["教學質量好", "環境優美", "師資優秀", "課外活動豐富", "升學率高", "學費合理", "交通便利", "校風優良"];
@@ -17,6 +22,7 @@ export default function SchoolReviewsScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   
   const [reviews, setReviews] = useState<Review[]>([]);
   const [sortBy, setSortBy] = useState<"latest" | "popular">("latest");
@@ -116,28 +122,259 @@ export default function SchoolReviewsScreen() {
           <IconSymbol
             name="star.fill"
             size={32}
-            color={star <= newRating ? "#F59E0B" : "rgba(255,255,255,0.2)"}
+            color={star <= newRating ? colors.warning : colors.muted + "33"}
           />
         </TouchableOpacity>
       ))}
     </View>
   );
 
+  // Define styles inside component to access colors
+  const styles = StyleSheet.create({
+    header: {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+      paddingHorizontal: Spacing.lg,
+      paddingBottom: Spacing.lg,
+    },
+    backButton: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.surface + "1A",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    headerCenter: {
+      flex: 1,
+      alignItems: "center",
+      marginHorizontal: Spacing.md,
+    },
+    headerTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.foreground,
+    },
+    headerSubtitle: {
+      ...TypographyStyles.caption,
+      fontSize: 12,
+      color: colors.muted,
+      marginTop: 2,
+    },
+    addButton: {
+      width: 40,
+      height: 40,
+      borderRadius: BorderRadius.full,
+      backgroundColor: colors.primary,
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    statsBar: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      paddingHorizontal: Spacing.xl,
+      paddingVertical: Spacing.md,
+      borderBottomWidth: 1,
+      borderBottomColor: colors.border + "80",
+    },
+    ratingStats: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.md,
+    },
+    ratingDisplay: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: Spacing.xs,
+    },
+    ratingValue: {
+      ...TypographyStyles.heading,
+      fontSize: 20,
+      color: colors.foreground,
+    },
+    reviewCount: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+    },
+    sortButtons: {
+      flexDirection: "row",
+      gap: Spacing.sm,
+    },
+    sortButton: {
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.xs,
+      borderRadius: BorderRadius.md,
+      backgroundColor: colors.surface + "14",
+    },
+    sortButtonActive: {
+      backgroundColor: colors.primary + "33",
+    },
+    sortButtonText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+    },
+    sortButtonTextActive: {
+      color: colors.primary,
+      fontWeight: TypographyStyles.heading.fontWeight,
+    },
+    listContent: {
+      paddingHorizontal: Spacing.xl,
+      paddingTop: Spacing.lg,
+    },
+    emptyContainer: {
+      alignItems: "center",
+      justifyContent: "center",
+      paddingVertical: Spacing["3xl"],
+    },
+    emptyTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 18,
+      color: colors.muted,
+      marginTop: Spacing.lg,
+      marginBottom: Spacing.sm,
+    },
+    emptySubtitle: {
+      ...TypographyStyles.small,
+      fontSize: 14,
+      color: colors.muted + "66",
+      textAlign: "center",
+      marginBottom: Spacing.xl,
+    },
+    emptyButton: {
+      backgroundColor: colors.primary,
+      paddingHorizontal: Spacing.xl,
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadiusPresets.button,
+    },
+    emptyButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.background,
+    },
+    // Modal styles
+    modalOverlay: {
+      flex: 1,
+      backgroundColor: "rgba(0,0,0,0.7)",
+      justifyContent: "flex-end",
+    },
+    modalContent: {
+      backgroundColor: colors.surface,
+      borderTopLeftRadius: BorderRadius.xl,
+      borderTopRightRadius: BorderRadius.xl,
+      padding: Spacing.xl,
+      maxHeight: "90%",
+    },
+    modalHeader: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginBottom: Spacing.xl,
+    },
+    modalTitle: {
+      ...TypographyStyles.heading,
+      fontSize: 20,
+      color: colors.foreground,
+    },
+    formSection: {
+      marginBottom: Spacing.xl,
+    },
+    formLabel: {
+      ...TypographyStyles.body,
+      fontSize: 14,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.foreground + "CC",
+      marginBottom: Spacing.sm,
+    },
+    starSelector: {
+      flexDirection: "row",
+      gap: Spacing.sm,
+    },
+    input: {
+      backgroundColor: colors.surface + "14",
+      borderRadius: BorderRadius.md,
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.md,
+      ...TypographyStyles.body,
+      fontSize: 15,
+      color: colors.foreground,
+      borderWidth: 1,
+      borderColor: colors.border + "80",
+    },
+    textArea: {
+      height: 120,
+      paddingTop: Spacing.md,
+    },
+    charCount: {
+      ...TypographyStyles.tiny,
+      fontSize: 11,
+      color: colors.muted + "66",
+      textAlign: "right",
+      marginTop: Spacing.xs,
+    },
+    tagsGrid: {
+      flexDirection: "row",
+      flexWrap: "wrap",
+      gap: Spacing.sm,
+    },
+    tagOption: {
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.sm,
+      borderRadius: BorderRadiusPresets.buttonPill,
+      backgroundColor: colors.surface + "14",
+      borderWidth: 1,
+      borderColor: colors.border + "80",
+    },
+    tagOptionSelected: {
+      backgroundColor: colors.primary + "33",
+      borderColor: colors.primary,
+    },
+    tagOptionText: {
+      ...TypographyStyles.caption,
+      fontSize: 13,
+      color: colors.muted,
+    },
+    tagOptionTextSelected: {
+      color: colors.primary,
+    },
+    submitButton: {
+      backgroundColor: colors.primary,
+      paddingVertical: Spacing.lg,
+      borderRadius: BorderRadiusPresets.card,
+      marginTop: Spacing.sm,
+    },
+    submitButtonDisabled: {
+      opacity: 0.5,
+    },
+    submitButtonText: {
+      ...TypographyStyles.body,
+      fontSize: 16,
+      fontWeight: TypographyStyles.heading.fontWeight,
+      color: colors.background,
+      textAlign: "center",
+    },
+  });
+
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
 
-      <View style={[styles.header, { paddingTop: insets.top }]}>
+      <MaxWidthWrapper>
+        <View style={[styles.header, { paddingTop: insets.top }]}>
         <TouchableOpacity
           onPress={() => router.back()}
           style={styles.backButton}
           activeOpacity={0.7}
         >
-          <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
+          <IconSymbol name="chevron.right" size={24} color={colors.foreground} style={{ transform: [{ rotate: "180deg" }] }} />
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <Text style={styles.headerTitle}>家長心得</Text>
@@ -148,7 +385,7 @@ export default function SchoolReviewsScreen() {
           style={styles.addButton}
           activeOpacity={0.7}
         >
-          <IconSymbol name="pencil" size={20} color="#FFFFFF" />
+          <IconSymbol name="pencil" size={20} color={colors.background} />
         </TouchableOpacity>
       </View>
 
@@ -156,7 +393,7 @@ export default function SchoolReviewsScreen() {
       <View style={styles.statsBar}>
         <View style={styles.ratingStats}>
           <View style={styles.ratingDisplay}>
-            <IconSymbol name="star.fill" size={20} color="#F59E0B" />
+            <IconSymbol name="star.fill" size={20} color={colors.warning} />
             <Text style={styles.ratingValue}>{averageRating > 0 ? averageRating.toFixed(1) : "-"}</Text>
           </View>
           <Text style={styles.reviewCount}>{reviews.length} 則評論</Text>
@@ -192,7 +429,7 @@ export default function SchoolReviewsScreen() {
         ItemSeparatorComponent={() => <View style={{ height: 12 }} />}
         ListEmptyComponent={
           <View style={styles.emptyContainer}>
-            <IconSymbol name="message.fill" size={48} color="rgba(255,255,255,0.2)" />
+            <IconSymbol name="message.fill" size={48} color={colors.muted + "33"} />
             <Text style={styles.emptyTitle}>暫無評論</Text>
             <Text style={styles.emptySubtitle}>
               成為第一個分享心得的家長吧！
@@ -207,6 +444,7 @@ export default function SchoolReviewsScreen() {
           </View>
         }
       />
+      </MaxWidthWrapper>
 
       {/* 新增評論彈窗 */}
       <Modal
@@ -220,7 +458,7 @@ export default function SchoolReviewsScreen() {
             <View style={styles.modalHeader}>
               <Text style={styles.modalTitle}>撰寫評論</Text>
               <TouchableOpacity onPress={() => setShowAddModal(false)}>
-                <IconSymbol name="xmark" size={24} color="rgba(255,255,255,0.6)" />
+                <IconSymbol name="xmark" size={24} color={colors.muted} />
               </TouchableOpacity>
             </View>
 
@@ -237,7 +475,7 @@ export default function SchoolReviewsScreen() {
                 <TextInput
                   style={styles.input}
                   placeholder="輸入暱稱"
-                  placeholderTextColor="rgba(255,255,255,0.4)"
+                  placeholderTextColor={colors.muted + "66"}
                   value={newAuthor}
                   onChangeText={setNewAuthor}
                   maxLength={20}
@@ -250,7 +488,7 @@ export default function SchoolReviewsScreen() {
                 <TextInput
                   style={styles.input}
                   placeholder="一句話總結您的體驗"
-                  placeholderTextColor="rgba(255,255,255,0.4)"
+                  placeholderTextColor={colors.muted + "66"}
                   value={newTitle}
                   onChangeText={setNewTitle}
                   maxLength={30}
@@ -263,7 +501,7 @@ export default function SchoolReviewsScreen() {
                 <TextInput
                   style={[styles.input, styles.textArea]}
                   placeholder="分享您對這所學校的看法和經驗..."
-                  placeholderTextColor="rgba(255,255,255,0.4)"
+                  placeholderTextColor={colors.muted + "66"}
                   value={newContent}
                   onChangeText={setNewContent}
                   multiline
@@ -320,228 +558,3 @@ export default function SchoolReviewsScreen() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingBottom: 16,
-  },
-  backButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  headerCenter: {
-    flex: 1,
-    alignItems: "center",
-    marginHorizontal: 12,
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  headerSubtitle: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    marginTop: 2,
-  },
-  addButton: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "#00D9FF",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  statsBar: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
-  },
-  ratingStats: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 12,
-  },
-  ratingDisplay: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 4,
-  },
-  ratingValue: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  reviewCount: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.5)",
-  },
-  sortButtons: {
-    flexDirection: "row",
-    gap: 8,
-  },
-  sortButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.08)",
-  },
-  sortButtonActive: {
-    backgroundColor: "rgba(0,217,255,0.2)",
-  },
-  sortButtonText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.6)",
-  },
-  sortButtonTextActive: {
-    color: "#00D9FF",
-    fontWeight: "600",
-  },
-  listContent: {
-    paddingHorizontal: 20,
-    paddingTop: 16,
-  },
-  emptyContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 60,
-  },
-  emptyTitle: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "rgba(255,255,255,0.6)",
-    marginTop: 16,
-    marginBottom: 8,
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  emptySubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.4)",
-    textAlign: "center",
-    marginBottom: 20,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  emptyButton: {
-    backgroundColor: "#00D9FF",
-    paddingHorizontal: 24,
-    paddingVertical: 12,
-    borderRadius: 20,
-  },
-  emptyButtonText: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#0F1629",
-  },
-  // Modal styles
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.7)",
-    justifyContent: "flex-end",
-  },
-  modalContent: {
-    backgroundColor: "#1a2744",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    padding: 24,
-    maxHeight: "90%",
-  },
-  modalHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  modalTitle: {
-    fontSize: 20,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  formSection: {
-    marginBottom: 20,
-  },
-  formLabel: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "rgba(255,255,255,0.8)",
-    marginBottom: 10,
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  starSelector: {
-    flexDirection: "row",
-    gap: 8,
-  },
-  input: {
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    fontSize: 15,
-    color: "#FFFFFF",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
-  },
-  textArea: {
-    height: 120,
-    paddingTop: 14,
-  },
-  charCount: {
-    fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
-    textAlign: "right",
-    marginTop: 6,
-  },
-  tagsGrid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 8,
-  },
-  tagOption: {
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.08)",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.1)",
-  },
-  tagOptionSelected: {
-    backgroundColor: "rgba(0,217,255,0.2)",
-    borderColor: "#00D9FF",
-  },
-  tagOptionText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.6)",
-  },
-  tagOptionTextSelected: {
-    color: "#00D9FF",
-  },
-  submitButton: {
-    backgroundColor: "#00D9FF",
-    paddingVertical: 16,
-    borderRadius: 16,
-    marginTop: 8,
-  },
-  submitButtonDisabled: {
-    opacity: 0.5,
-  },
-  submitButtonText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#0F1629",
-    textAlign: "center",
-  },
-});

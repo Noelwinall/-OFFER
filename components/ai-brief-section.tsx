@@ -22,6 +22,7 @@ import type { GroupedSchool } from "@/lib/school-classification";
 import { FilterContext } from "@/lib/filter-context";
 import { kindergartens } from "@/data/kg/kg-database";
 import type { KGSession } from "@/constants/kg-filters";
+import { useColors } from "@/hooks/use-colors";
 import * as Haptics from "expo-haptics";
 
 // Create a map for quick KG lookup
@@ -39,6 +40,7 @@ interface AIBriefSectionProps {
 
 export function AIBriefSection({ schools }: AIBriefSectionProps) {
   const filterContext = useContext(FilterContext);
+  const colors = useColors();
   const [isLoading, setIsLoading] = useState(true);
   const [summary, setSummary] = useState<SafeBatchSummary | null>(null);
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -183,9 +185,9 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
             <IconSymbol
               name="arrow.clockwise"
               size={14}
-              color={isLoading ? "rgba(255,255,255,0.3)" : "#00D9FF"}
+              color={isLoading ? "rgba(255,255,255,0.3)" : colors.primary}
             />
-            <Text style={[styles.regenerateText, isLoading && styles.regenerateTextDisabled]}>
+            <Text style={[styles.regenerateText, { color: isLoading ? "rgba(255,255,255,0.3)" : colors.primary }, isLoading && styles.regenerateTextDisabled]}>
               重新生成
             </Text>
           </TouchableOpacity>
@@ -224,7 +226,7 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
               {/* Total Count Header */}
               <View style={styles.countContainer}>
                 <Text style={styles.countText}>
-                  本次結果共 <Text style={styles.countNumber}>{summary.totalCount}</Text> 間幼稚園
+                  本次結果共 <Text style={[styles.countNumber, { color: colors.primary }]}>{summary.totalCount}</Text> 間幼稚園
                 </Text>
               </View>
 
@@ -353,8 +355,8 @@ const styles = StyleSheet.create({
   },
   regenerateText: {
     fontSize: 12,
-    color: "#00D9FF",
     fontFamily: "NotoSerifSC-Regular",
+    // color will be set dynamically
   },
   regenerateTextDisabled: {
     color: "rgba(255,255,255,0.3)",
@@ -374,8 +376,8 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Bold",
   },
   countNumber: {
-    color: "#00D9FF",
     fontSize: 22,
+    // color will be set dynamically
   },
   // Recap section
   recapContainer: {

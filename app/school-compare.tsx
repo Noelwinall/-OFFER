@@ -9,6 +9,10 @@ import { School } from "@/types/school";
 import * as Haptics from "expo-haptics";
 import { useColors } from "@/hooks/use-colors";
 import { FavoritesStorage } from "@/lib/storage";
+import { Typography } from "@/components/ui/typography";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
 import { Gesture, GestureDetector, GestureHandlerRootView } from "react-native-gesture-handler";
 import Animated, {
   useSharedValue,
@@ -716,7 +720,7 @@ export default function SchoolCompareScreen() {
               <TextInput
                 style={styles.searchInput}
                 placeholder="輸入學校名稱..."
-                placeholderTextColor="rgba(255,255,255,0.4)"
+                placeholderTextColor={colors.muted + "66"}
                 value={searchQuery}
                 onChangeText={setSearchQuery}
                 autoFocus
@@ -776,8 +780,8 @@ export default function SchoolCompareScreen() {
       animationType="fade"
       onRequestClose={() => setShowSlotPicker(false)}
     >
-      <View style={styles.modalOverlay}>
-        <View style={styles.slotPickerContainer}>
+      <Pressable style={styles.modalOverlay} onPress={() => { setShowSlotPicker(false); setPendingSchool(null); }}>
+        <Pressable style={styles.slotPickerContainer} onPress={(e) => e.stopPropagation()}>
           <Text style={styles.slotPickerTitle}>選擇要替換的位置</Text>
           <Text style={styles.slotPickerSubtitle}>
             {pendingSchool?.name}
@@ -809,8 +813,8 @@ export default function SchoolCompareScreen() {
           >
             <Text style={styles.slotPickerCancelText}>取消</Text>
           </TouchableOpacity>
-        </View>
-      </View>
+        </Pressable>
+      </Pressable>
     </Modal>
   );
 
@@ -822,8 +826,8 @@ export default function SchoolCompareScreen() {
       animationType="fade"
       onRequestClose={() => setShowPaywallModal(false)}
     >
-      <View style={styles.modalOverlay}>
-        <View style={styles.paywallModalContainer}>
+      <Pressable style={styles.modalOverlay} onPress={() => setShowPaywallModal(false)}>
+        <Pressable style={styles.paywallModalContainer} onPress={(e) => e.stopPropagation()}>
           <Text style={[styles.paywallModalTitle, { color: colors.primary }]}>升級會員</Text>
           <Text style={styles.paywallModalText}>
             升級 Pro 會員可解鎖更多功能：
@@ -850,8 +854,8 @@ export default function SchoolCompareScreen() {
           >
             <Text style={styles.paywallModalCloseText}>稍後再說</Text>
           </TouchableOpacity>
-        </View>
-      </View>
+        </Pressable>
+      </Pressable>
     </Modal>
   );
 
@@ -913,119 +917,113 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingBottom: 16,
+    paddingHorizontal: Spacing.lg,
+    paddingBottom: Spacing.lg,
   },
   backButton: {
     width: 40,
     height: 40,
-    borderRadius: 20,
+    borderRadius: BorderRadius.full,
     justifyContent: "center",
     alignItems: "center",
   },
   headerTitle: {
-    fontSize: 20,
-    fontWeight: "700",
-    fontFamily: "NotoSerifSC-Bold",
+    ...TypographyStyles.title,
     letterSpacing: 1,
   },
   placeholder: {
     width: 40,
   },
   content: {
-    paddingHorizontal: 16,
+    paddingHorizontal: Spacing.lg,
   },
 
   // Section title
   sectionTitle: {
-    fontSize: 16,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 12,
+    ...TypographyStyles.heading,
+    marginBottom: Spacing.md,
     textAlign: "center",
   },
 
   // Featured section
   featuredSection: {
-    marginBottom: 20,
+    marginBottom: Spacing.xl,
     alignItems: "center",
   },
   featuredHeader: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 12,
-    gap: 16,
+    marginBottom: Spacing.md,
+    gap: Spacing.lg,
   },
   featuredRow: {
     flexDirection: "row",
-    gap: 10,
+    gap: Spacing.md,
     justifyContent: "center",
   },
   featuredPill: {
-    paddingHorizontal: 16,
-    paddingVertical: 10,
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: Spacing.md,
     backgroundColor: "rgba(255,255,255,0.08)",
-    borderRadius: 20,
+    borderRadius: BorderRadiusPresets.buttonPill,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.12)",
+    borderColor: "#E8E2D5",
   },
   featuredPillActive: {
     // backgroundColor and borderColor will be set dynamically
   },
   featuredPillText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.7)",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.caption,
+    color: "#706B5E",
   },
   featuredPillTextActive: {
-    fontWeight: "600",
+    fontWeight: TypographyStyles.heading.fontWeight,
     // color will be set dynamically
   },
   refreshButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 12,
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.sm,
+    borderRadius: BorderRadiusPresets.button,
     // backgroundColor will be set dynamically
   },
   refreshButtonText: {
-    fontSize: 12,
-    fontWeight: "500",
+    ...TypographyStyles.small,
+    fontWeight: TypographyStyles.heading.fontWeight,
     // color will be set dynamically
   },
 
   // Empty compare state
   emptyCompareSection: {
     alignItems: "center",
-    paddingVertical: 40,
-    marginBottom: 20,
+    paddingVertical: Spacing["3xl"],
+    marginBottom: Spacing.xl,
   },
   emptyCompareIcon: {
     fontSize: 48,
-    marginBottom: 16,
+    marginBottom: Spacing.lg,
   },
   emptyCompareTitle: {
+    ...TypographyStyles.heading,
     fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 8,
+    color: "#2D2013",
+    marginBottom: Spacing.sm,
   },
   emptyCompareHint: {
+    ...TypographyStyles.caption,
     fontSize: 13,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
+    color: "#8B8578",
     textAlign: "center",
   },
 
   // Comparison table
   comparisonSection: {
-    marginBottom: 24,
+    marginBottom: Spacing.xl,
     alignItems: "center",
   },
   compareContainer: {
     backgroundColor: "rgba(255,255,255,0.6)",
-    borderRadius: 16,
+    borderRadius: BorderRadiusPresets.card,
     overflow: "hidden",
     borderWidth: 1,
     borderColor: "rgba(0,0,0,0.08)",
@@ -1037,69 +1035,66 @@ const styles = StyleSheet.create({
   },
   dimensionCell: {
     width: 70,
-    padding: 10,
+    padding: Spacing.md,
     backgroundColor: "rgba(30, 58, 95, 0.1)",
     justifyContent: "center",
     alignItems: "center",
     gap: 2,
   },
   dimensionIcon: {
-    fontSize: 14,
+    fontSize: TypographyStyles.caption.fontSize,
   },
   dimensionLabel: {
+    ...TypographyStyles.tiny,
     fontSize: 11,
-    fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
   },
   schoolCell: {
     flex: 1,
-    padding: 10,
+    padding: Spacing.md,
     justifyContent: "center",
     alignItems: "center",
   },
   schoolName: {
-    fontSize: 12,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
+    ...TypographyStyles.small,
+    fontWeight: TypographyStyles.heading.fontWeight,
     textAlign: "center",
   },
   valueCell: {
     flex: 1,
-    padding: 10,
+    padding: Spacing.md,
     justifyContent: "center",
     alignItems: "center",
   },
   valueText: {
+    ...TypographyStyles.tiny,
     fontSize: 11,
-    fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
   },
   highlightCell: {
     flex: 1,
-    padding: 10,
+    padding: Spacing.md,
     justifyContent: "center",
     gap: 2,
   },
   highlightText: {
-    fontSize: 10,
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.tiny,
   },
   disclaimer: {
-    fontSize: 10,
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.tiny,
     textAlign: "center",
-    marginTop: 12,
+    marginTop: Spacing.md,
   },
   compareTableWrapper: {
     flexDirection: "row",
-    gap: 8,
+    gap: Spacing.sm,
   },
 
   // Locked column (paywall) - skeleton + CTA design
   lockedColumn: {
     width: 110,
     backgroundColor: "rgba(255,255,255,0.03)",
-    borderRadius: 16,
+    borderRadius: BorderRadiusPresets.card,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.08)",
     overflow: "hidden",
@@ -1108,25 +1103,25 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    gap: 6,
-    paddingVertical: 12,
-    paddingHorizontal: 8,
+    gap: Spacing.sm,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.sm,
     backgroundColor: "rgba(0,217,255,0.08)",
     borderBottomWidth: 1,
     borderBottomColor: "rgba(255,255,255,0.06)",
   },
   lockedColumnLock: {
-    fontSize: 12,
+    fontSize: TypographyStyles.small.fontSize,
   },
   lockedColumnHeaderText: {
+    ...TypographyStyles.tiny,
     fontSize: 11,
     color: "rgba(0,217,255,0.8)",
-    fontFamily: "NotoSerifSC-Regular",
-    fontWeight: "500",
+    fontWeight: TypographyStyles.heading.fontWeight,
   },
   lockedColumnRow: {
-    paddingVertical: 10,
-    paddingHorizontal: 12,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.md,
     justifyContent: "center",
     alignItems: "center",
     borderBottomWidth: 1,
@@ -1134,7 +1129,7 @@ const styles = StyleSheet.create({
   },
   skeletonBar: {
     height: 10,
-    borderRadius: 5,
+    borderRadius: BorderRadius.xs,
     backgroundColor: "rgba(255,255,255,0.08)",
   },
   skeletonBarLong: {
@@ -1144,49 +1139,47 @@ const styles = StyleSheet.create({
     width: "60%",
   },
   lockedColumnCTA: {
-    paddingVertical: 16,
-    paddingHorizontal: 10,
+    paddingVertical: Spacing.lg,
+    paddingHorizontal: Spacing.md,
     alignItems: "center",
     backgroundColor: "rgba(0,217,255,0.06)",
   },
   lockedColumnCTATitle: {
-    fontSize: 12,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
+    ...TypographyStyles.small,
+    fontWeight: TypographyStyles.heading.fontWeight,
     textAlign: "center",
-    marginBottom: 4,
+    marginBottom: Spacing.xs,
     // color will be set dynamically
   },
   lockedColumnCTASubtitle: {
+    ...TypographyStyles.tiny,
     fontSize: 9,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
+    color: "#8B8578",
     textAlign: "center",
-    marginBottom: 10,
+    marginBottom: Spacing.md,
   },
   lockedColumnCTAButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 12,
+    paddingVertical: Spacing.sm,
+    paddingHorizontal: Spacing.md,
+    borderRadius: BorderRadiusPresets.button,
     borderWidth: 1,
     // backgroundColor and borderColor will be set dynamically
   },
   lockedColumnCTAButtonText: {
-    fontSize: 10,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.tiny,
+    fontWeight: TypographyStyles.heading.fontWeight,
     // color will be set dynamically
   },
 
   // Compare slots
   slotsSection: {
-    marginBottom: 24,
+    marginBottom: Spacing.xl,
     alignItems: "center",
   },
   slotHint: {
+    ...TypographyStyles.tiny,
     fontSize: 11,
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 12,
+    marginBottom: Spacing.md,
     opacity: 0.6,
   },
   slotsContainer: {
@@ -1194,15 +1187,15 @@ const styles = StyleSheet.create({
   },
   slotsRow: {
     flexDirection: "row",
-    gap: 12,
+    gap: Spacing.md,
     justifyContent: "center",
   },
   slotFilled: {
     width: 120,
     height: 120,
     backgroundColor: "rgba(30, 58, 95, 0.1)",
-    borderRadius: 16,
-    padding: 12,
+    borderRadius: BorderRadiusPresets.card,
+    padding: Spacing.md,
     borderWidth: 1,
     borderColor: "rgba(30, 58, 95, 0.2)",
     position: "relative",
@@ -1211,8 +1204,8 @@ const styles = StyleSheet.create({
     width: 120,
     height: 120,
     backgroundColor: "rgba(255,255,255,0.6)",
-    borderRadius: 16,
-    padding: 12,
+    borderRadius: BorderRadiusPresets.card,
+    padding: Spacing.md,
     borderWidth: 1,
     borderColor: "rgba(0,0,0,0.1)",
     borderStyle: "dashed",
@@ -1222,96 +1215,93 @@ const styles = StyleSheet.create({
   slotPaywall: {
     width: 120,
     height: 120,
-    borderRadius: 16,
+    borderRadius: BorderRadiusPresets.card,
     backgroundColor: "rgba(30, 58, 95, 0.05)",
     borderWidth: 1,
     borderColor: "rgba(30, 58, 95, 0.15)",
     justifyContent: "center",
     alignItems: "center",
-    padding: 12,
+    padding: Spacing.md,
   },
   slotPaywallLock: {
     fontSize: 24,
-    marginBottom: 8,
+    marginBottom: Spacing.sm,
   },
   slotPaywallTitle: {
+    ...TypographyStyles.caption,
     fontSize: 13,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
+    fontWeight: TypographyStyles.heading.fontWeight,
     textAlign: "center",
   },
   slotPaywallSubtitle: {
+    ...TypographyStyles.tiny,
     fontSize: 11,
-    fontFamily: "NotoSerifSC-Regular",
     textAlign: "center",
     marginTop: 2,
   },
   slotLabel: {
-    fontSize: 12,
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 4,
+    ...TypographyStyles.small,
+    marginBottom: Spacing.xs,
   },
   slotSchoolName: {
+    ...TypographyStyles.caption,
     fontSize: 13,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 4,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    marginBottom: Spacing.xs,
   },
   slotSchoolInfo: {
-    fontSize: 11,
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.tiny,
   },
   slotEmptyIcon: {
     fontSize: 24,
-    marginBottom: 4,
+    marginBottom: Spacing.xs,
   },
   slotEmptyText: {
-    fontSize: 12,
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.small,
   },
   slotRemoveButton: {
     position: "absolute",
-    top: 4,
-    right: 4,
+    top: Spacing.xs,
+    right: Spacing.xs,
     width: 22,
     height: 22,
-    borderRadius: 11,
+    borderRadius: BorderRadius.full,
     backgroundColor: "rgba(0,0,0,0.1)",
     justifyContent: "center",
     alignItems: "center",
     zIndex: 1,
   },
   slotRemoveText: {
-    fontSize: 14,
-    fontWeight: "600",
+    fontSize: TypographyStyles.caption.fontSize,
+    fontWeight: TypographyStyles.heading.fontWeight,
   },
   slotDragHandle: {
     position: "absolute",
-    bottom: 6,
-    right: 6,
+    bottom: Spacing.sm,
+    right: Spacing.sm,
     opacity: 0.4,
   },
   slotDragIcon: {
-    fontSize: 12,
+    fontSize: TypographyStyles.small.fontSize,
     color: "#666",
     letterSpacing: -2,
   },
 
   // Favorites
   favoritesSection: {
-    marginBottom: 24,
+    marginBottom: Spacing.xl,
     alignItems: "center",
   },
   favoritesRow: {
     flexDirection: "row",
-    gap: 12,
+    gap: Spacing.md,
     justifyContent: "center",
   },
   favoriteCard: {
     width: 160,
     backgroundColor: "rgba(255,255,255,0.6)",
-    borderRadius: 12,
-    padding: 12,
+    borderRadius: BorderRadiusPresets.button,
+    padding: Spacing.md,
     borderWidth: 1,
     borderColor: "rgba(0,0,0,0.08)",
   },
@@ -1323,35 +1313,33 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   favoriteSchoolName: {
-    fontSize: 14,
-    fontWeight: "600",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 4,
+    ...TypographyStyles.caption,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    marginBottom: Spacing.xs,
   },
   favoriteSchoolInfo: {
-    fontSize: 12,
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.small,
   },
   inCompareBadge: {
     backgroundColor: "rgba(30, 58, 95, 0.15)",
-    paddingHorizontal: 8,
+    paddingHorizontal: Spacing.sm,
     paddingVertical: 2,
-    borderRadius: 8,
+    borderRadius: BorderRadius.sm,
     alignSelf: "flex-start",
-    marginTop: 8,
+    marginTop: Spacing.sm,
   },
   inCompareBadgeText: {
-    fontSize: 10,
-    fontWeight: "500",
+    ...TypographyStyles.tiny,
+    fontWeight: TypographyStyles.heading.fontWeight,
   },
   favoriteActions: {
-    marginTop: 12,
-    gap: 8,
+    marginTop: Spacing.md,
+    gap: Spacing.sm,
   },
   favoriteActionButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 8,
+    paddingVertical: Spacing.sm,
+    paddingHorizontal: Spacing.md,
+    borderRadius: BorderRadius.sm,
     backgroundColor: "rgba(255,255,255,0.1)",
     alignItems: "center",
   },
@@ -1362,30 +1350,28 @@ const styles = StyleSheet.create({
     // backgroundColor will be set dynamically using colors.muted
   },
   favoriteActionText: {
-    fontSize: 12,
+    ...TypographyStyles.small,
     color: "#FFFFFF",
-    fontWeight: "500",
+    fontWeight: TypographyStyles.heading.fontWeight,
   },
   favoriteActionPrimaryText: {
-    color: "#0F1629",
+    color: "#FAF8F5",
   },
   favoriteActionDisabledText: {
-    color: colors.muted, // 使用 muted 颜色，确保在浅色背景下可见
+    // color will be set dynamically using colors.muted
   },
   emptyFavorites: {
-    paddingVertical: 24,
+    paddingVertical: Spacing.xl,
     alignItems: "center",
   },
   emptyFavoritesText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 4,
+    ...TypographyStyles.caption,
+    color: "#8B8578",
+    marginBottom: Spacing.xs,
   },
   emptyFavoritesHint: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.3)",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.small,
+    color: "#B0ABA3",
     textAlign: "center",
   },
 
@@ -1395,7 +1381,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0,0,0,0.6)",
     justifyContent: "center",
     alignItems: "center",
-    padding: 24,
+    padding: Spacing.xl,
   },
   searchModalBackdrop: {
     position: "absolute",
@@ -1405,8 +1391,8 @@ const styles = StyleSheet.create({
     bottom: 0,
   },
   searchPopupContainer: {
-    backgroundColor: "#1a2744",
-    borderRadius: 20,
+    backgroundColor: "#FFF9F0",
+    borderRadius: BorderRadiusPresets.modal,
     width: "100%",
     maxWidth: 360,
     maxHeight: "70%",
@@ -1416,32 +1402,33 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 20,
-    paddingTop: 20,
-    paddingBottom: 12,
+    paddingHorizontal: Spacing.xl,
+    paddingTop: Spacing.xl,
+    paddingBottom: Spacing.md,
   },
   searchPopupTitle: {
+    ...TypographyStyles.heading,
     fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
+    color: "#2D2013",
   },
   searchModalClose: {
     fontSize: 28,
-    color: "#FFFFFF",
+    color: "#706B5E",
   },
   searchInputContainer: {
-    paddingHorizontal: 20,
-    paddingBottom: 12,
+    paddingHorizontal: Spacing.xl,
+    paddingBottom: Spacing.md,
   },
   searchInput: {
-    backgroundColor: "rgba(255,255,255,0.1)",
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
+    backgroundColor: "#FAF8F5",
+    borderRadius: BorderRadiusPresets.button,
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: Spacing.md,
+    ...TypographyStyles.body,
     fontSize: 15,
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
+    color: "#2D2013",
+    borderWidth: 1,
+    borderColor: "#E8E2D5",
   },
   searchResultsList: {
     maxHeight: 300,
@@ -1450,10 +1437,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 20,
-    paddingVertical: 12,
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.md,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.05)",
+    borderBottomColor: "#E8E2D5",
   },
   searchResultItemDisabled: {
     opacity: 0.5,
@@ -1462,47 +1449,43 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   searchResultName: {
-    fontSize: 14,
-    fontWeight: "500",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
+    ...TypographyStyles.caption,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    color: "#2D2013",
     marginBottom: 2,
   },
   searchResultMeta: {
+    ...TypographyStyles.tiny,
     fontSize: 11,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
+    color: "#8B8578",
   },
   searchResultAddIcon: {
     fontSize: 24,
-    color: "#00D9FF",
+    color: "#0a7ea4",
     fontWeight: "300",
-    marginLeft: 12,
+    marginLeft: Spacing.md,
   },
   searchResultBadge: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
-    marginLeft: 12,
+    ...TypographyStyles.small,
+    color: "#9A9488",
+    marginLeft: Spacing.md,
   },
   searchEmptyContainer: {
     alignItems: "center",
-    paddingVertical: 32,
+    paddingVertical: Spacing["2xl"],
   },
   searchNoResults: {
     textAlign: "center",
-    color: "rgba(255,255,255,0.5)",
-    fontSize: 14,
-    fontFamily: "NotoSerifSC-Regular",
+    color: "#8B8578",
+    ...TypographyStyles.caption,
   },
   searchHintContainer: {
     alignItems: "center",
-    paddingVertical: 32,
+    paddingVertical: Spacing["2xl"],
   },
   searchHint: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.caption,
+    color: "#9A9488",
   },
 
   // Slot picker modal
@@ -1511,134 +1494,124 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0,0,0,0.7)",
     justifyContent: "center",
     alignItems: "center",
-    padding: 24,
+    padding: Spacing.xl,
   },
   slotPickerContainer: {
-    backgroundColor: "#1a2744",
-    borderRadius: 20,
-    padding: 24,
+    backgroundColor: "#FFF9F0",
+    borderRadius: BorderRadiusPresets.modal,
+    padding: Spacing.xl,
     width: "100%",
     maxWidth: 320,
   },
   slotPickerTitle: {
+    ...TypographyStyles.heading,
     fontSize: 18,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
+    color: "#2D2013",
     textAlign: "center",
-    marginBottom: 8,
+    marginBottom: Spacing.sm,
   },
   slotPickerSubtitle: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.caption,
+    color: "#706B5E",
     textAlign: "center",
-    marginBottom: 20,
+    marginBottom: Spacing.xl,
   },
   slotPickerOptions: {
-    gap: 12,
+    gap: Spacing.md,
   },
   slotPickerOption: {
-    backgroundColor: "rgba(255,255,255,0.1)",
-    borderRadius: 12,
-    padding: 16,
+    backgroundColor: "#FAF8F5",
+    borderRadius: BorderRadiusPresets.button,
+    padding: Spacing.lg,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.15)",
+    borderColor: "#E8E2D5",
   },
   slotPickerOptionLabel: {
-    fontSize: 12,
-    fontWeight: "500",
-    marginBottom: 4,
+    ...TypographyStyles.small,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    marginBottom: Spacing.xs,
     // color will be set dynamically
   },
   slotPickerOptionSchool: {
-    fontSize: 14,
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.caption,
+    color: "#2D2013",
   },
   slotPickerCancel: {
-    marginTop: 16,
-    paddingVertical: 12,
+    marginTop: Spacing.lg,
+    paddingVertical: Spacing.md,
     alignItems: "center",
   },
   slotPickerCancelText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.caption,
+    color: "#706B5E",
   },
 
   // Paywall modal
   paywallModalContainer: {
-    backgroundColor: "#1a2744",
-    borderRadius: 20,
-    padding: 24,
+    backgroundColor: "#FFF9F0",
+    borderRadius: BorderRadiusPresets.modal,
+    padding: Spacing.xl,
     width: "100%",
     maxWidth: 320,
     alignItems: "center",
   },
   paywallModalTitle: {
+    ...TypographyStyles.title,
     fontSize: 22,
-    fontWeight: "700",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 12,
+    marginBottom: Spacing.md,
     // color will be set dynamically
   },
   paywallModalText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.8)",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.caption,
+    color: "#706B5E",
     textAlign: "center",
-    marginBottom: 16,
+    marginBottom: Spacing.lg,
   },
   paywallFeatures: {
     alignSelf: "stretch",
-    marginBottom: 24,
+    marginBottom: Spacing.xl,
   },
   paywallFeatureItem: {
-    fontSize: 14,
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
-    marginBottom: 8,
+    ...TypographyStyles.caption,
+    color: "#2D2013",
+    marginBottom: Spacing.sm,
   },
   paywallModalButton: {
     // backgroundColor will be set dynamically
-    paddingVertical: 14,
-    paddingHorizontal: 32,
-    borderRadius: 25,
+    paddingVertical: SpacingPresets.buttonPaddingVertical,
+    paddingHorizontal: Spacing["2xl"],
+    borderRadius: BorderRadiusPresets.buttonPill,
     width: "100%",
     alignItems: "center",
   },
   paywallModalButtonText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#0F1629",
-    fontFamily: "NotoSerifSC-Bold",
+    ...TypographyStyles.body,
+    fontWeight: TypographyStyles.heading.fontWeight,
+    color: "#FAF8F5",
   },
   paywallModalClose: {
-    marginTop: 12,
-    paddingVertical: 8,
+    marginTop: Spacing.md,
+    paddingVertical: Spacing.sm,
   },
   paywallModalCloseText: {
-    fontSize: 14,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
+    ...TypographyStyles.caption,
+    color: "#8B8578",
   },
 
   // Toast
   toastContainer: {
     position: "absolute",
     bottom: 100,
-    left: 24,
-    right: 24,
+    left: Spacing.xl,
+    right: Spacing.xl,
     backgroundColor: "rgba(0,0,0,0.8)",
-    borderRadius: 12,
-    paddingVertical: 12,
-    paddingHorizontal: 16,
+    borderRadius: BorderRadiusPresets.button,
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.lg,
     alignItems: "center",
   },
   toastText: {
-    fontSize: 14,
+    ...TypographyStyles.caption,
     color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Regular",
   },
 });

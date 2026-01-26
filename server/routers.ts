@@ -4,6 +4,7 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { aiRouter } from "./aiRouter";
 import { reportRouter } from "./reportRouter";
+import { deadlineRouter } from "./deadlineRouter";
 
 export const appRouter = router({
   // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -24,6 +25,9 @@ export const appRouter = router({
 
   // Quiz report generation endpoints
   report: reportRouter,
+
+  // Deadline tracker endpoints
+  deadline: deadlineRouter,
 });
 
 export type AppRouter = typeof appRouter;

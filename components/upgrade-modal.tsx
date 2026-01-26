@@ -122,7 +122,7 @@ export function UpgradeModal({ visible, onClose }: UpgradeModalProps) {
         ]}
       >
         <LinearGradient
-          colors={["#1A2744", "#0F1629", "#0A0F1C"]}
+          colors={["#FAF8F5", "#FFF9F0", "#FAF8F5"]}
           style={StyleSheet.absoluteFill}
         />
 
@@ -135,7 +135,7 @@ export function UpgradeModal({ visible, onClose }: UpgradeModalProps) {
           style={styles.closeButton}
           hitSlop={{ top: 10, bottom: 10, left: 10, right: 10 }}
         >
-          <IconSymbol name="xmark" size={20} color="rgba(255,255,255,0.6)" />
+          <IconSymbol name="xmark" size={20} color="#706B5E" />
         </TouchableOpacity>
 
         {/* Header */}
@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
   handle: {
     width: 40,
     height: 4,
-    backgroundColor: "rgba(255,255,255,0.3)",
+    backgroundColor: "#E8E2D5",
     borderRadius: 2,
     alignSelf: "center",
     marginBottom: 16,
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     height: 32,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#E8E2D5",
     borderRadius: 16,
     zIndex: 1,
   },
@@ -273,13 +273,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 28,
     fontWeight: "700",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 15,
-    color: "rgba(255,255,255,0.7)",
+    color: "#706B5E",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
   },
@@ -306,13 +306,13 @@ const styles = StyleSheet.create({
   featureTitle: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     marginBottom: 3,
   },
   featureDescription: {
     fontSize: 13,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
   },
   pricingContainer: {
@@ -339,18 +339,18 @@ const styles = StyleSheet.create({
   },
   priceSymbol: {
     fontSize: 18,
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontWeight: "600",
     marginRight: 2,
   },
   priceAmount: {
     fontSize: 48,
     fontWeight: "700",
-    color: "#FFFFFF",
+    color: "#2D2013",
   },
   pricePeriod: {
     fontSize: 16,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     marginLeft: 4,
   },
   pricingNote: {
@@ -380,7 +380,7 @@ const styles = StyleSheet.create({
   upgradeButtonText: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#FAF8F5",
     fontFamily: "NotoSerifSC-Regular",
   },
   laterButton: {
@@ -389,12 +389,12 @@ const styles = StyleSheet.create({
   },
   laterButtonText: {
     fontSize: 15,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
   },
   terms: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
+    color: "#8B7355",
     textAlign: "center",
     lineHeight: 16,
     fontFamily: "NotoSerifSC-Regular",

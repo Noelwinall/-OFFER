@@ -1,532 +1,641 @@
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView, Platform } from "react-native";
+import { useState, useCallback } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+  Platform,
+  ActivityIndicator,
+  RefreshControl,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { IconSymbol } from "@/components/ui/icon-symbol";
-import { useState, useEffect } from "react";
 import * as Haptics from "expo-haptics";
-import { NotificationsStorage } from "@/lib/storage";
+import { useColors } from "@/hooks/use-colors";
+import { useAuth } from "@/hooks/use-auth";
+import { trpc } from "@/lib/trpc";
+import { DeadlineCard } from "@/components/deadline-card";
+import { getApiBaseUrl } from "@/constants/oauth";
+import { Spacing, SpacingPresets } from "@/constants/spacing";
+import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
+import { TypographyStyles } from "@/constants/typography";
+import type { Level } from "@/types/school";
 
-// 申請時間線數據（示範數據）
-const DEADLINES = [
-  {
-    id: "1",
-    month: "9月",
-    period: "2025年9月",
-    events: [
-      {
-        title: "國際學校早期申請開始",
-        description: "大部分國際學校開放下學年入學申請",
-        schools: ["漢基國際學校", "香港國際學校", "德瑞國際學校"],
-        type: "application_open",
-        urgent: false,
-      },
-      {
-        title: "直資學校簡介會",
-        description: "多間直資學校舉辦入學簡介會",
-        schools: ["聖保羅男女中學", "拔萃男書院", "拔萃女書院"],
-        type: "info_session",
-        urgent: false,
-      },
-    ],
-  },
-  {
-    id: "2",
-    month: "10月",
-    period: "2025年10月",
-    events: [
-      {
-        title: "小一自行分配學位申請",
-        description: "官立及資助小學自行分配學位申請期",
-        schools: ["所有官立及資助小學"],
-        type: "deadline",
-        urgent: true,
-      },
-      {
-        title: "國際學校第一輪截止",
-        description: "部分國際學校第一輪申請截止",
-        schools: ["英基學校協會", "加拿大國際學校"],
-        type: "deadline",
-        urgent: true,
-      },
-    ],
-  },
-  {
-    id: "3",
-    month: "11月",
-    period: "2025年11月",
-    events: [
-      {
-        title: "直資學校申請截止",
-        description: "大部分直資學校申請截止日期",
-        schools: ["聖保羅男女中學", "拔萃男書院", "協恩中學"],
-        type: "deadline",
-        urgent: true,
-      },
-      {
-        title: "私立學校面試",
-        description: "私立學校開始進行入學面試",
-        schools: ["弘立書院", "保良局蔡繼有學校"],
-        type: "interview",
-        urgent: false,
-      },
-    ],
-  },
-  {
-    id: "4",
-    month: "12月",
-    period: "2025年12月",
-    events: [
-      {
-        title: "小一統一派位選校",
-        description: "填寫小一統一派位選校表格",
-        schools: ["所有官立及資助小學"],
-        type: "deadline",
-        urgent: true,
-      },
-      {
-        title: "國際學校面試期",
-        description: "國際學校進行入學評估及面試",
-        schools: ["漢基國際學校", "香港國際學校"],
-        type: "interview",
-        urgent: false,
-      },
-    ],
-  },
-  {
-    id: "5",
-    month: "1月",
-    period: "2026年1月",
-    events: [
-      {
-        title: "直資學校放榜",
-        description: "直資學校公佈錄取結果",
-        schools: ["聖保羅男女中學", "拔萃男書院", "拔萃女書院"],
-        type: "result",
-        urgent: false,
-      },
-      {
-        title: "國際學校第二輪申請",
-        description: "部分國際學校開放第二輪申請",
-        schools: ["耀中國際學校", "弘立書院"],
-        type: "application_open",
-        urgent: false,
-      },
-    ],
-  },
-  {
-    id: "6",
-    month: "6月",
-    period: "2026年6月",
-    events: [
-      {
-        title: "小一統一派位結果公佈",
-        description: "教育局公佈小一統一派位結果",
-        schools: ["所有官立及資助小學"],
-        type: "result",
-        urgent: true,
-      },
-    ],
-  },
+// Stage filter options
+const STAGE_OPTIONS: { label: string; value: Level | null }[] = [
+  { label: "全部", value: null },
+  { label: "幼稚園", value: "幼稚園" },
+  { label: "小學", value: "小學" },
+  { label: "中學", value: "中學" },
 ];
-
-const EVENT_TYPE_CONFIG = {
-  application_open: { label: "申請開放", color: "#10B981", icon: "📝" },
-  deadline: { label: "截止日期", color: "#EF4444", icon: "⏰" },
-  info_session: { label: "簡介會", color: "#7C3AED", icon: "📢" },
-  interview: { label: "面試期", color: "#F59E0B", icon: "🎤" },
-  result: { label: "放榜", color: "#00D9FF", icon: "📋" },
-};
 
 export default function DeadlinesScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
-  const [expandedMonth, setExpandedMonth] = useState<string | null>("2");
-  const [unreadCount, setUnreadCount] = useState(0);
+  const colors = useColors();
+  const { user, loading: authLoading, isAuthenticated } = useAuth();
 
-  useEffect(() => {
-    loadUnreadCount();
-  }, []);
+  // Stage filter
+  const [selectedStage, setSelectedStage] = useState<Level | null>(null);
 
-  const loadUnreadCount = async () => {
-    const count = await NotificationsStorage.getUnreadCount();
-    setUnreadCount(count);
-  };
+  // Collapsed sections
+  const [pendingExpanded, setPendingExpanded] = useState(false);
+  const [expiredExpanded, setExpiredExpanded] = useState(false);
 
-  const handleNotificationPress = () => {
+  // Fetch deadlines
+  const {
+    data: deadlinesData,
+    isLoading: deadlinesLoading,
+    refetch: refetchDeadlines,
+    isRefetching,
+  } = trpc.deadline.getDeadlines.useQuery(
+    {
+      stage: selectedStage || undefined,
+      includeExpired: true,
+      includeUnverified: true,
+    },
+    {
+      enabled: isAuthenticated,
+    }
+  );
+
+  // Fetch tracked schools for display
+  const { data: trackedSchools } = trpc.deadline.getTrackedSchools.useQuery(
+    undefined,
+    { enabled: isAuthenticated }
+  );
+
+  const handleStageSelect = (stage: Level | null) => {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     }
-    router.push("/notifications");
+    setSelectedStage(stage);
   };
 
-  const toggleMonth = (monthId: string) => {
-    setExpandedMonth(expandedMonth === monthId ? null : monthId);
+  const handleSchoolPress = (schoolId: string) => {
+    router.push(`/school/${schoolId}`);
   };
+
+  const handleRefresh = useCallback(() => {
+    refetchDeadlines();
+  }, [refetchDeadlines]);
+
+  const handleLoginPress = () => {
+    // Redirect to login
+    const apiBaseUrl = getApiBaseUrl();
+    const loginUrl = `${apiBaseUrl}/api/oauth/login`;
+    if (Platform.OS === "web") {
+      window.location.href = loginUrl;
+    } else {
+      router.push("/");
+    }
+  };
+
+  // Loading state
+  if (authLoading) {
+    return (
+      <LinearGradient colors={[colors.background, colors.surface]} style={styles.container}>
+        <View style={[styles.loadingContainer, { paddingTop: insets.top + 60 }]}>
+          <ActivityIndicator size="large" color={colors.primary} />
+          <Text style={[styles.loadingText, { color: colors.muted }]}>載入中...</Text>
+        </View>
+      </LinearGradient>
+    );
+  }
+
+  // Not authenticated - show login prompt
+  if (!isAuthenticated) {
+    return (
+      <LinearGradient colors={[colors.background, colors.surface]} style={styles.container}>
+        <View style={[styles.header, { paddingTop: insets.top + Spacing.md }]}>
+          <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+            <IconSymbol name="chevron.left" size={24} color={colors.foreground} />
+          </TouchableOpacity>
+          <Text style={[styles.headerTitle, { color: colors.foreground }]}>截止日期追蹤</Text>
+          <View style={styles.headerRight} />
+        </View>
+
+        <View style={styles.emptyContainer}>
+          <IconSymbol name="lock.fill" size={48} color={colors.muted} />
+          <Text style={[styles.emptyTitle, { color: colors.foreground }]}>需要登入</Text>
+          <Text style={[styles.emptyText, { color: colors.muted }]}>
+            登入後即可追蹤學校的重要日期，
+            {"\n"}包括申請截止、面試及放榜日期。
+          </Text>
+          <TouchableOpacity
+            style={[styles.loginButton, { backgroundColor: colors.primary }]}
+            onPress={handleLoginPress}
+          >
+            <Text style={styles.loginButtonText}>立即登入</Text>
+          </TouchableOpacity>
+        </View>
+      </LinearGradient>
+    );
+  }
+
+  const hasTrackedSchools = (trackedSchools?.length || 0) > 0;
+  const upcoming = deadlinesData?.upcoming || [];
+  const pending = deadlinesData?.pending || [];
+  const expired = deadlinesData?.expired || [];
 
   return (
-    <View style={{ flex: 1 }}>
-      <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
-        style={StyleSheet.absoluteFill}
-      />
-
-      <View style={[styles.header, { paddingTop: insets.top }]}>
-        <TouchableOpacity
-          onPress={() => router.back()}
-          style={styles.backButton}
-          activeOpacity={0.7}
-        >
-          <IconSymbol name="chevron.right" size={24} color="#FFFFFF" style={{ transform: [{ rotate: "180deg" }] }} />
+    <LinearGradient colors={[colors.background, colors.surface]} style={styles.container}>
+      {/* Header */}
+      <View style={[styles.header, { paddingTop: insets.top + Spacing.md }]}>
+        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+          <IconSymbol name="chevron.left" size={24} color={colors.foreground} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>申請截止別錯過！</Text>
-        <TouchableOpacity
-          onPress={handleNotificationPress}
-          style={styles.notificationButton}
-          activeOpacity={0.7}
-        >
-          <IconSymbol name={unreadCount > 0 ? "bell.badge.fill" : "bell.fill"} size={22} color="#FFFFFF" />
-          {unreadCount > 0 && (
-            <View style={styles.notificationBadge}>
-              <Text style={styles.notificationBadgeText}>{unreadCount > 9 ? "9+" : unreadCount}</Text>
+        <Text style={[styles.headerTitle, { color: colors.foreground }]}>截止日期追蹤</Text>
+        <View style={styles.headerRight}>
+          {hasTrackedSchools && (
+            <View style={[styles.countBadge, { backgroundColor: colors.primary }]}>
+              <Text style={styles.countBadgeText}>{trackedSchools?.length}</Text>
             </View>
           )}
-        </TouchableOpacity>
+        </View>
+      </View>
+
+      {/* Stage Filter Pills */}
+      <View style={styles.filterContainer}>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.filterScroll}
+        >
+          {STAGE_OPTIONS.map((option) => {
+            const isSelected = selectedStage === option.value;
+            return (
+              <TouchableOpacity
+                key={option.label}
+                style={[
+                  styles.filterPill,
+                  {
+                    backgroundColor: isSelected ? colors.primary : colors.surface,
+                    borderColor: isSelected ? colors.primary : colors.border,
+                  },
+                ]}
+                onPress={() => handleStageSelect(option.value)}
+              >
+                <Text
+                  style={[
+                    styles.filterPillText,
+                    { color: isSelected ? "#FAF8F5" : colors.foreground },
+                  ]}
+                >
+                  {option.label}
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
+        </ScrollView>
       </View>
 
       <ScrollView
         style={styles.content}
-        contentContainerStyle={{ paddingBottom: insets.bottom + 24 }}
+        contentContainerStyle={[styles.contentContainer, { paddingBottom: insets.bottom + 100 }]}
         showsVerticalScrollIndicator={false}
+        refreshControl={
+          <RefreshControl
+            refreshing={isRefetching}
+            onRefresh={handleRefresh}
+            tintColor={colors.primary}
+          />
+        }
       >
-        {/* 說明卡片 */}
-        <View style={styles.infoCard}>
-          <Text style={styles.infoIcon}>📅</Text>
-          <View style={styles.infoContent}>
-            <Text style={styles.infoTitle}>2025-2026 學年申請時間線</Text>
-            <Text style={styles.infoText}>
-              以下為香港各類學校的重要申請日期，請提前做好準備
-            </Text>
-          </View>
-        </View>
+        <MaxWidthWrapper>
+          {/* No tracked schools */}
+          {!hasTrackedSchools && (
+            <View style={styles.emptyStateCard}>
+              <IconSymbol name="bell.badge" size={40} color={colors.muted} />
+              <Text style={[styles.emptyStateTitle, { color: colors.foreground }]}>
+                尚未追蹤任何學校
+              </Text>
+              <Text style={[styles.emptyStateText, { color: colors.muted }]}>
+                在學校詳情頁面點擊「追蹤日期」按鈕，
+                {"\n"}即可在此查看該校的重要日期。
+              </Text>
+              <TouchableOpacity
+                style={[styles.browseButton, { borderColor: colors.primary }]}
+                onPress={() => router.push("/(tabs)/search")}
+              >
+                <Text style={[styles.browseButtonText, { color: colors.primary }]}>
+                  瀏覽學校
+                </Text>
+              </TouchableOpacity>
+            </View>
+          )}
 
-        {/* 時間線 */}
-        <View style={styles.timeline}>
-          {DEADLINES.map((month, index) => {
-            const isExpanded = expandedMonth === month.id;
-            const hasUrgent = month.events.some(e => e.urgent);
+          {/* Tracked schools summary */}
+          {hasTrackedSchools && (
+            <View style={[styles.summaryCard, { backgroundColor: colors.surface, borderColor: colors.border }]}>
+              <Text style={[styles.summaryTitle, { color: colors.foreground }]}>
+                正在追蹤 {trackedSchools?.length} 間學校
+              </Text>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <View style={styles.trackedSchoolsRow}>
+                  {trackedSchools?.slice(0, 5).map((item) => (
+                    <TouchableOpacity
+                      key={item.schoolId}
+                      style={[styles.trackedSchoolChip, { backgroundColor: colors.border }]}
+                      onPress={() => handleSchoolPress(item.schoolId)}
+                    >
+                      <Text style={[styles.trackedSchoolText, { color: colors.foreground }]} numberOfLines={1}>
+                        {item.school?.name || item.schoolId}
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+                  {(trackedSchools?.length || 0) > 5 && (
+                    <View style={[styles.trackedSchoolChip, { backgroundColor: colors.border }]}>
+                      <Text style={[styles.trackedSchoolText, { color: colors.muted }]}>
+                        +{(trackedSchools?.length || 0) - 5}
+                      </Text>
+                    </View>
+                  )}
+                </View>
+              </ScrollView>
+            </View>
+          )}
 
-            return (
-              <View key={month.id} style={styles.timelineItem}>
-                {/* 時間線連接線 */}
-                {index < DEADLINES.length - 1 && (
-                  <View style={styles.timelineConnector} />
-                )}
+          {/* Loading state */}
+          {deadlinesLoading && hasTrackedSchools && (
+            <View style={styles.loadingSection}>
+              <ActivityIndicator size="small" color={colors.primary} />
+              <Text style={[styles.loadingSectionText, { color: colors.muted }]}>
+                載入截止日期...
+              </Text>
+            </View>
+          )}
 
-                {/* 月份節點 */}
-                <TouchableOpacity
-                  style={styles.monthHeader}
-                  onPress={() => toggleMonth(month.id)}
-                  activeOpacity={0.7}
-                >
-                  <View style={[
-                    styles.monthDot,
-                    hasUrgent && styles.monthDotUrgent,
-                  ]}>
-                    <Text style={styles.monthDotText}>{month.month}</Text>
-                  </View>
-                  <View style={styles.monthInfo}>
-                    <Text style={styles.monthPeriod}>{month.period}</Text>
-                    <Text style={styles.monthEventCount}>
-                      {month.events.length} 個重要事項
-                      {hasUrgent && " · 有截止日期"}
-                    </Text>
-                  </View>
-                  <Text style={styles.expandIcon}>{isExpanded ? "▼" : "▶"}</Text>
-                </TouchableOpacity>
-
-                {/* 展開的事件列表 */}
-                {isExpanded && (
-                  <View style={styles.eventList}>
-                    {month.events.map((event, eventIndex) => {
-                      const typeConfig = EVENT_TYPE_CONFIG[event.type as keyof typeof EVENT_TYPE_CONFIG];
-                      
-                      return (
-                        <View key={eventIndex} style={styles.eventCard}>
-                          <View style={styles.eventHeader}>
-                            <Text style={styles.eventIcon}>{typeConfig.icon}</Text>
-                            <View style={[styles.eventTypeBadge, { backgroundColor: `${typeConfig.color}20` }]}>
-                              <Text style={[styles.eventTypeText, { color: typeConfig.color }]}>
-                                {typeConfig.label}
-                              </Text>
-                            </View>
-                            {event.urgent && (
-                              <View style={styles.urgentBadge}>
-                                <Text style={styles.urgentText}>緊急</Text>
-                              </View>
-                            )}
-                          </View>
-                          <Text style={styles.eventTitle}>{event.title}</Text>
-                          <Text style={styles.eventDescription}>{event.description}</Text>
-                          <View style={styles.eventSchools}>
-                            <Text style={styles.eventSchoolsLabel}>相關學校：</Text>
-                            <Text style={styles.eventSchoolsList}>
-                              {event.schools.join("、")}
-                            </Text>
-                          </View>
-                        </View>
-                      );
-                    })}
-                  </View>
-                )}
+          {/* Upcoming Events */}
+          {!deadlinesLoading && hasTrackedSchools && (
+            <>
+              <View style={styles.sectionHeader}>
+                <Text style={[styles.sectionTitle, { color: colors.foreground }]}>
+                  即將到來
+                </Text>
+                <View style={[styles.sectionCount, { backgroundColor: colors.primary + "20" }]}>
+                  <Text style={[styles.sectionCountText, { color: colors.primary }]}>
+                    {upcoming.length}
+                  </Text>
+                </View>
               </View>
-            );
-          })}
-        </View>
 
-        {/* 提示 */}
-        <View style={styles.tipContainer}>
-          <Text style={styles.tipIcon}>💡</Text>
-          <Text style={styles.tipText}>
-            以上日期僅供參考，實際日期請以各學校官方公佈為準。建議提前 1-2 個月開始準備申請材料。
-          </Text>
-        </View>
+              {upcoming.length === 0 ? (
+                <View style={[styles.emptySection, { borderColor: colors.border }]}>
+                  <Text style={[styles.emptySectionText, { color: colors.muted }]}>
+                    {selectedStage
+                      ? `暫無${selectedStage}的即將到來事件`
+                      : "暫無即將到來的事件"}
+                  </Text>
+                </View>
+              ) : (
+                upcoming.map((deadline) => (
+                  <DeadlineCard
+                    key={deadline.id}
+                    id={deadline.id}
+                    schoolName={deadline.school?.name || deadline.schoolNameZh || deadline.schoolNameEn}
+                    schoolNameEn={deadline.schoolNameEn}
+                    schoolId={deadline.schoolId}
+                    eventType={deadline.eventType}
+                    startDate={deadline.startDate}
+                    endDate={deadline.endDate}
+                    notes={deadline.notes}
+                    sourceUrl={deadline.sourceUrl}
+                    stage={deadline.stage}
+                    appLevel={deadline.appLevel}
+                    isRolling={deadline.isRolling}
+                    status={deadline.status}
+                    onSchoolPress={handleSchoolPress}
+                  />
+                ))
+              )}
+
+              {/* Pending Verification Section (Collapsed) */}
+              {pending.length > 0 && (
+                <View style={styles.collapsibleSection}>
+                  <TouchableOpacity
+                    style={[styles.collapsibleHeader, { borderColor: colors.border }]}
+                    onPress={() => setPendingExpanded(!pendingExpanded)}
+                  >
+                    <View style={styles.collapsibleHeaderLeft}>
+                      <IconSymbol
+                        name="exclamationmark.triangle.fill"
+                        size={16}
+                        color="#F59E0B"
+                      />
+                      <Text style={[styles.collapsibleTitle, { color: colors.foreground }]}>
+                        待核實
+                      </Text>
+                      <View style={[styles.sectionCount, { backgroundColor: "#F59E0B20" }]}>
+                        <Text style={[styles.sectionCountText, { color: "#F59E0B" }]}>
+                          {pending.length}
+                        </Text>
+                      </View>
+                    </View>
+                    <IconSymbol
+                      name={pendingExpanded ? "chevron.up" : "chevron.down"}
+                      size={16}
+                      color={colors.muted}
+                    />
+                  </TouchableOpacity>
+
+                  {pendingExpanded && (
+                    <View style={styles.collapsibleContent}>
+                      {pending.map((deadline) => (
+                        <DeadlineCard
+                          key={deadline.id}
+                          id={deadline.id}
+                          schoolName={deadline.school?.name || deadline.schoolNameZh || deadline.schoolNameEn}
+                          schoolNameEn={deadline.schoolNameEn}
+                          schoolId={deadline.schoolId}
+                          eventType={deadline.eventType}
+                          startDate={deadline.startDate}
+                          endDate={deadline.endDate}
+                          notes={deadline.notes}
+                          sourceUrl={deadline.sourceUrl}
+                          stage={deadline.stage}
+                          appLevel={deadline.appLevel}
+                          isRolling={deadline.isRolling}
+                          status={deadline.status}
+                          onSchoolPress={handleSchoolPress}
+                        />
+                      ))}
+                    </View>
+                  )}
+                </View>
+              )}
+
+              {/* Expired Section (Collapsed) */}
+              {expired.length > 0 && (
+                <View style={styles.collapsibleSection}>
+                  <TouchableOpacity
+                    style={[styles.collapsibleHeader, { borderColor: colors.border }]}
+                    onPress={() => setExpiredExpanded(!expiredExpanded)}
+                  >
+                    <View style={styles.collapsibleHeaderLeft}>
+                      <IconSymbol name="clock.arrow.circlepath" size={16} color={colors.muted} />
+                      <Text style={[styles.collapsibleTitle, { color: colors.foreground }]}>
+                        已過期
+                      </Text>
+                      <View style={[styles.sectionCount, { backgroundColor: colors.border }]}>
+                        <Text style={[styles.sectionCountText, { color: colors.muted }]}>
+                          {expired.length}
+                        </Text>
+                      </View>
+                    </View>
+                    <IconSymbol
+                      name={expiredExpanded ? "chevron.up" : "chevron.down"}
+                      size={16}
+                      color={colors.muted}
+                    />
+                  </TouchableOpacity>
+
+                  {expiredExpanded && (
+                    <View style={styles.collapsibleContent}>
+                      {expired.map((deadline) => (
+                        <DeadlineCard
+                          key={deadline.id}
+                          id={deadline.id}
+                          schoolName={deadline.school?.name || deadline.schoolNameZh || deadline.schoolNameEn}
+                          schoolNameEn={deadline.schoolNameEn}
+                          schoolId={deadline.schoolId}
+                          eventType={deadline.eventType}
+                          startDate={deadline.startDate}
+                          endDate={deadline.endDate}
+                          notes={deadline.notes}
+                          sourceUrl={deadline.sourceUrl}
+                          stage={deadline.stage}
+                          appLevel={deadline.appLevel}
+                          isRolling={deadline.isRolling}
+                          status={deadline.status}
+                          onSchoolPress={handleSchoolPress}
+                        />
+                      ))}
+                    </View>
+                  )}
+                </View>
+              )}
+            </>
+          )}
+        </MaxWidthWrapper>
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   header: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 16,
-    paddingBottom: 16,
+    paddingHorizontal: Spacing.lg,
+    paddingBottom: Spacing.md,
   },
   backButton: {
     width: 40,
     height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
     alignItems: "center",
+    justifyContent: "center",
   },
   headerTitle: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    letterSpacing: 1,
+    ...TypographyStyles.title,
   },
-  notificationButton: {
+  headerRight: {
     width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.1)",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "relative",
+    alignItems: "flex-end",
   },
-  notificationBadge: {
-    position: "absolute",
-    top: 4,
-    right: 4,
-    backgroundColor: "#EF4444",
-    borderRadius: 8,
-    minWidth: 16,
-    height: 16,
-    justifyContent: "center",
+  countBadge: {
+    minWidth: 24,
+    height: 24,
+    borderRadius: 12,
     alignItems: "center",
-    paddingHorizontal: 4,
+    justifyContent: "center",
+    paddingHorizontal: 8,
   },
-  notificationBadgeText: {
-    fontSize: 10,
+  countBadgeText: {
+    ...TypographyStyles.small,
     fontWeight: "700",
-    color: "#FFFFFF",
+    color: "#FAF8F5",
+  },
+  filterContainer: {
+    paddingBottom: Spacing.md,
+  },
+  filterScroll: {
+    paddingHorizontal: Spacing.lg,
+    gap: Spacing.sm,
+  },
+  filterPill: {
+    paddingHorizontal: Spacing.lg,
+    paddingVertical: Spacing.sm,
+    borderRadius: BorderRadiusPresets.buttonPill,
+    borderWidth: 1,
+    marginRight: Spacing.sm,
+  },
+  filterPillText: {
+    ...TypographyStyles.caption,
+    fontWeight: "600",
   },
   content: {
     flex: 1,
-    paddingHorizontal: 16,
   },
-  infoCard: {
-    flexDirection: "row",
-    backgroundColor: "rgba(0,217,255,0.1)",
-    borderRadius: 16,
-    padding: 16,
-    marginBottom: 24,
-    gap: 12,
-    borderWidth: 1,
-    borderColor: "rgba(0,217,255,0.2)",
+  contentContainer: {
+    paddingHorizontal: Spacing.lg,
+    paddingTop: Spacing.md,
   },
-  infoIcon: {
-    fontSize: 28,
-  },
-  infoContent: {
+  loadingContainer: {
     flex: 1,
-  },
-  infoTitle: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 4,
-  },
-  infoText: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 18,
-  },
-  timeline: {
-    position: "relative",
-  },
-  timelineItem: {
-    position: "relative",
-    marginBottom: 8,
-  },
-  timelineConnector: {
-    position: "absolute",
-    left: 35,
-    top: 56,
-    bottom: -8,
-    width: 2,
-    backgroundColor: "rgba(255,255,255,0.1)",
-  },
-  monthHeader: {
-    flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 16,
-    padding: 12,
-    gap: 12,
-  },
-  monthDot: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: "rgba(0,217,255,0.2)",
     justifyContent: "center",
+  },
+  loadingText: {
+    ...TypographyStyles.body,
+    marginTop: Spacing.md,
+  },
+  emptyContainer: {
+    flex: 1,
     alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: Spacing.xl,
   },
-  monthDotUrgent: {
-    backgroundColor: "rgba(239,68,68,0.2)",
+  emptyTitle: {
+    ...TypographyStyles.title,
+    marginTop: Spacing.lg,
+    marginBottom: Spacing.sm,
   },
-  monthDotText: {
-    fontSize: 14,
+  emptyText: {
+    ...TypographyStyles.body,
+    textAlign: "center",
+    lineHeight: 24,
+  },
+  loginButton: {
+    marginTop: Spacing.xl,
+    paddingHorizontal: Spacing["2xl"],
+    paddingVertical: Spacing.md,
+    borderRadius: BorderRadiusPresets.button,
+  },
+  loginButtonText: {
+    ...TypographyStyles.body,
     fontWeight: "700",
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Bold",
+    color: "#FAF8F5",
   },
-  monthInfo: {
-    flex: 1,
+  emptyStateCard: {
+    alignItems: "center",
+    paddingVertical: Spacing["3xl"],
   },
-  monthPeriod: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 2,
+  emptyStateTitle: {
+    ...TypographyStyles.heading,
+    marginTop: Spacing.lg,
+    marginBottom: Spacing.sm,
   },
-  monthEventCount: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
-    fontFamily: "NotoSerifSC-Regular",
+  emptyStateText: {
+    ...TypographyStyles.body,
+    textAlign: "center",
+    lineHeight: 24,
   },
-  expandIcon: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.4)",
-  },
-  eventList: {
-    marginLeft: 60,
-    marginTop: 12,
-    gap: 12,
-  },
-  eventCard: {
-    backgroundColor: "rgba(255,255,255,0.05)",
-    borderRadius: 12,
-    padding: 14,
+  browseButton: {
+    marginTop: Spacing.xl,
+    paddingHorizontal: Spacing.xl,
+    paddingVertical: Spacing.md,
+    borderRadius: BorderRadiusPresets.button,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.08)",
   },
-  eventHeader: {
+  browseButtonText: {
+    ...TypographyStyles.body,
+    fontWeight: "600",
+  },
+  summaryCard: {
+    padding: Spacing.lg,
+    borderRadius: BorderRadiusPresets.card,
+    borderWidth: 1,
+    marginBottom: Spacing.xl,
+  },
+  summaryTitle: {
+    ...TypographyStyles.caption,
+    fontWeight: "600",
+    marginBottom: Spacing.md,
+  },
+  trackedSchoolsRow: {
+    flexDirection: "row",
+    gap: Spacing.sm,
+  },
+  trackedSchoolChip: {
+    paddingHorizontal: Spacing.md,
+    paddingVertical: Spacing.xs,
+    borderRadius: BorderRadius.sm,
+    maxWidth: 120,
+  },
+  trackedSchoolText: {
+    ...TypographyStyles.small,
+  },
+  loadingSection: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 8,
-    marginBottom: 8,
+    justifyContent: "center",
+    gap: Spacing.sm,
+    paddingVertical: Spacing.xl,
   },
-  eventIcon: {
-    fontSize: 16,
+  loadingSectionText: {
+    ...TypographyStyles.body,
   },
-  eventTypeBadge: {
-    paddingHorizontal: 8,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  eventTypeText: {
-    fontSize: 11,
-    fontWeight: "500",
-    fontFamily: "NotoSerifSC-Regular",
-  },
-  urgentBadge: {
-    backgroundColor: "rgba(239,68,68,0.2)",
-    paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  urgentText: {
-    fontSize: 10,
-    fontWeight: "600",
-    color: "#EF4444",
-    fontFamily: "NotoSerifSC-Bold",
-  },
-  eventTitle: {
-    fontSize: 15,
-    fontWeight: "600",
-    color: "#FFFFFF",
-    fontFamily: "NotoSerifSC-Bold",
-    marginBottom: 4,
-  },
-  eventDescription: {
-    fontSize: 13,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 18,
-    marginBottom: 8,
-  },
-  eventSchools: {
+  sectionHeader: {
     flexDirection: "row",
-    flexWrap: "wrap",
+    alignItems: "center",
+    gap: Spacing.sm,
+    marginBottom: Spacing.md,
   },
-  eventSchoolsLabel: {
-    fontSize: 12,
-    color: "rgba(255,255,255,0.4)",
-    fontFamily: "NotoSerifSC-Regular",
+  sectionTitle: {
+    ...TypographyStyles.heading,
   },
-  eventSchoolsList: {
-    flex: 1,
-    fontSize: 12,
-    color: "#00D9FF",
-    fontFamily: "NotoSerifSC-Regular",
+  sectionCount: {
+    paddingHorizontal: Spacing.sm,
+    paddingVertical: 2,
+    borderRadius: BorderRadius.xs,
   },
-  tipContainer: {
+  sectionCountText: {
+    ...TypographyStyles.small,
+    fontWeight: "700",
+  },
+  emptySection: {
+    padding: Spacing.xl,
+    borderRadius: BorderRadiusPresets.card,
+    borderWidth: 1,
+    borderStyle: "dashed",
+    alignItems: "center",
+    marginBottom: Spacing.xl,
+  },
+  emptySectionText: {
+    ...TypographyStyles.body,
+    textAlign: "center",
+  },
+  collapsibleSection: {
+    marginTop: Spacing.xl,
+  },
+  collapsibleHeader: {
     flexDirection: "row",
-    alignItems: "flex-start",
-    backgroundColor: "rgba(245,158,11,0.1)",
-    borderRadius: 12,
-    padding: 14,
-    gap: 10,
-    marginTop: 16,
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingVertical: Spacing.md,
+    paddingHorizontal: Spacing.lg,
+    borderRadius: BorderRadiusPresets.card,
+    borderWidth: 1,
   },
-  tipIcon: {
-    fontSize: 16,
+  collapsibleHeaderLeft: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: Spacing.sm,
   },
-  tipText: {
-    flex: 1,
-    fontSize: 12,
-    color: "rgba(255,255,255,0.6)",
-    fontFamily: "NotoSerifSC-Regular",
-    lineHeight: 18,
+  collapsibleTitle: {
+    ...TypographyStyles.body,
+    fontWeight: "600",
+  },
+  collapsibleContent: {
+    marginTop: Spacing.md,
   },
 });

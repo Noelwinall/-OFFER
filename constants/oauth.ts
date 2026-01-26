@@ -20,8 +20,8 @@ export const API_BASE_URL = env.apiBaseUrl;
 
 /**
  * Get the API base URL, deriving from current hostname if not set.
- * Metro runs on 8081, API server runs on 3000.
- * URL pattern: https://PORT-sandboxid.region.domain
+ * Metro runs on 8081/8082, API server runs on 3000.
+ * URL pattern: https://PORT-sandboxid.region.domain (cloud) or localhost:PORT (local)
  */
 export function getApiBaseUrl(): string {
   // If API_BASE_URL is set, use it
@@ -29,10 +29,19 @@ export function getApiBaseUrl(): string {
     return API_BASE_URL.replace(/\/$/, "");
   }
 
-  // On web, derive from current hostname by replacing port 8081 with 3000
+  // On web, derive from current hostname
   if (ReactNative.Platform.OS === "web" && typeof window !== "undefined" && window.location) {
-    const { protocol, hostname } = window.location;
-    // Pattern: 8081-sandboxid.region.domain -> 3000-sandboxid.region.domain
+    const { protocol, hostname, port } = window.location;
+
+    // Local development: localhost with Expo port -> localhost:3000
+    if (hostname === "localhost" || hostname === "127.0.0.1") {
+      // Expo dev server typically runs on 8081 or 8082, API on 3000
+      if (port === "8081" || port === "8082" || port === "19006") {
+        return `${protocol}//${hostname}:3000`;
+      }
+    }
+
+    // Cloud pattern: 8081-sandboxid.region.domain -> 3000-sandboxid.region.domain
     const apiHostname = hostname.replace(/^8081-/, "3000-");
     if (apiHostname !== hostname) {
       return `${protocol}//${apiHostname}`;

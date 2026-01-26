@@ -9,6 +9,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter } from "expo-router";
+import { useColors } from "@/hooks/use-colors";
 import type { KGSchoolBrief } from "@/lib/services/briefs";
 
 interface BriefCardProps {
@@ -18,6 +19,7 @@ interface BriefCardProps {
 
 export function BriefCard({ brief, index }: BriefCardProps) {
   const router = useRouter();
+  const colors = useColors();
 
   const handlePress = () => {
     router.push(`/school/${brief.schoolId}`);
@@ -31,8 +33,8 @@ export function BriefCard({ brief, index }: BriefCardProps) {
     >
       {/* Header */}
       <View style={styles.header}>
-        <View style={styles.indexBadge}>
-          <Text style={styles.indexText}>{index + 1}</Text>
+        <View style={[styles.indexBadge, { backgroundColor: colors.primary + "33" }]}>
+          <Text style={[styles.indexText, { color: colors.primary }]}>{index + 1}</Text>
         </View>
         <Text style={styles.schoolName} numberOfLines={2}>
           {brief.schoolName}
@@ -121,14 +123,14 @@ const styles = StyleSheet.create({
     width: 24,
     height: 24,
     borderRadius: 12,
-    backgroundColor: "rgba(0, 217, 255, 0.2)",
     alignItems: "center",
     justifyContent: "center",
+    // backgroundColor and color will be set dynamically
   },
   indexText: {
     fontSize: 12,
     fontWeight: "700",
-    color: "#00D9FF",
+    // color will be set dynamically
   },
   schoolName: {
     flex: 1,

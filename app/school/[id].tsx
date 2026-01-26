@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import { View, Text, ScrollView, TouchableOpacity, Platform, Alert, Linking, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useRouter, useLocalSearchParams } from "expo-router";
+import { useColors } from "@/hooks/use-colors";
+import { useAuth } from "@/hooks/use-auth";
+import { trpc } from "@/lib/trpc";
 import { schools } from "@/data/schools";
 import { FavoritesStorage, CompareStorage, ReviewsStorage } from "@/lib/storage";
 import { isInternational } from "@/lib/school-classification";
@@ -29,9 +33,9 @@ const TAG_COLORS = {
 
 /**
  * Category tag colors - matched to school-card getDisplayTypeColor
+ * Note: "國際" color will be set dynamically using colors.primary
  */
 const CATEGORY_COLORS: Record<string, string> = {
-  "國際": "#00D9FF",
   "資助": "#6B5B95",
   "直資": "#E8756F",
   "私立": "#7C3AED",
@@ -148,8 +152,8 @@ function getRelationshipTitle(relationship: SchoolRelationship): string {
 /**
  * 獲取學校類型標籤顏色（與卡片一致）
  */
-function getCategoryTagColor(school: School): string {
-  if (isInternational(school)) return CATEGORY_COLORS["國際"];
+function getCategoryTagColor(school: School, primaryColor: string): string {
+  if (isInternational(school)) return primaryColor;
   return CATEGORY_COLORS[school.category] || CATEGORY_COLORS["私立"];
 }
 
@@ -207,7 +211,9 @@ function getKGCurriculumColor(category: string | null | undefined): string {
 export default function SchoolDetailScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
+  const colors = useColors();
   const params = useLocalSearchParams();
+  const { isAuthenticated } = useAuth();
   const [school, setSchool] = useState<School | null>(null);
   const [fees, setFees] = useState<SchoolFees | undefined>(undefined);
   const [chscData, setCHSCData] = useState<CHSCSchoolData | undefined>(undefined);
@@ -216,6 +222,21 @@ export default function SchoolDetailScreen() {
   const [reviewCount, setReviewCount] = useState(0);
   const [averageRating, setAverageRating] = useState(0);
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
+
+  // Deadline tracking
+  const schoolId = params.id as string;
+  const { data: isTrackedData, refetch: refetchTracked } = trpc.deadline.isTracked.useQuery(
+    { schoolId },
+    { enabled: isAuthenticated && !!schoolId }
+  );
+  const trackMutation = trpc.deadline.trackSchool.useMutation({
+    onSuccess: () => refetchTracked(),
+  });
+  const untrackMutation = trpc.deadline.untrackSchool.useMutation({
+    onSuccess: () => refetchTracked(),
+  });
+  const isTracked = isTrackedData ?? false;
+  const isTrackingLoading = trackMutation.isPending || untrackMutation.isPending;
 
   useEffect(() => {
     loadSchool();
@@ -298,6 +319,25 @@ export default function SchoolDetailScreen() {
     }
   };
 
+  const handleTrackToggle = async () => {
+    if (Platform.OS !== "web") {
+      Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    }
+
+    if (!isAuthenticated) {
+      Alert.alert("需要登入", "請先登入以追蹤學校截止日期");
+      return;
+    }
+
+    if (isTrackingLoading) return;
+
+    if (isTracked) {
+      untrackMutation.mutate({ schoolId });
+    } else {
+      trackMutation.mutate({ schoolId });
+    }
+  };
+
   const handleProReport = () => {
     if (Platform.OS !== "web") {
       Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
@@ -353,8 +393,8 @@ export default function SchoolDetailScreen() {
     return (
       <View style={{ flex: 1 }}>
         <LinearGradient
-          colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-          locations={[0, 0.3, 0.7, 1]}
+          colors={[colors.background, colors.surface, colors.background]}
+          locations={[0, 0.5, 1]}
           style={StyleSheet.absoluteFill}
         />
         <View style={[styles.container, { paddingTop: insets.top, justifyContent: "center", alignItems: "center" }]}>
@@ -367,12 +407,13 @@ export default function SchoolDetailScreen() {
   return (
     <View style={{ flex: 1 }}>
       <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
+        colors={[colors.background, colors.surface, colors.background]}
+        locations={[0, 0.5, 1]}
         style={StyleSheet.absoluteFill}
       />
-      
-      <View style={[styles.container, { paddingTop: insets.top }]}>
+
+      <MaxWidthWrapper>
+        <View style={[styles.container, { paddingTop: insets.top }]}>
         {/* 頂部導航 */}
         <View style={styles.header}>
           <TouchableOpacity onPress={handleBack} style={styles.backButton}>
@@ -405,7 +446,7 @@ export default function SchoolDetailScreen() {
                   </Text>
                 </View>
               ) : (
-                <View style={[styles.categoryTag, { backgroundColor: getCategoryTagColor(school) }]}>
+                <View style={[styles.categoryTag, { backgroundColor: getCategoryTagColor(school, colors.primary) }]}>
                   <Text style={styles.categoryTagTextWhite}>
                     {isInternational(school) ? "國際" : school.category}
                   </Text>
@@ -673,6 +714,30 @@ export default function SchoolDetailScreen() {
             </LinearGradient>
           </TouchableOpacity>
 
+          {/* Track Deadline Button */}
+          <TouchableOpacity
+            onPress={handleTrackToggle}
+            style={[
+              styles.trackButton,
+              { borderColor: isTracked ? colors.primary : colors.border },
+              isTracked && { backgroundColor: colors.primary + "15" }
+            ]}
+            activeOpacity={0.8}
+            disabled={isTrackingLoading}
+          >
+            <IconSymbol
+              name={isTracked ? "bell.fill" : "bell"}
+              size={16}
+              color={isTracked ? colors.primary : colors.muted}
+            />
+            <Text style={[
+              styles.trackButtonText,
+              { color: isTracked ? colors.primary : colors.foreground }
+            ]}>
+              {isTracked ? "已追蹤日期" : "追蹤截止日期"}
+            </Text>
+          </TouchableOpacity>
+
           <View style={styles.bottomButtonsRow}>
             <TouchableOpacity
               onPress={handleAddToCompare}
@@ -688,6 +753,7 @@ export default function SchoolDetailScreen() {
                 onPress={handleApplicationLink}
                 style={[
                   styles.applyButton,
+                  { backgroundColor: colors.primary, shadowColor: colors.primary },
                   getApplicationButtonState().disabled && styles.applyButtonDisabled
                 ]}
                 activeOpacity={0.8}
@@ -713,7 +779,8 @@ export default function SchoolDetailScreen() {
             </View>
           </View>
         </View>
-      </View>
+        </View>
+      </MaxWidthWrapper>
 
       <UpgradeModal
         visible={showUpgradeModal}
@@ -724,6 +791,7 @@ export default function SchoolDetailScreen() {
 }
 
 function InfoRow({ label, value, isLink = false, isPending = false, helpTopic }: { label: string; value: string; isLink?: boolean; isPending?: boolean; helpTopic?: string }) {
+  const colors = useColors();
   const displayValue = isPending ? SCHOOL_TEXT.PENDING : value;
   return (
     <View style={infoStyles.row}>
@@ -731,7 +799,7 @@ function InfoRow({ label, value, isLink = false, isPending = false, helpTopic }:
         <Text style={infoStyles.label}>{label}</Text>
         {helpTopic && <InfoHelp topic={helpTopic as any} />}
       </View>
-      <Text style={[infoStyles.value, isLink && infoStyles.link, isPending && infoStyles.pending]}>{displayValue}</Text>
+      <Text style={[infoStyles.value, isLink && [infoStyles.link, { color: colors.primary }], isPending && infoStyles.pending]}>{displayValue}</Text>
     </View>
   );
 }
@@ -742,7 +810,8 @@ function InfoRow({ label, value, isLink = false, isPending = false, helpTopic }:
  *
  * R3-8: 無費用數據時顯示「參考學校官網」
  */
-function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
+function FeesSection({ fees }: { fees: (SchoolFees & { schoolYear?: "2024/25" | "2025/26" }) | undefined }) {
+  const colors = useColors();
   // 判斷是否有有效費用數據
   const hasValidFees = fees && fees.tuition && fees.tuition.bands && fees.tuition.bands.length > 0;
 
@@ -788,7 +857,7 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
               <View key={index} style={feeStyles.chargeItem}>
                 <View style={feeStyles.chargeHeader}>
                   <Text style={feeStyles.chargeLabel}>{charge.label}</Text>
-                  <Text style={feeStyles.chargeAmount}>{charge.amount}</Text>
+                  <Text style={[feeStyles.chargeAmount, { color: colors.primary }]}>{charge.amount}</Text>
                 </View>
                 <View style={feeStyles.chargeMeta}>
                   <View style={feeStyles.metaTag}>
@@ -812,8 +881,15 @@ function FeesSection({ fees }: { fees: SchoolFees | undefined }) {
         <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_NOTE}</Text>
         <Text style={feeStyles.noteText}>{SCHOOL_TEXT.OVERALL_TUITION_EXCLUDES}</Text>
         <Text style={feeStyles.sourceInline}>
-          {hasSource ? "資料來源：學校官網（2025/26）" : "資料來源：待確認"}
+          {hasSource
+            ? `資料來源：學校官網（${fees?.schoolYear || "2025/26"}）`
+            : "資料來源：待確認"}
         </Text>
+        {fees?.schoolYear === "2024/25" && (
+          <Text style={feeStyles.dataYearNote}>
+            此數據為2024-2025年數據，最新數據以官方最新公布為準
+          </Text>
+        )}
       </View>
     </View>
   );
@@ -825,31 +901,31 @@ const feeStyles = StyleSheet.create({
     justifyContent: "space-between",
     paddingVertical: 8,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.05)",
+    borderBottomColor: "#E8E2D5",
   },
   bandLabel: {
-    color: "rgba(255,255,255,0.7)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
   },
   bandValue: {
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
     fontWeight: "500",
   },
   pending: {
-    color: "rgba(255,255,255,0.4)",
+    color: "#9A9488",
     fontStyle: "italic",
   },
   chargesSection: {
     marginTop: 16,
     paddingTop: 16,
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
+    borderTopColor: "#E8E2D5",
   },
   chargesTitle: {
-    color: "rgba(255,255,255,0.7)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
     fontWeight: "600",
@@ -859,9 +935,11 @@ const feeStyles = StyleSheet.create({
     gap: 12,
   },
   chargeItem: {
-    backgroundColor: "rgba(255,255,255,0.05)",
+    backgroundColor: "#FFF9F0",
     borderRadius: 12,
     padding: 12,
+    borderWidth: 1,
+    borderColor: "#E8E2D5",
   },
   chargeHeader: {
     flexDirection: "row",
@@ -870,42 +948,42 @@ const feeStyles = StyleSheet.create({
     marginBottom: 8,
   },
   chargeLabel: {
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
     fontWeight: "600",
     flex: 1,
   },
   chargeAmount: {
-    color: "#00D9FF",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
     fontWeight: "600",
+    // color will be set dynamically
   },
   chargeMeta: {
     flexDirection: "row",
     gap: 8,
   },
   metaTag: {
-    backgroundColor: "rgba(0,217,255,0.1)",
+    backgroundColor: "rgba(10,126,164,0.1)",
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 6,
   },
   metaText: {
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 11,
   },
   chargeNote: {
-    color: "rgba(255,255,255,0.5)",
+    color: "#8B8578",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 12,
     marginTop: 8,
     fontStyle: "italic",
   },
   pendingText: {
-    color: "rgba(255,255,255,0.4)",
+    color: "#9A9488",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
     fontStyle: "italic",
@@ -914,22 +992,29 @@ const feeStyles = StyleSheet.create({
     marginTop: 12,
     paddingTop: 12,
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
+    borderTopColor: "#E8E2D5",
   },
   noteText: {
-    color: "rgba(255,255,255,0.4)",
+    color: "#9A9488",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 11,
     lineHeight: 16,
   },
   sourceInline: {
-    color: "rgba(255,255,255,0.3)",
+    color: "#B0ABA3",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 10,
     marginTop: 8,
   },
+  dataYearNote: {
+    color: "#C4956A",
+    fontFamily: "NotoSerifSC-Regular",
+    fontSize: 11,
+    marginTop: 6,
+    fontStyle: "italic",
+  },
   fallbackText: {
-    color: "rgba(255,255,255,0.4)",
+    color: "#9A9488",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
     fontStyle: "italic",
@@ -947,22 +1032,22 @@ const infoStyles = StyleSheet.create({
     width: 90,
   },
   label: {
-    color: "rgba(255,255,255,0.5)",
+    color: "#8B8578",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
   },
   value: {
     flex: 1,
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 14,
   },
   link: {
-    color: "#00D9FF",
     textDecorationLine: "underline",
+    // color will be set dynamically
   },
   pending: {
-    color: "rgba(255,255,255,0.4)",
+    color: "#9A9488",
     fontStyle: "italic",
   },
 });
@@ -987,7 +1072,7 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     letterSpacing: 1,
   },
@@ -1004,19 +1089,19 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 20,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
+    borderBottomColor: "#E8E2D5",
   },
   schoolName: {
     fontSize: 26,
     fontWeight: "700",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
     lineHeight: 34,
     marginBottom: 4,
   },
   schoolNameEn: {
     fontSize: 14,
-    color: "rgba(255,255,255,0.6)",
+    color: "#706B5E",
     fontFamily: "NotoSerifSC-Regular",
     marginBottom: 12,
   },
@@ -1033,8 +1118,8 @@ const styles = StyleSheet.create({
   categoryTagText: {
     fontSize: 13,
     fontWeight: "600",
-    color: "#00D9FF",
     fontFamily: "NotoSerifSC-Regular",
+    // color will be set dynamically
   },
   categoryTagTextWhite: {
     fontSize: 12,
@@ -1043,10 +1128,10 @@ const styles = StyleSheet.create({
     fontFamily: "NotoSerifSC-Regular",
   },
   internationalTag: {
-    backgroundColor: "#00D9FF",
+    // backgroundColor will be set dynamically
   },
   internationalTagText: {
-    color: "#0F1629",
+    color: "#FAF8F5",
   },
   levelTag: {
     paddingHorizontal: 10,
@@ -1110,11 +1195,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "rgba(0,217,255,0.08)",
+    backgroundColor: "rgba(10,126,164,0.08)",
     borderRadius: 12,
     padding: 14,
     borderWidth: 1,
-    borderColor: "rgba(0,217,255,0.15)",
+    borderColor: "rgba(10,126,164,0.15)",
   },
   relatedSchoolInfo: {
     flex: 1,
@@ -1123,25 +1208,25 @@ const styles = StyleSheet.create({
   relatedSchoolName: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
     marginBottom: 2,
   },
   relatedSchoolLevel: {
     fontSize: 12,
-    color: "rgba(255,255,255,0.5)",
+    color: "#8B8578",
     fontFamily: "NotoSerifSC-Regular",
   },
   section: {
     paddingHorizontal: 24,
     paddingVertical: 20,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
+    borderBottomColor: "#E8E2D5",
   },
   sectionTitle: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 12,
   },
@@ -1153,7 +1238,7 @@ const styles = StyleSheet.create({
   sectionTitleInline: {
     fontSize: 18,
     fontWeight: "600",
-    color: "#FFFFFF",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
   },
   infoGrid: {
@@ -1194,7 +1279,7 @@ const styles = StyleSheet.create({
   },
   tuitionSourceNote: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.4)",
+    color: "#9A9488",
     fontFamily: "NotoSerifSC-Regular",
     marginTop: 8,
     fontStyle: "italic",
@@ -1205,16 +1290,16 @@ const styles = StyleSheet.create({
   },
   disclaimerText: {
     fontSize: 11,
-    color: "rgba(255,255,255,0.35)",
+    color: "#A5A097",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
   },
   bottomContainer: {
     paddingHorizontal: 24,
     paddingTop: 16,
-    backgroundColor: "rgba(15, 22, 41, 0.95)",
+    backgroundColor: "#FFF9F0",
     borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.1)",
+    borderTopColor: "#E8E2D5",
   },
   proReportButton: {
     borderRadius: 14,
@@ -1250,6 +1335,23 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     color: "#FFFFFF",
   },
+  trackButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 8,
+    height: 44,
+    borderRadius: 12,
+    borderWidth: 1,
+    marginBottom: 12,
+    paddingHorizontal: 16,
+  },
+  trackButtonText: {
+    fontSize: 14,
+    fontWeight: "600",
+    fontFamily: "NotoSerifSC-Regular",
+    letterSpacing: 0.5,
+  },
   bottomButtonsRow: {
     flexDirection: "row",
     alignItems: "flex-start",
@@ -1258,17 +1360,17 @@ const styles = StyleSheet.create({
   compareButton: {
     flex: 1,
     height: 52,
-    backgroundColor: "rgba(255,255,255,0.1)",
+    backgroundColor: "#FFF9F0",
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.2)",
+    borderColor: "#E8E2D5",
     justifyContent: "center",
     alignItems: "center",
   },
   compareButtonText: {
     fontSize: 14,
     fontWeight: "500",
-    color: "#FFFFFF",
+    color: "#2D2013",
     textAlign: "center",
     fontFamily: "NotoSerifSC-Regular",
     letterSpacing: 1,
@@ -1279,19 +1381,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 8,
-    backgroundColor: "#00D9FF",
     paddingHorizontal: 16,
     borderRadius: 16,
-    shadowColor: "#00D9FF",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 12,
     elevation: 8,
+    // backgroundColor and shadowColor will be set dynamically
   },
   applyButtonText: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#0F1629",
+    color: "#FAF8F5",
     fontFamily: "NotoSerifSC-Regular",
     letterSpacing: 1,
   },
@@ -1313,7 +1414,7 @@ const styles = StyleSheet.create({
     marginTop: 6,
   },
   emptyText: {
-    color: "rgba(255,255,255,0.5)",
+    color: "#8B8578",
     fontFamily: "NotoSerifSC-Regular",
     fontSize: 16,
   },
@@ -1321,8 +1422,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingVertical: 20,
     borderBottomWidth: 1,
-    borderBottomColor: "rgba(255,255,255,0.1)",
-    backgroundColor: "rgba(0,217,255,0.03)",
+    borderBottomColor: "#E8E2D5",
+    backgroundColor: "rgba(10,126,164,0.03)",
   },
   reviewHeader: {
     flexDirection: "row",
@@ -1351,11 +1452,11 @@ const styles = StyleSheet.create({
   },
   reviewCountText: {
     fontSize: 13,
-    color: "rgba(255,255,255,0.5)",
+    color: "#8B8578",
   },
   reviewHint: {
     fontSize: 13,
-    color: "rgba(255,255,255,0.5)",
+    color: "#8B8578",
     fontFamily: "NotoSerifSC-Regular",
   },
 });

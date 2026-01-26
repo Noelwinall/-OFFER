@@ -1,7 +1,9 @@
 import { View, Text, TouchableOpacity, Platform, ScrollView, StyleSheet, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
-import { LinearGradient } from "expo-linear-gradient";
+import { HomeHeroBackground } from "@/components/home-hero-background";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
+import { useColors } from "@/hooks/use-colors";
 import * as Haptics from "expo-haptics";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
@@ -44,6 +46,7 @@ const QUICK_ACTION_CARDS = [
  */
 export default function HomeScreen() {
   const router = useRouter();
+  const colors = useColors();
 
   const handleStartQuiz = () => {
     if (Platform.OS !== "web") {
@@ -67,37 +70,25 @@ export default function HomeScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      {/* 深藍漸變背景 - 優化版本，更接近設計稿 */}
-      <LinearGradient
-        colors={["#0F1629", "#1a2744", "#1e3a5f", "#1a2744"]}
-        locations={[0, 0.3, 0.7, 1]}
-        style={StyleSheet.absoluteFillObject}
-        start={{ x: 0.2, y: 0 }}
-        end={{ x: 0.8, y: 1 }}
-      />
-      
-      {/* 裝飾性曲線背景 - 模擬設計稿中的波浪效果 */}
-      <View style={styles.curveDecoration1} />
-      <View style={styles.curveDecoration2} />
-      
+    <HomeHeroBackground style="infographic">
       <SafeAreaView style={styles.safeArea}>
-        <ScrollView
-          contentContainerStyle={styles.scrollContent}
-          showsVerticalScrollIndicator={false}
-        >
+        <MaxWidthWrapper>
+          <ScrollView
+            contentContainerStyle={styles.scrollContent}
+            showsVerticalScrollIndicator={false}
+          >
           {/* 頂部 Logo */}
           <View style={styles.logoContainer}>
-            <Text style={styles.logoHK}>有</Text>
-            <Text style={styles.logoText}>OFFER</Text>
+            <Text style={[styles.logoHK, { color: (colors as any).accent }]}>有</Text>
+            <Text style={[styles.logoText, { color: colors.foreground }]}>OFFER</Text>
           </View>
 
           {/* Hero Section */}
           <View style={styles.heroSection}>
-            <Text style={styles.heroTitle}>
+            <Text style={[styles.heroTitle, { color: colors.foreground }]}>
               孩子香港上學{"\n"}不發愁
             </Text>
-            <Text style={styles.heroSubtitle}>
+            <Text style={[styles.heroSubtitle, { color: colors.muted }]}>
               一站式香港申校APP
             </Text>
           </View>
@@ -107,21 +98,21 @@ export default function HomeScreen() {
             {/* 主按鈕 - 問答選校 */}
             <TouchableOpacity
               onPress={handleStartQuiz}
-              style={styles.primaryButton}
+              style={[styles.primaryButton, { backgroundColor: (colors as any).accent, shadowColor: (colors as any).accent }]}
               activeOpacity={0.85}
             >
               <Text style={styles.primaryButtonText}>問答選校</Text>
-              <Text style={styles.primaryButtonSubtext}>先做幾題 MC，選校範圍睇清啲</Text>
+              <Text style={[styles.primaryButtonSubtext, { color: colors.background + "BF" }]}>先做幾題 MC，選校範圍睇清啲</Text>
             </TouchableOpacity>
 
             {/* 次要按鈕 - 條件篩選學校 */}
             <TouchableOpacity
               onPress={handleBrowseAll}
-              style={styles.secondaryButton}
+              style={[styles.secondaryButton, { borderColor: (colors as any).accent }]}
               activeOpacity={0.75}
             >
-              <Text style={styles.secondaryButtonText}>條件篩選學校</Text>
-              <Text style={styles.secondaryButtonSubtext}>你話篩乜就篩乜</Text>
+              <Text style={[styles.secondaryButtonText, { color: (colors as any).accent }]}>條件篩選學校</Text>
+              <Text style={[styles.secondaryButtonSubtext, { color: colors.muted }]}>你話篩乜就篩乜</Text>
             </TouchableOpacity>
           </View>
 
@@ -132,12 +123,12 @@ export default function HomeScreen() {
                 <TouchableOpacity
                   key={card.id}
                   onPress={() => handleFeaturePress(card.route)}
-                  style={styles.quickActionCard}
+                  style={[styles.quickActionCard, { borderColor: colors.border }]}
                   activeOpacity={0.8}
                 >
                   <Text style={styles.quickActionIcon}>{card.icon}</Text>
-                  <Text style={styles.quickActionTitle}>{card.title}</Text>
-                  <Text style={styles.quickActionSubtitle}>{card.subtitle}</Text>
+                  <Text style={[styles.quickActionTitle, { color: colors.foreground }]}>{card.title}</Text>
+                  <Text style={[styles.quickActionSubtitle, { color: colors.muted }]}>{card.subtitle}</Text>
                 </TouchableOpacity>
               ))}
             </View>
@@ -145,41 +136,18 @@ export default function HomeScreen() {
 
           {/* 免責聲明 */}
           <View style={styles.disclaimerContainer}>
-            <Text style={styles.disclaimerText}>
+            <Text style={[styles.disclaimerText, { color: colors.muted + "99" }]}>
               資訊基於公開資料整理，僅供參考，以學校官方為準
             </Text>
           </View>
         </ScrollView>
+        </MaxWidthWrapper>
       </SafeAreaView>
-    </View>
+    </HomeHeroBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#0F1629",
-  },
-  curveDecoration1: {
-    position: "absolute",
-    top: "25%",
-    left: -50,
-    right: -50,
-    height: 300,
-    backgroundColor: "rgba(30, 58, 95, 0.35)",
-    borderRadius: 200,
-    transform: [{ rotate: "-5deg" }, { scaleX: 1.3 }],
-  },
-  curveDecoration2: {
-    position: "absolute",
-    top: "35%",
-    left: -30,
-    right: -30,
-    height: 250,
-    backgroundColor: "rgba(26, 39, 68, 0.4)",
-    borderRadius: 180,
-    transform: [{ rotate: "3deg" }, { scaleX: 1.2 }],
-  },
   safeArea: {
     flex: 1,
   },
@@ -198,14 +166,12 @@ const styles = StyleSheet.create({
   logoHK: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#00D9FF",
     letterSpacing: 2,
     fontFamily: "NotoSerifSC-Bold",
   },
   logoText: {
     fontSize: 20,
     fontWeight: "400",
-    color: "#FFFFFF",
     letterSpacing: 1,
     fontFamily: "NotoSerifSC-Regular",
   },
@@ -217,7 +183,6 @@ const styles = StyleSheet.create({
   heroTitle: {
     fontSize: 38,
     fontWeight: "700",
-    color: "#FFFFFF",
     textAlign: "center",
     lineHeight: 50,
     marginBottom: 16,
@@ -226,7 +191,6 @@ const styles = StyleSheet.create({
   },
   heroSubtitle: {
     fontSize: 15,
-    color: "rgba(255, 255, 255, 0.6)",
     textAlign: "center",
     lineHeight: 22,
     letterSpacing: 1,
@@ -238,11 +202,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 28,
   },
   primaryButton: {
-    backgroundColor: "#00D9FF",
     paddingVertical: 16,
     paddingHorizontal: 20,
     borderRadius: 30,
-    shadowColor: "#00D9FF",
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.35,
     shadowRadius: 12,
@@ -251,7 +213,7 @@ const styles = StyleSheet.create({
   primaryButtonText: {
     fontSize: 17,
     fontWeight: "600",
-    color: "#0F1629",
+    color: "#FAF8F5",
     textAlign: "center",
     letterSpacing: 2,
     fontFamily: "NotoSerifSC-Bold",
@@ -259,7 +221,6 @@ const styles = StyleSheet.create({
   primaryButtonSubtext: {
     fontSize: 12,
     fontWeight: "400",
-    color: "rgba(15, 22, 41, 0.6)",
     textAlign: "center",
     marginTop: 4,
     letterSpacing: 0.5,
@@ -271,12 +232,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 30,
     borderWidth: 1.5,
-    borderColor: "#00D9FF",
   },
   secondaryButtonText: {
     fontSize: 16,
     fontWeight: "500",
-    color: "#00D9FF",
     textAlign: "center",
     letterSpacing: 1,
     fontFamily: "NotoSerifSC-Bold",
@@ -284,7 +243,6 @@ const styles = StyleSheet.create({
   secondaryButtonSubtext: {
     fontSize: 11,
     fontWeight: "400",
-    color: "rgba(0, 217, 255, 0.6)",
     textAlign: "center",
     marginTop: 3,
     letterSpacing: 0.5,
@@ -302,11 +260,10 @@ const styles = StyleSheet.create({
   },
   quickActionCard: {
     width: "48%",
-    backgroundColor: "rgba(255, 255, 255, 0.06)",
+    backgroundColor: "rgba(255, 255, 255, 0.75)",
     borderRadius: 16,
     padding: 18,
     borderWidth: 1,
-    borderColor: "rgba(255, 255, 255, 0.1)",
     minHeight: 120,
   },
   quickActionIcon: {
@@ -316,14 +273,12 @@ const styles = StyleSheet.create({
   quickActionTitle: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#FFFFFF",
     letterSpacing: 0.5,
     fontFamily: "NotoSerifSC-Bold",
     marginBottom: 6,
   },
   quickActionSubtitle: {
     fontSize: 12,
-    color: "rgba(255, 255, 255, 0.55)",
     letterSpacing: 0.3,
     fontFamily: "NotoSerifSC-Regular",
     lineHeight: 18,
@@ -335,7 +290,6 @@ const styles = StyleSheet.create({
   },
   disclaimerText: {
     fontSize: 12,
-    color: "rgba(255, 255, 255, 0.35)",
     textAlign: "center",
     lineHeight: 18,
     letterSpacing: 0.5,

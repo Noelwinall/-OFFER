@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有Offer - Color Palette Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f0f0f0;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .theme-toggle {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .theme-toggle button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0 8px;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle button.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .palette-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .palette-header {
+            margin-bottom: 24px;
+        }
+
+        .palette-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .palette-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .color-swatches {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .swatch {
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        /* School Card Preview */
+        .school-card {
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            margin-top: 20px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .school-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            flex: 1;
+            margin-right: 12px;
+        }
+
+        .school-name {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .school-name-en {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .favorite-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .favorite-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 600;
+            color: white;
+            letter-spacing: 0.3px;
+        }
+
+        .tuition {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            margin-top: 8px;
+            opacity: 0.7;
+        }
+
+        /* Dark mode styles */
+        body.dark {
+            background: #0a0a0a;
+        }
+
+        body.dark .palette-section {
+            background: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        body.dark .palette-subtitle {
+            color: #999;
+        }
+
+        /* Option A: Ivy League */
+        .ivy-league .school-card { 
+            background: #FFF9F0; 
+            border: 1px solid #E8E2D5; 
+            color: #2D2013;
+        }
+        .ivy-league .favorite-btn { background: #FAF8F5; }
+        .ivy-league .tag-primary { background: #1E3A5F; }
+        .ivy-league .tag-secondary { background: #706B5E; opacity: 0.8; }
+        .ivy-league .tuition { color: #706B5E; }
+        body.dark .ivy-league .school-card { 
+            background: #2A2420; 
+            border: 1px solid #3A3630;
+            color: #F5F1E8;
+        }
+        body.dark .ivy-league .favorite-btn { background: #1A1614; }
+
+        /* Option B: Future Gen */
+        .future-gen .school-card { 
+            background: #FFFFFF; 
+            border: 1px solid #E5E7EB;
+            color: #1F2937;
+        }
+        .future-gen .favorite-btn { background: #F7F9FC; }
+        .future-gen .tag-primary { background: #5B9FFF; }
+        .future-gen .tag-secondary { background: #6B7280; opacity: 0.7; }
+        .future-gen .tuition { color: #6B7280; }
+        body.dark .future-gen .school-card { 
+            background: #1A1F2E; 
+            border: 1px solid #374151;
+            color: #F9FAFB;
+        }
+        body.dark .future-gen .favorite-btn { background: #0F1419; }
+
+        /* Option C: Warm Home */
+        .warm-home .school-card { 
+            background: #FFF9F5; 
+            border: 1px solid #E8DDD5;
+            color: #3E2A21;
+        }
+        .warm-home .favorite-btn { background: #FAF7F4; }
+        .warm-home .tag-primary { background: #C17B62; }
+        .warm-home .tag-secondary { background: #8B7B6F; opacity: 0.8; }
+        .warm-home .tuition { color: #8B7B6F; }
+        body.dark .warm-home .school-card { 
+            background: #2A2420; 
+            border: 1px solid #3D352E;
+            color: #F5EDE6;
+        }
+        body.dark .warm-home .favorite-btn { background: #1C1614; }
+
+        .recommendation {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .recommendation h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .recommendation p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .palette-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎨 有Offer App - Color Palette Preview</h1>
+        <p>Soft Minimalist Design System • Choose your perfect theme</p>
+    </div>
+
+    <div class="theme-toggle">
+        <button onclick="setTheme('light')" class="active" id="light-btn" style="background: #fff; color: #333;">
+            ☀️ Light Mode
+        </button>
+        <button onclick="setTheme('dark')" id="dark-btn" style="background: #333; color: #fff;">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <div class="palette-grid">
+        <!-- Option A: Ivy League -->
+        <div class="palette-section ivy-league">
+            <div class="palette-header">
+                <div class="palette-title">🎓 Option A: Ivy League</div>
+                <div class="palette-subtitle">Classic • Elite • Trustworthy</div>
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #1E3A5F;">Deep Navy</div>
+                    <div class="swatch" style="background: #D4B896;">Warm Sand</div>
+                    <div class="swatch" style="background: #8B7355;">Leather Brown</div>
+                    <div class="swatch" style="background: #FAF8F5; color: #333;">Cream White</div>
+                </div>
+            </div>
+
+            <div class="school-card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <div class="school-name">拔萃女書院</div>
+                        <div class="school-name-en">Diocesan Girls' School</div>
+                    </div>
+                    <div class="favorite-btn">❤️</div>
+                </div>
+                <div class="tags">
+                    <span class="tag tag-primary">直資</span>
+                    <span class="tag tag-secondary">中學</span>
+                    <span class="tag tag-secondary">九龍-油尖旺</span>
+                </div>
+                <div class="tuition">💰 學費: $38,000 - $45,000 / 年</div>
+            </div>
+
+            <div class="recommendation">
+                <h3>✨ Perfect For</h3>
+                <p>Traditional families seeking prestige and academic excellence</p>
+            </div>
+        </div>
+
+        <!-- Option B: Future Gen -->
+        <div class="palette-section future-gen">
+            <div class="palette-header">
+                <div class="palette-title">🚀 Option B: Future Gen</div>
+                <div class="palette-subtitle">Modern • Clean • Smart</div>
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #5B9FFF;">Soft Electric Blue</div>
+                    <div class="swatch" style="background: #7DE5C0;">Mint Green</div>
+                    <div class="swatch" style="background: #A78BFA;">Soft Purple</div>
+                    <div class="swatch" style="background: #F7F9FC; color: #333;">Cool Grey</div>
+                </div>
+            </div>
+
+            <div class="school-card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <div class="school-name">拔萃女書院</div>
+                        <div class="school-name-en">Diocesan Girls' School</div>
+                    </div>
+                    <div class="favorite-btn">❤️</div>
+                </div>
+                <div class="tags">
+                    <span class="tag tag-primary">直資</span>
+                    <span class="tag tag-secondary">中學</span>
+                    <span class="tag tag-secondary">九龍-油尖旺</span>
+                </div>
+                <div class="tuition">💰 學費: $38,000 - $45,000 / 年</div>
+            </div>
+
+            <div class="recommendation" style="background: linear-gradient(135deg, #5B9FFF 0%, #7DE5C0 100%);">
+                <h3>✨ Perfect For</h3>
+                <p>Tech-savvy parents looking for innovation and future-ready education</p>
+            </div>
+        </div>
+
+        <!-- Option C: Warm Home -->
+        <div class="palette-section warm-home">
+            <div class="palette-header">
+                <div class="palette-title">🏡 Option C: Warm Home</div>
+                <div class="palette-subtitle">Nurturing • Premium • Grounded</div>
+                <div class="color-swatches">
+                    <div class="swatch" style="background: #C17B62;">Terracotta</div>
+                    <div class="swatch" style="background: #8BA888;">Sage Green</div>
+                    <div class="swatch" style="background: #E8A87C;">Warm Apricot</div>
+                    <div class="swatch" style="background: #FAF7F4; color: #333;">Warm Alabaster</div>
+                </div>
+            </div>
+
+            <div class="school-card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <div class="school-name">拔萃女書院</div>
+                        <div class="school-name-en">Diocesan Girls' School</div>
+                    </div>
+                    <div class="favorite-btn">❤️</div>
+                </div>
+                <div class="tags">
+                    <span class="tag tag-primary">直資</span>
+                    <span class="tag tag-secondary">中學</span>
+                    <span class="tag tag-secondary">九龍-油尖旺</span>
+                </div>
+                <div class="tuition">💰 學費: $38,000 - $45,000 / 年</div>
+            </div>
+
+            <div class="recommendation" style="background: linear-gradient(135deg, #C17B62 0%, #8BA888 100%);">
+                <h3>✨ Perfect For</h3>
+                <p>Caring parents valuing holistic growth, warmth and community</p>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 60px; padding: 40px; background: white; border-radius: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+        <h2 style="margin-bottom: 20px;">📊 Quick Comparison</h2>
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+                <tr style="border-bottom: 2px solid #e0e0e0;">
+                    <th style="padding: 12px;">Theme</th>
+                    <th style="padding: 12px;">Vibe</th>
+                    <th style="padding: 12px;">Target Audience</th>
+                    <th style="padding: 12px;">Emotion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #f0f0f0;">
+                    <td style="padding: 12px;"><strong>🎓 Ivy League</strong></td>
+                    <td style="padding: 12px;">Traditional</td>
+                    <td style="padding: 12px;">Elite seekers</td>
+                    <td style="padding: 12px;">Trust, Prestige</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #f0f0f0;">
+                    <td style="padding: 12px;"><strong>🚀 Future Gen</strong></td>
+                    <td style="padding: 12px;">Innovative</td>
+                    <td style="padding: 12px;">Tech-forward</td>
+                    <td style="padding: 12px;">Clarity, Progress</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;"><strong>🏡 Warm Home</strong></td>
+                    <td style="padding: 12px;">Nurturing</td>
+                    <td style="padding: 12px;">Family-focused</td>
+                    <td style="padding: 12px;">Care, Comfort</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            document.body.className = theme;
+            document.getElementById('light-btn').classList.remove('active');
+            document.getElementById('dark-btn').classList.remove('active');
+            document.getElementById(theme + '-btn').classList.add('active');
+        }
+    </script>
+</body>
+</html>

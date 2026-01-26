@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育图标背景方案 - 4种克制版本</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #D4B896 0%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        .concept-note {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.1) 100%);
+            border-radius: 20px;
+            border: 2px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .concept-note h2 {
+            font-size: 22px;
+            color: #EF4444;
+            margin-bottom: 12px;
+        }
+
+        .concept-note p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            max-width: 1600px;
+            margin: 0 auto 60px;
+        }
+
+        .option-card {
+            background: #1a1a1a;
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s;
+        }
+
+        .option-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212, 184, 150, 0.4);
+            box-shadow: 0 20px 50px rgba(212, 184, 150, 0.15);
+        }
+
+        .option-preview {
+            height: 550px;
+            position: relative;
+            overflow: hidden;
+            background: #FAF8F5;
+        }
+
+        .option-preview::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(15, 22, 41, 0.92) 0%,
+                rgba(30, 58, 95, 0.85) 30%,
+                rgba(44, 74, 110, 0.7) 50%,
+                rgba(30, 58, 95, 0.4) 75%,
+                rgba(250, 248, 245, 0) 100%
+            );
+        }
+
+        .option-content-mock {
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo-mock {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+        }
+
+        .title-mock {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            color: white;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+        }
+
+        .subtitle-mock {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .option-info {
+            padding: 32px;
+            background: #1a1a1a;
+        }
+
+        .option-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .recommended-badge {
+            font-size: 11px;
+            padding: 4px 10px;
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid #22C55E;
+            border-radius: 6px;
+            color: #22C55E;
+            font-weight: 600;
+        }
+
+        .option-desc {
+            font-size: 15px;
+            color: #999;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .option-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .feature-tag {
+            padding: 6px 14px;
+            background: rgba(30, 58, 95, 0.3);
+            border: 1px solid rgba(30, 58, 95, 0.5);
+            border-radius: 10px;
+            font-size: 12px;
+            color: #8B9DC3;
+            font-weight: 500;
+        }
+
+        /* SVG Icons */
+        .icons-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        /* Option A: Minimal - 只有 2-3 个图标 */
+        .minimal-icons {
+            opacity: 0.25;
+        }
+
+        .minimal-grad-cap {
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            width: 120px;
+            height: 100px;
+        }
+
+        .minimal-school {
+            position: absolute;
+            bottom: 20%;
+            left: 15%;
+            width: 100px;
+            height: 90px;
+        }
+
+        /* Option B: Balanced - 4-5 个图标 */
+        .balanced-icons {
+            opacity: 0.22;
+        }
+
+        .balanced-icon {
+            position: absolute;
+        }
+
+        /* Option C: Single Focus - 1 个大图标 */
+        .single-focus-icon {
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0.15;
+        }
+
+        /* Option D: Geometric - 抽象几何 */
+        .geometric-icons {
+            opacity: 0.2;
+        }
+
+        .comparison-table {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 50px;
+            background: #1a1a1a;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .comparison-table h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #D4B896;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        th {
+            background: rgba(30, 58, 95, 0.3);
+            color: #D4B896;
+            font-weight: 600;
+        }
+
+        td {
+            color: #ccc;
+        }
+
+        tr:hover {
+            background: rgba(30, 58, 95, 0.1);
+        }
+
+        .best-row {
+            background: rgba(34, 197, 94, 0.08);
+        }
+
+        .best-row td {
+            color: #D4B896;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🎓 教育图标背景方案</h1>
+        <p>克制版本 - 避免 Gemini 的"太多太乱"</p>
+    </div>
+
+    <div class="concept-note">
+        <h2>❌ Gemini 版本的问题</h2>
+        <p>
+            <strong>太多：</strong>学校、毕业帽、书本、指南针、文凭、星光...所有元素都堆在一起<br>
+            <strong>太乱：</strong>四周密密麻麻，视觉重心不明确<br>
+            <strong>太花：</strong>发光效果过强，喧宾夺主<br><br>
+            <strong>✅ 我的改进思路：</strong>减少图标数量、增大留白、降低透明度、统一发光强度
+        </p>
+    </div>
+
+    <div class="options-grid">
+        <!-- Option A: Minimal -->
+        <div class="option-card">
+            <div class="option-preview">
+                <!-- 图标层 -->
+                <div class="icons-layer minimal-icons">
+                    <!-- 毕业帽（右上）-->
+                    <svg class="minimal-grad-cap" viewBox="0 0 120 100">
+                        <defs>
+                            <radialGradient id="glow1">
+                                <stop offset="0%" stop-color="#D4B896" stop-opacity="0.4"/>
+                                <stop offset="100%" stop-color="#D4B896" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <circle cx="60" cy="50" r="50" fill="url(#glow1)"/>
+                        <path d="M 20 50 L 60 30 L 100 50 L 60 65 Z" fill="none" stroke="#D4B896" stroke-width="2.5"/>
+                        <path d="M 15 67 Q 60 75, 105 67" fill="none" stroke="#D4B896" stroke-width="2"/>
+                        <rect x="59" y="30" width="2" height="20" fill="#D4B896"/>
+                        <circle cx="60" cy="25" r="3" fill="#D4B896"/>
+                    </svg>
+
+                    <!-- 学校（左下）-->
+                    <svg class="minimal-school" viewBox="0 0 100 90" style="bottom: 20%; left: 15%;">
+                        <circle cx="50" cy="45" r="45" fill="url(#glow1)"/>
+                        <rect x="25" y="50" width="50" height="35" fill="none" stroke="#D4B896" stroke-width="2.5" rx="2"/>
+                        <path d="M 20 50 L 50 30 L 80 50" fill="none" stroke="#D4B896" stroke-width="2"/>
+                        <rect x="42" y="68" width="16" height="17" fill="none" stroke="#D4B896" stroke-width="1.5"/>
+                    </svg>
+
+                    <!-- 少量星光 -->
+                    <circle cx="30%" cy="15%" r="2" fill="#D4B896" opacity="0.4"/>
+                    <circle cx="65%" cy="30%" r="1.5" fill="#D4B896" opacity="0.4"/>
+                    <circle cx="85%" cy="65%" r="2" fill="#8B7355" opacity="0.4"/>
+                </div>
+
+                <!-- 内容层 -->
+                <div class="option-content-mock">
+                    <div class="logo-mock">
+                        <span style="color: #D4B896;">有</span>OFFER
+                    </div>
+                    <div class="title-mock">
+                        孩子香港上學<br>不發愁
+                    </div>
+                    <div class="subtitle-mock">
+                        一站式香港申校APP
+                    </div>
+                </div>
+            </div>
+            <div class="option-info">
+                <div class="option-name">
+                    Option A: 极简版
+                    <span class="recommended-badge">强烈推荐</span>
+                </div>
+                <div class="option-desc">
+                    只有 <strong>2-3 个核心图标</strong>（毕业帽 + 学校），大片留白，最克制最大气。<br>
+                    图标透明度 22-25%，发光效果微妙，完全不喧宾夺主。
+                </div>
+                <div class="option-features">
+                    <span class="feature-tag">最克制</span>
+                    <span class="feature-tag">留白多</span>
+                    <span class="feature-tag">不干扰</span>
+                    <span class="feature-tag">最大气</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option B: Balanced -->
+        <div class="option-card">
+            <div class="option-preview">
+                <div class="icons-layer balanced-icons">
+                    <!-- 4-5 个图标，分布均衡 -->
+                    <svg class="balanced-icon" style="top: 12%; right: 12%; width: 90px; height: 80px;" viewBox="0 0 90 80">
+                        <circle cx="45" cy="40" r="35" fill="url(#glow1)"/>
+                        <path d="M 15 40 L 45 25 L 75 40 L 45 52 Z" fill="none" stroke="#D4B896" stroke-width="2"/>
+                        <path d="M 12 54 Q 45 60, 78 54" fill="none" stroke="#D4B896" stroke-width="1.8"/>
+                    </svg>
+
+                    <svg class="balanced-icon" style="top: 18%; left: 12%; width: 70px; height: 60px;" viewBox="0 0 70 60">
+                        <circle cx="35" cy="30" r="30" fill="url(#glow1)"/>
+                        <rect x="15" y="20" width="40" height="28" fill="none" stroke="#D4B896" stroke-width="2" rx="2"/>
+                        <line x1="25" y1="20" x2="25" y2="35" stroke="#D4B896" stroke-width="1.5"/>
+                    </svg>
+
+                    <svg class="balanced-icon" style="bottom: 18%; left: 14%; width: 80px; height: 70px;" viewBox="0 0 80 70">
+                        <circle cx="40" cy="35" r="35" fill="url(#glow1)"/>
+                        <rect x="20" y="35" width="40" height="30" fill="none" stroke="#D4B896" stroke-width="2" rx="2"/>
+                        <path d="M 16 35 L 40 20 L 64 35" fill="none" stroke="#D4B896" stroke-width="1.8"/>
+                    </svg>
+
+                    <svg class="balanced-icon" style="bottom: 15%; right: 15%; width: 70px; height="60px;" viewBox="0 0 70 60">
+                        <circle cx="35" cy="30" r="32" fill="url(#glow1)"/>
+                        <rect x="20" y="22" width="30" height="8" fill="none" stroke="#D4B896" stroke-width="2" rx="4"/>
+                    </svg>
+
+                    <!-- 星光 -->
+                    <circle cx="25%" cy="12%" r="1.8" fill="#D4B896" opacity="0.35"/>
+                    <circle cx="50%" cy="25%" r="1.5" fill="#D4B896" opacity="0.35"/>
+                    <circle cx="70%" cy="35%" r="2" fill="#8B7355" opacity="0.35"/>
+                    <circle cx="40%" cy="70%" r="1.5" fill="#D4B896" opacity="0.35"/>
+                    <circle cx="60%" cy="85%" r="1.8" fill="#8B7355" opacity="0.35"/>
+                </div>
+
+                <div class="option-content-mock">
+                    <div class="logo-mock">
+                        <span style="color: #D4B896;">有</span>OFFER
+                    </div>
+                    <div class="title-mock">
+                        孩子香港上學<br>不發愁
+                    </div>
+                    <div class="subtitle-mock">
+                        一站式香港申校APP
+                    </div>
+                </div>
+            </div>
+            <div class="option-info">
+                <div class="option-name">
+                    Option B: 平衡版
+                </div>
+                <div class="option-desc">
+                    <strong>4-5 个图标</strong>（毕业帽、书本、学校、文凭），布局合理，四角分布。<br>
+                    比 Gemini 少了一半图标，透明度 18-22%，视觉密度适中。
+                </div>
+                <div class="option-features">
+                    <span class="feature-tag">适中</span>
+                    <span class="feature-tag">分布均衡</span>
+                    <span class="feature-tag">元素丰富</span>
+                    <span class="feature-tag">不过分</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option C: Single Focus -->
+        <div class="option-card">
+            <div class="option-preview">
+                <div class="icons-layer">
+                    <!-- 超大毕业帽 - 中心 -->
+                    <svg class="single-focus-icon" width="280" height="240" viewBox="0 0 280 240">
+                        <defs>
+                            <radialGradient id="centerGlow">
+                                <stop offset="0%" stop-color="#D4B896" stop-opacity="0.25"/>
+                                <stop offset="100%" stop-color="#D4B896" stop-opacity="0"/>
+                            </radialGradient>
+                        </defs>
+                        <circle cx="140" cy="120" r="120" fill="url(#centerGlow)"/>
+                        <path d="M 50 120 L 140 70 L 230 120 L 140 155 Z" fill="none" stroke="#D4B896" stroke-width="3"/>
+                        <path d="M 35 160 Q 140 180, 245 160" fill="none" stroke="#D4B896" stroke-width="2.5"/>
+                        <rect x="138" y="70" width="4" height="40" fill="#D4B896"/>
+                        <circle cx="140" cy="60" r="6" fill="#D4B896"/>
+                    </svg>
+
+                    <!-- 极少星光 -->
+                    <circle cx="20%" cy="15%" r="2" fill="#D4B896" opacity="0.3"/>
+                    <circle cx="80%" cy="20%" r="2" fill="#D4B896" opacity="0.3"/>
+                    <circle cx="30%" cy="65%" r="1.5" fill="#8B7355" opacity="0.3"/>
+                </div>
+
+                <div class="option-content-mock">
+                    <div class="logo-mock">
+                        <span style="color: #D4B896;">有</span>OFFER
+                    </div>
+                    <div class="title-mock">
+                        孩子香港上學<br>不發愁
+                    </div>
+                    <div class="subtitle-mock">
+                        一站式香港申校APP
+                    </div>
+                </div>
+            </div>
+            <div class="option-info">
+                <div class="option-name">
+                    Option C: 单一焦点
+                </div>
+                <div class="option-desc">
+                    只有 <strong>1 个超大图标</strong>（毕业帽）作为视觉中心，最简洁最大气。<br>
+                    透明度仅 15%，若隐若现，营造高端氛围感。
+                </div>
+                <div class="option-features">
+                    <span class="feature-tag">最简洁</span>
+                    <span class="feature-tag">视觉焦点明确</span>
+                    <span class="feature-tag">最大气</span>
+                    <span class="feature-tag">高端感</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option D: Geometric -->
+        <div class="option-card">
+            <div class="option-preview">
+                <div class="icons-layer geometric-icons">
+                    <!-- 抽象几何图形 -->
+                    <svg style="position: absolute; top: 15%; right: 15%; width: 90px; height: 90px;" viewBox="0 0 90 90">
+                        <circle cx="45" cy="45" r="40" fill="url(#glow1)"/>
+                        <path d="M 45 20 L 70 65 L 20 65 Z" fill="none" stroke="#D4B896" stroke-width="2.5"/>
+                    </svg>
+
+                    <svg style="position: absolute; top: 20%; left: 16%; width: 80px; height: 80px;" viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="35" fill="url(#glow1)"/>
+                        <circle cx="40" cy="40" r="20" fill="none" stroke="#D4B896" stroke-width="2.5"/>
+                        <circle cx="40" cy="40" r="12" fill="none" stroke="#D4B896" stroke-width="1.5"/>
+                    </svg>
+
+                    <svg style="position: absolute; bottom: 18%; left: 16%; width: 85px; height: 85px;" viewBox="0 0 85 85">
+                        <circle cx="42" cy="42" r="37" fill="url(#glow1)"/>
+                        <rect x="20" y="20" width="35" height="35" fill="none" stroke="#D4B896" stroke-width="2.5" rx="4"/>
+                    </svg>
+
+                    <svg style="position: absolute; bottom: 16%; right: 14%; width: 80px; height: 80px;" viewBox="0 0 80 80">
+                        <circle cx="40" cy="40" r="35" fill="url(#glow1)"/>
+                        <polygon points="40,20 48,36 65,38 52,48 55,65 40,56 25,65 28,48 15,38 32,36" 
+                                 fill="none" stroke="#D4B896" stroke-width="2"/>
+                    </svg>
+
+                    <!-- 点缀 -->
+                    <circle cx="50%" cy="15%" r="2" fill="#D4B896" opacity="0.3"/>
+                    <circle cx="45%" cy="50%" r="1.5" fill="#8B7355" opacity="0.3"/>
+                    <circle cx="55%" cy="85%" r="2" fill="#D4B896" opacity="0.3"/>
+                </div>
+
+                <div class="option-content-mock">
+                    <div class="logo-mock">
+                        <span style="color: #D4B896;">有</span>OFFER
+                    </div>
+                    <div class="title-mock">
+                        孩子香港上學<br>不發愁
+                    </div>
+                    <div class="subtitle-mock">
+                        一站式香港申校APP
+                    </div>
+                </div>
+            </div>
+            <div class="option-info">
+                <div class="option-name">
+                    Option D: 几何抽象
+                </div>
+                <div class="option-desc">
+                    <strong>4 个抽象几何图形</strong>（三角形、圆环、方形、星形），象征教育元素但更现代。<br>
+                    避免具象图标，透明度 18-20%，最现代感。
+                </div>
+                <div class="option-features">
+                    <span class="feature-tag">最现代</span>
+                    <span class="feature-tag">抽象艺术</span>
+                    <span class="feature-tag">避免具象</span>
+                    <span class="feature-tag">独特性</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparison-table">
+        <h2>📊 方案对比</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>方案</th>
+                    <th>图标数量</th>
+                    <th>克制程度</th>
+                    <th>大气感</th>
+                    <th>适用场景</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="best-row">
+                    <td><strong>Option A: 极简版</strong></td>
+                    <td>2-3 个</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>全场景推荐</td>
+                </tr>
+                <tr>
+                    <td><strong>Option B: 平衡版</strong></td>
+                    <td>4-5 个</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>想要更丰富</td>
+                </tr>
+                <tr>
+                    <td><strong>Option C: 单一焦点</strong></td>
+                    <td>1 个</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐⭐</td>
+                    <td>极简主义</td>
+                </tr>
+                <tr>
+                    <td><strong>Option D: 几何抽象</strong></td>
+                    <td>4 个</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>⭐⭐⭐⭐</td>
+                    <td>现代前卫</td>
+                </tr>
+                <tr style="background: rgba(239, 68, 68, 0.1);">
+                    <td><strong>Gemini 版本</strong></td>
+                    <td>10+ 个</td>
+                    <td>⭐</td>
+                    <td>⭐⭐</td>
+                    <td>❌ 太乱</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="max-width: 900px; margin: 60px auto; padding: 50px; background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%); border-radius: 30px; text-align: center; border: 2px solid rgba(212, 184, 150, 0.3);">
+        <h2 style="font-size: 32px; margin-bottom: 20px; color: #D4B896;">
+            💡 我的推荐
+        </h2>
+        <p style="font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.9);">
+            <strong style="color: #D4B896;">首选：Option A（极简版）</strong><br><br>
+            只有 2-3 个核心图标（毕业帽 + 学校），大片留白，<br>
+            透明度 22-25%，发光效果微妙，完全不喧宾夺主。<br><br>
+            比 Gemini 版本减少了 70% 的图标，<br>
+            但保留了教育主题的核心视觉元素。<br><br>
+            <strong style="color: #D4B896;">克制、大气、不干扰 = 完美平衡！</strong>
+        </p>
+    </div>
+</body>
+</html>

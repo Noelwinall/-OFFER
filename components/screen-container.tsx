@@ -1,5 +1,6 @@
 import { View, type ViewProps } from "react-native";
 import { SafeAreaView, type Edge } from "react-native-safe-area-context";
+import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
 
 import { cn } from "@/lib/utils";
 
@@ -61,7 +62,9 @@ export function ScreenContainer({
         className={cn("flex-1", safeAreaClassName)}
         style={style}
       >
-        <View className={cn("flex-1", className)}>{children}</View>
+        <MaxWidthWrapper>
+          <View className={cn("flex-1", className)}>{children}</View>
+        </MaxWidthWrapper>
       </SafeAreaView>
     </View>
   );

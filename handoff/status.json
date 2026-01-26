@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated_at_utc": "2026-01-25T00:00:00.000Z",
+    "generated_at_utc": "2026-01-25T12:21:58.852Z",
     "git": {
-      "branch": "tuition-ui-fix",
-      "commit": "80f906e"
+      "branch": "ui-upgrade-test",
+      "commit": "16c2eca"
     },
     "app": {
       "name": "app-template",
@@ -13,28 +13,19 @@
   "navigation": {
     "tabs": [
       {
-        "id": "index",
+        "id": "home",
         "label_zh_hant": "首頁",
-        "route": "/",
-        "icon": "house.fill"
+        "route": "/"
       },
       {
         "id": "search",
-        "label_zh_hant": "搜尋",
-        "route": "/search",
-        "icon": "magnifyingglass"
-      },
-      {
-        "id": "favorites",
-        "label_zh_hant": "收藏",
-        "route": "/favorites",
-        "icon": "heart.fill"
+        "label_zh_hant": "找學校",
+        "route": "/search"
       },
       {
         "id": "explore",
-        "label_zh_hant": "我的",
-        "route": "/explore",
-        "icon": "person.fill"
+        "label_zh_hant": "探索",
+        "route": "/explore"
       }
     ],
     "entry_points": [
@@ -64,11 +55,6 @@
         "notes": "School detail page"
       },
       {
-        "name": "School Reviews",
-        "route": "/school/[id]/reviews",
-        "notes": "School reviews page"
-      },
-      {
         "name": "School Map",
         "route": "/school-map",
         "notes": "Map view"
@@ -79,39 +65,14 @@
         "notes": "School comparison"
       },
       {
-        "name": "Compare (alt)",
-        "route": "/compare",
-        "notes": "Alternative compare route"
-      },
-      {
-        "name": "Swipe Explore",
-        "route": "/swipe-explore",
-        "notes": "Swipe-based school exploration"
-      },
-      {
         "name": "Articles",
         "route": "/articles",
         "notes": "Guides and articles"
       },
       {
-        "name": "Article Detail",
-        "route": "/articles/[id]",
-        "notes": "Single article view"
-      },
-      {
         "name": "Deadlines",
         "route": "/deadlines",
         "notes": "Application deadlines"
-      },
-      {
-        "name": "Notifications",
-        "route": "/notifications",
-        "notes": "User notifications"
-      },
-      {
-        "name": "Theme Lab",
-        "route": "/dev/theme-lab",
-        "notes": "Dev tool for theme testing"
       }
     ]
   },
@@ -195,7 +156,9 @@
       "FRONTEND_URL",
       "GOOGLE_CLIENT_ID",
       "GOOGLE_CLIENT_SECRET",
+      "JEST_WORKER_ID",
       "JWT_SECRET",
+      "NODE_DEBUG",
       "OAUTH_SERVER_URL",
       "OPENAI_API_KEY",
       "OWNER_OPEN_ID",
