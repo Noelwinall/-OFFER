@@ -47,6 +47,7 @@ export const SCHOOL_TEXT = {
 
   // 区块标题
   SECTION_BASIC_INFO: "基本資訊",
+  SECTION_ADDRESS: "學校地址",
   SECTION_CONTACT: "聯絡方式",
   SECTION_TUITION: "學費",
   SECTION_MANDATORY_CHARGES: "強制性費用",

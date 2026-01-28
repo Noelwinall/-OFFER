@@ -624,21 +624,29 @@ export default function SchoolDetailScreen() {
             <FeesSection fees={fees} />
           )}
 
+          {/* 學校地址 */}
+          {school.address && (
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_ADDRESS}</Text>
+              <Text style={styles.addressText}>{school.address}</Text>
+            </View>
+          )}
+
           {/* 聯絡方式 - 順序：電話 → 傳真 → 電郵 → 網站 */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>{SCHOOL_TEXT.SECTION_CONTACT}</Text>
             <View style={styles.infoGrid}>
-              {/* 1. 電話 - from CHSC data, only render if available */}
-              {chscData?.phone && (
-                <TouchableOpacity onPress={() => Linking.openURL(`tel:${chscData.phone}`)}>
-                  <InfoRow label="電話" value={chscData.phone} isLink />
+              {/* 1. 電話 - prefer CHSC data, fallback to schools data */}
+              {(chscData?.phone || school.phone) && (
+                <TouchableOpacity onPress={() => Linking.openURL(`tel:${chscData?.phone || school.phone}`)}>
+                  <InfoRow label="電話" value={chscData?.phone || school.phone} isLink />
                 </TouchableOpacity>
               )}
-              {/* 2. 傳真 - from CHSC data, only render if available */}
+              {/* 2. 傳真 - from CHSC data only */}
               {chscData?.fax && (
                 <InfoRow label="傳真" value={chscData.fax} />
               )}
-              {/* 3. 電郵 - from CHSC data, only render if available */}
+              {/* 3. 電郵 - from CHSC data only */}
               {chscData?.email && (
                 <TouchableOpacity onPress={() => Linking.openURL(`mailto:${chscData.email}`)}>
                   <InfoRow label="電郵" value={chscData.email} isLink />
@@ -745,7 +753,7 @@ export default function SchoolDetailScreen() {
               activeOpacity={0.8}
             >
               <Text style={styles.compareButtonText}>
-                {isInCompare ? "從對比中移除" : "加入對比"}
+                {isInCompare ? "取消收藏" : "收藏"}
               </Text>
             </TouchableOpacity>
             <View style={styles.applyButtonContainer}>
@@ -1240,6 +1248,12 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     color: "#2D2013",
     fontFamily: "NotoSerifSC-Bold",
+  },
+  addressText: {
+    fontSize: 15,
+    color: "#2D2013",
+    fontFamily: "NotoSerifSC-Regular",
+    lineHeight: 22,
   },
   infoGrid: {
     gap: 4,

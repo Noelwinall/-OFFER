@@ -7,6 +7,9 @@ import type { KGSession, KGCurriculumCategoryFilter, KGCurriculumSubtypeFilter, 
 // 排序選項類型
 export type SortOption = "relevance" | "tuition_low" | "tuition_high" | "name_asc" | "name_desc";
 
+// Religion filter type
+export type ReligionFilter = "天主教" | "基督教" | "佛教" | "道教" | "無宗教" | "其他宗教";
+
 export interface FilterState {
   stage: Level | null;  // 階段篩選：幼稚園/小學/中學
   category: ExtendedCategory[];  // Extended to include KG-specific categories
@@ -16,6 +19,7 @@ export interface FilterState {
   curriculumV2: CurriculumV2[];  // V2 課程篩選（Primary/Secondary only）
   instructionLanguages: InstructionLanguage[];  // 授課語言篩選（Primary/Secondary only）
   gender: SchoolGender[];  // 學校性別篩選（Primary/Secondary only, excludes MIXED）
+  religion: ReligionFilter[];  // 宗教篩選（Primary/Secondary only）
   language: Language | null;
   sortBy: SortOption;
   // KG-specific filters
@@ -33,6 +37,7 @@ export type FilterAction =
   | { type: "TOGGLE_CURRICULUM_V2"; payload: CurriculumV2 }
   | { type: "TOGGLE_INSTRUCTION_LANGUAGE"; payload: InstructionLanguage }
   | { type: "TOGGLE_GENDER"; payload: SchoolGender }
+  | { type: "TOGGLE_RELIGION"; payload: ReligionFilter }
   | { type: "SET_LANGUAGE"; payload: Language }
   | { type: "CLEAR_LANGUAGE" }
   | { type: "TOGGLE_CATEGORY"; payload: ExtendedCategory }
@@ -58,6 +63,7 @@ const initialState: FilterState = {
   curriculumV2: [],
   instructionLanguages: [],
   gender: [],
+  religion: [],
   language: null,
   sortBy: "relevance",
   // KG-specific filters
@@ -153,6 +159,13 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         ? state.gender.filter((g) => g !== action.payload)
         : [...state.gender, action.payload];
       return { ...state, gender: updated };
+    }
+
+    case "TOGGLE_RELIGION": {
+      const updated = state.religion.includes(action.payload)
+        ? state.religion.filter((r) => r !== action.payload)
+        : [...state.religion, action.payload];
+      return { ...state, religion: updated };
     }
 
     case "SET_LANGUAGE":
@@ -295,6 +308,7 @@ export function hasActiveFilters(state: FilterState): boolean {
     state.curriculumV2.length > 0 ||
     state.instructionLanguages.length > 0 ||
     state.gender.length > 0 ||
+    state.religion.length > 0 ||
     state.language !== null ||
     // KG-specific filters
     state.kgSession.length > 0 ||
@@ -343,6 +357,10 @@ export function getFilterLabels(state: FilterState): string[] {
     const { SCHOOL_GENDER_LABELS } = require("@/types/school");
     const genderLabels = state.gender.map((g) => SCHOOL_GENDER_LABELS[g] || g);
     labels.push(`學校性別: ${genderLabels.join(", ")}`);
+  }
+
+  if (state.religion.length > 0) {
+    labels.push(`宗教: ${state.religion.join(", ")}`);
   }
 
   if (state.language) {

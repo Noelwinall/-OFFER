@@ -61,13 +61,23 @@ const QUICK_ACTIONS = [
   },
 ];
 
+// Storage key for persisting search input on web
+const SEARCH_INPUT_KEY = "search_input";
+
 export default function SearchScreen() {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const colors = useColors();
   const filterContext = useContext(FilterContext);
   const params = useLocalSearchParams<{ openFilter?: string; lockedDistrict?: string }>();
-  const [searchInput, setSearchInput] = useState("");
+
+  // Initialize search input from sessionStorage on web
+  const [searchInput, setSearchInput] = useState(() => {
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      return sessionStorage.getItem(SEARCH_INPUT_KEY) || "";
+    }
+    return "";
+  });
   const [showFilterSheet, setShowFilterSheet] = useState(false);
   const [favorites, setFavorites] = useState<string[]>([]);
   // Track locked district from Map navigation
@@ -75,6 +85,17 @@ export default function SearchScreen() {
 
   // Debounce search input (300ms)
   const debouncedSearch = useDebounce(searchInput, 300);
+
+  // Persist search input to sessionStorage on web
+  useEffect(() => {
+    if (Platform.OS === "web" && typeof window !== "undefined") {
+      if (searchInput) {
+        sessionStorage.setItem(SEARCH_INPUT_KEY, searchInput);
+      } else {
+        sessionStorage.removeItem(SEARCH_INPUT_KEY);
+      }
+    }
+  }, [searchInput]);
 
   if (!filterContext) {
     throw new Error("SearchScreen must be used within FilterProvider");
@@ -169,10 +190,9 @@ export default function SearchScreen() {
       onFavoritePress={() => handleFavoriteToggle(item.id)}
       sessions={item.__sessions}
       showSessions={item.__showSessions}
-      showAIAnalysis={filters.stage === "幼稚園"}
-      onAIAnalysisPress={handleAIAnalysisPress}
+      showAIAnalysis={false}
     />
-  ), [favorites, isSchoolFavorite, filters.stage, handleAIAnalysisPress]);
+  ), [favorites, isSchoolFavorite, filters.stage]);
 
   const loadFavorites = async () => {
     const favs = await FavoritesStorage.getAll();
@@ -314,12 +334,7 @@ export default function SearchScreen() {
             maxToRenderPerBatch={15}
             windowSize={5}
             removeClippedSubviews={Platform.OS !== "web"}
-            // AI Brief section for KG results
-            ListHeaderComponent={
-              filters.stage === "幼稚園" && displaySchools.length > 0 ? (
-                <AIBriefSection schools={displaySchools} />
-              ) : null
-            }
+            ListHeaderComponent={null}
             ListEmptyComponent={
               <View style={styles.emptyContainer}>
                 <Text style={[styles.emptyText, { color: colors.muted }]}>

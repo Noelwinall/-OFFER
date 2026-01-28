@@ -64,12 +64,21 @@ export function getGroupKey(id: string): string | null {
   return `edb_${digits.slice(0, 10)}`;
 }
 
+/** Campus info for schools combined by website */
+export interface CampusInfo {
+  id: string;
+  name: string;
+  address: string;
+}
+
 /** 合併後的學校類型（帶 session 元數據） */
 export interface GroupedSchool extends School {
   __sessions?: SessionType[];
   __variantIds?: string[];
   /** 是否顯示 session 標籤（幼稚園=true, 小學=false） */
   __showSessions?: boolean;
+  /** 多校區信息（同網站合併時使用） */
+  __campuses?: CampusInfo[];
 }
 
 /** 分組條件函數類型 */
@@ -90,6 +99,68 @@ export const isSecondary = (school: School): boolean =>
 /** 默認條件：對幼稚園、小學、中學啟用合併 */
 export const defaultPredicate: GroupPredicate = (school) =>
   isKindergarten(school) || isPrimary(school) || isSecondary(school);
+
+/**
+ * 正規化網站 URL（用於合併同網站學校）
+ * 去除 protocol、www、路徑，只保留主域名
+ */
+export function normalizeWebsite(url: string | undefined): string {
+  if (!url) return "";
+  return url
+    .replace(/^https?:\/\//, "")
+    .replace(/\/.*$/, "")
+    .replace(/^www\./, "")
+    .toLowerCase();
+}
+
+/**
+ * 從地址提取建築物名稱（用於判斷是否同一棟樓）
+ * 例如：「九龍何文田迦密村街９號君逸山１樓」→「君逸山」
+ * 例如：「香港北角福蔭道1，3＆5號海峰園高峰閣第1座2樓」→「海峰園高峰閣第1座」
+ */
+function extractBuildingName(address: string): string {
+  if (!address) return "";
+
+  // 先正規化地址：統一全形/半形數字、標點
+  let normalized = address
+    .replace(/０/g, "0").replace(/１/g, "1").replace(/２/g, "2")
+    .replace(/３/g, "3").replace(/４/g, "4").replace(/５/g, "5")
+    .replace(/６/g, "6").replace(/７/g, "7").replace(/８/g, "8").replace(/９/g, "9")
+    .replace(/，/g, ",").replace(/、/g, ",").replace(/＆/g, "&")
+    .replace(/\s+/g, ""); // 移除空格
+
+  // 移除樓層信息（地下、X樓、X層等）
+  let cleaned = normalized
+    .replace(/地下下層.*$/, "")
+    .replace(/地下.*$/, "")
+    .replace(/[0-9]+樓.*$/, "")
+    .replace(/[0-9]+層.*$/, "")
+    .trim();
+
+  // 提取號碼後面的建築物名稱
+  // 匹配：XX號 + 建築物名
+  const match = cleaned.match(/[0-9]+號(.+)$/);
+  if (match && match[1]) {
+    return match[1].trim();
+  }
+
+  // 如果沒有匹配到，返回清理後的整個地址用於比較
+  return cleaned;
+}
+
+/**
+ * 判斷學校類型（幼兒園 vs 幼稚園）
+ * 幼兒園 = Nursery (0-3歲)
+ * 幼稚園 = Kindergarten (3-6歲)
+ */
+function getSchoolSubType(name: string): "nursery" | "kindergarten" {
+  // 幼兒園 in name means nursery
+  if (name.includes("幼兒園")) {
+    return "nursery";
+  }
+  // Default to kindergarten (幼稚園)
+  return "kindergarten";
+}
 
 /**
  * 合併同校不同班別（通用函數）
@@ -161,12 +232,44 @@ export function groupSchoolsBySession(
   }
 
   // 合併同名學校
+  const afterNameMerge: GroupedSchool[] = [];
   for (const [, sameNameSchools] of nameGroups) {
     if (sameNameSchools.length === 1) {
-      result.push(sameNameSchools[0]);
+      afterNameMerge.push(sameNameSchools[0]);
     } else {
       // 合併多個同名學校
       const merged = mergeGroupedSchools(sameNameSchools);
+      afterNameMerge.push(merged);
+    }
+  }
+
+  // 第三步：按「同網站 + 同建築物 + 同類型」合併學校（如 Victoria 同棟樓不同樓層的同類型學校）
+  // 注意：幼兒園(nursery, 0-3歲) 和 幼稚園(kindergarten, 3-6歲) 不應合併
+  const buildingGroups = new Map<string, GroupedSchool[]>();
+  for (const school of afterNameMerge) {
+    const site = normalizeWebsite(school.website);
+    const building = extractBuildingName(school.address);
+    const subType = getSchoolSubType(school.name);
+    // 只對有效網站、有效建築物名且符合條件的學校做合併
+    if (!site || site.length < 5 || !building || building.length < 2 || !predicate(school)) {
+      result.push(school);
+      continue;
+    }
+    // 使用 website + building + level + subType 作為 key
+    const buildingKey = `${site}|${building}|${school.level}|${subType}`;
+    if (!buildingGroups.has(buildingKey)) {
+      buildingGroups.set(buildingKey, []);
+    }
+    buildingGroups.get(buildingKey)!.push(school);
+  }
+
+  // 合併同網站+同建築物的學校
+  for (const [, sameBuildingSchools] of buildingGroups) {
+    if (sameBuildingSchools.length === 1) {
+      result.push(sameBuildingSchools[0]);
+    } else {
+      // 合併多個同建築物學校
+      const merged = mergeByBuilding(sameBuildingSchools);
       result.push(merged);
     }
   }
@@ -264,5 +367,72 @@ function mergeGroupedSchools(schools: GroupedSchool[]): GroupedSchool {
     __sessions: allSessions.length > 0 ? allSessions : undefined,
     __variantIds: allVariantIds.length > 1 ? allVariantIds : undefined,
     __showSessions: showSessions,
+  };
+}
+
+/**
+ * 合併同建築物的學校（第三步）
+ * 將同一網站 + 同一建築物的學校合併，記錄各樓層信息
+ */
+function mergeByBuilding(schools: GroupedSchool[]): GroupedSchool {
+  // 收集所有校區信息
+  const campuses: CampusInfo[] = [];
+  const allSessions: SessionType[] = [];
+  const allVariantIds: string[] = [];
+
+  for (const school of schools) {
+    // 添加校區信息
+    campuses.push({
+      id: school.id,
+      name: school.name,
+      address: school.address,
+    });
+
+    // 收集 sessions
+    if (school.__sessions) {
+      for (const s of school.__sessions) {
+        if (!allSessions.includes(s)) {
+          allSessions.push(s);
+        }
+      }
+    }
+
+    // 收集 variant IDs
+    if (school.__variantIds) {
+      allVariantIds.push(...school.__variantIds);
+    } else {
+      allVariantIds.push(school.id);
+    }
+
+    // 如果學校本身已有校區信息，也要合併
+    if (school.__campuses) {
+      for (const c of school.__campuses) {
+        if (!campuses.some(existing => existing.id === c.id)) {
+          campuses.push(c);
+        }
+      }
+    }
+  }
+
+  // 排序 sessions
+  allSessions.sort((a, b) => {
+    const order = { AM: 0, PM: 1, WD: 2 };
+    return order[a] - order[b];
+  });
+
+  // 選擇代表項：優先選名稱最短的（通常是主校區）
+  const representative = schools.reduce((shortest, current) =>
+    current.name.length < shortest.name.length ? current : shortest
+  , schools[0]);
+
+  // 幼稚園顯示 session 標籤
+  const showSessions = isKindergarten(representative);
+
+  return {
+    ...representative,
+    __sessions: allSessions.length > 0 ? allSessions : undefined,
+    __variantIds: allVariantIds.length > 1 ? allVariantIds : undefined,
+    __showSessions: showSessions,
+    __campuses: campuses.length > 1 ? campuses : undefined,
   };
 }

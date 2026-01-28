@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Dimensions } from "react-native";
+import { View, StyleSheet, Dimensions, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Svg, { Path, Circle, Rect, Defs, RadialGradient, Stop, G, Line, Text as SvgText } from "react-native-svg";
 import { useColors } from "@/hooks/use-colors";
@@ -450,8 +450,7 @@ function PremiumBackground() {
 
 /**
  * Style 5: Infographic - 信息图表风格
- * 参考教育信息图表：扁平化矢量图标，有填充色，有层次感
- * 克制数量，专业友好
+ * 使用 Gemini 生成的香港教育主题插画背景
  */
 function InfographicBackground() {
   return (
@@ -459,207 +458,12 @@ function InfographicBackground() {
       {/* 统一底色 - Ivy League Cream */}
       <View style={[StyleSheet.absoluteFill, { backgroundColor: "#FAF8F5" }]} />
 
-      {/* 温暖渐变 - 奶油土黄色调 */}
-      <LinearGradient
-        colors={["#C9B896", "#D4C4A8", "#E5DCC8", "#F5F0E5", "#FAF8F5"]}
-        locations={[0, 0.3, 0.5, 0.75, 1]}
-        style={StyleSheet.absoluteFill}
-        start={{ x: 0.5, y: 0 }}
-        end={{ x: 0.5, y: 1 }}
+      {/* 背景图片 - 香港教育主题插画 */}
+      <Image
+        source={require("@/assets/images/home-hero-bg.png")}
+        style={[StyleSheet.absoluteFill, { width: SCREEN_WIDTH, height: SCREEN_HEIGHT }]}
+        resizeMode="cover"
       />
-
-      <Svg width={SCREEN_WIDTH} height={SCREEN_HEIGHT} style={StyleSheet.absoluteFill}>
-        <Defs>
-          {/* 图标阴影效果 */}
-          <RadialGradient id="iconShadow" cx="50%" cy="50%">
-            <Stop offset="0%" stopColor="#000000" stopOpacity="0.15" />
-            <Stop offset="100%" stopColor="#000000" stopOpacity="0" />
-          </RadialGradient>
-        </Defs>
-
-        {/* 左侧图标组 - 学术相关 */}
-        <G opacity="0.35">
-          {/* 计算器 - 左上 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.15}, ${SCREEN_HEIGHT * 0.2})`}>
-            {/* 计算器主体 */}
-            <Rect x="0" y="0" width="50" height="65" fill="#6B7280" rx="4" />
-            <Rect x="5" y="8" width="40" height="20" fill="#1F2937" rx="2" />
-            {/* 显示屏数字 - 用矩形模拟 */}
-            <Rect x="10" y="12" width="6" height="2" fill="#D4B896" rx="0.5" />
-            <Rect x="18" y="12" width="6" height="2" fill="#D4B896" rx="0.5" />
-            <Rect x="26" y="12" width="6" height="2" fill="#D4B896" rx="0.5" />
-            {/* 按键 */}
-            <Rect x="8" y="35" width="8" height="8" fill="#D4B896" rx="1" />
-            <Rect x="20" y="35" width="8" height="8" fill="#D4B896" rx="1" />
-            <Rect x="32" y="35" width="8" height="8" fill="#D4B896" rx="1" />
-            <Rect x="8" y="47" width="8" height="8" fill="#8B7355" rx="1" />
-            <Rect x="20" y="47" width="8" height="8" fill="#8B7355" rx="1" />
-            <Rect x="32" y="47" width="8" height="8" fill="#8B7355" rx="1" />
-          </G>
-
-          {/* 显微镜 - 中左 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.12}, ${SCREEN_HEIGHT * 0.45})`}>
-            {/* 显微镜主体 */}
-            <Rect x="15" y="20" width="20" height="35" fill="#8B7355" rx="2" />
-            {/* 镜筒 */}
-            <Rect x="20" y="0" width="10" height="25" fill="#D4B896" rx="5" />
-            {/* 载物台 */}
-            <Rect x="5" y="25" width="40" height="5" fill="#6B7280" rx="2" />
-            {/* 底座 */}
-            <Path
-              d="M 5 55 L 45 55 L 40 60 L 10 60 Z"
-              fill="#1E3A5F"
-            />
-          </G>
-
-          {/* 自行车 - 左下 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.18}, ${SCREEN_HEIGHT * 0.7})`}>
-            {/* 前轮 */}
-            <Circle cx="20" cy="30" r="18" fill="none" stroke="#3B82F6" strokeWidth="3" />
-            <Circle cx="20" cy="30" r="5" fill="#3B82F6" />
-            {/* 后轮 */}
-            <Circle cx="50" cy="30" r="18" fill="none" stroke="#3B82F6" strokeWidth="3" />
-            <Circle cx="50" cy="30" r="5" fill="#3B82F6" />
-            {/* 车架 */}
-            <Path
-              d="M 20 30 L 35 15 L 50 30"
-              fill="none"
-              stroke="#1E3A5F"
-              strokeWidth="3"
-            />
-            <Path
-              d="M 35 15 L 50 30"
-              fill="none"
-              stroke="#1E3A5F"
-              strokeWidth="3"
-            />
-          </G>
-        </G>
-
-        {/* 右侧图标组 - 成就相关 */}
-        <G opacity="0.35">
-          {/* 毕业帽 - 右上 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.75}, ${SCREEN_HEIGHT * 0.18})`}>
-            {/* 帽子顶部 */}
-            <Path
-              d="M 15 20 L 35 5 L 55 20 L 35 28 Z"
-              fill="#1E3A5F"
-            />
-            {/* 帽檐 */}
-            <Path
-              d="M 10 28 Q 35 35, 60 28"
-              fill="none"
-              stroke="#D4B896"
-              strokeWidth="2"
-            />
-            {/* 流苏 */}
-            <Rect x="34" y="5" width="2" height="12" fill="#D4B896" />
-            <Circle cx="35" cy="3" r="3" fill="#D4B896" />
-          </G>
-
-          {/* 杠铃 - 右下 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.78}, ${SCREEN_HEIGHT * 0.75})`}>
-            {/* 杠铃杆 */}
-            <Rect x="0" y="20" width="45" height="4" fill="#0D9488" rx="2" />
-            {/* 左侧配重 */}
-            <Circle cx="5" cy="22" r="8" fill="#0D9488" />
-            {/* 右侧配重 */}
-            <Circle cx="40" cy="22" r="8" fill="#0D9488" />
-            {/* 小人 */}
-            <Circle cx="22" cy="10" r="6" fill="#D4B896" />
-            <Rect x="19" y="16" width="6" height="8" fill="#8B7355" rx="1" />
-            <Path
-              d="M 19 24 L 16 30 M 25 24 L 28 30"
-              stroke="#8B7355"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </G>
-        </G>
-
-        {/* 中心图标组 - 核心教育元素 */}
-        <G opacity="0.4">
-          {/* 灯泡 - 中心偏上，象征智慧 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.5 - 30}, ${SCREEN_HEIGHT * 0.25})`}>
-            {/* 灯泡主体 */}
-            <Circle cx="30" cy="25" r="20" fill="#F59E0B" />
-            <Circle cx="30" cy="25" r="15" fill="#FBBF24" />
-            {/* 灯泡底部 */}
-            <Rect x="22" y="40" width="16" height="8" fill="#6B7280" rx="2" />
-            {/* 光线 */}
-            <Path
-              d="M 30 45 L 20 60 M 30 45 L 30 60 M 30 45 L 40 60"
-              stroke="#F59E0B"
-              strokeWidth="2"
-              strokeLinecap="round"
-              opacity="0.6"
-            />
-          </G>
-
-          {/* 书本 - 中心偏下 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.5 - 40}, ${SCREEN_HEIGHT * 0.55})`}>
-            {/* 书本 1 */}
-            <Rect x="0" y="0" width="35" height="25" fill="#1E3A5F" rx="2" />
-            <Path
-              d="M 17 0 L 17 25"
-              stroke="#D4B896"
-              strokeWidth="1"
-              opacity="0.5"
-            />
-            {/* 书本 2 */}
-            <Rect x="15" y="5" width="35" height="25" fill="#2C5282" rx="2" />
-            <Path
-              d="M 32 5 L 32 30"
-              stroke="#D4B896"
-              strokeWidth="1"
-              opacity="0.5"
-            />
-            {/* 书本 3 */}
-            <Rect x="30" y="10" width="35" height="25" fill="#1E3A5F" rx="2" />
-            <Path
-              d="M 47 10 L 47 35"
-              stroke="#D4B896"
-              strokeWidth="1"
-              opacity="0.5"
-            />
-          </G>
-
-          {/* 人物图标 - 中心两侧，象征协作 */}
-          <G transform={`translate(${SCREEN_WIDTH * 0.4}, ${SCREEN_HEIGHT * 0.4})`}>
-            {/* 人物 1 */}
-            <Circle cx="0" cy="0" r="8" fill="#D4B896" />
-            <Rect x="-4" y="8" width="8" height="12" fill="#8B7355" rx="2" />
-            <Path
-              d="M -6 20 L -8 28 M 6 20 L 8 28"
-              stroke="#8B7355"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </G>
-          <G transform={`translate(${SCREEN_WIDTH * 0.5}, ${SCREEN_HEIGHT * 0.4})`}>
-            {/* 人物 2 */}
-            <Circle cx="0" cy="0" r="8" fill="#D4B896" />
-            <Rect x="-4" y="8" width="8" height="12" fill="#8B7355" rx="2" />
-            <Path
-              d="M -6 20 L -8 28 M 6 20 L 8 28"
-              stroke="#8B7355"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </G>
-          <G transform={`translate(${SCREEN_WIDTH * 0.6}, ${SCREEN_HEIGHT * 0.4})`}>
-            {/* 人物 3 */}
-            <Circle cx="0" cy="0" r="8" fill="#D4B896" />
-            <Rect x="-4" y="8" width="8" height="12" fill="#8B7355" rx="2" />
-            <Path
-              d="M -6 20 L -8 28 M 6 20 L 8 28"
-              stroke="#8B7355"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </G>
-        </G>
-      </Svg>
     </View>
   );
 }

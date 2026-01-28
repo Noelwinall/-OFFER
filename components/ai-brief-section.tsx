@@ -46,6 +46,34 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [fadeAnim] = useState(new Animated.Value(0));
 
+  // Theme-aware dynamic styles
+  const dynamicStyles = {
+    container: {
+      backgroundColor: colors.primary + "15",
+      borderColor: colors.primary + "30",
+    },
+    headerTitle: {
+      color: colors.foreground,
+    },
+    countText: {
+      color: colors.foreground,
+    },
+    recapText: {
+      color: colors.muted,
+    },
+    summaryText: {
+      color: colors.foreground,
+    },
+    bulletText: {
+      color: colors.foreground + "CC",
+    },
+    disclaimerText: {
+      color: colors.muted,
+    },
+    chevronColor: colors.muted,
+    skeletonBg: colors.border,
+  };
+
   // Extract preferences from filter context
   const getPreferences = useCallback((): KGBriefPreferences => {
     if (!filterContext) return {};
@@ -158,7 +186,7 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, dynamicStyles.container]}>
       {/* Header */}
       <TouchableOpacity
         style={styles.header}
@@ -166,35 +194,16 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
         activeOpacity={0.7}
       >
         <View style={styles.headerLeft}>
-          <View style={styles.aiBadge}>
-            <IconSymbol name="sparkles" size={12} color="#7C3AED" />
-            <Text style={styles.aiBadgeText}>AI</Text>
-          </View>
-          <Text style={styles.headerTitle}>AI 簡報</Text>
+          <Text style={[styles.headerTitle, dynamicStyles.headerTitle]}>簡報</Text>
           <View style={styles.betaBadge}>
             <Text style={styles.betaText}>Beta</Text>
           </View>
         </View>
         <View style={styles.headerRight}>
-          <TouchableOpacity
-            style={styles.regenerateButton}
-            onPress={handleRegenerate}
-            disabled={isLoading}
-            hitSlop={{ top: 8, bottom: 8, left: 8, right: 8 }}
-          >
-            <IconSymbol
-              name="arrow.clockwise"
-              size={14}
-              color={isLoading ? "rgba(255,255,255,0.3)" : colors.primary}
-            />
-            <Text style={[styles.regenerateText, { color: isLoading ? "rgba(255,255,255,0.3)" : colors.primary }, isLoading && styles.regenerateTextDisabled]}>
-              重新生成
-            </Text>
-          </TouchableOpacity>
           <IconSymbol
             name={isCollapsed ? "chevron.down" : "chevron.up"}
             size={16}
-            color="rgba(255,255,255,0.5)"
+            color={dynamicStyles.chevronColor}
           />
         </View>
       </TouchableOpacity>
@@ -207,37 +216,37 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
             <View style={styles.skeletonContainer}>
               {/* Count skeleton */}
               <View style={styles.countSkeleton}>
-                <View style={styles.skeletonLine} />
+                <View style={[styles.skeletonLine, { backgroundColor: dynamicStyles.skeletonBg }]} />
               </View>
               {/* Recap skeleton */}
-              <View style={styles.recapSkeleton}>
-                <View style={styles.skeletonLine} />
-                <View style={[styles.skeletonLine, styles.skeletonLineShort]} />
+              <View style={[styles.recapSkeleton, { backgroundColor: colors.surface }]}>
+                <View style={[styles.skeletonLine, { backgroundColor: dynamicStyles.skeletonBg }]} />
+                <View style={[styles.skeletonLine, styles.skeletonLineShort, { backgroundColor: dynamicStyles.skeletonBg }]} />
               </View>
               {/* Insights skeleton */}
               <View style={styles.insightsSkeleton}>
-                <View style={[styles.skeletonLine, styles.skeletonLineMedium]} />
-                <View style={[styles.skeletonLine, styles.skeletonLineShort]} />
-                <View style={[styles.skeletonLine, styles.skeletonLineMedium]} />
+                <View style={[styles.skeletonLine, styles.skeletonLineMedium, { backgroundColor: dynamicStyles.skeletonBg }]} />
+                <View style={[styles.skeletonLine, styles.skeletonLineShort, { backgroundColor: dynamicStyles.skeletonBg }]} />
+                <View style={[styles.skeletonLine, styles.skeletonLineMedium, { backgroundColor: dynamicStyles.skeletonBg }]} />
               </View>
             </View>
           ) : summary ? (
             <Animated.View style={{ opacity: fadeAnim }}>
               {/* Total Count Header */}
               <View style={styles.countContainer}>
-                <Text style={styles.countText}>
+                <Text style={[styles.countText, dynamicStyles.countText]}>
                   本次結果共 <Text style={[styles.countNumber, { color: colors.primary }]}>{summary.totalCount}</Text> 間幼稚園
                 </Text>
               </View>
 
               {/* Choices Recap */}
-              <View style={styles.recapContainer}>
-                <Text style={styles.recapText}>{summary.choicesRecap}</Text>
+              <View style={[styles.recapContainer, { backgroundColor: colors.surface }]}>
+                <Text style={[styles.recapText, dynamicStyles.recapText]}>{summary.choicesRecap}</Text>
               </View>
 
               {/* Overall Summary */}
               <View style={styles.summaryContainer}>
-                <Text style={styles.summaryText}>{summary.overallSummary}</Text>
+                <Text style={[styles.summaryText, dynamicStyles.summaryText]}>{summary.overallSummary}</Text>
               </View>
 
               {/* Insights Section */}
@@ -251,7 +260,7 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
                     {summary.insights.map((insight, i) => (
                       <View key={i} style={styles.bulletItem}>
                         <Text style={styles.bulletDot}>•</Text>
-                        <Text style={styles.bulletText}>{insight}</Text>
+                        <Text style={[styles.bulletText, dynamicStyles.bulletText]}>{insight}</Text>
                       </View>
                     ))}
                   </View>
@@ -269,7 +278,7 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
                     {summary.watchOut.map((item, i) => (
                       <View key={i} style={styles.bulletItem}>
                         <Text style={styles.bulletDotWarning}>•</Text>
-                        <Text style={styles.bulletTextWarning}>{item}</Text>
+                        <Text style={[styles.bulletTextWarning, { color: colors.muted }]}>{item}</Text>
                       </View>
                     ))}
                   </View>
@@ -278,8 +287,8 @@ export function AIBriefSection({ schools }: AIBriefSectionProps) {
 
               {/* Disclaimer */}
               <View style={styles.disclaimer}>
-                <IconSymbol name="info.circle" size={12} color="rgba(255,255,255,0.3)" />
-                <Text style={styles.disclaimerText}>
+                <IconSymbol name="info.circle" size={12} color={colors.muted} />
+                <Text style={[styles.disclaimerText, dynamicStyles.disclaimerText]}>
                   以上簡報由 AI 根據學校公開資料生成，僅供參考。
                 </Text>
               </View>

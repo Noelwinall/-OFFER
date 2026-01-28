@@ -19,6 +19,11 @@ import { Typography } from "@/components/ui/typography";
 import { Spacing, SpacingPresets } from "@/constants/spacing";
 import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
 import { TypographyStyles } from "@/constants/typography";
+import { AIBriefSection } from "@/components/ai-brief-section";
+import { PSAIBriefSection } from "@/components/ps-ai-brief-section";
+import { SchoolCard } from "@/components/school-card";
+import { EnhancedBriefModal } from "@/components/enhanced-brief-modal";
+import { groupSchoolsBySession, type GroupedSchool, type SessionType } from "@/lib/school-classification";
 
 /**
  * Q&A School Finder v1.1
@@ -390,7 +395,7 @@ function calculatePSFallback(
 }
 
 // Q&A flow state
-type QAModule = "stage_gate" | "kg" | "ps" | "ps_results";
+type QAModule = "stage_gate" | "kg" | "kg_results" | "ps" | "ps_results";
 
 // KG question IDs
 type KGQuestionId = "session" | "budget" | "putonghua" | "curriculum" | "pedagogy" | "district";
@@ -433,6 +438,9 @@ interface QAState {
   kgLanguageEnv: KGLanguageEnv[] | null;
   kgPedagogy: KGPedagogyTag[];
   kgDistricts: District18[];
+  // KG Results
+  kgResultSchools: typeof schools;
+  kgFallbackMessage: string;
   // Primary/Secondary answers - New branching flow
   psStage: "小學" | "中學" | null;
   psQuestionId: PSQuestionId;
@@ -444,7 +452,7 @@ interface QAState {
   psDistricts: District18[];
   psSelectedOutstanding: string[]; // Selected outstanding school IDs
   psIsInternationalPath: boolean; // Whether user chose international in Route A
-  // Results
+  // PS Results
   psResultSchools: typeof schools;
   psFallbackMessage: string;
 }
@@ -458,6 +466,8 @@ const initialState: QAState = {
   kgLanguageEnv: null,
   kgPedagogy: [],
   kgDistricts: [],
+  kgResultSchools: [],
+  kgFallbackMessage: "",
   // PS initial state - New branching flow
   psStage: null,
   psQuestionId: "care_about",
@@ -493,7 +503,7 @@ const KG_QUESTIONS: Record<KGQuestionId, {
     ],
   },
   budget: {
-    title: "學費預算",
+    title: "預算考量",
     question: "預算是否有限？",
     options: [
       { label: "是", value: "limited" },
@@ -568,9 +578,9 @@ const PS_QUESTIONS: Record<PSQuestionId, {
     title: "選校考量",
     question: "您更在意？",
     options: [
-      { label: "地區", value: "district", description: "先選區域，再看學校類型" },
-      { label: "學校類型", value: "category", description: "先選類型，再看地區" },
-      { label: "我不確定", value: "unsure", description: "讓我們引導您" },
+      { label: "地區", value: "district" },
+      { label: "學校類型", value: "category" },
+      { label: "我不確定", value: "unsure" },
     ],
   },
 
@@ -635,8 +645,8 @@ const PS_QUESTIONS: Record<PSQuestionId, {
     title: "預算考量",
     question: "預算是否有限？",
     options: [
-      { label: "性價比更重要", value: "value", description: "資助、直資、官立學校" },
-      { label: "國際學校", value: "international", description: "國際學校、私立學校" },
+      { label: "性價比更重要", value: "value" },
+      { label: "預算不是主要考慮因素", value: "international" },
     ],
   },
 
@@ -645,9 +655,9 @@ const PS_QUESTIONS: Record<PSQuestionId, {
     title: "學校類型",
     question: "您想要哪種類型的學校？",
     options: [
-      { label: "國際學校", value: "國際", description: "多元文化、國際課程" },
-      { label: "私立學校", value: "私立", description: "小班教學、特色課程" },
-      { label: "不限", value: "no_preference", description: "國際+私立都可以" },
+      { label: "國際學校", value: "國際" },
+      { label: "私立學校", value: "私立" },
+      { label: "不限", value: "no_preference" },
     ],
   },
 
@@ -698,6 +708,18 @@ export default function QuizScreen() {
   const colors = useColors();
   const filterContext = useContext(FilterContext);
   const [state, setState] = useState<QAState>(initialState);
+
+  // Enhanced Brief Modal state
+  const [briefModalVisible, setBriefModalVisible] = useState(false);
+  const [briefModalSchoolId, setBriefModalSchoolId] = useState<string | null>(null);
+  const [briefModalSchoolName, setBriefModalSchoolName] = useState<string>("");
+
+  // Handle AI analysis button press
+  const handleAIAnalysisPress = (schoolId: string, schoolName: string) => {
+    setBriefModalSchoolId(schoolId);
+    setBriefModalSchoolName(schoolName);
+    setBriefModalVisible(true);
+  };
 
   if (!filterContext) {
     throw new Error("QuizScreen must be used within FilterProvider");
@@ -1108,7 +1130,64 @@ export default function QuizScreen() {
     setState({ ...state, kgPedagogy: newPedagogy });
   };
 
-  // Complete KG flow and apply filters
+  // Get filtered KG schools based on current state
+  const getFilteredKGSchools = (
+    session: KGSession[] | null,
+    curriculumCategory: KGCurriculumCategoryFilter[] | null,
+    curriculumType: KGCurriculumSubtypeFilter[] | null,
+    languageEnv: KGLanguageEnv[] | null,
+    pedagogy: KGPedagogyTag[],
+    districts: District18[]
+  ): typeof schools => {
+    return kgSchools.filter(school => {
+      const kgData = kgMap.get(school.id);
+      if (!kgData) return false;
+
+      // Session filter
+      if (session && session.length > 0) {
+        if (!session.some(s => kgData.sessions.includes(s))) return false;
+      }
+
+      // Curriculum category filter
+      if (curriculumCategory && curriculumCategory.length > 0) {
+        if (!curriculumCategory.includes(kgData.curriculumCategory as KGCurriculumCategoryFilter)) {
+          return false;
+        }
+      }
+
+      // Curriculum type filter
+      if (curriculumType && curriculumType.length > 0) {
+        if (!curriculumType.includes(kgData.curriculumType as KGCurriculumSubtypeFilter)) {
+          return false;
+        }
+      }
+
+      // Language environment filter
+      if (languageEnv && languageEnv.length > 0) {
+        const isPutonghuaFilter = languageEnv.includes("putonghua");
+        if (isPutonghuaFilter && languageEnv.length === 1) {
+          const isCantoneseOnly = kgData.languageEnv.length === 1 && kgData.languageEnv[0] === "cantonese";
+          if (isCantoneseOnly) return false;
+        } else {
+          if (!languageEnv.some(l => kgData.languageEnv.includes(l))) return false;
+        }
+      }
+
+      // Pedagogy filter
+      if (pedagogy.length > 0) {
+        if (!pedagogy.some(p => kgData.pedagogyTags.includes(p))) return false;
+      }
+
+      // District18 filter
+      if (districts.length > 0) {
+        if (!districts.includes(school.district18 as District18)) return false;
+      }
+
+      return true;
+    });
+  };
+
+  // Complete KG flow and show results
   const completeKGFlow = (finalState: QAState) => {
     // Calculate fallback if needed for low/zero results
     const fallback = calculateFallback(
@@ -1120,63 +1199,41 @@ export default function QuizScreen() {
       finalState.kgDistricts
     );
 
-    // Reset all filters first
-    dispatch({ type: "RESET_FILTERS" });
+    // Get filtered schools
+    const rawFilteredSchools = getFilteredKGSchools(
+      finalState.kgSession,
+      finalState.kgCurriculumCategory,
+      finalState.kgCurriculumType,
+      finalState.kgLanguageEnv,
+      fallback.pedagogy.length > 0 ? fallback.pedagogy : finalState.kgPedagogy,
+      fallback.districts.length > 0 ? fallback.districts : finalState.kgDistricts
+    );
 
-    // Set stage to KG
-    dispatch({ type: "SET_STAGE", payload: "幼稚園" });
+    // Group by session to merge AM/PM/WD variants (prevent duplicates)
+    const filteredSchools = groupSchoolsBySession(rawFilteredSchools);
 
-    // Apply session filter
-    if (finalState.kgSession) {
-      finalState.kgSession.forEach((session) => {
-        dispatch({ type: "TOGGLE_KG_SESSION", payload: session });
-      });
+    // Determine what to show
+    let resultSchools = filteredSchools;
+    let resultMessage = "";
+
+    if (filteredSchools.length > 10) {
+      // Randomly shuffle and pick 10 schools for KG
+      const shuffled = [...filteredSchools].sort(() => Math.random() - 0.5);
+      resultSchools = shuffled.slice(0, 10);
+      resultMessage = "篩選結果學校數量較多，以下是為您精選的10所學校，如果想了解更多，可以在篩選區自行通過條件篩選";
+    } else if (fallback.message) {
+      resultMessage = fallback.message;
     }
 
-    // Apply curriculum category
-    if (finalState.kgCurriculumCategory) {
-      finalState.kgCurriculumCategory.forEach((cat) => {
-        dispatch({ type: "TOGGLE_KG_CURRICULUM_CATEGORY", payload: cat });
-      });
-    }
-
-    // Apply curriculum type
-    if (finalState.kgCurriculumType) {
-      finalState.kgCurriculumType.forEach((type) => {
-        dispatch({ type: "TOGGLE_KG_CURRICULUM_TYPE", payload: type });
-      });
-    }
-
-    // Apply language environment
-    if (finalState.kgLanguageEnv) {
-      finalState.kgLanguageEnv.forEach((lang) => {
-        dispatch({ type: "TOGGLE_KG_LANGUAGE_ENV", payload: lang });
-      });
-    }
-
-    // Apply pedagogy tags (use fallback pedagogy which may be relaxed)
-    if (fallback.pedagogy.length > 0) {
-      fallback.pedagogy.forEach((tag) => {
-        dispatch({ type: "TOGGLE_KG_PEDAGOGY", payload: tag });
-      });
-    }
-
-    // Apply district18 filter (use fallback districts which may be expanded)
-    if (fallback.districts.length > 0) {
-      fallback.districts.forEach((district) => {
-        dispatch({ type: "TOGGLE_DISTRICT18", payload: district });
-      });
-    }
-
-    // Navigate to search with fallback message if applicable
-    if (fallback.message) {
-      router.replace({
-        pathname: "/(tabs)/search",
-        params: { fallbackMessage: fallback.message },
-      });
-    } else {
-      router.replace("/(tabs)/search");
-    }
+    // Show results page instead of navigating
+    setState({
+      ...finalState,
+      module: "kg_results",
+      kgDistricts: fallback.districts.length > 0 ? fallback.districts : finalState.kgDistricts,
+      kgPedagogy: fallback.pedagogy.length > 0 ? fallback.pedagogy : finalState.kgPedagogy,
+      kgResultSchools: resultSchools,
+      kgFallbackMessage: resultMessage,
+    });
   };
 
   // Handle completing multi-select questions
@@ -1237,14 +1294,61 @@ export default function QuizScreen() {
     });
   };
 
-  // Get districts with remaining schools (for Route B Q6Ba)
+  // Get districts with remaining schools - ONLY those with outstanding schools (Issue 3)
   const getDistrictsWithSchools = (): District18[] => {
-    const districts = [...new Set(currentPSFilteredSchools.map(s => s.district18 as District18))];
+    const level = state.psStage as "中學" | "小學";
+    const outstandingSchools = getOutstandingSchoolsByLevel(level);
+    const outstandingDistricts = new Set(outstandingSchools.map(s => s.district18 as District18));
+
+    // Filter to only districts that have both filtered schools AND outstanding schools
+    const districts = [...new Set(currentPSFilteredSchools.map(s => s.district18 as District18))]
+      .filter(d => outstandingDistricts.has(d));
+
     return districts.sort((a, b) => {
       const countA = currentPSFilteredSchools.filter(s => s.district18 === a).length;
       const countB = currentPSFilteredSchools.filter(s => s.district18 === b).length;
       return countB - countA;
     });
+  };
+
+  // Get available genders with their counts (Issue 1)
+  const getAvailableGenders = (): { value: string; label: string; count: number }[] => {
+    const genderCounts: Record<string, number> = {
+      "BOYS": 0,
+      "GIRLS": 0,
+      "MIXED": 0,
+    };
+
+    currentPSFilteredSchools.forEach(s => {
+      if (genderCounts[s.gender] !== undefined) {
+        genderCounts[s.gender]++;
+      }
+    });
+
+    const result: { value: string; label: string; count: number }[] = [];
+
+    if (genderCounts["BOYS"] > 0) {
+      result.push({ value: "BOYS", label: "男校", count: genderCounts["BOYS"] });
+    }
+    if (genderCounts["GIRLS"] > 0) {
+      result.push({ value: "GIRLS", label: "女校", count: genderCounts["GIRLS"] });
+    }
+    // Always include "no_preference" option
+    result.push({ value: "no_preference", label: "無所謂", count: currentPSFilteredSchools.length });
+
+    return result;
+  };
+
+  // Get excluded genders (those with 0 count) for the note (Issue 1)
+  const getExcludedGenders = (): string[] => {
+    const excluded: string[] = [];
+    const boysCount = currentPSFilteredSchools.filter(s => s.gender === "BOYS").length;
+    const girlsCount = currentPSFilteredSchools.filter(s => s.gender === "GIRLS").length;
+
+    if (boysCount === 0) excluded.push("男校");
+    if (girlsCount === 0) excluded.push("女校");
+
+    return excluded;
   };
 
   // Get outstanding schools in selected district
@@ -1516,8 +1620,8 @@ export default function QuizScreen() {
 
   // Complete PS flow and show results or go to filters
   const completePSFlow = (finalState: QAState) => {
-    // Calculate fallback if needed for district expansion
-    const fallback = calculatePSFallback(
+    // First, get schools WITHOUT expansion to check if we should expand at all
+    const rawOriginalSchools = getPSFilteredSchools(
       finalState.psStage,
       finalState.psCategory,
       finalState.psGender,
@@ -1526,38 +1630,64 @@ export default function QuizScreen() {
       finalState.psDistricts
     );
 
-    // Get filtered schools with expanded districts
-    let filteredSchools = getPSFilteredSchools(
-      finalState.psStage,
-      finalState.psCategory,
-      finalState.psGender,
-      finalState.psCurriculum,
-      finalState.psReligion,
-      fallback.districts.length > 0 ? fallback.districts : finalState.psDistricts
-    );
+    // Group by session to merge duplicates (same school with different session codes)
+    const originalSchools = groupSchoolsBySession(rawOriginalSchools);
 
-    // If user selected outstanding schools, prioritize them
+    // If user selected outstanding schools, filter them
+    let filteredSchools = originalSchools;
     if (finalState.psSelectedOutstanding.length > 0) {
-      // Filter to only selected outstanding schools
       filteredSchools = filteredSchools.filter(s =>
         finalState.psSelectedOutstanding.includes(s.id)
       );
     }
 
-    // If still > 5 schools after all questions and expansion, go to Filters
-    if (filteredSchools.length > PS_MIN_RESULTS_THRESHOLD) {
-      // Apply filters and go to search page
-      applyPSFiltersAndNavigate(finalState, fallback);
-      return;
-    }
+    // Determine what to show based on original count
+    let resultSchools = filteredSchools;
+    let resultMessage = "";
+    let finalDistricts = finalState.psDistricts;
 
-    // Show results page with <= 5 schools
+    // Only show message and random selection when there are many results
+    if (filteredSchools.length > PS_MIN_RESULTS_THRESHOLD) {
+      // Randomly shuffle and pick 5 schools
+      const shuffled = [...filteredSchools].sort(() => Math.random() - 0.5);
+      resultSchools = shuffled.slice(0, 5);
+      resultMessage = "篩選結果學校數量較多，以下是為您精選的5所學校，如果想了解更多，可以在篩選區自行通過條件篩選";
+    }
+    // If very few results (0), try to expand districts
+    else if (filteredSchools.length === 0 && finalState.psDistricts.length === 1) {
+      const fallback = calculatePSFallback(
+        finalState.psStage,
+        finalState.psCategory,
+        finalState.psGender,
+        finalState.psCurriculum,
+        finalState.psReligion,
+        finalState.psDistricts
+      );
+
+      if (fallback.districts.length > 0) {
+        const rawFallbackSchools = getPSFilteredSchools(
+          finalState.psStage,
+          finalState.psCategory,
+          finalState.psGender,
+          finalState.psCurriculum,
+          finalState.psReligion,
+          fallback.districts
+        );
+        // Group fallback results too
+        resultSchools = groupSchoolsBySession(rawFallbackSchools);
+        finalDistricts = fallback.districts;
+        resultMessage = fallback.message;
+      }
+    }
+    // Otherwise, just show the schools we have (no message needed)
+
+    // Show results page
     setState({
       ...finalState,
       module: "ps_results",
-      psDistricts: fallback.districts.length > 0 ? fallback.districts : finalState.psDistricts,
-      psResultSchools: filteredSchools,
-      psFallbackMessage: fallback.message,
+      psDistricts: finalDistricts,
+      psResultSchools: resultSchools,
+      psFallbackMessage: resultMessage,
     });
   };
 
@@ -1634,6 +1764,16 @@ export default function QuizScreen() {
         // Go back to stage gate
         setState({ ...initialState });
       }
+    } else if (state.module === "kg_results") {
+      // Go back to last KG question (district)
+      setState({
+        ...state,
+        module: "kg",
+        kgQuestionId: "district",
+        kgDistricts: [],
+        kgResultSchools: [],
+        kgFallbackMessage: "",
+      });
     } else if (state.module === "ps") {
       // Handle branching flow back navigation
       let newState = { ...state };
@@ -1835,12 +1975,23 @@ export default function QuizScreen() {
                   style={styles.districtButton}
                   activeOpacity={0.7}
                 >
-                  <Text style={styles.districtButtonText}>{district.replace("區", "")}</Text>
+                  <Text style={styles.districtButtonText}>{district}</Text>
                 </TouchableOpacity>
               ))}
             </View>
           </View>
         ))}
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -1851,12 +2002,12 @@ export default function QuizScreen() {
     const availableCategories = getAvailableCategoriesInDistrict();
 
     // Define display order and labels
-    const categoryConfig: { value: SchoolCategory; label: string; description: string }[] = [
-      { value: "國際", label: "國際學校", description: "多元文化、國際課程" },
-      { value: "直資", label: "直資學校", description: "靈活課程、質素保證" },
-      { value: "私立", label: "私立學校", description: "小班教學、特色課程" },
-      { value: "資助", label: "資助學校", description: "政府資助、學費全免" },
-      { value: "公立", label: "官立學校", description: "政府直營" },
+    const categoryConfig: { value: SchoolCategory; label: string }[] = [
+      { value: "國際", label: "國際學校" },
+      { value: "直資", label: "直資學校" },
+      { value: "私立", label: "私立學校" },
+      { value: "資助", label: "資助學校" },
+      { value: "公立", label: "官立學校" },
     ];
 
     const options = categoryConfig.filter(c => availableCategories.includes(c.value));
@@ -1875,9 +2026,6 @@ export default function QuizScreen() {
               activeOpacity={0.7}
             >
               <Text style={styles.optionText}>{option.label}</Text>
-              <Text style={[styles.optionText, { fontSize: 13, color: colors.muted, marginTop: 4 }]}>
-                {option.description}
-              </Text>
             </TouchableOpacity>
           ))}
           <TouchableOpacity
@@ -1894,6 +2042,17 @@ export default function QuizScreen() {
             目前符合條件：{currentPSResultCount} 所學校
           </Text>
         </View>
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -1933,6 +2092,70 @@ export default function QuizScreen() {
             目前符合條件：{currentPSResultCount} 所學校
           </Text>
         </View>
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+  // Render gender question with dynamic options (Issue 1)
+  const renderGenderQuestion = (questionId: "gender_route_a" | "gender_route_b") => {
+    const question = PS_QUESTIONS[questionId];
+    const availableGenders = getAvailableGenders();
+    const excludedGenders = getExcludedGenders();
+
+    return (
+      <View style={styles.questionContainer}>
+        <Text style={[styles.questionTitle, { color: colors.primary }]}>{question.title}</Text>
+        <Text style={styles.questionSubtitle}>{question.question}</Text>
+
+        <View style={styles.optionsContainer}>
+          {availableGenders.map((gender) => (
+            <TouchableOpacity
+              key={gender.value}
+              onPress={() => handlePSAnswer(questionId, gender.value)}
+              style={styles.optionButton}
+              activeOpacity={0.7}
+            >
+              <Text style={styles.optionText}>{gender.label}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        {/* Note for excluded genders (Issue 1) */}
+        {excludedGenders.length > 0 && (
+          <View style={[styles.optionButton, { backgroundColor: colors.primary + "10", borderColor: colors.primary + "30", marginTop: Spacing.md }]}>
+            <Text style={[styles.optionText, { color: colors.muted, fontSize: 13 }]}>
+              該區/該類型沒有{excludedGenders.join("/")}
+            </Text>
+          </View>
+        )}
+
+        <View style={styles.resultHint}>
+          <Text style={styles.resultHintText}>
+            目前符合條件：{currentPSResultCount} 所學校
+          </Text>
+        </View>
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -2000,6 +2223,17 @@ export default function QuizScreen() {
             目前符合條件：{currentPSResultCount} 所學校
           </Text>
         </View>
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -2047,7 +2281,7 @@ export default function QuizScreen() {
                       activeOpacity={0.7}
                     >
                       <Text style={styles.districtButtonText}>
-                        {district.replace("區", "")} ({count})
+                        {district} ({count})
                       </Text>
                     </TouchableOpacity>
                   );
@@ -2071,6 +2305,17 @@ export default function QuizScreen() {
             目前符合條件：{currentPSResultCount} 所學校
           </Text>
         </View>
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -2083,6 +2328,9 @@ export default function QuizScreen() {
         return renderPSDistrictSelectQuestion();
       case "category_in_district":
         return renderCategoryInDistrictQuestion();
+      case "gender_route_a":
+      case "gender_route_b":
+        return renderGenderQuestion(state.psQuestionId);
       case "religion_route_a":
       case "religion_route_b":
         return renderReligionQuestion(state.psQuestionId);
@@ -2112,11 +2360,6 @@ export default function QuizScreen() {
               activeOpacity={0.7}
             >
               <Text style={styles.optionText}>{option.label}</Text>
-              {option.description && (
-                <Text style={[styles.optionText, { fontSize: 13, color: colors.muted, marginTop: 4 }]}>
-                  {option.description}
-                </Text>
-              )}
             </TouchableOpacity>
           ))}
         </View>
@@ -2129,6 +2372,17 @@ export default function QuizScreen() {
             </Text>
           </View>
         )}
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -2136,6 +2390,32 @@ export default function QuizScreen() {
   // Render PS results
   const renderPSResults = () => {
     const resultSchools = state.psResultSchools.slice(0, 5);
+
+    // Build choices recap
+    const choicesRecap = [
+      state.psDistricts.length > 0 ? `地區：${state.psDistricts.join("、")}` : null,
+      state.psCategory ? `類型：${state.psCategory.join("、")}` : null,
+      state.psGender ? `性別：${state.psGender.map(g => g === "BOYS" ? "男校" : g === "GIRLS" ? "女校" : "男女校").join("、")}` : null,
+      state.psCurriculum ? `課程：${state.psCurriculum.map(c => c === "HK_LOCAL" ? "本地課程" : c).join("、")}` : null,
+      state.psReligion ? `宗教：${state.psReligion.join("、")}` : null,
+    ].filter(Boolean).join(" · ");
+
+    // Build summary text
+    const summaryParts = [];
+    if (state.psCategory && state.psCategory[0]) summaryParts.push(`這些學校都是${state.psCategory[0]}學校`);
+    if (state.psGender && state.psGender[0] === "BOYS") summaryParts.push("均為男校");
+    if (state.psGender && state.psGender[0] === "GIRLS") summaryParts.push("均為女校");
+    if (state.psCurriculum && state.psCurriculum[0]) {
+      summaryParts.push(`提供${state.psCurriculum[0] === "HK_LOCAL" ? "本地課程（DSE）" : state.psCurriculum[0]}課程`);
+    }
+    if (state.psReligion && state.psReligion[0] && state.psReligion[0] !== "無宗教") {
+      summaryParts.push(`屬${state.psReligion[0]}學校`);
+    }
+    if (state.psReligion && state.psReligion[0] === "無宗教") summaryParts.push("不設宗教背景");
+    if (state.psDistricts.length === 1) summaryParts.push(`位於${state.psDistricts[0]}附近`);
+    if (state.psDistricts.length > 1) summaryParts.push(`位於${state.psDistricts.slice(0, 3).join("、")}等區域`);
+
+    const summaryText = summaryParts.length > 0 ? summaryParts.join("，") + "。" : "";
 
     return (
       <View style={styles.questionContainer}>
@@ -2152,73 +2432,140 @@ export default function QuizScreen() {
           </View>
         )}
 
-        {/* AI Brief Section */}
-        <View style={[styles.optionButton, { backgroundColor: colors.surface, marginBottom: Spacing.lg }]}>
-          <Text style={[styles.questionTitle, { color: colors.primary, marginBottom: Spacing.sm }]}>AI 簡報</Text>
-          <Text style={{ color: colors.foreground, lineHeight: 22 }}>
-            根據您的條件，我們為您篩選了 {resultSchools.length} 所{state.psStage}。
-            {state.psCategory && state.psCategory[0] && `這些學校都是${state.psCategory[0]}學校，`}
-            {state.psGender && state.psGender[0] === "BOYS" && "均為男校，"}
-            {state.psGender && state.psGender[0] === "GIRLS" && "均為女校，"}
-            {state.psCurriculum && state.psCurriculum[0] && `提供${state.psCurriculum[0] === "HK_LOCAL" ? "本地課程（DSE）" : state.psCurriculum[0]}課程，`}
-            {state.psReligion && state.psReligion[0] && state.psReligion[0] !== "無宗教" && `屬${state.psReligion[0]}學校，`}
-            {state.psReligion && state.psReligion[0] === "無宗教" && "不設宗教背景，"}
-            {state.psDistricts.length === 1 && `位於${state.psDistricts[0]}附近。`}
-            {state.psDistricts.length === 0 && "遍布全港各區。"}
-            {state.psDistricts.length > 1 && `位於${state.psDistricts.slice(0, 3).join("、")}等區域。`}
-          </Text>
-        </View>
+        {/* AI Brief Section - Using PSAIBriefSection (same UI as KG AIBriefSection) */}
+        <PSAIBriefSection
+          schools={resultSchools}
+          totalCount={resultSchools.length}
+          stage={state.psStage}
+          choicesRecap={choicesRecap}
+          summary={summaryText}
+        />
 
-        {/* School Cards */}
+        {/* School Cards with AI Analysis Button */}
         {resultSchools.map((school) => (
-          <TouchableOpacity
+          <SchoolCard
             key={school.id}
-            style={[styles.optionButton, { marginBottom: Spacing.md }]}
-            activeOpacity={0.7}
+            school={school}
+            showSessions={false}
+            showAIAnalysis={true}
             onPress={() => router.push(`/school/${school.id}`)}
-          >
-            <Text style={[styles.optionText, { textAlign: "left", fontWeight: "700" }]}>{school.name}</Text>
-            <Text style={[styles.optionText, { textAlign: "left", fontSize: 13, color: colors.muted, marginTop: 4 }]}>
-              {school.nameEn}
-            </Text>
-            <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 6, marginTop: 8 }}>
-              <View style={{ backgroundColor: colors.primary, paddingHorizontal: 10, paddingVertical: 4, borderRadius: BorderRadius.sm }}>
-                <Text style={{ color: "#fff", fontSize: 11, fontWeight: "600" }}>{school.category}</Text>
-              </View>
-              <View style={{ backgroundColor: colors.border, paddingHorizontal: 10, paddingVertical: 4, borderRadius: BorderRadius.sm }}>
-                <Text style={{ color: colors.foreground, fontSize: 11, fontWeight: "600" }}>{school.district18}</Text>
-              </View>
-              {school.religion && (
-                <View style={{ backgroundColor: colors.border, paddingHorizontal: 10, paddingVertical: 4, borderRadius: BorderRadius.sm }}>
-                  <Text style={{ color: colors.foreground, fontSize: 11, fontWeight: "600" }}>{school.religion}</Text>
-                </View>
-              )}
-            </View>
-          </TouchableOpacity>
+            onAIAnalysisPress={handleAIAnalysisPress}
+          />
         ))}
-
-        {/* Deep Report Entry (Membership-gated) */}
-        <TouchableOpacity
-          style={[styles.completeButton, { backgroundColor: colors.secondary, shadowColor: colors.secondary, marginTop: Spacing.lg }]}
-          activeOpacity={0.8}
-          onPress={() => {
-            // TODO: Check membership and show upgrade modal or navigate to deep report
-            router.push({
-              pathname: "/report-pro",
-              params: { schoolIds: resultSchools.map(s => s.id).join(",") },
-            });
-          }}
-        >
-          <Text style={[styles.completeButtonText, { color: colors.foreground }]}>
-            📊 獲取深度報告 (Pro)
-          </Text>
-        </TouchableOpacity>
 
         {/* Go to Filters Button */}
         <TouchableOpacity
           style={[styles.completeButton, { backgroundColor: colors.primary, shadowColor: colors.primary, marginTop: Spacing.md }]}
           activeOpacity={0.8}
           onPress={() => applyPSFiltersAndNavigate(state, { districts: state.psDistricts, hops: 0, message: "" })}
+        >
+          <Text style={styles.completeButtonText}>
+            打開篩選器查看更多
+          </Text>
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+  // Apply KG filters and navigate to search
+  const applyKGFiltersAndNavigate = (finalState: QAState) => {
+    // Reset all filters first
+    dispatch({ type: "RESET_FILTERS" });
+
+    // Set stage to KG
+    dispatch({ type: "SET_STAGE", payload: "幼稚園" });
+
+    // Apply session filter
+    if (finalState.kgSession) {
+      finalState.kgSession.forEach((session) => {
+        dispatch({ type: "TOGGLE_KG_SESSION", payload: session });
+      });
+    }
+
+    // Apply curriculum category
+    if (finalState.kgCurriculumCategory) {
+      finalState.kgCurriculumCategory.forEach((cat) => {
+        dispatch({ type: "TOGGLE_KG_CURRICULUM_CATEGORY", payload: cat });
+      });
+    }
+
+    // Apply curriculum type
+    if (finalState.kgCurriculumType) {
+      finalState.kgCurriculumType.forEach((type) => {
+        dispatch({ type: "TOGGLE_KG_CURRICULUM_TYPE", payload: type });
+      });
+    }
+
+    // Apply language environment
+    if (finalState.kgLanguageEnv) {
+      finalState.kgLanguageEnv.forEach((lang) => {
+        dispatch({ type: "TOGGLE_KG_LANGUAGE_ENV", payload: lang });
+      });
+    }
+
+    // Apply pedagogy tags
+    if (finalState.kgPedagogy.length > 0) {
+      finalState.kgPedagogy.forEach((tag) => {
+        dispatch({ type: "TOGGLE_KG_PEDAGOGY", payload: tag });
+      });
+    }
+
+    // Apply district filter
+    if (finalState.kgDistricts.length > 0) {
+      finalState.kgDistricts.forEach((district) => {
+        dispatch({ type: "TOGGLE_DISTRICT18", payload: district });
+      });
+    }
+
+    // Navigate to search
+    router.replace("/(tabs)/search");
+  };
+
+  // Render KG results
+  const renderKGResults = () => {
+    // KG shows up to 10 results (randomly selected if > 10)
+    const resultSchools = state.kgResultSchools.slice(0, 10);
+
+    return (
+      <View style={styles.questionContainer}>
+        <Text style={[styles.questionTitle, { color: colors.primary }]}>推薦結果</Text>
+        <Text style={styles.questionSubtitle}>
+          為您找到 {state.kgResultSchools.length} 所符合條件的幼稚園
+        </Text>
+
+        {state.kgFallbackMessage && (
+          <View style={[styles.optionButton, { backgroundColor: colors.primary + "15", borderColor: colors.primary + "30", marginBottom: Spacing.lg }]}>
+            <Text style={[styles.optionText, { color: colors.primary, fontSize: 14 }]}>
+              {state.kgFallbackMessage}
+            </Text>
+          </View>
+        )}
+
+        {/* AI Brief Section - Original Component */}
+        <AIBriefSection schools={resultSchools as GroupedSchool[]} />
+
+        {/* School Cards with AI Analysis Button */}
+        {resultSchools.map((school) => {
+          const kgData = kgMap.get(school.id);
+          const sessions: SessionType[] = kgData?.sessions?.map(s => s as SessionType) || [];
+          return (
+            <SchoolCard
+              key={school.id}
+              school={school}
+              sessions={sessions}
+              showSessions={true}
+              showAIAnalysis={true}
+              onPress={() => router.push(`/kg/${school.id}`)}
+              onAIAnalysisPress={handleAIAnalysisPress}
+            />
+          );
+        })}
+
+        {/* Go to Filters Button */}
+        <TouchableOpacity
+          style={[styles.completeButton, { backgroundColor: colors.primary, shadowColor: colors.primary, marginTop: Spacing.md }]}
+          activeOpacity={0.8}
+          onPress={() => applyKGFiltersAndNavigate(state)}
         >
           <Text style={styles.completeButtonText}>
             打開篩選器查看更多
@@ -2261,7 +2608,7 @@ export default function QuizScreen() {
                   style={styles.districtButton}
                   activeOpacity={0.7}
                 >
-                  <Text style={styles.districtButtonText}>{district.replace("區", "")}</Text>
+                  <Text style={styles.districtButtonText}>{district}</Text>
                 </TouchableOpacity>
               ))}
             </View>
@@ -2274,6 +2621,17 @@ export default function QuizScreen() {
             目前符合條件：{currentResultCount} 所學校
           </Text>
         </View>
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -2365,6 +2723,17 @@ export default function QuizScreen() {
             </Text>
           </View>
         )}
+
+        {/* Back button */}
+        <TouchableOpacity
+          onPress={handleBack}
+          style={{ marginTop: Spacing.lg, paddingVertical: Spacing.md }}
+          activeOpacity={0.7}
+        >
+          <Text style={{ color: colors.primary, fontSize: 14, textAlign: "center" }}>
+            返回上一題
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   };
@@ -2384,7 +2753,7 @@ export default function QuizScreen() {
           <TouchableOpacity onPress={handleBack} style={styles.backButton}>
             <IconSymbol name="chevron.left" size={24} color={colors.foreground} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>選校問答</Text>
+          <Text style={styles.headerTitle}>問答選校</Text>
           <TouchableOpacity onPress={handleRestart} style={styles.restartIconButton}>
             <IconSymbol name="arrow.counterclockwise" size={20} color={colors.muted + "99"} />
           </TouchableOpacity>
@@ -2416,11 +2785,23 @@ export default function QuizScreen() {
         <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
           {state.module === "stage_gate" && renderStageGate()}
           {state.module === "kg" && renderKGQuestion()}
+          {state.module === "kg_results" && renderKGResults()}
           {state.module === "ps" && renderPSQuestion()}
           {state.module === "ps_results" && renderPSResults()}
         </ScrollView>
         </View>
       </MaxWidthWrapper>
+
+      {/* Enhanced Brief Modal */}
+      <EnhancedBriefModal
+        visible={briefModalVisible}
+        onClose={() => {
+          setBriefModalVisible(false);
+          setBriefModalSchoolId(null);
+        }}
+        schoolId={briefModalSchoolId}
+        schoolName={briefModalSchoolName}
+      />
     </View>
   );
 }

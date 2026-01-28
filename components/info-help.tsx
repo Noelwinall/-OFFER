@@ -294,16 +294,16 @@ const styles = StyleSheet.create({
     width: 16,
     height: 16,
     borderRadius: 8,
-    backgroundColor: "rgba(255,255,255,0.2)",
+    backgroundColor: "rgba(0, 217, 255, 0.2)",
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.4)",
+    borderColor: "rgba(0, 217, 255, 0.6)",
   },
   questionMarkText: {
     fontSize: 10,
     fontWeight: "700",
-    color: "rgba(255,255,255,0.8)",
+    color: "#00D9FF",
     lineHeight: 12,
     textAlign: "center",
   },
@@ -335,7 +335,7 @@ const styles = StyleSheet.create({
   shortText: {
     fontSize: 13,
     lineHeight: 20,
-    color: "#f1f5f9",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
   },
   fullLinkContainer: {
@@ -421,7 +421,7 @@ const styles = StyleSheet.create({
   modalText: {
     fontSize: 15,
     lineHeight: 24,
-    color: "#f1f5f9",
+    color: "#2D2013",
     fontFamily: "NotoSerifSC-Regular",
   },
 });

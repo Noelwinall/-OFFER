@@ -1,0 +1,2384 @@
+{
+  "九龍方方樂趣幼稚園 Kowloon Funful Kindergarten": {
+    "email": "office@fsris.edu.hk"
+  },
+  "九龍城浸信會幼稚園 Kowloon City Baptist Church Kindergarten": {
+    "email": "info@kcbckg.edu.hk"
+  },
+  "九龍城浸信會慈愛幼稚園 Kowloon City Baptist Church Tsz Oi Kindergarten": {
+    "email": "tszoikg@netvigator.com"
+  },
+  "九龍城浸信會嘉福幼稚園 Kowloon City Baptist Church Ka Fuk Kindergarten": {
+    "email": "kcbckfkg@netvigator.com"
+  },
+  "九龍城浸信會禧年幼稚園 Kowloon City Baptist Church Hay Nien Kindergarten": {
+    "email": "kcbchnkg@netvigator.com"
+  },
+  "九龍禮賢學校暨幼稚園 Kowloon Rhenish School and Kindergarten [九龍禮賢幼稚園, 九龍禮賢學校幼稚園]": {
+    "email": "info@krs.edu.hk"
+  },
+  "九龍靈糧堂幼兒園 Kowloon Ling Liang Church Day Nursery": {
+    "email": "kllcdn@kllck.edu.hk"
+  },
+  "九龍靈糧堂幼稚園 Kowloon Ling Liang Church Kindergarten": {
+    "email": "kllckg@kllck.edu.hk"
+  },
+  "力行幼稚園(南便圍) Lick Hang Kindergarten (Nam Pin Wai)": {
+    "email": "lickhangkg@yahoo.com.hk"
+  },
+  "又一村學校 Yau Yat Chuen School [又一村學校幼稚園, 又一村幼稚園]": {
+    "email": "info@yycskg.edu.hk"
+  },
+  "上水堂幼稚園 Sheung Shui Church Kindergarten": {
+    "email": "ssckg@netvigator.com"
+  },
+  "上水惠州幼稚園(分校) Sheung Shui Wai Chow Kindergarten (Branch)": {
+    "email": "sswckge@netvigator.com"
+  },
+  "上水禮賢會幼稚園 Sheung Shui Rhenish Church Kindergarten": {
+    "email": "info.sskg@ppe.rhenish.org"
+  },
+  "大同新邨聖德肋撒幼稚園 Tai Tung Sun Chuen St Teresa Kindergarten [肖霞幼稚園]": {
+    "email": "chiuhawu@yahoo.com.hk"
+  },
+  "大埔浸信會幼稚園 Tai Po Baptist Kindergarten": {
+    "email": "tpbkg@taipobc.org.hk"
+  },
+  "大埔浸信會幼稚園運頭塘邨分校 Tai Po Baptist Kindergarten Wan Tau Tong Estate Branch": {
+    "email": "info@wtt-baptistkg.edu.hk"
+  },
+  "大埔商會幼稚園 Tai Po Merchants Association Kindergarten": {
+    "email": "tpmak@tpmak.edu.hk"
+  },
+  "大埔循道衞理幼稚園 Tai Po Methodist Kindergarten": {
+    "email": "info@tpmk.edu.hk"
+  },
+  "大埔禮賢會幼稚園(汀角路) Tai Po Rhenish Church Kindergarten (Ting Kok Road)": {
+    "email": "info@rcktp.edu.hk"
+  },
+  "大埔禮賢會幼稚園(富蝶分校) Tai Po Rhenish Church Kindergarten (Fu Tip)": {
+    "email": "info@rcktp.edu.hk"
+  },
+  "大衛幼稚園 David (Exodus) Kindergarten [大衛(出埃及)幼稚園 大衞幼稚園]": {
+    "email": "info@dek.edu.hk"
+  },
+  "小大嶼山蒙特梭利幼稚園 Little Lantau Montessori Kindergarten": {
+    "email": "littlelantaumontessori2015@gmail.com"
+  },
+  "小蜜蜂幼稚園 Busy Bees Kindergarten": {
+    "email": "busybees@ust.hk"
+  },
+  "山景邨浸信會幼稚園 Shan King Estate Baptist Kindergarten": {
+    "email": "admin@skebk.edu.hk"
+  },
+  "中華傳道會基石幼稚園 CNEC Christian Kindergarten": {
+    "email": "cneckg1997@gmail.com"
+  },
+  "五邑工商總會幼稚園 Five Districts Business Welfare Association Kindergarten": {
+    "email": "enquiry@fdkg.edu.hk"
+  },
+  "五邑工商總會張祝珊幼稚園 FDBWA Cheung Chuk Shan Kindergarten": {
+    "email": "fd@ccsn.edu.hk"
+  },
+  "仁愛堂吳黃鳳英幼稚園 Yan Oi Tong Ng Wong Fung Ying Kindergarten": {
+    "email": "dn3@yot.org.hk"
+  },
+  "仁愛堂田家炳幼稚園 Yan Oi Tong Tin Ka Ping Kindergarten": {
+    "email": "dn2@yot.org.hk"
+  },
+  "仁愛堂張慕良夫人幼稚園 Yan Oi Tong Mrs Augusta Cheung Kindergarten": {
+    "email": "dn4@yot.org.hk"
+  },
+  "仁愛堂陳鄭玉而幼稚園 Yan Oi Tong Chan Cheng Yuk Yee Kindergarten": {
+    "email": "dn5@yot.org.hk"
+  },
+  "仁愛堂彭鴻樟幼稚園 Yan Oi Tong Pang Hung Cheung Kindergarten": {
+    "email": "kg3@yot.org.hk"
+  },
+  "仁愛堂葉德海幼稚園 Yan Oi Tong Allan Yap Kindergarten": {
+    "email": "kg2@yot.org.hk"
+  },
+  "仁愛堂劉皇發幼稚園 Yan Oi Tong Lau Wong Fat Kindergarten": {
+    "email": "dn1@yot.org.hk"
+  },
+  "仁愛堂鄧楊詠曼幼稚園 Yan Oi Tong Dan Yang Wing Man Kindergarten": {
+    "email": "kg4@yot.org.hk"
+  },
+  "仁愛堂顏寶鈴幼稚園 Yan Oi Tong Ngan Po Ling Kindergarten": {
+    "email": "kg1@yot.org.hk"
+  },
+  "仁愛堂龐盧淑燕幼稚園 Yan Oi Tong Pong Lo Shuk Yin Kindergarten": {
+    "email": "kg5@yot.org.hk"
+  },
+  "元岡幼稚園 Yuen Kong Kindergarten [呂麗紅校長]": {
+    "email": "yuenkongkg.edu@gmail.com"
+  },
+  "元朗三育幼稚園 Yuen Long Sam Yuk Kindergarten": {
+    "email": "principal@ylsyk.edu.hk"
+  },
+  "元朗公立中學校友會劉良驤紀念幼稚園 Yuen Long Public Middle School Alumni Association Lau Leung Sheung Memorial Kindergarten": {
+    "email": "llsmkg@ylallsk.edu.hk"
+  },
+  "元朗東莞同鄉會王少強夫人幼稚園 Yuen Long Tung Koon District Association Mrs Wong Siu Keung Kindergarten": {
+    "email": "ylkdaki@yahoo.com.hk"
+  },
+  "元朗東莞同鄉會熊定嘉幼稚園 YL Tung Koon Dist Association Hung Ting Ka Kindergarten": {
+    "email": "tkhtkk@biznetvigator.com"
+  },
+  "元朗信義會生命幼稚園 Yuen Long Lutheran Life Kindergarten [生命堂幼稚園 元朗生命幼稚園]": {
+    "email": "info@lifekg.edu.hk"
+  },
+  "元朗商會幼稚園 Yuen Long Merchants Association Kindergarten": {
+    "email": "ylmakgl@netvigator.com"
+  },
+  "天水圍宣道幼稚園 Tin Shui Wai Alliance Kindergarten": {
+    "email": "info@ttkg.edu.hk"
+  },
+  "天主教大埔幼稚園 Tai Po Catholic Kindergarten": {
+    "email": "itpckg@netvigator.com"
+  },
+  "天主教甘霖幼稚園 Kam Lam Catholic Kindergarten": {
+    "email": "kamlamkg@netvigator.com"
+  },
+  "天主教海星幼稚園 Star of the Sea Catholic Kindergarten": {
+    "email": "csotskg@starkg.edu.hk"
+  },
+  "天主教彩霞邨潔心幼稚園 Choi Ha Estate Kit Sam Kindergarten": {
+    "email": "ks-info@sihm.org.hk"
+  },
+  "天主教聖多默幼稚園 St Thomas' Catholic Kindergarten": {
+    "email": "clerk@stthomas.edu.hk"
+  },
+  "天主教聖安德肋幼稚園 St Andrew's Catholic Kindergarten": {
+    "email": "office@sackg.edu.hk"
+  },
+  "天主教聖伯多祿幼稚園 St Peter's Catholic Kindergarten": {
+    "email": "spkg@sppkg.edu.hk"
+  },
+  "天主教聖保祿幼兒園 St Paul's Catholic Day Nursery": {
+    "email": "taipo@spn.edu.hk"
+  },
+  "高主教書院幼稚園部 Raimondi College Kindergarten Section [高主教幼稚園]": {
+    "email": "office@rckg.edu.hk"
+  },
+  "天主教聖雅各伯幼稚園 St James Catholic Kindergarten": {
+    "email": "principal@sjck.edu.hk"
+  },
+  "天主教聖雲先幼兒學校 St Vincent De Paul Nursery School": {
+    "email": "info@svpdn.edu.hk"
+  },
+  "天主教聖葉理諾幼稚園 St Jerome's Catholic Kindergarten": {
+    "email": "sjhead@stjeromesckg.edu.hk"
+  },
+  "天主教聖瑪加利大幼稚園 St Margaret Mary's Catholic Kindergarten": {
+    "email": "stmkg@netvigator.com"
+  },
+  "天主教領報幼稚園 Annunciation Catholic Kindergarten": {
+    "email": "ack1994@ack.edu.hk"
+  },
+  "天主教露德聖母幼稚園 Our Lady of Lourdes Catholic Kindergarten": {
+    "email": "mail@ololckg.edu.hk"
+  },
+  "天后中英文幼稚園 Regina Coeli Anglo": {
+    "email": "rckg_edu@yahoo.com.hk"
+  },
+  "天后中英文幼稚園(二校) Regina Coeli Anglo": {
+    "email": "rckg_edu@yahoo.com.hk"
+  },
+  "天純幼稚園 Pristine Kindergarten": {
+    "email": "info@pristine.edu.hk"
+  },
+  "天樂幼稚園 Talent Kindergarten [天樂幼稚園暨幼兒園]": {
+    "email": "talent@talentkg.com"
+  },
+  "太平幼稚園 Tai Ping Kindergarten": {
+    "email": "info@taiping.edu.hk"
+  },
+  "太陽島幼稚園(東涌分校) Sun Island Kindergarten (Tung Chung Branch)": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "太陽島英文幼稚園(樂民) Sun Island English Kindergarten (Lok Man)": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "太陽島幼稚園(港灣豪庭分校) Sun Island Kindergarten (Metro Harbour Branch)": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "太陽島英文幼稚園 Sun Island English Kindergarten": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "太陽島英文幼稚園(元朗分校) Sun Island English Kindergarten (Yuen Long Branch)": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "太陽島英文幼稚園(西貢分校) Sun Island English Kindergarten (Sai Kung Branch)": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "太陽島英文幼稚園(卑路乍街分校) Sun Island English Kindergarten (Belcher Branch)": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "太陽島英文幼稚園(葵興分校) Sun Island English Kindergarten (Kwai Hing Branch)": {
+    "email": "school@sunisland.edu.hk"
+  },
+  "心怡天地幼稚園 Joyful World Kindergarten (Tsuen King)": {
+    "email": "info@joyfulenglish.edu.hk"
+  },
+  "比諾中英文幼稚園(龍琛路) Bilok Anglo": {
+    "email": "biloktko@gmail.com"
+  },
+  "歡樂創意幼稚園 Fun Creative Kindergarten [比諾創意幼稚園 Bilok Creative Kindergarten]": {
+    "email": "funcreative@hotmail.com"
+  },
+  "世佛會文殊幼兒學校 WFB Manjusri Nursery School": {
+    "email": "wfbman@netvigator.com"
+  },
+  "世佛會真言宗幼兒學校 WFB Mantra Institute Nursery School": {
+    "email": "wfbmin@yahoo.com.hk"
+  },
+  "世佛會觀自在幼兒學校 WFB Avalokitesvara Nursery School": {
+    "email": "wfban@netvigator.com"
+  },
+  "世界龍岡學校朱瑞蘭(中英文)幼稚園 LKWFS Chu Sui Lan Anglo": {
+    "email": "chusuilan@gmail.com"
+  },
+  "世德幼稚園 Castar Kindergarten": {
+    "email": "info@castar.edu.hk"
+  },
+  "世德幼稚園(梨木樹) Castar Kindergarten (Lei Muk Shue)": {
+    "email": "info@castar.edu.hk"
+  },
+  "主蔭幼稚園 Anani Kindergarten [中華基督教會上水堂主蔭幼稚園]": {
+    "email": "anani_kg@yahoo.com.hk"
+  },
+  "加州天地幼稚園 Sunkids Kindergarten": {
+    "email": "info@sunkids.edu.hk"
+  },
+  "加拿大國際學校 Canadian International School": {
+    "email": "schoolinfo@cdnis.edu.hk"
+  },
+  "北角聖彼得堂幼稚園 St Peter's Church Kindergarten": {
+    "email": "spetchki@netvigator.com"
+  },
+  "北角衞理堂幼稚園 North Point Methodist Church Kindergarten [北角衛理堂幼兒園]": {
+    "email": "npmethodist_kg@yahoo.com.hk"
+  },
+  "嗇色園主辦可仁幼稚園 Ho Yan Kindergarten (Sponsored By Sik Sik Yuen)": {
+    "email": "hoyankg@siksikyuen.org.hk"
+  },
+  "嗇色園主辦可德幼稚園 Ho Tak Kindergarten (Sponsored By Sik Sik Yuen)": {
+    "email": "hotakkg@siksikyuen.org.hk"
+  },
+  "右思維幼稚園 Rightmind Kindergarten (South Horizons)": {
+    "email": "parentservice@rmkg.edu.hk"
+  },
+  "平安福音堂幼稚園 Peace Evangelical Centre Kindergarten": {
+    "email": "peckind@netvigator.com"
+  },
+  "平安福音堂幼稚園(天水圍) Peace Evangelical Centre Kindergarten (Tin Shui Wai)": {
+    "email": "peckind@netvigator.com"
+  },
+  "平安福音堂幼稚園(牛頭角) Peace Evangelical Centre Kindergarten (Ngau Tau Kok)": {
+    "email": "peckind@netvigator.com"
+  },
+  "平安福音堂幼稚園(青衣) Peace Evangelical Centre Kindergarten (Tsing Yi)": {
+    "email": "peckind@netvigator.com"
+  },
+  "City Kids Preschool and Playgroup City Kids Preschool and Little Stars [幼童樂園協會幼兒園 Pre": {
+    "email": "admin@citykidshk.org"
+  },
+  "幼聯主辦安泰幼兒學校 CECES Organized Aetna Preschool": {
+    "email": "ceces138@netvigator.com"
+  },
+  "弘志幼稚園 Discovery Mind Kindergarten": {
+    "email": "dmk@discoverymind.edu.hk"
+  },
+  "弘志幼稚園(東涌) Discovery Mind Kindergarten (Tung Chung)": {
+    "email": "dmtc@discoverymind.edu.hk"
+  },
+  "民生書院幼稚園 Munsang College Kindergarten [民生幼稚園]": {
+    "email": "kindergarten@munsang.edu.hk"
+  },
+  "田景邨浸信會呂郭碧鳳幼稚園 Tin King Estate Baptist Lui Kwok Pat Fong Kindergarten": {
+    "email": "tinking@tkkg.edu.hk"
+  },
+  "伊斯蘭徐錦享紀念幼稚園 Islamic Abu Bakar Chui Memorial Kindergarten": {
+    "email": "abckg@yahoo.com.hk"
+  },
+  "合一堂單家傳紀念幼稚園 Hop Yat Church Shin Ka Chuen Mem Kindergarten": {
+    "email": "skcmkg@hycskckg.edu.hk"
+  },
+  "地利亞英文小學暨幼稚園 Delia English Primary School & Kindergarten": {
+    "email": "info@deliagroup.edu.hk"
+  },
+  "多多國際幼稚園(九龍塘) Tutor Time International Kindergarten (Kowloon Tong)": {
+    "email": "info@tutortime.com.hk"
+  },
+  "多多國際幼稚園(寶馬山) Tutor Time International Kindergarten (Braemar Hill) [多多寶馬山國際幼稚園]": {
+    "email": "info@tutortime.com.hk"
+  },
+  "好時光國際幼稚園(沙田廣場) Good Time International Play School Kindergarten (Shatin Plaza) [好時光國際幼兒園幼稚園(沙田廣場) 好時光幼兒學校(沙田廣場)]": {
+    "email": "info@deikindergarten.org"
+  },
+  "安基司幼稚園 Anchors Kindergarten": {
+    "email": "fanling@anchors.edu.hk"
+  },
+  "安基司幼稚園(粉嶺) Anchors Kindergarten (Fanling)": {
+    "email": "fanling@anchors.edu.hk"
+  },
+  "安基司國際幼兒園(滌濤山分校) Anchors International Nursery (Constellation Cove Campus)": {
+    "email": "cc@anchors.edu.hk"
+  },
+  "安基司國際幼兒園(富萊花園正校) Anchors International Nursery (Fuller Garden Main Campus)": {
+    "email": "maincampus@anchors.edu.hk"
+  },
+  "安菲爾國際幼稚園(九龍塘) Anfield International Kindergarten (Kowloon Tong Campus)": {
+    "email": "admin@anfield.edu.hk"
+  },
+  "安菲爾國際幼稚園(黃埔) Anfield International Kindergarten (Whampoa Campus)": {
+    "email": "admin-lv@anfield.edu.hk"
+  },
+  "竹園區神召會太和康樂幼兒學校 Pentecostal Church of HK Tai Wo Nursery School": {
+    "email": "tai.wo.ns@pchk.org.hk"
+  },
+  "竹園區神召會南昌康樂幼兒學校 Pentecostal Church of HK Nam Cheong Nursery School": {
+    "email": "nam.cheong.ns@pchk.org.hk"
+  },
+  "竹園區神召會將軍澳康樂幼兒學校 Pentecostal Church of HK Tseung Kwan O Nursery School": {
+    "email": "tseung.kwan.o.ns@pchk.org.hk"
+  },
+  "西太平洋幼稚園 Western Pacific Kindergarten": {
+    "email": "wpkjjc@biznetvigator.com"
+  },
+  "西貢樂育幼稚園 Sai Kung Lok": {
+    "email": "sklokyuk@yahoo.com.hk"
+  },
+  "佛教沈東福幼稚園 Buddhist Sum Tung Fook Kindergarten": {
+    "email": "bstfk001@gmail.com"
+  },
+  "佛教金麗幼稚園 Buddhist Kam Lai Kindergarten": {
+    "email": "bklklt@gmail.com"
+  },
+  "佛教真如李琴芝紀念幼稚園 Buddhist Chun Yue Lee Kam Zi Memorial Kindergarten": {
+    "email": "buddhistchunyue@yahoo.com.hk"
+  },
+  "佛教張梅桂幼稚園 Buddhist Cheung Mui Kwai Kindergarten": {
+    "email": "bcmk1234@ymail.com"
+  },
+  "佛教傅康幼稚園 Buddhist Foo Hong Kindergarten": {
+    "email": "bfhkwts@bfhkwts.edu.hk"
+  },
+  "佛教曾果成中英文幼稚園 Buddhist Tsang Kor Sing Anglo": {
+    "email": "mail@tsangkorsing.edu.hk"
+  },
+  "佛教慈光幼稚園 Buddhist Chi Kwong Kindergarten": {
+    "email": "bckkg-chikwong@yahoo.com.hk"
+  },
+  "佛教慈慧幼兒園 Buddhist Chi Wai Day Nursery": {
+    "email": "bcwdn@hkbuddhist.org"
+  },
+  "何文田浸信會幼稚園 Homantin Baptist Church Kindergarten": {
+    "email": "hbckgn@gmail.com"
+  },
+  "何文田循道衞理楊震幼兒學校 Homantin Yang Memorial Methodist Pre": {
+    "email": "hmtps@yang.org.hk"
+  },
+  "佐敦北海幼稚園 Jordan Pak Hoi Kindergarten": {
+    "email": "jphadmin@gmail.com"
+  },
+  "宏福中英文幼稚園 Tivoli Anglo": {
+    "email": "info@tivoli.edu.hk"
+  },
+  "沙田靈光幼兒學校 Emmanuel Church Shatin Nursery School": {
+    "email": "principal@ecsdn.edu.hk"
+  },
+  "京斯敦國際幼稚園 Kingston International Kindergarten": {
+    "email": "enquiry@kingston.edu.hk"
+  },
+  "佳寶幼稚園 Guideposts Kindergarten": {
+    "email": "meifoo1@guideposts.edu.hk"
+  },
+  "佳寶幼稚園(屯門分校) Guideposts Kindergarten (Tuen Mun Branch)": {
+    "email": "siuon2@guideposts.edu.hk"
+  },
+  "佳寶幼稚園第二分校(建生邨) Guideposts Kindergarten Second Branch (Kin Sang Estate)": {
+    "email": "kinsang3@guideposts.edu.hk"
+  },
+  "佳寶幼稚園第三分校(天瑞邨) Guideposts Kindergarten 3rd Branch (Tin Shui Estate)": {
+    "email": "tinshui4@guideposts.edu.hk"
+  },
+  "協恩中學附屬幼稚園 Heep Yunn School Private Kindergarten [協恩幼稚園]": {
+    "email": "enquiry@hykg.edu.hk"
+  },
+  "協康會康苗幼兒園 Heep Hong Society Healthy Kids Nursery School": {
+    "email": "hkc@heephong.org"
+  },
+  "卓思英文學校暨幼稚園(青怡分校) Choice English School & Kindergarten (Tsing Yi Branch) [Kinder 卓思]": {
+    "email": "choice@choicekinder.edu.hk"
+  },
+  "卓基英文學校暨幼稚園 Cherish English School & Kindergarten": {
+    "email": "cherishkg@biznetvigator.com"
+  },
+  "歡樂創意幼稚園(觀塘分校) Fun Creative Kindergarten (Kwun Tong Branch) [坪石英皇幼稚園 Ping Shek Kingsland Kindergarten]": {
+    "email": "pingshekkk@yahoo.com.hk"
+  },
+  "怡寶中英文幼稚園 Epoch Anglo": {
+    "email": "epochkg2018@gmail.com"
+  },
+  "旺角雅麗斯英文幼稚園 Mong Kok Agnes English Kindergarten": {
+    "email": "mkagnes789@gmail.com"
+  },
+  "明我幼稚園 Dominic Savio Kindergarten": {
+    "email": "hk@dominicsaviokg.org"
+  },
+  "明我幼稚園(奧運校) Dominic Savio Kindergarten (Olympic Branch)": {
+    "email": "oly@dominicsaviokg.org"
+  },
+  "明雅國際幼兒學校 Mink International Pre": {
+    "email": "enquiry@mink.edu.hk"
+  },
+  "明慧幼稚園 Ming Wai Kindergarten": {
+    "email": "mingwaik@netvigator.com"
+  },
+  "明慧國際幼稚園 Ming Wai International Kindergarten": {
+    "email": "mingwaik@netvigator.com"
+  },
+  "明慧國際幼稚園(太子分校) Ming Wai International Kindergarten (Prince Edward Branch)": {
+    "email": "mingwaik@netvigator.com"
+  },
+  "明慧國際幼稚園(北角分校) Ming Wai International Kindergarten (North Point Branch)": {
+    "email": "mingwaik@netvigator.com"
+  },
+  "東涌天主教幼稚園 Tung Chung Catholic Kindergarten": {
+    "email": "mail@tungchungckg.edu.hk"
+  },
+  "東涌浸信會幼稚園 Tung Chung Baptist Kindergarten": {
+    "email": "tcbaptkg@netvigator.com"
+  },
+  "欣苗幼稚園 Spring View Kindergarten": {
+    "email": "sv@deliagroup.edu.hk"
+  },
+  "油麻地循道衞理楊震幼兒學校 Yaumatei Yang Memorial Methodist Pre": {
+    "email": "ymtps@yang.org.hk"
+  },
+  "玫瑰崗幼稚園 Rosaryhill Kindergarten": {
+    "email": "kgadmin@rosaryhill.org"
+  },
+  "花園大廈浸信會幼兒學校 Garden Estate Baptist Nursery School": {
+    "email": "gebn@abwe.org.hk"
+  },
+  "金巴倫英文幼稚園 St Nicholas' English Kindergarten": {
+    "email": "info@stnicholas.edu.hk"
+  },
+  "金巴崙長老會青草地幼稚園 CPC Green Pasture Kindergarten": {
+    "email": "cpcgpkg@cumberland.org.hk"
+  },
+  "金錢村何東幼稚園 Kam Tsin Village Ho Tung Kindergarten": {
+    "email": "ktvhtkg@yahoo.com.hk"
+  },
+  "長洲聖心幼稚園 Cheung Chau Sacred Heart Kindergarten": {
+    "email": "ccshkg@ccshkg.edu.hk"
+  },
+  "青衣商會天水圍幼稚園 Tsing Yi Trade Association Tin Shui Wai Kindergarten": {
+    "email": "tytatswk@yahoo.com.hk"
+  },
+  "青衣商會幼稚園 Tsing Yi Trade Association Kindergarten": {
+    "email": "enquiry@tytakg.edu.hk"
+  },
+  "青衣商會石蔭幼稚園 Tsing Yi Trade Association Shek Yam Kindergarten": {
+    "email": "tyta.sykg@gmail.com"
+  },
+  "青衣商會將軍澳幼稚園 Tsing Yi Trade Association Tseung Kwan O Kindergarten": {
+    "email": "tytseungkwano@yahoo.com.hk"
+  },
+  "青松湖景幼稚園 Ching Chung Wu King Kindergarten": {
+    "email": "ccwkk@ccwkk.edu.hk"
+  },
+  "青松裕雅幼稚園 Ching Chung Yu Nga Kindergarten [青松興東幼稚園 Ching Chung Hing Tung Kindergarten]": {
+    "email": "cckght@netvigator.com"
+  },
+  "信生中英文幼稚園 Shun Sang Anglo": {
+    "email": "anglokg@yahoo.com.hk"
+  },
+  "南英幼稚園 Nam Ying Kindergarten": {
+    "email": "namying67@yahoo.com.hk"
+  },
+  "威廉(睿智)幼稚園(黃埔) William (Smart) Kindergarten (Whampoa)": {
+    "email": "williamsmartkg@yahoo.com.hk"
+  },
+  "威廉(睿智)幼稚園(非本地課程) William (Smart) Kindergarten (Non": {
+    "email": "williamsmartkg@yahoo.com.hk"
+  },
+  "宣美幼稚園 Suen Mei Kindergarten": {
+    "email": "smkg@live.hk"
+  },
+  "宣道幼稚園 Alliance Kindergarten": {
+    "email": "ktallikg@ktac.org"
+  },
+  "宣道會上書房中英文幼稚園 C&MA Scholars' Anglo": {
+    "email": "admindept@scholarskg.edu.hk"
+  },
+  "宣道會秀茂坪陳李詠貞幼稚園 Christian Alliance Sau Mau Ping Chen Lee Wing Tsing Kindergarten": {
+    "email": "caclwtkind@biznetvigator.com"
+  },
+  "宣道會陳李詠貞紀念幼稚園 Christian Alliance Chen Lee Wing Tsing Mem Kindergarten": {
+    "email": "caclwtmk@netvigator.com"
+  },
+  "宣道會雷蔡群樂幼稚園 Christian Alliance Louey Choy Kwan Lok Kindergarten": {
+    "email": "lcklkg@netvigator.com"
+  },
+  "帝京香港幼稚園 Teikyo Hong Kong Kindergarten": {
+    "email": "info@teikyo.edu.hk"
+  },
+  "建生浸信會白普理幼兒園 Kin Sang Baptist Church Bradbury Pre": {
+    "email": "ksbc@ksbc.edu.hk"
+  },
+  "約克英文幼稚園 York English Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "約克中英文幼稚園 York English and Chinese Kindergarten [約克幼稚園]": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "約克英文小學暨幼稚園(九龍塘) York English Primary School and Kindergarten (Cumberland Road, Kowloon Tong) [約克幼稚園]": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "約克英文小學暨幼稚園(九龍塘) York English Primary School and Kindergarten (York Road, Kowloon Tong) [約克幼稚園]": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "約克國際幼稚園 York International Kindergarten [約克幼稚園]": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "美林邨道光幼稚園 Mei Lam Estate To Kwong Kindergarten [美林村道光幼稚園]": {
+    "email": "mltkkind@yahoo.com.hk"
+  },
+  "美國國際學校 American International School": {
+    "email": "admissions@ais.edu.hk"
+  },
+  "美雅幼兒園 May Nga Nursery": {
+    "email": "maynga@netvigator.com"
+  },
+  "美雅幼稚園 May Nga Kindergarten": {
+    "email": "maynga@netvigator.com"
+  },
+  "美雅幼稚園(分校) May Nga Kindergarten (Branch)": {
+    "email": "maynga@netvigator.com"
+  },
+  "美樂中英文幼稚園 Melody Anglo": {
+    "email": "kmgarten@hotmail.com"
+  },
+  "美樂中英文幼稚園(景峰花園分校) Melody Anglo": {
+    "email": "kpgarten@hotmail.com"
+  },
+  "美樂幼兒園(美樂花園校) Melody Nursery (Melody Garden)": {
+    "email": "kngarten@hotmail.com"
+  },
+  "英基國際幼稚園(青衣) ESF International Kindergarten (Tsing Yi) [英基青衣國際幼稚園]": {
+    "email": "kinder@ty.esf.org.hk"
+  },
+  "英基國際幼稚園(烏溪沙) ESF International Kindergarten (Wu Kai Sha) [英基烏溪沙國際幼稚園]": {
+    "email": "kinder@wks.esf.org.hk"
+  },
+  "英基國際幼稚園(曉新) ESF International Kindergarten (Hillside) [英基曉新國際幼稚園]": {
+    "email": "kinder@hs.esf.org.hk"
+  },
+  "英基國際幼稚園(雅柏) ESF International Kindergarten (Abacus) [英基雅柏國際幼稚園]": {
+    "email": "kinder@abacus.esf.org.hk"
+  },
+  "英藝幼稚園(大埔) Zenith Kindergarten (Tai Po)": {
+    "email": "zenithtp@zenith.edu.hk"
+  },
+  "香港道教聯合會蓬瀛通善皇后山幼稚園 Hong Kong Taoist Association Fung Ying Tung Sin Queen's Hill Kindergarten [香港道教聯合會飛雁幼稚園 Hong Kong Taoist Association Fei Ngan Kindergarten]": {
+    "email": "hkta@fytsqhkg.edu.hk"
+  },
+  "香海正覺蓮社佛教林黃明慧幼稚園 HHCKLA Buddhist Lam Wong Ming Wai Kindergarten": {
+    "email": "blwmwk@netvigator.com"
+  },
+  "香海正覺蓮社佛教慧光幼稚園 HHCKLA Buddhist Wai Kwong Kindergarten": {
+    "email": "bwkk@netvigator.com"
+  },
+  "香海正覺蓮社佛教慧光嘉福幼稚園 HHCKLA Buddhist Wai Kwong Ka Fuk Kindergarten": {
+    "email": "info@bwkkfk.edu.hk"
+  },
+  "香港小童群益會樂緻幼稚園(九龍灣) BGCAHK Cheerland Kindergarten (Kowloon Bay)": {
+    "email": "nursery@bgca.org.hk"
+  },
+  "香港小童群益會樂緻幼稚園(將軍澳) BGCAHK Cheerland Kindergarten (Tseung Kwan O)": {
+    "email": "nursery@bgca.org.hk"
+  },
+  "香港小童群益會樂緻幼稚園(黃大仙) BGCAHK Cheerland Kindergarten (Wong Tai Sin)": {
+    "email": "nursery@bgca.org.hk"
+  },
+  "香港小童群益會樂緻幼稚園(灣仔) BGCAHK Cheerland Kindergarten (Wanchai)": {
+    "email": "nursery@bgca.org.hk"
+  },
+  "香港中文大學校友會聯會張煊昌幼稚園 CUHKFAA Thomas Cheung Kindergarten": {
+    "email": "enquiry@cuhkfaatckg.edu.hk"
+  },
+  "香港中文大學校友會聯會陳震夏幼稚園 CUHKFAA Chan Chun Ha Kindergarten": {
+    "email": "cuhkcchk@biznetvigator.com"
+  },
+  "香港中國婦女會幼稚園 The Hong Kong Chinese Women's Club Kindergarten": {
+    "email": "hkcwckg@gmail.com"
+  },
+  "香港五常法幼稚園 Hong Kong 5": {
+    "email": "hk5skg@biznetvigator.com"
+  },
+  "香港仔浸信會白光幼稚園 Aberdeen Baptist Church Pak Kwong Kindergarten": {
+    "email": "abcpkkg@yahoo.com.hk"
+  },
+  "香港幼稚園協會幼兒學校 Hong Kong Kindergarten Association Pre": {
+    "email": "hkkaps@netvigator.com"
+  },
+  "香港民生幼稚園(北角) Hong Kong Man Sang Kindergarten (North Point)": {
+    "email": "school@mansangkg.edu.hk"
+  },
+  "香港西區婦女福利會幼稚園 Women's Welfare Club Western District HK Kindergarten": {
+    "email": "wwcwdnhk@gmail.com"
+  },
+  "香港西區婦女福利會何瑞棠紀念中英文幼稚園 WWC(WD)HK David Woo Memorial Anglo": {
+    "email": "dwmackg@gmail.com"
+  },
+  "香港西區婦女福利會鴨脷洲邨幼稚園 WWC(WD)HK Ap Lei Chau Kindergarten": {
+    "email": "apleichau@yahoo.com.hk"
+  },
+  "香港伯特利教會基甸幼稚園 Hong Kong Bethel Church Gideon Kindergarten [伯特利幼稚園]": {
+    "email": "info@bcgideon.edu.hk"
+  },
+  "香港東區婦女福利會幼兒園 WWC(ED)HK Nursery": {
+    "email": "edn56@netvigator.com"
+  },
+  "香港東區婦女福利會黎桂添幼兒園 WWC(ED)HK Lai Kwai Tim Day Nursery": {
+    "email": "ktlai2@netvigator.com"
+  },
+  "香港青年協會青樂幼稚園 HKFYG Ching Lok Kindergarten": {
+    "email": "cl-swh@hkfyg.org.hk"
+  },
+  "香港青年協會青樂幼稚園(油麻地) HKFYG Ching Lok Kindergarten (Yaumatei)": {
+    "email": "cl-swh@hkfyg.org.hk"
+  },
+  "香港保護兒童會中銀幼兒學校 HKSPC Boc Nursery School": {
+    "email": "boc@hkspc.org"
+  },
+  "香港保護兒童會百佳員工慈善基金幼兒學校 HKSPC Park'n Shop Staff Charitable Fund Nursery School": {
+    "email": "ps@hkspc.org"
+  },
+  "香港保護兒童會林護幼兒學校 HKSPC Lam Woo Nursery School": {
+    "email": "lw@hkspc.org"
+  },
+  "香港保護兒童會長沙灣幼兒學校 HKSPC Cheung Sha Wan Nursery School": {
+    "email": "csw@hkspc.org"
+  },
+  "香港保護兒童會施吳淑敏幼兒學校 HKSPC Sze Wu Shu Min Nursery School": {
+    "email": "swsm@hkspc.org"
+  },
+  "香港保護兒童會馬頭涌幼兒學校 HKSPC Ma Tau Chung Nursery School": {
+    "email": "mtcn@hkspc.org"
+  },
+  "香港保護兒童會砵蘭街幼兒學校 HKSPC Portland Street Nursery School": {
+    "email": "pn@hkspc.org"
+  },
+  "香港保護兒童會深井幼兒學校 HKSPC Sham Tseng Nursery School": {
+    "email": "st@hkspc.org"
+  },
+  "香港保護兒童會新航黃埔幼兒學校 HKSPC Sia Whampoa Nursery School": {
+    "email": "wp@hkspc.org"
+  },
+  "香港保護兒童會聖誕老人愛心粉嶺幼兒學校 HKSPC Operation Santa Claus Fanling Nursery School": {
+    "email": "fl@hkspc.org"
+  },
+  "香港保護兒童會維景灣幼兒學校 HKSPC Ocean Shores Nursery School": {
+    "email": "os@hkspc.org"
+  },
+  "香港保護兒童會蝴蝶邨幼兒學校 HKSPC Butterfly Estate Nursery School": {
+    "email": "be@hkspc.org"
+  },
+  "香港保護兒童會賽馬會學心幼兒學校 HKSPC the Jockey Club Hok Sam Nursery School": {
+    "email": "jchs@hkspc.org"
+  },
+  "香港保護兒童會譚雅士幼兒學校 HKSPC Thomas Tam Nursery School": {
+    "email": "tt@hkspc.org"
+  },
+  "香港保護兒童會譚雅士伉儷幼兒學校 HKSPC Mr & Mrs Thomas Tam Nursery School": {
+    "email": "mmtt@hkspc.org"
+  },
+  "香港保護兒童會滙豐銀行慈善基金幼兒學校 HKSPC HK Bank Foundation Nursery School": {
+    "email": "ymt@hkspc.org"
+  },
+  "香港宣教會優質幼兒學校 HKEC Elite Kindergarten": {
+    "email": "contact@elite-kg.edu.hk"
+  },
+  "香港浸信會聯會利安幼兒園 Baptist Convention of HK Lee On Nursery": {
+    "email": "admin@hkbcleeon.edu.hk"
+  },
+  "香港浸信會聯會香港西北扶輪社幼稚園 Baptist Convention of HK RCHK Northwest Kindergarten": {
+    "email": "northwestkg@hotmail.com"
+  },
+  "香港浸信會聯會寶田幼稚園 Baptist Convention of HK Po Tin Kindergarten": {
+    "email": "tbcpotinkg@yahoo.com.hk"
+  },
+  "香港浸會大學附屬幼稚園 Hong Kong Baptist University": {
+    "email": "hkbuk@hkbu.edu.hk"
+  },
+  "香港真光幼稚園(堅道) Hong Kong True Light Kindergarten (Caine Road)": {
+    "email": "tlkindc@netvigator.com"
+  },
+  "香港神託會培恩幼稚園 Stewards Pooi Yan Kindergarten": {
+    "email": "pooiyan@spykg.edu.hk"
+  },
+  "香港神託會培真幼稚園 Stewards Pooi Chun Kindergarten": {
+    "email": "pck@pooichun.edu.hk"
+  },
+  "香港國際蒙特梭利學校 Discovery Montessori School": {
+    "email": "enquiry@dms.edu.hk"
+  },
+  "香港基督教服務處大坑東幼兒學校 HKCS Tai Hang Tung Nursery School": {
+    "email": "thtns@hkcs.org"
+  },
+  "香港基督教服務處天恆幼兒學校 HKCS Tin Heng Nursery School": {
+    "email": "thns@hkcs.org"
+  },
+  "香港基督教服務處石硤尾幼兒學校 HKCS Shek Kip Mei Nursery School": {
+    "email": "skmns@hkcs.org"
+  },
+  "香港基督教服務處李鄭屋幼兒學校 HKCS Lei Cheng Uk Nursery School": {
+    "email": "lcuns@hkcs.org"
+  },
+  "香港基督教服務處時代幼兒學校 HKCS Times Nursery School": {
+    "email": "tns@hkcs.org"
+  },
+  "香港基督教服務處雋匯幼兒學校 HKCS Central Nursery School": {
+    "email": "thtns@hkcs.org"
+  },
+  "香港基督教服務處觀塘幼兒學校 HKCS Kwun Tong Nursery School": {
+    "email": "ktns@hkcs.org"
+  },
+  "港青基信國際幼稚園 YMCA of Hong Kong Christian International Kindergarten [香港基督教青年會國際幼稚園]": {
+    "email": "kindergarten@ymcahk.org.hk"
+  },
+  "港青基信幼兒學校(農圃道) YMCA of Hong Kong Christian Nursery School (Farm Road) [香港基督教青年會農圃道幼兒學校]": {
+    "email": "farmroad@ymcahk.org.hk"
+  },
+  "中國基督教播道會天恩幼兒學校 AEFCHK": {
+    "email": "tyn@efcc.org.hk"
+  },
+  "中國基督教播道會厚恩堂厚恩幼兒學校 AEFCHK": {
+    "email": "info@agns.edu.hk"
+  },
+  "中國基督教播道會茵怡幼兒學校 AEFCHK": {
+    "email": "info@vns.edu.hk"
+  },
+  "中國基督教播道會寶雅幼兒學校 AEFCHK": {
+    "email": "pnn@efcc.org.hk"
+  },
+  "香港培正小學(幼稚園) Pui Ching Primary School (Kindergarten) [香港培正小學幼稚園, 培正幼稚園]": {
+    "email": "puiching@pcps.edu.hk"
+  },
+  "香港培道小學幼稚園 Pooi To Primary School [培道幼稚園]": {
+    "email": "infosch@ptps.edu.hk"
+  },
+  "香港教育大學幼兒發展中心(幼稚園部) The Education University of Hong Kong Early Childhood Learning Centre (Kindergarten Section) [香港教育學院匯豐幼兒發展中心]": {
+    "email": "eclcenquiry@eduhk.hk"
+  },
+  "香港創價幼稚園 Hong Kong Soka Kindergarten": {
+    "email": "hksk@soka.edu.hk"
+  },
+  "香港華人基督會煜明幼稚園 HK Chinese Church of Christ the Light Kindergarten": {
+    "email": "hkccclk@netvigator.com"
+  },
+  "香港聖公會東涌幼兒學校 HKSKH Tung Chung Nursery School": {
+    "email": "tcdn@skhwc.org.hk"
+  },
+  "香港聖公會青山聖彼得堂青雲路幼稚園 HKSKH St Peter's Church Castle Peak Tsing Wun Rd Kindergarten": {
+    "email": "tsw@spckg.edu.hk"
+  },
+  "香港聖公會夏瑞芸幼兒學校 HKSKH Ha Sui Wan Nursery School": {
+    "email": "hswdn@skhwc.org.hk"
+  },
+  "香港聖公會基愛幼兒學校 HKSKH Kei Oi Nursery School": {
+    "email": "kodn@skhwc.org.hk"
+  },
+  "香港聖公會基督顯現堂幼稚園 HKSKH the Church of the Epiphany Kindergarten": {
+    "email": "tsingyikdg@yahoo.com.hk"
+  },
+  "香港聖公會麥理浩夫人中心(石蔭)幼稚園 HKSKH Lady Maclehose Centre (Shek Yam) Kindergarten": {
+    "email": "sydnkids@skhmaclehose.org.hk"
+  },
+  "香港聖公會麥理浩夫人中心幼稚園 HKSKH Lady Maclehose Centre Kindergarten": {
+    "email": "skhlmcdn@skhmaclehose.org.hk"
+  },
+  "香港聖公會聖尼哥拉幼兒學校 HKSKH St Nicholas' Nursery School": {
+    "email": "sndn@skhwc.org.hk"
+  },
+  "香港聖公會聖西門大興幼兒學校 HKSKH St Simon's Tai Hing Nursery School": {
+    "email": "ssth@skhwc.org.hk"
+  },
+  "香港聖公會聖西門西貢幼兒學校 HKSKH St Simon's Sai Kung Nursery School": {
+    "email": "sssk@skhwc.org.hk"
+  },
+  "香港聖公會聖西門良景幼兒學校 HKSKH St Simon's Leung King Nursery School": {
+    "email": "sslk@skhwc.org.hk"
+  },
+  "香港路德會觀塘幼稚園 HK Lutheran Church Kwun Tong Kindergarten": {
+    "email": "ktlsak@netvigator.com"
+  },
+  "香港道教聯合會圓玄幼稚園(石圍角) HKTA Yuen Yuen Kindergarten": {
+    "email": "hktayykg@yuenyuenkg.edu.hk"
+  },
+  "香港道教聯合會圓玄幼稚園(東頭邨) HKTA Yuen Yuen Kindergarten (Tung Tau Estate)": {
+    "email": "yykgtte@yuenyuenkg.edu.hk"
+  },
+  "香港道教聯合會圓玄幼稚園(富善邨) HKTA Yuen Yuen Kindergarten (Fu Shin Estate)": {
+    "email": "fushin@yuenyuenkg.edu.hk"
+  },
+  "香港學生輔助會寶達幼兒園 Hong Kong Student Aid Society Po Tat Nur": {
+    "email": "po-tat@hksas.org.hk"
+  },
+  "香港學堂國際學校 Hong Kong Academy": {
+    "email": "office@hkacademy.edu.hk"
+  },
+  "香港澳洲國際學校 Australian International School Hong Kong": {
+    "email": "info@aishk.edu.hk"
+  },
+  "香港靈糧堂幼稚園 Hong Kong Ling Liang Church Kindergarten": {
+    "email": "hkll@lingliang.org.hk"
+  },
+  "珈琳中英文幼稚園 Karlam Anglo": {
+    "email": "ylkarlam@karlam.edu.hk"
+  },
+  "珈琳幼稚園(屯門分校) Karlam Kindergarten (Tuen Mun Branch) [珈琳幼兒園]": {
+    "email": "karlamtm@karlam.edu.hk"
+  },
+  "恆安浸信會幼兒學校 Heng On Baptist Nursery School": {
+    "email": "hobn@abwe.org.hk"
+  },
+  "朗屏邨聖恩幼稚園 Long Ping Estate Sing Yan Kindergarten": {
+    "email": "admin@singyan.edu.hk"
+  },
+  "朗思國際幼稚園 Think International Kindergarten": {
+    "email": "thinkkg_lc@think.edu.hk"
+  },
+  "朗思國際幼稚園(美孚) Think International Kindergarten (Mei Foo)": {
+    "email": "thinkkg_mf@think.edu.hk"
+  },
+  "朗思國際幼稚園(馬鞍山) Think International Kindergarten (Ma On Shan)": {
+    "email": "thinkkg_mos@think.edu.hk"
+  },
+  "柴灣浸信會學前教育中心呂明才幼稚園 CWBC Pre": {
+    "email": "cwbclmc@yahoo.com.hk"
+  },
+  "柴灣浸信會學前教育中心呂明才幼稚園(小西灣) CWBC Pre": {
+    "email": "cwbcpsssw@cwbc.hk"
+  },
+  "殷翠幼稚園 Jade Kindergarten": {
+    "email": "lee@jadekindergarten.onmicrosoft.com"
+  },
+  "浸信會培理學校 Baptist Pui Li School": {
+    "email": "info@puili.edu.hk"
+  },
+  "浸信會華恩幼稚園 Baptist Church Shining Grace Kindergarten": {
+    "email": "bcsgkg@yahoo.com.hk"
+  },
+  "浸信會愛羣社會服務處培殷幼兒學校 Baptist Oi Kwan Social Service Pui Yan Pre": {
+    "email": "pypps@bokss.org.hk"
+  },
+  "海濱方方樂趣幼稚園 Riviera Funful Kindergarten": {
+    "email": "office@fsris.edu.hk"
+  },
+  "真理浸信會幼稚園 Truth Baptist Church Kindergarten": {
+    "email": "tbck@tbcas.edu.hk"
+  },
+  "真理浸信會何袁惠琼幼稚園 Truth Baptist Church Ho Yuen Wai King Kindergarten [真理浸信會何袁惠瓊幼稚園]": {
+    "email": "hywkk@tbcas.edu.hk"
+  },
+  "真理浸信會恩典幼稚園 Truth Baptist Church Grace Kindergarten": {
+    "email": "tbcgk@tbcas.edu.hk"
+  },
+  "真理浸信會富泰幼稚園 Truth Baptist Church Empower Kindergarten": {
+    "email": "tbcek@tbcas.edu.hk"
+  },
+  "真理浸信會榮光幼兒園 Truth Baptist Church Glory Nursery": {
+    "email": "tbcc@tbcas.edu.hk"
+  },
+  "真理浸信會碧濤幼稚園 Truth Baptist Church Pictorial Kindergarten": {
+    "email": "tbcpk@tbcas.edu.hk"
+  },
+  "神召第一幼稚園 First Assembly of God Kindergarten [神召第一小學暨幼稚園]": {
+    "email": "kindergarten@faog.org.hk"
+  },
+  "神召會麥嘉倫紀念幼稚園 Assembly of God Mcleod Memorial Kindergarten": {
+    "email": "info@mcleodkg.edu.hk"
+  },
+  "神召會華人同工聯會彩蒲幼稚園 CCWF Choi Po Kindergarten": {
+    "email": "choipokg@yahoo.com.hk"
+  },
+  "神召會華人同工聯會景盛幼稚園 CCWF King Shing Kindergarten": {
+    "email": "kingshingkg@yahoo.com.hk"
+  },
+  "神召會禮拜堂天澤幼兒園 First Assembly of God Church Tin Chak Nursery": {
+    "email": "tcn@faog.org.hk"
+  },
+  "粉嶺浸信會呂明才幼稚園 Fanling Baptist Church Lui Ming Choi Kindergarten": {
+    "email": "fbclmckg@netvigator.com"
+  },
+  "粉嶺神召會幼稚園 The Fanling Assemblies of God Kindergarten": {
+    "email": "office@aogkg.edu.hk"
+  },
+  "萌兒幼稚園 MOE Kindergarten [荃威幼稚園 Allway Kindergarten]": {
+    "email": "moekindergarten2020@gmail.com"
+  },
+  "荃浸石籬幼稚園 Tsuen Wan Baptist Church Shek Lei Kindergarten [荃灣浸信會石籬幼稚園]": {
+    "email": "info@twbcslk.edu.hk"
+  },
+  "荃灣浸信會幼稚園 Tsuen Wan Baptist Church Kindergarten": {
+    "email": "twbckg@twbc.org.hk"
+  },
+  "荃灣商會朱昌幼稚園 Tsuen Wan Trade Association Chu Cheong Kindergarten": {
+    "email": "admin@cckg93.edu.hk"
+  },
+  "荃灣商會邱健峰幼稚園 Tsuen Wan Trade Association Yau Kin Fung Kindergarten": {
+    "email": "twtaykfk@yahoo.com.hk"
+  },
+  "荃灣商會鍾來幼稚園 Tsuen Wan Trade Association Chung Loi Kindergarten": {
+    "email": "twtaclkg@gmail.com"
+  },
+  "荃灣聖母幼稚園 Tsuen Wan Our Lady Kindergarten": {
+    "email": "office@twolkg.edu.hk"
+  },
+  "荃灣聖多明尼幼稚園 Tsuen Wan St Dominic Savio Kindergarten": {
+    "email": "dominic2kg@gmail.com"
+  },
+  "聖保羅堂幼稚園 St Paul's Church Kindergarten [聖保羅幼稚園]": {
+    "email": "info@stpaulchurchkg.edu.hk"
+  },
+  "馬鞍山靈糧幼稚園 Ma On Shan Ling Liang Kindergarten [馬鞍山靈糧堂幼稚園]": {
+    "email": "mosll@lingliang.org.hk"
+  },
+  "偉思幼兒園 Wisely Nursery": {
+    "email": "info@wisely.edu.hk"
+  },
+  "偉思幼稚園 Wisely Kindergarten": {
+    "email": "info@wisely.edu.hk"
+  },
+  "基督徒信望愛堂華明幼稚園 Christian the Faith Hope Love Church Wah Ming Kindergarten": {
+    "email": "wahmingkg@yahoo.com.hk"
+  },
+  "基督徒信望愛堂逸東幼稚園 Christian the Faith Hope Love Church Yat Tung Kindergarten": {
+    "email": "faithhopelove@yatungkg.edu.hk"
+  },
+  "聖安多尼中英文幼稚園(麗城花園) St. Anthony's Kindergarten (Belvedere Garden) [基督恩臨幼稚園(麗城) Blessing Kindergarten (Belvedere)]": {
+    "email": "admin@stanthonyskg.edu.hk"
+  },
+  "基督堂幼稚園 Christ Church Kindergarten": {
+    "email": "cckg@cckg.edu.hk"
+  },
+  "基督教小天使(錦豐)幼稚園 Christian Little Angel Kindergarten (Kam Fung Court)": {
+    "email": "clakkf_info@clakkf.edu.hk"
+  },
+  "基督教小天使(麗晶)幼稚園 Christian Little Angel Kindergarten Richland Gardens": {
+    "email": "clakrg@biznetvigator.com"
+  },
+  "基督教小樹苗幼稚園 Christian Little Tree Kindergarten": {
+    "email": "info@littletree.edu.hk"
+  },
+  "基督教中心幼稚園 Christian Youth Centre Kindergarten [基督教中心幼稚園暨幼兒園]": {
+    "email": "cyckgn@netvigator.com"
+  },
+  "基督教中國佈道會恩恩創意幼稚園 ECFB Creativity Kindergarten": {
+    "email": "ecfbck@yahoo.com.hk"
+  },
+  "基督教安得兒幼稚園 Christian Adrianne Kindergarten": {
+    "email": "christianadriannehk@gmail.com"
+  },
+  "基督教佈道中心樂富幼稚園 Christian Evangelical Centre Lok Fu Kindergarten": {
+    "email": "lokfukg@gmail.com"
+  },
+  "基督教宣道會大澳幼稚園 C&MA Tai O Kindergarten": {
+    "email": "cmataiok@gmail.com"
+  },
+  "基督教宣道會天頌幼兒學校 C&MA Tin Chung Nursery School": {
+    "email": "tinchung@cmasshk.org"
+  },
+  "基督教宣道會太和幼稚園 C&MA Church Tai Wo Kindergarten": {
+    "email": "taiwokg@gmail.com"
+  },
+  "基督教宣道會利東幼兒學校 C&MA Lei Tung Nursery School": {
+    "email": "leitung@cmasshk.org"
+  },
+  "基督教宣道會沙田幼兒學校 C&MA Shatin Nursery School": {
+    "email": "shatin@cmasshk.org"
+  },
+  "基督教宣道會香港區聯會將軍澳宣道幼稚園 C&MA Church Union Tseung Kwan O Alliance Kindergarten": {
+    "email": "cmatkokg@netvigator.com"
+  },
+  "基督教宣道會海怡幼兒學校 C&MA South Horizons Nursery School": {
+    "email": "southhorizons@cmasshk.org"
+  },
+  "基督教宣道會茵怡幼稚園 C&MA Church Verbena Kindergarten": {
+    "email": "infoverbena@gmail.com"
+  },
+  "基督教宣道會富山幼兒學校 C&MA Fu Shan Nursery School": {
+    "email": "fushan@cmasshk.org"
+  },
+  "基督教宣道會寶湖幼兒學校 C&MA Plover Cove Nursery School": {
+    "email": "plovercove@cmasshk.org"
+  },
+  "基督教香港信義會天恩幼兒學校 ELCHK Grace Nursery School": {
+    "email": "gns@elchk.org.hk"
+  },
+  "基督教香港信義會沙田信義幼稚園 ELCHK Shatin Lutheran Kindergarten": {
+    "email": "elchkshatin@yahoo.com.hk"
+  },
+  "基督教香港信義會健明幼兒學校 ELCHK Kin Ming Nursery School": {
+    "email": "kmns@elchk.org.hk"
+  },
+  "基督教香港信義會基恩幼兒學校 ELCHK Amazing Grace Nursery School": {
+    "email": "agns@elchk.org.hk"
+  },
+  "基督教香港信義會將軍澳幼稚園 ELCHK Tseung Kwan O Kindergarten": {
+    "email": "elchktkokg@yahoo.com.hk"
+  },
+  "基督教香港信義會祥華幼稚園(祥裕樓) ELCHK Cheung Wah Kindergarten (Cheung Yue House)": {
+    "email": "elchkcw@gmail.com"
+  },
+  "基督教香港信義會祥華幼稚園(祥豐樓) ELCHK Cheung Wah Kindergarten (Cheung Fung House)": {
+    "email": "elchkcw@gmail.com"
+  },
+  "基督教香港信義會頌安幼兒學校 ELCHK Chung On Nursery School": {
+    "email": "cons@elchk.org.hk"
+  },
+  "基督教香港信義會興華幼兒學校 ELCHK Hing Wah Nursery School": {
+    "email": "hwns@elchk.org.hk"
+  },
+  "基督教香港信義會靈工幼兒學校 ELCHK Ling Kung Nursery School": {
+    "email": "lkns@elchk.org.hk"
+  },
+  "基督教香港信義會靈安幼兒學校 ELCHK Ling On Nursery School": {
+    "email": "lons@elchk.org.hk"
+  },
+  "基督教香港崇真會安仁幼兒學校 Tsung Tsin Mission of HK On Yan Nursery School": {
+    "email": "oy@ttmssd.org"
+  },
+  "基督教香港崇真會安怡幼兒學校 Tsung Tsin Mission of HK On Yee Nursery School": {
+    "email": "oe@ttmssd.org"
+  },
+  "基督教香港崇真會安基幼兒學校 Tsung Tsin Mission of HK On Kei Nursery School": {
+    "email": "oi@ttmssd.org"
+  },
+  "基督教香港崇真會安強幼兒學校 Tsung Tsin Mission of HK On Keung N School": {
+    "email": "ok@ttmssd.org"
+  },
+  "基督教家庭服務中心德田幼稚園 Christian Family Service Centre Tak Tin Kindergarten": {
+    "email": "taktinur@cfsc.org.hk"
+  },
+  "基督教家庭服務中心趣樂幼稚園 Christian Family Service Centre Cheerland Kindergarten": {
+    "email": "cheerland@cfsc.org.hk"
+  },
+  "基督教恩苗東九龍幼稚園 Gracefield East Kowloon Christian Kindergarten": {
+    "email": "gracefield@biznetvigator.com"
+  },
+  "基督教挪威差會主辦信義中英文幼稚園 NMS Lutheran Kindergarten": {
+    "email": "nms_elchk@yahoo.com.hk"
+  },
+  "基督教海面傳道會仁愛幼稚園 HK Harbour Mission Church Yan Oi Kindergarten": {
+    "email": "yanoikin@netvigator.com"
+  },
+  "基督教神召會合一堂幼稚園 Assembly of God Union Church Kindergarten": {
+    "email": "aoguck2001@yahoo.com.hk"
+  },
+  "基督教粉嶺神召會恩光幼稚園 Fanling Assembly of God Church Grace Light Kindergarten": {
+    "email": "gracelight96@yahoo.com.hk"
+  },
+  "基督教國際學校－幼稚園 International Christian School": {
+    "email": "kindergarten@ics.edu.hk"
+  },
+  "基督教康山中英文幼稚園 Kornhill Christian Anglo": {
+    "email": "info@kcackg.edu.hk"
+  },
+  "基督教聖約教會小天使(天盛)幼稚園 Mcc Little Angel (Tin Shing) Kindergarten": {
+    "email": "info.tsk@mcc.org.hk"
+  },
+  "基督教聖約教會司務道幼稚園 Mission Covenant Church Sister Annie's Kindergarten": {
+    "email": "mccsan@mcc.org.hk"
+  },
+  "基督教樂道幼稚園 Lock Tao Christian Kindergarten": {
+    "email": "info-kgt@locktao.org"
+  },
+  "基督教聯合醫務協會幼兒學校 United Christian Med Service Nursery School": {
+    "email": "ucmsns@hkcs.org"
+  },
+  "將軍澳英皇幼稚園 Junk Bay Kingsland Kindergarten": {
+    "email": "kingslandkindergarten@yahoo.com.hk"
+  },
+  "將軍澳循道衞理幼稚園 Tseung Kwan O Methodist Kindergarten": {
+    "email": "tkomkg@netvigator.com"
+  },
+  "崇真小學暨幼稚園(幼稚園部) Tsung Tsin Primary School and Kindergarten [崇真幼稚園]": {
+    "email": "enquiry@ttpskg.edu.hk"
+  },
+  "崇真會白田美善幼稚園 Tsung Tsin Mission Pak Tin Graceful Kindergarten": {
+    "email": "ptgkg@ptgraceful.edu.hk"
+  },
+  "崇真會美善幼稚園 Tsung Tsin Mission Graceful Kindergarten": {
+    "email": "graceful@ttmgkg.edu.hk"
+  },
+  "崇真會美善幼稚園(馬鞍山) Tsung Tsin Mission Graceful Kindergarten (Ma On Shan)": {
+    "email": "mosgkg@mosgraceful.edu.hk"
+  },
+  "崇基幼稚園 Sung Kei Kindergarten": {
+    "email": "sungkeikg@gmail.com"
+  },
+  "維多利亞幼兒園暨幼稚園(中康怡) Victoria Kindergarten": {
+    "email": "mkvkoffc@victoria.edu.hk"
+  },
+  "康盈中英文幼稚園 Hong Ying Anglo": {
+    "email": "hongyingkinder@gmail.com"
+  },
+  "康傑中英文幼稚園(青衣) Good Health Anglo": {
+    "email": "ghty1@good-health.edu.hk"
+  },
+  "康傑中英文幼稚園(馬鞍山) Good Health Anglo": {
+    "email": "ms@good-health.edu.hk"
+  },
+  "康傑幼稚園(馬鞍山) Good Health Kindergarten (Ma On Shan)": {
+    "email": "ms@good-health.edu.hk"
+  },
+  "救世軍乙明幼兒學校 SA Jat Min Nursery School": {
+    "email": "jmn@hkm.salvationarmy.org"
+  },
+  "救世軍卜凱賽琳幼兒學校 SA Catherine Booth Nursery School": {
+    "email": "cbn@hkm.salvationarmy.org"
+  },
+  "救世軍三聖幼兒學校 SA Sam Shing Nursery School": {
+    "email": "ssn@hkm.salvationarmy.org"
+  },
+  "救世軍大元幼兒學校 SA Tai Yuen Nursery School": {
+    "email": "tyn@hkm.salvationarmy.org"
+  },
+  "救世軍大窩口幼兒學校 SA Tai Wo Hau Nursery School": {
+    "email": "twhn@hkm.salvationarmy.org"
+  },
+  "救世軍中原慈善基金幼稚園 SA Centaline Charity Fund Kindergarten": {
+    "email": "ccfkin@hkm.salvationarmy.org"
+  },
+  "救世軍天平幼兒學校 SA Tin Ping Nursery School": {
+    "email": "tpn@hkm.salvationarmy.org"
+  },
+  "救世軍北角幼兒學校 SA North Point Nursery School": {
+    "email": "npnc@hkm.salvationarmy.org"
+  },
+  "救世軍平田幼稚園 SA Ping Tin Kindergarten": {
+    "email": "ptkin@hkm.salvationarmy.org"
+  },
+  "救世軍田家炳幼稚園 SA Tin Ka Ping Kindergarten": {
+    "email": "tkpkin@hkm.salvationarmy.org"
+  },
+  "救世軍白田幼兒學校 SA Pak Tin Nursery School": {
+    "email": "ptnc@hkm.salvationarmy.org"
+  },
+  "救世軍禾輋幼兒學校 SA Wo Che Nursery School": {
+    "email": "wcn@hkm.salvationarmy.org"
+  },
+  "救世軍吳國偉紀念幼稚園 SA Ng Kwok Wai Memorial Kindergarten": {
+    "email": "nkwkin@hkm.salvationarmy.org"
+  },
+  "救世軍明德幼兒學校 SA Ming Tak Nursery School": {
+    "email": "mtn@hkm.salvationarmy.org"
+  },
+  "救世軍海富幼兒學校 SA Hoi Fu Nursery School": {
+    "email": "hfn@hkm.salvationarmy.org"
+  },
+  "救世軍荔枝角幼兒學校 SA Lai Chi Kok Nursery School": {
+    "email": "lckn@hkm.salvationarmy.org"
+  },
+  "救世軍荃灣幼兒學校 SA Tsuen Wan Nursery School": {
+    "email": "twn@hkm.salvationarmy.org"
+  },
+  "救世軍梨木樹幼兒學校 SA Lei Muk Shue Nursery School": {
+    "email": "lmsn@hkm.salvationarmy.org"
+  },
+  "救世軍陳昆棟幼稚園 SA Chan Kwan Tung Kindergarten": {
+    "email": "cktkin@hkm.salvationarmy.org"
+  },
+  "救世軍富強幼稚園 SA Fu Keung Kindergarten": {
+    "email": "fkkin@hkm.salvationarmy.org"
+  },
+  "救世軍華富幼兒學校 SA Wah Fu Nursery School": {
+    "email": "wfn@hkm.salvationarmy.org"
+  },
+  "救世軍慶恩幼稚園 SA Hing Yan Kindergarten": {
+    "email": "hykin@esd.salvation.org.hk"
+  },
+  "救世軍樂民幼兒學校 SA Lok Man Nursery School": {
+    "email": "lmn@hkm.salvationarmy.org"
+  },
+  "救世軍錦田幼兒學校 SA Kam Tin Nursery School": {
+    "email": "ktn@hkm.salvationarmy.org"
+  },
+  "救恩學校(幼稚園部) Kau Yan School (Kindergarten Section) [救恩學校幼稚園]": {
+    "email": "kgmail@kauyan.edu.hk"
+  },
+  "深水埗浸信會幼稚園 Sham Shui Po Baptist Church Kindergarten": {
+    "email": "sspbck@yahoo.com.hk"
+  },
+  "深水埗德善幼稚園 Sham Shui Po Tak Shin Kindergarten": {
+    "email": "ssptakshin@yahoo.com.hk"
+  },
+  "深信堂幼稚園 Faith Lutheran Church Kindergarten": {
+    "email": "faluchkg72@yahoo.com"
+  },
+  "深培中英文幼稚園 Semple Kindergarten": {
+    "email": "info@semplekg.edu.hk"
+  },
+  "牽晴間培元英文幼稚園 Dawning Views Elementi English Kindergarten": {
+    "email": "dv.enquiry@elementiedu.org"
+  },
+  "第一幼稚園 A": {
+    "email": "info@a-onekindergarten.corp.com.hk"
+  },
+  "博士山(香港)國際幼稚園 Box Hill (HK) International Kindergarten": {
+    "email": "mos@boxhill.edu.hk"
+  },
+  "博士山(香港)國際幼稚園－火炭 Box Hill (HK) International Kindergarten": {
+    "email": "ft@boxhill.edu.hk"
+  },
+  "博士山(香港)國際幼稚園－將軍澳 Box Hill (HK) International Kindergarten": {
+    "email": "tko@boxhill.edu.hk"
+  },
+  "博愛醫院任永賢夫人幼稚園 POH Mrs Yam Wing Yin Kindergarten": {
+    "email": "ywyic@pokoi.org.hk"
+  },
+  "博愛醫院朱國京夫人紀念幼稚園 POH Mrs Chu Kwok King Memorial Kindergarten": {
+    "email": "ckkic@pokoi.org.hk"
+  },
+  "博愛醫院施淑鎮幼稚園 POH Sy Siok Chun Kindergarten": {
+    "email": "sscic@pokoi.org.hk"
+  },
+  "博愛醫院陳徐鳳蘭幼稚園 POH Chan Hsu Fong Lam Kindergarten": {
+    "email": "chflca@pokoi.org.hk"
+  },
+  "博愛醫院陳潘佩清紀念幼稚園 POH Chan Poon Pui Ching Memorial Kindergarten": {
+    "email": "cppcic@pokoi.org.hk"
+  },
+  "富亨浸信會呂郭碧鳳幼稚園 Fu Heng Baptist Lui Kwok Pat Fong Kindergarten": {
+    "email": "fub@fuhengkg.edu.hk"
+  },
+  "富瑤幼稚園 Fu Yiu Kindergarten": {
+    "email": "fuyiukg@gmail.com"
+  },
+  "循理會白普理循理幼兒學校 Free Methodist Church Bradbury Chun Lei Nursery School": {
+    "email": "cln@fmchk.org"
+  },
+  "循道衞理田灣幼稚園 Tin Wan Methodist Kindergarten": {
+    "email": "tw@methodist-centre.com"
+  },
+  "循道衞理聯合教會主恩堂幼稚園 Grace Methodist Church Kindergarten": {
+    "email": "gmck@grace.edu.hk"
+  },
+  "循道衞理聯合教會亞斯理幼稚園 Asbury Methodist Kindergarten": {
+    "email": "methodist@eservices.hkedcity.net"
+  },
+  "循道衞理聯合教會愛華村堂幼稚園 Epworth Village Methodist Church Kindergarten": {
+    "email": "evmckg@gmail.com"
+  },
+  "惠平幼稚園 Wai Peng Kindergarten School": {
+    "email": "info@waipeng.edu.hk"
+  },
+  "晶晶中英文幼稚園(洪水橋分校) Jing Jing Anglo": {
+    "email": "hsk@jingjing.edu.hk"
+  },
+  "晶晶幼稚園(屯門校) Jing Jing Kindergarten (Tuen Mun Branch)": {
+    "email": "mb@jingjing.edu.hk"
+  },
+  "晶晶幼稚園(順利分校) Jing Jing Kindergarten (Shun Lee Branch)": {
+    "email": "sl@jingjing.edu.hk"
+  },
+  "晶晶國際幼稚園 Jing Jing International Kindergarten": {
+    "email": "bg@jingjing.edu.hk"
+  },
+  "智樂幼稚園(南昌街) Che Lok Kindergarten (Nam Cheong Street)": {
+    "email": "chelokkg@hotmail.com"
+  },
+  "港九街坊婦女會丁毓珠幼稚園 HK&KKWA Ting Yuk Chee Kindergarten": {
+    "email": "enquiry@hkkkwatyc.edu.hk"
+  },
+  "港九街坊婦女會孫方中幼稚園 HK&KKWA Sun Fong Chung Kindergarten": {
+    "email": "sfc157597@gmail.com"
+  },
+  "港九街坊婦女會環翠幼稚園 HK&KKWA Wan Tsui Kindergarten": {
+    "email": "hkkwawt@biznetvigator.com"
+  },
+  "港島兒童蒙特梭利幼稚園(天后) Island Children's Montessori Kindergarten (Tin Hau) [港島蒙特梭利國際幼稚園 ICMS Kindergarten]": {
+    "email": "info@icms.edu.hk"
+  },
+  "港澳信義會翠恩幼稚園 HK and Macau Lutheran Church Tsui En Kindergarten": {
+    "email": "tsuien@yahoo.com.hk"
+  },
+  "港澳信義會錫安紀念幼稚園 HK and Macau Lutheran Church Shek On Mem Kindergarten": {
+    "email": "hkmlcsok@gmail.com"
+  },
+  "善一堂安逸幼稚園 Shin Yat Tong On Yat Kindergarten": {
+    "email": "hksytoy@gmail.com"
+  },
+  "善一堂逸東幼稚園 Shin Yat Tong Yat Tung Kindergarten": {
+    "email": "hksytytk@gmail.com"
+  },
+  "善正幼稚園 Sin Ching Kindergarten": {
+    "email": "info@sck.edu.hk"
+  },
+  "雅各中英文幼稚園(深水埗校) James Anglo": {
+    "email": "jameskg@biznetvigator.com"
+  },
+  "雅麗斯俊宏軒幼稚園 Agnes Kindergarten (Grandeur Terrace)": {
+    "email": "agnes_gt@agneskg.com"
+  },
+  "雅麗斯英文幼稚園 Agnes English Kindergarten": {
+    "email": "agnes@agneskg.com"
+  },
+  "順德聯誼總會屯門梁李秀娛幼稚園 Shun Tak Fraternal Association Tuen Mun Leung Lee Sau Yu Kindergarten": {
+    "email": "tmllsykg@netvigator.com"
+  },
+  "順德聯誼總會梁潔華幼稚園 Shun Tak Fraternal Association Leung Kit Wah Kindergarten": {
+    "email": "stfalkwkg@stfalkwkg.edu.hk"
+  },
+  "嗇色園主辦可正幼稚園 Ho Ching Kindergarten (Sponsored By Sik Sik Yuen)": {
+    "email": "hochingkg@siksikyuen.org.hk"
+  },
+  "嗇色園主辦可立幼稚園 Ho Lap Kindergarten (Sponsored By Sik Sik Yuen)": {
+    "email": "holapkg@siksikyuen.org.hk"
+  },
+  "嗇色園主辦可愛幼兒園 Ho Oi Day Nursery (Sponsored By Sik Sik Yuen)": {
+    "email": "hooikg@siksikyuen.org.hk"
+  },
+  "嗇色園主辦可瑞幼稚園 Ho Shui Kindergarten Sponsored By Sik Sik Yuen": {
+    "email": "hoshuikg@siksikyuen.org.hk"
+  },
+  "香港道教聯合會圓玄幼稚園(天逸邨) HKTA Yuen Yuen Kindergarten (Tin Yat Estate)": {
+    "email": "yykgtye@yuenyuenkg.edu.hk"
+  },
+  "香港道教聯合會圓玄幼稚園(平田邨) HKTA Yuen Yuen Kindergarten (Ping Tin Estate)": {
+    "email": "yykgpte@yuenyuenkg.edu.hk"
+  },
+  "奧伊斯嘉日本語幼稚園 Oisca Japanese Kindergarten": {
+    "email": "oisca@netvigator.com"
+  },
+  "慈正邨菩提幼稚園 Tsz Ching Estate Bodhi Siksa Kindergarten": {
+    "email": "tcebsk@biznetvigator.com"
+  },
+  "愛群道浸信會呂郭碧鳳幼稚園 Oi Kwan Rd Baptist Church Lui Kwok Pat Fong Kindergarten": {
+    "email": "mail@lkpfkg.edu.hk"
+  },
+  "新九龍婦女會沙角幼兒園 New Kowloon Women Association Sha Kok Nursery": {
+    "email": "shakok88@biznetvigator.com"
+  },
+  "新九龍婦女會慈雲山幼兒園 New Kowloon Women Association Tsz Wan Shan Nursery": {
+    "email": "twsn@newklnwa.edu.hk"
+  },
+  "新九龍婦女會新翠幼兒園 New Kowloon Women Association Sun Chui Nursery": {
+    "email": "scn@newklnwa.edu.hk"
+  },
+  "新九龍婦女會樂華幼兒園 New Kowloon Women Association Lok Wah Nursery": {
+    "email": "lwn@newklnwa.edu.hk"
+  },
+  "新加坡國際學校 Singapore International School (Hong Kong)": {
+    "email": "general@singapore.edu.hk"
+  },
+  "新界婦孺福利會上水幼兒學校 NTW & JWA Ltd Sheung Shui Nursery School [新界婦孺福利會上水兒童樂園]": {
+    "email": "ss@ntwjwassns.edu.hk"
+  },
+  "新界婦孺福利會元朗幼兒學校 NTW & JWA Ltd Yuen Long Nursery School [新界婦孺福利會元朗兒童樂園]": {
+    "email": "yl@ntwjwaylns.edu.hk"
+  },
+  "新界婦孺福利會長發幼兒學校 NTW & JWA Ltd Cheung Fat Nursery School [新界婦孺福利會長發邨兒童樂園 新界婦孺福利會長發邨幼兒學校]": {
+    "email": "cf@ntwjwacfns.edu.hk"
+  },
+  "新界婦孺福利會粉嶺幼兒學校 NTW & JWA Ltd Fanling Nursery School": {
+    "email": "fl@ntwjwaflns.edu.hk"
+  },
+  "新界婦孺福利會梁省德中英文幼稚園暨幼兒學校 NTW & JWA Leung Sing Tak Anglo": {
+    "email": "info@lstackg.edu.hk"
+  },
+  "新界婦孺福利會博康幼兒學校 NTW & JWA Ltd Pok Hong Nursery School [新界婦孺福利會博康邨幼兒學校]": {
+    "email": "ph@ntwjwaphns.edu.hk"
+  },
+  "新翠培元幼稚園 New Jade Elementi Kindergarten": {
+    "email": "nj.enquiry@elementiedu.org"
+  },
+  "粵南信義會腓力堂馬頭圍幼兒學園 Lutheran Philip House Ma Tau Wai Nursery School": {
+    "email": "lphmtwcc@netvigator.com"
+  },
+  "粵南信義會腓力堂啟業幼兒學園 Lutheran Philip Hse Kai Yip Nursery School": {
+    "email": "lphkyccc@netvigator.com"
+  },
+  "粵南信義會腓力堂愛鄰幼兒學園 Lutheran Philip Hse Oi Lun Nursery School": {
+    "email": "lpholccc@netvigator.com"
+  },
+  "粵南信義會腓力堂興民幼兒學園 Lutheran Philip House Hing Man Nursery School": {
+    "email": "lphhmccc@netvigator.com"
+  },
+  "聖三一中心幼稚園 Holy Trinity Centre Kindergarten": {
+    "email": "htckg@htckg.edu.hk"
+  },
+  "聖士提反堂幼稚園 St Stephen's Church Kindergarten [聖士提反堂小學暨幼稚園]": {
+    "email": "info@ssck.edu.hk"
+  },
+  "聖公會主誕堂幼稚園 SKH Holy Nativity Church Kindergarten": {
+    "email": "hnck@netvigator.com"
+  },
+  "聖公會幼稚園 Sheng Kung Hui Kindergarten": {
+    "email": "skhkgcb@netvigator.com"
+  },
+  "聖公會牧愛幼稚園 SKH Good Shepherd Kindergarten": {
+    "email": "skhgskg@yahoo.com.hk"
+  },
+  "聖公會青山聖彼得堂山景邨幼稚園 SKH St Peter's Church Shan King Estate Kindergarten": {
+    "email": "skekg@skhspc.edu.hk"
+  },
+  "聖公會青山聖彼得堂幼稚園 SKH St Peter's Church Kindergarten (Castle Peak)": {
+    "email": "tsw@spckg.edu.hk"
+  },
+  "聖公會青山聖彼得堂兆麟苑幼稚園 SKH St Peter's Church Castle Peak Siu Lun Court Kindergarten": {
+    "email": "slc@spckg.edu.hk"
+  },
+  "聖公會荊冕堂士德幼稚園 SKH Crown of Thorns Church Sadick Kindergarten": {
+    "email": "twsadick@gmail.com"
+  },
+  "聖公會荊冕堂葵涌幼稚園 SKH Crown of Thorns Church Kwai Chung Kindergarten": {
+    "email": "info@skhcotkc.edu.hk"
+  },
+  "聖公會救主堂幼稚園 SKH the Church of Our Saviour Kindergarten": {
+    "email": "saviour@netvigator.com"
+  },
+  "聖公會深水埗基愛堂幼稚園 SKH Sham Shui Po Kei Oi Church Kindergarten": {
+    "email": "keioiskh@gmail.com"
+  },
+  "聖公會慈光堂柯佩璋幼稚園 SKH Kindly Light Church Or Pui Cheung Kindergarten": {
+    "email": "skhopc@netvigator.com"
+  },
+  "聖公會慈光堂聖匠幼稚園 SKH Kindly Light Church Holy Carpenter Kindergarten": {
+    "email": "skhklc@holycarpenter.imsbiz.com.hk"
+  },
+  "聖公會聖三一堂曾肇添幼稚園 SKH Holy Trinity Church Tsang Shiu Tim Kindergarten": {
+    "email": "tstkg@tstkg.edu.hk"
+  },
+  "聖公會聖彼得堂幼稚園(赤柱分校) St Peter's Church Kindergarten (Stanley)": {
+    "email": "stpchs@biznetvigator.com"
+  },
+  "聖公會聖約瑟堂幼稚園 SKH St Joseph's Church Kindergarten [聖約瑟幼稚園 聖若瑟幼稚園]": {
+    "email": "stjsphkg@netvigator.com"
+  },
+  "聖公會聖馬提亞堂幼兒學校 St Matthias' Church Nursery School": {
+    "email": "info@smcns.edu.hk"
+  },
+  "聖公會聖基道幼兒園(葵涌) SKH St Christopher's Nursery (Kwai Chung)": {
+    "email": "kc_sup@skhsch.org.hk"
+  },
+  "聖公會聖基道幼兒園(灣仔) SKH St Christopher's Nursery (Wan Chai)": {
+    "email": "wc_admin@skhsch.org.hk"
+  },
+  "聖公會靈風堂幼稚園 SKH Holy Spirit Church Kindergarten [聖公會靈風堂禾輋幼稚園]": {
+    "email": "skhhsckg@gmail.com"
+  },
+  "聖巴拿巴堂幼稚園 St Barnabas' Church Kindergarten": {
+    "email": "kindergarten@skhsbc.org.hk"
+  },
+  "聖文嘉中英文幼稚園 St Monica's Anglo": {
+    "email": "monica_leitung@stmonica.edu.hk"
+  },
+  "聖文嘉中英文幼稚園(荃灣) St Monica's Anglo": {
+    "email": "stmonicatsuenwan@gmail.com"
+  },
+  "聖文嘉中英文幼稚園(華貴邨) St Monica's Anglo": {
+    "email": "stmonicawk@gmail.com"
+  },
+  "聖文嘉幼稚園 St Monica's Kindergarten": {
+    "email": "info@stmonica.edu.hk"
+  },
+  "聖文嘉幼稚園(荃灣) St Monica's Kindergarten (Tsuen Wan)": {
+    "email": "info@stmonicatw.edu.hk"
+  },
+  "聖母幼稚園 Our Lady's Kindergarten": {
+    "email": "info@olk.edu.hk"
+  },
+  "聖母無玷聖心幼稚園 Immaculate Heart of Mary Kindergarten": {
+    "email": "info@ihmk.edu.hk"
+  },
+  "聖母潔心會黃大仙幼稚園 The Sisters of the Immaculate Heart of Mary WTS Kindergarten": {
+    "email": "ihmwtsdn@netvigator.com"
+  },
+  "聖母潔心會福音秀茂坪幼稚園 The Sisters of the Immaculate Heart of Mary Gospel SMP Kindergarten": {
+    "email": "ihmwtsdn@netvigator.com"
+  },
+  "聖多馬堂幼稚園 St Thomas' Church Kindergarten": {
+    "email": "stkg@netvigator.com"
+  },
+  "聖安娜中英文幼稚園(本地課程) St Anna Anglo": {
+    "email": "stanna@netvigator.com"
+  },
+  "聖安娜中英文幼稚園(非本地課程) St Anna Anglo": {
+    "email": "stanna@netvigator.com"
+  },
+  "聖安當幼稚園 St Antonius Kindergarten": {
+    "email": "principal@stantoniuskg.edu.hk"
+  },
+  "聖保祿幼兒園 St Paul's Day Nursery": {
+    "email": "mailbox@spn.edu.hk"
+  },
+  "聖保祿幼稚園 St Paul's Kindergarten": {
+    "email": "mailbox@spk.edu.hk"
+  },
+  "聖保羅堂幼稚園(北角) St Paul's Church Kindergarten (North Point) [聖保羅幼稚園]": {
+    "email": "info@stpaulchurchkg.edu.hk"
+  },
+  "聖美雅學校(幼稚園) Saint May School (Kindergarten)": {
+    "email": "stmayschool@yahoo.com.hk"
+  },
+  "聖若望英文書院 St. Johannes College [聖若望英文書院幼稚園、聖若望英文書院(幼稚園部)]": {
+    "email": "kg@st-johannes.edu.hk"
+  },
+  "聖馬太堂幼稚園 St Matthew's Church Kindergarten": {
+    "email": "stmattkg@netvigator.com"
+  },
+  "聖斯德望天主教幼稚園 St Stephen's Catholic Kindergarten": {
+    "email": "st@stepckg.edu.hk"
+  },
+  "聖雅各福群會麥潔蓮幼稚園 SJS Kathleen Mcdouall Kindergarten": {
+    "email": "fckmccc@sjs.org.hk"
+  },
+  "聖雅各福群會銅鑼灣幼稚園 SJS Causeway Bay Kindergarten": {
+    "email": "fccbccc@sjs.org.hk"
+  },
+  "聖雅各福群會寶翠園幼稚園 SJS Belcher Kindergarten": {
+    "email": "beccc@sjs.org.hk"
+  },
+  "聖道明中英文幼稚園 St Dominic Anglo": {
+    "email": "stdominickgint@yahoo.com.hk"
+  },
+  "聖德蘭幼稚園 St Teresa's Kindergarten": {
+    "email": "office@sttkg.edu.hk"
+  },
+  "聖羅撒幼稚園 St Rose of Lima's Kindergarten": {
+    "email": "roseboundary@yahoo.com.hk"
+  },
+  "葵盛禮賢會幼稚園 Kwai Shing Rhenish Church Kindergarten": {
+    "email": "info.kskg@ppe.rhenish.org"
+  },
+  "路德會包美達幼兒園 Martha Boss Lutheran Day Nursery": {
+    "email": "n01@hklss.hk"
+  },
+  "路德會利東幼兒園 Lei Tung Lutheran Day Nursery": {
+    "email": "n06@hklss.hk"
+  },
+  "路德會呂君博幼兒園 Lui Kwan Pok Lutheran Day Nursery": {
+    "email": "n05@hklss.hk"
+  },
+  "路德會呂祥光幼稚園 Lui Cheung Kwong Lutheran Kindergarten": {
+    "email": "lcklk001@gmail.com"
+  },
+  "路德會杏花邨幼兒園 Heng Fa Chuen Lutheran Day Nursery": {
+    "email": "n02@hklss.hk"
+  },
+  "路德會沙崙堂幼稚園 Sharon Lutheran Church Kindergarten": {
+    "email": "sckg4067@netvigator.com"
+  },
+  "路德會良景幼兒園 Leung King Lutheran Day Nursery": {
+    "email": "n07@hklss.hk"
+  },
+  "路德會長青幼兒園 Cheung Ching Lutheran Day Nursery": {
+    "email": "n09@hklss.hk"
+  },
+  "路德會青衣城幼兒園 Maritime Square Lutheran Day Nursery": {
+    "email": "n10@hklss.hk"
+  },
+  "路德會建生幼稚園 Kin Sang Lutheran Kindergarten": {
+    "email": "kinsang24670323@yahoo.com.hk"
+  },
+  "路德會恩石幼稚園 Rock of Ages Lutheran Kindergarten": {
+    "email": "rockofages1985@yahoo.com.hk"
+  },
+  "路德會救恩幼稚園 Redemption Lutheran Kindergarten": {
+    "email": "info@rlk.edu.hk"
+  },
+  "路德會陳恩美幼兒園 Chan En Mei Lutheran Day Nursery": {
+    "email": "n04@hklss.hk"
+  },
+  "路德會陳蒙恩幼稚園 Chan Mung Yan Lutheran Kindergarten": {
+    "email": "chanmungyan@gmail.com"
+  },
+  "路德會富泰幼兒園 Fu Tai Lutheran Day Nursery": {
+    "email": "n11lutheran@yahoo.com.hk"
+  },
+  "路德會景林幼兒園 King Lam Lutheran Day Nursery": {
+    "email": "n08@hklss.hk"
+  },
+  "路德會愛心幼稚園 Loving Heart Lutheran Kindergarten": {
+    "email": "loving_heart_lutheran@yahoo.com.hk"
+  },
+  "路德會聖腓力堂幼稚園 St Philip Lutheran Church Kindergarten": {
+    "email": "splck2003@yahoo.com.hk"
+  },
+  "路德會聖雅各幼稚園 St James Lutheran Kindergarten": {
+    "email": "sjlk2000@yahoo.com.hk"
+  },
+  "路德會錫安堂幼稚園 Zion Lutheran Kindergarten": {
+    "email": "kindergarten@zionluth.org.hk"
+  },
+  "筲箕灣崇真幼兒學校 Shaukeiwan Tsung Tsin Nursery School": {
+    "email": "info@skwttns.edu.hk"
+  },
+  "筲箕灣循道衞理幼稚園 Shau Kei Wan Methodist Kindergarten": {
+    "email": "skwmk@netvigator.com"
+  },
+  "筲箕灣街坊福利會張錦添紀念幼稚園 Shaukiwan Kai Fong Welfare Community Centre Cheung Kam Tim Memorial Kindergarten": {
+    "email": "skw.enquiry@elementiedu.org"
+  },
+  "嘉言中英文幼稚園 Greenville Anglo": {
+    "email": "greenv@netvigator.com"
+  },
+  "嘉福浸信會幼兒園 Ka Fuk Baptist Church Pre": {
+    "email": "kafuk@biznetvigator.com"
+  },
+  "嘉德麗中英文幼稚園 Catiline Anglo": {
+    "email": "info@catiline.edu.hk"
+  },
+  "嘉諾撒聖心幼稚園 Sacred Heart Canossian Kindergarten": {
+    "email": "shck@eservices.hkedcity.net"
+  },
+  "嘉寶中英文幼稚園(粉嶺) Carbo Anglo": {
+    "email": "carbofl@netvigator.com"
+  },
+  "漢基國際學校 Chinese International School": {
+    "email": "cis_info@cis.edu.hk"
+  },
+  "福來邨錦全幼稚園 Fuk Loy Chuen Kam Chuen Kindergarten [Fok Loy Estate Kam Chuen Kindergarten]": {
+    "email": "info@kamchuenkg.edu.hk"
+  },
+  "綠茵英文(國際)幼稚園(東涌) Greenfield English (International) Kindergarten (Tung Chung) [綠茵國際]": {
+    "email": "greenfieldkdg@gmail.com"
+  },
+  "綠茵英文(國際)幼稚園(浪澄灣) Greenfield English (International) Kindergarten (The Long Beach) [綠茵國際]": {
+    "email": "greenfieldkdg@gmail.com"
+  },
+  "綠茵英文(國際)幼稚園(將軍澳) Greenfield English (International) Kindergarten (Tseung Kwan O) [綠茵國際]": {
+    "email": "greenfieldkdg@gmail.com"
+  },
+  "綠楊幼稚園 Luk Yeung Kindergarten": {
+    "email": "lukyeungkg@gmail.com"
+  },
+  "維多利亞(何文田)國際幼兒園 Victoria (Homantin) International Nursery [維多利亞國際幼兒園(何文田) 維多利亞(何文田)國際幼稚園]": {
+    "email": "hmtoffc@victoria.edu.hk"
+  },
+  "維多利亞(君匯港)幼稚園 Victoria (Harbour Green) Kindergarten [維多利亞幼稚園(君匯港)]": {
+    "email": "hgvk@victoria.edu.hk"
+  },
+  "維多利亞(海怡)國際幼稚園 Victoria (South Horizons) International Kindergarten [維多利亞國際幼稚園(海怡) Victoria International Kindergarten South Horizons]": {
+    "email": "shvkoffc@victoria.edu.hk"
+  },
+  "維多利亞(康怡)幼兒園 Victoria (Kornhill) Nursery [康怡維多利亞幼稚園, 維多利亞幼兒園(上康怡), Victoria Nursery Upper Kornhill]": {
+    "email": "ukoffc@victoria.edu.hk"
+  },
+  "維多利亞(寶翠園)幼稚園 Victoria (Belcher) Kindergarten [維多利亞國際幼兒園暨幼稚園(寶翠園) Victoria International Kindergarten Belcher]": {
+    "email": "bgvkoffc@victoria.edu.hk"
+  },
+  "維多利亞幼兒園(海峰園) Victoria Nursery (Harbour Heights)": {
+    "email": "hhvnoff2@victoria.edu.hk"
+  },
+  "維多利亞幼兒園暨幼稚園(下康怡) Victoria Kindergarten": {
+    "email": "lkvkoffc@victoria.edu.hk"
+  },
+  "翠林邨浸信會幼稚園 Tsui Lam Estate Baptist Kindergarten [翠林浸信會幼稚園]": {
+    "email": "tlebk@yahoo.com.hk"
+  },
+  "蒙特梭利國際學校 International Montessori School": {
+    "email": "admin.ab@ims.edu.hk"
+  },
+  "銅鑼灣維多利亞幼稚園 Causeway Bay Victoria Kindergarten": {
+    "email": "inquiry@cbvictoria.edu.hk"
+  },
+  "銅鑼灣維多利亞國際幼稚園 Causeway Bay Victoria International Kindergarten": {
+    "email": "inquiry@cbvictoria.edu.hk"
+  },
+  "鳳溪幼稚園 Fung Kai Kindergarten": {
+    "email": "fkkgfungkai@yahoo.com.hk"
+  },
+  "劍鳴幼稚園 Keen Mind Kindergarten [劍鳴幼稚園暨幼兒園, keenmind]": {
+    "email": "keenmind@netvigator.com"
+  },
+  "廣林浸信會呂郭碧鳳幼稚園 Kwong Lam Baptist Lui Kwok Pat Fong Kindergarten": {
+    "email": "lkpf@kwonglambaptist-kg.edu.hk"
+  },
+  "德信幼稚園 Tak Sun Private Kindergarten": {
+    "email": "info@taksunkg.edu.hk"
+  },
+  "德貞幼稚園 Tack Ching Kindergarten": {
+    "email": "info@tckg.edu.hk"
+  },
+  "德望小學暨幼稚園 Good Hope Primary School Cum Kindergarten [德望幼稚園, 德望學校(幼稚園)]": {
+    "email": "ghs.kinder@gmail.com"
+  },
+  "德福幼稚園 Telford Gardens Kindergarten": {
+    "email": "tfkginfo@gmail.com"
+  },
+  "聖安多尼中英文小學暨幼稚園 St Anthony's Anglo": {
+    "email": "admin@stanthonyskg.edu.hk"
+  },
+  "慧中幼稚園 Wisdom Kindergarten": {
+    "email": "wisdomteacher@wisdomac.edu.hk"
+  },
+  "樂基幼兒學校(駿景園) Hong Kong (Ascot) Preschool": {
+    "email": "info@hkpreschool.edu.hk"
+  },
+  "樂富禮賢會幼稚園 Lok Fu Rhenish Church Kindergarten": {
+    "email": "info.lfkg@ppe.rhenish.org"
+  },
+  "樂景幼稚園 Lok King Kindergarten": {
+    "email": "lokkingkg@gmail.com"
+  },
+  "樂善堂文吳泳沂幼稚園 Lok Sin Tong Man Ng Wing Yee Kindergarten": {
+    "email": "lstmnwykg@yahoo.com.hk"
+  },
+  "樂善堂李賢義幼稚園 Lok Sin Tong Lee Yin Yee Kindergarten [樂善堂幼稚園]": {
+    "email": "lstedu@yahoo.com.hk"
+  },
+  "樂善堂張葉茂清幼稚園 Lok Sin Tong Cheung Yip Mou Ching Kindergarten": {
+    "email": "lstcymck@yahoo.com.hk"
+  },
+  "樂善堂梁泳釗幼稚園 Lok Sin Tong Stephen Leung Kindergarten": {
+    "email": "lstslkg@yahoo.com.hk"
+  },
+  "樂善堂鄧德濂幼稚園 Lok Sin Tong Tang Tak Lim Kindergarten": {
+    "email": "lstttlkg@loksintong.org"
+  },
+  "樂善堂顧李覺鮮幼稚園 Lok Sin Tong Ku Lee Kwok Sin Kindergarten": {
+    "email": "lstklks@yahoo.com.hk"
+  },
+  "潮陽幼稚園 Chiu Yang Kindergarten": {
+    "email": "cy@cyk.edu.hk"
+  },
+  "國民學校漢師中英文幼稚園 Kwok Man Vernachlar Normal Anglo": {
+    "email": "kmvn2013@gmail.com"
+  },
+  "鄰舍輔導會元朗幼兒園 NAAC Yuen Long Day Nursery": {
+    "email": "yldn@naac.org.hk"
+  },
+  "鄰舍輔導會東欣幼兒園 NAAC Tung Yan Day Nursery": {
+    "email": "tydn@naac.org.hk"
+  },
+  "鄰舍輔導會東涌幼兒園 NAAC Tung Chung Day Nursery": {
+    "email": "tcdn@naac.org.hk"
+  },
+  "鄰舍輔導會粉嶺幼兒園 NAAC Fanling Day Nursery": {
+    "email": "fldn@naac.org.hk"
+  },
+  "學之園幼稚園 Learning Habitat Kindergarten": {
+    "email": "contact@learninghabitat.org"
+  },
+  "學之園幼稚園(凱帆薈) Learning Habitat Kindergarten (Hampton Loft)": {
+    "email": "contact@learninghabitat.org"
+  },
+  "激活幼稚園 Gigamind Kindergarten": {
+    "email": "kginfo@gigamind.edu.hk"
+  },
+  "穆斯林幼稚園 Muslim Community Kindergarten": {
+    "email": "info@mck.edu.hk"
+  },
+  "翰林幼稚園(天水圍) Academy Kindergarten (Tin Shui Wai)": {
+    "email": "academykg@gmail.com"
+  },
+  "勵志會陳鄭潔雲幼稚園 Endeavourers Chan Cheng Kit Wan Kindergarten": {
+    "email": "info@tekg.edu.hk"
+  },
+  "嶺南幼稚園(小西灣) Lingnan Kindergarten (Siu Sai Wan)": {
+    "email": "kg@lingnankn.edu.hk"
+  },
+  "駿發花園浸信會幼兒學校 Prosperous Garden Baptist Nursery School": {
+    "email": "pgbn@abwe.org.hk"
+  },
+  "禮賢會元朗幼兒園 Yuen Long Rhenish Nursery": {
+    "email": "info.ylc@ppe.rhenish.org"
+  },
+  "禮賢會荔景幼兒園 Lai King Rhenish Nursery": {
+    "email": "info.lkc@ppe.rhenish.org"
+  },
+  "禮賢會順天幼兒園 Shun Tin Rhenish Nursery": {
+    "email": "info.stc@ppe.rhenish.org"
+  },
+  "禮賢會新蒲崗幼兒園 San Po Kong Rhenish Nursery": {
+    "email": "info.spk@ppe.rhenish.org"
+  },
+  "禮賢會樂富幼兒園 Lok Fu Rhenish Nursery": {
+    "email": "info.lfc@ppe.rhenish.org"
+  },
+  "禮賢會學校 Rhenish Mission School": {
+    "email": "info@rhenish.edu.hk"
+  },
+  "藍田靈糧幼稚園 Lam Tin Ling Liang Kindergarten": {
+    "email": "ltll@lingliang.org.hk"
+  },
+  "鯉魚門循道衞理幼稚園 Lei Yue Mun Methodist Kindergarten": {
+    "email": "lymmkg@lymmkg.edu.hk"
+  },
+  "懷恩浸信會幼稚園 Grace Baptist Kindergarten": {
+    "email": "gracebaptistkg@yahoo.com.hk"
+  },
+  "麗晶幼稚園分校 Regent's Kindergarten (Branch School)": {
+    "email": "regentkg@netvigator.com"
+  },
+  "寶血幼稚園 Precious Blood Kindergarten": {
+    "email": "info@pbk.edu.hk"
+  },
+  "寶血幼稚園(深水埗) Precious Blood Kindergarten (Sham Shui Po)": {
+    "email": "pbn@netvigator.com"
+  },
+  "寶寶幼兒學校 Bo Bo Nursery School": {
+    "email": "info@bobonursery.com.hk"
+  },
+  "耀中幼稚園(森麻實道) Yew Chung Children's House (Somerset Road)": {
+    "email": "enquiry@hk.ycef.com"
+  },
+  "耀中國際幼稚園(根德道) Yew Chung International Children's House (Kent Road)": {
+    "email": "enquiry@hk.ycef.com"
+  },
+  "耀中國際幼稚園(窩打老道) Yew Chung International Children's House (Waterloo)": {
+    "email": "enquiry@hk.ycef.com"
+  },
+  "耀中國際學校 Yew Chung International School": {
+    "email": "enquiry@hk.ycef.com"
+  },
+  "耀東浸信會幼稚園 Yiu Tung Baptist Kindergarten": {
+    "email": "yiutung@biznetvigator.com"
+  },
+  "耀榮中英文幼稚園 Yiu Wing Anglo": {
+    "email": "mosywkin@yahoo.com.hk"
+  },
+  "耀榮中英文幼稚園(愉田苑) Yue Tin Court Yiu Wing Anglo": {
+    "email": "ytywkind@yahoo.com.hk"
+  },
+  "蘇浙小學校 Kiangsu & Chekiang Primary School [蘇浙幼稚園]": {
+    "email": "kinder@kcs.edu.hk"
+  },
+  "漢廸國際幼稚園(港島東) Kendall International Preschool (Island East) [躍思柏蕙幼稚園]": {
+    "email": "info@kendall.edu.hk"
+  },
+  "靈恩學校 Ling Yan School": {
+    "email": "info@lingyan.edu.hk"
+  },
+  "觀塘浸信會彩明幼稚園 Kwun Tong Baptist Church Choi Ming Kindergarten": {
+    "email": "info@choiming.edu.hk"
+  },
+  "觀塘循道幼稚園 Kwun Tong Methodist Kindergarten": {
+    "email": "info@ktmk.edu.hk"
+  },
+  "鑽石山浸信會美欣幼稚園 Diamond Hill Baptist Church Bright Blossoms Kindergarten": {
+    "email": "dhbcbbkg@yahoo.com.hk"
+  },
+  "鑽石山靈糧幼稚園 Diamond Hill Ling Liang Kindergarten": {
+    "email": "hkll@lingliang.org.hk"
+  },
+  "栢基海韻幼稚園 Parkview Rhine Garden Pre": {
+    "email": "school@pipsrg.edu.hk"
+  },
+  "栢基國際幼稚園 Parkview International Pre": {
+    "email": "pipsinfo@pips.edu.hk"
+  },
+  "栢基國際幼稚園(九龍) Parkview International Pre": {
+    "email": "pipsinfo-kln@pips.edu.hk"
+  },
+  "滙豐幼兒學校 Wayfoong Nursery School": {
+    "email": "wfns@hkcs.org"
+  },
+  "香港猶太教國際學校 Carmel School": {
+    "email": "admin@carmel.edu.hk"
+  },
+  "愉景灣國際學校 Discovery Bay International School": {
+    "email": "ptough@dbis.edu.hk"
+  },
+  "Garden House Waldorf Kindergarten Garden House Waldorf Pre": {
+    "email": "info@gardenhouse.edu.hk"
+  },
+  "德瑞國際學校 German Swiss International School": {
+    "email": "eubowski@gsis.edu.hk"
+  },
+  "Highgate House School": {
+    "email": "info@highgatehouse.edu.hk"
+  },
+  "啟歷學校(薄扶林) Kellett School (Pok Fu Lam Campus)": {
+    "email": "admissions@kellettschool.com"
+  },
+  "啟歷學校(九龍灣) Kellett School (Kowloon Bay campus)": {
+    "email": "admissions@kellettschool.com"
+  },
+  "卡莎迪曼幼稚園 Khalsa Diwan Kindergarten": {
+    "email": "info@khalsadiwan.com"
+  },
+  "韓國國際學校 Korean International School": {
+    "email": "admissions@kis.edu.hk"
+  },
+  "Kowloon Baptist Church Kindergarten Kowloon Baptist Church Kindergarten": {
+    "email": "admission@kbck.edu.hk"
+  },
+  "Leapfrog Kindergarten Leapfrog Kindergarten": {
+    "email": "admin@leapfrogkindergarten.org"
+  },
+  "Little Buds 幼稚園 Little Buds Kindergarten": {
+    "email": "admin@littlebuds.edu.hk"
+  },
+  "法國國際學校 Lyc'ee Francais International (French International School)": {
+    "email": "info@lfis.edu.hk"
+  },
+  "Montessori for Children Montessori For Children (Nursery)": {
+    "email": "hongkong@montessori.edu.sg"
+  },
+  "挪威國際學校 Norwegian International School": {
+    "email": "kinder@nis.edu.hk"
+  },
+  "康樂園國際學校幼稚園部 International College Hong Kong Hong Lok Yuen (Kindergarten Section)": {
+    "email": "info@ichkhly.edu.hk"
+  },
+  "西貢國際幼稚園 Sai Kung International Pre": {
+    "email": "skip@skip.edu.hk"
+  },
+  "Small World 基督教幼稚園 Small World Christian Kindergarten": {
+    "email": "office@smallworld.edu.hk"
+  },
+  "聖嘉勒小學暨幼稚園 St Clare's Primary School": {
+    "email": "info@scps.edu.hk"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(清水灣) Guidepost Montessori International Kindergarten (Clearwater Bay) [Sunshine House International Pre": {
+    "email": "clearwaterbay@guidepostmontessori.com"
+  },
+  "茵維特幼稚園 Invictus Kindergarten [英育德幼稚園]": {
+    "email": "admissions@invictus.edu.hk"
+  },
+  "懋柏禮國際幼稚園(南區) Mulberry House International Kindergarten (Southside)": {
+    "email": "southside@mulberryhousekg.com"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(西貢) Guidepost Montessori International Pre": {
+    "email": "saikung@woodlandschools.com"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(半山) Guidepost Montessori International Pre": {
+    "email": "montessoricr@woodlandschools.com"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(跑馬地) Guidepost Montessori International Pre": {
+    "email": "happyvalley@woodlandschools.com"
+  },
+  "多多國際幼稚園(半山) Tutor Time International Kindergarten (Mid Levels)": {
+    "email": "info@tutortime.com.hk"
+  },
+  "奧基英文幼稚園暨幼兒園 Oasis English Kindergarten / Preschool [浸信會奧基英文幼稚園 Baptist Oasis English Kindergarten]": {
+    "email": "info@oasiskindergarten.com"
+  },
+  "銅鑼灣維多利亞幼兒園 Causeway Bay Victoria Nursery": {
+    "email": "hhvnoff2@victoria.edu.hk"
+  },
+  "基督教中心幼稚園(油塘) Christian Youth Centre Kindergarten (Yau Tong)": {
+    "email": "cyckgn2014@gmail.com"
+  },
+  "香港國際蒙特梭利學校(中環) Discovery Montessori School (Central)": {
+    "email": "enquiry@dms.edu.hk"
+  },
+  "英揚樂兒中英文幼稚園 Elite Kids Anglo": {
+    "email": "tswelitekids@gmail.com"
+  },
+  "耀基創藝幼稚園 Gloria Creative Kindergarten": {
+    "email": "mail@gciedu.hk"
+  },
+  "哈羅香港國際學校 Harrow International School Hong Kong": {
+    "email": "info@harrowschool.hk"
+  },
+  "心怡天地幼稚園(沙田) Joyful World Kindergarten (Sha Tin)": {
+    "email": "infost@joyfulenglish.edu.hk"
+  },
+  "文娜雅拔幼稚園(九龍塘) Manhabit Kindergarten (Kowloon Tong)": {
+    "email": "info@manhabit.edu.hk"
+  },
+  "楓葉小熊加拿大國際幼稚園(油塘) Maple Bear Canadian International Kindergarten (Yau Tong) [苗士國際幼稚園 Mills International Preschool]": {
+    "email": "admissions@maplebear.hk"
+  },
+  "樂䔄幼稚園 Pods Kindergarten": {
+    "email": "info@pods.com.hk"
+  },
+  "聖馬可堂白普理幼稚園 St. Mark's Church Bradbury Kindergarten": {
+    "email": "kg@stmarkschurch.edu.hk"
+  },
+  "思博幼稚園 Swindon Kindergarten": {
+    "email": "info@swindon.edu.hk"
+  },
+  "香港青年協會鄭堅固幼稚園 The Hong Kong Federation Of Youth Groups KK Cheng Kindergarten": {
+    "email": "kkc@hkfyg.org.hk"
+  },
+  "救世軍中原慈善基金油塘幼稚園 The Salvation Army Centaline Charity Fund Yau Tong Kindergarten": {
+    "email": "ccfytkin@hkm.salvationarmy.org"
+  },
+  "宏廣國際幼稚園 Wellcome International Kindergarten": {
+    "email": "info@wellcomekg.edu.hk"
+  },
+  "盈思幼稚園 Witty Kindergarten": {
+    "email": "wittykg@gmail.com"
+  },
+  "約克國際幼稚園 York International Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "英藝幼稚園(沙田) Zenith Kindergarten (Shatin)": {
+    "email": "zenithst@zenith.edu.hk"
+  },
+  "童樂天國際幼稚園 Mulberry Tree International Kindergarten [倫敦家國際幼稚園 Excel London House International Kindergarten]": {
+    "email": "admissions_st@mulberrytree.edu.hk"
+  },
+  "蔚思幼稚園 Sophie Kindergarten": {
+    "email": "info@sophiekg.edu.hk"
+  },
+  "遵道幼稚園 Abiding Kindergarten": {
+    "email": "info@abiding.edu.hk"
+  },
+  "基督教安得兒幼稚園(灣景) Christian Adrianne Kindergarten (Bayview)": {
+    "email": "christianadriannehk@gmail.com"
+  },
+  "弘立幼稚園 The ISF Pre": {
+    "email": "psenquiry@isf.edu.hk"
+  },
+  "樂沛兒幼稚園 Hong Kong Nobel Preschool": {
+    "email": "info@nobelpreschool.org"
+  },
+  "小牛頓中英文幼稚園 Little Newton Anglo": {
+    "email": "newtonkghk@gmail.com"
+  },
+  "聖姬莉國際幼稚園 Saint Brigit International Kindergarten": {
+    "email": "stbrigitkg@gmail.com"
+  },
+  "善行國際幼稚園 MASS International Preschool [善行幼稚園]": {
+    "email": "info@masspreschool.edu.hk"
+  },
+  "佛教陳策文伉儷幼稚園 Buddhist Mr. & Mrs. Chan Chart Man Kindergarten": {
+    "email": "ccm@hkbuddhist.org"
+  },
+  "香港靈糧堂荃灣幼稚園 Hong Kong Ling Liang Church Tsuen Wan Kindergarten": {
+    "email": "twll@lingliang.org.hk"
+  },
+  "香港靈糧堂秀德幼稚園 Hong Kong Ling Liang Church Sau Tak Kindergarten": {
+    "email": "stll@lingliang.org.hk"
+  },
+  "雅麗斯樂思幼稚園 Agnes Wise Kindergarten": {
+    "email": "agnes@agneskg.com"
+  },
+  "耀基創藝幼稚園(上水) Gloria Creative Kindergarten (Sheung Shui)": {
+    "email": "mail@gciedu.hk"
+  },
+  "心怡天地幼稚園(麗城) Joyful World Kindergarten (Belvedere)": {
+    "email": "infobd@joyfulenglish.edu.hk"
+  },
+  "英藝幼稚園(賞湖) Zenith Kindergarten (Sherwood)": {
+    "email": "zenithsw@zenith.edu.hk"
+  },
+  "伽利利國際幼稚園 Galilee International Kindergarten": {
+    "email": "gis@gis.edu.hk"
+  },
+  "香港靈糧堂秀德幼稚園(二校) Hong Kong Ling Liang Church Sau Tak Kindergarten (Campus 2)": {
+    "email": "stll@lingliang.org.hk"
+  },
+  "香港中文大學校友會聯會順龍仁澤幼稚園 CUHKFAA Shun Lung Yan Chak Kindergarten": {
+    "email": "cuhkslyck@gmail.com"
+  },
+  "樂希幼兒學校 Harts Preschool": {
+    "email": "info@hartspreschool.com"
+  },
+  "懋柏禮國際幼稚園(大埔) Mulberry House International Kindergarten [伊頓國際幼稚園(大埔) EtonHouse International Pre": {
+    "email": "taipo@mulberryhousekg.com"
+  },
+  "艾思維國際幼稚園(大嶼山) Ashville International Kindergarten (Lantau Island) [啟興璀尼迪國際幼稚園 Kind Hing Trinity International Kindergarten]": {
+    "email": "ashvilleinternationallantau@gmail.com"
+  },
+  "611 生命樹幼稚園 611 Tree of Life Kindergarten [611生命樹幼稚園]": {
+    "email": "info@611tol.edu.hk"
+  },
+  "Hamilton Hill 國際幼稚園 Hamilton Hill International Kindergarten": {
+    "email": "admissions@hhik.edu.hk"
+  },
+  "香港民生幼稚園(西區) Hong Kong Man Sang Kindergarten (Western District)": {
+    "email": "western@mansangkg.edu.hk"
+  },
+  "綠茵英文(國際)幼稚園(日出康城) Greenfield English (International) Kindergarten (Lohas Park) [綠茵國際]": {
+    "email": "greenfieldkdg@gmail.com"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(淺水灣) Guidepost Montessori International Pre": {
+    "email": "beachside@woodlandschools.com"
+  },
+  "麥克萊國際幼稚園 Mynors International Kindergarten": {
+    "email": "info@mynors.edu.hk"
+  },
+  "ABC Pathways 國際幼稚園(太古校舍) ABC Pathways International Kindergarten (Tai Koo Campus)": {
+    "email": "enquiry.tk@abcpathways.edu.hk"
+  },
+  "德萃幼稚園(紅磡) St. Hilary's Kindergarten (Hung Hom)": {
+    "email": "hh@sthilarys.edu.hk"
+  },
+  "雅士圖國際幼稚園 Aristle International Kindergarten": {
+    "email": "info@aik.edu.hk"
+  },
+  "學之園幼稚園(迎海) Learning Habitat Kindergarten (Double Cove)": {
+    "email": "contact@learninghabitat.org"
+  },
+  "ABC Pathways 國際幼稚園(黃埔校舍) ABC Pathways International Kindergarten (Whampoa Campus)": {
+    "email": "enquiry.wp@abcpathways.edu.hk"
+  },
+  "雅惠國際幼稚園(鯉景灣) Grace Garden International Kindergarten (Lei King Wan)": {
+    "email": "enquiry@gracegarden.edu.hk"
+  },
+  "北角衞理堂幼稚園(炮台山) North Point Methodist Church Kindergarten (Fortress Hill)": {
+    "email": "npmethodist_kg@yahoo.com.hk"
+  },
+  "奧恩國際幼稚園 Mighty Oaks International Kindergarten [奧恩國際幼兒園暨幼稚園]": {
+    "email": "info@mightyoaks.edu.hk"
+  },
+  "楓薈幼稚園 Fairchild Kindergarten": {
+    "email": "info@fairchild.edu.hk"
+  },
+  "救世軍水泉澳幼稚園 The Salvation Army Shui Chuen O Kindergarten": {
+    "email": "scokin@hkm.salvationarmy.org"
+  },
+  "新加坡卓薈國際幼稚園(界限街) Chatsworth International Kindergarten (Boundary Street) [Piccolo Monte International Kindergarten 比高樂國際幼稚園 新加坡卓薈幼稚園]": {
+    "email": "chatsworthhk@gmail.com"
+  },
+  "香港基督教服務處雋樂幼稚園 HKCS Pario Kindergarten": {
+    "email": "pariokg@hkcs.org"
+  },
+  "約克國際幼稚園(香港島) York International Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "Wilderness 國際幼稚園 Wilderness International Kindergarten": {
+    "email": "admissions@wilderness.asia"
+  },
+  "九龍真光中學(幼稚園部) Kowloon True Light School (Kindergarten Section) [九真幼稚園、九龍塘真光]": {
+    "email": "mail@ktlms.edu.hk"
+  },
+  "英藝幼稚園(將軍澳) Zenith Kindergarten (Tseung Kwan O)": {
+    "email": "zenithtko@zenith.edu.hk"
+  },
+  "港島兒童蒙特梭利國際幼兒園及幼稚園(北角) Island Children's Montessori Kindergarten (North Point) [港島蒙特梭利國際幼稚園 ICMS Kindergarten]": {
+    "email": "info@icms.edu.hk"
+  },
+  "約克蒙特梭利國際幼稚園(元朗) York Montessori International Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "約克蒙特梭利國際幼稚園(美孚) York Montessori International Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "香港墨爾文國際幼稚園 Malvern College Pre": {
+    "email": "mcpsinfo@malvernpreschool.hk"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(薄扶林) Guidepost Montessori International Kindergarten (Pok Fu Lam) [Safari Kid International Kindergarten, Kido International Kindergarten]": {
+    "email": "pokfulam@guidepostmontessori.com"
+  },
+  "漢迪國際幼稚園 Kendall International Preschool": {
+    "email": "info@kendall.edu.hk"
+  },
+  "道爾頓幼稚園 Little Dalton Kindergarten": {
+    "email": "info@ldk.edu.hk"
+  },
+  "諾德安達國際幼稚園(西貢) Nord Anglia International Pre": {
+    "email": "info@nais.hk"
+  },
+  "智樂幼稚園(大南街) Che Lok Kindergarten (Tai Nan Street)": {
+    "email": "chelokkg@hotmail.com"
+  },
+  "力行幼稚園(梅窩鄉事會路) Lick Hang Kindergarten (Rural Committee Road)": {
+    "email": "lickhangkg@yahoo.com.hk"
+  },
+  "香港國際蒙特梭利學校 Discovery Montessori Academy": {
+    "email": "enquiry@dms.edu.hk"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(柴灣) Guidepost Montessori International Kindergarten (Chai Wan) [Timbertop International Kindergarten Avendale International Kindergarten (Harmony Garden) 雋延國際幼稚園(富欣花園)]": {
+    "email": "chaiwan@guidepostmontessori.com"
+  },
+  "基督教香港崇真會安頌幼稚園 Tsung Tsin Mission of HK On Chung Kindergarten": {
+    "email": "og@ttmssd.org"
+  },
+  "學之園幼稚園(昇御海逸) Learning Habitat Kindergarten (Chatham LV) [學之園幼稚園(海逸豪園)]": {
+    "email": "contact@learninghabitat.org"
+  },
+  "聖公會慈光堂聖匠幼稚園(分校) SKH Kindly Light Church Holy Carpenter Kindergarten (Branch)": {
+    "email": "skhklc@holycarpenter.imsbiz.com.hk"
+  },
+  "閩光書院幼稚園部 Amoy College Kindergarten": {
+    "email": "info.amoykg@amoy.edu.hk"
+  },
+  "培僑國際幼稚園 Pui Kiu International Kindergarten [培僑幼稚園 培榛國際幼稚園暨幼兒園 Hazelwood International Kindergarten and  Nursery]": {
+    "email": "info@puikiukg.edu.hk"
+  },
+  "基督教家庭服務中心楊蔡慧嫻紀念幼稚園 Christian Family Service Centre Yeoh Choy Wai Haan Memorial Kindergarten": {
+    "email": "ycwh@cfsc.org.hk"
+  },
+  "瑪歌瑞特國際幼稚園(黃埔) Magart International Kindergarten (Whampoa)": {
+    "email": "info.wp@magartedu.com"
+  },
+  "意大利國際幼稚園 Italian International Kindergarten": {
+    "email": "info@iikg.edu.hk"
+  },
+  "康傑中英文幼稚園(青衣南) Good Health Anglo": {
+    "email": "ghtys1@good-health.edu.hk"
+  },
+  "救世軍源林潔和幼稚園 SA Rosita Yuen Kindergarten": {
+    "email": "rykin@hkm.salvationarmy.org"
+  },
+  "約克蒙特梭利國際幼稚園(將軍澳) York Montessori International Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "協康會上海總會康苗幼稚園 Heep Hong Society Shanghai Fraternity Association Healthy Kids Kindergarten": {
+    "email": "sfahk@heephong.org"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(堅尼地城) Guidepost Montessori International Kindergarten (Kennedy Town) [Avendale International Kindergarten (Sai Wan) 雋延國際幼稚園(西環)]": {
+    "email": "kennedytown@guidepostmontessori.com"
+  },
+  "Guidepost 蒙特梭利國際幼稚園(愉景灣) Guidepost Montessori International Kindergarten (Discovery Bay) [Sunshine House International Pre": {
+    "email": "discoverybay@guidepostmontessori.com"
+  },
+  "橄欖樹國際幼稚園 Olive Tree International Kindergarten": {
+    "email": "hello@otikn.com"
+  },
+  "西貢蒙特梭利幼稚園 Sai Kung Montessori Kindergarten": {
+    "email": "info@saikungmontessori.com"
+  },
+  "心怡天地國際幼稚園(元朗) Joyful World International Kindergarten (Yuen Long)": {
+    "email": "info@joyfulenglish.edu.hk"
+  },
+  "學之園幼稚園(君豪峰) Learning Habitat Kindergarten (Novum East)": {
+    "email": "contact@learninghabitat.org"
+  },
+  "學之園幼稚園(海翩康城) Learning Habitat Kindergarten (Papillons LP)": {
+    "email": "contact@learninghabitat.org"
+  },
+  "香港墨爾文國際幼稚園(港島西) Malvern College Pre": {
+    "email": "mcpsinfo@malvernpreschool.hk"
+  },
+  "瑪歌瑞特國際幼稚園(康怡) Magart International Kindergarten (Kornhill)": {
+    "email": "info.tk@magartedu.com"
+  },
+  "光愛樂幼稚園(安泰) Light and Love Home Happy Kindergarten (On Tai)": {
+    "email": "llhhk.edu@llhome.org"
+  },
+  "嶺南幼稚園(小西灣)二校 Lingnan No.2 Kindergarten (Siu Sai Wan)": {
+    "email": "kg@lingnankn.edu.hk"
+  },
+  "耀中國際幼稚園(將軍澳) Yew Chung International Kindergarten (TKO)": {
+    "email": "enquiry@hk.ycef.com"
+  },
+  "香港基督教服務處雋樂幼稚園(沙田) HKCS Pario Kindergarten (Shatin)": {
+    "email": "pariokg-st@hkcs.org"
+  },
+  "基督教宣道會安泰幼稚園 C&MA On Tai Kindergarten": {
+    "email": "cmaontaikg@gmail.com"
+  },
+  "朗思國際幼稚園(南昌) Think International Kindergarten (Nam Cheong)": {
+    "email": "thinkkg_nc@think.edu.hk"
+  },
+  "樂必津法國幼稚園 Lou Pichoun French Kindergarten [樂必津幼稚園]": {
+    "email": "info@loupichoun.com"
+  },
+  "Les Petits Lascars 國際幼稚園 Les Petits Lascars International Kindergarten (Central)": {
+    "email": "admissions@petitslascars.com"
+  },
+  "瑪歌瑞特國際幼稚園(粉嶺) Magart International Kindergarten (Fanling)": {
+    "email": "info.fl@magartedu.com"
+  },
+  "救世軍蘇屋幼稚園 SA So Uk Kindergarten": {
+    "email": "sukin@hkm.salvationarmy.org"
+  },
+  "艾蒙特國際幼稚園 EIS International Pre": {
+    "email": "info@eminent-education.org"
+  },
+  "學之園幼稚園(星匯居) Learning Habitat Kindergarten (The Sparkle)": {
+    "email": "contact@learninghabitat.org"
+  },
+  "楓葉小熊加拿大國際幼稚園 Maple Bear Canadian International Kindergarten Hong Kong": {
+    "email": "admissions@maplebear.hk"
+  },
+  "漢師幼稚園(龍總) HKVNS Alumni Association Kindergarten (KCC) [漢師德萃學校 香港漢文師範同學會學校]": {
+    "email": "info@hkvnsaas.edu.hk"
+  },
+  "啟文幼稚園 Clement Kindergarten": {
+    "email": "ck-info@clement.edu.hk"
+  },
+  "德萃幼稚園(馬鞍山) St. Hilary's Kindergarten (Ma On San)": {
+    "email": "mos@sthilarys.edu.hk"
+  },
+  "Les Petits Lascars 國際幼稚園(將軍澳) Les Petits Lascars International Kindergarten (Tseung Kwan O)": {
+    "email": "admissions@petitslascars.com"
+  },
+  "朗思國際學校 Think International School": {
+    "email": "thinkkg_kt@think.edu.hk"
+  },
+  "心怡天地國際幼稚園(屯門) Joyful World International Kindergarten (Tuen Mun)": {
+    "email": "info@joyfulenglish.edu.hk"
+  },
+  "楓葉小熊加拿大國際幼稚園(康城) Maple Bear Canadian International Kindergarten (Lohas) [柏禮頓幼稚園 Brightway Kindergarten]": {
+    "email": "admissions@maplebear.hk"
+  },
+  "基督教香港崇真會安康幼兒學校(順寧道) Tsung Tsin Mission of HK On Hong Nursery School (Shun Ning)": {
+    "email": "oh@ttmssd.org"
+  },
+  "約克國際幼稚園(屯門) York International Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "欣研幼稚園 Joystem Kindergarten [Joystem International Kindergarten, Joystem International Nursery and Kindergarten]": {
+    "email": "joystem.info@gmail.com"
+  },
+  "茵晴幼稚園 Imperial Children Kindergarten": {
+    "email": "admissions@ick.edu.hk"
+  },
+  "維多利亞(海之戀)國際幼稚園 Victoria (Ocean Pride) International Kindergarten [維多利亞幼稚園(海之戀)]": {
+    "email": "hgvk@victoria.edu.hk"
+  },
+  "維多利亞(何文田)國際幼稚園 Victoria (Homantin) International Kindergarten [維多利亞國際幼兒園(何文田) 維多利亞(何文田)國際幼稚園]": {
+    "email": "hmtoffc@victoria.edu.hk"
+  },
+  "學之園幼稚園(奧運) Learning Habitat Kindergarten (Olympic)": {
+    "email": "contact@learninghabitat.org"
+  },
+  "比諾中英文幼稚園(上水中心) Bilok Anglo": {
+    "email": "biloktko@gmail.com"
+  },
+  "香島華德福學校 Island Waldorf School": {
+    "email": "info@iws.edu.hk"
+  },
+  "英藝幼稚園(西環) Zenith Kindergarten (Sai Wan)": {
+    "email": "zenithtko@zenith.edu.hk"
+  },
+  "安基司學校附屬國際幼稚園 Anchors Academy Affiliated International Kindergarten": {
+    "email": "aakginfo@anchorsacademy.edu.hk"
+  },
+  "光愛樂幼稚園(顯徑) Light and Love Home Happy Kindergarten (Hin Keng)": {
+    "email": "llhhkghk.edu@llhome.org"
+  },
+  "樂沛兒幼稚園(柴灣) Hong Kong Nobel Preschool (Chai Wan)": {
+    "email": "info@nobelpreschool.org"
+  },
+  "培僑國際幼稚園(碧濤花園) Pui Kiu International Kindergarten (Pictorial Garden) [培僑幼稚園]": {
+    "email": "info@puikiukg.edu.hk"
+  },
+  "約克國際幼稚園(濕地) York International Pre": {
+    "email": "yorkoffice49@yahoo.com.hk"
+  },
+  "卓爾中英文幼稚園 Smart Kids Anglo": {
+    "email": "tstsmartkidskg@gmail.com"
+  },
+  "宏福幼稚園(青富) Tivoli Kindergarten (Ching Fu)": {
+    "email": "info@tivoli.edu.hk"
+  },
+  "匯成勞士施羅孚伉儷慈善基金幼稚園 IBEL Rusy and Purviz Shroff Charitable Foundation Kindergarten": {
+    "email": "admin@ibelkg.edu.hk"
+  },
+  "長沙灣街坊福利會林譚燕華幼稚園(麗翠苑) Cheung Sha Wan Kai Fong Welfare Association Lam Tam Yin Wah Kindergarten (Lai Tsui Court)": {
+    "email": "lamtyw@netvigator.com"
+  },
+  "樂善堂董清波幼稚園 Lok Sin Tong Tung Ching Bor Kindergarten": {
+    "email": "lsttcbkg@loksintong.org"
+  },
+  "英藝幼稚園(兆康) Zenith Kindergarten (Siu Hong)": {
+    "email": "zenithhr@zenith.edu.hk"
+  },
+  "哈羅小獅幼稚園 Harrow Little Lions Kindergarten": {
+    "email": "futurestar-hk@aisl-edu.com"
+  },
+  "香港基督教服務處雋樂幼兒學校(大埔) HKCS Pario Nursery School (Tai Po)": {
+    "email": "pons-tp@hkcs.org"
+  },
+  "啟基幼稚園 Chan's Creative Kindergarten": {
+    "email": "ccspg@ccs.edu.hk"
+  }
+}
