@@ -1,8 +1,11 @@
 import { View, Text, TouchableOpacity, Platform, ScrollView, StyleSheet, Dimensions } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
+import { useState, useEffect, useCallback } from "react";
 import { HomeHeroBackground } from "@/components/home-hero-background";
 import { MaxWidthWrapper } from "@/components/ui/max-width-wrapper";
+import { IntroLetterModal } from "@/components/intro-letter-modal";
+import { IntroLetterStorage } from "@/lib/storage";
 import { useColors } from "@/hooks/use-colors";
 import * as Haptics from "expo-haptics";
 
@@ -47,6 +50,20 @@ const QUICK_ACTION_CARDS = [
 export default function HomeScreen() {
   const router = useRouter();
   const colors = useColors();
+  const [showIntroLetter, setShowIntroLetter] = useState(false);
+
+  useEffect(() => {
+    IntroLetterStorage.isDismissed().then((dismissed) => {
+      if (!dismissed) {
+        setShowIntroLetter(true);
+      }
+    });
+  }, []);
+
+  const handleDismissIntroLetter = useCallback(() => {
+    setShowIntroLetter(false);
+    IntroLetterStorage.dismiss();
+  }, []);
 
   const handleStartQuiz = () => {
     if (Platform.OS !== "web") {
@@ -143,6 +160,10 @@ export default function HomeScreen() {
         </ScrollView>
         </MaxWidthWrapper>
       </SafeAreaView>
+      <IntroLetterModal
+        visible={showIntroLetter}
+        onDismiss={handleDismissIntroLetter}
+      />
     </HomeHeroBackground>
   );
 }

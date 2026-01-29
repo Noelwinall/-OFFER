@@ -7,6 +7,7 @@ import { Image } from "expo-image";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { useColors } from "@/hooks/use-colors";
 import { useState } from "react";
+import { IntroLetterModal } from "@/components/intro-letter-modal";
 import { Spacing } from "@/constants/spacing";
 import { BorderRadius, BorderRadiusPresets } from "@/constants/border-radius";
 import { TypographyStyles } from "@/constants/typography";
@@ -95,6 +96,7 @@ export default function ArticlesScreen() {
   const insets = useSafeAreaInsets();
   const colors = useColors();
   const [selectedCategory, setSelectedCategory] = useState("全部");
+  const [showLetter, setShowLetter] = useState(false);
 
   // Define styles inside component to access colors
   const styles = StyleSheet.create({
@@ -322,6 +324,28 @@ export default function ArticlesScreen() {
         keyExtractor={(item) => item.id}
         contentContainerStyle={[styles.listContent, { paddingBottom: insets.bottom + 24 }]}
         showsVerticalScrollIndicator={false}
+        ListHeaderComponent={
+          selectedCategory === "全部" ? (
+            <TouchableOpacity
+              style={[styles.articleCard, styles.firstCard, { borderColor: colors.primary + "40" }]}
+              activeOpacity={0.7}
+              onPress={() => setShowLetter(true)}
+            >
+              <View style={[styles.articleContent, { gap: 6 }]}>
+                <View style={[styles.categoryBadge, { backgroundColor: colors.primary + "1A", borderColor: colors.primary + "30" }]}>
+                  <Text style={[styles.categoryText, { fontWeight: "600" }]}>給家長的一封信</Text>
+                </View>
+                <Text style={styles.articleTitle} numberOfLines={2}>親愛的家長，這封信寫給正在為孩子奔走的你</Text>
+                <Text style={styles.articleSubtitle} numberOfLines={2}>有Offer 的誕生初衷與願景</Text>
+              </View>
+            </TouchableOpacity>
+          ) : null
+        }
+      />
+
+      <IntroLetterModal
+        visible={showLetter}
+        onDismiss={() => setShowLetter(false)}
       />
       </MaxWidthWrapper>
     </View>

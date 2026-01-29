@@ -16,6 +16,7 @@ const KEYS = {
   NOTIFICATIONS: "@hk_edu_app:notifications",
   NOTIFICATION_SETTINGS: "@hk_edu_app:notification_settings",
   REVIEWS: "@hk_edu_app:reviews",
+  INTRO_LETTER_DISMISSED: "@hk_edu_app:intro_letter_dismissed",
   // Map screen storage keys
   MAP_FILTERS_IDS: "@hk_edu_app:map_filters_ids_v1",
   MAP_FILTERS_UPDATED: "@hk_edu_app:map_filters_updated_v1",
@@ -736,6 +737,29 @@ export const MapSetStorage = {
     } catch (error) {
       console.error("Failed to get available sources:", error);
       return [];
+    }
+  },
+};
+
+/**
+ * 開場信件狀態
+ */
+export const IntroLetterStorage = {
+  async isDismissed(): Promise<boolean> {
+    try {
+      const value = await AsyncStorage.getItem(KEYS.INTRO_LETTER_DISMISSED);
+      return value === "true";
+    } catch (error) {
+      console.error("Failed to check intro letter status:", error);
+      return false;
+    }
+  },
+
+  async dismiss(): Promise<void> {
+    try {
+      await AsyncStorage.setItem(KEYS.INTRO_LETTER_DISMISSED, "true");
+    } catch (error) {
+      console.error("Failed to dismiss intro letter:", error);
     }
   },
 };
