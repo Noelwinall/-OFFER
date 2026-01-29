@@ -8,6 +8,7 @@ import {
   Modal,
   ScrollView,
   Dimensions,
+  Platform,
 } from "react-native";
 import { useColors } from "@/hooks/use-colors";
 
@@ -56,7 +57,7 @@ export function IntroLetterModal({ visible, onDismiss }: IntroLetterModalProps) 
       onRequestClose={onDismiss}
     >
       <TouchableWithoutFeedback onPress={onDismiss}>
-        <View style={styles.backdrop}>
+        <View style={[styles.backdrop, { backgroundColor: colors.foreground + "80" }]}>
           <TouchableWithoutFeedback onPress={(e) => e.stopPropagation()}>
             <View
               style={[
@@ -104,7 +105,7 @@ export function IntroLetterModal({ visible, onDismiss }: IntroLetterModalProps) 
                   ]}
                   activeOpacity={0.85}
                 >
-                  <Text style={styles.primaryButtonText}>
+                  <Text style={[styles.primaryButtonText, { color: colors.background }]}>
                     陪你開啟有Offer的旅程
                   </Text>
                 </TouchableOpacity>
@@ -122,15 +123,14 @@ export { LETTER_CONTENT };
 const styles = StyleSheet.create({
   backdrop: {
     flex: 1,
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: 24,
   },
   modal: {
-    width: SCREEN_WIDTH * 0.75,
+    width: Platform.OS === "web" ? SCREEN_WIDTH * 0.85 : SCREEN_WIDTH * 0.75,
     maxWidth: 480,
-    height: SCREEN_HEIGHT * 0.75,
+    height: Platform.OS === "web" ? SCREEN_HEIGHT * 0.75 : SCREEN_HEIGHT * 0.85,
     borderRadius: 20,
     borderWidth: 1,
     overflow: "hidden",
@@ -174,7 +174,6 @@ const styles = StyleSheet.create({
   primaryButtonText: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#FAF8F5",
     letterSpacing: 1,
     fontFamily: "NotoSerifSC-Bold",
   },
